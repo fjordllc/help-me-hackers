@@ -1,0 +1,116 @@
+--- !ruby/object:Gem::Specification 
+name: acts_as_taggable_on_steroids
+version: !ruby/object:Gem::Version 
+  prerelease: false
+  segments: 
+  - 1
+  - 2
+  version: "1.2"
+platform: ruby
+authors: 
+- Jonathan Viney
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-01-01 00:00:00 +09:00
+default_executable: 
+dependencies: []
+
+description: Rails plugin that is based on acts_as_taggable by DHH but includes extras such as tests, smarter tag assignment, and tag cloud calculations.
+email: jonathan.viney@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- acts_as_taggable_on_steroids.gemspec
+- CHANGELOG
+- generators/acts_as_taggable_migration/acts_as_taggable_migration_generator.rb
+- generators/acts_as_taggable_migration/templates/migration.rb
+- init.rb
+- lib/acts_as_taggable.rb
+- lib/acts_as_taggable_on_steroids.rb
+- lib/tag.rb
+- lib/tag_list.rb
+- lib/tagging.rb
+- lib/tags_helper.rb
+- MIT-LICENSE
+- Rakefile
+- README
+- test/abstract_unit.rb
+- test/acts_as_taggable_test.rb
+- test/database.yml
+- test/fixtures/magazine.rb
+- test/fixtures/magazines.yml
+- test/fixtures/photo.rb
+- test/fixtures/photos.yml
+- test/fixtures/post.rb
+- test/fixtures/posts.yml
+- test/fixtures/special_post.rb
+- test/fixtures/subscription.rb
+- test/fixtures/subscriptions.yml
+- test/fixtures/taggings.yml
+- test/fixtures/tags.yml
+- test/fixtures/user.rb
+- test/fixtures/users.yml
+- test/schema.rb
+- test/tag_list_test.rb
+- test/tag_test.rb
+- test/tagging_test.rb
+- test/tags_helper_test.rb
+has_rdoc: true
+homepage: http://github.com/jviney/acts_as_taggable_on_steroids
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --inline-source
+- --charset=UTF-8
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: acts_as_taggable_on_steroids
+rubygems_version: 1.3.6
+signing_key: 
+specification_version: 3
+summary: Rails plugin that is based on acts_as_taggable by DHH but includes extras such as tests, smarter tag assignment, and tag cloud calculations.
+test_files: 
+- test/abstract_unit.rb
+- test/acts_as_taggable_test.rb
+- test/database.yml
+- test/fixtures/magazine.rb
+- test/fixtures/magazines.yml
+- test/fixtures/photo.rb
+- test/fixtures/photos.yml
+- test/fixtures/post.rb
+- test/fixtures/posts.yml
+- test/fixtures/special_post.rb
+- test/fixtures/subscription.rb
+- test/fixtures/subscriptions.yml
+- test/fixtures/taggings.yml
+- test/fixtures/tags.yml
+- test/fixtures/user.rb
+- test/fixtures/users.yml
+- test/schema.rb
+- test/tag_list_test.rb
+- test/tag_test.rb
+- test/tagging_test.rb
+- test/tags_helper_test.rb

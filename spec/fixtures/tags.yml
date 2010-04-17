@@ -1,0 +1,39 @@
+tag_1:
+  id: 1
+  name: PHP
+
+tag_2:
+  id: 2
+  name: WordPress
+
+tag_3:
+  id: 3
+  name: Google Analytics
+
+tag_4:
+  id: 4
+  name: プラグイン
+
+tag_5:
+  id: 5
+  name: 携帯
+
+tag_6:
+  id: 6
+  name: モバイル
+
+tag_7:
+  id: 7
+  name: Python
+
+tag_8:
+  id: 8
+  name: haml
+
+tag_9:
+  id: 9
+  name: Ruby
+
+tag_10:
+  id: 10
+  name: Rails

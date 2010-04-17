@@ -1,0 +1,11 @@
+japan:
+  id: 1
+  name: japan
+
+vietnam:
+  id: 2
+  name: vietnam
+
+united-states:
+  id: 3
+  name: united-states

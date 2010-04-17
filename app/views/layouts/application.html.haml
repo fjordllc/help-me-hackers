@@ -1,0 +1,43 @@
+!!! XML
+!!!
+%html{:'xml:lang' => 'ja', :lang => 'ja'}
+  %head
+    %title= yield(:title) || t('application.title')
+    %meta{:name => 'description', :content => yield(:description) || t('application.description')}
+    %meta{:name => 'keywords', :content => yield(:keywords) || t('application.keywords')}
+    %meta{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8'}
+    %meta{'http-equiv' => 'Content-Style-Type', 'content' => 'text/css'}
+    %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
+    %link{:href => '/stylesheets/application.css', :rel => 'stylesheet', :type => 'text/css'}
+    %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
+    = stylesheet_link_tag 'reset', :media => 'screen'
+    = stylesheet_link_tag 'basic', :media => 'screen'
+  %body
+    #header
+      %h1= link_to 'Help me, hackers!', root_path
+      .nav
+        %ul
+          - if logged_in?
+            %li= link_to current_user.login, account_path
+            %li= link_to 'ログアウト', logout_path
+          - else
+            %li= link_to 'ログイン', login_path
+          %li= link_to '問題依頼', new_problem_path
+    #wrapper{:class => "#{controller_name}_#{action_name}"}
+      .nav
+        %ul
+          %li= link_to_unless_current_with_span '問題', problems_path
+          %li= link_to_unless_current_with_span '賞金首', wanted_problems_path
+          %li= link_to_unless_current_with_span '未解決', unsolved_problems_path
+          %li= link_to_unless_current_with_span 'ユーザー', users_path
+      #main
+        #flash
+          - unless flash.empty?
+            = content_tag :div, flash[:notice],  :class => 'notice'  if flash[:notice]
+            = content_tag :div, flash[:warning], :class => 'warning' if flash[:warning]
+            = content_tag :div, flash[:error],   :class => 'error'   if flash[:error]
+        = yield
+      #sub
+        .section
+    #footer
+      %p.copyright= "Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}."

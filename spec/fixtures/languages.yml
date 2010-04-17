@@ -1,0 +1,135 @@
+language_1:
+  id: 1
+  name: 'c'
+
+language_2:
+  id: 2
+  name: 'cpp'
+
+language_3:
+  id: 3
+  name: 'csharp'
+
+language_4:
+  id: 4
+  name: 'objective-c'
+
+language_5:
+  id: 5
+  name: 'java'
+
+language_6:
+  id: 6
+  name: 'perl'
+
+language_7:
+  id: 7
+  name: 'php'
+
+language_8:
+  id: 8
+  name: 'python'
+
+language_9:
+  id: 9
+  name: 'ruby'
+
+language_10:
+  id: 10
+  name: 'common-lisp'
+
+language_11:
+  id: 11
+  name: 'scheme'
+
+language_12:
+  id: 12
+  name: 'smalltalk'
+
+language_13:
+  id: 13
+  name: 'javascript'
+
+language_14:
+  id: 14
+  name: 'actionscript'
+
+language_15:
+  id: 15
+  name: 'cobol'
+
+language_16:
+  id: 16
+  name: 'applescript'
+
+language_17:
+  id: 17
+  name: 'visualbasic'
+
+language_18:
+  id: 18
+  name: 'ocaml'
+
+language_19:
+  id: 19
+  name: 'd'
+
+language_20:
+  id: 20
+  name: 'delphi'
+
+language_21:
+  id: 21
+  name: 'erlang'
+
+language_22:
+  id: 22
+  name: 'fsharp'
+
+language_23:
+  id: 23
+  name: 'fortran'
+
+language_24:
+  id: 24
+  name: 'forth'
+
+language_25:
+  id: 25
+  name: 'go'
+
+language_26:
+  id: 26
+  name: 'groovy'
+
+language_27:
+  id: 27
+  name: 'haskell'
+
+language_28:
+  id: 28
+  name: 'scala'
+
+language_29:
+  id: 29
+  name: 'sql'
+
+language_30:
+  id: 30
+  name: 'lua'
+
+language_31:
+  id: 31
+  name: 'assembly'
+
+language_32:
+  id: 32
+  name: 'clojure'
+
+language_1000:
+  id: 1000
+  name: 'japanese'
+
+language_1001:
+  id: 1001
+  name: 'english'

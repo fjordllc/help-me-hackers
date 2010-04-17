@@ -1,0 +1,14 @@
+- form_for answer do |f|
+  = f.error_messages
+  = f.hidden_field :problem_id
+  = f.hidden_field :user_id
+  = f.text_area :description, :size => '70x10'
+  %h4 プレビュー
+  :javascript
+    wmd_options = {
+      output: "Markdown"
+    }
+  .wmd-preview
+  = javascript_include_tag 'wmd/wmd'
+  %p
+    = f.submit "送信"

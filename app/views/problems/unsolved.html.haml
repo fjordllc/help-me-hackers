@@ -1,0 +1,5 @@
+.content
+  %h2 未解決
+%ul.problems
+  = render :partial => 'object', :collection => @problems
+= will_paginate(@problems)

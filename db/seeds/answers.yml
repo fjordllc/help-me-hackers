@@ -1,0 +1,18 @@
+answer_1:
+  id: 1
+  problem_id: 1
+  user_id: 1
+  description: "[GHRML](http://www.ghrml.org/)じゃ駄目ですか？\r\n\r\n    %html\r\n      %head\r\n        %title Hello World\r\n        %style{'type': 'text/css'}\r\n          body { font-family: sans-serif; }\r\n        %script{'type': 'text/javascript', 'src': 'foo.js'}\r\n      %body\r\n        #header\r\n          %h1 Hello World\r\n        %ul.navigation\r\n          %li[for item in navigation]\r\n            %a{'href': item.href} $item.caption\r\n         #contents\r\n          Hello World!\r\n\r\nこう書けるよ。"
+
+answer_2:
+  id: 2
+  problem_id: 2
+  user_id: 2
+  description: "http://github.com/machida/foo にソース置きました。"
+
+answer_3:
+  id: 3
+  problem_id: 3
+  user_id: 3
+  correct: true
+  description: "ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。\r\n\r\n「前」というのを追加する必要がありますが。"

@@ -1,0 +1,182 @@
+@charset "utf-8";
+/* CSS Document */
+
+ /* --clearfix-- */  
+div:after,
+ul:after,
+dl:after,
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer:after
+ {
+content: ".";
+display: block;
+height: 0px;
+clear: both;
+visibility: hidden;
+}
+
+/* Win IE7 */
+*:first-child+html div,
+*:first-child+html ul,
+*:first-child+html dl,
+*:first-child+html div.problems_show div#main div.content div.problem div.section ul.answers li.answer{
+height: 1%;
+}
+
+div,
+ul,
+dl,
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer
+ {
+  min-height: 1px;
+  display: block;  /* ブロックレベル要素に */
+}
+
+* html div,
+* html ul,
+* html dl,
+* html div.problems_show div#main div.content div.problem div.section ul.answers li.answer
+ {
+  height: 1px;
+  /*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+/* Mac IE\*//*/
+div,
+ul,
+dl,
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer
+{
+display: inline-table;
+}
+/* End Mac IE */
+
+ /* 
+ ブラウザの初期設定をリセットする為のCSS
+ */  
+   
+ /* --HTML-- */  
+ html {
+	overflow-y:scroll;
+ }  
+   
+ /* --BODY-- */  
+ body {
+	margin:0;
+	overflow:visible;
+	padding:0;
+	line-height: 1.5;
+	font-family: 'メイリオ', "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, "ヒラギノ丸ゴ Pro W4", HiraMaruPro-W4, Verdana, HiraMaruPro-W4, "ヒラギノ角ゴ Pro W3", HiraKakuPro-W3, Osaka, sans-serif;
+	font-size: 14px;
+	color: #5a5a5a;
+ }  
+   
+ /* for IE7 */  
+ *+html body {  
+font-size: 14px;
+line-height: 1.7;
+ }  
+   
+ /* for IE6 */  
+ * html body {
+font-size: 14px;
+line-height: 1.7;
+letter-spacing: 0.1em;
+font-family: 'ＭＳ Ｐゴシック', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Osaka", 'Lucida Grande', Arial, Helvetica, Verdana, 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', sans-serif;
+ }  
+   
+ /* --OTHER TAGS-- */  
+ a img, fieldset, img {  
+ border:0;  
+ }  
+   
+ blockquote, dd, div, dl, dt, fieldset, form,  
+ h1, h2, h3, h4, h5, h6, input, li, ol, p, pre,  
+ select, span, textarea, td, th, ul {  
+ margin:0;  
+ padding:0;  
+ }  
+   
+ abbr, acronym {  
+ border:0;  
+ }  
+   
+ address, caption, cite, code, dfn, em, th, strong, var {  
+ font-style:normal;  
+ font-weight:normal;  
+ }  
+   
+ caption, th {  
+ text-align:left;  
+ }  
+   
+ code, kbd, pre, samp, tt {  
+ font-family:monospace;  
+ line-height:100%;  
+ }  
+   
+ /* for IE7 */  
+ *+html code, kbd, pre, samp, tt {  
+ font-size:108%;  
+ }  
+   
+ h1, h2, h3, h4, h5, h6 {
+font-size:100%;
+font-weight:normal;
+line-height: 1;
+ }  
+ /* for IE6 */  
+* html h3 {
+font-weight:bold;
+ }  
+   
+ input, select, textarea{  
+ font-size:100%;  
+ font-family:'Lucida Grande',Arial,Helvetica,Verdana,'メイリオ', 'ＭＳ Ｐゴシック','ヒラギノ明朝 Pro W3','Hiragino Mincho Pro',sans-serif;  
+ }  
+   
+ ol, ul {  
+ list-style:none;  
+ }  
+   
+ q:before, q:after {  
+ content:'';  
+ }  
+   
+ /* tables still need 'cellspacing="0"' */  
+ table {  
+ border-collapse:collapse;  
+ border-spacing:0;  
+ font-size:100%;  
+ }  
+
+ a:link,a:visited {
+color: #2844ac;
+ }  
+ a:hover,a:active {
+color: #ec189a;
+ }
+ 
+ .design {
+background-repeat: no-repeat;
+text-indent: -9999px;
+display: block;
+ }
+ .design_a a {
+background-repeat: no-repeat;
+text-indent: -9999px;
+display: block;
+ }
+.print {
+display: none;
+}
+.center {
+text-align: center;
+display: block;
+}
+.hidden {
+	display: none;
+	visibility: hidden;
+}

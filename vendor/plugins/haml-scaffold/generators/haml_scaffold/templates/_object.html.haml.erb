@@ -1,0 +1,10 @@
+- content_tag_for :div, <%= singular_name %> do
+  %ul
+<% for attribute in attributes -%>
+    %li
+      %strong <%= attribute.column.human_name %>:
+      =h <%= singular_name %>.<%= attribute.name %>
+<% end -%>
+    = link_to '閲覧', <%= singular_name %>
+    = link_to '編集', edit_<%= singular_name %>_path(<%= singular_name %>)
+    = link_to '削除', <%= singular_name %>, :confirm => '本当に削除してよろしいですか？', :method => :delete

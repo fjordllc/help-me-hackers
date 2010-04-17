@@ -1,0 +1,5 @@
+log/*.log
+db/schema.rb
+**/.Thumbs.db
+config/database.yml
+config/twitter_auth.yml

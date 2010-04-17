@@ -1,0 +1,36 @@
+user_1:
+  id: 1
+  kind: 2
+  login: komagata
+  email: komagata@gmail.com
+  reputation: 100
+  state_id: 13
+  language_id: 7
+  profile: "ガチ鬱プログラマーです。"
+  company: Fjord. LLC
+  github_account: komagata
+  url: http://docs.komagata.org
+  ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxiIFLPE2/cKMY45jAIFSflxQb6rBYTQ5enVm5kfl/tNUscRr1KdkpBExsbIba+HYBC8VarSvzXe8L7dGZwqCLJPsp89Kn4Btjrbk9rE/SA/iu0DVmWmb3PIJSJmxL9Pq0dejM+JGzjqxYhw1BoeKwMY8f8vEt0teOHwLliScdEHNRniDSnsMmfQjNoaiD2pANrtg/EH/QTzqC0NtNxv/t+fdbl+x1wriqBj1e2PSvO5awHKouUeH+ETgvG0dL44bYT/QdLoCqpjk9xa57gXyCZGXyXiVZ3mmqyIOmti7rQtk28yTUFqyBV5HDNgvPHprBDEAN3Efu+dQEeBSPDjyEQ== komagata@dev"
+  crypted_password: f89cc5a89961fa63d3b859aca719d2abb62e97c80b6ca95a2d755da32b6be32a40d289d4299470c2630aa4e80adc1f678ad1848e2e8d08818be39b42bf0c3096
+  password_salt: cTTelX1fX0Yo2R4cAUT6
+  persistence_token: 9ff731c892d7527ba558dee9e697330a58be01f118c42749cc2cdb52f760ce72b4ff9774f0c422102f740e26cc4440bc705f88caa438f3ea71bf212cf7c3e063
+  login_count: 1
+  current_login_at: 2010-03-28 05:32:31
+  last_login_at: 2010-03-28 05:32:31
+
+user_2:
+  id: 2
+  kind: 1
+  login: machida
+  email: machidanohimitsu@gmail.com
+  reputation: 200
+  state_id: 13
+  company: Fjord. LLC
+  github_account: machida
+  url: http://machida.fjord.jp
+  crypted_password: c7f928c16adc2f573102313ca92cfb6c4376fdd51717c24de614a5efdc6e067559ee7309e7e5893be987a00933f89e78025e8058ab15afb53055fecd25f25592
+  password_salt: v0KjwBKD2VN3tmIXUoSn
+  persistence_token: e3699388ea0a8599b330b450d9ba3ca792a32993635a6c5ce248e830582ec62fbfdebbc814ba8d1bc2474a443ddbea65e9050e30b87ee22f927c03c08200d59c
+  login_count: 2
+  current_login_at: 2010-04-02 05:32:31
+  last_login_at: 2010-04-02 05:32:31

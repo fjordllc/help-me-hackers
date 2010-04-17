@@ -1,0 +1,4 @@
+%h2 <%= singular_name %>登録
+= render :partial => 'form', :locals => {:<%= singular_name %> => @<%= singular_name %>}
+%ul
+  %li= link_to '戻る', <%= plural_name %>_path

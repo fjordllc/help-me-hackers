@@ -1,0 +1,28 @@
+%dl.user
+  %dt.login アカウント名
+  %dd.login=link_to user.login, user_path(user)
+  %dt.icon アイコン画像
+  %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
+  - if user.description
+    %dt.description 詳細
+    %dd.description=hbr user.description
+  - if user.state
+    %dt.state 出身
+    %dd.state= t("label.state.#{user.state.name}")
+  - if user.url
+    %dt.url URL
+    %dd.url=link_to h(user.url), h(user.url), :target => '_blank'
+  - if user.company
+    %dt.company 会社
+    %dd.company=h user.company
+  - if user.language
+    %dt.favorite_language 好きなプログラム言語
+    %dd.favorite_language= t("label.language.#{user.language.name}")
+  - if user.github_account
+    %dt.github_account Githubアカウント
+    %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'
+  - if user.ssh_public_key
+    %dt.ssh_public_key SSH Public Key
+    %dd.ssh_public_key=h user.ssh_public_key
+  %dt.reputation 評判
+  %dd.reputation= user.reputation

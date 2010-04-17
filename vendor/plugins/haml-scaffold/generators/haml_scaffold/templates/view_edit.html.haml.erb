@@ -1,0 +1,6 @@
+%h2 Editing <%= singular_name %>
+= render :partial => "form", :locals => {:<%= singular_name %> => @<%= singular_name %>}
+%ul
+  %li= link_to '閲覧', @<%= singular_name %>
+  %li= link_to '戻る', <%= plural_name %>_path
+  %li= link_to '削除', @<%= singular_name %>, :confirm => '本当に削除してよろしいですか？', :method => :delete

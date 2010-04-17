@@ -1,0 +1,234 @@
+state_1:
+  id: 1
+  country_id: 1
+  name: hokkaidou
+
+state_2:
+  id: 2
+  country_id: 1
+  name: aomoriken
+
+state_3:
+  id: 3
+  country_id: 1
+  name: iwateken
+
+state_4:
+  id: 4
+  country_id: 1
+  name: miyagiken
+
+state_5:
+  id: 5
+  country_id: 1
+  name: akitaken
+
+state_6:
+  id: 6
+  country_id: 1
+  name: yamagataken
+
+state_7:
+  id: 7
+  country_id: 1
+  name: fukushimaken
+
+state_8:
+  id: 8
+  country_id: 1
+  name: ibarakiken
+
+state_9:
+  id: 9
+  country_id: 1
+  name: tochigiken
+
+state_10:
+  id: 10
+  country_id: 1
+  name: gunmaken
+
+state_11:
+  id: 11
+  country_id: 1
+  name: saitamaken
+
+state_12:
+  id: 12
+  country_id: 1
+  name: chibaken
+
+state_13:
+  id: 13
+  country_id: 1
+  name: toukyouto
+
+state_14:
+  id: 14
+  country_id: 1
+  name: kanagawaken
+
+state_15:
+  id: 15
+  country_id: 1
+  name: niigataken
+
+state_16:
+  id: 16
+  country_id: 1
+  name: toyamaken
+
+state_17:
+  id: 17
+  country_id: 1
+  name: ishikawaken
+
+state_18:
+  id: 18
+  country_id: 1
+  name: fukuiken
+
+state_19:
+  id: 19
+  country_id: 1
+  name: yamanashiken
+
+state_20:
+  id: 20
+  country_id: 1
+  name: naganoken
+
+state_21:
+  id: 21
+  country_id: 4
+  name: gifuken
+
+state_22:
+  id: 22
+  country_id: 4
+  name: shizuokaken
+
+state_23:
+  id: 23
+  country_id: 4
+  name: aichiken
+
+state_24:
+  id: 24
+  country_id: 4
+  name: mieken
+
+state_25:
+  id: 25
+  country_id: 1
+  name: shigaken
+
+state_26:
+  id: 26
+  country_id: 1
+  name: kyoutofu
+
+state_27:
+  id: 27
+  country_id: 1
+  name: oosakafu
+
+state_28:
+  id: 28
+  country_id: 1
+  name: hyougoken
+
+state_29:
+  id: 29
+  country_id: 1
+  name: naraken
+
+state_30:
+  id: 30
+  country_id: 1
+  name: wakayamaken
+
+state_31:
+  id: 31
+  country_id: 1
+  name: tottoriken
+
+state_32:
+  id: 32
+  country_id: 1
+  name: shimaneken
+
+state_33:
+  id: 33
+  country_id: 1
+  name: okayamaken
+
+state_34:
+  id: 34
+  country_id: 1
+  name: hiroshimaken
+
+state_35:
+  id: 35
+  country_id: 1
+  name: yamaguchiken
+
+state_36:
+  id: 36
+  country_id: 1
+  name: tokushimaken
+
+state_37:
+  id: 37
+  country_id: 1
+  name: kagawaken
+
+state_38:
+  id: 38
+  country_id: 1
+  name: ehimeken
+
+state_39:
+  id: 39
+  country_id: 1
+  name: kouchiken
+
+state_40:
+  id: 40
+  country_id: 1
+  name: fukuokaken
+
+state_41:
+  id: 41
+  country_id: 1
+  name: sagaken
+
+state_42:
+  id: 42
+  country_id: 1
+  name: nagasakiken
+
+state_43:
+  id: 43
+  country_id: 1
+  name: kumamotoken
+
+state_44:
+  id: 44
+  country_id: 1
+  name: ooitaken
+
+state_45:
+  id: 45
+  country_id: 1
+  name: miyazakiken
+
+state_46:
+  id: 46
+  country_id: 1
+  name: kagoshimaken
+
+state_47:
+  id: 47
+  country_id: 1
+  name: okinawaken

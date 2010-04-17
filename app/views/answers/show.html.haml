@@ -1,0 +1,15 @@
+%h2= "Answer \"#{@answer.to_param}\""
+- content_tag_for :div, @answer do
+  %ul
+    %li
+      %strong Problem:
+      =h @answer.problem
+    %li
+      %strong User:
+      =h @answer.user
+    %li
+      %strong Description:
+      =h @answer.description
+%ul
+  %li= link_to '編集', edit_answer_path(@answer)
+  %li= link_to '戻る', answers_path

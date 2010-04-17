@@ -1,0 +1,5 @@
+.content
+  %h2 ユーザー
+  %ul.users
+    = render :partial => 'user', :collection => @users
+  = will_paginate(@users)

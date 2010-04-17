@@ -1,0 +1,928 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	border-top-width: 10px;
+	border-top-style: solid;
+	border-top-color: #ebece5;
+	display: block;
+	background-color: #EFEFE7;
+	background-image: url(../images/body.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+div#header {
+	width: 970px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 10px;
+	padding-left: 10px;
+	height: 90px;
+	background-image: url(../images/wrapper_nav.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-bottom: 30px;
+}
+div#header h1 a {
+	display: block;
+	height: 70px;
+	width: 180px;
+	float: left;
+	margin-top: 7px;
+	background-image: url(../images/h1_a.gif);
+	text-indent: -9999px;
+}
+div#header h1 a:link,
+div#header h1 a:visited {
+	background-position: 0px 0px;
+}
+div#header h1 a:hover,
+div#header h1 a:active {
+	background-position: 0px -70px;
+}
+div#header .nav {
+	display: block;
+	float: right;
+	background-color: #ebece5;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 8px;
+	padding-left: 15px;
+	border-radius: 0px 0px 10px 10px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius: 0px 0px 10px 10px;
+	margin-right: -10px;
+	}
+div#header .nav ul {
+	display: block;
+}
+div#header .nav li {
+	display: inline;
+	padding-right: 5px;
+}
+div#wrapper {
+	clear: both;
+	background-image: url(../images/wrapper.gif);
+	background-repeat: repeat-y;
+	width: 990px;
+	margin-right: auto;
+	margin-left: auto;
+}
+div#wrapper .nav {
+	width: 990px;
+}
+div#wrapper .nav ul {
+	width: 780px;
+	display: block;
+	margin-top: -75px;
+	float: right;
+}
+div#wrapper .nav ul li {
+	display: inline;
+	line-height: 1;
+	font-weight: bold;
+}
+div#wrapper .nav ul li span.current {
+	display: block;
+	background-color: #d4fd18;
+	float: left;
+	margin-right: 5px;
+	padding-right: 12px;
+	padding-left: 12px;
+	padding-top: 10px;
+	height: 24px;
+	color: #636D31;
+	font-size: 16px;
+	font-weight: bold;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+div#wrapper .nav ul li a {
+	display: block;
+	float: left;
+	height: 24px;
+	margin-right: 5px;
+	padding-right: 12px;
+	padding-left: 12px;
+	padding-top: 10px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	}
+div#wrapper .nav ul li a:link,
+div#wrapper .nav ul li a:visited {
+	background-color: #bac682;
+}
+div#wrapper .nav ul li a:hover,
+div#wrapper .nav ul li a:active {
+	background-color: #636D31;
+	color: #FFFFFF;
+}
+div#main {
+	width: 750px;
+	float: left;
+	margin-top: -30px;
+}
+div#main div.content {
+	padding-left: 15px;
+	margin-left: 20px;
+	padding-top: 15px;
+	color: #59632d;
+}
+div#main div.content div#flash div {
+	display: block;
+	line-height: 1.3;
+	color: #59632d;
+	font-weight: bold;
+	border: 3px solid #D4FD18;
+	padding: 8px;
+	margin-right: 65px;
+	margin-left: 65px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+div#main div.content h2 {
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #edff9b;
+	font-size: 24px;
+	display: block;
+	line-height: 1.3;
+	color: #59632d;
+	font-weight: bold;
+	margin-left: -15px;
+	padding-left: 15px;
+}
+div#main div.content div.title h2 {
+	border-bottom-style: none;
+}
+div.problems_show div#main div.content div.title h2 {
+	float: left;
+	width: 555px;
+	padding-right: 15px;
+}
+div#main div.content div.title {
+	margin-left: -15px;
+	padding-left: 15px;
+}
+#sub {
+	float: right;
+	width: 210px;
+	padding-right: 20px;
+	margin-top: -20px;
+}
+div#footer {
+	clear: both;
+	background-image: url(../images/footer.gif);
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 45px;
+	padding-left: 45px;
+	background-position: left bottom;
+	padding-bottom: 45px;
+	padding-top: 30px;
+}
+div.index #main h2 {
+	background-image: url(../images/top_h2.gif);
+}
+div#main ul.problems {
+	margin-left: 20px;
+}
+
+
+ /* --clearfix-- */  
+div#main ul.problems li.problem:after
+ {
+section: ".";
+display: block;
+height: 0px;
+clear: both;
+visibility: hidden;
+}
+
+/* Win IE7 */
+*:first-child+html div#main ul.problems li.problem
+{
+height: 1%;
+}
+
+div#main ul.problems li.problem {
+  min-height: 1px;
+  display: block;  /* ブロックレベル要素に */
+}
+
+* html div#main ul.problems li.problem {
+  height: 1px;
+  /*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+/* Mac IE\*//*/
+div#main ul.problems li.problem {
+display: inline-table;
+}
+/* End Mac IE */
+
+div#main ul.problems li.problem {
+	padding-bottom: 18px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #b9b9b9;
+	clear: both;
+	padding-top: 18px;
+	margin-right: 10px;
+	margin-left: 10px;
+	overflow: hidden;
+	}
+div#main ul.problems li.problem:last-child {
+	border-bottom-style: none;
+}
+div#main ul.problems li.problem h3.title {
+	display: block;
+	line-height: 1.4;
+	font-size: 18px;
+	font-weight: bold;
+}
+div#main ul.problems li.problem .description {
+	display: block;
+	line-height: 1.5;
+	font-size: 13px;
+	padding-top: 5px;
+}
+div#main .problem ul.tags {
+	clear: both;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+div#main .problem ul.tags li {
+	display: inline;
+}
+div#main .problem ul.tags li a {
+	display: block;
+	float: left;
+	line-height: 24px;
+	height: 24px;
+	margin-right: 5px;
+	padding-right: 12px;
+	background-image: url(../images/question_tag.gif);
+	padding-left: 5px;
+	background-position: right top;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-bottom: 5px;
+}
+div#main .problem ul.tags li a:link,
+div#main .problem ul.tags li a:visited {
+	background-position: right top;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #223da3;
+	color: #FFFFFF;
+}
+div#main .problem ul.tags li a:hover,
+div#main .problem ul.tags li a:active {
+	background-position: right -24px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #57c9c0;
+	color: #ec189a;
+}
+div#footer p.copyright {
+	text-align: center;
+	display: block;
+}
+div#sub div.section {
+	background-color: #f5f7ed;
+	margin-bottom: 13px;
+	background-image: url(../images/sub_section.gif);
+}
+div#sub div.section h3 {
+	background-image: url(../images/sub_section_h3.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 15px;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-weight: bold;
+	display: block;
+	padding-bottom: 3px;
+	font-size: 16px;
+}
+div#sub div.section ul {
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 8px;
+	padding-left: 7px;
+	margin-right: 1px;
+	margin-left: 1px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #c3e71f;
+}
+div#sub div.section ol {
+	padding-top: 0px;
+	padding-right: 7px;
+	padding-bottom: 8px;
+	padding-left: 7px;
+	margin-right: 1px;
+	margin-left: 1px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #EFFF9C;
+}
+div#sub div.section li {
+	display: block;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #d0d0d0;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+div#sub div.section .to_archive {
+	padding-top: 0px;
+	padding-bottom: 8px;
+	background-image: url(../images/sub_section_to_archive.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-right: 12px;
+	padding-left: 8px;
+	text-align: right;
+	display: block;
+	font-size: 12px;
+}
+
+
+
+/* URL:top */
+div.top div#main ul.problems li.problem h3.title {
+	float: right;
+	width: 580px;
+	font-size: 16px;
+}
+
+
+/* URL:problems */
+div#main ul.problems li.problem .section {
+	width: 535px;
+	float: right;
+	padding-right: 15px;
+}
+div#main ul.problems li.problem .statement {
+	width: 460px;
+	float: left;
+}
+div#main ul.problems li.problem div.data {
+	float: right;
+	width: 55px;
+	}
+div#main ul.problems li.problem div.data ul {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0px;
+	}
+div#main ul.problems li.problem ul.answer {
+	border-radius: 12px 12px 0px 0px;
+	-webkit-border-radius: 12px 12px 0px 0px;
+	-moz-border-radius: 12px 12px 0px 0px;
+	}
+div#main ul.problems li.problem ul.view {
+	border-radius: 0px 0px 12px 12px;
+	-webkit-border-radius: 0px 0px 12px 12px;
+	-moz-border-radius: 0px 0px 12px 12px;
+	}
+
+
+
+div#main ul.problems li.problem div.data ul {
+	width: 55px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+div#main ul.problems li.problem div.data ul li.count {
+	font-size: 15px;
+	display: block;
+	line-height: 1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+div#main ul.problems li.problem div.data ul li.label {
+	font-size: 11px;
+	display: block;
+	line-height: 1;
+	padding-bottom: 2px;
+}
+div#main ul.problems li.problem div.data ul.answer {
+	background-color: #EFEFE7;
+	color: #5c0404;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+div#main ul.problems li.problem div.data ul.view {
+	background-color: #76e3da;
+	color: #5c0404;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	-moz-border-radius-bottomleft: 8px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+div#main ul.problems li.problem div.data div.created_at {
+	color: #5c0404;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	clear: both;
+	padding-top: 5px;
+}
+
+
+
+
+
+/* user */
+div#main ul.problems li.problem div.user {
+	float: left;
+	width: 130px;
+	padding-left: 10px;
+}
+div#main ul.problems li.problem div.user h4 a,
+div#main div.content div.problem div.data div.user h4 a {
+	display: block;
+	background-color: #d4fd18;
+	padding: 10px;
+	font-weight: bold;
+	color: #636D31;
+	text-decoration: none;
+	line-height: 1.6;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+div#main ul.problems li.free div.user h4 a {
+	display: block;
+	background-color: #99CC00;
+	padding: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	line-height: 1.6;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+div#main ul.problems li.problem div.user li.icon {
+	display: block;
+	height: 30px;
+	width: 30px;
+	background-color: #FFCC66;
+	float: left;
+}
+div#main ul.problems li.problem div.user li.icon img {
+	height: 30px;
+	width: 30px;
+}
+div#main ul.problems li.problem div.user li.name {
+	font-size: 12px;
+	display: block;
+	float: right;
+	width: 79px;
+	padding-left: 5px;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+}
+div#main ul.problems li.problem div.user dl.bounty,
+div#main div.problem div.user dl.bounty {
+	display: block;
+	background-color: #EBECE5;
+	padding-top: 4px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	-webkit-border-bottom-left-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+div#main ul.problems li.problem div.user dl.bounty dt,
+div#main div.problem div.user dl.bounty dt {
+	line-height: 1;
+	display: inline;
+	padding-bottom: 5px;
+}
+div#main ul.problems li.problem div.user dl.bounty dd,
+div#main div.problem div.user dl.bounty dd {
+	display: inline;
+	padding: 5px;
+	line-height: 1;
+	text-align: right;
+}
+div#main ul.problems li.problem div.user dl.bounty dd span,
+div#main div.problem div.user dl.bounty dd span {
+	font-weight: bold;
+	color: #ec189a;
+}
+
+
+/* resolved */
+div#main ul.problems li.resolved {
+	margin-bottom: 10px;
+	background-color: #fcffb0;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+div#main ul.problems li.resolved div.user dl.bounty {
+	background-color: #d7d7d7;
+}
+div#main ul.problems li.problem div.resolver li.icon {
+	display: block;
+	height: 30px;
+	width: 30px;
+	background-color: #FFCC66;
+	border: 2px solid #FFCC33;
+	margin-left: -2px;
+}
+div#main ul.problems li.problem div.resolver li.icon img {
+	height: 30px;
+	width: 30px;
+}
+div#main ul.problems li.problem div.resolver p.name {
+	font-size: 12px;
+	display: block;
+	width: 60px;
+}
+div#main ul.problems li.resolved ul.answer {
+	background-color: #FFCF63;
+	color: #5c0404;
+}
+
+div#main ul.problems li.problem div.person,
+div#main ul.problems li.problem div.resolver {
+	clear: both;
+	margin-top: 15px;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+div#main ul.problems li.problem div.person h4,
+div#main ul.problems li.problem div.resolver h4 {
+	font-weight: bold;
+	display: block;
+	padding-bottom: 5px;
+	font-size: 13px;
+}
+div#main ul.problems li.problem div.user div.resolver li.name {
+	padding-left: 3px;
+}
+div#main ul.problems li.resolved .section {
+	float: right;
+}
+div#main ul.problems li.resolved ul.answer,
+div#main ul.problems li.resolved ul.view {
+	float: right;
+	clear: none;
+	}
+
+
+/* URL:problems_show */
+div.ploblems_show div#main div.section {
+	margin-left: 40px;
+}
+div.problems_show div#main div.content div.problem div.description {
+	font-size: 14px;
+	float: left;
+	width: 545px;
+	padding-top: 15px;
+}
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer  div.description {
+	font-size: 14px;
+	float: left;
+	width: 535px;
+	padding-top: 0px;
+}
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer {
+	display: block;
+	border: 1px solid #E6EAD4;
+	margin-bottom: 10px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	padding-top: 12px;
+	padding-right: 12px;
+	padding-bottom: 8px;
+	padding-left: 12px;
+	}
+div.problems_show div#main div.content div.problem ul.user {
+	font-size: 14px;
+	float: right;
+	width: 120px;
+}
+div.problems_show div#main div.content div.problem ul.user li.icon {
+	float: left;
+	display: block;
+	height: 40px;
+	width: 40px;
+}
+div.problems_show div#main div.content div.problem ul.user li.icon img {
+	height: 40px;
+	width: 40px;
+}
+div.problems_show div#main div.content div.problem ul.user li.name {
+	font-size: 10px;
+	float: right;
+	width: 70px;
+	display: block;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+}
+div.problems_show div#main div.content div.problem ul.user li.thanks {
+	clear: both;
+	padding-top: 10px;
+}
+div.problems_show div#main div.content div.problem div.description p {
+	margin-bottom: 1.4em;
+	line-height: 1.6;
+}
+div.problems_show div#main div.content div.problem div.data {
+	float: left;
+	width: 130px;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+div.problems_show div#main div.content h3 {
+	display: block;
+	margin-bottom: 10px;
+}
+div.problems_show div#main div.content div.title div.person {
+	width: 130px;
+	float: left;
+	padding-bottom: 3px;
+}
+div.problems_show div#main div.content div.title div.person h3.icon {
+	background-color: #00CCCC;
+	display: block;
+	float: left;
+	height: 60px;
+	width: 60px;
+	margin-right: 8px;
+}
+div.problems_show div#main div.content div.title div.person h3.icon img {
+	height: 60px;
+	width: 60px;
+}
+div.problems_show div#main div.content div.title div.person ul {
+	float: left;
+	width: 62px;
+	display: block;
+}
+div.problems_show div#main div.content div.title div.person ul li.name {
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+	font-size: 12px;
+}
+
+div.problems_show div#main div.content div.title dl.information {
+	display: block;
+	clear: both;
+	background-color: #EDFF9B;
+	margin-left: -15px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 12px;
+}
+div.problems_show div#main div.content div.title dl.information dt,
+div.problems_show div#main div.content div.title dl.information dd {
+	display: block;
+	line-height: 1;
+	float: left;
+}
+div.problems_show div#main div.content div.title dl.information dd {
+	font-weight: bold;
+	margin-right: 10px;
+}
+div.problems_show div#main div.content div.title dl.information dt {
+	padding: 5px;
+}
+div.problems_show div#main div.content div.title dl.information dd a {
+	display: block;
+	float: left;
+	background-color: #FFFFFF;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	text-decoration: none;
+	padding-top: 5px;
+	padding-right: 7px;
+	padding-bottom: 5px;
+	padding-left: 7px;
+	white-space: nowrap;
+}
+div.problems_show div#main .data ul {
+	width: 62px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	margin-top: 10px;
+	}
+div.problems_show div#main .data ul li.count {
+	font-size: 15px;
+	display: block;
+	line-height: 1;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+div.problems_show div#main .data ul li.label {
+	font-size: 11px;
+	display: block;
+	line-height: 1;
+	padding-bottom: 2px;
+}
+div.problems_show div#main .data ul.answer {
+	background-color: #EFEFE7;
+	color: #5c0404;
+	float: left;
+}
+div.problems_show div#main .data ul.view {
+	background-color: #76e3da;
+	color: #5c0404;
+	float: right;
+}
+div.problems_show div#main .content h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+div.problems_show div#main .content .section {
+	border-top-width: 1px;
+	border-top-style: dotted;
+	clear: both;
+	margin-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top-color: #B9B9B9;
+	border-right-color: #B9B9B9;
+	border-bottom-color: #B9B9B9;
+	border-left-color: #B9B9B9;
+}
+
+
+div#main div.content ul.users {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+div#main div.content ul.users li.user {
+	float: left;
+	width: 115px;
+	margin-right: 10px;
+	border: 2px solid #999999;
+	padding: 5px;
+}
+
+
+
+
+
+
+
+
+div.commingoon {
+	background-color: #FFFFFF;
+	height: 560px;
+	background-image: url(../images/comming-soon.gif);
+	background-repeat: no-repeat;
+	background-position: center 60px;
+}
+div.commingoon h1 {
+	height: 350px;
+}
+div.commingoon p.smile_community {
+	padding-bottom: 100px;
+	font-weight: bold;
+}
+div#main div.content pre code {
+	display: block;
+	margin-right: 10px;
+	margin-left: 10px;
+	line-height: 20px;
+	background-color: #f1f1e8;
+	background-image: url(../images/pre_code.gif);
+	padding-left: 30px;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+
+
+
+.str {
+color:#008800;
+}
+.kwd {
+color:#000088;
+}
+.com {
+color:#880000;
+}
+.typ {
+color:#660066;
+}
+.lit {
+color:#006666;
+}
+.pun {
+color:#666600;
+}
+.pln {
+color:#000000;
+}
+.tag {
+color:#000088;
+}
+.atn {
+color:#660066;
+}
+.atv {
+color:#008800;
+}
+.dec {
+color:#660066;
+}
+.str {
+color:#006600;
+}
+.kwd {
+color:#000066;
+font-weight:bold;
+}
+.com {
+color:#660000;
+font-style:italic;
+}
+.typ {
+color:#440044;
+font-weight:bold;
+}
+.lit {
+color:#004444;
+}
+.pun {
+color:#444400;
+}
+.pln {
+color:#000000;
+}
+.tag {
+color:#000066;
+font-weight:bold;
+}
+.atn {
+color:#440044;
+}
+.atv {
+color:#006600;
+}

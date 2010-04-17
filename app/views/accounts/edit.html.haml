@@ -1,0 +1,38 @@
+.content
+  %h2 アカウント編集
+  - form_for @user, :url => account_path do |f|
+    = f.error_messages
+    %p
+      = f.label :description
+      %br
+      = f.text_area :description, :size => '40x4'
+    %p
+      = f.label :state
+      %br
+      = select_by_model @user, :state_id
+    %p
+      = f.label :email
+      %br
+      = f.text_field :email
+    %p
+      = f.label :url
+      %br
+      = f.text_field :url
+    %p
+      = f.label :company
+      %br
+      = f.text_field :company
+    %p
+      = f.label :language, t('label.favorite-language')
+      %br
+      = select_programming_language @user, :language_id
+    %p
+      = f.label :github_account
+      %br
+      = f.text_field :github_account
+    %p
+      = f.label :ssh_public_key
+      %br
+      = f.text_area :ssh_public_key, :size => '40x4'
+    %p
+      = f.submit '編集'

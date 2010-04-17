@@ -1,0 +1,54 @@
+kind_1:
+  id: 1
+  name: "software-making"
+  premium: false
+
+kind_2:
+  id: 2
+  name: "library-making"
+  premium: false
+
+kind_3:
+  id: 3
+  name: "class-function-making"
+  premium: false
+
+kind_4:
+  id: 4
+  name: "plugin-making"
+  premium: false
+
+kind_5:
+  id: 5
+  name: "prototype-making"
+  premium: false
+
+kind_6:
+  id: 6
+  name: "debugging"
+  premium: false
+
+kind_7:
+  id: 7
+  name: "technology-study"
+  premium: false
+
+kind_8:
+  id: 8
+  name: "software-multilingualization"
+  premium: false
+
+kind_9:
+  id: 9
+  name: "document-translation"
+  premium: false
+
+kind_10:
+  id: 10
+  name: "data-collection-and-making"
+  premium: false
+
+kind_11:
+  id: 11
+  name: "programming-quiz"
+  premium: false
