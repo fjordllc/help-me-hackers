@@ -9,3 +9,10 @@ answer_2:
   problem_id: 2
   user_id: 2
   description: "http://github.com/machida/foo にソース置きました。"
+
+answer_3:
+  id: 3
+  problem_id: 3
+  user_id: 3
+  correct: true
+  description: "ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。\r\n\r\n「前」というのを追加する必要がありますが。"

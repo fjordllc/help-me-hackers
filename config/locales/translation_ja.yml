@@ -50,6 +50,7 @@ ja:
         email: "Email"
         password: "パスワード"
         password_confirmation: "パスワード（確認）"
+        profile_image_url: "プロフィール画像のURL"
         description: "プロフィール"
         company: "会社"
         state: "都道府県"

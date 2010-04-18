@@ -1,3 +1,4 @@
 %li.user
   .login= link_to user.login, user_path(user)
-  .reputation=h user.reputation
+  .icon=link_to image_tag(user.profile_image_url), user_path(user)
+  .reputation= user.reputation

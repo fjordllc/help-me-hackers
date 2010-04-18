@@ -9,7 +9,6 @@ Pure Pythonで！"
   license_id: 4
   bounty: 5000
   view: 1
-  resolved: false
 
 problem_2:
   id: 2
@@ -22,7 +21,6 @@ problem_2:
   license_id: 1
   bounty: 100
   view: 10
-  resolved: false
 
 problem_3:
   id: 3
@@ -34,4 +32,3 @@ problem_3:
   license_id: 4
   bounty: 0
   view: 15
-  resolved: false
