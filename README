@@ -3,7 +3,7 @@ http://help-me-hackers.com/
 
 INSTALLATION
 
-% git clone git@github.com:komagata/help-me-hackers.git
+% git clone http://github.com/komagata/help-me-hackers.git
 % cd help-me-hackers
 % mv config/database.example.yml config/database.yml
 % mv config/twitter_auth.example.yml config/twitter_auth.yml

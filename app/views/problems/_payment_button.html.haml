@@ -1,0 +1,12 @@
+%form{:action => 'https://www.paypal.com/cgi-bin/webscr', :method => 'post'}
+  %input{:type => 'hidden', :name => 'cmd', :value => '_donations'}
+  %input{:type => 'hidden', :name => 'business', :value => answer.user.email}
+  %input{:type => 'hidden', :name => 'lc', :value => 'JP'}
+  %input{:type => 'hidden', :name => 'currency_code', :value => 'JPY'}
+  %input{:type => 'hidden', :name => 'item_name', :value => "Help Me! Hacker Bounty. Problem ID: #{problem.id}"}
+  %input{:type => 'hidden', :name => 'item_number', :value => problem.id}
+  %input{:type => 'hidden', :name => 'amount', :value => problem.bounty}
+  %input{:type => 'hidden', :name => 'button_subtype', :value => 'services'}
+  %input{:type => 'hidden', :name => 'bn', :value => 'PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest'}
+  %input{:type => 'image', :name => 'submit', :alt => 'PayPal- オンラインで安全・簡単にお支払い', :src => 'https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif'}
+  %img{:alt => '', :border => '0', :src => 'https://www.paypal.com/ja_JP/i/scr/pixel.gif', :width => '1', :height => '1'}

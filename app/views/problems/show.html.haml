@@ -30,9 +30,9 @@
     %ul.tags
       - @problem.tags.each do |tag|
         %li.tag=link_to h(tag)
-  - if logged_in? and @problem.user.id == current_user.id
-    .edit= link_to '編集', edit_problem_path(@problem)
-    .delete= link_to '削除', @problem, :confirm => '本当に削除してよろしいですか？', :method => :delete
+    - if logged_in? and @problem.user.id == current_user.id
+      .edit= link_to '編集', edit_problem_path(@problem)
+      .delete= link_to '削除', @problem, :confirm => '本当に削除してよろしいですか？', :method => :delete
   .section
     %h3 回答一覧
     %ul.answers
@@ -42,22 +42,11 @@
           %ul.user
             %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
             %li.name=link_to answer.user.login, user_path(answer.user)
+            %li.thanks
+              = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
           - if logged_in? and answer.user.id == current_user.id
             .edit= link_to '編集', edit_answer_path(answer)
             .delete= link_to '削除', answer, :confirm => '本当に削除してよろしいですか？', :method => :delete
-            %li.thanks
-              %form{:action => 'https://www.paypal.com/cgi-bin/webscr', :method => 'post'}
-                %input{:type => 'hidden', :name => 'cmd', :value => '_donations'}
-                %input{:type => 'hidden', :name => 'business', :value => answer.user.email}
-                %input{:type => 'hidden', :name => 'lc', :value => 'JP'}
-                %input{:type => 'hidden', :name => 'currency_code', :value => 'JPY'}
-                %input{:type => 'hidden', :name => 'item_name', :value => "Help Me! Hacker Bounty. Problem ID: #{@problem.id}"}
-                %input{:type => 'hidden', :name => 'item_number', :value => @problem.id}
-                %input{:type => 'hidden', :name => 'amount', :value => @problem.bounty}
-                %input{:type => 'hidden', :name => 'button_subtype', :value => 'services'}
-                %input{:type => 'hidden', :name => 'bn', :value => 'PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest'}
-                %input{:type => 'image', :name => 'submit', :alt => 'PayPal- オンラインで安全・簡単にお支払い', :src => 'https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif'}
-                %img{:alt => '', :border => '0', :src => 'https://www.paypal.com/ja_JP/i/scr/pixel.gif', :width => '1', :height => '1'}
   = will_paginate(@answers)
   .section
     %h3 回答する
