@@ -37,11 +37,17 @@
     %h3 回答一覧
     %ul.answers
       - @answers.each do |answer|
-        %li.answer
+      - padding = answer.correct ? ' correct' : ''
+        %li{:class => "answer#{padding}"}
           .description~markdown answer.description
           %ul.user
             %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
             %li.name=link_to answer.user.login, user_path(answer.user)
+            - unless @problem.solved?
+              %li.correct
+                - form_for answer do |f|
+                  = hidden_field_tag 'answer[correct]', true
+                  = submit_tag 'この回答を正解とする'
             %li.thanks
               = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
           - if logged_in? and answer.user.id == current_user.id
