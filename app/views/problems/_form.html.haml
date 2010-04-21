@@ -5,9 +5,9 @@
     %br
     = f.text_field :title
   %p
-    = f.label :kind, '', :for => 'problem_kind_id'
+    = f.label :category, '', :for => 'problem_category_id'
     %br
-    = select_by_model @problem, :kind_id
+    = select_by_model problem, :category_id
   %p
     = f.label :tag_list
     %br
@@ -15,11 +15,11 @@
   %p
     = f.label :language, '', :for => 'problem_language_id'
     %br
-    = select_by_model @problem, :language_id
+    = select_by_model problem, :language_id
   %p
     = f.label :license, '', :for => 'problem_license_id'
     %br
-    = select_by_model @problem, :license_id
+    = select_by_model problem, :license_id
   %p
     = f.label :bounty
     %br

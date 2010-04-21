@@ -1,0 +1,8 @@
+%h3 カテゴリー
+%ul.categories
+  - Category.all.each do |category|
+    %li.category=link_to t("label.category.#{category.name}")
+%h3 ヒント
+%p あああああああああああああ
+%p あああああああああああああ
+%p あああああああああああああ

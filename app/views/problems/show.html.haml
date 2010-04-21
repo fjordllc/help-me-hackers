@@ -16,7 +16,7 @@
     .description~markdown @problem.description
     .data
       .user
-        %h4= link_to t("label.kind.#{@problem.kind.name}"), ''
+        %h4= link_to t("label.category.#{@problem.category.name}"), ''
         %dl.bounty
           %dt="報酬"
           %dd

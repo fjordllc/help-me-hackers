@@ -4,7 +4,7 @@ class CreateProblems < ActiveRecord::Migration
       t.string :title, :null => false
       t.text :description, :null => false
       t.belongs_to :user, :null => false
-      t.belongs_to :kind, :null => false
+      t.belongs_to :category, :null => false
       t.belongs_to :language, :null => false
       t.belongs_to :license, :null => false
       t.integer :bounty, :default => 0, :null => false

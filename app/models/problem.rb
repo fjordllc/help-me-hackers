@@ -4,12 +4,12 @@ class Problem < ActiveRecord::Base
   belongs_to :user
   belongs_to :language
   belongs_to :license
-  belongs_to :kind
+  belongs_to :category
   has_many :answers
 
   validates_presence_of :title,
                         :description,
-                        :kind,
+                        :category,
                         :language,
                         :license,
                         :user,

@@ -4,7 +4,7 @@ problem_1:
   description: "Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。
 Pure Pythonで！"
   user_id: 1
-  kind_id: 2
+  category_id: 2
   language_id: 13
   license_id: 4
   bounty: 5000
@@ -16,7 +16,7 @@ problem_2:
   description: "WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。\n
 ３日分の昼飯代を払います！"
   user_id: 1
-  kind_id: 4
+  category_id: 4
   language_id: 7
   license_id: 1
   bounty: 100
@@ -27,7 +27,7 @@ problem_3:
   title: "1日前などの時間表記"
   description: "現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。\r\n\r\n英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。"
   user_id: 1
-  kind_id: 3
+  category_id: 3
   language_id: 9
   license_id: 4
   bounty: 0
