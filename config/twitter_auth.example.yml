@@ -1,0 +1,30 @@
+development:
+  strategy: oauth
+  oauth_consumer_key: devkey
+  oauth_consumer_secret: devsecret
+  base_url: "https://twitter.com"
+  authorize_path: "/oauth/authorize"
+  api_timeout: 10
+  remember_for: 14 # days
+  oauth_callback: "http://help-me-hackers/oauth_callback"
+  ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
+test:
+  strategy: oauth
+  oauth_consumer_key: testkey
+  oauth_consumer_secret: testsecret
+  base_url: "https://twitter.com"
+  authorize_path: "/oauth/authorize"
+  api_timeout: 10
+  remember_for: 14 # days
+  oauth_callback: "http://help-me-hackers/oauth_callback"
+  ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
+production:
+  strategy: oauth
+  oauth_consumer_key: prokey
+  oauth_consumer_secret: prosecret
+  authorize_path: "/oauth/authorize"
+  base_url: "https://twitter.com"
+  api_timeout: 10
+  remember_for: 14 # days
+  oauth_callback: "http://help-me-hackers.com/oauth_callback"
+  ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>

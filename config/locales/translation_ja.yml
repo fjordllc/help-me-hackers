@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       answer: "回答"
-      kind: "種類"
+      category: "カテゴリー"
       language: "言語"
       license: "ライセンス"
       problem: "問題"
@@ -15,7 +15,7 @@ ja:
         user: "ユーザー"
         problem: "問題"
 
-      kind: 
+      category: 
         name: "名前"
         problems: "問題"
         premium: "プレミアム"
@@ -37,7 +37,7 @@ ja:
         resolved: "解決"
         user: "ユーザー"
         answers: "回答"
-        kind: "種類"
+        category: "カテゴリー"
         language: "言語"
         license: "ライセンス"
 
@@ -83,7 +83,7 @@ ja:
     nothing_posted_answers: "投稿した回答はありません"
     nothing_watching_problems: "ウォッチしている問題はありません"
 
-    kind:
+    category:
       software-making: "ソフトウェア作成"
       library-making: "ライブラリ作成"
       class-function-making: "クラス・関数作成"

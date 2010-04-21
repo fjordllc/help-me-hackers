@@ -1,5 +1,7 @@
 .content
   %h2 問題
+  - if params[:name]
+    .condition= t("label.category.#{@category.name}")
 %ul.problems
   = render :partial => 'object', :collection => @problems
 = will_paginate(@problems)

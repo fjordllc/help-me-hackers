@@ -5,7 +5,7 @@ end
 
 load_fixture :languages
 load_fixture :licenses
-load_fixture :kinds
+load_fixture :categories
 load_fixture :countries
 load_fixture :states
 load_fixture :users

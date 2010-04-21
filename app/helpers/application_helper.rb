@@ -1,13 +1,18 @@
 module ApplicationHelper
   def select_by_model(object, method)
-    select object, method, build_model_list(method), :selected => object.send(method)
+    logger.info("object: #{object}")
+    logger.info("method: #{method}")
+#    logger.info("selected: #{object.send(method.to_s)}")
+    select object.class.name.downcase, method, build_model_list(method),
+      :selected => object.send(method.to_s)
   end
 
   def select_programming_language(object, method)
     list = build_model_list(method).delete_if do |e|
       e[1].to_i >= 1000
     end
-    select object, method, list, :selected => object.send(method)
+    select object, method, list,
+      :selected => object.send(method.to_s)
   end
 
   def link_to_unless_current_with_span(name, options = {}, html_options = {})

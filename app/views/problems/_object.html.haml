@@ -1,4 +1,4 @@
-- li_class = "problem " + object.kind.name
+- li_class = "problem " + object.category.name
 - li_class += ' solved' if object.solved?
 - li_class += ' free' if object.bounty == 0
 %li{:class => li_class}
@@ -18,7 +18,7 @@
         %li.label 閲覧
       .created_at= "#{time_ago_in_words object.created_at}前"
   .user
-    %h4.kind=link_to t("label.kind.#{object.kind.name}"), ''
+    %h4.category=link_to t("label.category.#{object.category.name}"), ''
     - if object.bounty > 0
       %dl.bounty
         %dt 報酬

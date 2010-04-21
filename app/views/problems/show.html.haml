@@ -19,7 +19,11 @@
     .description~markdown @problem.description
     .data
       .user
-        %h4= link_to t("label.kind.#{@problem.kind.name}"), ''
+        %h4= link_to t("label.category.#{@problem.category.name}"), ''
+        %dl.bounty
+          %dt="報酬"
+          %dd
+            %span= number_to_currency @problem.bounty
       %ul.answer
         %li.count= @problem.answers.size
         %li.label="回答"
@@ -55,6 +59,7 @@
   = will_paginate(@answers)
   .section
     %h3 回答する
+    %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
     - form_for @answer do |f|
       = f.error_messages
       = f.hidden_field :problem_id
