@@ -1,8 +1,15 @@
-%h3 カテゴリー
-%ul.categories
-  - Category.all.each do |category|
-    %li.category=link_to t("label.category.#{category.name}"), problems_by_category_path(:name => category.name)
-%h3 ヒント
-%p あああああああああああああ
-%p あああああああああああああ
-%p あああああああああああああ
+.section
+  %h3 カテゴリー
+  %ul.categories
+    - Category.all.each do |category|
+      %li.category=link_to t("label.category.#{category.name}"), problems_by_category_path(:name => category.name)
+  .to_archive
+    %p カテゴリーの説明
+
+.section
+  %h3 ヒント
+  %p あああああああああああああ
+  %p あああああああああああああ
+  %p あああああああああああああ
+  .to_archive
+    %p もっと詳しく
