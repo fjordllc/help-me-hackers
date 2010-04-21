@@ -1,6 +1,32 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+/* 共通 */
+
+.icon a img {
+	height: 32px;
+	width: 32px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+.icon a:link img,
+.icon a:visited img {
+	border: 1px solid #EFEFE7;
+}
+.icon a:hover img,
+.icon a:active img {
+	border: 1px solid #ec189a;
+}
+
+/* 全体 */
+
 body {
 	border-top-width: 10px;
 	border-top-style: solid;
@@ -125,13 +151,11 @@ div#wrapper .nav ul li a {
 div#wrapper .nav ul li a:link,
 div#wrapper .nav ul li a:visited {
 	background-color: #bac682;
-	text-shadow: #d0d7b0 1px 1px 01px;
 }
 div#wrapper .nav ul li a:hover,
 div#wrapper .nav ul li a:active {
 	background-color: #636D31;
 	color: #FFFFFF;
-	text-shadow: #9ba46d 1px 1px 1px;
 }
 div#main {
 	width: 750px;
@@ -325,7 +349,7 @@ div#sub div.section h3 {
 	font-weight: bold;
 	display: block;
 	padding-bottom: 3px;
-	font-size: 16px;
+	font-size: 14px;
 }
 div#sub div.section ul {
 	padding-top: 3px;
@@ -336,7 +360,7 @@ div#sub div.section ul {
 	margin-left: 1px;
 	border-top-width: 1px;
 	border-top-style: solid;
-	border-top-color: #c3e71f;
+	border-top-color: #76e3da;
 }
 div#sub div.section ol {
 	padding-top: 0px;
@@ -382,7 +406,7 @@ div.top div#main ul.problems li.problem h3.title {
 
 /* URL:problems */
 div#main ul.problems li.problem .section {
-	width: 535px;
+	width: 540px;
 	float: right;
 	padding-right: 15px;
 }
@@ -392,7 +416,7 @@ div#main ul.problems li.problem .statement {
 }
 div#main ul.problems li.problem div.data {
 	float: right;
-	width: 55px;
+	width: 75px;
 	}
 div#main ul.problems li.problem div.data ul {
 	text-align: center;
@@ -414,7 +438,7 @@ div#main ul.problems li.problem ul.view {
 
 
 div#main ul.problems li.problem div.data ul {
-	width: 55px;
+	width: 60px;
 	text-align: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -433,34 +457,44 @@ div#main ul.problems li.problem div.data ul li.label {
 	line-height: 1;
 	padding-bottom: 2px;
 }
+div#main ul.problems li.problem div.data ul.answer,
+div#main ul.problems li.problem div.data ul.view {
+	margin-right: auto;
+	margin-left: auto;
+}
 div#main ul.problems li.problem div.data ul.answer {
 	background-color: #EFEFE7;
 	color: #5c0404;
-	-webkit-border-top-left-radius: 8px;
-	-webkit-border-top-right-radius: 8px;
-	-moz-border-radius-topleft: 8px;
-	-moz-border-radius-topright: 8px;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 div#main ul.problems li.problem div.data ul.view {
 	background-color: #76e3da;
 	color: #5c0404;
-	-webkit-border-bottom-left-radius: 8px;
-	-webkit-border-bottom-right-radius: 8px;
-	-moz-border-radius-bottomright: 8px;
-	-moz-border-radius-bottomleft: 8px;
-	border-bottom-left-radius: 8px;
-	border-bottom-right-radius: 8px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-bottom-radius: 10px;
+	border-top-bottom-radius: 10px;
 }
 div#main ul.problems li.problem div.data div.created_at {
 	color: #5c0404;
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: bold;
 	text-align: center;
 	display: block;
-	clear: both;
+	margin-top: 10px;
+	border: 2px solid #dbdbc5;
 	padding-top: 5px;
+	padding-bottom: 5px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 
 
@@ -482,12 +516,9 @@ div#main div.content div.problem div.data div.user h4 a {
 	color: #636D31;
 	text-decoration: none;
 	line-height: 1.6;
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-top-right-radius: 6px;
-	-moz-border-radius-topleft: 6px;
-	-moz-border-radius-topright: 6px;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
 }
 div#main ul.problems li.free div.user h4 a {
 	display: block;
@@ -524,33 +555,60 @@ div#main ul.problems li.problem div.user li.name {
 	float: right;
 	width: 77px;
 }
-div#main ul.problems li.problem div.user dl.bounty,
-div#main div.problem div.user dl.bounty {
-	display: block;
-	background-color: #EBECE5;
-	padding-top: 4px;
-	padding-right: 5px;
-	padding-bottom: 4px;
-	padding-left: 5px;
-	-webkit-border-bottom-left-radius: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	-moz-border-radius-bottomright: 6px;
-	-moz-border-radius-bottomleft: 6px;
-	border-bottom-left-radius: 6px;
-	border-bottom-right-radius: 6px;
-}
+
+
+
+
+
 div#main ul.problems li.problem div.user dl.bounty dt,
 div#main div.problem div.user dl.bounty dt {
-	line-height: 1;
-	display: inline;
-	padding-bottom: 5px;
+	line-height: 20px;
+	font-size: 13px;
+	display: block;
+	float: left;
+	width: 38px;
+	height: 20px;
+	background-color: #76e3da;
+	margin-top: 7px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	clear: both;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
 }
 div#main ul.problems li.problem div.user dl.bounty dd,
 div#main div.problem div.user dl.bounty dd {
-	display: inline;
-	padding: 5px;
-	line-height: 1;
+	line-height: 20px;
+	display: block;
+	background-color: #EFEFE7;
 	text-align: right;
+	font-size: 16px;
+	float: right;
+	width: 85px;
+	height: 20px;
+	margin-top: 7px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
 }
 div#main ul.problems li.problem div.user dl.bounty dd span,
 div#main div.problem div.user dl.bounty dd span {
@@ -617,19 +675,19 @@ div#main ul.problems li.resolved ul.view {
 div.ploblems_show div#main div.section {
 	margin-left: 40px;
 }
-div.problems_show div#main div.content div.problem div.description {
+div.problems_show div#main div.content div.description {
 	font-size: 14px;
 	float: left;
 	width: 545px;
 	padding-top: 15px;
 }
-div.problems_show div#main div.content div.problem div.section ul.answers li.answer  div.description {
+div.problems_show div#main div.content div.section ul.answers li.answer  div.description {
 	font-size: 14px;
 	float: left;
 	width: 535px;
 	padding-top: 0px;
 }
-div.problems_show div#main div.content div.problem div.section ul.answers li.answer {
+div.problems_show div#main div.content div.section ul.answers li.answer {
 	display: block;
 	border: 1px solid #E6EAD4;
 	margin-bottom: 10px;
@@ -641,22 +699,22 @@ div.problems_show div#main div.content div.problem div.section ul.answers li.ans
 	padding-bottom: 8px;
 	padding-left: 12px;
 	}
-div.problems_show div#main div.content div.problem ul.user {
+div.problems_show div#main div.content div.section ul.answers li.answer ul.user {
 	font-size: 14px;
 	float: right;
 	width: 120px;
 }
-div.problems_show div#main div.content div.problem ul.user li.icon {
+div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon {
 	float: left;
 	display: block;
-	height: 40px;
-	width: 40px;
+	height: 32px;
+	width: 32px;
 }
-div.problems_show div#main div.content div.problem ul.user li.icon img {
-	height: 40px;
-	width: 40px;
+div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon img {
+	height: 32px;
+	width: 32px;
 }
-div.problems_show div#main div.content div.problem ul.user li.name {
+div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.name {
 	font-size: 10px;
 	float: right;
 	width: 70px;
@@ -668,7 +726,7 @@ div.problems_show div#main div.content div.problem ul.user li.name {
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
 }
-div.problems_show div#main div.content div.problem ul.user li.thanks {
+div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.thanks {
 	clear: both;
 	padding-top: 10px;
 }
@@ -686,29 +744,49 @@ div.problems_show div#main div.content h3 {
 	display: block;
 	margin-bottom: 10px;
 }
-div.problems_show div#main div.content div.title div.person {
+div.problems_show div#main div.content div.title dl.person {
 	width: 130px;
 	float: left;
-	padding-bottom: 3px;
+	padding-bottom: 7px;
+	margin-top: -10px;
 }
-div.problems_show div#main div.content div.title div.person h3.icon {
-	background-color: #00CCCC;
-	display: block;
-	float: left;
-	height: 60px;
-	width: 60px;
-	margin-right: 8px;
-}
-div.problems_show div#main div.content div.title div.person h3.icon img {
-	height: 60px;
-	width: 60px;
-}
-div.problems_show div#main div.content div.title div.person ul {
-	float: left;
-	width: 62px;
+div.problems_show div#main div.content div.title dl.person dt.person {
+	font-size: 13px;
+	margin-bottom: 7px;
+	line-height: 1;
+	background-image: url(../images/person_dt.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 18px;
 	display: block;
 }
-div.problems_show div#main div.content div.title div.person ul li.name {
+div.problems_show div#main div.content div.title dl.person dd.icon {
+	display: block;
+	float: left;
+	height: 33px;
+	width: 33px;
+}
+div.problems_show div#main div.content div.title dl.person dd.icon a img {
+	height: 32px;
+	width: 32px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+div.problems_show div#main div.content div.title dl.person dd.icon a:link img,
+div.problems_show div#main div.content div.title dl.person dd.icon a:visited img {
+	border: 1px solid #EFEFE7;
+}
+div.problems_show div#main div.content div.title dl.person dd.icon a:hover img,
+div.problems_show div#main div.content div.title dl.person dd.icon a:active img {
+	border: 1px solid #ec189a;
+}
+div.problems_show div#main div.content div.title dl.person dd.name {
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
 	white-space: -o-pre-wrap; /* Opera 7 */
@@ -716,8 +794,62 @@ div.problems_show div#main div.content div.title div.person ul li.name {
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
 	font-size: 12px;
+	display: block;
+	float: right;
+	width: 90px;
 }
-
+div.problems_show div#main div.content div.title dl.person dt.bounty {
+	line-height: 20px;
+	font-size: 13px;
+	display: block;
+	float: left;
+	width: 38px;
+	height: 20px;
+	background-color: #76e3da;
+	margin-top: 7px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	clear: both;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+div.problems_show div#main div.content div.title dl.person dd.bounty {
+	line-height: 20px;
+	display: block;
+	background-color: #EFEFE7;
+	text-align: right;
+	font-size: 16px;
+	float: right;
+	width: 85px;
+	height: 20px;
+	margin-top: 7px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 7px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+div.problems_show div#main div.content div.title dl.person dd.bounty span {
+	font-weight: bold;
+	color: #ec189a;
+}
 div.problems_show div#main div.content div.title dl.information {
 	display: block;
 	clear: both;
@@ -739,21 +871,52 @@ div.problems_show div#main div.content div.title dl.information dd {
 	margin-right: 10px;
 }
 div.problems_show div#main div.content div.title dl.information dt {
-	padding: 5px;
+	background-image: url(../images/information_dt.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-right: 27px;
+	padding-bottom: 5px;
+	padding-left: 5px;
 }
 div.problems_show div#main div.content div.title dl.information dd a {
 	display: block;
 	float: left;
-	background-color: #FFFFFF;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-right: 8px;
+	padding-bottom: 3px;
+	padding-left: 8px;
+	white-space: nowrap;
+	margin-top: 2px;
+	font-size: 12px;
+	height: 12px;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
-	text-decoration: none;
-	padding-top: 5px;
-	padding-right: 7px;
-	padding-bottom: 5px;
-	padding-left: 7px;
-	white-space: nowrap;
+}
+div.problems_show div#main div.content div.title dl.information dd a:link,
+div.problems_show div#main div.content div.title dl.information dd a:visited {
+	background-color: #115894;
+	color: #FFFFFF;
+}
+div.problems_show div#main div.content div.title dl.information dd a:hover,
+div.problems_show div#main div.content div.title dl.information dd a:active {
+	background-color: #ec189a;
+	color: #FFFFFF;
+}
+div.problems_show div#main div.content div.title dl.information dd.licence a {
+	background-image: url(../images/information_licence_a.gif);
+	background-repeat: no-repeat;
+	padding-right: 22px;
+}
+div.problems_show div#main div.content div.title dl.information dd.licence a:link,
+div.problems_show div#main div.content div.title dl.information dd.licence a:visited {
+	background-position: right 0px;
+}
+div.problems_show div#main div.content div.title dl.information dd.licence a:hover,
+div.problems_show div#main div.content div.title dl.information dd.licence a:active {
+	background-position: right -18px;
 }
 div.problems_show div#main .data ul {
 	width: 62px;
@@ -838,7 +1001,7 @@ div#main div.content ul.users li.user div.icon img {
 div#main div.content ul.users li.user div.name {
 	float: right;
 	height: 32px;
-	width: 84px;
+	width: 82px;
 	font-size: 12px;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */

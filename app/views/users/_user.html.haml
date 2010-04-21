@@ -1,4 +1,10 @@
 %li.user
-  .login= link_to user.login, user_path(user)
-  .icon=link_to image_tag(user.profile_image_url), user_path(user)
+  .name= link_to user.login, user_path(user)
+  .icon= link_to image_tag(user.profile_image_url), user_path(user)
   .reputation= user.reputation
+  .retweet= 10
+  .prize= 10
+  %dl.language
+    %dt 言語
+    %dd 
+      link_to 'php', root_path
