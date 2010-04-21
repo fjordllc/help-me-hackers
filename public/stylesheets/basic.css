@@ -125,11 +125,13 @@ div#wrapper .nav ul li a {
 div#wrapper .nav ul li a:link,
 div#wrapper .nav ul li a:visited {
 	background-color: #bac682;
+	text-shadow: #d0d7b0 1px 1px 01px;
 }
 div#wrapper .nav ul li a:hover,
 div#wrapper .nav ul li a:active {
 	background-color: #636D31;
 	color: #FFFFFF;
+	text-shadow: #9ba46d 1px 1px 1px;
 }
 div#main {
 	width: 750px;
@@ -501,8 +503,8 @@ div#main ul.problems li.free div.user h4 a {
 }
 div#main ul.problems li.problem div.user li.icon {
 	display: block;
-	height: 30px;
-	width: 30px;
+	height: 32px;
+	width: 32px;
 	background-color: #FFCC66;
 	float: left;
 }
@@ -512,16 +514,15 @@ div#main ul.problems li.problem div.user li.icon img {
 }
 div#main ul.problems li.problem div.user li.name {
 	font-size: 12px;
-	display: block;
-	float: right;
-	width: 79px;
-	padding-left: 5px;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
 	white-space: -o-pre-wrap; /* Opera 7 */
 	white-space: pre-wrap; /* CSS3 */
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
+	display: block;
+	float: right;
+	width: 77px;
 }
 div#main ul.problems li.problem div.user dl.bounty,
 div#main div.problem div.user dl.bounty {
@@ -570,11 +571,9 @@ div#main ul.problems li.resolved div.user dl.bounty {
 }
 div#main ul.problems li.problem div.resolver li.icon {
 	display: block;
-	height: 30px;
-	width: 30px;
+	height: 32px;
+	width: 32px;
 	background-color: #FFCC66;
-	border: 2px solid #FFCC33;
-	margin-left: -2px;
 }
 div#main ul.problems li.problem div.resolver li.icon img {
 	height: 30px;
@@ -603,9 +602,6 @@ div#main ul.problems li.problem div.resolver h4 {
 	display: block;
 	padding-bottom: 5px;
 	font-size: 13px;
-}
-div#main ul.problems li.problem div.user div.resolver li.name {
-	padding-left: 3px;
 }
 div#main ul.problems li.resolved .section {
 	float: right;
@@ -817,12 +813,108 @@ div#main div.content ul.users {
 }
 div#main div.content ul.users li.user {
 	float: left;
-	width: 115px;
-	margin-right: 10px;
-	border: 2px solid #999999;
-	padding: 5px;
-}
-
+	width: 120px;
+	margin-right: 7px;
+	border: 1px solid #EFEFE7;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	margin-bottom: 10px;
+	padding-top: 7px;
+	padding-right: 7px;
+	padding-bottom: 4px;
+	padding-left: 7px;
+  }
+div#main div.content ul.users li.user div.icon {
+	float: left;
+	background-color: #00CCCC;
+	height: 32px;
+	width: 32px;
+  }
+div#main div.content ul.users li.user div.icon img {
+	height: 32px;
+	width: 32px;
+  }
+div#main div.content ul.users li.user div.name {
+	float: right;
+	height: 32px;
+	width: 84px;
+	font-size: 12px;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+  }
+div#main div.content ul.users li.user div.retweet {
+	float: left;
+	height: 22px;
+	width: 40px;
+	line-height: 22px;
+	font-size: 12px;
+	background-image: url(../images/user_retweet.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 18px;
+	font-weight: bold;
+  }
+div#main div.content ul.users li.user div.prize {
+	float: right;
+	height: 22px;
+	width: 40px;
+	line-height: 22px;
+	font-size: 12px;
+	background-image: url(../images/user_prize.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 18px;
+	font-weight: bold;
+  }
+div#main div.content ul.users li.user dl.language {
+	height: 22px;
+	line-height: 22px;
+	font-size: 11px;
+	font-weight: bold;
+	clear: both;
+  }
+div#main div.content ul.users li.user dl.language dt,
+div#main div.content ul.users li.user dl.language dd {
+	display: block;
+	float: left;
+  }
+div#main div.content ul.users li.user dl.language dt {
+	padding-right: 5px;
+	float: left;
+  }
+div#main div.content ul.users li.user dl.language dd a {
+	text-decoration: none;
+	background-image: url(../images/user_language_a.gif);
+	display: block;
+	height: 16px;
+	margin-top: 3px;
+	line-height: 16px;
+	padding-right: 7px;
+	padding-left: 3px;
+	float: left;
+	font-size: 10px;
+  }
+div#main div.content ul.users li.user dl.language dd a:link,
+div#main div.content ul.users li.user dl.language dd a:visited {
+	background-position: right 0px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #223da3;
+	color: #FFFFFF;
+  }
+div#main div.content ul.users li.user dl.language dd a:hover,
+div#main div.content ul.users li.user dl.language dd a:active {
+	background-position: right -16px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #57c9c0;
+	color: #ec189a;
+  }
 
 
 
