@@ -41,3 +41,4 @@
         = render :partial => 'shared/sub'
     #footer
       %p.copyright= "Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}."
+    = render :partial => 'shared/google_analytics' if Rails.env.production?

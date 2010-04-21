@@ -56,6 +56,7 @@
   = will_paginate(@answers)
   .section
     %h3 回答する
+    %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
     - form_for @answer do |f|
       = f.error_messages
       = f.hidden_field :problem_id

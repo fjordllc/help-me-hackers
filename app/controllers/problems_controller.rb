@@ -5,10 +5,16 @@ class ProblemsController < ApplicationController
   ANSWERS_PER_PAGE = 20
 
   def index
-    @problems = Problem.paginate(
-      :page => params[:page],
-      :per_page => PROBLEMS_PER_PAGE,
-      :order => 'id DESC')
+    options = {:page => params[:page],
+               :per_page => PROBLEMS_PER_PAGE,
+               :order => 'id DESC'}
+
+    if params[:name]
+      @category = Category.find_by_name(params[:name])
+      options[:conditions] = ['category_id = ?', @category.id]
+    end
+
+    @problems = Problem.paginate(options)
   end
 
   def wanted

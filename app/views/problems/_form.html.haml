@@ -27,6 +27,7 @@
     = t('number.currency.format.unit')
   %p
     = f.label :description
+    %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
     %br
     = f.text_area :description, :size => '70x10'
   %h4 プレビュー
