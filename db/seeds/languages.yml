@@ -126,6 +126,38 @@ language_32:
   id: 32
   name: 'clojure'
 
+language_33:
+  id: 33
+  name: 'cold-fusion'
+
+language_34:
+  id: 34
+  name: 'effel'
+
+language_35:
+  id: 35
+  name: 'emacs-lisp'
+
+language_36:
+  id: 36
+  name: 'io'
+
+language_37:
+  id: 37
+  name: 'r'
+
+language_38:
+  id: 38
+  name: 'self'
+
+language_39:
+  id: 39
+  name: 'shell'
+
+language_40:
+  id: 40
+  name: 'tcl'
+
 language_1000:
   id: 1000
   name: 'japanese'

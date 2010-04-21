@@ -110,7 +110,7 @@ ja:
       cc-attribution-non-commercial-no-derivatives: "Creative Commons - Attribution Non-Commercial No Derivatives"
 
     language:
-      c: "C言語"
+      c: "C"
       cpp: "C++"
       csharp: "C#"
       objective-c: "Objective-C"
@@ -128,7 +128,7 @@ ja:
       applescript: "AppleScript"
       visualbasic: "Visual Basic"
       ocaml: "OCaml"
-      d: "D言語"
+      d: "D"
       delphi: "Delphi"
       erlang: "Erlang"
       fsharp: "F#"
@@ -140,15 +140,24 @@ ja:
       scala: "Scala"
       sql: "SQL"
       lua: "Lua"
-      assembly: "アセンブリ言語"
+      assembly: "Assembly"
       clojure: "Clojure"
+      cold-fusion: "Cold fusion"
+      effel: "Effel"
+      emacs-lisp: "Emacs Lisp"
+      io: "Io"
+      r: "R"
+      self: "Self"
+      shell: "Shell"
+      tcl: "Tcl"
+      standard-ml: "Standard ML"
       japanese: "日本語"
       english: "英語"
 
     country:
       japan: "日本"
       vietnam: "ベトナム"
-      united-states: "アメリカ合衆国"
+      united-states: "アメリカ"
 
     state:
       hokkaidou: "北海道"

@@ -8,7 +8,7 @@ komagata_fjord:
   remember_token_expires_at: 2010-04-27 11:02:20
   name: Komagata at Fjord
   description: ポウ
-  profile_image_url: "http://a3.twimg.com/profile_images/819533539/octpus_normal.gif"
+  profile_image_url: "http://a1.twimg.com/profile_images/70167950/good_face.png"
   url: "http://fjord.jp/"
   utc_offset: NULL
   time_zone: NULL
@@ -17,11 +17,11 @@ komagata_fjord:
   email: komagata@fjord.jp
   state_id: 13
   language_id: 7
-  company: NULL
-  github_account: NULL
-  ssh_public_key: NULL
+  company: Fjord llc.
+  github_account: komagata
+  ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxiIFLPE2/cKMY45jAIFSflxQb6rBYTQ5enVm5kfl/tNUscRr1KdkpBExsbIba+HYBC8VarSvzXe8L7dGZwqCLJPsp89Kn4Btjrbk9rE/SA/iu0DVmWmb3PIJSJmxL9Pq0dejM+JGzjqxYhw1BoeKwMY8f8vEt0teOHwLliScdEHNRniDSnsMmfQjNoaiD2pANrtg/EH/QTzqC0NtNxv/t+fdbl+x1wriqBj1e2PSvO5awHKouUeH+ETgvG0dL44bYT/QdLoCqpjk9xa57gXyCZGXyXiVZ3mmqyIOmti7rQtk28yTUFqyBV5HDNgvPHprBDEAN3Efu+dQEeBSPDjyEQ== komagata@dev"
   reputation: 110
-  kind: client
+  kind: hacker
 
 machida_fjord:
   id: 2
@@ -34,16 +34,16 @@ machida_fjord:
   name: machida_fjord
   description: 
   profile_image_url: http://a3.twimg.com/profile_images/829703797/machida_normal.jpg
-  url: NULL
+  url: "http://machida.fjord.jp/"
   utc_offset: NULL
   time_zone: NULL
   created_at: 2010-04-17 06:40:49
   updated_at: 2010-04-17 06:40:49
-  email: NULL
-  state_id: NULL
+  email: machida@fjord.jp
+  state_id: a13
   language_id: NULL
-  company: NULL
-  github_account: NULL
+  company: Fjord llc.
+  github_account: machida
   ssh_public_key: NULL
   reputation: 0
   kind: person
@@ -57,7 +57,7 @@ michael_fjord:
   remember_token: d67dfa16f7148c95ae6b
   remember_token_expires_at: "2010-04-27 11:03:47"
   name: michael fjord
-  description: 
+  description: "ダッ、ポウッ"
   profile_image_url: "http://a1.twimg.com/profile_images/819542120/michael_normal.jpg"
   url: "http://fjord.jp/"
   utc_offset: NULL
