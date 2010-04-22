@@ -1,7 +1,14 @@
-- add_title = params[:category] ? " - " + t("label.category.#{@category.name}") : ''
-- add_class = params[:category] ? ' ' + @category.name : ''
+:ruby
+  add_title, add_class = nil, nil
+  if params[:category]
+    add_title = " - " + t("label.category.#{@category.name}")
+    add_class = ' ' + @category.name
+  elsif params[:tag]
+    add_title = " - #{@tag.name}"
+    add_class = ' tag'
+  end
 %div{:class => "content#{add_class}"}
-  %h2= "問題#{add_title}"
+  %h2== 問題#{add_title}
 %ul.problems
   = render :partial => 'object', :collection => @problems
   = will_paginate(@problems)

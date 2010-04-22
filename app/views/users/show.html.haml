@@ -1,3 +1,18 @@
 .content
   %h2= @user.login
   = render :partial => 'profile', :locals => {:user => @user}
+  %h3 投稿した問題
+  - if @user.problems.count.zero?
+    %p= t('label.nothing_posted_problems')
+  - else
+    %ul.problems
+      - @user.problems.each do |problem|
+        %li.problem=link_to h(problem.title), problem_path(problem)
+  %h3 投稿した回答
+  - if @user.answers.count.zero?
+    %p= t('label.nothing_posted_answers')
+  - else
+    %ul.answers
+      - @user.answers.each do |answer|
+        %li.answer=link_to h(answer.problem.title), problem_path(answer.problem)
+

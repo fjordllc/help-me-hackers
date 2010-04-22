@@ -15,9 +15,9 @@
 
       %dl.information
         %dt 言語
-        %dd=link_to t("label.language.#{@problem.language.name}"), @problem.language.name
+        %dd=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
         %dt.licence ライセンス
-        %dd.licence=link_to t("label.license.#{@problem.license.name}"), @problem.license.name
+        %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
     .description~markdown @problem.description
     .data
       .user

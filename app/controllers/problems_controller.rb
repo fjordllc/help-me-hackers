@@ -14,6 +14,12 @@ class ProblemsController < ApplicationController
       options[:conditions] = ['category_id = ?', @category.id]
     end
 
+    if params[:tag]
+      @tag = Tag.find_by_name(params[:tag])
+      options[:joins] = [:taggings]
+      options[:conditions] = ['taggable_type = ? AND tag_id = ?', 'Problem', @tag.id]
+    end
+
     @problems = Problem.paginate(options)
   end
 
