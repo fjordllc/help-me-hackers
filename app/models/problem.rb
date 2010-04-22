@@ -14,6 +14,8 @@ class Problem < ActiveRecord::Base
                         :license,
                         :user,
                         :bounty
+  validates_length_of :title, :within => 4..255
+  validates_length_of :description, :minimum => 30
 
   def self.increment_view_by_id(id)
     problem = self.find(id)

@@ -9,8 +9,8 @@ class ProblemsController < ApplicationController
                :per_page => PROBLEMS_PER_PAGE,
                :order => 'id DESC'}
 
-    if params[:name]
-      @category = Category.find_by_name(params[:name])
+    if params[:category]
+      @category = Category.find_by_name(params[:category])
       options[:conditions] = ['category_id = ?', @category.id]
     end
 

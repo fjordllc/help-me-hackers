@@ -15,4 +15,6 @@ describe Problem do
   should_validate_presence_of :license
   should_validate_presence_of :user
   should_validate_presence_of :bounty
+  should_validate_length_of :title, :within => 4..255
+  should_validate_length_of :description, :minimum => 30
 end

@@ -1,43 +1,51 @@
-license_1:
+gpl2:
   id: 1
-  name: 'gpl'
+  name: 'gpl2'
 
-license_2:
+gpl3:
   id: 2
+  name: 'gpl3'
+
+lgpl:
+  id: 3
   name: 'lgpl'
 
-license_3:
-  id: 3
-  name: 'agpl'
-
-license_4:
+bsd:
   id: 4
+  name: 'bsd'
+
+mit:
+  id: 5
   name: 'mit'
 
-license_5:
-  id: 5
+apache:
+  id: 6
+  name: 'apache'
+
+public-domain:
+  id: 7
   name: 'public-domain'
 
-license_6:
-  id: 6
+cc-attribution:
+  id: 8
   name: 'cc-attribution'
 
-license_7:
-  id: 7
+cc-attribution-share-alike:
+  id: 9
   name: 'cc-attribution-share-alike'
 
-license_8:
-  id: 8
+cc-attribution-no-derivatives:
+  id: 10
   name: 'cc-attribution-no-derivatives'
 
-license_9:
-  id: 9
+cc-attribution-non-commercial:
+  id: 11
   name: 'cc-attribution-non-commercial'
 
-license_10:
-  id: 10
+cc-attribution-non-commercial-share-alike:
+  id: 12
   name: 'cc-attribution-non-commercial-share-alike'
 
-license_11:
-  id: 11
+cc-attribution-non-commercial-no-derivatives:
+  id: 13
   name: 'cc-attribution-non-commercial-no-derivatives'

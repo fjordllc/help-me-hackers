@@ -2,14 +2,22 @@
   %h3 カテゴリー
   %ul.categories
     - Category.all.each do |category|
-      %li.category=link_to t("label.category.#{category.name}"), problems_by_category_path(:name => category.name)
+      %li.category=link_to t("label.category.#{category.name}"), problems_by_category_path(:category => category.name)
   .to_archive
-    %p カテゴリーの説明
-
+    %p=link_to 'カテゴリーの説明', about_category_path
 .section
   %h3 ヒント
-  %p あああああああああああああ
-  %p あああああああああああああ
-  %p あああああああああああああ
+  %ul
+    %li
+      %p あなたの会社のBTSに塩漬けになってるタスクがありませんか？
+      %p Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？
+    %li
+      %p 勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。
+    %li
+      %p= "#{link_to 'アカウント修正ページ', edit_account_path}では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。"
+    %li
+      %p 「Hackerは自宅警備も疎かにしない」ってコピーを考えたんですが・・・。
+    %li
+      %p 解決してもらうコツはプログラマーにとって面白い問題設定にすること。前提とゴールは明確に。
   .to_archive
-    %p もっと詳しく
+    %p=link_to 'もっと詳しく', about_hint_path

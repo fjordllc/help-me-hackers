@@ -97,17 +97,20 @@ ja:
       programming-quiz: "プログラミングクイズ"
 
     license:
-      gpl: "GPL"
+      gpl2: "GPLv2"
+      gpl3: "GPLv3"
       lgpl: "LGPL"
       agpl: "AGPL"
+      bsd: "BSD LICENSE"
       mit: "MIT LICENSE"
+      apache: "Apache Software License"
       public-domain: "Public Domain"
-      cc-attribution: "Creative Commons - Attribution"
-      cc-attribution-share-alike: "Creative Commons - Attribution Share Alike"
-      cc-attribution-no-derivatives: "Creative Commons - Attribution No Derivatives"
-      cc-attribution-non-commercial: "Creative Commons - Attribution Non-Commercial"
-      cc-attribution-non-commercial-share-alike: "Creative Commons - Attribution Non-Commercial Share Alike"
-      cc-attribution-non-commercial-no-derivatives: "Creative Commons - Attribution Non-Commercial No Derivatives"
+      cc-attribution: "Creative Commons — 表示"
+      cc-attribution-share-alike: "Creative Commons — 表示-継承"
+      cc-attribution-no-derivatives: "Creative Commons — 表示-改変禁止"
+      cc-attribution-non-commercial: "Creative Commons — 表示-非営利"
+      cc-attribution-non-commercial-share-alike: "Creative Commons — 表示-非営利-継承"
+      cc-attribution-non-commercial-no-derivatives: "Creative Commons — 表示-非営利-改変禁止"
 
     language:
       c: "C"

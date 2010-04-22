@@ -1,5 +1,5 @@
-- add_title = params[:name] ? " - " + t("label.category.#{@category.name}") : ''
-- add_class = params[:name] ? ' ' + @category.name : ''
+- add_title = params[:category] ? " - " + t("label.category.#{@category.name}") : ''
+- add_class = params[:category] ? ' ' + @category.name : ''
 %div{:class => "content#{add_class}"}
   %h2= "問題#{add_title}"
 %ul.problems
