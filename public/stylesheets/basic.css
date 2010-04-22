@@ -196,10 +196,136 @@ div#main div.content div.title h2 {
 	border-bottom-style: none;
 }
 div.problems_show div#main div.content div.title h2 {
+	float: right;
+	width: 550px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+div.problems_show div#main div.content div.title div.user {
 	float: left;
-	width: 555px;
+	width: 140px;
+}
+
+
+
+
+
+
+
+
+div.problems_show div#main div.content div.title h3 {
+	margin-bottom: 0px;
+}
+div.problems_show div#main div.content div.title h3 a {
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	height: 40px;
+	padding-left: 7px;
+	font-size: 11px;
+	line-height: 40px;
+	margin-right: 3px;
+	margin-top: -7px;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+div.problems_show div.title .class-function-makin a {
+	color: #115894;
+	background-image: url(../images/class-function-making.gif);
+}
+div.problems_show div#main div.content div.title h2 .data-collection-and-making a {
+	background-image: url(../images/data-collection-and-making.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .debugging a {
+	background-image: url(../images/debugging.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .document-translation a {
+	background-image: url(../images/document-translation.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .library-making a {
+	background-image: url(../images/library-making.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .plugin-making a {
+	background-image: url(../images/plugin-making.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .programming-quiz a {
+	background-image: url(../images/programming-quiz.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .prototype-making a {
+	background-image: url(../images/prototype-making.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .software-making a {
+	background-image: url(../images/software-making.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .software-multilingualization a {
+	background-image: url(../images/software-multilingualization.gif);
+	color: #115894;
+}
+div.problems_show div#main div.content div.title h2 .technology-study a {
+	background-image: url(../images/technology-study.gif);
+	color: #115894;
+}
+
+
+
+div.users_show div#main div.content dl.user dt.icon,
+div.users_show div#main div.content dl.user .login {
+	display: none;
+}
+div.users_show div#main div.content dl.user {
+	padding-top: 15px;
 	padding-right: 15px;
 }
+div.users_show div#main div.content dl.user dd.icon a img {
+	height: 60px;
+	width: 60px;
+	float: left;
+}
+div.users_show div#main div.content dl.user .description,
+div.users_show div#main div.content dl.user .state,
+div.users_show div#main div.content dl.user .url,
+div.users_show div#main div.content dl.user .url,
+div.users_show div#main div.content dl.user .company,
+div.users_show div#main div.content dl.user .favorite_language,
+div.users_show div#main div.content dl.user .github_account {
+	width: 600px;
+	float: right;
+}
+div.users_show div#main div.content dl.user dt {
+	font-weight: bold;
+}
+div.users_show div#main div.content dl.user dt.ssh_public_key {
+	clear: both;
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+div.users_show div#main div.content dl.user dd.ssh_public_key {
+	display: block;
+	font-size: 12px;
+	background-color: #E9E9E9;
+	padding: 10px;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+}
+
+
+
+
+
 div#main div.content div.title {
 	margin-left: -15px;
 	padding-left: 15px;
@@ -352,6 +478,12 @@ div#sub div.section h3 {
 	padding-bottom: 3px;
 	font-size: 14px;
 }
+div#sub div.section p {
+	padding-right: 8px;
+	padding-left: 8px;
+	first
+}
+
 div#sub div.section ul {
 	padding-top: 3px;
 	padding-right: 7px;
@@ -584,7 +716,6 @@ div#main ul.problems li.problem div.user li.icon {
 	display: block;
 	height: 32px;
 	width: 32px;
-	background-color: #FFCC66;
 	float: left;
 }
 div#main ul.problems li.problem div.user li.icon img {
@@ -601,7 +732,7 @@ div#main ul.problems li.problem div.user li.name {
 	line-height: 1.2;
 	display: block;
 	float: right;
-	width: 87px;
+	width: 100px;
 }
 
 
@@ -701,15 +832,17 @@ div#main ul.problems li.resolved ul.answer {
 div#main ul.problems li.problem div.person,
 div#main ul.problems li.problem div.resolver {
 	clear: both;
-	padding-right: 6px;
-	padding-left: 6px;
+}
+div#main ul.problems li.problem div.resolver {
+	padding-top: 10px;
 }
 div#main ul.problems li.problem div.person h4,
 div#main ul.problems li.problem div.resolver h4 {
-	font-weight: bold;
+	font-size: 12px;
+	line-height: 1.2;
 	display: block;
-	padding-bottom: 5px;
-	font-size: 13px;
+	float: right;
+	width: 100px;
 }
 div#main ul.problems li.resolved .section {
 	float: right;
@@ -767,7 +900,7 @@ div.problems_show div#main div.content div.section ul.answers li.answer ul.user 
 div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.name {
 	font-size: 10px;
 	float: right;
-	width: 70px;
+	width: 80px;
 	display: block;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
@@ -795,20 +928,15 @@ div.problems_show div#main div.content h3 {
 	margin-bottom: 10px;
 }
 div.problems_show div#main div.content div.title dl.person {
-	width: 130px;
-	float: left;
-	padding-bottom: 7px;
-	margin-top: -10px;
+	padding-bottom: 9px;
+	padding-top: 2px;
 }
 div.problems_show div#main div.content div.title dl.person dt.person {
-	font-size: 13px;
-	margin-bottom: 7px;
-	line-height: 1;
-	background-image: url(../images/person_dt.gif);
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding-left: 18px;
+	line-height: 1.2;
+	font-size: 12px;
 	display: block;
+	float: right;
+	width: 100px;
 }
 div.problems_show div#main div.content div.title dl.person dd.icon {
 	display: block;
@@ -843,10 +971,10 @@ div.problems_show div#main div.content div.title dl.person dd.name {
 	white-space: pre-wrap; /* CSS3 */
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
-	font-size: 12px;
+	font-size: 11px;
 	display: block;
 	float: right;
-	width: 90px;
+	width: 100px;
 }
 div.problems_show div#main div.content div.title dl.person dt.bounty {
 	line-height: 20px;
@@ -856,15 +984,15 @@ div.problems_show div#main div.content div.title dl.person dt.bounty {
 	width: 38px;
 	height: 20px;
 	background-color: #76e3da;
-	margin-top: 7px;
+	margin-top: 10px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
 	clear: both;
 	text-align: center;
 	font-weight: bold;
-	padding-top: 3px;
-	padding-bottom: 3px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	-webkit-border-top-left-radius: 6px;
 	-webkit-border-bottom-left-radius: 6px;
 	-moz-border-radius-topleft: 6px;
@@ -879,15 +1007,15 @@ div.problems_show div#main div.content div.title dl.person dd.bounty {
 	text-align: right;
 	font-size: 16px;
 	float: right;
-	width: 85px;
+	width: 95px;
 	height: 20px;
-	margin-top: 7px;
+	margin-top: 10px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	padding-top: 3px;
+	padding-top: 5px;
 	padding-right: 7px;
-	padding-bottom: 3px;
+	padding-bottom: 5px;
 	padding-left: 0px;
 	-webkit-border-top-right-radius: 6px;
 	-webkit-border-bottom-right-radius: 6px;
@@ -976,7 +1104,6 @@ div.problems_show div#main .data ul {
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
-	margin-top: 10px;
 	}
 div.problems_show div#main .data ul li.count {
 	font-size: 15px;

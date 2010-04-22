@@ -3,13 +3,15 @@
   .problem
     .title
       %h2= @problem.title
-      %dl.person
-        %dt="出題者"
-        %dd.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
-        %dd.name=link_to @problem.user.login, user_path(@problem.user)
-        %dt.bounty="報酬"
-        %dd.bounty
-          %span= number_to_currency @problem.bounty
+      .user
+        %h3= link_to t("label.category.#{@problem.category.name}"), ''
+        %dl.person
+          %dt.person="出題者"
+          %dd.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
+          %dd.name=link_to @problem.user.login, user_path(@problem.user)
+          %dt.bounty="報酬"
+          %dd.bounty
+            %span= number_to_currency @problem.bounty
 
       %dl.information
         %dt 言語
@@ -19,7 +21,6 @@
     .description~markdown @problem.description
     .data
       .user
-        %h4= link_to t("label.category.#{@problem.category.name}"), ''
       %ul.answer
         %li.count= @problem.answers.size
         %li.label="回答"
