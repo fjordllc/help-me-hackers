@@ -3,7 +3,16 @@ class UsersController < ApplicationController
   USERS_PER_PAGE = 20
 
   def index
-    @users = User.paginate(:page => params[:page], :per_page => USERS_PER_PAGE)
+    options = {:page => params[:page],
+               :per_page => USERS_PER_PAGE,
+               :order => 'id DESC'}
+
+    if params[:language]
+      @language = Language.find_by_name(params[:language])
+      options[:conditions] = ['language_id = ?', @language.id]
+    end
+
+    @users = User.paginate(options)
   end
 
   def show

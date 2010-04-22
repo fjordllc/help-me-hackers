@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
     :controller => 'problems', :action => 'index'
   map.problems_by_tag 'problems/tag/:tag',
     :controller => 'problems', :action => 'index'
-  map.users_by_language 'users/language/:name',
+  map.users_by_language 'users/language/:language',
     :controller => 'users', :action => 'index'
 
   map.resources :answers
@@ -21,6 +21,7 @@ ActionController::Routing::Routes.draw do |map|
     page.license  'license',  :action => 'license'
     page.markdown 'markdown', :action => 'markdown'
     page.hint     'hint',     :action => 'hint'
+    page.faq      'faq',      :action => 'faq'
   end
 
   map.with_options :controller => 'users' do |page|

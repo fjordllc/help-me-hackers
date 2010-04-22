@@ -75,6 +75,7 @@ ja:
   label:
     people: "People"
     hacker: "Hacker"
+    problems: "問題"
 
     please-select: "選択して下さい"
     favorite-language: "好きなプログラム言語"

@@ -1,14 +1,9 @@
-:ruby
-  add_title, add_class = nil, nil
-  if params[:category]
-    add_title = " - " + t("label.category.#{@category.name}")
-    add_class = ' ' + @category.name
-  elsif params[:tag]
-    add_title = " - #{@tag.name}"
-    add_class = ' tag'
-  end
-%div{:class => "content#{add_class}"}
-  %h2== 問題#{add_title}
-%ul.problems
-  = render :partial => 'object', :collection => @problems
-  = will_paginate(@problems)
+%div{:class => problems_class}
+  %h2= problems_title
+- if @problems.empty?
+  %p 該当する問題がありません。
+  %p 今なら目立つ！この隙に#{link_to '投稿', new_problem_path}すれば問題解決してもらえるかも！
+- else
+  %ul.problems
+    = render :partial => 'object', :collection => @problems
+    = will_paginate(@problems)

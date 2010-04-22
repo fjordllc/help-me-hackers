@@ -1,5 +1,8 @@
 .content
-  %h2 ユーザー
+  %h2= users_title
+  - if @users.empty?
+    %p 該当するユーザーがいません。 
+  - else
   %ul.users
     = render :partial => 'user', :collection => @users
   = will_paginate(@users)

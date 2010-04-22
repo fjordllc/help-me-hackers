@@ -1,0 +1,7 @@
+%h3 投稿した問題
+- if user.problems.count.zero?
+  %p= t('label.nothing_posted_problems')
+- else
+  %ul.problems
+    - user.problems.each do |problem|
+      %li.problem=link_to h(problem.title), problem_path(problem)

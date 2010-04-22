@@ -7,4 +7,4 @@
   - if user.language
     %dl.language
       %dt 言語
-      %dd=link_to t("label.language.#{user.language.name}"), users_by_language_path(:name => user.language.name)
+      %dd=link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name)

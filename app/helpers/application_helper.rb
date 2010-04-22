@@ -1,8 +1,5 @@
 module ApplicationHelper
   def select_by_model(object, method)
-    logger.info("object: #{object}")
-    logger.info("method: #{method}")
-#    logger.info("selected: #{object.send(method.to_s)}")
     select object.class.name.downcase, method, build_model_list(method),
       :selected => object.send(method.to_s)
   end
@@ -29,6 +26,34 @@ module ApplicationHelper
 
   def github_url(name)
     "http://github.com/#{h(name)}"
+  end
+
+  def users_title
+    if params[:language]
+      "#{t("label.language.#{@language.name}")} #{t('activerecord.models.user')}"
+    else
+      t('activerecord.models.user')
+    end
+  end
+
+  def problems_title
+    if params[:category]
+      "#{t('activerecord.models.problem')} - #{t("label.category.#{@category.name}")}"
+    elsif params[:tag]
+      "#{t('activerecord.models.problem')} - #{@tag.name}"
+    else
+      t('activerecord.models.problem')
+    end
+  end
+
+  def problems_class
+    if params[:category]
+      "content #{@category.name}"
+    elsif params[:tag]
+      'content tag'
+    else
+      'content'
+    end
   end
 
   private
