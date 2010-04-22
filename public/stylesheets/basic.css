@@ -208,7 +208,7 @@ div#main div.content div.title {
 	float: right;
 	width: 210px;
 	padding-right: 20px;
-	margin-top: -20px;
+	margin-top: -15px;
 }
 div#footer {
 	clear: both;
@@ -284,6 +284,7 @@ div#main ul.problems li.problem h3.title {
 	line-height: 1.4;
 	font-size: 18px;
 	font-weight: bold;
+	padding-right: 5px;
 }
 div#main ul.problems li.problem .description {
 	display: block;
@@ -406,9 +407,9 @@ div.top div#main ul.problems li.problem h3.title {
 
 /* URL:problems */
 div#main ul.problems li.problem .section {
-	width: 540px;
+	width: 545px;
 	float: right;
-	padding-right: 15px;
+	padding-right: 10px;
 }
 div#main ul.problems li.problem .statement {
 	width: 460px;
@@ -504,34 +505,81 @@ div#main ul.problems li.problem div.data div.created_at {
 /* user */
 div#main ul.problems li.problem div.user {
 	float: left;
-	width: 130px;
-	padding-left: 10px;
+	width: 140px;
 }
 div#main ul.problems li.problem div.user h4 a,
 div#main div.content div.problem div.data div.user h4 a {
 	display: block;
-	background-color: #d4fd18;
-	padding: 10px;
 	font-weight: bold;
-	color: #636D31;
 	text-decoration: none;
-	line-height: 1.6;
 	border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
+	height: 40px;
+	padding-right: 10px;
+	padding-left: 27px;
+	font-size: 11px;
+	line-height: 40px;
+	margin-bottom: 10px;
+	margin-left: -20px;
+	margin-right: -5px;
+	margin-top: -5px;
+	background-repeat: no-repeat;
+	background-position: center bottom;
 }
-div#main ul.problems li.free div.user h4 a {
-	display: block;
-	background-color: #99CC00;
-	padding: 10px;
-	font-weight: bold;
-	color: #FFFFFF;
-	text-decoration: none;
-	line-height: 1.6;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+
+
+div#main ul.problems li.class-function-making div.user h4 a {
+	color: #115894;
+	background-image: url(../images/class-function-making.gif);
 }
+div#main ul.problems li.data-collection-and-making div.user h4 a {
+	background-image: url(../images/data-collection-and-making.gif);
+	color: #115894;
+}
+div#main ul.problems li.debugging div.user h4 a {
+	background-image: url(../images/debugging.gif);
+	color: #115894;
+}
+div#main ul.problems li.document-translation div.user h4 a {
+	background-image: url(../images/document-translation.gif);
+	color: #115894;
+}
+div#main ul.problems li.library-making div.user h4 a {
+	background-image: url(../images/library-making.gif);
+	color: #115894;
+}
+div#main ul.problems li.plugin-making div.user h4 a {
+	background-image: url(../images/plugin-making.gif);
+	color: #115894;
+}
+div#main ul.problems li.programming-quiz div.user h4 a {
+	background-image: url(../images/programming-quiz.gif);
+	color: #115894;
+}
+div#main ul.problems li.prototype-making div.user h4 a {
+	background-image: url(../images/prototype-making.gif);
+	color: #115894;
+}
+div#main ul.problems li.software-making div.user h4 a {
+	background-image: url(../images/software-making.gif);
+	color: #115894;
+}
+div#main ul.problems li.software-multilingualization div.user h4 a {
+	background-image: url(../images/software-multilingualization.gif);
+	color: #115894;
+}
+div#main ul.problems li.technology-study div.user h4 a {
+	background-image: url(../images/technology-study.gif);
+	color: #115894;
+}
+
+
+
+
+
+
+
 div#main ul.problems li.problem div.user li.icon {
 	display: block;
 	height: 32px;
@@ -553,12 +601,17 @@ div#main ul.problems li.problem div.user li.name {
 	line-height: 1.2;
 	display: block;
 	float: right;
-	width: 77px;
+	width: 87px;
 }
 
 
 
 
+div#main ul.problems li.problem div.user dl.bounty,
+div#main div.problem div.user dl.bounty {
+	margin-bottom: 15px;
+	padding-top: 5px;
+}
 
 div#main ul.problems li.problem div.user dl.bounty dt,
 div#main div.problem div.user dl.bounty dt {
@@ -569,7 +622,6 @@ div#main div.problem div.user dl.bounty dt {
 	width: 38px;
 	height: 20px;
 	background-color: #76e3da;
-	margin-top: 7px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
@@ -593,9 +645,8 @@ div#main div.problem div.user dl.bounty dd {
 	text-align: right;
 	font-size: 16px;
 	float: right;
-	width: 85px;
+	width: 95px;
 	height: 20px;
-	margin-top: 7px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
@@ -650,7 +701,6 @@ div#main ul.problems li.resolved ul.answer {
 div#main ul.problems li.problem div.person,
 div#main ul.problems li.problem div.resolver {
 	clear: both;
-	margin-top: 15px;
 	padding-right: 6px;
 	padding-left: 6px;
 }
@@ -990,9 +1040,8 @@ div#main div.content ul.users li.user {
   }
 div#main div.content ul.users li.user div.icon {
 	float: left;
-	background-color: #00CCCC;
-	height: 32px;
-	width: 32px;
+	height: 33px;
+	width: 33px;
   }
 div#main div.content ul.users li.user div.icon img {
 	height: 32px;

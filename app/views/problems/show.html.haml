@@ -14,16 +14,12 @@
       %dl.information
         %dt 言語
         %dd=link_to t("label.language.#{@problem.language.name}"), @problem.language.name
-        %dt ライセンス
-        %dd=link_to t("label.license.#{@problem.license.name}"), @problem.license.name
+        %dt.licence ライセンス
+        %dd.licence=link_to t("label.license.#{@problem.license.name}"), @problem.license.name
     .description~markdown @problem.description
     .data
       .user
         %h4= link_to t("label.category.#{@problem.category.name}"), ''
-        %dl.bounty
-          %dt="報酬"
-          %dd
-            %span= number_to_currency @problem.bounty
       %ul.answer
         %li.count= @problem.answers.size
         %li.label="回答"
