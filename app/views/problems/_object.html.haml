@@ -7,8 +7,8 @@
     .statement
       .description~markdown object.description
       %ul.tags
-        - object.tag_list.each do |tag|
-          %li.tag=link_to h(tag), problems_by_tag_path(:tag => tag.downcase)
+        - object.tags.each do |tag|
+          %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
     .data
       %ul.answer
         %li.count= object.answers.size
