@@ -18,19 +18,20 @@
         %dt.licence ライセンス
         %dd.licence=link_to t("label.license.#{@problem.license.name}"), @problem.license.name
     .description~markdown @problem.description
-    .retweet
-      - form_for (Problem.new), :url => tweet_problems_path, :method => 'post' do |f|
-        = hidden_field_tag :id, @problem.id
-        == #{text_field_tag 'problem[comment]'}（任意）
-        = f.submit 'ReTweet'
     .data
       .user
-      %ul.answer
-        %li.count= @problem.answers.size
-        %li.label="回答"
-      %ul.view
-        %li.count= @problem.view
-        %li.label="閲覧"
+        %ul.answer
+          %li.count= @problem.answers.size
+          %li.label="回答"
+        %ul.view
+          %li.count= @problem.view
+          %li.label="閲覧"
+        .retweet
+          - form_for (Problem.new), :url => tweet_problems_path, :method => 'post' do |f|
+            %p.align_right
+              = f.submit 'ReTweet'
+              = hidden_field_tag :id, @problem.id
+            == #{text_field_tag 'problem[comment]'}
     %ul.tags
       - @problem.tags.each do |tag|
         %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
