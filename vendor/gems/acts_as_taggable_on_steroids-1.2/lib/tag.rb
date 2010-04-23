@@ -2,8 +2,13 @@ class Tag < ActiveRecord::Base
   has_many :taggings, :dependent => :destroy
   
   validates_presence_of :name
-  validates_uniqueness_of :name
-  
+  validates_uniqueness_of :name, :case_sensitive => false
+  validates_format_of :name, :with => /^\S+$/
+
+  def before_validation
+    self.name.downcase!
+  end
+
   cattr_accessor :destroy_unused
   self.destroy_unused = false
   
