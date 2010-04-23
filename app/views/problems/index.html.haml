@@ -2,7 +2,7 @@
   %h2= problems_title
 - if @problems.empty?
   %p 該当する問題がありません。
-  %p 今なら目立つ！この隙に#{link_to '投稿', new_problem_path}すれば問題解決してもらえるかも！
+  %p== 今なら目立つ！この隙に#{link_to '投稿', new_problem_path}すれば問題解決してもらえるかも！
 - else
   %ul.problems
     = render :partial => 'object', :collection => @problems
