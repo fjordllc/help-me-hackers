@@ -191,6 +191,7 @@ div#main div.content h2 {
 	font-weight: bold;
 	margin-left: -15px;
 	padding-left: 15px;
+	margin-bottom: 15px;
 }
 div#main div.content div.title h2 {
 	border-bottom-style: none;
@@ -277,15 +278,38 @@ div.problems_show div#main div.content div.title h2 .technology-study a {
 
 
 
+div.users_show div#main div.content div.profile {
+	clear: both;
+	padding-bottom: 20px;
+}
 div.users_show div#main div.content div.profile h3 {
 	display: none;
+}
+div.users_show div#main div.content div.solved_problems,
+div.users_show div#main div.content div.posted_problems,
+div.users_show div#main div.content div.posted_answers {
+	clear: both;
+	padding-bottom: 20px;
+}
+div.users_show div#main div.content div.solved_problems h3,
+div.users_show div#main div.content div.posted_problems h3,
+div.users_show div#main div.content div.posted_answers h3 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+div.users_show div#main div.content div.solved_problems ul,
+div.users_show div#main div.content div.posted_problems ul,
+div.users_show div#main div.content div.posted_answers ul {
+	margin-left: 20px;
+	padding-left: 20px;
+	list-style-type: disc;
 }
 div.users_show div#main div.content dl.user dt.icon,
 div.users_show div#main div.content dl.user .login {
 	display: none;
 }
 div.users_show div#main div.content dl.user {
-	padding-top: 15px;
 	padding-right: 15px;
 }
 div.users_show div#main div.content dl.user dd.icon a img {
@@ -407,6 +431,9 @@ div#main ul.problems li.problem {
 	}
 div#main ul.problems li.problem:last-child {
 	border-bottom-style: none;
+}
+div#main ul.problems li.problem:first-child {
+	padding-top: 5px;
 }
 div#main ul.problems li.problem h3.title {
 	display: block;
@@ -1297,7 +1324,6 @@ div.problems_show div#main div.content div.section ul.answers li.thanks input {
 
 
 div#main div.content ul.users {
-	padding-top: 15px;
 	padding-bottom: 15px;
 }
 div#main div.content ul.users li.user {
