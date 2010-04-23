@@ -1,3 +1,4 @@
+- title "#{problems_title} - #{t('application.title')}"
 %div{:class => problems_class}
   %h2= problems_title
   - if @problems.empty?
@@ -7,4 +8,4 @@
   - else
 %ul.problems
   = render :partial => 'object', :collection => @problems
-  = will_paginate(@problems)
+= will_paginate(@problems)

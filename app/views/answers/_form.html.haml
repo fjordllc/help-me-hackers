@@ -12,5 +12,6 @@
         }
       .wmd-preview
       = javascript_include_tag 'wmd/wmd'
-    %p.center
-      = f.submit "送信"
+    %p
+      = f.submit '利用規約に同意して回答する'
+      = link_to '利用規約', about_terms_path, :target => '_blank'

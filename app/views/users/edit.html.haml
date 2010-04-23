@@ -1,7 +1,0 @@
-.content
-  %h2 ユーザー編集
-  = render :partial => "form", :locals => {:user => @user}
-  %ul
-    %li= link_to '閲覧', @user
-    %li= link_to '戻る', users_path
-    %li= link_to '削除', @user, :confirm => '本当に削除してよろしいですか？', :method => :delete

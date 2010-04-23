@@ -40,5 +40,6 @@
       #sub
         = render :partial => 'shared/sub'
     #footer
+      %p== #{link_to 'ブログ', 'http://fjord.jp/tag/help-me-hackers'} | #{link_to '運営会社', 'http://fjord.jp/'} | #{link_to '利用規約', about_terms_path} | #{link_to 'お問い合わせ', 'http://fjord.jp/inquiry'}
       %p.copyright= "Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}."
     = render :partial => 'shared/google_analytics' if Rails.env.production?

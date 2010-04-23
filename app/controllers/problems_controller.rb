@@ -26,7 +26,6 @@ class ProblemsController < ApplicationController
   # POST
   def tweet
     comment = params[:problem][:comment] ? ' ' + params[:problem][:comment] : ''
-    
     current_user.tweet("@#{@problem.user.login}#{comment}", problem_url(@problem))
     flash[:notice] = 'ReTweetしました。'
     redirect_to @problem
@@ -52,6 +51,7 @@ class ProblemsController < ApplicationController
   def show
     @answers = Answer.paginate(:conditions => ['problem_id = ?', @problem.id],
                                :page => params[:page],
+                               :order => 'correct desc',
                                :per_page => ANSWERS_PER_PAGE)
     @answer = Answer.new(:problem_id => @problem.id)
     Problem.increment_view_by_id(@problem.id)

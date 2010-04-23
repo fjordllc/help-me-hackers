@@ -4,7 +4,8 @@
     .title
       %h2= @problem.title
       .user
-        %h3= link_to t("label.category.#{@problem.category.name}"), ''
+        %h3{:class => @problem.category.name}
+          = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
         %dl.person
           %dt.person="出題者"
           %dd.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
@@ -14,9 +15,9 @@
             %span= number_to_currency @problem.bounty
       %dl.information
         %dt 言語
-        %dd=link_to t("label.language.#{@problem.language.name}"), @problem.language.name
+        %dd=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
         %dt.licence ライセンス
-        %dd.licence=link_to t("label.license.#{@problem.license.name}"), @problem.license.name
+        %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
     .description~markdown @problem.description
     .data
       .user
@@ -38,27 +39,28 @@
     - if logged_in? and @problem.user.id == current_user.id
       .edit= link_to '編集', edit_problem_path(@problem)
       .delete= link_to '削除', @problem, :confirm => '本当に削除してよろしいですか？', :method => :delete
-  .section
-    %h3 回答一覧
-    %ul.answers
-      - @answers.each do |answer|
-      - padding = answer.correct ? ' correct' : ''
-        %li{:class => "answer#{padding}"}
-          .description~markdown answer.description
-          %ul.user
-            %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
-            %li.name=link_to answer.user.login, user_path(answer.user)
-            - unless @problem.solved?
-              %li.correct
-                - form_for answer do |f|
-                  = hidden_field_tag 'answer[correct]', true
-                  = submit_tag 'この回答を正解とする'
-            %li.thanks
-              = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
-          - if logged_in? and answer.user.id == current_user.id
-            %ul.loggedin
-              %li.edit= link_to 'この回答を編集', edit_answer_path(answer)
-              %li.delete= link_to 'この回答を削除', answer, :confirm => '本当に削除してよろしいですか？', :method => :delete
+  - unless @answers.empty?
+    .section
+      %h3 回答一覧
+      %ul.answers
+        - @answers.each do |answer|
+        - padding = answer.correct ? ' correct' : ''
+          %li{:class => "answer#{padding}"}
+            .description~markdown answer.description
+            %ul.user
+              %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
+              %li.name=link_to answer.user.login, user_path(answer.user)
+              - unless @problem.solved?
+                %li.correct
+                  - form_for answer do |f|
+                    = hidden_field_tag 'answer[correct]', true
+                    = submit_tag 'この回答を正解とする'
+              %li.thanks
+                = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
+            - if logged_in? and answer.user.id == current_user.id
+              %ul.loggedin
+                %li.edit= link_to 'この回答を編集', edit_answer_path(answer)
+                %li.delete= link_to 'この回答を削除', answer, :confirm => '本当に削除してよろしいですか？', :method => :delete
   = will_paginate(@answers)
   .section.post
     %h3 回答する
