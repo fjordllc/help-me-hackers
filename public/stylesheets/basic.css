@@ -303,8 +303,23 @@ div.users_show div#main div.content div.posted_problems ul,
 div.users_show div#main div.content div.posted_answers ul {
 	margin-left: 20px;
 	padding-left: 20px;
-	list-style-type: disc;
+	list-style-type: disc !important;
 }
+div.users_show div#main div.content div.solved_problems li,
+div.users_show div#main div.content div.posted_problems li,
+div.users_show div#main div.content div.posted_answers li {
+	display: list-item;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding: 0px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+
 div.users_show div#main div.content dl.user dt.icon,
 div.users_show div#main div.content dl.user .login {
 	display: none;
@@ -907,6 +922,17 @@ div.problems_show div#main div.content div.section ul.answers li.answer,
 	padding-right: 10px;
 	padding-bottom: 8px;
 	padding-left: 12px;
+	clear: both;
+	}
+div.problems_show div#main div.content div.section ul.answers li.correct {
+	padding-right: 7px;
+	padding-left: 9px;
+	border: 3px solid #d4fd18;
+	}
+div.problems_show div#main div.content div.section ul.user li.correct {
+	padding-right: 0px;
+	padding-left: 0px;
+	border: none !important;
 	}
 div.problems_show div#main div.content div.section ul.answers li.answer  div.description,
 #main div.content div.post div.wrapper div.wmd-preview {
@@ -996,6 +1022,11 @@ div.problems_show div#main li.answer div.description h5,
 div.problems_show div#main div.content div.section ul.answers li.answer ul.user {
 	float: right;
 	width: 140px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding: 0px;
 }
 div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon {
 	float: left;
@@ -1069,10 +1100,35 @@ div.problems_show div#main div.content div.section ul.answers ul.loggedin li.del
 
 div.problems_show div#main div.content div.problem div.data {
 	float: left;
-	width: 130px;
-	padding-left: 20px;
+	width: 140px;
+	padding-left: 10px;
 	padding-top: 15px;
 }
+div.problems_show div#main div.content div.problem div.data div.retweet {
+	padding-top: 10px;
+	clear: both;
+	padding-right: 8px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	background-color: #D4FD18;
+	margin-top: 10px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+div.problems_show div#main div.content div.problem div.data div.retweet p {
+	margin-bottom: 0px;
+}
+div.problems_show div#main div.content div.problem div.data div.retweet #problem_comment {
+	padding-top: 0px;
+	width: 120px;
+	height: 3em;
+	margin-top: 5px;
+	background-color: #FFFFFF;
+	border: 2px solid #EFEFE7;
+}
+
+
 div.problems_show div#main div.content h3 {
 	display: block;
 	margin-bottom: 10px;
@@ -1273,11 +1329,13 @@ div.problems_show div#main .data ul.answer {
 	background-color: #EFEFE7;
 	color: #5c0404;
 	float: left;
+	margin-bottom: 10px;
 }
 div.problems_show div#main .data ul.view {
 	background-color: #76e3da;
 	color: #5c0404;
 	float: right;
+	margin-bottom: 10px;
 }
 div.problems_show div#main div.content h3 {
 	font-size: 18px;
@@ -1339,6 +1397,7 @@ div#main div.content ul.users li.user {
 	padding-right: 7px;
 	padding-bottom: 4px;
 	padding-left: 7px;
+	height: 85px;
   }
 div#main div.content ul.users li.user div.icon {
 	float: left;
@@ -1579,4 +1638,11 @@ div.answers_edit div#main div.content div.section {
 	margin-right: 20px;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+#main .about p {
+	line-height: 1.7;
+	margin-bottom: 1.5em;
+}
+#main .about ul {
+	margin-right: 25px;
 }

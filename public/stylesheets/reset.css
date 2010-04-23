@@ -180,3 +180,7 @@ display: block;
 	display: none;
 	visibility: hidden;
 }
+.align_right {
+	text-align: right;
+	display: block;
+}
