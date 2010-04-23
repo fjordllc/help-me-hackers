@@ -7,7 +7,8 @@ ActionController::Routing::Routes.draw do |map|
     :controller => 'users', :action => 'index'
 
   map.resources :answers
-  map.resources :problems, :collection => {:wanted => :get, :unsolved => :get}
+  map.resources :problems,
+    :collection => {:wanted => :get, :unsolved => :get, :tweet => :post}
   map.resource :account, :only => [:show, :edit, :update, :destroy]
   map.resource :user_session, :only => [:new, :create, :destroy]
 
@@ -20,6 +21,7 @@ ActionController::Routing::Routes.draw do |map|
     page.category 'category', :action => 'category'
     page.license  'license',  :action => 'license'
     page.markdown 'markdown', :action => 'markdown'
+    page.terms    'terms',    :action => 'terms'
     page.hint     'hint',     :action => 'hint'
     page.faq      'faq',      :action => 'faq'
   end

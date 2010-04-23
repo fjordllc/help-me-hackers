@@ -8,6 +8,8 @@ development:
   remember_for: 14 # days
   oauth_callback: "http://help-me-hackers/oauth_callback"
   ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
+  bitly_api_username: devkey
+  bitly_api_key: devkey
 test:
   strategy: oauth
   oauth_consumer_key: testkey
@@ -18,6 +20,8 @@ test:
   remember_for: 14 # days
   oauth_callback: "http://help-me-hackers/oauth_callback"
   ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
+  bitly_api_username: testkey
+  bitly_api_key: testkey
 production:
   strategy: oauth
   oauth_consumer_key: prokey
@@ -28,3 +32,5 @@ production:
   remember_for: 14 # days
   oauth_callback: "http://help-me-hackers.com/oauth_callback"
   ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
+  bitly_api_username: prodkey
+  bitly_api_key: prodkey

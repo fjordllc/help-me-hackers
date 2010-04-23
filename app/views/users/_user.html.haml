@@ -1,8 +1,8 @@
 %li.user
   .name= link_to user.login, user_path(user)
   .icon= link_to image_tag(user.profile_image_url), user_path(user)
-  .retweet= 10
-  .prize= 10
+  .retweet= 0
+  .prize= user.prize
   - if user.language
     %dl.language
       %dt 言語

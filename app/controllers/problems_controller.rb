@@ -1,6 +1,6 @@
 class ProblemsController < ApplicationController
   before_filter :find_problem
-  before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy]
+  before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy, :tweet]
   PROBLEMS_PER_PAGE = 20
   ANSWERS_PER_PAGE = 20
 
@@ -21,6 +21,15 @@ class ProblemsController < ApplicationController
     end
 
     @problems = Problem.paginate(options)
+  end
+
+  # POST
+  def tweet
+    comment = params[:problem][:comment] ? ' ' + params[:problem][:comment] : ''
+    
+    current_user.tweet("@#{@problem.user.login}#{comment}", problem_url(@problem))
+    flash[:notice] = 'ReTweetしました。'
+    redirect_to @problem
   end
 
   def wanted

@@ -1,27 +1,16 @@
 .content
   %h2 アカウント編集
+  %p== プロフィール詳細やURLは#{link_to 'Twitter', 'https://twitter.com/settings/account'}で修正したものが、次回ログイン時に反映されます。
   - form_for @user, :url => account_path do |f|
     = f.error_messages
-    %p
-      = f.label :profile_image_url
-      %br
-      = f.text_field :profile_image_url
-    %p
-      = f.label :description
-      %br
-      = f.text_area :description, :size => '40x4'
-    %p
-      = f.label :state
-      %br
-      = select_by_model @user, :state_id
     %p
       = "#{f.label:email}（Paypalで報酬を受け取るには公開する必要があります）"
       %br
       = f.text_field :email
     %p
-      = f.label :url
+      = f.label :state
       %br
-      = f.text_field :url
+      = select_by_model @user, :state_id
     %p
       = f.label :company
       %br

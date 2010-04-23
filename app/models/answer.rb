@@ -3,4 +3,7 @@ class Answer < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :description
+  validates_length_of :description, :minimum => 30
+
+  named_scope :corrected, :conditions => {:correct => true}
 end

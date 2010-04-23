@@ -1,6 +1,5 @@
 .content
   %h2== #{@user.login}のダッシュボード
-  = render :partial => 'users/watched_problems', :locals => {:user => @user}
   = render :partial => 'users/solved_problems', :locals => {:user => @user}
   = render :partial => 'users/posted_problems', :locals => {:user => @user}
   = render :partial => 'users/posted_answers', :locals => {:user => @user}

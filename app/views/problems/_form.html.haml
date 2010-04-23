@@ -6,11 +6,11 @@
     = f.text_field :title
   %p
     = f.label :category, '', :for => 'problem_category_id'
-    %span= "（#{link_to '詳細', about_category_path}）"
+    %span== （#{link_to '詳細', about_category_path}）
     %br
     = select_by_model problem, :category_id
   %p
-    = f.label :tag_list
+    == #{f.label :tag_list}（","カンマ区切りで複数入力可能）
     %br
     = f.text_field :tag_list
   %p
@@ -19,7 +19,7 @@
     = select_by_model problem, :language_id
   %p
     = f.label :license, '', :for => 'problem_license_id'
-    %span= "（#{link_to '詳細', about_license_path}）"
+    %span== （#{link_to '詳細', about_license_path}）
     %br
     = select_by_model problem, :license_id
   %p
@@ -40,5 +40,5 @@
   .wmd-preview
   = javascript_include_tag 'wmd/wmd'
   %p
-    = f.submit "送信"
-    = link_to '戻る', problems_path
+    = f.submit '利用規約に同意して登録する'
+    = link_to '利用規約', about_terms_path, :target => '_blank'

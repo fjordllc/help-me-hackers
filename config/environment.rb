@@ -20,6 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'oauth', :version => '0.3.5'
+  config.gem 'bitly', :version => '0.4.0'
   config.gem 'haml', :version => '2.2.22'
   config.gem 'paperclip', :version => '2.3.1.1'
   config.gem 'exception_notification', :version => '2.3.3.0'

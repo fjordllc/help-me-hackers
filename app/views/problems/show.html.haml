@@ -12,13 +12,17 @@
           %dt.bounty="報酬"
           %dd.bounty
             %span= number_to_currency @problem.bounty
-
       %dl.information
         %dt 言語
         %dd=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
         %dt.licence ライセンス
         %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
     .description~markdown @problem.description
+    .retweet
+      - form_for (Problem.new), :url => tweet_problems_path, :method => 'post' do |f|
+        = hidden_field_tag :id, @problem.id
+        == #{text_field_tag 'problem[comment]'}（任意）
+        = f.submit 'ReTweet'
     .data
       .user
       %ul.answer
@@ -56,7 +60,7 @@
   = will_paginate(@answers)
   .section
     %h3 回答する
-    %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
+    %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
     - form_for @answer do |f|
       = f.error_messages
       = f.hidden_field :problem_id
@@ -69,4 +73,5 @@
       .wmd-preview
       = javascript_include_tag 'wmd/wmd'
       %p
-        = f.submit "回答する"
+        = f.submit '利用規約に同意して回答する'
+        = link_to '利用規約', about_terms_path, :target => '_blank'
