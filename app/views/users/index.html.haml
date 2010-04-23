@@ -1,7 +1,7 @@
 .content
   %h2= users_title
   - if @users.empty?
-    %p 該当するユーザーがいません。 
+    %p 該当するユーザーがいません。
   - else
   %ul.users
     = render :partial => 'user', :collection => @users

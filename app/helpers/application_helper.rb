@@ -8,7 +8,7 @@ module ApplicationHelper
     list = build_model_list(method).delete_if do |e|
       e[1].to_i >= 1000
     end
-    select object, method, list,
+    select object.class.name.downcase, method, list,
       :selected => object.send(method.to_s)
   end
 
