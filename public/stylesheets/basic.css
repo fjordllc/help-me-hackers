@@ -191,7 +191,7 @@ div#main div.content h2 {
 	font-weight: bold;
 	margin-left: -15px;
 	padding-left: 15px;
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 }
 div#main div.content div.title h2 {
 	border-bottom-style: none;
@@ -516,7 +516,6 @@ div.top div#main ul.problems li.problem h3.title {
 
 /* URL:problems */
 div#main ul.problems li.problem {
-	padding-bottom: 18px;
 	border-bottom-width: 1px;
 	border-bottom-style: dotted;
 	border-bottom-color: #b9b9b9;
@@ -524,9 +523,15 @@ div#main ul.problems li.problem {
 	margin-right: 10px;
 	margin-left: 10px;
 	overflow: hidden;
+	margin-bottom: 0px;
+	padding-top: 25px;
+	padding-bottom: 15px;
 	}
 div#main ul.problems li.problem:last-child {
 	border-bottom-style: none;
+}
+div#main ul.problems li.problem:first-child {
+	padding-top: 20px;
 }
 div#main ul.problems li.problem h3.title {
 	display: block;
@@ -534,6 +539,7 @@ div#main ul.problems li.problem h3.title {
 	font-size: 18px;
 	font-weight: bold;
 	padding-right: 5px;
+	padding-bottom: 10px;
 }
 div#main ul.problems li.problem .description {
 	display: block;
@@ -554,7 +560,7 @@ div#main .problem ul.tags li a {
 	float: left;
 	line-height: 24px;
 	height: 24px;
-	margin-right: 5px;
+	margin-right: 8px;
 	padding-right: 12px;
 	background-image: url(../images/question_tag.gif);
 	padding-left: 5px;
@@ -581,7 +587,7 @@ div#main .problem ul.tags li a:active {
 	color: #ec189a;
 }
 div#main ul.problems li.problem .main {
-	width: 540px;
+	width: 535px;
 	float: right;
 }
 div#main ul.problems li.problem div.sub {
@@ -591,6 +597,7 @@ div#main ul.problems li.problem div.sub {
 	background-repeat: no-repeat;
 	line-height: 1;
 	background-position: center bottom;
+	margin-top: -10px;
 }
 div#main ul.problems li.problem div.sub dl,
 div#main ul.problems li.problem div.sub dt,
@@ -638,6 +645,7 @@ div#main ul.problems li.problem div.sub dd.language a {
 	border-top-right-radius: 4px;
 	-opera-border-radius-topleft: 4px;
 	-opera-border-radius-topright: 4px;
+	color: #5A5A5A;
 }
 div#main ul.problems li.problem div.sub dd.category {
 	line-height: 20px;
@@ -662,12 +670,14 @@ div#main ul.problems li.problem div.sub dd.category a {
 	text-decoration: none;
 	background-position: left center;
 	background-repeat: no-repeat;
+	color: #666666　!important;
 }
 div#main ul.problems li.class-function-making div.sub dd.category {
 	border-bottom-color: #F141AD;
 }
 div#main ul.problems li.class-function-making div.sub dd.category a {
 	color: #F141AD;
+	color: #666666　!important;
 }
 div#main ul.problems li.data-collection-and-making div.sub dd.category {
 	border-bottom-color: #e92944;
