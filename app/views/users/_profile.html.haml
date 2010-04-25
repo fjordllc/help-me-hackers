@@ -20,6 +20,8 @@
     - if user.language
       %dt.favorite_language 好きなプログラム言語
       %dd.favorite_language= t("label.language.#{user.language.name}")
+    %dt.twitter_account Twitterアカウント
+    %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
     - if user.github_account
       %dt.github_account Githubアカウント
       %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'

@@ -16,16 +16,26 @@ class User < TwitterAuth::GenericUser
     p.empty? ? 0 : p.first.to_i
   end
 
-  def tweet(message, url, tag = '#helpmehackers')
-    conf = YAML.load_file File.join(RAILS_ROOT, "config", "twitter_auth.yml")
-    bitly = Bitly.new(conf[RAILS_ENV]['bitly_api_username'], conf[RAILS_ENV]['bitly_api_key'])
-    message = "#{message} #{bitly.shorten(url).short_url} #{tag}"
+  def tweet(message, url = nil, tag = '#helpmehackers')
+    short_url = url.nil? ? '' : " #{shorten(url)}"
+    message = "#{message}#{short_url} #{tag}"
     logger.info("tweet: #{message}")
     update_tweet_status(message)
+  end
+
+  def search_by_tweet(query)
+    #self.twitter.get('/search.json', 'q' => query)
+    self.twitter.get("/search.json?q=#{query}")
   end
 
   private
   def update_tweet_status(message)
     self.twitter.post('/statuses/update.json', 'status' => message)
+  end
+
+  def shorten(url)
+    conf = YAML.load_file File.join(RAILS_ROOT, "config", "twitter_auth.yml")
+    bitly = Bitly.new(conf[RAILS_ENV]['bitly_api_username'], conf[RAILS_ENV]['bitly_api_key'])
+    bitly.shorten(url).short_url
   end
 end

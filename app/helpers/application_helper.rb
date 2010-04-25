@@ -28,6 +28,10 @@ module ApplicationHelper
     "http://github.com/#{h(name)}"
   end
 
+  def twitter_url(name)
+    "http://twitter.com/#{h(name)}"
+  end
+
   def users_title
     if params[:language]
       "#{t("label.language.#{@language.name}")} #{t('activerecord.models.user')}"
