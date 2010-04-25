@@ -433,75 +433,6 @@ display: inline-table;
 }
 /* End Mac IE */
 
-div#main ul.problems li.problem {
-	padding-bottom: 18px;
-	border-bottom-width: 1px;
-	border-bottom-style: dotted;
-	border-bottom-color: #b9b9b9;
-	clear: both;
-	padding-top: 18px;
-	margin-right: 10px;
-	margin-left: 10px;
-	overflow: hidden;
-	}
-div#main ul.problems li.problem:last-child {
-	border-bottom-style: none;
-}
-div#main ul.problems li.problem:first-child {
-	padding-top: 5px;
-}
-div#main ul.problems li.problem h3.title {
-	display: block;
-	line-height: 1.4;
-	font-size: 18px;
-	font-weight: bold;
-	padding-right: 5px;
-}
-div#main ul.problems li.problem .description {
-	display: block;
-	line-height: 1.5;
-	font-size: 14px;
-	padding-top: 5px;
-}
-div#main .problem ul.tags {
-	clear: both;
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-div#main .problem ul.tags li {
-	display: inline;
-}
-div#main .problem ul.tags li a {
-	display: block;
-	float: left;
-	line-height: 24px;
-	height: 24px;
-	margin-right: 5px;
-	padding-right: 12px;
-	background-image: url(../images/question_tag.gif);
-	padding-left: 5px;
-	background-position: right top;
-	font-size: 12px;
-	font-weight: bold;
-	text-decoration: none;
-	margin-bottom: 5px;
-}
-div#main .problem ul.tags li a:link,
-div#main .problem ul.tags li a:visited {
-	background-position: right top;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #223da3;
-	color: #FFFFFF;
-}
-div#main .problem ul.tags li a:hover,
-div#main .problem ul.tags li a:active {
-	background-position: right -24px;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #57c9c0;
-	color: #ec189a;
-}
 div#footer p.copyright {
 	text-align: center;
 	display: block;
@@ -526,8 +457,7 @@ div#sub div.section h3 {
 div#sub div.section p {
 	padding-right: 8px;
 	padding-left: 8px;
-	first
-; 	margin-bottom: 1em;
+ 	margin-bottom: 1em;
 }
 
 div#sub div.section ul {
@@ -585,191 +515,273 @@ div.top div#main ul.problems li.problem h3.title {
 
 
 /* URL:problems */
-div#main ul.problems li.problem .section {
-	width: 555px;
-	float: right;
+div#main ul.problems li.problem {
+	padding-bottom: 18px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #b9b9b9;
+	clear: both;
+	margin-right: 10px;
+	margin-left: 10px;
+	overflow: hidden;
+	}
+div#main ul.problems li.problem:last-child {
+	border-bottom-style: none;
 }
-div#main ul.problems li.problem .statement {
-	width: 470px;
-	float: left;
-}
-div#main ul.problems li.problem div.data {
-	float: right;
-	width: 75px;
-	}
-div#main ul.problems li.problem div.data ul {
-	text-align: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	margin: 0px;
-	}
-div#main ul.problems li.problem ul.answer {
-	border-radius: 12px 12px 0px 0px;
-	-webkit-border-radius: 12px 12px 0px 0px;
-	-moz-border-radius: 12px 12px 0px 0px;
-	}
-div#main ul.problems li.problem ul.view {
-	border-radius: 0px 0px 12px 12px;
-	-webkit-border-radius: 0px 0px 12px 12px;
-	-moz-border-radius: 0px 0px 12px 12px;
-	}
-
-
-
-div#main ul.problems li.problem div.data ul {
-	width: 60px;
-	text-align: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	}
-div#main ul.problems li.problem div.data ul li.count {
-	font-size: 15px;
+div#main ul.problems li.problem h3.title {
 	display: block;
-	line-height: 1;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	line-height: 1.4;
+	font-size: 18px;
 	font-weight: bold;
+	padding-right: 5px;
 }
-div#main ul.problems li.problem div.data ul li.label {
-	font-size: 11px;
+div#main ul.problems li.problem .description {
 	display: block;
-	line-height: 1;
-	padding-bottom: 2px;
-}
-div#main ul.problems li.problem div.data ul.answer,
-div#main ul.problems li.problem div.data ul.view {
-	margin-right: auto;
-	margin-left: auto;
-}
-div#main ul.problems li.problem div.data ul.answer {
-	background-color: #EFEFE7;
-	color: #5c0404;
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-}
-div#main ul.problems li.problem div.data ul.view {
-	background-color: #76e3da;
-	color: #5c0404;
-	-webkit-border-bottom-left-radius: 10px;
-	-webkit-border-bottom-right-radius: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	-moz-border-radius-bottomright: 10px;
-	border-top-bottom-radius: 10px;
-	border-top-bottom-radius: 10px;
-}
-div#main ul.problems li.problem div.data div.created_at {
-	color: #5c0404;
-	font-size: 11px;
-	font-weight: bold;
-	text-align: center;
-	display: block;
-	margin-top: 10px;
-	border: 2px solid #dbdbc5;
+	line-height: 1.5;
+	font-size: 14px;
 	padding-top: 5px;
-	padding-bottom: 5px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
 }
-
-
-
-
-
-/* user */
-div#main ul.problems li.problem div.user {
-	float: left;
-	width: 140px;
+div#main .problem ul.tags {
+	clear: both;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
-div#main ul.problems li.problem div.user h4 a,
-div#main div.content div.problem div.data div.user h4 a {
+div#main .problem ul.tags li {
+	display: inline;
+}
+div#main .problem ul.tags li a {
 	display: block;
+	float: left;
+	line-height: 24px;
+	height: 24px;
+	margin-right: 5px;
+	padding-right: 12px;
+	background-image: url(../images/question_tag.gif);
+	padding-left: 5px;
+	background-position: right top;
+	font-size: 12px;
 	font-weight: bold;
 	text-decoration: none;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	height: 40px;
-	padding-right: 10px;
-	padding-left: 27px;
-	font-size: 11px;
-	line-height: 40px;
-	margin-bottom: 10px;
-	margin-left: -20px;
-	margin-right: -5px;
-	margin-top: -5px;
+	margin-bottom: 5px;
+}
+div#main .problem ul.tags li a:link,
+div#main .problem ul.tags li a:visited {
+	background-position: right top;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #223da3;
+	color: #FFFFFF;
+}
+div#main .problem ul.tags li a:hover,
+div#main .problem ul.tags li a:active {
+	background-position: right -24px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #57c9c0;
+	color: #ec189a;
+}
+div#main ul.problems li.problem .main {
+	width: 540px;
+	float: right;
+}
+div#main ul.problems li.problem div.sub {
+	float: left;
+	width: 155px;
+	background-image: url(../images/probrem_sub.jpg);
 	background-repeat: no-repeat;
+	line-height: 1;
 	background-position: center bottom;
 }
-
-
-div#main ul.problems li.class-function-making div.user h4 a {
-	color: #115894;
-	background-image: url(../images/class-function-making.gif);
-}
-div#main ul.problems li.data-collection-and-making div.user h4 a {
-	background-image: url(../images/data-collection-and-making.gif);
-	color: #115894;
-}
-div#main ul.problems li.debugging div.user h4 a {
-	background-image: url(../images/debugging.gif);
-	color: #115894;
-}
-div#main ul.problems li.document-translation div.user h4 a {
-	background-image: url(../images/document-translation.gif);
-	color: #115894;
-}
-div#main ul.problems li.library-making div.user h4 a {
-	background-image: url(../images/library-making.gif);
-	color: #115894;
-}
-div#main ul.problems li.plugin-making div.user h4 a {
-	background-image: url(../images/plugin-making.gif);
-	color: #115894;
-}
-div#main ul.problems li.programming-quiz div.user h4 a {
-	background-image: url(../images/programming-quiz.gif);
-	color: #115894;
-}
-div#main ul.problems li.prototype-making div.user h4 a {
-	background-image: url(../images/prototype-making.gif);
-	color: #115894;
-}
-div#main ul.problems li.software-making div.user h4 a {
-	background-image: url(../images/software-making.gif);
-	color: #115894;
-}
-div#main ul.problems li.software-multilingualization div.user h4 a {
-	background-image: url(../images/software-multilingualization.gif);
-	color: #115894;
-}
-div#main ul.problems li.technology-study div.user h4 a {
-	background-image: url(../images/technology-study.gif);
-	color: #115894;
-}
-
-
-
-
-
-
-
-div#main ul.problems li.problem div.user li.icon {
+div#main ul.problems li.problem div.sub dl,
+div#main ul.problems li.problem div.sub dt,
+div#main ul.problems li.problem div.sub dd {
 	display: block;
+}
+div#main ul.problems li.problem div.sub dl {
+	padding-bottom: 7px;
+	background-image: url(../images/problem_sub_dl.gif);
+	background-repeat: no-repeat;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+div#main ul.problems li.solved div.sub dl {
+	background-image: url(../images/solved_sub_dl.gif);
+}
+
+
+div#main ul.problems li.problem div.sub dt {
+	display: none;
+}
+div#main ul.problems li.problem div.sub dd.language {
+	line-height: 21px;
+	height: 21px;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 12px;
+	padding-right: 4px;
+}
+div#main ul.problems li.problem div.sub dd.language a {
+	line-height: 20px;
+	height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	float: right;
+	text-decoration: none;
+	padding-right: 7px;
+	padding-left: 7px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	-opera-border-radius-topleft: 4px;
+	-opera-border-radius-topright: 4px;
+}
+div#main ul.problems li.problem div.sub dd.category {
+	line-height: 20px;
+	height: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	margin-right: -5px;
+	margin-left: -5px;
+	padding-top: 3px;
+	clear: both;
+	text-align: center;
+	padding-bottom: 1px;
+}
+div#main ul.problems li.problem div.sub dd.category a {
+	line-height: 22px;
+	height: 22px;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	text-decoration: none;
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+div#main ul.problems li.class-function-making div.sub dd.category {
+	border-bottom-color: #F141AD;
+}
+div#main ul.problems li.class-function-making div.sub dd.category a {
+	color: #F141AD;
+}
+div#main ul.problems li.data-collection-and-making div.sub dd.category {
+	border-bottom-color: #e92944;
+}
+div#main ul.problems li.data-collection-and-making div.sub dd.category a {
+	color: #e92944;
+}
+div#main ul.problems li.debugging div.sub dd.category {
+	border-bottom-color: #0eba12;
+}
+div#main ul.problems li.debugging div.sub dd.category a {
+	color: #0eba12;
+}
+div#main ul.problems li.document-translation div.sub dd.category {
+	border-bottom-color: #b1be75;
+}
+div#main ul.problems li.document-translation div.sub dd.category a {
+	color: #b1be75;
+}
+div#main ul.problems li.library-making div.sub dd.category {
+	border-bottom-color: #7c55b0;
+}
+div#main ul.problems li.library-making div.sub dd.category a {
+	color: #7c55b0;
+}
+div#main ul.problems li.plugin-making div.sub dd.category {
+	border-bottom-color: #e96d12;
+}
+div#main ul.problems li.plugin-making div.sub dd.category a {
+	color: #e96d12;
+}
+div#main ul.problems li.programming-quiz div.sub dd.category {
+	border-bottom-color: #0d4b7f;
+}
+div#main ul.problems li.programming-quiz div.sub dd.category a {
+	color: #0d4b7f;
+}
+div#main ul.problems li.prototype-making div.sub dd.category {
+	border-bottom-color: #df628e;
+}
+div#main ul.problems li.prototype-making div.sub dd.category a {
+	color: #df628e;
+}
+div#main ul.problems li.software-making div.sub dd.category {
+	border-bottom-color: #b0d40b;
+}
+div#main ul.problems li.software-making div.sub dd.category a {
+	color: #b0d40b;
+}
+div#main ul.problems li.software-multilingualization div.sub dd.category {
+	border-bottom-color: #e6c510;
+}
+div#main ul.problems li.software-multilingualization div.sub dd.category a {
+	color: #e6c510;
+}
+div#main ul.problems li.technology-study div.sub dd.category {
+	border-bottom-color: #1ca4c1;
+}
+div#main ul.problems li.technology-study div.sub dd.category a {
+	color: #1ca4c1;
+}
+
+
+div#main ul.problems li.problem div.sub dd.bounty {
+	margin-top: 6px;
+	font-weight: bold;
+	color: #EC189E;
+	line-height: 27px;
+	height: 27px;
+	text-align: center;
+}
+div#main ul.problems li.problem div.sub dl dd.bounty span {
+	font-weight: bold;
+	color: #ec189a;
+	font-size: 16px;
+}
+div#main ul.problems li.solved div.sub dl dd.bounty span {
+	color: #CCCCCC;
+}
+
+div#main ul.problems li.problem div.sub ul.retweet,
+div#main ul.problems li.problem div.sub ul.answer {
+	font-weight: bold;
+	line-height: 30px;
+	height: 30px;
+	text-align: center;
+	width: 72px;
+	font-size: 18px;
+}
+div#main ul.problems li.problem div.sub ul.retweet li.label,
+div#main ul.problems li.problem div.sub ul.answer li.label {
+	display: none;
+}
+div#main ul.problems li.problem div.sub ul.retweet {
+	float: left;
+	padding-left: 5px;
+}
+div#main ul.problems li.problem div.sub ul.answer {
+	float: right;
+	padding-right: 5px;
+}
+div#main ul.problems li.problem div.sub li.icon {
+	display: block;
+	height: 33px;
+	width: 33px;
+	float: left;
+	background-color: #FFFFFF;
+}
+div#main ul.problems li.problem div.sub li.icon img {
 	height: 32px;
 	width: 32px;
-	float: left;
 }
-div#main ul.problems li.problem div.user li.icon img {
-	height: 30px;
-	width: 30px;
-}
-div#main ul.problems li.problem div.user li.name {
-	font-size: 12px;
+div#main ul.problems li.problem div.sub li.name {
+	font-size: 11px;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
 	white-space: -o-pre-wrap; /* Opera 7 */
@@ -778,71 +790,57 @@ div#main ul.problems li.problem div.user li.name {
 	line-height: 1.2;
 	display: block;
 	float: right;
-	width: 100px;
+	width: 106px;
 }
-
-
-
-
-div#main ul.problems li.problem div.user dl.bounty,
-div#main div.problem div.user dl.bounty {
-	margin-bottom: 15px;
-	padding-top: 5px;
+div#main ul.problems li.problem div.sub div.person {
+	clear: both;
+	padding-top: 16px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
 }
-
-div#main ul.problems li.problem div.user dl.bounty dt,
-div#main div.problem div.user dl.bounty dt {
-	line-height: 20px;
-	font-size: 13px;
+div#main ul.problems li.problem div.sub div.person h4 {
+	font-size: 12px;
 	display: block;
-	float: left;
-	width: 38px;
-	height: 20px;
-	background-color: #76e3da;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
+	text-align: center;
+	padding-top: 7px;
+	line-height: 12px;
+	height: 12px;
+	font-weight: bold;
+}
+div#main ul.problems li.problem div.sub div.person ul {
+	padding-top: 4px;
+}
+div#main ul.problems li.problem div.sub div.created_at {
 	clear: both;
 	text-align: center;
-	font-weight: bold;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-bottom-left-radius: 6px;
-	-moz-border-radius-topleft: 6px;
-	-moz-border-radius-bottomleft: 6px;
-	border-top-left-radius: 6px;
-	border-bottom-left-radius: 6px;
+	border: 2px solid #C0C0C0;
+	padding: 3px;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-opera-border-radius:10px;
+	margin-top: 8px;
+	margin-right: 5px;
+	margin-bottom: 7px;
+	margin-left: 5px;
+	font-size: 12px;
+	line-height: 12px;
+	height: 12px;
 }
-div#main ul.problems li.problem div.user dl.bounty dd,
-div#main div.problem div.user dl.bounty dd {
-	line-height: 20px;
-	display: block;
-	background-color: #EFEFE7;
-	text-align: right;
-	font-size: 16px;
-	float: right;
-	width: 95px;
-	height: 20px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 3px;
-	padding-right: 7px;
-	padding-bottom: 3px;
-	padding-left: 0px;
-	-webkit-border-top-right-radius: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	-moz-border-radius-topright: 6px;
-	-moz-border-radius-bottomright: 6px;
-	border-top-right-radius: 6px;
-	border-bottom-right-radius: 6px;
-}
-div#main ul.problems li.problem div.user dl.bounty dd span,
-div#main div.problem div.user dl.bounty dd span {
-	font-weight: bold;
-	color: #ec189a;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* resolved */
@@ -857,13 +855,42 @@ div#main ul.problems li.resolved div.user dl.bounty {
 }
 div#main ul.problems li.problem div.resolver li.icon {
 	display: block;
-	height: 32px;
-	width: 32px;
+	height: 33px;
+	width: 33px;
 	background-color: #FFCC66;
+	float: left;
+}
+div#main ul.problems li.problem div.resolver li.name {
+	font-size: 11px;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+	display: block;
+	float: right;
+	width: 106px;
+}
+div#main ul.problems li.problem div.resolver {
+	float: right;
+	width: 145px;
+	margin-left: 10px;
+	background-color: #CCCC33;
+	padding: 5px;
+}
+div#main ul.problems li.problem div.resolver h4 {
+	font-size: 12px;
+	line-height: 1.2;
+	display: block;
 }
 div#main ul.problems li.problem div.resolver li.icon img {
 	height: 30px;
 	width: 30px;
+}
+div#main ul.problems li.problem div.resolver li.icon img {
+	height: 32px;
+	width: 32px;
 }
 div#main ul.problems li.problem div.resolver p.name {
 	font-size: 12px;
@@ -875,21 +902,6 @@ div#main ul.problems li.resolved ul.answer {
 	color: #5c0404;
 }
 
-div#main ul.problems li.problem div.person,
-div#main ul.problems li.problem div.resolver {
-	clear: both;
-}
-div#main ul.problems li.problem div.resolver {
-	padding-top: 10px;
-}
-div#main ul.problems li.problem div.person h4,
-div#main ul.problems li.problem div.resolver h4 {
-	font-size: 12px;
-	line-height: 1.2;
-	display: block;
-	float: right;
-	width: 100px;
-}
 div#main ul.problems li.resolved .section {
 	float: right;
 }
@@ -1606,7 +1618,6 @@ color:#006600;
 	margin-left: auto;
 	width: 400px;
 	text-align: center;
-	margin-top: 15px;
 	background-color: #EDFF9B;
 	padding-top: 5px;
 	padding-right: 10px;
@@ -1615,6 +1626,9 @@ color:#006600;
 	border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
+	position: absolute;
+	top: 15px;
+	left: 268px;
 }
 #main .content .post #answer_description {
 	width: 100%;
