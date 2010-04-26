@@ -4,15 +4,15 @@
     %dt.icon アイコン画像
     %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
     %dt.solved 解決問題数
-    %dd.solved 36
+    %dd.solved 0
     %dt.problem 問題出題数
-    %dd.problem 36
+    %dd.problem 0
     %dt.bounty 合計獲得金額
     %dd.bounty
-      %span 100円
+      %span= number_to_currency user.prize
     %dt.thanks 合計支払い金額
     %dd.thanks
-      %span 100円
+      %span= number_to_currency 0
 .profile
   %h3 プロフィール
   - if user.description
@@ -43,6 +43,3 @@
     .ssh_public_key
       %h4 SSH Public Key
       %p.ssh_public_key=h user.ssh_public_key
-
-
-
