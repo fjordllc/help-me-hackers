@@ -1,13 +1,26 @@
+.performance
+  %h3 実績
+  %dl
+    %dt.icon アイコン画像
+    %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
+    %dt.solved 解決問題数
+    %dd.solved 36
+    %dt.problem 問題出題数
+    %dd.problem 36
+    %dt.bounty 合計獲得金額
+    %dd.bounty
+      %span 100円
+    %dt.thanks 合計支払い金額
+    %dd.thanks
+      %span 100円
 .profile
   %h3 プロフィール
+  - if user.description
+    %h4.description 自己紹介
+    %p.description=hbr user.description
   %dl.user
     %dt.login アカウント名
     %dd.login=link_to user.login, user_path(user)
-    %dt.icon アイコン画像
-    %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
-    - if user.description
-      %dt.description 詳細
-      %dd.description=hbr user.description
     - if user.state
       %dt.state 出身
       %dd.state= t("label.state.#{user.state.name}")
@@ -25,6 +38,11 @@
     - if user.github_account
       %dt.github_account Githubアカウント
       %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'
-    - if user.ssh_public_key
-      %dt.ssh_public_key SSH Public Key
-      %dd.ssh_public_key=h user.ssh_public_key
+
+  - if user.ssh_public_key
+    .ssh_public_key
+      %h4 SSH Public Key
+      %p.ssh_public_key=h user.ssh_public_key
+
+
+

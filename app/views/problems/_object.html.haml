@@ -7,7 +7,7 @@
     .statement
       - if object.solved?
         .resolver
-          %h4 答えた人
+          %h4 問題を解決したハッカー
           %ul
             %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
             %li.name=link_to object.solver.login, user_path(object.solver)
