@@ -12,6 +12,7 @@
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     = stylesheet_link_tag 'reset', :media => 'screen'
     = stylesheet_link_tag 'basic', :media => 'screen'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
   %body
     #header
       %h1= link_to 'Help me, hackers!', root_path
@@ -42,4 +43,8 @@
     #footer
       %p== #{link_to 'ブログ', 'http://fjord.jp/tag/help-me-hackers'} | #{link_to '運営会社', 'http://fjord.jp/'} | #{link_to '利用規約', about_terms_path} | #{link_to 'お問い合わせ', 'http://fjord.jp/inquiry'}
       %p.copyright= "Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}."
-    = render :partial => 'shared/google_analytics' if Rails.env.production?
+    - if Rails.env.production?
+      = render :partial => 'shared/google_analytics'
+    - footer_script = yield(:footer_script)
+    - if footer_script
+      = footer_script

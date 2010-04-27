@@ -10,4 +10,4 @@ RAILS_ROOT = File.dirname(__FILE__)
 `cd #{RAILS_ROOT}`
 _run "sudo rake gems:install"
 _run "rake db:migrate:reset"
-_run "rake db:reset"
+_run "rake db:seed"

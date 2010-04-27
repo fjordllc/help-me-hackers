@@ -6,6 +6,7 @@ class Problem < ActiveRecord::Base
   belongs_to :license
   belongs_to :category
   has_many :answers
+  has_many :votes, :as => :voteable, :dependent => :destroy
 
   validates_presence_of :title,
                         :description,

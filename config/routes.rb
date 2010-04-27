@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :votes
+
   map.problems_by_category 'problems/category/:category',
     :controller => 'problems', :action => 'index'
   map.problems_by_tag 'problems/tag/:tag',

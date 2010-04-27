@@ -1,4 +1,5 @@
 def load_fixture(fixture, dir = "db/seeds")
+  puts "loading #{fixture} ..."
   require 'active_record/fixtures'
   Fixtures.create_fixtures(dir, fixture)
 end
