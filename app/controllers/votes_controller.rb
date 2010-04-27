@@ -1,4 +1,6 @@
 class VotesController < ApplicationController
+  before_filter :login_required, :only => [:create, :update, :destroy]
+
   # GET /votes
   # GET /votes.xml
   def index
@@ -37,20 +39,18 @@ class VotesController < ApplicationController
     @vote = Vote.find(params[:id])
   end
 
-  # POST /votes
-  # POST /votes.xml
   def create
     @vote = Vote.new(params[:vote])
+    @vote.user = current_user
 
-    respond_to do |format|
-      if @vote.save
-        flash[:notice] = 'Vote was successfully created.'
-        format.html { redirect_to(@vote) }
-        format.xml  { render :xml => @vote, :status => :created, :location => @vote }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @vote.errors, :status => :unprocessable_entity }
-      end
+    if @vote.save
+      @count = Vote.count(:conditions => [
+        'voteable_id = ? and voteable_type = ?',
+        @vote.voteable_id, @vote.voteable_type])
+      flash[:notice] = t('Vote was successfully created.')
+      render :json => {:success => 1, :count => @count}
+    else
+      render :json => {:error => @vote.errors, :status => :unprocessable_entity}
     end
   end
 
@@ -61,7 +61,7 @@ class VotesController < ApplicationController
 
     respond_to do |format|
       if @vote.update_attributes(params[:vote])
-        flash[:notice] = 'Vote was successfully updated.'
+        flash[:notice] = t('Vote was successfully updated.')
         format.html { redirect_to(@vote) }
         format.xml  { head :ok }
       else

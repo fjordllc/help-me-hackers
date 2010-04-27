@@ -1,5 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :votes
 
   map.problems_by_category 'problems/category/:category',
     :controller => 'problems', :action => 'index'
@@ -8,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.users_by_language 'users/language/:language',
     :controller => 'users', :action => 'index'
 
+  map.resources :votes
   map.resources :answers
   map.resources :problems,
     :collection => {:wanted => :get, :unsolved => :get, :tweet => :post}

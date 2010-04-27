@@ -8,11 +8,13 @@
     %meta{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8'}
     %meta{'http-equiv' => 'Content-Style-Type', 'content' => 'text/css'}
     %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
-    %link{:href => '/stylesheets/application.css', :rel => 'stylesheet', :type => 'text/css'}
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     = stylesheet_link_tag 'reset', :media => 'screen'
     = stylesheet_link_tag 'basic', :media => 'screen'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
+    - header_script = yield(:header_script)
+    - if header_script
+      = header_script
   %body
     #header
       %h1= link_to 'Help me, hackers!', root_path
@@ -33,10 +35,13 @@
           %li= link_to_unless_current_with_span 'ユーザー', users_path
       #main
         #flash
-          - unless flash.empty?
-            = content_tag :div, flash[:notice],  :class => 'notice'  if flash[:notice]
-            = content_tag :div, flash[:warning], :class => 'warning' if flash[:warning]
-            = content_tag :div, flash[:error],   :class => 'error'   if flash[:error]
+          - unless flash.empty? 
+            - if flash[:notice].present?
+              = content_tag :div, flash[:notice],  :class => 'notice'
+            - if flash[:warning].present?
+              = content_tag :div, flash[:warning], :class => 'warning'
+            - if flash[:error].present?
+              = content_tag :div, flash[:error],   :class => 'error'
         = yield
       #sub
         = render :partial => 'shared/sub'
