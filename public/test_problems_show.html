@@ -17,7 +17,7 @@
     <script src="/javascripts/dragdrop.js?1270010017" type="text/javascript"></script>
     <script src="/javascripts/controls.js?1270010017" type="text/javascript"></script>
     <script src="/javascripts/application.js?1270010017" type="text/javascript"></script>
-
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
   </head>
   <body>
     <div id='header'>
@@ -48,26 +48,44 @@
           
           
         </div>
-        <div class='content'>
-
-          <div class='problem'>
-            <div class='title'>
+        <div class='content problem class-function-making solved'>
+<div class="main">
+<div class="title">
+              <div class="good" onclick="$('#problem_3_vote_form').toggle()">GOOD!</div>
               <h2>WordPressのGoogle Analyticsモバイル版プラグイン</h2>
+              <form action="/votes" class="new_vote" id="problem_3_vote_form" method="post" onsubmit="return vote(this, '.problem .data .good ul li.count')" style="display: none;"><div style="margin: 0pt; padding: 0pt; display: inline;"><input name="authenticity_token" value="m3r2vHjMX6s6qzNxsfA8YU0Gfw62YHypMrtq92ZbPik=" type="hidden"></div>
+                <input id="problem_3_voteable_id" name="vote[voteable_id]" value="3" type="hidden">
+                <input id="problem_3_voteable_type" name="vote[voteable_type]" value="Problem" type="hidden">
+                <input id="problem_3_comment" name="vote[comment]" size="30" type="text">
+                <div class="button"><a href="/login">Retweet</a></div>
+<p>リツイートすることにより、この質問へのgood!ポイントが加算されます。</p>
+              </form>
+        </div>
+
 
               <dl class='information'>
-                <dt>言語</dt>
-                <dd><a href="php">PHP</a></dd>
                 <dt class='licence'>ライセンス</dt>
                 <dd class='licence'><a href="gpl2">GPLv2</a></dd>
               </dl>
 
-            </div>
+
             <div class='description main'>
               <p>WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。
                ３日分の昼飯代を払います！</p>
             </div>
+            <ul class='tags'>
+              <li class='tag'><a href="/problems/tag/php">php</a></li>
 
-            <div class='sub information'>
+              <li class='tag'><a href="/problems/tag/wordpress">wordpress</a></li>
+              <li class='tag'><a href="/problems/tag/google-analytics">google-analytics</a></li>
+              <li class='tag'><a href="/problems/tag/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a></li>
+              <li class='tag'><a href="/problems/tag/%E6%90%BA%E5%B8%AF">携帯</a></li>
+              <li class='tag'><a href="/problems/tag/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB">モバイル</a></li>
+            </ul>
+            </div>
+
+            <div class='sub'>
+            <div class='information'>
               <dl>
                 <dt class='language'>プログラム言語</dt>
                 <dd class='language'><a href="/problems/tag/ruby">Ruby</a></dd>
@@ -98,19 +116,10 @@
               </div>
               <div class='created_at'>2分前</div>
             </div>
+            </div>
 
  
-            <ul class='tags'>
-              <li class='tag'><a href="/problems/tag/php">php</a></li>
 
-              <li class='tag'><a href="/problems/tag/wordpress">wordpress</a></li>
-              <li class='tag'><a href="/problems/tag/google-analytics">google-analytics</a></li>
-              <li class='tag'><a href="/problems/tag/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a></li>
-              <li class='tag'><a href="/problems/tag/%E6%90%BA%E5%B8%AF">携帯</a></li>
-              <li class='tag'><a href="/problems/tag/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB">モバイル</a></li>
-            </ul>
-
-          </div>
           <div class='section'>
             <h3>回答一覧</h3>
             <ul class='answers'>
