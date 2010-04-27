@@ -1,6 +1,7 @@
 - title "#{problems_title} - #{t('application.title')}"
-%div{:class => problems_class}
+.title
   %h2= problems_title
+%div{:class => problems_class}
   - if @problems.empty?
     .empty
       %p 該当する問題がありません。

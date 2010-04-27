@@ -162,10 +162,51 @@ div#main {
 	float: left;
 	margin-top: -30px;
 }
+
+
+
+
+
+
+div#main .title {
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #edff9b;
+	padding-left: 15px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	padding-right: 10px;
+	padding-top: 15px;
+}
+div#main div.title h2 {
+	font-size: 24px;
+	display: block;
+	line-height: 1.3;
+	color: #59632d;
+	font-weight: bold;
+	border-bottom-style: none;
+}
+div#main div.main .title {
+	margin-left: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+
+
+
+
+
+
+
+
 div#main div.content {
 	padding-left: 15px;
 	margin-left: 20px;
-	padding-top: 15px;
 	color: #59632d;
 	padding-right: 10px;
 }
@@ -180,40 +221,6 @@ div#main div.content div#flash div {
 	padding-right: 8px;
 	padding-bottom: 2px;
 	padding-left: 8px;
-}
-div#main div.content h2 {
-	border-bottom-width: 5px;
-	border-bottom-style: solid;
-	border-bottom-color: #edff9b;
-	font-size: 24px;
-	display: block;
-	line-height: 1.3;
-	color: #59632d;
-	font-weight: bold;
-	margin-left: -15px;
-	padding-left: 15px;
-	margin-bottom: 0px;
-	margin-right: -10px;
-	padding-right: 10px;
-}
-div#main div.content .title {
-	border-bottom-width: 5px;
-	border-bottom-style: solid;
-	border-bottom-color: #edff9b;
-	margin-left: -15px;
-	padding-left: 15px;
-	margin-bottom: 0px;
-}
-div#main div.content div.main .title {
-	margin-left: 0px;
-	padding-left: 0px;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
-}
-div#main div.content div.title h2 {
-	border-bottom-style: none;
 }
 div.problems_show div#main div.content div.title h2 {
 	float: right;
@@ -305,19 +312,6 @@ div.problems_show div#main div.content div.title h2 .technology-study a {
 
 
 
-div#main div.content div.title {
-	margin-left: -15px;
-	padding-left: 15px;
-	margin-right: -10px;
-	padding-right: 10px;
-}
-div#main div.content div.title h2 {
-	font-size: 24px;
-	display: block;
-	line-height: 1.3;
-	color: #59632d;
-}
-
 
 
 
@@ -345,6 +339,7 @@ div.index #main h2 {
 }
 div#main ul.problems {
 	margin-left: 0px;
+	margin-top: -10px;
 }
 
 
@@ -479,11 +474,11 @@ div#main ul.problems li.problem:last-child {
 	border-bottom-style: none;
 }
 div#main ul.problems li.problem:first-child {
-	padding-top: 20px;
+	padding-top: -20px;
 }
 div#main ul.problems li.problem h3.title {
 	display: block;
-	line-height: 1.4;
+	line-height: 30px;
 	font-size: 20px;
 	font-weight: bold;
 	padding-right: 5px;
@@ -632,7 +627,6 @@ div#main ul.problems li.class-function-making div.information dd.category {
 }
 div#main ul.problems li.class-function-making div.information dd.category a {
 	color: #F141AD;
-	color: #666666　!important;
 }
 div#main ul.problems li.data-collection-and-making div.information dd.category {
 	border-bottom-color: #e92944;
@@ -846,7 +840,7 @@ div#main ul.problems li.problem div.resolver h4 {
 	padding-bottom: 5px;
 	margin-bottom: 7px;
 	font-weight: bold;
-	color: #F141AD;
+	color: #666666;
 	text-align: center;
 }
 div#main ul.problems li.problem div.resolver li.icon img {
