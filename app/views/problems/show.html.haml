@@ -27,11 +27,6 @@
         %ul.view
           %li.count= @problem.view
           %li.label="閲覧"
-        .retweet
-          - form_for @comment, :html => {:onsubmit => 'return save(this)'} do |f|
-            %p.align_right
-              = f.text_field :comment
-              = f.submit 'Comment'
     %ul.tags
       - @problem.tags.each do |tag|
         %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)

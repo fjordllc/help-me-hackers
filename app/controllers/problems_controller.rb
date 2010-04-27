@@ -54,7 +54,6 @@ class ProblemsController < ApplicationController
                                :order => 'correct desc',
                                :per_page => ANSWERS_PER_PAGE)
     @answer = Answer.new(:problem_id => @problem.id)
-    @comment = @problem.comments.new
     Problem.increment_view_by_id(@problem.id)
   end
 
