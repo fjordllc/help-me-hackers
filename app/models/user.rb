@@ -16,6 +16,10 @@ class User < TwitterAuth::GenericUser
     p.empty? ? 0 : p.first.to_i
   end
 
+  def vote
+    Vote.count(:conditions => ['user_id = ?', self.id])
+  end
+
   def tweet(message, url = nil, tag = '#helpmehackers')
     short_url = url.nil? ? '' : " #{shorten(url)}"
     message = "#{message}#{short_url} #{tag}"

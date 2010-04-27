@@ -11,7 +11,7 @@ class AccountsController < ApplicationController
   def update
     if @user.update_attributes(params[:user])
       flash[:notice] = 'ユーザーを編集しました。'
-      redirect_to account_path
+      redirect_to dashboard_path
     else
       render :action => :edit
     end

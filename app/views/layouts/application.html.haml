@@ -21,7 +21,8 @@
       .nav
         %ul
           - if logged_in?
-            %li= link_to current_user.login, account_path
+            %li= link_to "#{image_tag(current_user.profile_image_url)}#{current_user.login}(#{current_user.vote})", dashboard_path
+            %li= link_to 'アカウント', edit_account_path
             %li= link_to 'ログアウト', logout_path
           - else
             %li= link_to 'ログイン', login_path
@@ -35,7 +36,7 @@
           %li= link_to_unless_current_with_span 'ユーザー', users_path
       #main
         #flash
-          - unless flash.empty? 
+          - unless flash.empty?
             - if flash[:notice].present?
               = content_tag :div, flash[:notice],  :class => 'notice'
             - if flash[:warning].present?
