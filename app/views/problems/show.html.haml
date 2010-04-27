@@ -3,30 +3,6 @@
   .problem
     .title
       %h2= @problem.title
-      .user
-        %h3{:class => @problem.category.name}
-          = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
-        %dl.person
-          %dt.person="出題者"
-          %dd.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
-          %dd.name=link_to @problem.user.login, user_path(@problem.user)
-          %dt.bounty="報酬"
-          %dd.bounty
-            %span= number_to_currency @problem.bounty
-      %dl.information
-        %dt 言語
-        %dd=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
-        %dt.licence ライセンス
-        %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
-    .description~markdown @problem.description
-    .data
-      .user
-        %ul.answer
-          %li.count= @problem.answers.size
-          %li.label 回答
-        %ul.view
-          %li.count= @problem.view
-          %li.label 閲覧
       .good
         %ul
           %li.count= @problem.votes.size
@@ -40,6 +16,39 @@
             = f.submit 'Good', :id => "problem_#{@problem.id}_submit"
           - else
             .span= link_to 'Good', login_path
+      %dl.information
+        %dt 言語
+        %dd=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
+        %dt.licence ライセンス
+        %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
+    .main.description~markdown @problem.description
+    .sub.information
+      %dl
+        %dt.language プログラム言語
+        %dd.language=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
+        %dt.category 問題カテゴリー
+        %dd.category{:class => @problem.category.name}
+          = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
+        %dt.bounty 報酬
+        %dd.bounty
+          %span= number_to_currency @problem.bounty
+      %ul.retweet
+        %li.count= @problem.votes.size
+        %li.label retweet
+      %ul.answer
+        %li.count= @problem.answers.size
+        %li.label 回答
+      .person
+        %h4 出題者
+        %ul
+          %li.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
+          %li.name=link_to @problem.user.login, user_path(@problem.user)
+      .created_at= "#{time_ago_in_words @problem.created_at}前"
+
+
+
+
+
     %ul.tags
       - @problem.tags.each do |tag|
         %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
