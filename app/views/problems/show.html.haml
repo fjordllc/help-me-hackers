@@ -7,10 +7,10 @@
 %div{:class => div_class}
   .main
     .title
-      %h2= @problem.title
       .good{:onclick => "$('#problem_#{@problem.id}_vote_form').toggle()"}
         %ul
           %li.count= @problem.votes.size
+      %h2= @problem.title
       - form_for @problem.votes.new, :html => {:onsubmit => "return vote(this, '.problem .data .good ul li.count')", :id => "problem_#{@problem.id}_vote_form", :style => 'display:none'} do |f|
         = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
         = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"

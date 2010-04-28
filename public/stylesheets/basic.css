@@ -193,6 +193,7 @@ div#main div.title h2 {
 	font-weight: bold;
 	border-bottom-style: none;
 	width: 475px;
+	height: 64px;
 }
 div#main div.main .title {
 	margin-left: 0px;
@@ -1684,6 +1685,28 @@ div#main div.content div.main dl.information {
 }
 div#main div.content div.main .licence {
 	display: inline;
+	padding-right: 8px;
+	padding-left: 8px;
+	font-size: 11px;
+	margin-left: -6px;
+	line-height: 18px;
+	height: 18px;
+	background-image: url(../images/licence.gif);
+	font-weight: bold;
+	background-repeat: no-repeat;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+div#main div.content div.main dt.licence {
+	background-position: left center;
+}
+div#main div.content div.main dd.licence {
+	background-position: right center;
+}
+div#main div.content div.main dd.licence a {
+	text-decoration: none;
+	color: #FFFFFF;
+	padding-right: 5px;
 }
 div#main div.content div.main div.description {
 	margin-top: 15px;
