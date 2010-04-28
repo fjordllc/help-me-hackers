@@ -193,7 +193,6 @@ div#main div.title h2 {
 	font-weight: bold;
 	border-bottom-style: none;
 	width: 475px;
-	height: 64px;
 }
 div#main div.main .title {
 	margin-left: 0px;
@@ -202,6 +201,9 @@ div#main div.main .title {
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
+}
+div.problems_show div#main div.title h2 {
+	height: 64px;
 }
 
 
