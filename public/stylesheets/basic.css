@@ -51,10 +51,10 @@ div#header {
 }
 div#header h1 {
 	float: left;
-	height: 70px;
+	height: 68px;
 	width: 180px;
 	display: block;
-	margin-top: 8px;
+	margin-top: 9px;
 	padding-left: 10px;
 }
 div#header h1 a {
@@ -192,6 +192,7 @@ div#main div.title h2 {
 	color: #59632d;
 	font-weight: bold;
 	border-bottom-style: none;
+	width: 475px;
 }
 div#main div.main .title {
 	margin-left: 0px;
@@ -236,6 +237,7 @@ div.problems_show div#main div.content div.main div.title {
 	background-position: left bottom;
 	padding-top: 0px;
 	padding-right: 0px;
+	clear: both;
 }
 div.problems_show div#main div.content div.main div.title div.good{
 	float: right;
@@ -243,7 +245,6 @@ div.problems_show div#main div.content div.main div.title div.good{
 	width: 40px;
 	background-color: #F141AD;
 	margin-top: 3px;
-	margin-left: 5px;
 	font-size: 10px;
 	font-weight: bold;
 	text-align: center;
@@ -252,9 +253,10 @@ div.problems_show div#main div.content div.main div.title div.good{
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
 	-opera-border-radius:8px;
+	cursor: pointer;
 }
 div.problems_show div#main div.content div.main div.title form.new_vote{
-	background-color: #EDFF9B;
+	background-color: #E9E9E9;
 	margin-top: 5px;
 	display: block;
 	padding: 8px;
@@ -964,6 +966,9 @@ div#main ul.problems li.resolved ul.view {
 div.ploblems_show div#main div.section {
 	margin-left: 40px;
 }
+div.ploblems_show div#main div.description {
+	padding-top: 15px;
+}
 div.problems_show div#main div.main {
 	font-size: 14px;
 	float: right;
@@ -1430,13 +1435,22 @@ color:#006600;
 #flash div {
 	width: 400px;
 	text-align: center;
-	background-color: #EDFF9B;
+	background-color: #FFFF00;
 	border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	position: absolute;
-	top: -10px;
-	left: 25px;
+	top: 16px;
+	left: 320px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	filter:alpha(opacity=60);
+	-moz-opacity:0.6;
+	opacity:0.6;
+	font-weight: bold;
+	color: #000000;
+	font-size: 16px;
+	line-height: 20px;
 }
 #main .content .post #answer_description {
 	width: 100%;
@@ -1506,13 +1520,13 @@ div.users_show div#main div.content div.performance dd {
 }
 div.users_show div#main div.content div.performance dd.icon {
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 20px;
 	padding-bottom: 3px;
 }
 div.users_show div#main div.content div.performance dd.icon a img {
-	height: 73px;
-	width: 73px;
-	border: 3px solid #EDFF9B;
+	height: 48px;
+	width: 48px;
+	border: 3px solid #FFFFFF;
 	background-color: #FFFFFF;
 }
 
@@ -1661,4 +1675,16 @@ div.users_show div#main div.content div.posted_answers li {
 	margin-right: 0px;
 	margin-bottom: 5px;
 	margin-left: 0px;
+}
+
+div#main div.content div.main dl.information {
+	margin-top: -5px;
+	text-align: right;
+	clear: both;
+}
+div#main div.content div.main .licence {
+	display: inline;
+}
+div#main div.content div.main div.description {
+	margin-top: 15px;
 }

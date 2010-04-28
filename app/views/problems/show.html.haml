@@ -7,23 +7,20 @@
 %div{:class => div_class}
   .main
     .title
-      %h2= @problem.title
-      .good
+      .good{:onclick => "$('#problem_#{@problem.id}_vote_form').toggle()"}
         %ul
           %li.count= @problem.votes.size
-          %li.label Good
-        .span{:onclick => "$('#problem_#{@problem.id}_vote_form').toggle()"} トグル
-        - form_for @problem.votes.new, :html => {:onsubmit => "return vote(this, '.problem .data .good ul li.count')", :id => "problem_#{@problem.id}_vote_form", :style => 'display:none'} do |f|
-          = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
-          = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
-          = f.text_field :comment, :id => "problem_#{@problem.id}_comment"
-          - if logged_in?
-            = f.submit 'Good', :id => "problem_#{@problem.id}_submit"
-          - else
-            .span= link_to 'Good', login_path
+          %li.label Good!
+      %h2= @problem.title
+      - form_for @problem.votes.new, :html => {:onsubmit => "return vote(this, '.problem .data .good ul li.count')", :id => "problem_#{@problem.id}_vote_form", :style => 'display:none'} do |f|
+        = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
+        = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
+        = f.text_field :comment, :id => "problem_#{@problem.id}_comment"
+        - if logged_in?
+          = f.submit 'Good', :id => "problem_#{@problem.id}_submit"
+        - else
+          .button= link_to 'Good', login_path
     %dl.information
-      %dt 言語
-      %dd=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
       %dt.licence ライセンス
       %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
     .description~markdown @problem.description
