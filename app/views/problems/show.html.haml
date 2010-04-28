@@ -5,55 +5,57 @@
 - div_class += ' solved' if @problem.solved?
 - div_class += ' free' if @problem.bounty == 0
 %div{:class => div_class}
-  .title
-    %h2= @problem.title
-    .good
-      %ul
-        %li.count= @problem.votes.size
-        %li.label Good
-      .span{:onclick => "$('#problem_#{@problem.id}_vote_form').toggle()"} トグル
-      - form_for @problem.votes.new, :html => {:onsubmit => "return vote(this, '.problem .data .good ul li.count')", :id => "problem_#{@problem.id}_vote_form", :style => 'display:none'} do |f|
-        = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
-        = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
-        = f.text_field :comment, :id => "problem_#{@problem.id}_comment"
-        - if logged_in?
-          = f.submit 'Good', :id => "problem_#{@problem.id}_submit"
-        - else
-          .span= link_to 'Good', login_path
+  .main
+    .title
+      %h2= @problem.title
+      .good
+        %ul
+          %li.count= @problem.votes.size
+          %li.label Good
+        .span{:onclick => "$('#problem_#{@problem.id}_vote_form').toggle()"} トグル
+        - form_for @problem.votes.new, :html => {:onsubmit => "return vote(this, '.problem .data .good ul li.count')", :id => "problem_#{@problem.id}_vote_form", :style => 'display:none'} do |f|
+          = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
+          = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
+          = f.text_field :comment, :id => "problem_#{@problem.id}_comment"
+          - if logged_in?
+            = f.submit 'Good', :id => "problem_#{@problem.id}_submit"
+          - else
+            .span= link_to 'Good', login_path
     %dl.information
       %dt 言語
       %dd=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
       %dt.licence ライセンス
       %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
-  .main.description~markdown @problem.description
-  - if logged_in? and @problem.user.id == current_user.id
-    .edit= link_to '編集', edit_problem_path(@problem)
-    .delete= link_to '削除', @problem, :confirm => '本当に削除してよろしいですか？', :method => :delete
-  %ul.tags
-    - @problem.tags.each do |tag|
-      %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
-  .sub.information
-    %dl
-      %dt.language プログラム言語
-      %dd.language=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
-      %dt.category 問題カテゴリー
-      %dd.category{:class => @problem.category.name}
-        = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
-      %dt.bounty 報酬
-      %dd.bounty
-        %span= number_to_currency @problem.bounty
-    %ul.retweet
-      %li.count= @problem.votes.size
-      %li.label retweet
-    %ul.answer
-      %li.count= @problem.answers.size
-      %li.label 回答
-    .person
-      %h4 出題者
-      %ul
-        %li.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
-        %li.name=link_to @problem.user.login, user_path(@problem.user)
-    .created_at= "#{time_ago_in_words @problem.created_at}前"
+    .description~markdown @problem.description
+    %ul.tags
+      - @problem.tags.each do |tag|
+        %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
+    - if logged_in? and @problem.user.id == current_user.id
+      .edit= link_to '編集', edit_problem_path(@problem)
+      .delete= link_to '削除', @problem, :confirm => '本当に削除してよろしいですか？', :method => :delete
+  .sub
+    .information
+      %dl
+        %dt.language プログラム言語
+        %dd.language=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
+        %dt.category 問題カテゴリー
+        %dd.category{:class => @problem.category.name}
+          = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
+        %dt.bounty 報酬
+        %dd.bounty
+          %span= number_to_currency @problem.bounty
+      %ul.retweet
+        %li.count= @problem.votes.size
+        %li.label retweet
+      %ul.answer
+        %li.count= @problem.answers.size
+        %li.label 回答
+      .person
+        %h4 出題者
+        %ul
+          %li.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
+          %li.name=link_to @problem.user.login, user_path(@problem.user)
+      .created_at= "#{time_ago_in_words @problem.created_at}前"
   - unless @answers.empty?
     .section
       %h3 回答一覧
