@@ -281,7 +281,7 @@ div.problems_show div#main div.content div.main div.title form.new_vote input{
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
 	-opera-border-radius:10px;
-	font-size: 14px;
+	font-size: 12px;
 	line-height: 20px;
 	display: block;
 	float: left;
@@ -1005,8 +1005,6 @@ div.problems_show div#main div.content div.section ul.user li.correct {
 div.problems_show div#main div.content div.section ul.answers li.answer  div.description,
 #main div.content div.post div.wrapper div.wmd-preview {
 	font-size: 14px;
-	float: left;
-	width: 510px;
 	padding-top: 0px;
 }
 div.problems_show div#main div.content p,
@@ -1094,7 +1092,9 @@ div.problems_show div#main div.content div.section ul.answers li.answer ul.user 
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
-	padding: 0px;
+	padding: 5px;
+	list-style-type: none;
+	background-color: #FFFF99;
 }
 div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon {
 	float: left;
@@ -1523,8 +1523,8 @@ div.users_show div#main div.content div.performance dd {
 }
 div.users_show div#main div.content div.performance dd.icon {
 	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 3px;
+	padding-top: 25px;
+	padding-bottom: 13px;
 }
 div.users_show div#main div.content div.performance dd.icon a img {
 	height: 48px;
@@ -1712,4 +1712,9 @@ div#main div.content div.main dd.licence a {
 }
 div#main div.content div.main div.description {
 	margin-top: 15px;
+}
+#header .nav img {
+	height: 18px;
+	width: 18px;
+	text-decoration: none;
 }
