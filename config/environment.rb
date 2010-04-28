@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem 'bitly', :version => '0.4.0'
   config.gem 'haml', :version => '2.2.22'
   config.gem 'paperclip', :version => '2.3.1.1'
+  config.gem 'pacecar', :version => '1.2.0'
   config.gem 'exception_notification', :version => '2.3.3.0'
   config.gem 'remarkable_rails', :version => '3.1.13', :lib => false
   config.gem 'rspec', :version => '1.3.0', :lib => false

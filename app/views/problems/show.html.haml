@@ -1,4 +1,6 @@
 - title "#{@problem.title} - #{t('application.title')}"
+- content_for :header_script do
+  = javascript_include_tag 'application'
 .content
   .problem
     .title
@@ -97,4 +99,3 @@
         = link_to '利用規約', about_terms_path, :target => '_blank'
 - content_for :footer_script do
   = javascript_include_tag 'wmd/wmd'
-  = javascript_include_tag 'application'
