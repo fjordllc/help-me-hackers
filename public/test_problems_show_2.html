@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='ja' xml:lang='ja'>
+  <head>
+    <title>TopController: index</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
+    <meta content='text/css' http-equiv='Content-Style-Type' />
+    <meta content='text/javascript' http-equiv='Content-Script-Type' />
+    <link href='/stylesheets/application.css' rel='stylesheet' type='text/css' />
+    <link href='/favicon.ico' rel='shortcut icon' />
+
+    <link href="stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/basic.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/prototype.js?1270010017" type="text/javascript"></script>
+    <script src="/javascripts/effects.js?1270010017" type="text/javascript"></script>
+    <script src="/javascripts/dragdrop.js?1270010017" type="text/javascript"></script>
+    <script src="/javascripts/controls.js?1270010017" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1270010017" type="text/javascript"></script>
+
+  </head>
+  <body>
+    <div id='header'>
+      <h1><a href="/">Help me, hackers!</a></h1>
+
+      <div class='nav'>
+        <ul>
+          <li><a href="/login">ログイン</a></li>
+          <li><a href="/problems/new">問題依頼</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class='problems_show' id='wrapper'>
+
+      <div class='nav'>
+        <ul>
+          <li><a href="/problems">問題</a></li>
+          <li><a href="/problems/wanted">賞金首</a></li>
+          <li><a href="/problems/unsolved">未解決</a></li>
+          <li><a href="/users">ユーザー</a></li>
+        </ul>
+
+      </div>
+      <div id='main'>
+        <div id='flash'>
+        </div>
+        <div class='content'>
+          <div class='problem'>
+            <div class='title'>
+              <h2>1日前などの時間表記</h2>
+
+              <dl class='person'>
+                <dt>出題者</dt>
+                <dd class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></dd>
+                <dd class='name'><a href="/komagata_fjord">komagata_fjord</a></dd>
+                <dt class='bounty'>報酬</dt>
+                <dd class='bounty'>
+                  <span>0円</span>
+
+                </dd>
+              </dl>
+              <dl class='information'>
+                <dt>言語</dt>
+                <dd><a href="ruby">Ruby</a></dd>
+                <dt>ライセンス</dt>
+                <dd><a href="mit">MIT LICENSE</a></dd>
+
+              </dl>
+            </div>
+            <div class='description'>
+              <p>現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。</p>
+              
+              <p>英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。</p>
+            </div>
+            <div class='data'>
+              <div class='user'>
+
+                <h4><a href="">クラス・関数作成</a></h4>
+              </div>
+              <ul class='answer'>
+                <li class='count'>1</li>
+                <li class='label'>回答</li>
+              </ul>
+              <ul class='view'>
+
+                <li class='count'>25</li>
+                <li class='label'>閲覧</li>
+              </ul>
+            </div>
+            <ul class='tags'>
+              <li class='tag'><a href="/problems/3">Ruby</a></li>
+              <li class='tag'><a href="/problems/3">Rails</a></li>
+
+            </ul>
+          </div>
+          <div class='section'>
+            <h3>回答一覧</h3>
+            <ul class='answers'>
+              <li class='answer correct'>
+                <div class='description'>
+                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
+
+                  
+                  <p>「前」というのを追加する必要がありますが。</p>
+                </div>
+                <ul class='user'>
+                  <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
+                  <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
+                  <li class='thanks'>
+                    <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+                      <input name='cmd' type='hidden' value='_donations' />
+
+                      <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
+                      <input name='lc' type='hidden' value='JP' />
+                      <input name='currency_code' type='hidden' value='JPY' />
+                      <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
+                      <input name='item_number' type='hidden' value='3' />
+                      <input name='amount' type='hidden' value='0' />
+                      <input name='button_subtype' type='hidden' value='services' />
+                      <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
+                      <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif' type='image' />
+
+                      <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
+                    </form>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          
+          <div class='section'>
+            <h3>回答する</h3>
+
+            <form action="/answers" class="new_answer" id="new_answer" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="V7VmdWTlvwB7hpImzQ4rXqXUuNIJr7sqJrwVkhd4qkE=" /></div>
+            
+              <input id="answer_problem_id" name="answer[problem_id]" type="hidden" value="3" />
+              <textarea cols="70" id="answer_description" name="answer[description]" rows="10"></textarea>
+              <h4>プレビュー</h4>
+              <script type='text/javascript'>
+                //<![CDATA[
+                  wmd_options = {
+                    output: "Markdown"
+                  }
+                //]]>
+              </script>
+              <div class='wmd-preview'></div>
+              <script src="/javascripts/wmd/wmd.js?1271747548" type="text/javascript"></script>
+
+              <p>
+                <input id="answer_submit" name="commit" type="submit" value="回答する" />
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id='sub'>
+        <div class='section'></div>
+
+      </div>
+    </div>
+    <div id='footer'>
+      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>.</p>
+    </div>
+  </body>
+</html>

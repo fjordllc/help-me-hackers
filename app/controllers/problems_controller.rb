@@ -49,9 +49,7 @@ class ProblemsController < ApplicationController
   end
 
   def show
-    @answers = @problem.answers.by_correct(:desc).paginate(
-      :page => params[:page],
-      :per_page => ANSWERS_PER_PAGE)
+    @answers = @problem.answers.by_correct(:desc).paginate(:page => params[:page], :per_page => ANSWERS_PER_PAGE)
     @answer = Answer.new(:problem_id => @problem.id)
     Problem.increment_view_by_id(@problem.id)
   end
