@@ -9,7 +9,7 @@ class AnswersController < ApplicationController
     @answer = Answer.new(params[:answer])
     @answer.user = current_user
     if @answer.save
-      flash[:notice] = '回答を作成しました。'
+      flash[:notice] = 'Answer was successfully created.'
       redirect_to problem_path(@answer.problem)
     else
       render :action => :new
@@ -18,7 +18,7 @@ class AnswersController < ApplicationController
 
   def update
     if @answer.update_attributes(params[:answer])
-      flash[:notice] = '回答を編集しました。'
+      flash[:notice] = 'Answer was successfully updated.'
       redirect_to problem_path(@answer.problem)
     else
       render :action => :edit
@@ -28,10 +28,10 @@ class AnswersController < ApplicationController
   def destroy
     problem = @answer.problem
     if @answer.destroy
-      flash[:notice] = '回答を削除しました。'
+      flash[:notice] = 'Answer was successfully deleted.'
       redirect_to problem_path(problem)
     else
-      flash[:error] = '回答を削除できませんでした。'
+      flash[:notice] = 'Answer was not deleted.'
       redirect_to problem_path(problem)
     end
   end

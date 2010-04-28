@@ -1,8 +1,8 @@
 .solved_problems
   %h3 解決した問題
-  - if user.answers.corrected.empty?
+  - if user.answers.correct.empty?
     %p= t('label.nothing_posted_answers')
   - else
     %ul.answers
-      - user.answers.corrected.each do |answer|
+      - user.answers.correct.each do |answer|
         %li.answer=link_to h(answer.problem.title), problem_path(answer.problem)

@@ -49,10 +49,9 @@ class ProblemsController < ApplicationController
   end
 
   def show
-    @answers = Answer.paginate(:conditions => ['problem_id = ?', @problem.id],
-                               :page => params[:page],
-                               :order => 'correct desc',
-                               :per_page => ANSWERS_PER_PAGE)
+    @answers = @problem.answers.by_correct(:desc).paginate(
+      :page => params[:page],
+      :per_page => ANSWERS_PER_PAGE)
     @answer = Answer.new(:problem_id => @problem.id)
     Problem.increment_view_by_id(@problem.id)
   end
@@ -69,7 +68,7 @@ class ProblemsController < ApplicationController
     @problem.user = current_user
 
     if @problem.save
-      flash[:notice] = '問題を作成しました。'
+      flash[:notice] = t('Problem was successfully created.')
       redirect_to @problem
     else
       render :action => :new
@@ -78,7 +77,7 @@ class ProblemsController < ApplicationController
 
   def update
     if @problem.update_attributes(params[:problem])
-      flash[:notice] = '問題を編集しました。'
+      flash[:notice] = t('Problem was successfully updated.')
       redirect_to @problem
     else
       render :action => :edit
@@ -87,10 +86,10 @@ class ProblemsController < ApplicationController
 
   def destroy
     if @problem.destroy
-      flash[:notice] = '問題を削除しました。'
+      flash[:notice] = t('Problem was successfully deleted.')
       redirect_to problems_path
     else
-      flash[:error] = '問題を削除できませんでした。'
+      flash[:notice] = t('Problem was not deleted.')
       redirect_to @problem
     end
   end
