@@ -49,14 +49,20 @@ div#header {
 	background-position: left bottom;
 	padding-bottom: 30px;
 }
-div#header h1 a {
-	display: block;
+div#header h1 {
+	float: left;
 	height: 70px;
 	width: 180px;
-	float: left;
-	margin-top: 7px;
+	display: block;
+	margin-top: 8px;
+	padding-left: 10px;
+}
+div#header h1 a {
+	display: block;
 	background-image: url(../images/h1_a.gif);
 	text-indent: -9999px;
+	height: 70px;
+	width: 180px;
 }
 div#header h1 a:link,
 div#header h1 a:visited {
@@ -101,10 +107,11 @@ div#wrapper .nav {
 	width: 990px;
 }
 div#wrapper .nav ul {
-	width: 780px;
+	width: 770px;
 	display: block;
 	margin-top: -75px;
 	float: right;
+	padding-left: 10px;
 }
 div#wrapper .nav ul li {
 	display: inline;
@@ -115,7 +122,7 @@ div#wrapper .nav ul li span.current {
 	display: block;
 	background-color: #d4fd18;
 	float: left;
-	margin-right: 5px;
+	margin-right: 8px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -134,7 +141,7 @@ div#wrapper .nav ul li a {
 	display: block;
 	float: left;
 	height: 24px;
-	margin-right: 5px;
+	margin-right: 8px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -162,68 +169,149 @@ div#main {
 	float: left;
 	margin-top: -30px;
 }
+
+
+
+
+
+
+div#main .title {
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #edff9b;
+	padding-left: 15px;
+	margin-left: 20px;
+	padding-right: 10px;
+	padding-top: 15px;
+	padding-bottom: 2px;
+}
+div#main div.title h2 {
+	font-size: 24px;
+	display: block;
+	line-height: 32px;
+	color: #59632d;
+	font-weight: bold;
+	border-bottom-style: none;
+}
+div#main div.main .title {
+	margin-left: 0px;
+	padding-left: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+
+
+
+
+
+
+
+
 div#main div.content {
 	padding-left: 15px;
 	margin-left: 20px;
-	padding-top: 15px;
 	color: #59632d;
+	padding-right: 10px;
 }
 div#main div.content div#flash div {
 	display: block;
 	line-height: 1.3;
 	color: #59632d;
 	font-weight: bold;
-	border: 3px solid #D4FD18;
-	padding: 8px;
-	margin-right: 65px;
-	margin-left: 65px;
+	border: 1px solid #D4FD18;
 	text-align: center;
-	margin-bottom: 15px;
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 2px;
+	padding-left: 8px;
 }
-div#main div.content h2 {
-	border-bottom-width: 5px;
-	border-bottom-style: solid;
-	border-bottom-color: #edff9b;
-	font-size: 24px;
-	display: block;
-	line-height: 1.3;
-	color: #59632d;
-	font-weight: bold;
-	margin-left: -15px;
-	padding-left: 15px;
-	margin-bottom: 0px;
+div.problems_show div#main div.content div.main div.title {
+	padding-bottom: 20px;
+	background-image: url(../images/problem_title.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-top: 0px;
+	padding-right: 0px;
 }
-div#main div.content .title {
-	border-bottom-width: 5px;
-	border-bottom-style: solid;
-	border-bottom-color: #edff9b;
-	font-size: 24px;
-	display: block;
-	line-height: 1.3;
-	color: #59632d;
-	margin-left: -15px;
-	padding-left: 15px;
-	margin-bottom: 0px;
-}
-div#main div.content div.title h2 {
-	border-bottom-style: none;
-}
-div.problems_show div#main div.content div.title h2 {
+div.problems_show div#main div.content div.main div.title div.good{
 	float: right;
-	width: 550px;
-	padding-right: 10px;
-	padding-bottom: 5px;
+	height: 40px;
+	width: 40px;
+	background-color: #F141AD;
+	margin-top: 3px;
+	margin-left: 5px;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	-opera-border-radius:8px;
 }
-div.problems_show div#main div.content div.title div.user {
+div.problems_show div#main div.content div.main div.title form.new_vote{
+	background-color: #EDFF9B;
+	margin-top: 5px;
+	display: block;
+	padding: 8px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	-opera-border-radius:8px;
+	margin-bottom: 5px;
+}
+div.problems_show div#main div.content div.main div.title form.new_vote input{
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	width: 435px;
+	padding: 4px;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-opera-border-radius:10px;
+	font-size: 14px;
+	line-height: 20px;
+	display: block;
 	float: left;
-	width: 140px;
+	height: 20px;
 }
-
-
-
-
-
-
+div.problems_show div#main div.content div.main div.title form.new_vote div.button a{
+	display: block;
+	background-color: #999999;
+	float: right;
+	height: 28px;
+	width: 68px;
+	border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	-opera-border-radius:8px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	text-align: center;
+	line-height: 28px;
+}
+div.problems_show div#main div.content div.main div.title form.new_vote p{
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	margin: 0px;
+	line-height: 1;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
 
 
 div.problems_show div#main div.content div.title h3 {
@@ -295,10 +383,10 @@ div.problems_show div#main div.content div.title h2 .technology-study a {
 
 
 
-div#main div.content div.title {
-	margin-left: -15px;
-	padding-left: 15px;
-}
+
+
+
+
 #sub {
 	float: right;
 	width: 210px;
@@ -321,7 +409,8 @@ div.index #main h2 {
 	background-image: url(../images/top_h2.gif);
 }
 div#main ul.problems {
-	margin-left: 20px;
+	margin-left: 0px;
+	margin-top: -10px;
 }
 
 
@@ -414,8 +503,8 @@ div#sub div.section li {
 	border-bottom-width: 1px;
 	border-bottom-style: dotted;
 	border-bottom-color: #d0d0d0;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	font-size: 13px;
 }
 div#sub div.section .to_archive {
@@ -447,22 +536,20 @@ div#main ul.problems li.problem {
 	border-bottom-style: solid;
 	border-bottom-color: #b9b9b9;
 	clear: both;
-	margin-right: 10px;
-	margin-left: 10px;
 	overflow: hidden;
 	margin-bottom: 0px;
-	padding-top: 25px;
+	padding-top: 20px;
 	padding-bottom: 15px;
 	}
 div#main ul.problems li.problem:last-child {
 	border-bottom-style: none;
 }
 div#main ul.problems li.problem:first-child {
-	padding-top: 20px;
+	padding-top: 25px;
 }
 div#main ul.problems li.problem h3.title {
 	display: block;
-	line-height: 1.4;
+	line-height: 30px;
 	font-size: 20px;
 	font-weight: bold;
 	padding-right: 5px;
@@ -520,48 +607,50 @@ div#main .problem ul.tags li a:active {
 	border-left-color: #57c9c0;
 	color: #ec189a;
 }
-div#main ul.problems li.problem .main {
+div#main .problem .main {
 	width: 535px;
 	float: right;
 }
-div#main ul.problems li.problem div.sub {
+div#main .problem div.sub {
 	float: left;
 	width: 155px;
 	background-image: url(../images/probrem_sub.jpg);
 	background-repeat: no-repeat;
 	line-height: 1;
 	background-position: center bottom;
-	margin-top: -10px;
+	margin-top: -5px;
 }
-div#main ul.problems li.problem div.sub dl,
-div#main ul.problems li.problem div.sub dt,
-div#main ul.problems li.problem div.sub dd {
+div#main div.problem div.sub {
+	margin-top: 10px;
+}
+div#main .problem div.information dl,
+div#main .problem div.information dt,
+div#main .problem div.information dd {
 	display: block;
 }
-div#main ul.problems li.problem div.sub dl {
-	padding-bottom: 8px;
+div#main .problem div.information dl {
+	padding-bottom: 7px;
 	background-image: url(../images/problem_sub_dl.gif);
 	background-repeat: no-repeat;
 	padding-right: 5px;
 	padding-left: 5px;
 }
-div#main ul.problems li.solved div.sub dl {
+div#main ul.problems li.solved div.information dl {
 	background-image: url(../images/solved_sub_dl.gif);
 }
 
 
-div#main ul.problems li.problem div.sub dt {
+div#main .problem div.information dt {
 	display: none;
 }
-div#main ul.problems li.problem div.sub dd.language {
+div#main .problem div.information dd.language {
 	line-height: 21px;
 	height: 21px;
 	font-size: 12px;
 	font-weight: bold;
-	padding-top: 12px;
-	padding-right: 4px;
+	padding-top: 8px;
 }
-div#main ul.problems li.problem div.sub dd.language a {
+div#main .problem div.information dd.language a {
 	line-height: 20px;
 	height: 20px;
 	font-size: 12px;
@@ -571,17 +660,15 @@ div#main ul.problems li.problem div.sub dd.language a {
 	text-decoration: none;
 	padding-right: 7px;
 	padding-left: 7px;
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-top-right-radius: 4px;
-	-moz-border-radius-topleft: 4px;
-	-moz-border-radius-topright: 4px;
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-	-opera-border-radius-topleft: 4px;
-	-opera-border-radius-topright: 4px;
+	-webkit-border: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-opera-border-radius: 4px;
 	color: #5A5A5A;
+	background-color: #EDFF9B;
+	margin-bottom: 4px;
 }
-div#main ul.problems li.problem div.sub dd.category {
+div#main .problem div.information dd.category {
 	line-height: 20px;
 	height: 20px;
 	font-size: 12px;
@@ -595,7 +682,7 @@ div#main ul.problems li.problem div.sub dd.category {
 	text-align: center;
 	padding-bottom: 1px;
 }
-div#main ul.problems li.problem div.sub dd.category a {
+div#main .problem div.information dd.category a {
 	line-height: 22px;
 	height: 22px;
 	font-size: 12px;
@@ -604,96 +691,94 @@ div#main ul.problems li.problem div.sub dd.category a {
 	text-decoration: none;
 	background-position: left center;
 	background-repeat: no-repeat;
-	color: #666666　!important;
 }
-div#main ul.problems li.class-function-making div.sub dd.category {
+div#main .class-function-making div.information dd.category {
 	border-bottom-color: #F141AD;
 }
-div#main ul.problems li.class-function-making div.sub dd.category a {
+div#main .class-function-making div.information dd.category a {
 	color: #F141AD;
-	color: #666666　!important;
 }
-div#main ul.problems li.data-collection-and-making div.sub dd.category {
+div#main .data-collection-and-making div.information dd.category {
 	border-bottom-color: #e92944;
 }
-div#main ul.problems li.data-collection-and-making div.sub dd.category a {
+div#main .data-collection-and-making div.information dd.category a {
 	color: #e92944;
 }
-div#main ul.problems li.debugging div.sub dd.category {
+div#main .debugging div.information dd.category {
 	border-bottom-color: #0eba12;
 }
-div#main ul.problems li.debugging div.sub dd.category a {
+div#main .debugging div.information dd.category a {
 	color: #0eba12;
 }
-div#main ul.problems li.document-translation div.sub dd.category {
+div#main .document-translation div.information dd.category {
 	border-bottom-color: #b1be75;
 }
-div#main ul.problems li.document-translation div.sub dd.category a {
+div#main .document-translation div.information dd.category a {
 	color: #b1be75;
 }
-div#main ul.problems li.library-making div.sub dd.category {
+div#main .library-making div.information dd.category {
 	border-bottom-color: #7c55b0;
 }
-div#main ul.problems li.library-making div.sub dd.category a {
+div#main .library-making div.information dd.category a {
 	color: #7c55b0;
 }
-div#main ul.problems li.plugin-making div.sub dd.category {
+div#main .plugin-making div.information dd.category {
 	border-bottom-color: #e96d12;
 }
-div#main ul.problems li.plugin-making div.sub dd.category a {
+div#main .plugin-making div.information dd.category a {
 	color: #e96d12;
 }
-div#main ul.problems li.programming-quiz div.sub dd.category {
+div#main .programming-quiz div.information dd.category {
 	border-bottom-color: #0d4b7f;
 }
-div#main ul.problems li.programming-quiz div.sub dd.category a {
+div#main .programming-quiz div.information dd.category a {
 	color: #0d4b7f;
 }
-div#main ul.problems li.prototype-making div.sub dd.category {
+div#main .prototype-making div.information dd.category {
 	border-bottom-color: #df628e;
 }
-div#main ul.problems li.prototype-making div.sub dd.category a {
+div#main .prototype-making div.information dd.category a {
 	color: #df628e;
 }
-div#main ul.problems li.software-making div.sub dd.category {
+div#main .software-making div.information dd.category {
 	border-bottom-color: #b0d40b;
 }
-div#main ul.problems li.software-making div.sub dd.category a {
+div#main .software-making div.information dd.category a {
 	color: #b0d40b;
 }
-div#main ul.problems li.software-multilingualization div.sub dd.category {
+div#main .software-multilingualization div.information dd.category {
 	border-bottom-color: #e6c510;
 }
-div#main ul.problems li.software-multilingualization div.sub dd.category a {
+div#main .software-multilingualization div.information dd.category a {
 	color: #e6c510;
 }
-div#main ul.problems li.technology-study div.sub dd.category {
+div#main .technology-study div.information dd.category {
 	border-bottom-color: #1ca4c1;
 }
-div#main ul.problems li.technology-study div.sub dd.category a {
+div#main .technology-study div.information dd.category a {
 	color: #1ca4c1;
 }
 
 
-div#main ul.problems li.problem div.sub dd.bounty {
-	margin-top: 7px;
+div#main .problem div.information dd.bounty {
+	margin-top: 8px;
 	font-weight: bold;
 	color: #EC189E;
 	line-height: 27px;
 	height: 27px;
 	text-align: center;
 }
-div#main ul.problems li.problem div.sub dl dd.bounty span {
+div#main .problem div.information dl dd.bounty span {
 	font-weight: bold;
 	color: #ec189a;
 	font-size: 16px;
 }
-div#main ul.problems li.solved div.sub dl dd.bounty span {
+div#main ul.problems li.solved div.information dl dd.bounty span {
 	color: #a3a3a3;
 }
 
-div#main ul.problems li.problem div.sub ul.retweet,
-div#main ul.problems li.problem div.sub ul.answer {
+div#main .problem div.information ul.retweet,
+div#main .problem div.information ul.answer {
 	font-weight: bold;
 	line-height: 30px;
 	height: 30px;
@@ -702,30 +787,30 @@ div#main ul.problems li.problem div.sub ul.answer {
 	font-size: 18px;
 	padding-top: 2px;
 }
-div#main ul.problems li.problem div.sub ul.retweet li.label,
-div#main ul.problems li.problem div.sub ul.answer li.label {
+div#main .problem div.information ul.retweet li.label,
+div#main .problem div.information ul.answer li.label {
 	display: none;
 }
-div#main ul.problems li.problem div.sub ul.retweet {
+div#main .problem div.information ul.retweet {
 	float: left;
 	padding-left: 5px;
 }
-div#main ul.problems li.problem div.sub ul.answer {
+div#main .problem div.information ul.answer {
 	float: right;
 	padding-right: 5px;
 }
-div#main ul.problems li.problem div.sub li.icon {
+div#main .problem div.information li.icon {
 	display: block;
 	height: 33px;
 	width: 33px;
 	float: left;
 	background-color: #FFFFFF;
 }
-div#main ul.problems li.problem div.sub li.icon img {
+div#main .problem div.information li.icon img {
 	height: 32px;
 	width: 32px;
 }
-div#main ul.problems li.problem div.sub li.name {
+div#main .problem div.information li.name {
 	font-size: 11px;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
@@ -737,14 +822,14 @@ div#main ul.problems li.problem div.sub li.name {
 	float: right;
 	width: 102px;
 }
-div#main ul.problems li.problem div.sub div.person {
+div#main .problem div.information div.person {
 	clear: both;
 	padding-top: 14px;
 	padding-bottom: 10px;
 	padding-right: 7px;
 	padding-left: 7px;
 }
-div#main ul.problems li.problem div.sub div.person h4 {
+div#main .problem div.information div.person h4 {
 	font-size: 12px;
 	display: block;
 	text-align: center;
@@ -753,10 +838,10 @@ div#main ul.problems li.problem div.sub div.person h4 {
 	height: 12px;
 	font-weight: bold;
 }
-div#main ul.problems li.problem div.sub div.person ul {
+div#main .problem div.information div.person ul {
 	padding-top: 4px;
 }
-div#main ul.problems li.problem div.sub div.created_at {
+div#main .problem div.information div.created_at {
 	clear: both;
 	text-align: center;
 	border: 2px solid #C0C0C0;
@@ -825,7 +910,7 @@ div#main ul.problems li.problem div.resolver h4 {
 	padding-bottom: 5px;
 	margin-bottom: 7px;
 	font-weight: bold;
-	color: #F141AD;
+	color: #666666;
 	text-align: center;
 }
 div#main ul.problems li.problem div.resolver li.icon img {
@@ -879,10 +964,10 @@ div#main ul.problems li.resolved ul.view {
 div.ploblems_show div#main div.section {
 	margin-left: 40px;
 }
-div.problems_show div#main div.content div.description {
+div.problems_show div#main div.main {
 	font-size: 14px;
-	float: left;
-	width: 545px;
+	float: right;
+	width: 535px;
 	padding-top: 15px;
 }
 div.problems_show div#main div.content div.section ul.answers li.answer,
@@ -1073,243 +1158,8 @@ div.problems_show div#main div.content div.section ul.answers ul.loggedin li.del
 }
 
 
-div.problems_show div#main div.content div.problem div.data {
-	float: left;
-	width: 140px;
-	padding-left: 10px;
-	padding-top: 15px;
-}
-div.problems_show div#main div.content div.problem div.data div.retweet {
-	padding-top: 10px;
-	clear: both;
-	padding-right: 8px;
-	padding-bottom: 10px;
-	padding-left: 8px;
-	background-color: #D4FD18;
-	margin-top: 10px;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-}
-div.problems_show div#main div.content div.problem div.data div.retweet p {
-	margin-bottom: 0px;
-}
-div.problems_show div#main div.content div.problem div.data div.retweet #problem_comment {
-	padding-top: 0px;
-	width: 120px;
-	height: 3em;
-	margin-top: 5px;
-	background-color: #FFFFFF;
-	border: 2px solid #EFEFE7;
-}
-
-
 div.problems_show div#main div.content h3 {
 	display: block;
-	margin-bottom: 10px;
-}
-div.problems_show div#main div.content div.title dl.person {
-	padding-bottom: 9px;
-	padding-top: 2px;
-}
-div.problems_show div#main div.content div.title dl.person dt.person {
-	line-height: 1.2;
-	font-size: 12px;
-	display: block;
-	float: right;
-	width: 100px;
-}
-div.problems_show div#main div.content div.title dl.person dd.icon {
-	display: block;
-	float: left;
-	height: 33px;
-	width: 33px;
-}
-div.problems_show div#main div.content div.title dl.person dd.icon a img {
-	height: 32px;
-	width: 32px;
-	border-top-width: 1px;
-	border-right-width: 1px;
-	border-bottom-width: 1px;
-	border-left-width: 1px;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
-}
-div.problems_show div#main div.content div.title dl.person dd.icon a:link img,
-div.problems_show div#main div.content div.title dl.person dd.icon a:visited img {
-	border: 1px solid #EFEFE7;
-}
-div.problems_show div#main div.content div.title dl.person dd.icon a:hover img,
-div.problems_show div#main div.content div.title dl.person dd.icon a:active img {
-	border: 1px solid #ec189a;
-}
-div.problems_show div#main div.content div.title dl.person dd.name {
-	white-space: -moz-pre-wrap; /* Mozilla */
-	white-space: -pre-wrap; /* Opera 4-6 */
-	white-space: -o-pre-wrap; /* Opera 7 */
-	white-space: pre-wrap; /* CSS3 */
-	word-wrap: break-word; /* IE */
-	line-height: 1.2;
-	font-size: 11px;
-	display: block;
-	float: right;
-	width: 100px;
-}
-div.problems_show div#main div.content div.title dl.person dt.bounty {
-	line-height: 20px;
-	font-size: 13px;
-	display: block;
-	float: left;
-	width: 38px;
-	height: 20px;
-	background-color: #76e3da;
-	margin-top: 10px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	clear: both;
-	text-align: center;
-	font-weight: bold;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	-webkit-border-top-left-radius: 6px;
-	-webkit-border-bottom-left-radius: 6px;
-	-moz-border-radius-topleft: 6px;
-	-moz-border-radius-bottomleft: 6px;
-	border-top-left-radius: 6px;
-	border-bottom-left-radius: 6px;
-}
-div.problems_show div#main div.content div.title dl.person dd.bounty {
-	line-height: 20px;
-	display: block;
-	background-color: #EFEFE7;
-	text-align: right;
-	font-size: 16px;
-	float: right;
-	width: 95px;
-	height: 20px;
-	margin-top: 10px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 5px;
-	padding-right: 7px;
-	padding-bottom: 5px;
-	padding-left: 0px;
-	-webkit-border-top-right-radius: 6px;
-	-webkit-border-bottom-right-radius: 6px;
-	-moz-border-radius-topright: 6px;
-	-moz-border-radius-bottomright: 6px;
-	border-top-right-radius: 6px;
-	border-bottom-right-radius: 6px;
-}
-div.problems_show div#main div.content div.title dl.person dd.bounty span {
-	font-weight: bold;
-	color: #ec189a;
-}
-div.problems_show div#main div.content div.title dl.information {
-	display: block;
-	clear: both;
-	background-color: #EDFF9B;
-	margin-left: -15px;
-	padding-left: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-size: 12px;
-}
-div.problems_show div#main div.content div.title dl.information dt,
-div.problems_show div#main div.content div.title dl.information dd {
-	display: block;
-	line-height: 1;
-	float: left;
-}
-div.problems_show div#main div.content div.title dl.information dd {
-	font-weight: bold;
-	margin-right: 10px;
-}
-div.problems_show div#main div.content div.title dl.information dt {
-	background-image: url(../images/information_dt.gif);
-	background-position: right center;
-	background-repeat: no-repeat;
-	padding-top: 5px;
-	padding-right: 27px;
-	padding-bottom: 5px;
-	padding-left: 5px;
-}
-div.problems_show div#main div.content div.title dl.information dd a {
-	display: block;
-	float: left;
-	text-decoration: none;
-	padding-top: 3px;
-	padding-right: 8px;
-	padding-bottom: 3px;
-	padding-left: 8px;
-	white-space: nowrap;
-	margin-top: 2px;
-	font-size: 12px;
-	height: 12px;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-}
-div.problems_show div#main div.content div.title dl.information dd a:link,
-div.problems_show div#main div.content div.title dl.information dd a:visited {
-	background-color: #115894;
-	color: #FFFFFF;
-}
-div.problems_show div#main div.content div.title dl.information dd a:hover,
-div.problems_show div#main div.content div.title dl.information dd a:active {
-	background-color: #ec189a;
-	color: #FFFFFF;
-}
-div.problems_show div#main div.content div.title dl.information dd.licence a {
-	background-image: url(../images/information_licence_a.gif);
-	background-repeat: no-repeat;
-	padding-right: 22px;
-}
-div.problems_show div#main div.content div.title dl.information dd.licence a:link,
-div.problems_show div#main div.content div.title dl.information dd.licence a:visited {
-	background-position: right 0px;
-}
-div.problems_show div#main div.content div.title dl.information dd.licence a:hover,
-div.problems_show div#main div.content div.title dl.information dd.licence a:active {
-	background-position: right -18px;
-}
-div.problems_show div#main .data ul {
-	width: 62px;
-	text-align: center;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	}
-div.problems_show div#main .data ul li.count {
-	font-size: 15px;
-	display: block;
-	line-height: 1;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	font-weight: bold;
-}
-div.problems_show div#main .data ul li.label {
-	font-size: 11px;
-	display: block;
-	line-height: 1;
-	padding-bottom: 2px;
-}
-div.problems_show div#main .data ul.answer {
-	background-color: #EFEFE7;
-	color: #5c0404;
-	float: left;
-	margin-bottom: 10px;
-}
-div.problems_show div#main .data ul.view {
-	background-color: #76e3da;
-	color: #5c0404;
-	float: right;
 	margin-bottom: 10px;
 }
 div.problems_show div#main div.content h3 {
@@ -1323,7 +1173,6 @@ div.problems_show div#main div.content div.section {
 	border-top-width: 1px;
 	border-top-style: dotted;
 	clear: both;
-	margin-right: 20px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border-top-color: #B9B9B9;
@@ -1579,21 +1428,15 @@ color:#006600;
 
 
 #flash div {
-	margin-right: auto;
-	margin-left: auto;
 	width: 400px;
 	text-align: center;
 	background-color: #EDFF9B;
-	padding-top: 5px;
-	padding-right: 10px;
-	padding-bottom: 5px;
-	padding-left: 10px;
 	border-radius: 12px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	position: absolute;
-	top: 15px;
-	left: 268px;
+	top: -10px;
+	left: 25px;
 }
 #main .content .post #answer_description {
 	width: 100%;

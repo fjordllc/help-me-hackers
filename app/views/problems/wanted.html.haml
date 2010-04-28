@@ -1,11 +1,12 @@
 - title "賞金首 - #{t('application.title')}"
-.content
+.title
   %h2 賞金首
+.content
   - if @problems.empty?
     .empty
       %p 該当する問題がありません。
       %p== 今なら目立つ！この隙に#{link_to '投稿', new_problem_path}すれば問題解決してもらえるかも！
   - else
-%ul.problems
-  = render :partial => 'object', :collection => @problems
-= will_paginate(@problems)
+  %ul.problems
+    = render :partial => 'object', :collection => @problems
+  = will_paginate(@problems)

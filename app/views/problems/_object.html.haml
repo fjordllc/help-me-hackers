@@ -15,7 +15,7 @@
       %ul.tags
         - object.tags.each do |tag|
           %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
-  .sub
+  .sub.information
     %dl
       %dt.language プログラム言語
       %dd.language== #{link_to t("label.language.#{object.language.name}"), problems_by_tag_path(:tag => object.language.name)}

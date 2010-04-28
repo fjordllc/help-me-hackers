@@ -4,7 +4,7 @@
     %dt.icon アイコン画像
     %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
     %dt.solved 解決問題数
-    %dd.solved= user.answers.corrected.size
+    %dd.solved= user.answers.correct.size
     %dt.problem 問題出題数
     %dd.problem= user.problems.size
     %dt.bounty 合計獲得金額
