@@ -71,7 +71,7 @@ module ApplicationHelper
   end
 
   def good_answer_retweet(answer)
-    good_retweet(answer.problem.user.login, answer.description, "#{problem_url(problem)}#answer-#{answer.id}")
+    good_retweet(answer.user.login, answer.description, "#{problem_url(answer.problem)}#answer-#{answer.id}")
   end
 
   private
