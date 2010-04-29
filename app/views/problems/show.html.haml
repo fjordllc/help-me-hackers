@@ -14,7 +14,7 @@
       - form_for @problem.votes.new(:comment => "@#{@problem.user.login} Good! #{bitlize(problem_url(@problem))} #helpmehackers"), :html => {:onsubmit => "return vote(this, '.problem .data .good ul li.count')", :id => "problem_#{@problem.id}_vote_form", :style => 'display:none'} do |f|
         = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
         = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
-        = f.text_field :comment, :id => "problem_#{@problem.id}_comment", :style => 'font-size:12px'
+        = f.text_field :comment, :id => "problem_#{@problem.id}_comment"
         - if logged_in?
           .button= link_to 'Good', 'javascript:void(0)', :onclick => "$('#problem_#{@problem.id}_vote_form').submit()"
         - else
@@ -61,10 +61,10 @@
         - padding = answer.correct ? ' correct' : ''
           %li{:class => "answer#{padding}"}
             .hacker
-              .span{:onclick => "$('#answer_#{answer.id}_vote_form').toggle()"} トグル
-              %ul.good
-                %li.count= @problem.votes.size
-                %li.label Good
+              .good{:onclick => "$('#answer_#{answer.id}_vote_form').toggle()"} 
+                %ul.good
+                  %li.count= @problem.votes.size
+                  %li.label Good
               %ul.user
                 %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
                 %li.name=link_to answer.user.login, user_path(answer.user)
@@ -79,6 +79,7 @@
               = f.hidden_field :voteable_id, :id => "answer_#{answer.id}_voteable_id"
               = f.hidden_field :voteable_type, :id => "answer_#{answer.id}_voteable_type"
               = f.text_field :comment, :id => "answer_#{answer.id}_comment"
+              .button= link_to 'Good', 'javascript:void(0)', :onclick => "$('#problem_#{@problem.id}_vote_form').submit()"
               = f.submit 'Good', :id => "answer_#{answer.id}_submit"
             .description~markdown answer.description
             - if logged_in? and answer.user.id == current_user.id
