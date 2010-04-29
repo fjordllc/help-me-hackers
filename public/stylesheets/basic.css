@@ -255,9 +255,9 @@ div.problems_show div#main div.content div.main div.title div.good{
 	text-align: center;
 	cursor: pointer;
 	background-image: url(../images/good.gif);
-	padding-top: 41px;
+	padding-top: 40px;
 	padding-right: 6px;
-	padding-bottom: 1px;
+	padding-bottom: 2px;
 	padding-left: 6px;
 	color: #FFFFFF;
 }
