@@ -275,7 +275,7 @@ div.problems_show div#main div.content div.good li.label{
 
 
 
-div.problems_show div#main div.content div.main div.title form.new_vote p{
+div.problems_show div#main div.content form.new_vote p{
 	display: block;
 	font-size: 12px;
 	font-weight: bold;
@@ -287,6 +287,7 @@ div.problems_show div#main div.content div.main div.title form.new_vote p{
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
+	clear: both;
 }
 
 
@@ -309,7 +310,10 @@ div.problems_show div#main div.content div.section ul.answers li.answer form.new
 	width: 570px;
 	margin-right: -90px;
 }
-form.new_vote input {
+form.new_vote div.text {
+	float: left;
+}
+form.new_vote div.text input {
 	background-color: #FFFFFF;
 	border-top-style: none;
 	border-right-style: none;
@@ -323,21 +327,22 @@ form.new_vote input {
 	font-size: 12px;
 	line-height: 20px;
 	display: block;
-	float: left;
 	height: 20px;
 	color: #666666;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote input{
+div.problems_show div#main div.content div.main div.title form.new_vote div.text input{
 	width: 428px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote input{
+div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote div.text input{
 	width: 478px;
 }
-form.new_vote div.button a{
+div.problems_show form.new_vote div.button {
 	display: block;
 	float: right;
 	height: 28px;
 	width: 75px;
+}
+div.problems_show form.new_vote div.button input{
 	border-radius:8px;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;

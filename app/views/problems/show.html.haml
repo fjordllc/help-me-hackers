@@ -9,9 +9,10 @@
           %li.count{:id => "problem_#{@problem.id}_good"}= @problem.votes.size
       %h2= @problem.title
       - form_for @problem.votes.new(:comment => good_problem_retweet(@problem)), :html => {:onsubmit => "return vote(this, '#problem_#{@problem.id}_good');", :id => "problem_#{@problem.id}_vote_form", :style => 'display:none'} do |f|
-        = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
-        = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
-        = f.text_field :comment, :id => "problem_#{@problem.id}_comment"
+        .text
+          = f.hidden_field :voteable_id, :id => "problem_#{@problem.id}_voteable_id"
+          = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
+          = f.text_field :comment, :id => "problem_#{@problem.id}_comment"
         - if logged_in?
           .button= image_submit_tag 'good_button.gif'
         - else
@@ -75,9 +76,10 @@
                   %li.thanks
                     = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
             - form_for answer.votes.new(:comment => good_answer_retweet(answer)), :html => {:onsubmit => "return vote(this, '.answer ul.good li.count')", :id => "answer_#{answer.id}_vote_form", :style => 'display:none'} do |f|
-              = f.hidden_field :voteable_id, :id => "answer_#{answer.id}_voteable_id"
-              = f.hidden_field :voteable_type, :id => "answer_#{answer.id}_voteable_type"
-              = f.text_field :comment, :id => "answer_#{answer.id}_comment"
+              .text
+                = f.hidden_field :voteable_id, :id => "answer_#{answer.id}_voteable_id"
+                = f.hidden_field :voteable_type, :id => "answer_#{answer.id}_voteable_type"
+                = f.text_field :comment, :id => "answer_#{answer.id}_comment"
               - if logged_in?
                 .button= image_submit_tag 'good_button.gif'
               - else
