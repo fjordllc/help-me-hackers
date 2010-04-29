@@ -21,8 +21,8 @@
           .button= link_to 'Retweet', login_path
         %p.center Retweetをすることで、この質問にGood!ポイントが加算されます
     %dl.information
-      %dt.licence ライセンス
       %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
+      %dt.licence ライセンス
     .description~markdown @problem.description
     %ul.tags
       - @problem.tags.each do |tag|

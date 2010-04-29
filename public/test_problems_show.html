@@ -65,8 +65,8 @@
             </div>
             <dl class='information'>
 
-              <dt class='licence'>ライセンス</dt>
               <dd class='licence'><a href="/about/license#bsd">BSD LICENSE</a></dd>
+              <dt class='licence'>ライセンス</dt>
             </dl>
             <div class='description'>
               <p>現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。</p>
@@ -118,6 +118,13 @@
 
           <div class='section'>
             <h3>回答一覧</h3>
+                <form action="/votes" class="new_vote" id="answer_3_vote_form" method="post" onsubmit="return vote(this, '.answer ul.good li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+                  <input id="answer_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
+                  <input id="answer_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Answer" />
+                  <input id="answer_3_comment" name="vote[comment]" size="30" type="text" />
+                  <div class='button'><a href="javascript:void(0)" onclick="$('#problem_3_vote_form').submit()">Good</a></div>
+                  <input id="answer_3_submit" name="commit" type="submit" value="Good" />
+                </form>
             <ul class='answers'>
               <li class='answer correct'>
                 <div class='hacker'>
@@ -154,13 +161,6 @@
                   </div>
                 </div>
 
-                <form action="/votes" class="new_vote" id="answer_3_vote_form" method="post" onsubmit="return vote(this, '.answer ul.good li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
-                  <input id="answer_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
-                  <input id="answer_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Answer" />
-                  <input id="answer_3_comment" name="vote[comment]" size="30" type="text" />
-                  <div class='button'><a href="javascript:void(0)" onclick="$('#problem_3_vote_form').submit()">Good</a></div>
-                  <input id="answer_3_submit" name="commit" type="submit" value="Good" />
-                </form>
                 <div class='description'>
 
                   <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>

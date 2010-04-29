@@ -306,7 +306,7 @@ div.problems_show div#main div.content div.main div.title form.new_vote{
 div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote {
 	margin-bottom: 10px;
 	float: left;
-	width: 590px;
+	width: 570px;
 	margin-right: -90px;
 }
 form.new_vote input {
@@ -331,7 +331,7 @@ div.problems_show div#main div.content div.main div.title form.new_vote input{
 	width: 428px;
 }
 div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote input{
-	width: 488px;
+	width: 478px;
 }
 form.new_vote div.button a{
 	display: block;
@@ -1143,6 +1143,7 @@ div.problems_show div#main div.content div.section ul.answers li.answer div.hack
 	background-image: url(../images/hacker.gif);
 	background-position: left bottom;
 	background-repeat: no-repeat;
+	margin-left: 10px;
 }
 div.problems_show div#main div.content div.section ul.answers li.answer div.user {
 	clear: both;
@@ -1211,6 +1212,7 @@ div.problems_show div#main div.content div.section ul.answers li.answer .thanks 
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
+	margin-top: 5px;
 }
 div.problems_show div#main div.content div.section ul.answers ul.loggedin {
 	clear: both;
@@ -1757,21 +1759,21 @@ div#main div.content div.main dl.information {
 	clear: both;
 }
 div#main div.content div.main .licence {
-	display: inline;
+	display: block;
 	font-size: 11px;
 	margin-left: -6px;
 	line-height: 20px;
 	height: 20px;
 	font-weight: bold;
 	background-repeat: no-repeat;
+	float: right;
 }
 div#main div.content div.main dt.licence {
 	background-position: left top;
 	padding-right: 10px;
 	padding-left: 10px;
-	padding-top: 2px;
-	padding-bottom: 1px;
 	background-image: url(../images/licence.gif);
+	height: 20px;
 }
 div#main div.content div.main dd.licence a {
 	text-decoration: none;
@@ -1782,6 +1784,7 @@ div#main div.content div.main dd.licence a {
 	background-image: url(../images/licence.gif);
 	border-left-width: 1px;
 	border-left-style: solid;
+	height: 20px;
 }
 div#main div.content div.main dd.licence a:link,
 div#main div.content div.main dd.licence a:visited {
