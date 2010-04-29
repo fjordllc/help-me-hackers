@@ -1303,118 +1303,6 @@ div.problems_show div#main div.content div.section {
 
 
 
-div#main div.content ul.users {
-	padding-bottom: 15px;
-	padding-top: 15px;
-}
-div#main div.content ul.users li.user {
-	float: left;
-	width: 120px;
-	margin-right: 7px;
-	border: 1px solid #EFEFE7;
-	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-o-border-radius: 8px;
-	margin-bottom: 10px;
-	padding-top: 7px;
-	padding-right: 7px;
-	padding-bottom: 4px;
-	padding-left: 7px;
-	height: 85px;
-  }
-div#main div.content ul.users li.user div.icon {
-	float: left;
-	height: 33px;
-	width: 33px;
-  }
-div#main div.content ul.users li.user div.icon img {
-	height: 32px;
-	width: 32px;
-  }
-div#main div.content ul.users li.user div.name {
-	float: right;
-	height: 32px;
-	width: 82px;
-	font-size: 12px;
-	white-space: -moz-pre-wrap; /* Mozilla */
-	white-space: -pre-wrap; /* Opera 4-6 */
-	white-space: -o-pre-wrap; /* Opera 7 */
-	white-space: pre-wrap; /* CSS3 */
-	word-wrap: break-word; /* IE */
-	line-height: 1.2;
-  }
-div#main div.content ul.users li.user div.retweet {
-	float: left;
-	height: 22px;
-	width: 40px;
-	line-height: 22px;
-	font-size: 12px;
-	background-image: url(../images/user_retweet.gif);
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding-left: 18px;
-	font-weight: bold;
-	clear: both;
-	margin-top: 5px;
-  }
-div#main div.content ul.users li.user div.prize {
-	float: right;
-	height: 22px;
-	width: 40px;
-	line-height: 22px;
-	font-size: 12px;
-	background-image: url(../images/user_prize.gif);
-	background-repeat: no-repeat;
-	background-position: left center;
-	padding-left: 18px;
-	font-weight: bold;
-	margin-top: 5px;
-  }
-div#main div.content ul.users li.user dl.language {
-	height: 22px;
-	line-height: 22px;
-	font-size: 11px;
-	font-weight: bold;
-	clear: both;
-  }
-div#main div.content ul.users li.user dl.language dt,
-div#main div.content ul.users li.user dl.language dd {
-	display: block;
-	float: left;
-  }
-div#main div.content ul.users li.user dl.language dt {
-	padding-right: 5px;
-	float: left;
-  }
-div#main div.content ul.users li.user dl.language dd a {
-	text-decoration: none;
-	background-image: url(../images/user_language_a.gif);
-	display: block;
-	height: 16px;
-	margin-top: 3px;
-	line-height: 16px;
-	padding-right: 7px;
-	padding-left: 3px;
-	float: left;
-	font-size: 10px;
-  }
-div#main div.content ul.users li.user dl.language dd a:link,
-div#main div.content ul.users li.user dl.language dd a:visited {
-	background-position: right 0px;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #223da3;
-	color: #FFFFFF;
-  }
-div#main div.content ul.users li.user dl.language dd a:hover,
-div#main div.content ul.users li.user dl.language dd a:active {
-	background-position: right -16px;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #57c9c0;
-	color: #ec189a;
-  }
 
 
 
@@ -1422,20 +1310,6 @@ div#main div.content ul.users li.user dl.language dd a:active {
 
 
 
-div.commingoon {
-	background-color: #FFFFFF;
-	height: 560px;
-	background-image: url(../images/comming-soon.gif);
-	background-repeat: no-repeat;
-	background-position: center 60px;
-}
-div.commingoon h1 {
-	height: 350px;
-}
-div.commingoon p.smile_community {
-	padding-bottom: 100px;
-	font-weight: bold;
-}
 div#main div.content pre code {
 	display: block;
 	line-height: 20px;
@@ -1594,54 +1468,73 @@ div.answers_edit div#main div.content div.section {
 
 /* users_show */
 
-div.users_show div#main div.content div.performance {
+div#main div.content .performance {
 	float: left;
 	width: 155px;
 	margin-top: 15px;
 	background-image: url(../images/users_show_performance.gif);
 	margin-bottom: 15px;
+	background-repeat: no-repeat;
+	padding-top: 15px;
 }
-div.users_show div#main div.content div.performance h3,
-div.users_show div#main div.content div.performance dt {
+div#main div.content ul.users {
+	margin-right: -23px;
+}
+div#main div.content li.performance {
+	margin-right: 18px;
+	margin-bottom: 15px;
+	margin-left: 5px;
+	height: 250px;
+	background-image: url(../images/performance.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 15px;
+}
+div#main div.content .performance dl {
+	background-image: url(../images/performance_dl.gif);
+}
+div#main div.content .performance h3,
+div#main div.content .performance dt {
 	display: none;
 }
-div.users_show div#main div.content div.performance dd {
+div#main div.content .performance dd {
 	display: block;
 }
-div.users_show div#main div.content div.performance dd.icon {
-	padding-top: 10px;
+div#main div.content .performance dd.icon {
 	padding-left: 10px;
 	float: left;
 	width: 60px;
 }
-div.users_show div#main div.content div.performance dd.icon a img {
+div#main div.content .performance dd.icon a img {
 	height: 48px;
 	width: 48px;
 	border: 3px solid #FFFFFF;
 	background-color: #FFFFFF;
 }
-div.users_show div#main div.content div.performance dd.icon a:link img,
-div.users_show div#main div.content div.performance dd.icon a:visited img {
+div#main div.content .performance dd.icon a:link img,
+div#main div.content .performance dd.icon a:visited img {
 	border: 3px solid #FFFFFF;
 }
-div.users_show div#main div.content div.performance dd.icon a:hover img,
-div.users_show div#main div.content div.performance dd.icon a:active img {
+div#main div.content .performance dd.icon a:hover img,
+div#main div.content .performance dd.icon a:active img {
 	border: 3px solid #ec189a;
 }
-
-
-div.users_show div#main div.content div.performance dd.twitter_account {
+div#main div.content .performance dd.twitter_account {
 	font-weight: bold;
 	line-height: 12px;
 	height: 12px;
 	font-size: 10px;
-	padding-top: 10px;
 	display: block;
 	float: right;
-	width: 72px;
+	width: 59px;
 	padding-right: 10px;
+	background-image: url(../images/twitter_account.gif);
+	background-repeat: no-repeat;
+	background-position: left 1px;
+	padding-left: 14px;
+	padding-bottom: 2px;
 }
-div.users_show div#main div.content div.performance dd.twitter_account a {
+div#main div.content .performance dd.twitter_account a {
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
 	white-space: -o-pre-wrap; /* Opera 7 */
@@ -1649,7 +1542,7 @@ div.users_show div#main div.content div.performance dd.twitter_account a {
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
 }
-div.users_show div#main div.content div.performance dd.favorite_language {
+div#main div.content .performance dd.favorite_language {
 	font-weight: bold;
 	line-height: 12px;
 	height: 12px;
@@ -1659,7 +1552,7 @@ div.users_show div#main div.content div.performance dd.favorite_language {
 	clear: both;
 	padding-bottom: 16px;
 }
-div.users_show div#main div.content div.performance dd.favorite_language a {
+div#main div.content .performance dd.favorite_language a {
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
 	white-space: -o-pre-wrap; /* Opera 7 */
@@ -1679,8 +1572,8 @@ div.users_show div#main div.content div.performance dd.favorite_language a {
 	text-decoration: none;
 }
 	
-div.users_show div#main div.content div.performance dd.solved,
-div.users_show div#main div.content div.performance dd.problem {
+div#main div.content .performance dd.solved,
+div#main div.content .performance dd.problem {
 	font-weight: bold;
 	line-height: 30px;
 	height: 30px;
@@ -1690,7 +1583,7 @@ div.users_show div#main div.content div.performance dd.problem {
 	color: #FFFFFF;
 	padding-bottom: 20px;
 }
-div.users_show div#main div.content div.performance dd.solved {
+div#main div.content .performance dd.solved {
 	float: left;
 	padding-left: 5px;
 	clear: both;
@@ -1698,13 +1591,13 @@ div.users_show div#main div.content div.performance dd.solved {
 	background-position: left top;
 	padding-right: 1px;
 }
-div.users_show div#main div.content div.performance dd.problem {
+div#main div.content .performance dd.problem {
 	float: right;
 	padding-right: 5px;
 	background-image: url(../images/user_solved.gif);
 	background-position: right top;
 }
-div.users_show div#main div.content div.performance dd.bounty {
+div#main div.content .performance dd.bounty {
 	text-align: center;
 	clear: both;
 	font-weight: bold;
@@ -1715,7 +1608,7 @@ div.users_show div#main div.content div.performance dd.bounty {
 	padding-top: 23px;
 	background-image: url(../images/users_show_performance_bounty.gif);
 }
-div.users_show div#main div.content div.performance dd.thanks {
+div#main div.content .performance dd.thanks {
 	text-align: center;
 	clear: both;
 	font-weight: bold;
@@ -1801,38 +1694,87 @@ div.users_show div#main div.content div.profile div.ssh_public_key p {
 }
 
 
-div.users_show div#main div.content div.solved_problems,
-div.users_show div#main div.content div.posted_problems,
-div.users_show div#main div.content div.posted_answers {
+div.users_show div#main div.content div.lists {
 	clear: both;
-	padding-bottom: 20px;
+	padding-top: 10px;
 }
-div.users_show div#main div.content div.solved_problems h3,
-div.users_show div#main div.content div.posted_problems h3,
-div.users_show div#main div.content div.posted_answers h3 {
-	font-size: 18px;
+div.users_show div#main div.content div.list {
+	float: left;
+	width: 225px;
+	margin-right: 8px;
+	background-image: url(../images/user_list.gif);
+}
+div.users_show div#main div.content div.list h3 {
+	font-size: 14px;
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding-bottom: 5px;
+	background-image: url(../images/user_list_h3.gif);
 }
-div.users_show div#main div.content div.solved_problems ul,
-div.users_show div#main div.content div.posted_problems ul,
-div.users_show div#main div.content div.posted_answers ul {
-	margin-left: 20px;
-	padding-left: 20px;
-	list-style-type: disc !important;
+div.users_show div#main div.content div.solved_problems h3 {
+	border-bottom-color: #115894;
+	color: #115894;
 }
-div.users_show div#main div.content div.solved_problems li,
-div.users_show div#main div.content div.posted_problems li,
+div.users_show div#main div.content div.posted_problems h3 {
+	border-bottom-color: #ec189a;
+	color: #ec189a;
+}
+div.users_show div#main div.content div.posted_answers h3 {
+	border-bottom-color: #0eba12;
+	color: #0eba12;
+}
+div.users_show div#main div.content div.solved_problems li {
+	background-image: url(../images/arrow_bluek.gif);
+}
+div.users_show div#main div.content div.posted_problems li {
+	background-image: url(../images/arrow_pink.gif);
+}
 div.users_show div#main div.content div.posted_answers li {
+	background-image: url(../images/arrow_green.gif);
+}
+
+div.users_show div#main div.content div.list ul {
+	padding-left: 10px;
+	margin: 0px;
+	padding-top: 0px;
+	font-size: 13px;
+	background-image: url(../images/user_list_ul.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-right: 10px;
+	padding-bottom: 15px;
+}
+div.users_show div#main div.content div.list li {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
-	padding: 0px;
-	margin-top: 5px;
-	margin-right: 0px;
-	margin-bottom: 5px;
+	margin-top: 7px;
+	margin-right: 5px;
+	margin-bottom: 7px;
 	margin-left: 0px;
+	line-height: 20px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 14px;
+	background-repeat: no-repeat;
+}
+div.users_show div#main div.content div.list p {
+	line-height: 20px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	padding-top: 25px;
+	padding-bottom: 45px;
+	background-image: url(../images/user_list_ul.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
 }
 
 div#main div.content div.main dl.information {
@@ -1884,4 +1826,32 @@ div#main div.content div.main div.description {
 	height: 18px;
 	width: 18px;
 	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.commingoon {
+	background-color: #FFFFFF;
+	height: 560px;
+	background-image: url(../images/comming-soon.gif);
+	background-repeat: no-repeat;
+	background-position: center 60px;
+}
+div.commingoon h1 {
+	height: 350px;
+}
+div.commingoon p.smile_community {
+	padding-bottom: 100px;
+	font-weight: bold;
 }
