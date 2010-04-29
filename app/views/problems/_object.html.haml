@@ -1,39 +1,37 @@
-- li_class = "problem " + object.category.name
+- li_class = "problem " + object.kind.name
 - li_class += ' solved' if object.solved?
 - li_class += ' free' if object.bounty == 0
 %li{:class => li_class}
-  .main
+  .section
     %h3.title= link_to h(object.title), object
     .statement
-      - if object.solved?
-        .resolver
-          %h4 問題を解決したハッカー
-          %ul
-            %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
-            %li.name=link_to object.solver.login, user_path(object.solver)
       .description~markdown object.description
       %ul.tags
-        - object.tags.each do |tag|
-          %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
-  .sub.information
-    %dl
-      %dt.language プログラム言語
-      %dd.language== #{link_to t("label.language.#{object.language.name}"), problems_by_tag_path(:tag => object.language.name)}
-      %dt.category 問題カテゴリー
-      %dd.category=link_to t("label.category.#{object.category.name}"), problems_by_category_path(:category => object.category.name)
-      - if object.bounty > 0
-        %dt.bounty 報酬
-        %dd.bounty
+        - object.tag_list.each do |tag|
+          %li.tag=link_to h(tag)
+    .data
+      %ul.answer
+        %li.count= object.answers.size
+        %li.label 回答
+      %ul.view
+        %li.count= object.view
+        %li.label 閲覧
+      .created_at= "#{time_ago_in_words object.created_at}前"
+  .user
+    %h4.kind=link_to t("label.kind.#{object.kind.name}"), ''
+    - if object.bounty > 0
+      %dl.bounty
+        %dt 報酬
+        %dd
           %span= number_to_currency object.bounty
-    %ul.retweet
-      %li.count= object.votes.size
-      %li.label retweet
-    %ul.answer
-      %li.count= object.answers.size
-      %li.label 回答
     .person
       %h4 出題者
       %ul
         %li.icon=link_to image_tag(object.user.profile_image_url), user_path(object.user)
         %li.name=link_to object.user.login, user_path(object.user)
-    .created_at= "#{time_ago_in_words object.created_at}前"
+    - if object.solved?
+      .resolver
+        %h4 答えた人
+        %ul
+          %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
+          %li.name=link_to object.solver.login, user_path(object.solver)

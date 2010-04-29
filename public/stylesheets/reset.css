@@ -5,7 +5,7 @@
 div:after,
 ul:after,
 dl:after,
-div.problems_show div#main div.content div.section ul.answers li.answer:after
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer:after
  {
 content: ".";
 display: block;
@@ -18,14 +18,14 @@ visibility: hidden;
 *:first-child+html div,
 *:first-child+html ul,
 *:first-child+html dl,
-*:first-child+html div.problems_show div#main div.content div.section ul.answers li.answer{
+*:first-child+html div.problems_show div#main div.content div.problem div.section ul.answers li.answer{
 height: 1%;
 }
 
 div,
 ul,
 dl,
-div.problems_show div#main div.content div.section ul.answers li.answer
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer
  {
   min-height: 1px;
   display: block;  /* ブロックレベル要素に */
@@ -34,7 +34,7 @@ div.problems_show div#main div.content div.section ul.answers li.answer
 * html div,
 * html ul,
 * html dl,
-* html div.problems_show div#main div.content div.section ul.answers li.answer
+* html div.problems_show div#main div.content div.problem div.section ul.answers li.answer
  {
   height: 1px;
   /*¥*//*/
@@ -47,7 +47,7 @@ div.problems_show div#main div.content div.section ul.answers li.answer
 div,
 ul,
 dl,
-div.problems_show div#main div.content div.section ul.answers li.answer
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer
 {
 display: inline-table;
 }
@@ -103,7 +103,7 @@ font-family: 'ＭＳ Ｐゴシック', "Hiragino Kaku Gothic Pro", "ヒラギノ
  border:0;  
  }  
    
- address, caption, cite, code, dfn, em, th, var {  
+ address, caption, cite, code, dfn, em, th, strong, var {  
  font-style:normal;  
  font-weight:normal;  
  }  
@@ -179,8 +179,4 @@ display: block;
 .hidden {
 	display: none;
 	visibility: hidden;
-}
-.align_right {
-	text-align: right;
-	display: block;
 }

@@ -1,17 +1,14 @@
-.post
-  - form_for answer do |f|
-    = f.error_messages
-    = f.hidden_field :problem_id
-    = f.hidden_field :user_id
-    = f.text_area :description, :size => '70x10'
-    %h4 プレビュー
-    .wrapper
-      :javascript
-        wmd_options = {
-          output: "Markdown"
-        }
-      .wmd-preview
-      = javascript_include_tag 'wmd/wmd'
-    %p
-      = f.submit '利用規約に同意して回答する'
-      = link_to '利用規約', about_terms_path, :target => '_blank'
+- form_for answer do |f|
+  = f.error_messages
+  = f.hidden_field :problem_id
+  = f.hidden_field :user_id
+  = f.text_area :description, :size => '70x10'
+  %h4 プレビュー
+  :javascript
+    wmd_options = {
+      output: "Markdown"
+    }
+  .wmd-preview
+  = javascript_include_tag 'wmd/wmd'
+  %p
+    = f.submit "送信"
