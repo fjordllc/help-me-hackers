@@ -16,7 +16,7 @@
         = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
         = f.text_field :comment, :id => "problem_#{@problem.id}_comment", :style => 'font-size:12px'
         - if logged_in?
-          .span= link_to 'Good', 'return void(0)', :onclick => 'submit()'
+          .span= link_to 'Good', 'javascript:void(0)', :onclick => "$('#problem_#{@problem.id}_vote_form').submit()"
         - else
           .span= link_to 'Good', login_path
     %dl.information
