@@ -67,7 +67,7 @@ module ApplicationHelper
   end
 
   def good_problem_retweet(problem)
-    good_retweet(problem.user.login, truncate(problem.title, 60), problem_url(problem))
+    good_retweet(problem.user.login, problem.title, problem_url(problem))
   end
 
   def good_answer_retweet(answer)
@@ -116,7 +116,7 @@ module ApplicationHelper
     default + list.sort {|a, b| a[1] <=> b[1] }
   end
 
-  def good_retweet(name, title, url, hashtag = '#helpmehackers')
-    "Good! RT @#{name} #{truncate(title, 60)} #{bitlize(problem_url(@problem))} #{hashtag}"
+  def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
+    "Good! RT @#{name} #{truncate(title, :length => 60)} #{bitlize(problem_url(@problem))} #{hashtag}"
   end
 end
