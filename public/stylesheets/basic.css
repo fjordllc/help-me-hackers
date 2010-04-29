@@ -1689,38 +1689,58 @@ div.users_show div#main div.content div.profile div.ssh_public_key p {
 }
 
 
-div.users_show div#main div.content div.solved_problems,
-div.users_show div#main div.content div.posted_problems,
-div.users_show div#main div.content div.posted_answers {
-	clear: both;
-	padding-bottom: 20px;
+div.users_show div#main div.content div.list {
+	float: left;
+	width: 225px;
+	margin-right: 8px;
+	background-image: url(../images/user_list.gif);
 }
-div.users_show div#main div.content div.solved_problems h3,
-div.users_show div#main div.content div.posted_problems h3,
-div.users_show div#main div.content div.posted_answers h3 {
-	font-size: 18px;
+div.users_show div#main div.content div.list h3 {
+	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 15px;
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding-bottom: 5px;
+	background-image: url(../images/user_list_h3.gif);
 }
-div.users_show div#main div.content div.solved_problems ul,
-div.users_show div#main div.content div.posted_problems ul,
-div.users_show div#main div.content div.posted_answers ul {
-	margin-left: 20px;
+div.users_show div#main div.content div.list ul {
 	padding-left: 20px;
-	list-style-type: disc !important;
+	margin: 0px;
+	padding-top: 0px;
+	font-size: 13px;
+	overflow: auto;
+	height: 400px;
+	background-image: url(../images/user_list_ul.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-right: 10px;
 }
-div.users_show div#main div.content div.solved_problems li,
-div.users_show div#main div.content div.posted_problems li,
-div.users_show div#main div.content div.posted_answers li {
+div.users_show div#main div.content div.list li {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
 	padding: 0px;
 	margin-top: 5px;
-	margin-right: 0px;
+	margin-right: 5px;
 	margin-bottom: 5px;
 	margin-left: 0px;
+	line-height: 20px;
+}
+div.users_show div#main div.content div.list p {
+	line-height: 20px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	padding-top: 25px;
+	padding-bottom: 45px;
+	background-image: url(../images/user_list_ul.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
 }
 
 div#main div.content div.main dl.information {
