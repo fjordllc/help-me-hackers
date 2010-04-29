@@ -65,16 +65,18 @@
                 %ul.good
                   %li.count= @problem.votes.size
                   %li.label Good
-              %ul.user
-                %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
-                %li.name=link_to answer.user.login, user_path(answer.user)
-                - unless @problem.solved?
-                  %li.correct
-                    - form_for answer do |f|
-                      = hidden_field_tag 'answer[correct]', true
-                      = submit_tag 'この回答を正解とする'
-                %li.thanks
-                  = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
+              .user
+                %h4 回答者
+                %ul.user
+                  %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
+                  %li.name=link_to answer.user.login, user_path(answer.user)
+                  - unless @problem.solved?
+                    %li.correct
+                      - form_for answer do |f|
+                        = hidden_field_tag 'answer[correct]', true
+                        = submit_tag 'この回答を正解とする'
+                  %li.thanks
+                    = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
             - form_for answer.votes.new, :html => {:onsubmit => "return vote(this, '.answer ul.good li.count')", :id => "answer_#{answer.id}_vote_form", :style => 'display:none'} do |f|
               = f.hidden_field :voteable_id, :id => "answer_#{answer.id}_voteable_id"
               = f.hidden_field :voteable_type, :id => "answer_#{answer.id}_voteable_type"

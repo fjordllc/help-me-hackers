@@ -54,11 +54,11 @@
                 </ul>
               </div>
               <h2>1日前などの時間表記</h2>
-              <form action="/votes" class="new_vote" id="problem_3_vote_form" method="post" onsubmit="return vote(this, '.problem .data .good ul li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" />
+              <form action="/votes" class="new_vote" id="problem_3_vote_form" method="post" onsubmit="return vote(this, '.problem .data .good ul li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
 
                 <input id="problem_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
                 <input id="problem_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Problem" />
-                <input id="problem_3_comment" name="vote[comment]" size="30" style="font-size:12px" type="text" value="@komagata_fjord Good! http://bit.ly/dyCYvV #helpmehackers" />
+                <input id="problem_3_comment" name="vote[comment]" size="30" type="text" value="@komagata_fjord Good! http://bit.ly/dyCYvV #helpmehackers" />
                 <div class='button'><a href="/login">Retweet</a></div>
                 <p class='center'>Retweetをすることで、この質問にGood！ポイントが加算されます</p>
               </form>
@@ -112,7 +112,7 @@
                   <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                 </ul>
               </div>
-              <div class='created_at'>約21時間前</div>
+              <div class='created_at'>約22時間前</div>
             </div>
           </div>
 
@@ -122,59 +122,66 @@
               <li class='answer correct'>
                 <div class='hacker'>
                   <div class='good' onclick="$('#answer_3_vote_form').toggle()">
-                  <ul class='good'>
-                    <li class='count'>0</li>
+                    <ul class='good'>
+                      <li class='count'>0</li>
 
-                    <li class='label'>Good</li>
-                  </ul>
+                      <li class='label'>Good</li>
+                    </ul>
                   </div>
-                  <ul class='user'>
-                    <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                    <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                    <li class='thanks'>
-                      <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                        <input name='cmd' type='hidden' value='_donations' />
+                  <div class='user'>
+                    <h4>回答者</h4>
+                    <ul class='user'>
+                      <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
+                      <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
 
-                        <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
-                        <input name='lc' type='hidden' value='JP' />
-                        <input name='currency_code' type='hidden' value='JPY' />
-                        <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
-                        <input name='item_number' type='hidden' value='3' />
-                        <input name='amount' type='hidden' value='1230' />
-                        <input name='button_subtype' type='hidden' value='services' />
-                        <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                        <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='/images/paypal_button.gif' type='image' />
+                      <li class='thanks'>
+                        <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+                          <input name='cmd' type='hidden' value='_donations' />
+                          <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
+                          <input name='lc' type='hidden' value='JP' />
+                          <input name='currency_code' type='hidden' value='JPY' />
+                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
+                          <input name='item_number' type='hidden' value='3' />
+                          <input name='amount' type='hidden' value='1230' />
 
-                        <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                      </form>
-                    </li>
-                  </ul>
+                          <input name='button_subtype' type='hidden' value='services' />
+                          <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
+                          <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='/images/paypal_button.gif' type='image' />
+                          <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
+                        </form>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-<form style="display: block;" onsubmit="return vote(this, '.answer ul.good li.count')" method="post" id="answer_3_vote_form" class="new_vote" action="/votes"><div style="margin: 0pt; padding: 0pt; display: inline;"><input type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" name="authenticity_token"></div>
-                  <input type="hidden" value="3" name="vote[voteable_id]" id="answer_3_voteable_id">
-                  <input type="hidden" value="Answer" name="vote[voteable_type]" id="answer_3_voteable_type">
-                  <input type="text" size="30" name="vote[comment]" id="answer_3_comment">
-                  <input type="submit" value="Good" name="commit" id="answer_3_submit">
-                </form>                <div class='description'>
+
+                <form action="/votes" class="new_vote" id="answer_3_vote_form" method="post" onsubmit="return vote(this, '.answer ul.good li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+                  <input id="answer_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
+                  <input id="answer_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Answer" />
+                  <input id="answer_3_comment" name="vote[comment]" size="30" type="text" />
+                  <div class='button'><a href="javascript:void(0)" onclick="$('#problem_3_vote_form').submit()">Good</a></div>
+                  <input id="answer_3_submit" name="commit" type="submit" value="Good" />
+                </form>
+                <div class='description'>
+
                   <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
                   
                   <p>「前」というのを追加する必要がありますが。</p>
                 </div>
               </li>
             </ul>
-
           </div>
           
           <div class='section post'>
             <h3>回答する</h3>
+
             <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
             <form action="/answers" class="new_answer" id="new_answer" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
             
               <input id="answer_problem_id" name="answer[problem_id]" type="hidden" value="3" />
-
               <textarea cols="70" id="answer_description" name="answer[description]" rows="10"></textarea>
               <h4>プレビュー</h4>
               <div class='wrapper'>
+
                 <script type='text/javascript'>
                   //<![CDATA[
                     wmd_options = {
@@ -185,74 +192,74 @@
                 <div class='wmd-preview'></div>
               </div>
               <p>
-
                 <input id="answer_submit" name="commit" type="submit" value="利用規約に同意して回答する" />
                 <a href="/about/terms" target="_blank">利用規約</a>
               </p>
             </form>
+
           </div>
         </div>
       </div>
       <div id='sub'>
-
         <div class='section'>
           <h3>カテゴリー</h3>
           <ul class='categories'>
             <li class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></li>
+
             <li class='category'><a href="/problems/category/data-collection-and-making">データ収集・作成</a></li>
             <li class='category'><a href="/problems/category/debugging">バグ修正</a></li>
             <li class='category'><a href="/problems/category/document-translation">文章翻訳</a></li>
-
             <li class='category'><a href="/problems/category/library-making">ライブラリ作成</a></li>
             <li class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></li>
             <li class='category'><a href="/problems/category/programming-quiz">プログラミングクイズ</a></li>
+
             <li class='category'><a href="/problems/category/prototype-making">プロトタイプ作成</a></li>
             <li class='category'><a href="/problems/category/software-making">ソフトウェア作成</a></li>
             <li class='category'><a href="/problems/category/software-multilingualization">多言語化</a></li>
-
             <li class='category'><a href="/problems/category/technology-study">技術調査</a></li>
           </ul>
           <div class='to_archive'>
             <p><a href="/about/category">カテゴリーの説明</a></p>
+
           </div>
         </div>
         <div class='section'>
           <h3>ヒント</h3>
-
           <ul>
             <li>
               <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
+
             <li>
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
-
             </li>
             <li>
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
+
             <li>
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
             </li>
-
             <li>
               <p>ジャンクフード食系男子募集中！</p>
             </li>
             <li>
+
               <p>解決してもらうコツはプログラマーにとって面白い問題設定にすること。前提とゴールは明確に。</p>
             </li>
           </ul>
           <div class='to_archive'>
-
             <p><a href="/about/hint">もっと詳しく</a></p>
           </div>
         </div>
       </div>
+
     </div>
     <div id='footer'>
       <p><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a> | <a href="http://fjord.jp/">運営会社</a> | <a href="/about/terms">利用規約</a> | <a href="http://fjord.jp/inquiry">お問い合わせ</a></p>
-
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>.</p>
+
     </div>
     <script src="/javascripts/wmd/wmd.js?1271747548" type="text/javascript"></script>
   </body>
