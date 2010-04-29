@@ -3,7 +3,7 @@ class VotesController < ApplicationController
 
   def index
     @votes = Vote.all
-    render :xml => @votes
+    render :json => @votes
   end
 
   def create
@@ -14,9 +14,9 @@ class VotesController < ApplicationController
       @count = Vote.count(:conditions => [
         'voteable_id = ? and voteable_type = ?',
         @vote.voteable_id, @vote.voteable_type])
-      render :json => {:success => 1, :count => @count}
+      render :json => { :count => @count }
     else
-      render :json => {:error => @vote.errors, :status => :unprocessable_entity}
+      render :json => { :error => @vote.errors, :status => :unprocessable_entity }
     end
   end
 end
