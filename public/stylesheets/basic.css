@@ -245,11 +245,9 @@ div.problems_show div#main div.content div.main div.title {
 	padding-right: 0px;
 	clear: both;
 }
-div.problems_show div#main div.content div.main div.title div.good{
-	float: right;
+div.problems_show div#main div.content div.good{
 	height: 16px;
 	width: 46px;
-	margin-top: 3px;
 	font-size: 10px;
 	font-weight: bold;
 	text-align: center;
@@ -260,25 +258,63 @@ div.problems_show div#main div.content div.main div.title div.good{
 	padding-bottom: 2px;
 	padding-left: 6px;
 	color: #FFFFFF;
+	background-repeat: no-repeat;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote{
+div.problems_show div#main div.content div.title div.good{
+	float: right;
+	margin-top: 3px;
+}
+div.problems_show div#main div.content div.hacker div.good{
+	float: right;
+	padding-bottom: 15px;
+}
+div.problems_show div#main div.content div.good li.label{
+	display: none;
+}
+
+
+
+
+div.problems_show div#main div.content div.main div.title form.new_vote p{
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	margin: 0px;
+	line-height: 1;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+
+form.new_vote{
 	background-color: #E9E9E9;
-	margin-top: 5px;
 	display: block;
 	padding: 8px;
 	border-radius:8px;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
 	-opera-border-radius:8px;
+}
+div.problems_show div#main div.content div.main div.title form.new_vote{
+	margin-top: 5px;
 	margin-bottom: 5px;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote input{
+div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote {
+	margin-bottom: 5px;
+	float: left;
+	width: 580px;
+	margin-right: -70px;
+}
+form.new_vote input {
 	background-color: #FFFFFF;
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
-	width: 428px;
 	padding: 4px;
 	border-radius:10px;
 	-webkit-border-radius:10px;
@@ -291,7 +327,13 @@ div.problems_show div#main div.content div.main div.title form.new_vote input{
 	height: 20px;
 	color: #666666;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote div.button a{
+div.problems_show div#main div.content div.main div.title form.new_vote input{
+	width: 428px;
+}
+div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote input{
+	width: 468px;
+}
+form.new_vote div.button a{
 	display: block;
 	float: right;
 	height: 28px;
@@ -309,19 +351,17 @@ div.problems_show div#main div.content div.main div.title form.new_vote div.butt
 	background-image: url(../images/good_button.gif);
 	text-indent: -9999px;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote p{
+div.problems_show div#main div.content div.main div.title form.new_vote div.button a{
 	display: block;
-	font-size: 12px;
-	font-weight: bold;
-	text-decoration: none;
-	text-align: center;
-	margin: 0px;
-	line-height: 1;
-	padding-top: 10px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
 }
+div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote div.button a{
+	display: block;
+}
+
+
+
+
+
 
 
 div.problems_show div#main div.content div.title h3 {
@@ -1096,11 +1136,15 @@ div.problems_show div#main div.content div.section ul.answers li.answer div.hack
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
-	padding: 5px;
 	list-style-type: none;
-	background-color: #FFFF99;
 	float: right;
 	width: 140px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+div.problems_show div#main div.content div.section ul.answers li.answer ul.user {
+	clear: both;
 }
 div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon {
 	float: left;
@@ -1194,7 +1238,8 @@ div.problems_show div#main div.content div.section {
 	border-bottom-color: #B9B9B9;
 	border-left-color: #B9B9B9;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer input {
+div.problems_show div#main div.content div.section ul.answers li.answer .user input,
+div.problems_show div#main div.content div.section ul.answers li.answer .thanks input {
 	font-size: 11px;
 	clear: both;
 	width: 140px;
@@ -1211,6 +1256,9 @@ div.problems_show div#main div.content div.section ul.answers li.thanks input {
 	margin-left: auto;
 	margin-top: 0px;
 	display: block;
+}
+div.problems_show div#main div.content div.section ul.answers li.thanks form {
+	width: 140px !important;
 }
 
 
