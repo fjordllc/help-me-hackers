@@ -1,4 +1,4 @@
-.content
-  %h2 回答登録
-  .section
-    = render :partial => 'form', :locals => {:answer => @answer}
+%h2 answer登録
+= render :partial => 'form', :locals => {:answer => @answer}
+%ul
+  %li= link_to '戻る', answers_path

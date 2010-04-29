@@ -1,16 +1,2 @@
-function vote(f, path) {
-  $.ajax({
-    url: $(f).attr('action'),
-    type: 'POST',
-    timeout: 1000,
-    data: $(f).serialize(),
-    error: function(res) {
-      console.log('Error Occured: %o', res)
-    },
-    success: function(res) {
-      $(path).html(res.count)
-      f.hide()
-    }
-  })
-  return false
-}
+// Place your application-specific JavaScript functions and classes here
+// This file is automatically included by javascript_include_tag :defaults

@@ -87,13 +87,14 @@ div#header .nav {
 	-webkit-border-bottom-left-radius: 10px;
 	-moz-border-radius: 0px 0px 10px 10px;
 	margin-right: -10px;
+	font-size: 13px;
 	}
 div#header .nav ul {
 	display: block;
 }
 div#header .nav li {
 	display: inline;
-	padding-right: 5px;
+	padding-right: 10px;
 }
 div#wrapper {
 	clear: both;
@@ -134,9 +135,32 @@ div#wrapper .nav ul li span.current {
 	-webkit-border-top-right-radius: 6px;
 	-moz-border-radius-topleft: 6px;
 	-moz-border-radius-topright: 6px;
+	-o-border-radius-topleft: 6px;
+	-o-border-radius-topright: 6px;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
+div#wrapper .nav ul li.add_problem {
+	display: block;
+	float: right;
+	margin-top: -5px;
+	width: 270px;
+	height: 35px;
+	padding-right: 100px;
+}
+div#wrapper .nav ul li.add_problem a {
+	display: block;
+	width: 270px;
+	height: 35px;
+	margin: 0px;
+	padding: 0px;
+	text-indent: -9999px;
+	background-image: url(../images/add_problem.gif);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-top-radius: 0px;
+	}
 div#wrapper .nav ul li a {
 	display: block;
 	float: left;
@@ -1388,7 +1412,6 @@ color:#000000;
 }
 .tag {
 color:#000066;
-font-weight:bold;
 }
 .atn {
 color:#440044;
@@ -1503,7 +1526,7 @@ div#main div.content .performance dd {
 div#main div.content .performance dd.icon {
 	padding-left: 10px;
 	float: left;
-	width: 60px;
+	width: 58px;
 }
 div#main div.content .performance dd.icon a img {
 	height: 48px;
@@ -1526,7 +1549,7 @@ div#main div.content .performance dd.twitter_account {
 	font-size: 10px;
 	display: block;
 	float: right;
-	width: 59px;
+	width: 61px;
 	padding-right: 10px;
 	background-image: url(../images/twitter_account.gif);
 	background-repeat: no-repeat;

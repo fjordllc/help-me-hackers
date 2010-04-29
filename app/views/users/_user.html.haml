@@ -1,20 +1,17 @@
 %li.user.performance
-  %h3 実績
+  %h3
   %dl
     %dt.icon アイコン画像
     %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
     %dt.twitter_account Twitterアカウント
-    %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
-    - if user.language
-      %dt.favorite_language 好きなプログラム言語
-      %dd.favorite_language= link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name)
+    %dd.twitter_account machida
     %dt.solved 解決問題数
-    %dd.solved= user.answers.correct.size
+    %dd.solved 0
     %dt.problem 問題出題数
-    %dd.problem= user.problems.size
+    %dd.problem 1
     %dt.bounty 合計獲得金額
     %dd.bounty
-      %span= number_to_currency user.prize
+      %span 0円
     %dt.thanks 合計支払い金額
     %dd.thanks
-      %span= number_to_currency 0
+      %span 0円
