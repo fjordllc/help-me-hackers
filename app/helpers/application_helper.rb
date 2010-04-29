@@ -74,6 +74,20 @@ module ApplicationHelper
     good_retweet(answer.user.login, answer.description, "#{problem_url(answer.problem)}#answer-#{answer.id}")
   end
 
+  def tweeted?(object)
+    return false unless logged_in?
+    object.votes.scoped_by_user_id(current_user.id).present?
+  end
+
+  def good_attrs(object)
+    id_name = object.class.name.downcase
+    if tweeted?(object)
+      {:class => 'good tweeted'}
+    else
+      {:class => 'good', :onclick => "$('##{id_name}_#{object.id}_vote_form').toggle()"}
+    end
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]
