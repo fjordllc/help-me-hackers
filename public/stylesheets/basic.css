@@ -1526,8 +1526,13 @@ div#main div.content .performance dd.twitter_account {
 	font-size: 10px;
 	display: block;
 	float: right;
-	width: 73px;
+	width: 59px;
 	padding-right: 10px;
+	background-image: url(../images/twitter_account.gif);
+	background-repeat: no-repeat;
+	background-position: left 1px;
+	padding-left: 14px;
+	padding-bottom: 2px;
 }
 div#main div.content .performance dd.twitter_account a {
 	white-space: -moz-pre-wrap; /* Mozilla */
@@ -1689,6 +1694,10 @@ div.users_show div#main div.content div.profile div.ssh_public_key p {
 }
 
 
+div.users_show div#main div.content div.lists {
+	clear: both;
+	padding-top: 10px;
+}
 div.users_show div#main div.content div.list {
 	float: left;
 	width: 225px;
@@ -1698,7 +1707,7 @@ div.users_show div#main div.content div.list {
 div.users_show div#main div.content div.list h3 {
 	font-size: 14px;
 	font-weight: bold;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 	display: block;
 	text-align: center;
 	padding-top: 10px;
@@ -1707,29 +1716,54 @@ div.users_show div#main div.content div.list h3 {
 	padding-bottom: 5px;
 	background-image: url(../images/user_list_h3.gif);
 }
+div.users_show div#main div.content div.solved_problems h3 {
+	border-bottom-color: #115894;
+	color: #115894;
+}
+div.users_show div#main div.content div.posted_problems h3 {
+	border-bottom-color: #ec189a;
+	color: #ec189a;
+}
+div.users_show div#main div.content div.posted_answers h3 {
+	border-bottom-color: #0eba12;
+	color: #0eba12;
+}
+div.users_show div#main div.content div.solved_problems li {
+	background-image: url(../images/arrow_bluek.gif);
+}
+div.users_show div#main div.content div.posted_problems li {
+	background-image: url(../images/arrow_pink.gif);
+}
+div.users_show div#main div.content div.posted_answers li {
+	background-image: url(../images/arrow_green.gif);
+}
+
 div.users_show div#main div.content div.list ul {
-	padding-left: 20px;
+	padding-left: 10px;
 	margin: 0px;
 	padding-top: 0px;
 	font-size: 13px;
-	overflow: auto;
-	height: 400px;
 	background-image: url(../images/user_list_ul.gif);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	padding-right: 10px;
+	padding-bottom: 15px;
 }
 div.users_show div#main div.content div.list li {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
-	padding: 0px;
-	margin-top: 5px;
+	margin-top: 7px;
 	margin-right: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 7px;
 	margin-left: 0px;
 	line-height: 20px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 14px;
+	background-repeat: no-repeat;
 }
 div.users_show div#main div.content div.list p {
 	line-height: 20px;
