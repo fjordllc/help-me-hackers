@@ -1,15 +1,9 @@
-.content
+.title
   %h2 アカウント編集
+.content
   - form_for @user, :url => account_path do |f|
     = f.error_messages
     %p
-<<<<<<< HEAD:app/views/accounts/edit.html.haml
-=======
-      = f.label :profile_image_url
-      %br
-      = f.text_field :profile_image_url
-    %p
->>>>>>> 11934da1e88fc7ca68bf8e4e94e71434236f0e9d:app/views/accounts/edit.html.haml
       = f.label :description
       %br
       = f.text_area :description, :size => '40x4'
@@ -18,11 +12,7 @@
       %br
       = select_by_model @user, :state_id
     %p
-<<<<<<< HEAD:app/views/accounts/edit.html.haml
-      = f.label :email
-=======
       = "#{f.label:email}（Paypalで報酬を受け取るには公開する必要があります）"
->>>>>>> 11934da1e88fc7ca68bf8e4e94e71434236f0e9d:app/views/accounts/edit.html.haml
       %br
       = f.text_field :email
     %p
