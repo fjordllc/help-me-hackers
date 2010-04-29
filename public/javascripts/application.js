@@ -5,7 +5,7 @@ function vote(f, path) {
     dataType: 'json',
     timeout: 1000,
     data: $(f).serialize(),
-    error: function(){ alert('Error Occured') },
+    error: function(){ console.log('Error Occured') },
     success: function(res) {
       $(path).html(res.count)
     }
