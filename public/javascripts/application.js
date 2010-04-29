@@ -2,6 +2,7 @@ function vote(f, path) {
   $.ajax({
     url: $(f).attr('action'),
     type: 'POST',
+    dataType: 'json',
     timeout: 1000,
     data: $(f).serialize(),
     error: function(res) {
