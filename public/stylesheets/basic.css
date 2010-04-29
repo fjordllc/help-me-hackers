@@ -278,7 +278,7 @@ div.problems_show div#main div.content div.main div.title form.new_vote input{
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
-	width: 435px;
+	width: 428px;
 	padding: 4px;
 	border-radius:10px;
 	-webkit-border-radius:10px;
@@ -289,23 +289,25 @@ div.problems_show div#main div.content div.main div.title form.new_vote input{
 	display: block;
 	float: left;
 	height: 20px;
+	color: #666666;
 }
 div.problems_show div#main div.content div.main div.title form.new_vote div.button a{
 	display: block;
-	background-color: #999999;
 	float: right;
 	height: 28px;
-	width: 68px;
+	width: 75px;
 	border-radius:8px;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
 	-opera-border-radius:8px;
 	font-size: 12px;
 	font-weight: bold;
-	color: #FFFFFF;
+	color: #115894;
 	text-decoration: none;
 	text-align: center;
 	line-height: 28px;
+	background-image: url(../images/good_button.gif);
+	text-indent: -9999px;
 }
 div.problems_show div#main div.content div.main div.title form.new_vote p{
 	display: block;
@@ -985,14 +987,15 @@ div.problems_show div#main div.content div.section ul.answers li.answer,
 #main div.content div.post div.wrapper {
 	display: block;
 	border: 1px solid #E6EAD4;
-	margin-bottom: 10px;
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	padding-top: 12px;
-	padding-right: 10px;
-	padding-bottom: 8px;
-	padding-left: 12px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
 	clear: both;
 	}
 div.problems_show div#main div.content div.section ul.answers li.correct {
@@ -1088,9 +1091,7 @@ div.problems_show div#main li.answer div.description h5,
 
 
 
-div.problems_show div#main div.content div.section ul.answers li.answer ul.user {
-	float: right;
-	width: 140px;
+div.problems_show div#main div.content div.section ul.answers li.answer div.hacker {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1098,6 +1099,8 @@ div.problems_show div#main div.content div.section ul.answers li.answer ul.user 
 	padding: 5px;
 	list-style-type: none;
 	background-color: #FFFF99;
+	float: right;
+	width: 140px;
 }
 div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon {
 	float: left;
@@ -1351,19 +1354,18 @@ div.commingoon p.smile_community {
 }
 div#main div.content pre code {
 	display: block;
-	margin-right: 10px;
-	margin-left: 10px;
 	line-height: 20px;
 	background-color: #F8F8FF;
 	background-image: url(../images/pre_code.gif);
 	padding-left: 27px;
 	font-size: 13px;
-	margin-bottom: 20px;
+	margin-bottom: 1.4em;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
 	white-space: -o-pre-wrap; /* Opera 7 */
 	white-space: pre-wrap; /* CSS3 */
 	word-wrap: break-word; /* IE */
+	width: 480px;
 }
 
 

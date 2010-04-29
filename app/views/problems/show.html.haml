@@ -16,9 +16,9 @@
         = f.hidden_field :voteable_type, :id => "problem_#{@problem.id}_voteable_type"
         = f.text_field :comment, :id => "problem_#{@problem.id}_comment", :style => 'font-size:12px'
         - if logged_in?
-          .span= link_to 'Good', 'javascript:void(0)', :onclick => "$('#problem_#{@problem.id}_vote_form').submit()"
         - else
-          .span= link_to 'Good', login_path
+          .button= link_to 'Retweet', login_path
+          %p.center Retweetをすることで、この質問にGood！ポイントが加算されます
     %dl.information
       %dt.licence ライセンス
       %dd.licence=link_to t("label.license.#{@problem.license.name}"), "#{about_license_path}##{@problem.license.name}"
@@ -60,20 +60,6 @@
         - padding = answer.correct ? ' correct' : ''
           %li{:class => "answer#{padding}"}
             .description~markdown answer.description
-            %ul.user
-              %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
-              %li.name=link_to answer.user.login, user_path(answer.user)
-              - unless @problem.solved?
-                %li.correct
-                  - form_for answer do |f|
-                    = hidden_field_tag 'answer[correct]', true
-                    = submit_tag 'この回答を正解とする'
-              %li.thanks
-                = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
-            %ul.good
-              %li.count= @problem.votes.size
-              %li.label Good
-            .span{:onclick => "$('#answer_#{answer.id}_vote_form').toggle()"} トグル
             - form_for answer.votes.new, :html => {:onsubmit => "return vote(this, '.answer ul.good li.count')", :id => "answer_#{answer.id}_vote_form", :style => 'display:none'} do |f|
               = f.hidden_field :voteable_id, :id => "answer_#{answer.id}_voteable_id"
               = f.hidden_field :voteable_type, :id => "answer_#{answer.id}_voteable_type"
