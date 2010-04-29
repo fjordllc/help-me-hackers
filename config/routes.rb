@@ -29,6 +29,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.with_options :controller => 'users' do |page|
+    page.signup 'signup',  :action => 'signup'
     page.users 'users',  :action => 'index'
     page.user  ':login', :action => 'show'
   end

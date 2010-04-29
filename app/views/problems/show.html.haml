@@ -1,10 +1,7 @@
 - title "#{@problem.title} - #{t('application.title')}"
-- div_class = "problem content " + @problem.category.name
-- div_class += ' solved' if @problem.solved?
-- div_class += ' free' if @problem.bounty == 0
 - content_for :header_script do
   = javascript_include_tag 'application'
-%div{:class => div_class}
+%div{problem_attrs(@problem)}
   .main
     .title
       %div{good_attrs(@problem)}
@@ -59,8 +56,7 @@
       %h3 回答一覧
       %ul.answers
         - @answers.each do |answer|
-        - padding = answer.correct ? ' correct' : ''
-          %li{:id => "answer-#{answer.id}", :class => "answer#{padding}"}
+          %li{answer_attrs(answer)}
             .hacker
               %div{good_attrs(answer)}
                 %ul.good

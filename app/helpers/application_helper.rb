@@ -88,6 +88,23 @@ module ApplicationHelper
     end
   end
 
+  def problem_attrs(problem)
+    value = "problem content #{problem.category.name}"
+    value += ' solved' if problem.solved?
+    value += ' free' if problem.bounty.zero?
+    {:class => value}
+  end
+
+  def answer_attrs(answer)
+    option = {:id => "answer-#{answer.id}"}
+    if answer.correct
+      option.merge!({:class => 'answer correct'})
+    else
+      option.merge!({:class => 'answer'})
+    end
+    option
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]
