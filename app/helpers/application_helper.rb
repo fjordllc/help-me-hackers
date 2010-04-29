@@ -66,6 +66,14 @@ module ApplicationHelper
     end
   end
 
+  def good_problem_retweet(problem)
+    good_retweet(problem.user.login, truncate(problem.title, 60), problem_url(problem))
+  end
+
+  def good_answer_retweet(answer)
+    good_retweet(answer.problem.user.login, answer.description, "#{problem_url(problem)}#answer-#{answer.id}")
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]
@@ -75,5 +83,9 @@ module ApplicationHelper
            all.
            collect {|e| [t("label.#{str.downcase}.#{e.name}"), e.id] }
     default + list.sort {|a, b| a[1] <=> b[1] }
+  end
+
+  def good_retweet(name, title, url, hashtag = '#helpmehackers')
+    "Good! RT @#{name} #{truncate(title, 60)} #{bitlize(problem_url(@problem))} #{hashtag}"
   end
 end
