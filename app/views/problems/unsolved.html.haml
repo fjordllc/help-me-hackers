@@ -1,5 +1,12 @@
-.content
+- title "未解決 - #{t('application.title')}"
+.title
   %h2 未解決
-%ul.problems
-  = render :partial => 'object', :collection => @problems
-= will_paginate(@problems)
+.content
+  - if @problems.empty?
+    .empty
+      %p 該当する問題がありません。
+      %p== 今なら目立つ！この隙に#{link_to '投稿', new_problem_path}すれば問題解決してもらえるかも！
+  - else
+  %ul.problems
+    = render :partial => 'object', :collection => @problems
+  = will_paginate(@problems)

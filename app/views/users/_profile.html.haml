@@ -1,29 +1,31 @@
-.user.performance
+.performance
   %h3 実績
   %dl
     %dt.icon アイコン画像
     %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
     %dt.twitter_account Twitterアカウント
-    %dd.twitter_account machida
+    %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
+    - if user.language
+      %dt.favorite_language 好きなプログラム言語
+      %dd.favorite_language= link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name)
     %dt.solved 解決問題数
-    %dd.solved 0
+    %dd.solved= user.answers.correct.size
     %dt.problem 問題出題数
-    %dd.problem 1
+    %dd.problem= user.problems.size
     %dt.bounty 合計獲得金額
     %dd.bounty
-      %span 0円
+      %span= number_to_currency user.prize
     %dt.thanks 合計支払い金額
     %dd.thanks
-      %span 0円
-
-
-
+      %span= number_to_currency 0
 .profile
   %h3 プロフィール
   - if user.description
-    %h4.description 詳細
+    %h4.description 自己紹介
     %p.description=hbr user.description
   %dl.user
+    %dt.login アカウント名
+    %dd.login=link_to user.login, user_path(user)
     - if user.state
       %dt.state 出身
       %dd.state= t("label.state.#{user.state.name}")
@@ -36,10 +38,12 @@
     - if user.language
       %dt.favorite_language 好きなプログラム言語
       %dd.favorite_language= t("label.language.#{user.language.name}")
+    %dt.twitter_account Twitterアカウント
+    %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
     - if user.github_account
       %dt.github_account Githubアカウント
       %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'
   - if user.ssh_public_key
     .ssh_public_key
-      %h4.ssh_public_key SSH Public Key
+      %h4 SSH Public Key
       %p.ssh_public_key=h user.ssh_public_key

@@ -7,7 +7,7 @@ class VotesController < ApplicationController
     vote.user = current_user
 
     if vote.save
-      tweet(Time.new.sec.to_s + vote.comment)
+      tweet(vote.comment)
       count = Vote.count(:conditions => [
         'voteable_id = ? and voteable_type = ?',
         vote.voteable_id, vote.voteable_type])

@@ -8,19 +8,26 @@
     %meta{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8'}
     %meta{'http-equiv' => 'Content-Style-Type', 'content' => 'text/css'}
     %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
-    %link{:href => '/stylesheets/application.css', :rel => 'stylesheet', :type => 'text/css'}
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     = stylesheet_link_tag 'reset', :media => 'screen'
     = stylesheet_link_tag 'basic', :media => 'screen'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
+    - header_script = yield(:header_script)
+    - if header_script
+      = header_script
   %body
     #header
       %h1= link_to 'Help me, hackers!', root_path
       .nav
         %ul
           - if logged_in?
-            %li= link_to current_user.login, account_path
+            %li
+              = link_to image_tag(current_user.profile_image_url, :size => '16x16', :style => 'vertical-align:middle')
+              = link_to "#{current_user.login}(#{current_user.vote})", dashboard_path
+            %li= link_to 'アカウント', edit_account_path
             %li= link_to 'ログアウト', logout_path
           - else
+            %li= link_to 'ユーザー登録', signup_path
             %li= link_to 'ログイン', login_path
           %li= link_to '問題依頼', new_problem_path
     #wrapper{:class => "#{controller_name}_#{action_name}"}
@@ -33,11 +40,20 @@
       #main
         #flash
           - unless flash.empty?
-            = content_tag :div, flash[:notice],  :class => 'notice'  if flash[:notice]
-            = content_tag :div, flash[:warning], :class => 'warning' if flash[:warning]
-            = content_tag :div, flash[:error],   :class => 'error'   if flash[:error]
+            - if flash[:notice].present?
+              = content_tag :div, flash[:notice],  :class => 'notice'
+            - if flash[:warning].present?
+              = content_tag :div, flash[:warning], :class => 'warning'
+            - if flash[:error].present?
+              = content_tag :div, flash[:error],   :class => 'error'
         = yield
       #sub
-        .section
+        = render :partial => 'shared/sub'
     #footer
+      %p== #{link_to 'ブログ', 'http://fjord.jp/tag/help-me-hackers'} | #{link_to '運営会社', 'http://fjord.jp/'} | #{link_to '利用規約', about_terms_path} | #{link_to 'お問い合わせ', 'http://fjord.jp/inquiry'}
       %p.copyright= "Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}."
+    - if Rails.env.production?
+      = render :partial => 'shared/google_analytics'
+    - footer_script = yield(:footer_script)
+    - if footer_script
+      = footer_script

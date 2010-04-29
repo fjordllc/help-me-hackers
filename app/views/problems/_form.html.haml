@@ -5,21 +5,23 @@
     %br
     = f.text_field :title
   %p
-    = f.label :kind, '', :for => 'problem_kind_id'
+    = f.label :category, '', :for => 'problem_category_id'
+    %span== （#{link_to '詳細', about_category_path}）
     %br
-    = select_by_model @problem, :kind_id
+    = select_by_model problem, :category_id
   %p
-    = f.label :tag_list
+    == #{f.label :tag_list}（","カンマ区切りで複数入力可能）
     %br
     = f.text_field :tag_list
   %p
     = f.label :language, '', :for => 'problem_language_id'
     %br
-    = select_by_model @problem, :language_id
+    = select_by_model problem, :language_id
   %p
     = f.label :license, '', :for => 'problem_license_id'
+    %span== （#{link_to '詳細', about_license_path}）
     %br
-    = select_by_model @problem, :license_id
+    = select_by_model problem, :license_id
   %p
     = f.label :bounty
     %br
@@ -27,6 +29,7 @@
     = t('number.currency.format.unit')
   %p
     = f.label :description
+    %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
     %br
     = f.text_area :description, :size => '70x10'
   %h4 プレビュー
@@ -37,5 +40,5 @@
   .wmd-preview
   = javascript_include_tag 'wmd/wmd'
   %p
-    = f.submit "送信"
-    = link_to '戻る', problems_path
+    = f.submit '利用規約に同意して登録する'
+    = link_to '利用規約', about_terms_path, :target => '_blank'

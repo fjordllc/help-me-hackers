@@ -1,4 +1,8 @@
 .title
-  %h2= @user.login
+  %h2== #{@user.login}のプロフィール
 .content
   = render :partial => 'profile', :locals => {:user => @user}
+  .lists
+    = render :partial => 'solved_problems', :locals => {:user => @user}
+    = render :partial => 'posted_problems', :locals => {:user => @user}
+    = render :partial => 'posted_answers', :locals => {:user => @user}
