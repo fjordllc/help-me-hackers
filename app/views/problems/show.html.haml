@@ -7,7 +7,7 @@
 %div{:class => div_class}
   .main
     .title
-      .good{:onclick => "$('#problem_#{@problem.id}_vote_form').toggle()"}
+      %div{good_attrs(@problem)}
         %ul
           %li.count{:id => "problem_#{@problem.id}_good"}= @problem.votes.size
       %h2= @problem.title
@@ -63,7 +63,7 @@
         - padding = answer.correct ? ' correct' : ''
           %li{:id => "answer-#{answer.id}", :class => "answer#{padding}"}
             .hacker
-              .good{:onclick => "$('#answer_#{answer.id}_vote_form').toggle()"}
+              %div{good_attrs(answer)}
                 %ul.good
                   %li.count= answer.votes.size
                   %li.label Good
