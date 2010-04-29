@@ -84,6 +84,7 @@
               = f.text_field :comment, :id => "answer_#{answer.id}_comment"
               .button= link_to 'Good', 'javascript:void(0)', :onclick => "$('#problem_#{@problem.id}_vote_form').submit()"
               = f.submit 'Good', :id => "answer_#{answer.id}_submit"
+              %p.center Retweetをすることで、この回答にGood！ポイントが加算されます
             .description~markdown answer.description
             - if logged_in? and answer.user.id == current_user.id
               %ul.loggedin

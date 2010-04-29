@@ -1590,12 +1590,10 @@ div.answers_edit div#main div.content div.section {
 /* users_show */
 
 div.users_show div#main div.content div.performance {
-	padding-top: 33px;
 	float: left;
 	width: 155px;
-	margin-top: 5px;
+	margin-top: 15px;
 	background-image: url(../images/users_show_performance.gif);
-	padding-bottom: 20px;
 	margin-bottom: 15px;
 }
 div.users_show div#main div.content div.performance h3,
@@ -1606,9 +1604,10 @@ div.users_show div#main div.content div.performance dd {
 	display: block;
 }
 div.users_show div#main div.content div.performance dd.icon {
-	text-align: center;
 	padding-top: 10px;
-	padding-bottom: 13px;
+	padding-left: 10px;
+	float: left;
+	width: 60px;
 }
 div.users_show div#main div.content div.performance dd.icon a img {
 	height: 48px;
@@ -1616,8 +1615,65 @@ div.users_show div#main div.content div.performance dd.icon a img {
 	border: 3px solid #FFFFFF;
 	background-color: #FFFFFF;
 }
+div.users_show div#main div.content div.performance dd.icon a:link img,
+div.users_show div#main div.content div.performance dd.icon a:visited img {
+	border: 3px solid #FFFFFF;
+}
+div.users_show div#main div.content div.performance dd.icon a:hover img,
+div.users_show div#main div.content div.performance dd.icon a:active img {
+	border: 3px solid #ec189a;
+}
 
 
+div.users_show div#main div.content div.performance dd.twitter_account {
+	font-weight: bold;
+	line-height: 12px;
+	height: 12px;
+	font-size: 10px;
+	padding-top: 10px;
+	display: block;
+	float: right;
+	width: 72px;
+	padding-right: 10px;
+}
+div.users_show div#main div.content div.performance dd.twitter_account a {
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+}
+div.users_show div#main div.content div.performance dd.favorite_language {
+	font-weight: bold;
+	line-height: 12px;
+	height: 12px;
+	font-size: 12px;
+	display: block;
+	padding-right: 20px;
+	clear: both;
+	padding-bottom: 16px;
+}
+div.users_show div#main div.content div.performance dd.favorite_language a {
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+	display: block;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	background-image: url(../images/user_language.gif);
+	background-position: right center;
+	background-repeat: no-repeat;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #DADADA;
+	text-decoration: none;
+}
+	
 div.users_show div#main div.content div.performance dd.solved,
 div.users_show div#main div.content div.performance dd.problem {
 	font-weight: bold;
@@ -1626,15 +1682,22 @@ div.users_show div#main div.content div.performance dd.problem {
 	text-align: center;
 	width: 72px;
 	font-size: 18px;
-	padding-top: 2px;
+	color: #FFFFFF;
+	padding-bottom: 20px;
 }
 div.users_show div#main div.content div.performance dd.solved {
 	float: left;
 	padding-left: 5px;
+	clear: both;
+	background-image: url(../images/user_solved.gif);
+	background-position: left top;
+	padding-right: 1px;
 }
 div.users_show div#main div.content div.performance dd.problem {
 	float: right;
 	padding-right: 5px;
+	background-image: url(../images/user_solved.gif);
+	background-position: right top;
 }
 div.users_show div#main div.content div.performance dd.bounty {
 	text-align: center;
@@ -1644,7 +1707,8 @@ div.users_show div#main div.content div.performance dd.bounty {
 	line-height: 27px;
 	height: 27px;
 	text-align: center;
-	padding-top: 43px;
+	padding-top: 23px;
+	background-image: url(../images/users_show_performance_bounty.gif);
 }
 div.users_show div#main div.content div.performance dd.thanks {
 	text-align: center;
@@ -1655,6 +1719,8 @@ div.users_show div#main div.content div.performance dd.thanks {
 	height: 27px;
 	text-align: center;
 	padding-top: 25px;
+	background-image: url(../images/users_show_performance_thanks.gif);
+	padding-bottom: 16px;
 }
 
 
