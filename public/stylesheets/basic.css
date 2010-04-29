@@ -657,6 +657,11 @@ div#main .problem ul.tags li a:active {
 	border-left-color: #57c9c0;
 	color: #ec189a;
 }
+div#main .problem ul.tags {
+	clear: both;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
 div#main .problem .main {
 	width: 535px;
 	float: right;
@@ -1048,6 +1053,9 @@ div.problems_show div#main div.content div.section ul.user li.correct {
 	padding-left: 0px;
 	border: none !important;
 	}
+
+
+
 div.problems_show div#main div.content div.section ul.answers li.answer  div.description,
 #main div.content div.post div.wrapper div.wmd-preview {
 	font-size: 14px;
@@ -1214,14 +1222,17 @@ div.problems_show div#main div.content div.section ul.answers li.answer .thanks 
 	display: block;
 	margin-top: 5px;
 }
-div.problems_show div#main div.content div.section ul.answers ul.loggedin {
-	clear: both;
+div.problems_show div#main div.content ul.loggedin {
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+div.problems_show div#main div.content .section ul.loggedin {
 	padding-top: 10px;
 }
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li {
+div.problems_show div#main div.content ul.loggedin li {
 	display: inline;
 }
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li a {
+div.problems_show div#main div.content ul.loggedin li a {
 	display: block;
 	float: left;
 	padding-top: 5px;
@@ -1236,23 +1247,23 @@ div.problems_show div#main div.content div.section ul.answers ul.loggedin li a {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 }
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.edit a:link,
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.edit a:visited {
+div.problems_show div#main div.content ul.loggedin li.edit a:link,
+div.problems_show div#main div.content ul.loggedin li.edit a:visited {
 	background-color: #115894;
 	color: #FFFFFF;
 }
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.edit a:hover,
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.edit a:active {
+div.problems_show div#main div.content ul.loggedin li.edit a:hover,
+div.problems_show div#main div.content ul.loggedin li.edit a:active {
 	background-color: #76E3DA;
 	color: #ec189a;
 }
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.delete a:link,
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.delete a:visited {
+div.problems_show div#main div.content ul.loggedin li.delete a:link,
+div.problems_show div#main div.content ul.loggedin li.delete a:visited {
 	background-color: #115894;
 	color: #FFFFFF;
 }
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.delete a:hover,
-div.problems_show div#main div.content div.section ul.answers ul.loggedin li.delete a:active {
+div.problems_show div#main div.content ul.loggedin li.delete a:hover,
+div.problems_show div#main div.content ul.loggedin li.delete a:active {
 	background-color: #76E3DA;
 	color: #ec189a;
 }
@@ -1433,7 +1444,7 @@ div#main div.content pre code {
 	white-space: -o-pre-wrap; /* Opera 7 */
 	white-space: pre-wrap; /* CSS3 */
 	word-wrap: break-word; /* IE */
-	width: 480px;
+	width: 470px;
 }
 
 
@@ -1755,13 +1766,11 @@ div.users_show div#main div.content div.posted_answers li {
 
 div#main div.content div.main dl.information {
 	margin-top: -3px;
-	text-align: right;
 	clear: both;
 }
 div#main div.content div.main .licence {
 	display: block;
 	font-size: 11px;
-	margin-left: -6px;
 	line-height: 20px;
 	height: 20px;
 	font-weight: bold;
@@ -1779,12 +1788,11 @@ div#main div.content div.main dd.licence a {
 	text-decoration: none;
 	padding-right: 20px;
 	padding-left: 10px;
-	padding-top: 2px;
-	padding-bottom: 1px;
 	background-image: url(../images/licence.gif);
 	border-left-width: 1px;
 	border-left-style: solid;
 	height: 20px;
+	display: block;
 }
 div#main div.content div.main dd.licence a:link,
 div#main div.content div.main dd.licence a:visited {
