@@ -275,7 +275,7 @@ div.problems_show div#main div.content div.good li.label{
 
 
 
-div.problems_show div#main div.content div.main div.title form.new_vote p{
+div.problems_show div#main div.content form.new_vote p{
 	display: block;
 	font-size: 12px;
 	font-weight: bold;
