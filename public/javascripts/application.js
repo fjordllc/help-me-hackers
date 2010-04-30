@@ -7,10 +7,12 @@ function vote(f, path) {
     data: $(f).serialize(),
     error: function(res) {
       console.log('Error Occured: %o', res)
+      $(path).html(parseInt($(path).text()) + 1)
+      $(f).hide()
     },
     success: function(res) {
-      $(path).html(res.count)
-      f.hide()
+      $(path).html(parseInt($(path).text()) + 1)
+      $(f).hide()
     }
   })
   return false

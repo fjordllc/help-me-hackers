@@ -61,7 +61,7 @@
             .hacker
               %div{good_attrs(answer)}
                 %ul.good
-                  %li.count= answer.votes.size
+                  %li.count{:id => "answer_#{answer.id}_good"}= answer.votes.size
                   %li.label Good
               .user
                 %h4 回答者
