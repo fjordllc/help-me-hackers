@@ -910,6 +910,30 @@ div#main .software-making div.information dd.category {
 div#main .software-making div.information dd.category a {
 	color: #b0d40b;
 }
+
+
+
+div#main .android-app-making div.information dd.category {
+	border-bottom-color: #b0d40b;
+}
+div#main .android-app-making div.information dd.category a {
+	color: #b0d40b;
+}
+
+
+div#main .iphone-app-making div.information dd.category {
+	border-bottom-color: #b0d40b;
+}
+div#main .iphone-app-making div.information dd.category a {
+	color: #b0d40b;
+}
+
+
+
+
+
+
+
 div#main .software-multilingualization div.information dd.category {
 	border-bottom-color: #e6c510;
 }
@@ -2074,4 +2098,7 @@ divfieldWithErrors p {
 }
 div.problems_create #main div.content div.section div.label span {
 	float: left;
+}
+.empty {
+	padding-top: 15px;
 }

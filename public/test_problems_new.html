@@ -26,7 +26,7 @@
       <div class='nav'>
         <ul>
           <li>
-            <a href="/problems/new"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/problems/category/iphone-app-making"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
             <a href="/dashboard">machida(0)</a>
           </li>
           <li><a href="/account/edit">アカウント</a></li>
@@ -35,15 +35,15 @@
         </ul>
       </div>
     </div>
-    <div class='problems_new' id='wrapper'>
+    <div class='problems_index' id='wrapper'>
       <div class='nav'>
         <ul>
           <li><a href="/problems">Hacks</a></li>
           <li><a href="/problems/wanted">WANTED!</a></li>
 
           <li><a href="/problems/unsolved">Unsolved</a></li>
-          <li><a href="/users">Hackers</a></li>
-          <li><a href="/users">Hackees</a></li>
+          <li><a href="/users/hacker">Hackers</a></li>
+          <li><a href="/users/hackee">Hackees</a></li>
           <li class='add_problem'><a href="/problems/new">問題依頼を依頼する</a></li>
         </ul>
       </div>
@@ -52,160 +52,18 @@
         <div id='flash'>
         </div>
         <div class='title'>
-          <h2>問題登録</h2>
+          <h2>Hacks - iPhoneアプリ作成</h2>
         </div>
-        <div class='content'>
-          <div class='section post'>
-            <form action="/problems" class="new_problem" id="new_problem" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+        <div class='content iphone-app-making'>
+          <div class='empty'>
+            <p>該当するHackがありません。</p>
 
-            
-              <div class='section'>
-                <div class='label'>
-                  <label for="problem_title">タイトル</label>
-                </div>
-                <input id="problem_title" name="problem[title]" size="30" type="text" />
-              </div>
-              <div class='section'>
-                <div class='label'>
-
-                  <label for="problem_category_id">カテゴリー</label>
-                  <span>（<a href="/about/category">詳細</a>）</span>
-                </div>
-                <select id="problem_category_id" name="problem[category_id]"><option value="">選択して下さい</option>
-                <option value="1">ソフトウェア作成</option>
-                <option value="2">ライブラリ作成</option>
-
-                <option value="3">クラス・関数作成</option>
-                <option value="4">プラグイン作成</option>
-                <option value="5">プロトタイプ作成</option>
-                <option value="6">バグ修正</option>
-                <option value="7">技術調査</option>
-                <option value="8">多言語化</option>
-
-                <option value="9">文章翻訳</option>
-                <option value="10">データ収集・作成</option>
-                <option value="11">プログラミングクイズ</option></select>
-              </div>
-              <div class='section'>
-                <div class='label'>
-                  <label for="problem_tag_list">タグ</label>（","カンマ区切りで複数入力可能）
-                </div>
-
-                <input id="problem_tag_list" name="problem[tag_list]" size="30" type="text" value="" />
-              </div>
-              <div class='section'>
-                <div class='label'>
-                  <label for="problem_language_id">言語</label>
-                </div>
-                <select id="problem_language_id" name="problem[language_id]"><option value="">選択して下さい</option>
-                <option value="1">C</option>
-
-                <option value="2">C++</option>
-                <option value="3">C#</option>
-                <option value="4">Objective-C</option>
-                <option value="5">Java</option>
-                <option value="6">Perl</option>
-                <option value="7">PHP</option>
-
-                <option value="8">Python</option>
-                <option value="9">Ruby</option>
-                <option value="10">Common Lisp</option>
-                <option value="11">Scheme</option>
-                <option value="12">Smalltalk</option>
-                <option value="13">JavaScript</option>
-
-                <option value="14">ActionScript</option>
-                <option value="15">COBOL</option>
-                <option value="16">AppleScript</option>
-                <option value="17">Visual Basic</option>
-                <option value="18">OCaml</option>
-                <option value="19">D</option>
-
-                <option value="20">Delphi</option>
-                <option value="21">Erlang</option>
-                <option value="22">F#</option>
-                <option value="23">FORTRAN</option>
-                <option value="24">FORTH</option>
-                <option value="25">Go</option>
-
-                <option value="26">Groovy</option>
-                <option value="27">Haskell</option>
-                <option value="28">Scala</option>
-                <option value="29">SQL</option>
-                <option value="30">Lua</option>
-                <option value="31">Assembly</option>
-
-                <option value="32">Clojure</option>
-                <option value="33">Cold fusion</option>
-                <option value="34">Effel</option>
-                <option value="35">Emacs Lisp</option>
-                <option value="36">Io</option>
-                <option value="37">R</option>
-
-                <option value="38">Self</option>
-                <option value="39">Shell</option>
-                <option value="40">Tcl</option>
-                <option value="1000">日本語</option>
-                <option value="1001">英語</option></select>
-              </div>
-
-              <div class='section'>
-                <div class='label'>
-                  <label for="problem_license_id">ライセンス</label>
-                  <span>（<a href="/about/license">詳細</a>）</span>
-                </div>
-                <select id="problem_license_id" name="problem[license_id]"><option value="">選択して下さい</option>
-
-                <option value="1">GPLv2</option>
-                <option value="2">GPLv3</option>
-                <option value="3">LGPL</option>
-                <option value="4">BSD LICENSE</option>
-                <option value="5">MIT LICENSE</option>
-                <option value="6">Apache Software License</option>
-
-                <option value="7">Public Domain</option>
-                <option value="8">Creative Commons — 表示</option>
-                <option value="9">Creative Commons — 表示-継承</option>
-                <option value="10">Creative Commons — 表示-改変禁止</option>
-                <option value="11">Creative Commons — 表示-非営利</option>
-                <option value="12">Creative Commons — 表示-非営利-継承</option>
-
-                <option value="13">Creative Commons — 表示-非営利-改変禁止</option></select>
-              </div>
-              <div class='section'>
-                <div class='label'>
-                  <label for="problem_bounty">報酬</label>
-                </div>
-                <input id="problem_bounty" name="problem[bounty]" size="30" type="text" value="0" />
-                円
-              </div>
-
-              <div class='section'>
-                <div class='label'>
-                  <label for="problem_description">詳細</label>
-                  <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
-                </div>
-                <br />
-
-                <textarea cols="70" id="problem_description" name="problem[description]" rows="10"></textarea>
-              </div>
-              <h4>プレビュー</h4>
-              <script type='text/javascript'>
-                //<![CDATA[
-                   wmd_options = {
-                     output: "Markdown"
-                   }
-                //]]>
-              </script>
-              <div class='wmd-preview'></div>
-              <script src="/javascripts/wmd/wmd.js?1272570436" type="text/javascript"></script>
-              <p>
-
-                <input id="problem_submit" name="commit" type="submit" value="利用規約に同意して登録する" />
-                <a href="/about/terms" target="_blank">利用規約</a>
-              </p>
-            </form>
+            <p>今なら目立つ！この隙に<a href="/problems/new">依頼</a>すれば解決してもらえるかも！</p>
           </div>
+          <ul class='problems'>
+            
+          </ul>
+          
         </div>
       </div>
       <div id='sub'>
@@ -213,68 +71,71 @@
         <div class='section'>
           <h3>カテゴリー</h3>
           <ul class='categories'>
-            <li class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></li>
-            <li class='category'><a href="/problems/category/data-collection-and-making">データ収集・作成</a></li>
-            <li class='category'><a href="/problems/category/debugging">バグ修正</a></li>
-            <li class='category'><a href="/problems/category/document-translation">文章翻訳</a></li>
-
-            <li class='category'><a href="/problems/category/library-making">ライブラリ作成</a></li>
-            <li class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></li>
-            <li class='category'><a href="/problems/category/programming-quiz">プログラミングクイズ</a></li>
-            <li class='category'><a href="/problems/category/prototype-making">プロトタイプ作成</a></li>
+            <li class='category'><a href="/problems/category/iphone-app-making">iPhoneアプリ作成</a></li>
+            <li class='category'><a href="/problems/category/android-app-making">Androidアプリ作成</a></li>
             <li class='category'><a href="/problems/category/software-making">ソフトウェア作成</a></li>
+            <li class='category'><a href="/problems/category/library-making">ライブラリ作成</a></li>
+
+            <li class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></li>
+            <li class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></li>
+            <li class='category'><a href="/problems/category/prototype-making">プロトタイプ作成</a></li>
+            <li class='category'><a href="/problems/category/debugging">バグ修正</a></li>
+            <li class='category'><a href="/problems/category/technology-study">技術調査</a></li>
             <li class='category'><a href="/problems/category/software-multilingualization">多言語化</a></li>
 
-            <li class='category'><a href="/problems/category/technology-study">技術調査</a></li>
+            <li class='category'><a href="/problems/category/document-translation">文章翻訳</a></li>
+            <li class='category'><a href="/problems/category/data-collection-and-making">データ収集・作成</a></li>
+            <li class='category'><a href="/problems/category/programming-quiz">プログラミングクイズ</a></li>
           </ul>
           <div class='to_archive'>
             <p><a href="/about/category">カテゴリーの説明</a></p>
           </div>
+
         </div>
         <div class='section'>
           <h3>ヒント</h3>
-
           <ul>
             <li>
               <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
             <li>
+
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
-
             </li>
             <li>
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
             <li>
+
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
             </li>
-
             <li>
               <p>ジャンクフード食系男子募集中！</p>
             </li>
             <li>
               <p>解決してもらうコツはプログラマーにとって面白い問題設定にすること。前提とゴールは明確に。</p>
+
             </li>
           </ul>
           <div class='to_archive'>
-
             <p><a href="/about/hint">もっと詳しく</a></p>
           </div>
         </div>
       </div>
     </div>
+
     <div id='footer'>
       <ul class='links'>
-        <li><a href="/about">使い方</a></li>
 
+        <li><a href="/about">使い方</a></li>
         <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
         <li><a href="http://fjord.jp/">運営会社</a></li>
         <li><a href="/about/terms">利用規約</a></li>
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
+
       </ul>
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>.</p>
-
     </div>
   </body>
 </html>
