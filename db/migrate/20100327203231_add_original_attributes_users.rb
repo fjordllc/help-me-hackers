@@ -7,7 +7,8 @@ class AddOriginalAttributesUsers < ActiveRecord::Migration
     add_column :users, :github_account, :string
     add_column :users, :ssh_public_key, :text
     add_column :users, :reputation, :integer, :default => 0, :null => false
-    add_column :users, :kind, :string
+    add_column :users, :hacker, :boolean, :default => true, :null => false
+    add_column :users, :hackee, :boolean, :default => true, :null => false
 
     add_index :users, :login, :unique => true
     add_index :users, :email, :unique => true

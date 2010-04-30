@@ -5,6 +5,12 @@
     - form_for @user, :url => account_path do |f|
       = f.error_messages
       %div.section
+        = f.label :hacker
+        = f.check_box :hacker
+      %div.section
+        = f.label :hackee
+        = f.check_box :hackee
+      %div.section
         = f.label :description
         %br
         = f.text_area :description, :size => '40x4'

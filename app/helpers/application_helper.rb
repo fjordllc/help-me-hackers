@@ -48,11 +48,11 @@ module ApplicationHelper
 
   def problems_title
     if params[:category]
-      "#{t('activerecord.models.problem')} - #{t("label.category.#{@category.name}")}"
+      "Hacks - #{t("label.category.#{@category.name}")}"
     elsif params[:tag]
-      "#{t('activerecord.models.problem')} - #{@tag.name}"
+      "Hacks - #{@tag.name}"
     else
-      t('activerecord.models.problem')
+      'Hacks'
     end
   end
 

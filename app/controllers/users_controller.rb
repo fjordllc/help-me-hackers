@@ -15,6 +15,34 @@ class UsersController < ApplicationController
     @users = User.paginate(options)
   end
 
+  def hacker
+    options = {:page => params[:page],
+               :per_page => USERS_PER_PAGE,
+               :order => 'id DESC'}
+
+    if params[:language]
+      @language = Language.find_by_name(params[:language])
+      options[:conditions] = ['language_id = ?', @language.id]
+    end
+
+    @users = User.scoped_by_hacker(true).paginate(options)
+    render 'index'
+  end
+
+  def hackee
+    options = {:page => params[:page],
+               :per_page => USERS_PER_PAGE,
+               :order => 'id DESC'}
+
+    if params[:language]
+      @language = Language.find_by_name(params[:language])
+      options[:conditions] = ['language_id = ?', @language.id]
+    end
+
+    @users = User.scoped_by_hackee(true).paginate(options)
+    render 'index'
+  end
+
   def show
     @user = User.find_by_login(params[:login])
   end
