@@ -6,10 +6,13 @@ ActionController::Routing::Routes.draw do |map|
   map.users_by_language 'users/language/:language',
     :controller => 'users', :action => 'index'
 
+  map.users_hacker 'users/hacker', :controller => 'users', :action => 'hacker'
+  map.users_hackee 'users/hackee', :controller => 'users', :action => 'hackee'
+
   map.resources :votes
   map.resources :hacks
   map.resources :problems,
-    :collection => {:wanted => :get, :unsolved => :get, :tweet => :post}
+    :collection => {:wanted => :get, :unsolved => :get}
   map.dashboard 'dashboard', :controller => 'accounts', :action => 'show'
   map.resource :account, :only => [:show, :edit, :update, :destroy]
   map.resource :user_session, :only => [:new, :create, :destroy]
