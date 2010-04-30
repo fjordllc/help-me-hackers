@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
     :controller => 'users', :action => 'index'
 
   map.resources :votes
-  map.resources :answers
+  map.resources :hacks
   map.resources :problems,
     :collection => {:wanted => :get, :unsolved => :get, :tweet => :post}
   map.dashboard 'dashboard', :controller => 'accounts', :action => 'show'
