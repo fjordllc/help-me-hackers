@@ -43,8 +43,8 @@
       %ul.retweet
         %li.count= @problem.votes.size
         %li.label retweet
-      %ul.answer
-        %li.count= @problem.answers.size
+      %ul.hack
+        %li.count= @problem.hacks.size
         %li.label 回答
       .person
         %h4 出題者
@@ -52,49 +52,49 @@
           %li.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
           %li.name=link_to @problem.user.login, user_path(@problem.user)
       .created_at== #{time_ago_in_words @problem.created_at}前
-  - unless @answers.empty?
+  - unless @hacks.empty?
     .section
-      %h3 回答一覧
-      %ul.answers
-        - @answers.each do |answer|
-          %li{answer_attrs(answer)}
+      %h3 Hacks
+      %ul.hacks
+        - @hacks.each do |hack|
+          %li{hack_attrs(hack)}
             .hacker
-              %div{good_attrs(answer)}
+              %div{good_attrs(hack)}
                 %ul.good
-                  %li.count{:id => "answer_#{answer.id}_good"}= answer.votes.size
+                  %li.count{:id => "hack_#{hack.id}_good"}= hack.votes.size
                   %li.label Good
               .user
                 %h4 回答者
                 %ul.user
-                  %li.icon=link_to image_tag(answer.user.profile_image_url), user_path(answer.user)
-                  %li.name=link_to answer.user.login, user_path(answer.user)
+                  %li.icon=link_to image_tag(hack.user.profile_image_url), user_path(hack.user)
+                  %li.name=link_to hack.user.login, user_path(hack.user)
                   - unless @problem.solved?
                     %li.correct
-                      - form_for answer do |f|
-                        = hidden_field_tag 'answer[correct]', true
+                      - form_for hack do |f|
+                        = hidden_field_tag 'hack[correct]', true
                         = image_submit_tag 'choice_button.gif'
                   %li.thanks
-                    = render :partial => 'payment_button', :locals => {:problem => @problem, :answer => answer}
-            - form_for answer.votes.new(:comment => good_answer_retweet(answer)), :html => {:onsubmit => "return vote(this, '.answer ul.good li.count')", :id => "answer_#{answer.id}_vote_form", :style => 'display:none'} do |f|
+                    = render :partial => 'payment_button', :locals => {:problem => @problem, :hack => hack}
+            - form_for hack.votes.new(:comment => good_hack_retweet(hack)), :html => {:onsubmit => "return vote(this, '.hack ul.good li.count')", :id => "hack_#{hack.id}_vote_form", :style => 'display:none'} do |f|
               .text
-                = f.hidden_field :voteable_id, :id => "answer_#{answer.id}_voteable_id"
-                = f.hidden_field :voteable_type, :id => "answer_#{answer.id}_voteable_type"
-                = f.text_field :comment, :id => "answer_#{answer.id}_comment"
+                = f.hidden_field :voteable_id, :id => "hack_#{hack.id}_voteable_id"
+                = f.hidden_field :voteable_type, :id => "hack_#{hack.id}_voteable_type"
+                = f.text_field :comment, :id => "hack_#{hack.id}_comment"
               - if logged_in?
                 .button= image_submit_tag 'good_button.gif'
               - else
                 .button= link_to 'Retweet', login_path
               %p.center Retweetをすることで、この質問にGood!ポイントが加算されます
-            .description~markdown answer.description
-            - if logged_in? and answer.user.id == current_user.id
+            .description~markdown hack.description
+            - if logged_in? and hack.user.id == current_user.id
               %ul.loggedin
-                %li.edit= link_to 'この回答を編集', edit_answer_path(answer)
-                %li.delete= link_to 'この回答を削除', answer, :confirm => '本当に削除してよろしいですか？', :method => :delete
-  = will_paginate(@answers)
+                %li.edit= link_to 'この回答を編集', edit_hack_path(hack)
+                %li.delete= link_to 'この回答を削除', hack, :confirm => '本当に削除してよろしいですか？', :method => :delete
+  = will_paginate(@hacks)
   .section.post
-    %h3 回答する
+    %h3 Hackする
     %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
-    - form_for @answer do |f|
+    - form_for @hack do |f|
       = f.error_messages
       = f.hidden_field :problem_id
       = f.text_area :description, :size => '70x10'

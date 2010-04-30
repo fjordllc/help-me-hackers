@@ -1,4 +1,4 @@
-class Answer < ActiveRecord::Base
+class Hack < ActiveRecord::Base
   include Pacecar
   belongs_to :problem
   belongs_to :user

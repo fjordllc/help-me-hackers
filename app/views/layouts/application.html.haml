@@ -31,10 +31,11 @@
     #wrapper{:class => "#{controller_name}_#{action_name}"}
       .nav
         %ul
-          %li= link_to_unless_current_with_span '問題', problems_path
-          %li= link_to_unless_current_with_span '賞金首', wanted_problems_path
-          %li= link_to_unless_current_with_span '未解決', unsolved_problems_path
-          %li= link_to_unless_current_with_span 'ユーザー', users_path
+          %li= link_to_unless_current_with_span 'Hacks', problems_path
+          %li= link_to_unless_current_with_span 'WANTED!', wanted_problems_path
+          %li= link_to_unless_current_with_span 'Unsolved', unsolved_problems_path
+          %li= link_to_unless_current_with_span 'Hackers', users_path
+          %li= link_to_unless_current_with_span 'Hackees', users_path
           %li.add_problem= link_to '問題依頼を依頼する', new_problem_path
       #main
         #flash

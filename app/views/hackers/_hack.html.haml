@@ -1,0 +1,14 @@
+- content_tag_for :div, hack do
+  %ul
+    %li
+      %strong Problem:
+      =h hack.problem
+    %li
+      %strong User:
+      =h hack.user
+    %li
+      %strong Description:
+      =h hack.description
+    = link_to '閲覧', hack
+    = link_to '編集', edit_hack_path(hack)
+    = link_to '削除', hack, :confirm => '本当に削除してよろしいですか？', :method => :delete

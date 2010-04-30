@@ -1,0 +1,8 @@
+%h2 hacks一覧
+- if !@hacks.empty?
+  .hacks
+    = render :partial => "hack", :collection => @hacks
+  = will_paginate(@hacks)
+- else
+  %p There are no hacks to show yet.
+= link_to 'hack登録', new_hack_path

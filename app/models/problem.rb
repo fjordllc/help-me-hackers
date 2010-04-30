@@ -5,7 +5,7 @@ class Problem < ActiveRecord::Base
   belongs_to :language
   belongs_to :license
   belongs_to :category
-  has_many :answers
+  has_many :hacks
   has_many :votes, :as => :voteable, :dependent => :destroy
 
   validates_presence_of :title,
@@ -25,15 +25,15 @@ class Problem < ActiveRecord::Base
   end
 
   def solved?
-    !!correct_answer
+    !!correct_hack
   end
 
-  def correct_answer
-    Answer.find(:first,
+  def correct_hack
+    Hack.find(:first,
       :conditions => ['problem_id = ? AND correct = TRUE', id])
   end
 
   def solver
-    correct_answer.user
+    correct_hack.user
   end
 end

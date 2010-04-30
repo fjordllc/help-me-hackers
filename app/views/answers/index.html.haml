@@ -1,8 +1,0 @@
-%h2 answers一覧
-- if !@answers.empty?
-  .answers
-    = render :partial => "answer", :collection => @answers
-  = will_paginate(@answers)
-- else
-  %p There are no answers to show yet.
-= link_to 'answer登録', new_answer_path

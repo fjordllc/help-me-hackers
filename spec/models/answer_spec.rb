@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Answer do
-  fixtures :answers
+  fixtures :hacks
 
   should_belong_to :problem
   should_belong_to :user
