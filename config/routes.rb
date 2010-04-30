@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'top'
   map.root_for_yahoo 'index.html', :controller => 'top'
 
+  map.about 'about', :controller => 'about', :action => 'index'
   map.with_options :controller => 'about',
                    :name_prefix => 'about_',
                    :path_prefix => 'about' do |page|
@@ -25,7 +26,6 @@ ActionController::Routing::Routes.draw do |map|
     page.markdown 'markdown', :action => 'markdown'
     page.terms    'terms',    :action => 'terms'
     page.hint     'hint',     :action => 'hint'
-    page.faq      'faq',      :action => 'faq'
   end
 
   map.with_options :controller => 'users' do |page|
