@@ -143,13 +143,13 @@ div#wrapper .nav ul li.add_problem {
 	display: block;
 	float: right;
 	margin-top: -5px;
-	width: 250px;
+	width: 234px;
 	height: 35px;
 	padding-right: 15px;
 }
 div#wrapper .nav ul li.add_problem a {
 	display: block;
-	width: 250px;
+	width: 234px;
 	height: 35px;
 	margin: 0px;
 	padding: 0px;
@@ -231,6 +231,11 @@ div#main div.title h2 {
 	border-bottom-style: none;
 	width: 470px;
 }
+.top_index div#main div.title h2 {
+	background-image: url(../images/toppage_h2.gif);
+	text-indent: -9999px;
+	display: block;
+}
 div#main div.main .title {
 	margin-left: 0px;
 	padding-left: 0px;
@@ -257,6 +262,16 @@ div#main div.content {
 	margin-left: 20px;
 	color: #59632d;
 	padding-right: 10px;
+}
+div#main div.binding {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 15px;
+	margin-left: 35px;
+}
+div.top_index div#main div.binding {
+	background-image: url(../images/top_binding.gif);
+	height: 260px;
 }
 div#main div.about {
 	padding-top: 15px;
