@@ -144,13 +144,13 @@ div#wrapper .nav ul li.add_problem {
 	display: block;
 	float: right;
 	margin-top: -5px;
-	width: 300px;
+	width: 250px;
 	height: 35px;
 	padding-right: 15px;
 }
 div#wrapper .nav ul li.add_problem a {
 	display: block;
-	width: 300px;
+	width: 250px;
 	height: 35px;
 	margin: 0px;
 	padding: 0px;
@@ -190,6 +190,17 @@ div#wrapper .nav ul li a:active {
 	background-color: #636D31;
 	color: #FFFFFF;
 	background-position: right top;
+}
+div#wrapper .nav ul li.add_problem a:link,
+div#wrapper .nav ul li.add_problem a:visited {
+	background-color: #bac682;
+	background-position: left top;
+}
+div#wrapper .nav ul li.add_problem a:hover,
+div#wrapper .nav ul li.add_problem a:active {
+	background-color: #636D31;
+	color: #FFFFFF;
+	background-position: right -35px;
 }
 div#main {
 	width: 750px;
