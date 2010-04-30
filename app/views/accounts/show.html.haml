@@ -9,12 +9,12 @@
       - @user.problems.each do |problem|
         %li.problem=link_to h(problem.title), problem_path(problem)
   %h3 投稿した回答
-  - if @user.answers.count.zero?
-    %p= t('label.nothing_posted_answers')
+  - if @user.hacks.count.zero?
+    %p= t('label.nothing_posted_hacks')
   - else
-    %ul.answers
-      - @user.answers.each do |answer|
-        %li.answer=link_to h(answer.problem.title), problem_path(answer.problem)
+    %ul.hacks
+      - @user.hacks.each do |hack|
+        %li.hack=link_to h(hack.problem.title), problem_path(hack.problem)
   %h3 ウォッチしている問題
   %p= t('label.nothing_watching_problems')
   %h3 プロフィール

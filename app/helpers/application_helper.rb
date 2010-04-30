@@ -70,8 +70,8 @@ module ApplicationHelper
     good_retweet(problem.user.login, problem.title, problem_url(problem))
   end
 
-  def good_answer_retweet(answer)
-    good_retweet(answer.user.login, answer.description, "#{problem_url(answer.problem)}#answer-#{answer.id}")
+  def good_hack_retweet(hack)
+    good_retweet(hack.user.login, hack.description, "#{problem_url(hack.problem)}#hack-#{hack.id}")
   end
 
   def tweeted?(object)
@@ -95,12 +95,12 @@ module ApplicationHelper
     {:class => value}
   end
 
-  def answer_attrs(answer)
-    option = {:id => "answer-#{answer.id}"}
-    if answer.correct
-      option.merge!({:class => 'answer correct'})
+  def hack_attrs(hack)
+    option = {:id => "hack-#{hack.id}"}
+    if hack.correct
+      option.merge!({:class => 'hack correct'})
     else
-      option.merge!({:class => 'answer'})
+      option.merge!({:class => 'hack'})
     end
     option
   end

@@ -6,5 +6,5 @@ describe User do
   should_belong_to :language
   should_belong_to :state
   should_have_many :problems
-  should_have_many :answers
+  should_have_many :hacks
 end

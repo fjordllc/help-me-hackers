@@ -1,6 +1,6 @@
-class CreateAnswers < ActiveRecord::Migration
+class CreateHacks < ActiveRecord::Migration
   def self.up
-    create_table :answers do |t|
+    create_table :hacks do |t|
       t.belongs_to :problem, :null => false
       t.belongs_to :user, :null => false
       t.text :description, :null => false
@@ -11,6 +11,6 @@ class CreateAnswers < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :answers
+    drop_table :hacks
   end
 end

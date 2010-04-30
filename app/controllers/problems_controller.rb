@@ -43,14 +43,14 @@ class ProblemsController < ApplicationController
     @problems = Problem.paginate(
       :page => params[:page],
       :per_page => PROBLEMS_PER_PAGE,
-      :conditions => ['answers.correct = ?', false],
-      :joins => [:answers],
+      :conditions => ['hacks.correct = ?', false],
+      :joins => [:hacks],
       :order => 'id DESC')
   end
 
   def show
-    @answers = @problem.answers.by_correct(:desc).paginate(:page => params[:page], :per_page => ANSWERS_PER_PAGE)
-    @answer = Answer.new(:problem_id => @problem.id)
+    @hacks = @problem.hacks.by_correct(:desc).paginate(:page => params[:page], :per_page => ANSWERS_PER_PAGE)
+    @hack = Hack.new(:problem_id => @problem.id)
     Problem.increment_view_by_id(@problem.id)
   end
 
