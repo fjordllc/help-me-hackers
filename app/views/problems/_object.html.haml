@@ -7,7 +7,7 @@
     .statement
       - if object.solved?
         .resolver
-          %h4 問題を解決したハッカー
+          %h4 Hacker
           %ul
             %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
             %li.name=link_to object.solver.login, user_path(object.solver)
@@ -22,7 +22,7 @@
       %dt.category 問題カテゴリー
       %dd.category=link_to t("label.category.#{object.category.name}"), problems_by_category_path(:category => object.category.name)
       - if object.bounty > 0
-        %dt.bounty 報酬
+        %dt.bounty 報奨金
         %dd.bounty
           %span= number_to_currency object.bounty
     %ul.retweet
@@ -30,10 +30,10 @@
       %li.label retweet
     %ul.hack
       %li.count= object.hacks.size
-      %li.label 回答
+      %li.label Hack
     .person
-      %h4 出題者
+      %h4 Hackee
       %ul
         %li.icon=link_to image_tag(object.user.profile_image_url), user_path(object.user)
         %li.name=link_to object.user.login, user_path(object.user)
-    .created_at= "#{time_ago_in_words object.created_at}前"
+    .created_at== #{time_ago_in_words object.created_at}前

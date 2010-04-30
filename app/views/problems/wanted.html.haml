@@ -1,11 +1,11 @@
-- title "賞金首 - #{t('application.title')}"
+- title "WANTED! - #{t('application.title')}"
 .title
-  %h2 賞金首
+  %h2 WANTED!
 .content
   - if @problems.empty?
     .empty
-      %p 該当する問題がありません。
-      %p== 今なら目立つ！この隙に#{link_to '投稿', new_problem_path}すれば問題解決してもらえるかも！
+      %p 該当するHackがありません。
+      %p== 今なら目立つ！この隙に#{link_to '依頼', new_problem_path}すれば解決してもらえるかも！
   - else
   %ul.problems
     = render :partial => 'object', :collection => @problems
