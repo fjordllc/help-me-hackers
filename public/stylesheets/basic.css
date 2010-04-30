@@ -262,6 +262,7 @@ div#main div.content {
 	margin-left: 20px;
 	color: #59632d;
 	padding-right: 10px;
+	padding-bottom: 15px;
 }
 div#main div.binding {
 	margin-top: 20px;
@@ -1128,17 +1129,17 @@ div.problems_show div#main div.content div.section ul.user li.correct {
 
 
 div.problems_show div#main div.content div.section ul.hacks li.hack  div.description,
-#main div.content div.post div.wrapper div.wmd-preview {
+#main div.content div.wmd-preview {
 	font-size: 14px;
 	padding-top: 0px;
 }
 div.problems_show div#main div.content p,
-#main div.content div.post div.wrapper div.wmd-preview p {
+#main div.content div.wmd-preview p {
 	margin-bottom: 1.4em;
 	line-height: 1.6;
 }
 div.problems_show div#main li.hack div.description ul,
-#main div.content div.post div.wrapper div.wmd-preview ul {
+#main div.content div.wmd-preview ul {
 	margin-bottom: 1.4em;
 	line-height: 1.4;
 	padding-left: 40px;
@@ -1146,7 +1147,7 @@ div.problems_show div#main li.hack div.description ul,
 	list-style-type: disc;
 }
 div.problems_show div#main li.hack div.description ol,
-#main div.content div.post div.wrapper div.wmd-preview ol {
+#main div.content div.wmd-preview ol {
 	margin-bottom: 1.4em;
 	line-height: 1.4;
 	padding-left: 40px;
@@ -1154,15 +1155,15 @@ div.problems_show div#main li.hack div.description ol,
 	list-style-type: decimal;
 }
 div.problems_show div#main li.hack div.description li,
-#main div.content div.post div.wrapper div.wmd-preview li {
+#main div.content div.wmd-preview li {
 	margin-bottom: 0.8em;
 }
 div.problems_show div#main li.hack div.description h1,
-#main div.content div.post div.wrapper div.wmd-preview h1 {
+#main div.content div.wmd-preview h1 {
 	margin-bottom: 0.8em;
 }
 div.problems_show div#main li.hack div.description h1,
-#main div.content div.post div.wrapper div.wmd-preview h1 {
+#main div.content div.wmd-preview h1 {
 	padding: 0px;
 	border-top-style: none;
 	border-right-style: none;
@@ -1176,7 +1177,7 @@ div.problems_show div#main li.hack div.description h1,
 	margin-left: 0px;
 }
 div.problems_show div#main li.hack div.description h2,
-#main div.content div.post div.wrapper div.wmd-preview h2 {
+#main div.content div.wmd-preview h2 {
 	padding: 0px;
 	border-top-style: none;
 	border-right-style: none;
@@ -1190,18 +1191,18 @@ div.problems_show div#main li.hack div.description h2,
 	margin-left: 0px;
 }
 div.problems_show div#main li.hack div.description h3,
-#main div.content div.post div.wrapper div.wmd-preview h3 {
+#main div.content div.wmd-preview h3 {
 	margin-bottom: 15px;
 	font-size: 18px;
 }
 div.problems_show div#main li.hack div.description h4,
-#main div.content div.post div.wrapper div.wmd-preview h4 {
+#main div.content div.wmd-preview h4 {
 	margin-bottom: 15px;
 	font-size: 16px;
 	font-weight: bold;
 }
 div.problems_show div#main li.hack div.description h5,
-#main div.content div.post div.wrapper div.wmd-preview h5 {
+#main div.content div.wmd-preview h5 {
 	margin-bottom: 15px;
 	font-size: 14px;
 	font-weight: bold;
@@ -1351,7 +1352,7 @@ div.problems_show div#main div.content h3 {
 div.problems_show div#main div.content div.post h3 {
 	display: inline;
 }
-div.problems_show div#main div.content div.section {
+#main div.content div.section {
 	border-top-width: 1px;
 	border-top-style: dotted;
 	clear: both;
@@ -1483,7 +1484,8 @@ color:#006600;
 	font-size: 16px;
 	line-height: 20px;
 }
-#main .content .post #hack_description {
+#hack_description,
+#problem_description {
 	width: 100%;
 	margin-bottom: 20px;
 	height: 300px;
@@ -1970,4 +1972,56 @@ div.commingoon p.smile_community {
 	display: block;
 	text-align: center;
 	padding-bottom: 25px;
+}
+#new_problem label {
+	font-weight: bold;
+	margin-top: 15px;
+	display: inline;
+}
+#new_problem p {
+	margin-top: 15px;
+}
+#new_problem label input {
+	margin-bottom: 20px;
+}
+div#errorExplanation {
+	border: 3px solid #FF9966;
+	width: 450px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 15px;
+	padding-top: 5px;
+	padding-right: 12px;
+	padding-bottom: 10px;
+	padding-left: 12px;
+}
+div#errorExplanation h2 {
+	padding: 12px;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	color: #FF9966;
+}
+div#errorExplanation ul {
+	display: block;
+	list-style-type: circle;
+	margin-left: 25px;
+	padding-top: 15px;
+}
+div.fieldWithErrors {
+	display: inline !important;
+}
+divfieldWithErrors p {
+	display: none !important;
+}
+.fieldWithErrors label {
+	display: inline !important;
+}
+div.problems_create #main div.content div.section {
+	border-top-style: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div.problems_create #main div.content div.section div.label span {
+	float: left;
 }
