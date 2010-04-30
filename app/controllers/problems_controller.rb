@@ -35,9 +35,9 @@ class ProblemsController < ApplicationController
     @problems = Problem.paginate(
       :page => params[:page],
       :per_page => PROBLEMS_PER_PAGE,
-      :conditions => ['hacks.correct = ?', false],
-      :joins => [:hacks],
-      :order => 'id DESC')
+      :conditions => ['hacks.correct = ? OR hacks.correct IS NULL', false],
+      :joins => 'LEFT JOIN hacks ON problems.id = hacks.problem_id',
+      :order => 'problems.id DESC')
   end
 
   def show
