@@ -1779,6 +1779,8 @@ div.users_show div#main div.content div.lists,
 div.accounts_show div#main div.content div.lists {
 	clear: both;
 	padding-top: 10px;
+	margin-right: -10px;
+	padding-bottom: 10px;
 }
 div.users_show div#main div.content div.list,
 div.accounts_show div#main div.content div.list {
@@ -1973,7 +1975,7 @@ div.commingoon p.smile_community {
 	text-align: center;
 	padding-bottom: 25px;
 }
-#new_problem label {
+label {
 	font-weight: bold;
 	margin-top: 15px;
 	display: inline;
@@ -2017,10 +2019,13 @@ divfieldWithErrors p {
 .fieldWithErrors label {
 	display: inline !important;
 }
-div.problems_create #main div.content div.section {
-	border-top-style: none;
-	padding-top: 5px;
-	padding-bottom: 5px;
+#main div.post  div.section {
+	border-top-style: none !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+.problems_new #main div.section {
+	border-top-style: none !important;
 }
 div.problems_create #main div.content div.section div.label span {
 	float: left;
