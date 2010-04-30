@@ -1400,7 +1400,8 @@ div.problems_show div#main div.content div.post h3 {
 	border-left-color: #B9B9B9;
 }
 .problems_new #main div.content div.section,
-.problems_create #main div.content div.section {
+.problems_create #main div.content div.section,
+.accounts_edit #main div.content div.section {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1540,7 +1541,7 @@ color:#006600;
 	display: block;
 }
 form#new_hack {
-	margin-top: 15px;
+	margin-top: 5px;
 }
 
 
@@ -1901,6 +1902,7 @@ div.accounts_show div#main div.content div.list li {
 	padding-bottom: 0px;
 	padding-left: 14px;
 	background-repeat: no-repeat;
+	background-image: url(../images/arrow_blue.gif);
 }
 div.users_show div#main div.content div.list p,
 div.accounts_show div#main div.content div.list p {
@@ -2064,8 +2066,8 @@ divfieldWithErrors p {
 }
 #main div.post  div.section {
 	border-top-style: none !important;
-	padding-top: 5px !important;
-	padding-bottom: 5px !important;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
 }
 .problems_new #main div.section {
 	border-top-style: none !important;
