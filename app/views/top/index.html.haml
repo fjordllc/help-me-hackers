@@ -1,5 +1,7 @@
 .title
   %h2 トップページ
+.binding
+  #{link_to 'help-me-hackersの使い方', '/about'} 
 .content
   %ul.problems
     = render :partial => 'problems/object', :collection => @problems

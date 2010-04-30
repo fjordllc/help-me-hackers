@@ -271,7 +271,15 @@ div#main div.binding {
 }
 div.top_index div#main div.binding {
 	background-image: url(../images/top_binding.gif);
-	height: 260px;
+	height: 40px;
+	padding-top: 220px;
+}
+div.top_index div#main div.binding a {
+	height: 40px;
+	display: block;
+	text-indent: -9999px;
+	width: 120px;
+	margin-left: 580px;
 }
 div#main div.about {
 	padding-top: 15px;
