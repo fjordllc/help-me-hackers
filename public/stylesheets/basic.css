@@ -269,12 +269,39 @@ div#main div.binding {
 	margin-bottom: 20px;
 	margin-right: 15px;
 	margin-left: 35px;
+	background-repeat: no-repeat;
 }
 div.top_index div#main div.binding {
 	background-image: url(../images/top_binding.gif);
 	height: 40px;
 	padding-top: 220px;
 }
+div.about_index div#main div.binding {
+	background-image: url(../images/about_binding.gif);
+	height: 240px;
+	padding-top: 20px;
+	padding-left: 20px;
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: bold;
+}
+div.about_index div#main div.content ol li {
+	height: 40px;
+	display: block;
+	float: left;
+	width: 220px;
+	background-repeat: no-repeat;
+	padding-top: 268px;
+	padding-right: 55px;
+	padding-bottom: 12px;
+	padding-left: 75px;
+	font-size: 13px;
+}
+div.about_index div#main div.content ol li.about_01 {
+	background-image: url(../images/about_ol_01.jpg);
+}
+
+
 div.top_index div#main div.binding a {
 	height: 40px;
 	display: block;
@@ -1362,6 +1389,13 @@ div.problems_show div#main div.content div.post h3 {
 	border-right-color: #B9B9B9;
 	border-bottom-color: #B9B9B9;
 	border-left-color: #B9B9B9;
+}
+.problems_new #main div.content div.section,
+.problems_create #main div.content div.section {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
 }
 
 
