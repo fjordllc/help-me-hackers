@@ -123,7 +123,7 @@ div#wrapper .nav ul li span.current {
 	display: block;
 	background-color: #d4fd18;
 	float: left;
-	margin-right: 10px;
+	margin-right: 8px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -165,7 +165,7 @@ div#wrapper .nav ul li a {
 	display: block;
 	float: left;
 	height: 24px;
-	margin-right: 10px;
+	margin-right: 8px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -355,7 +355,7 @@ form.new_vote div.text input {
 	line-height: 20px;
 	display: block;
 	height: 20px;
-	color: #666666;
+	color: #777777;
 }
 div.problems_show div#main div.content div.main div.title form.new_vote div.text input{
 	width: 428px;
@@ -369,7 +369,8 @@ div.problems_show form.new_vote div.button {
 	height: 28px;
 	width: 75px;
 }
-div.problems_show form.new_vote div.button input{
+div.problems_show form.new_vote div.button input,
+div.problems_show form.new_vote div.button a {
 	border-radius:8px;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
@@ -555,7 +556,9 @@ div#sub div.section h3 {
 div#sub div.section p {
 	padding-right: 8px;
 	padding-left: 8px;
- 	margin-bottom: 1em;
+	margin-bottom: 1em;
+}
+div#sub div.section:last-child p {
 }
 
 div#sub div.section ul {
@@ -581,13 +584,13 @@ div#sub div.section ol {
 	border-top-color: #EFFF9C;
 }
 div#sub div.section li {
-	display: block;
 	border-bottom-width: 1px;
 	border-bottom-style: dotted;
 	border-bottom-color: #d0d0d0;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 13px;
+	display: block;
 }
 div#sub div.section .to_archive {
 	padding-top: 0px;
@@ -600,6 +603,7 @@ div#sub div.section .to_archive {
 	text-align: right;
 	display: block;
 	font-size: 12px;
+	font-weight: bold;
 }
 
 
@@ -1254,17 +1258,17 @@ div.problems_show div#main div.content div.section ul.answers li.answer .thanks 
 	display: block;
 	margin-top: 5px;
 }
-div.problems_show div#main div.content ul.loggedin {
+div#main div.content ul.loggedin {
 	padding-top: 0px;
 	padding-bottom: 15px;
 }
-div.problems_show div#main div.content .section ul.loggedin {
+div#main div.content .section ul.loggedin {
 	padding-top: 10px;
 }
-div.problems_show div#main div.content ul.loggedin li {
+div#main div.content ul.loggedin li {
 	display: inline;
 }
-div.problems_show div#main div.content ul.loggedin li a {
+div#main div.content ul.loggedin li a {
 	display: block;
 	float: left;
 	padding-top: 5px;
@@ -1279,23 +1283,23 @@ div.problems_show div#main div.content ul.loggedin li a {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 }
-div.problems_show div#main div.content ul.loggedin li.edit a:link,
-div.problems_show div#main div.content ul.loggedin li.edit a:visited {
+div#main div.content ul.loggedin li.edit a:link,
+div#main div.content ul.loggedin li.edit a:visited {
 	background-color: #115894;
 	color: #FFFFFF;
 }
-div.problems_show div#main div.content ul.loggedin li.edit a:hover,
-div.problems_show div#main div.content ul.loggedin li.edit a:active {
+div#main div.content ul.loggedin li.edit a:hover,
+div#main div.content ul.loggedin li.edit a:active {
 	background-color: #76E3DA;
 	color: #ec189a;
 }
-div.problems_show div#main div.content ul.loggedin li.delete a:link,
-div.problems_show div#main div.content ul.loggedin li.delete a:visited {
+div#main div.content ul.loggedin li.delete a:link,
+div#main div.content ul.loggedin li.delete a:visited {
 	background-color: #115894;
 	color: #FFFFFF;
 }
-div.problems_show div#main div.content ul.loggedin li.delete a:hover,
-div.problems_show div#main div.content ul.loggedin li.delete a:active {
+div#main div.content ul.loggedin li.delete a:hover,
+div#main div.content ul.loggedin li.delete a:active {
 	background-color: #76E3DA;
 	color: #ec189a;
 }
@@ -1470,12 +1474,10 @@ div.answers_edit div#main div.content div.section {
 #main .about p {
 	line-height: 1.7;
 	margin-bottom: 1.5em;
-	margin-right: 25px;
 }
 #main .about ul {
 	margin-right: 25px;
 	margin-bottom: 1.4em;
-	margin-right: 25px;
 }
 #main .about li {
 	margin-bottom: 0.8em;
@@ -1484,7 +1486,6 @@ div.answers_edit div#main div.content div.section {
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 15px;
-	margin-right: 25px;
 }
 
 
@@ -1507,9 +1508,8 @@ div#main div.content ul.users {
 	margin-right: -23px;
 }
 div#main div.content li.performance {
-	margin-right: 18px;
+	margin-right: 23px;
 	margin-bottom: 15px;
-	margin-left: 5px;
 	height: 250px;
 	background-image: url(../images/performance.gif);
 	background-repeat: no-repeat;
@@ -1545,10 +1545,18 @@ div#main div.content .performance dd.icon a:hover img,
 div#main div.content .performance dd.icon a:active img {
 	border: 3px solid #ec189a;
 }
+div#main div.content .performance dd.profile {
+	font-weight: bold;
+	line-height: 12px;
+	font-size: 10px;
+	display: block;
+	float: right;
+	width: 85px;
+	padding-bottom: 8px;
+}
 div#main div.content .performance dd.twitter_account {
 	font-weight: bold;
 	line-height: 12px;
-	height: 12px;
 	font-size: 10px;
 	display: block;
 	float: right;
@@ -1650,55 +1658,55 @@ div#main div.content .performance dd.thanks {
 
 
 
-div.users_show div#main div.content div.profile {
+div#main div.content div.profile {
 	padding-bottom: 20px;
 	padding-right: 15px;
 	float: right;
 	width: 520px;
 	margin-top: 15px;
 }
-div.users_show div#main div.content div.profile h3 {
+div#main div.content div.profile h3 {
 	display: none;
 }
-div.users_show div#main div.content div.profile dl.user dt.icon,
-div.users_show div#main div.content div.profile dl.user .login {
+div#main div.content div.profile dl.user dt.icon,
+div#main div.content div.profile dl.user .login {
 	display: none;
 }
-div.users_show div#main div.content div.profile dl.user {
+div#main div.content div.profile dl.user {
 	padding-right: 15px;
 	line-height: 1.7;
 }
-div.users_show div#main div.content div.profile dl.user dt {
+div#main div.content div.profile dl.user dt {
 	font-weight: bold;
 	display: inline;
 	white-space: nowrap;
 	margin-right: 5px;
 	font-size: 13px;
 }
-div.users_show div#main div.content div.profile dl.user dd {
+div#main div.content div.profile dl.user dd {
 	display: inline;
 	white-space: nowrap;
 	margin-right: 15px;
 	font-size: 13px;
 }
-div.users_show div#main div.content div.profile h4.description {
+div#main div.content div.profile h4.description {
 	display: none;
 }
-div.users_show div#main div.content div.profile p.description {
+div#main div.content div.profile p.description {
 	display: block;
 	margin-bottom: 15px;
 	line-height: 1.7;
 }
-div.users_show div#main div.content div.profile div.ssh_public_key {
+div#main div.content div.profile div.ssh_public_key {
 	display: block;
 	padding-top: 20px;
 }
-div.users_show div#main div.content div.profile div.ssh_public_key h4 {
+div#main div.content div.profile div.ssh_public_key h4 {
 	display: block;
 	padding-bottom: 5px;
 	font-weight: bold;
 }
-div.users_show div#main div.content div.profile div.ssh_public_key p {
+div#main div.content div.profile div.ssh_public_key p {
 	display: block;
 	font-size: 12px;
 	background-color: #666666;
@@ -1720,17 +1728,20 @@ div.users_show div#main div.content div.profile div.ssh_public_key p {
 }
 
 
-div.users_show div#main div.content div.lists {
+div.users_show div#main div.content div.lists,
+div.accounts_show div#main div.content div.lists {
 	clear: both;
 	padding-top: 10px;
 }
-div.users_show div#main div.content div.list {
+div.users_show div#main div.content div.list,
+div.accounts_show div#main div.content div.list {
 	float: left;
 	width: 225px;
 	margin-right: 8px;
 	background-image: url(../images/user_list.gif);
 }
-div.users_show div#main div.content div.list h3 {
+div.users_show div#main div.content div.list h3,
+div.accounts_show div#main div.content div.list h3 {
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 5px;
@@ -1742,29 +1753,36 @@ div.users_show div#main div.content div.list h3 {
 	padding-bottom: 5px;
 	background-image: url(../images/user_list_h3.gif);
 }
-div.users_show div#main div.content div.solved_problems h3 {
+div.users_show div#main div.content div.solved_problems h3,
+div.accounts_show div#main div.content div.solved_problems h3 {
 	border-bottom-color: #115894;
 	color: #115894;
 }
-div.users_show div#main div.content div.posted_problems h3 {
+div.users_show div#main div.content div.posted_problems h3,
+div.accounts_show div#main div.content div.posted_problems h3 {
 	border-bottom-color: #ec189a;
 	color: #ec189a;
 }
-div.users_show div#main div.content div.posted_answers h3 {
+div.users_show div#main div.content div.posted_answers h3,
+div.accounts_show div#main div.content div.posted_answers h3 {
 	border-bottom-color: #0eba12;
 	color: #0eba12;
 }
-div.users_show div#main div.content div.solved_problems li {
+div.users_show div#main div.content div.solved_problems li,
+div.accounts_show div#main div.content div.solved_problems li {
 	background-image: url(../images/arrow_bluek.gif);
 }
-div.users_show div#main div.content div.posted_problems li {
+div.users_show div#main div.content div.posted_problems li,
+div.accounts_show div#main div.content div.posted_problems li {
 	background-image: url(../images/arrow_pink.gif);
 }
-div.users_show div#main div.content div.posted_answers li {
+div.users_show div#main div.content div.posted_answers li,
+div.accounts_show div#main div.content div.posted_answers li {
 	background-image: url(../images/arrow_green.gif);
 }
 
-div.users_show div#main div.content div.list ul {
+div.users_show div#main div.content div.list ul,
+div.accounts_show div#main div.content div.list ul {
 	padding-left: 10px;
 	margin: 0px;
 	padding-top: 0px;
@@ -1775,7 +1793,8 @@ div.users_show div#main div.content div.list ul {
 	padding-right: 10px;
 	padding-bottom: 15px;
 }
-div.users_show div#main div.content div.list li {
+div.users_show div#main div.content div.list li,
+div.accounts_show div#main div.content div.list li {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1791,7 +1810,8 @@ div.users_show div#main div.content div.list li {
 	padding-left: 14px;
 	background-repeat: no-repeat;
 }
-div.users_show div#main div.content div.list p {
+div.users_show div#main div.content div.list p,
+div.accounts_show div#main div.content div.list p {
 	line-height: 20px;
 	font-weight: bold;
 	text-align: center;
@@ -1801,6 +1821,8 @@ div.users_show div#main div.content div.list p {
 	background-image: url(../images/user_list_ul.gif);
 	background-repeat: no-repeat;
 	background-position: left bottom;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 div#main div.content div.main dl.information {
@@ -1858,8 +1880,12 @@ div#main div.content div.main div.description {
 
 
 
-
-
+div p:last-child {
+	margin-bottom: 0px !important;
+}
+ul li:last-child {
+	margin-bottom: 0px !important;
+}
 
 
 
@@ -1880,4 +1906,23 @@ div.commingoon h1 {
 div.commingoon p.smile_community {
 	padding-bottom: 100px;
 	font-weight: bold;
+}
+#footer ul.links li {
+	display: inline;
+	padding-right: 15px;
+	padding-left: 10px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+}
+#footer ul.links li:last-child {
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#footer ul.links {
+	display: block;
+	text-align: center;
+	padding-bottom: 25px;
 }

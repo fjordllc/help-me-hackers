@@ -21,331 +21,262 @@
   </head>
   <body>
     <div id='header'>
-      <h1><a href="/">Help me, hackers!</a></h1>
 
+      <h1><a href="/">Help me, hackers!</a></h1>
       <div class='nav'>
         <ul>
-          <li><a href="/account">machida</a></li>
+          <li>
+            <a href="/problems/2"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/dashboard">machida(0)</a>
+          </li>
+          <li><a href="/account/edit">アカウント</a></li>
+
           <li><a href="/logout">ログアウト</a></li>
-          <li><a href="/problems/new">問題依頼</a></li>
         </ul>
       </div>
-
     </div>
     <div class='problems_show' id='wrapper'>
       <div class='nav'>
         <ul>
           <li><a href="/problems">問題</a></li>
+
           <li><a href="/problems/wanted">賞金首</a></li>
           <li><a href="/problems/unsolved">未解決</a></li>
-
           <li><a href="/users">ユーザー</a></li>
+          <li class='add_problem'><a href="/problems/new">問題依頼</a></li>
         </ul>
       </div>
       <div id='main'>
+
         <div id='flash'>
         </div>
-        <div class='content'>
-          <div class='problem'>
-
+        <div class='problem content plugin-making'>
+          <div class='main'>
             <div class='title'>
-              <h2>1日前などの時間表記</h2>
-              <div class='person'>
-                <h3 class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></h3>
+              <div class='good' onclick="$('#problem_2_vote_form').toggle()">
                 <ul>
-                  <li>出題者</li>
-                  <li class='name'><a href="/komagata">komagata</a></li>
+                  <li class='count' id='problem_2_good'>0</li>
 
                 </ul>
               </div>
-              <dl class='information'>
-                <dt>言語</dt>
-                <dd><a href="ruby">Ruby</a></dd>
-                <dt>ライセンス</dt>
-                <dd><a href="mit">MIT LICENSE</a></dd>
+              <h2>WordPressのGoogle Analyticsモバイル版プラグイン</h2>
+              <form action="/votes" class="new_vote" id="problem_2_vote_form" method="post" onsubmit="return vote(this, '#problem_2_good');" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+                <div class='text'>
+                  <input id="problem_2_voteable_id" name="vote[voteable_id]" type="hidden" value="2" />
+                  <input id="problem_2_voteable_type" name="vote[voteable_type]" type="hidden" value="Problem" />
+                  <input id="problem_2_comment" name="vote[comment]" size="30" type="text" value="Good! RT @komagata_fjord WordPressのGoogle Analyticsモバイル版プラグイン http://bit.ly/9uax1Q #helpmehackers" />
 
-              </dl>
+                </div>
+                <div class='button'><input src="/images/good_button.gif?1272570436" type="image" /></div>
+                <p class='center'>Retweetをすることで、この質問にGood!ポイントが加算されます</p>
+              </form>
             </div>
+            <dl class='information'>
+              <dd class='licence'><a href="/about/license#gpl2">GPLv2</a></dd>
+              <dt class='licence'>ライセンス</dt>
+
+            </dl>
             <div class='description'>
-              <p>現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。</p>
-              
-              <p>英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。</p>
-
-<pre>
-<code>ragiieaniptanm]ombeaboae]bomeabom
-eananmkgenmam]gng@nmgnmga
-nmmangragnlgldnmglanmlg</code>
-</pre>
-
-
-
-<pre class="prettyprint"><code><span class="com">#include &lt;GLUT/glut.h&gt;</span><span class="pln"><br><br></span><span class="kwd">void</span><span class="pln"> display</span><span class="pun">(</span><span class="kwd">void</span><span class="pun">)</span><span class="pln"><br></span><span class="pun">{</span><span class="pln"><br>&nbsp; glClear</span><span class="pun">(</span><span class="pln">GL_COLOR_BUFFER_BIT</span><span class="pun">);</span><span class="pln"><br>&nbsp; glFlush</span><span class="pun">();</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">void</span><span class="pln"> init</span><span class="pun">(</span><span class="kwd">void</span><span class="pun">)</span><span class="pln"><br></span><span class="pun">{</span><span class="pln"><br>&nbsp; glClearColor</span><span class="pun">(</span><span class="lit">0.0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0.0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1.0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1.0</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br></span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> argc</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">char</span><span class="pln"> </span><span class="pun">*</span><span class="pln">argv</span><span class="pun">[])</span><span class="pln"><br></span><span class="pun">{</span><span class="pln"><br>&nbsp; glutInit</span><span class="pun">(&amp;</span><span class="pln">argc</span><span class="pun">,</span><span class="pln"> argv</span><span class="pun">);</span><span class="pln"><br>&nbsp; glutInitDisplayMode</span><span class="pun">(</span><span class="pln">GLUT_RGBA</span><span class="pun">);</span><span class="pln"><br>&nbsp; glutCreateWindow</span><span class="pun">(</span><span class="pln">argv</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]);</span><span class="pln"><br>&nbsp; glutDisplayFunc</span><span class="pun">(</span><span class="pln">display</span><span class="pun">);</span><span class="pln"><br>&nbsp; init</span><span class="pun">();</span><span class="pln"><br>&nbsp; glutMainLoop</span><span class="pun">();</span><span class="pln"><br>&nbsp; </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span></code></pre>
-
+              <p>WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。
+               ３日分の昼飯代を払います！</p>
             </div>
-            <div class='data'>
-              <div class='user'>
+            <ul class='tags'>
+              <li class='tag'><a href="/problems/tag/php">php</a></li>
+              <li class='tag'><a href="/problems/tag/wordpress">wordpress</a></li>
 
-                <h4><a href="">クラス・関数作成</a></h4>
-                <dl class='bounty'>
-                  <dt>報酬</dt>
-                  <dd>
-                    <span>0円</span>
-                  </dd>
-                </dl>
+              <li class='tag'><a href="/problems/tag/google-analytics">google-analytics</a></li>
+              <li class='tag'><a href="/problems/tag/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a></li>
+              <li class='tag'><a href="/problems/tag/%E6%90%BA%E5%B8%AF">携帯</a></li>
+              <li class='tag'><a href="/problems/tag/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB">モバイル</a></li>
+            </ul>
+          </div>
+          <div class='sub'>
 
-              </div>
+            <div class='information'>
+              <dl>
+                <dt class='language'>プログラム言語</dt>
+                <dd class='language'><a href="/problems/tag/php">PHP</a></dd>
+                <dt class='category'>問題カテゴリー</dt>
+                <dd class='category plugin-making'>
+                  <a href="/problems/category/plugin-making">プラグイン作成</a>
+
+                </dd>
+                <dt class='bounty'>報酬</dt>
+                <dd class='bounty'>
+                  <span>100円</span>
+                </dd>
+              </dl>
+              <ul class='retweet'>
+                <li class='count'>0</li>
+
+                <li class='label'>retweet</li>
+              </ul>
               <ul class='answer'>
                 <li class='count'>1</li>
                 <li class='label'>回答</li>
               </ul>
-              <ul class='view'>
-                <li class='count'>15</li>
+              <div class='person'>
 
-                <li class='label'>閲覧</li>
-              </ul>
-            </div>
-              <ul class='tags'>
-                <li class='tag'><a href="/problems/3">Ruby</a></li>
-                <li class='tag'><a href="/problems/3">Rails</a></li>
-              </ul>
-
-            <div class='section'>
-              <h3>回答一覧</h3>
-              <ul class='answers'>
-              <li class="answer">
-                <div class='description'>
-                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
-                    
-                  <p>「前」というのを追加する必要がありますが。</p>
-<pre>
-<code>ragiieaniptanm]ombeaboae]bomeabom
-eananmkgenmam]gng@nmgnmga
-nmmangragnlgldnmglanmlg</code>
-</pre>
-                </div>
-                <ul class='user'>
-                  <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                  <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                  <li class='thanks'>
-                    <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                      <input name='cmd' type='hidden' value='_donations' />
-
-                      <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
-                      <input name='lc' type='hidden' value='JP' />
-                      <input name='currency_code' type='hidden' value='JPY' />
-                      <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
-                      <input name='item_number' type='hidden' value='3' />
-                      <input name='amount' type='hidden' value='0' />
-                      <input name='button_subtype' type='hidden' value='services' />
-                      <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                      <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif' type='image' />
-
-                      <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                    </form>
-                </li>
+                <h4>出題者</h4>
+                <ul>
+                  <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
+                  <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                 </ul>
-                </li>
-              <li class="answer">
-                <div class='description'>
-                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
-                    
-                  <p>「前」というのを追加する必要がありますが。</p>
-<pre>
-<code>ragiieaniptanm]ombeaboae]bomeabom
-eananmkgenmam]gng@nmgnmga
-nmmangragnlgldnmglanmlg</code>
-</pre>
-                </div>
-                <ul class='user'>
-                  <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                  <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                  <li class='thanks'>
-                    <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                      <input name='cmd' type='hidden' value='_donations' />
+              </div>
+              <div class='created_at'>約3時間前</div>
 
-                      <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
-                      <input name='lc' type='hidden' value='JP' />
-                      <input name='currency_code' type='hidden' value='JPY' />
-                      <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
-                      <input name='item_number' type='hidden' value='3' />
-                      <input name='amount' type='hidden' value='0' />
-                      <input name='button_subtype' type='hidden' value='services' />
-                      <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                      <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif' type='image' />
-
-                      <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                    </form>
-                </li>
-                </ul>
-                </li>
-              <li class="answer">
-                <div class='description'>
-                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
-                    
-                  <p>「前」というのを追加する必要がありますが。</p>
-<pre>
-<code>ragiieaniptanm]ombeaboae]bomeabom
-eananmkgenmam]gng@nmgnmga
-nmmangragnlgldnmglanmlg</code>
-</pre>
-                </div>
-                <ul class='user'>
-                  <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                  <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                  <li class='thanks'>
-                    <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                      <input name='cmd' type='hidden' value='_donations' />
-
-                      <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
-                      <input name='lc' type='hidden' value='JP' />
-                      <input name='currency_code' type='hidden' value='JPY' />
-                      <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
-                      <input name='item_number' type='hidden' value='3' />
-                      <input name='amount' type='hidden' value='0' />
-                      <input name='button_subtype' type='hidden' value='services' />
-                      <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                      <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif' type='image' />
-
-                      <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                    </form>
-                </li>
-                </ul>
-                </li>
-              <li class="answer">
-                <div class='description'>
-                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
-                    
-                  <p>「前」というのを追加する必要がありますが。</p>
-<pre>
-<code>ragiieaniptanm]ombeaboae]bomeabom
-eananmkgenmam]gng@nmgnmga
-nmmangragnlgldnmglanmlg</code>
-</pre>
-                </div>
-                <ul class='user'>
-                  <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                  <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                  <li class='thanks'>
-                    <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                      <input name='cmd' type='hidden' value='_donations' />
-
-                      <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
-                      <input name='lc' type='hidden' value='JP' />
-                      <input name='currency_code' type='hidden' value='JPY' />
-                      <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
-                      <input name='item_number' type='hidden' value='3' />
-                      <input name='amount' type='hidden' value='0' />
-                      <input name='button_subtype' type='hidden' value='services' />
-                      <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                      <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif' type='image' />
-
-                      <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                    </form>
-                </li>
-                </ul>
-                </li>
-              <li class="answer">
-                <div class='description'>
-                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
-                    
-                  <p>「前」というのを追加する必要がありますが。</p>
-<pre>
-<code>ragiieaniptanm]ombeaboae]bomeabom
-eananmkgenmam]gng@nmgnmga
-nmmangragnlgldnmglanmlg</code>
-</pre>
-                </div>
-                <ul class='user'>
-                  <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                  <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                  <li class='thanks'>
-                    <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                      <input name='cmd' type='hidden' value='_donations' />
-
-                      <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
-                      <input name='lc' type='hidden' value='JP' />
-                      <input name='currency_code' type='hidden' value='JPY' />
-                      <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
-                      <input name='item_number' type='hidden' value='3' />
-                      <input name='amount' type='hidden' value='0' />
-                      <input name='button_subtype' type='hidden' value='services' />
-                      <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                      <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif' type='image' />
-
-                      <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                    </form>
-                </li>
-                </ul>
-                </li>
-              <li class="answer">
-                <div class='description'>
-                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
-                    
-                  <p>「前」というのを追加する必要がありますが。</p>
-<pre>
-<code>ragiieaniptanm]ombeaboae]bomeabom
-eananmkgenmam]gng@nmgnmga
-nmmangragnlgldnmglanmlg</code>
-</pre>
-                </div>
-                <ul class='user'>
-                  <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                  <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                  <li class='thanks'>
-                    <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                      <input name='cmd' type='hidden' value='_donations' />
-
-                      <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
-                      <input name='lc' type='hidden' value='JP' />
-                      <input name='currency_code' type='hidden' value='JPY' />
-                      <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
-                      <input name='item_number' type='hidden' value='3' />
-                      <input name='amount' type='hidden' value='0' />
-                      <input name='button_subtype' type='hidden' value='services' />
-                      <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                      <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='https://www.paypal.com/ja_JP/JP/i/btn/btn_paynow_LG.gif' type='image' />
-
-                      <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                    </form>
-                </li>
-                </ul>
-                </li>
-              </ul>
             </div>
           </div>
-          
           <div class='section'>
-            <h3>回答する</h3>
+            <h3>回答一覧</h3>
+            <ul class='answers'>
+              <li class='answer' id='answer-2'>
+                <div class='hacker'>
+                  <div class='good' onclick="$('#answer_2_vote_form').toggle()">
 
-            <form action="/answers" class="new_answer" id="new_answer" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="b/gVQNo280fUjKYHn55CuadEi6P8VAeLZi/k850zU/Q=" /></div>
+                    <ul class='good'>
+                      <li class='count'>0</li>
+                      <li class='label'>Good</li>
+                    </ul>
+                  </div>
+                  <div class='user'>
+                    <h4>回答者</h4>
+
+                    <ul class='user'>
+                      <li class='icon'><a href="/machida_fjord"><img alt="Machida_normal" src="http://a3.twimg.com/profile_images/829703797/machida_normal.jpg" /></a></li>
+                      <li class='name'><a href="/machida_fjord">machida_fjord</a></li>
+                      <li class='correct'>
+                        <form action="/answers/2" class="edit_answer" id="edit_answer_2" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+                          <input id="answer_correct" name="answer[correct]" type="hidden" value="true" />
+                          <input src="/images/choice_button.gif" type="image" />
+                        </form>
+
+                      </li>
+                      <li class='thanks'>
+                        <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+                          <input name='cmd' type='hidden' value='_donations' />
+                          <input name='business' type='hidden' value='machida@fjord.jp' />
+                          <input name='lc' type='hidden' value='JP' />
+                          <input name='currency_code' type='hidden' value='JPY' />
+                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 2' />
+                          <input name='item_number' type='hidden' value='2' />
+
+                          <input name='amount' type='hidden' value='100' />
+                          <input name='button_subtype' type='hidden' value='services' />
+                          <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
+                          <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='/images/paypal_button.gif' type='image' />
+                          <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
+                        </form>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+                <form action="/votes" class="new_vote" id="answer_2_vote_form" method="post" onsubmit="return vote(this, '.answer ul.good li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+                  <div class='text'>
+                    <input id="answer_2_voteable_id" name="vote[voteable_id]" type="hidden" value="2" />
+                    <input id="answer_2_voteable_type" name="vote[voteable_type]" type="hidden" value="Answer" />
+                    <input id="answer_2_comment" name="vote[comment]" size="30" type="text" value="Good! RT @machida_fjord http://github.com/machida/foo にソース置きました。 http://bit.ly/9uax1Q #helpmehackers" />
+                  </div>
+                  <div class='button'><input src="/images/good_button.gif?1272570436" type="image" /></div>
+                  <p class='center'>Retweetをすることで、この質問にGood!ポイントが加算されます</p>
+
+                </form>
+                <div class='description'><p>http://github.com/machida/foo にソース置きました。</p></div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class='section post'>
+            <h3>回答する</h3>
+            <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
+
+            <form action="/answers" class="new_answer" id="new_answer" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
             
-              <input id="answer_problem_id" name="answer[problem_id]" type="hidden" value="3" />
+              <input id="answer_problem_id" name="answer[problem_id]" type="hidden" value="2" />
               <textarea cols="70" id="answer_description" name="answer[description]" rows="10"></textarea>
               <h4>プレビュー</h4>
-              <script type='text/javascript'>
-                //<![CDATA[
-                  wmd_options = {
-                    output: "Markdown"
-                  }
-                //]]>
-              </script>
-              <div class='wmd-preview'></div>
-              <script src="/javascripts/wmd/wmd.js?1271312474" type="text/javascript"></script>
+              <div class='wrapper'>
+                <script type='text/javascript'>
+                  //<![CDATA[
+                    wmd_options = {
+                      output: "Markdown"
+                    }
+                  //]]>
+                </script>
+                <div class='wmd-preview'></div>
 
+              </div>
               <p>
-                <input id="answer_submit" name="commit" type="submit" value="回答する" />
+                <input id="answer_submit" name="commit" type="submit" value="利用規約に同意して回答する" />
+                <a href="/about/terms" target="_blank">利用規約</a>
               </p>
             </form>
           </div>
         </div>
-      </div>
-      <div id='sub'>
-        <div class='section'></div>
 
       </div>
+      <div id='sub'>
+        <div class='section'>
+          <h3>カテゴリー</h3>
+          <ul class='categories'>
+            <li class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></li>
+            <li class='category'><a href="/problems/category/data-collection-and-making">データ収集・作成</a></li>
+
+            <li class='category'><a href="/problems/category/debugging">バグ修正</a></li>
+            <li class='category'><a href="/problems/category/document-translation">文章翻訳</a></li>
+            <li class='category'><a href="/problems/category/library-making">ライブラリ作成</a></li>
+            <li class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></li>
+            <li class='category'><a href="/problems/category/programming-quiz">プログラミングクイズ</a></li>
+            <li class='category'><a href="/problems/category/prototype-making">プロトタイプ作成</a></li>
+
+            <li class='category'><a href="/problems/category/software-making">ソフトウェア作成</a></li>
+            <li class='category'><a href="/problems/category/software-multilingualization">多言語化</a></li>
+            <li class='category'><a href="/problems/category/technology-study">技術調査</a></li>
+          </ul>
+          <div class='to_archive'>
+            <p><a href="/about/category">カテゴリーの説明</a></p>
+          </div>
+
+        </div>
+        <div class='section hint'>
+          <h3>ヒント</h3>
+          <ul>
+            <li>
+              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
+            </li>
+            <li>
+
+              <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
+              <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
+            </li>
+            <li>
+              <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
+            </li>
+            <li>
+
+              <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
+            </li>
+            <li>
+              <p>ジャンクフード食系男子募集中！</p>
+            </li>
+            <li>
+              <p>解決してもらうコツはプログラマーにとって面白い問題設定にすること。前提とゴールは明確に。</p>
+
+            </li>
+          </ul>
+          <div class='to_archive'>
+            <p><a href="/about/hint">もっと詳しく</a></p>
+          </div>
+        </div>
+      </div>
     </div>
+
     <div id='footer'>
+      <p><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a> | <a href="http://fjord.jp/">運営会社</a> | <a href="/about/terms">利用規約</a> | <a href="http://fjord.jp/inquiry">お問い合わせ</a></p>
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>.</p>
+
     </div>
+    <script src="/javascripts/wmd/wmd.js?1272570436" type="text/javascript"></script>
   </body>
 </html>

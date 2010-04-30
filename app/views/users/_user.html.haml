@@ -3,6 +3,8 @@
   %dl
     %dt.icon アイコン画像
     %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
+    %dt.profile ユーザー情報
+    %dd.profile="#{link_to 'プロフィール', user_path(user)}"
     %dt.twitter_account Twitterアカウント
     %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
     - if user.language
