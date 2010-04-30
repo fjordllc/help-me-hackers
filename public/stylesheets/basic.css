@@ -1888,3 +1888,22 @@ div.commingoon p.smile_community {
 	padding-bottom: 100px;
 	font-weight: bold;
 }
+#footer ul.links li {
+	display: inline;
+	padding-right: 15px;
+	padding-left: 10px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #FFFFFF;
+}
+#footer ul.links li:last-child {
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+#footer ul.links {
+	display: block;
+	text-align: center;
+	padding-bottom: 25px;
+}
