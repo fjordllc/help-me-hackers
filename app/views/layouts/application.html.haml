@@ -34,8 +34,8 @@
           %li= link_to_unless_current_with_span 'Hacks', problems_path
           %li= link_to_unless_current_with_span 'WANTED!', wanted_problems_path
           %li= link_to_unless_current_with_span 'Unsolved', unsolved_problems_path
-          %li= link_to_unless_current_with_span 'Hackers', users_path
-          %li= link_to_unless_current_with_span 'Hackees', users_path
+          %li= link_to_unless_current_with_span 'Hackers', users_hacker_path
+          %li= link_to_unless_current_with_span 'Hackees', users_hackee_path
           %li.add_problem= link_to '問題依頼を依頼する', new_problem_path
       #main
         #flash

@@ -3,8 +3,8 @@
   %dl
     %dt.icon アイコン画像
     %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
-    %dt.twitter_account Twitterアカウント
-    %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
+    %dt.profile ユーザー情報
+    %dd.profile=link_to user.login, user_path(user)
     - if user.language
       %dt.favorite_language 好きなプログラム言語
       %dd.favorite_language= link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name)

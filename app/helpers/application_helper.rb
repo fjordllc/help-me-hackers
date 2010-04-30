@@ -39,10 +39,18 @@ module ApplicationHelper
   end
 
   def users_title
+    v = if action_name == 'hacker'
+          'Hackers'
+        elsif action_name == 'hackee'
+          'Hackees'
+        else
+          'Users'
+        end
+
     if params[:language]
-      "#{t("label.language.#{@language.name}")} #{t('activerecord.models.user')}"
+      t("label.language.#{@language.name}") + ' - ' + v
     else
-      t('activerecord.models.user')
+      v
     end
   end
 
