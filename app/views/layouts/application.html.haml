@@ -2,12 +2,12 @@
 !!!
 %html{:'xml:lang' => 'ja', :lang => 'ja'}
   %head
-    %title= yield(:title) || t('application.title')
     %meta{:name => 'description', :content => yield(:description) || t('application.description')}
     %meta{:name => 'keywords', :content => yield(:keywords) || t('application.keywords')}
     %meta{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8'}
     %meta{'http-equiv' => 'Content-Style-Type', 'content' => 'text/css'}
     %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
+    %title= yield(:title) || t('application.title')
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
     = stylesheet_link_tag 'reset', :media => 'screen'
     = stylesheet_link_tag 'basic', :media => 'screen'
