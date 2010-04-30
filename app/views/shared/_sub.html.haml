@@ -1,7 +1,7 @@
 .section
   %h3 カテゴリー
   %ul.categories
-    - Category.all.each do |category|
+    - Category.find(:all, :order => 'id').each do |category|
       %li.category=link_to t("label.category.#{category.name}"), problems_by_category_path(:category => category.name)
   .to_archive
     %p=link_to 'カテゴリーの説明', about_category_path
