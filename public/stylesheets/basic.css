@@ -108,11 +108,10 @@ div#wrapper .nav {
 	width: 990px;
 }
 div#wrapper .nav ul {
-	width: 770px;
+	width: 775px;
 	display: block;
 	margin-top: -75px;
 	float: right;
-	padding-left: 10px;
 }
 div#wrapper .nav ul li {
 	display: inline;
@@ -123,7 +122,7 @@ div#wrapper .nav ul li span.current {
 	display: block;
 	background-color: #d4fd18;
 	float: left;
-	margin-right: 8px;
+	margin-right: 5px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -165,7 +164,7 @@ div#wrapper .nav ul li a {
 	display: block;
 	float: left;
 	height: 24px;
-	margin-right: 8px;
+	margin-right: 5px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -261,6 +260,8 @@ div#main div.content {
 }
 div#main div.about {
 	padding-top: 15px;
+	padding-right: 20px;
+	padding-bottom: 15px;
 }
 div#main div.content div#flash div {
 	display: block;
@@ -342,7 +343,7 @@ div.problems_show div#main div.content div.main div.title form.new_vote{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote {
+div.problems_show div#main div.content div.section ul.hacks li.hack form.new_vote {
 	margin-bottom: 10px;
 	float: left;
 	width: 570px;
@@ -371,7 +372,7 @@ form.new_vote div.text input {
 div.problems_show div#main div.content div.main div.title form.new_vote div.text input{
 	width: 428px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote div.text input{
+div.problems_show div#main div.content div.section ul.hacks li.hack form.new_vote div.text input{
 	width: 478px;
 }
 div.problems_show form.new_vote div.button {
@@ -398,7 +399,7 @@ div.problems_show form.new_vote div.button a {
 div.problems_show div#main div.content div.main div.title form.new_vote div.button a{
 	display: block;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer form.new_vote div.button a{
+div.problems_show div#main div.content div.section ul.hacks li.hack form.new_vote div.button a{
 	display: block;
 }
 
@@ -498,6 +499,7 @@ div#footer {
 	background-position: left bottom;
 	padding-bottom: 45px;
 	padding-top: 30px;
+	font-size: 13px;
 }
 div.index #main h2 {
 	background-image: url(../images/top_h2.gif);
@@ -880,7 +882,7 @@ div#main ul.problems li.solved div.information dl dd.bounty span {
 }
 
 div#main .problem div.information ul.retweet,
-div#main .problem div.information ul.answer {
+div#main .problem div.information ul.hack {
 	font-weight: bold;
 	line-height: 30px;
 	height: 30px;
@@ -889,15 +891,14 @@ div#main .problem div.information ul.answer {
 	font-size: 18px;
 	padding-top: 2px;
 }
-div#main .problem div.information ul.retweet li.label,
-div#main .problem div.information ul.answer li.label {
+div#main .problem div.information li.label {
 	display: none;
 }
 div#main .problem div.information ul.retweet {
 	float: left;
 	padding-left: 5px;
 }
-div#main .problem div.information ul.answer {
+div#main .problem div.information ul.hack {
 	float: right;
 	padding-right: 5px;
 }
@@ -1047,7 +1048,7 @@ div#main ul.problems li.problem div.resolver li.name {
 	float: right;
 	width: 102px;
 }
-div#main ul.problems li.resolved ul.answer {
+div#main ul.problems li.resolved ul.hack {
 	background-color: #FFCF63;
 	color: #5c0404;
 }
@@ -1055,7 +1056,7 @@ div#main ul.problems li.resolved ul.answer {
 div#main ul.problems li.resolved .section {
 	float: right;
 }
-div#main ul.problems li.resolved ul.answer,
+div#main ul.problems li.resolved ul.hack,
 div#main ul.problems li.resolved ul.view {
 	float: right;
 	clear: none;
@@ -1075,7 +1076,7 @@ div.problems_show div#main div.main {
 	width: 535px;
 	padding-top: 15px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer,
+div.problems_show div#main div.content div.section ul.hacks li.hack,
 #main div.content div.post div.wrapper {
 	display: block;
 	border: 1px solid #E6EAD4;
@@ -1090,7 +1091,7 @@ div.problems_show div#main div.content div.section ul.answers li.answer,
 	padding-left: 15px;
 	clear: both;
 	}
-div.problems_show div#main div.content div.section ul.answers li.correct {
+div.problems_show div#main div.content div.section ul.hacks li.correct {
 	padding-right: 7px;
 	padding-left: 9px;
 	border: 3px solid #d4fd18;
@@ -1103,7 +1104,7 @@ div.problems_show div#main div.content div.section ul.user li.correct {
 
 
 
-div.problems_show div#main div.content div.section ul.answers li.answer  div.description,
+div.problems_show div#main div.content div.section ul.hacks li.hack  div.description,
 #main div.content div.post div.wrapper div.wmd-preview {
 	font-size: 14px;
 	padding-top: 0px;
@@ -1113,7 +1114,7 @@ div.problems_show div#main div.content p,
 	margin-bottom: 1.4em;
 	line-height: 1.6;
 }
-div.problems_show div#main li.answer div.description ul,
+div.problems_show div#main li.hack div.description ul,
 #main div.content div.post div.wrapper div.wmd-preview ul {
 	margin-bottom: 1.4em;
 	line-height: 1.4;
@@ -1121,7 +1122,7 @@ div.problems_show div#main li.answer div.description ul,
 	list-style-position: outside;
 	list-style-type: disc;
 }
-div.problems_show div#main li.answer div.description ol,
+div.problems_show div#main li.hack div.description ol,
 #main div.content div.post div.wrapper div.wmd-preview ol {
 	margin-bottom: 1.4em;
 	line-height: 1.4;
@@ -1129,15 +1130,15 @@ div.problems_show div#main li.answer div.description ol,
 	list-style-position: outside;
 	list-style-type: decimal;
 }
-div.problems_show div#main li.answer div.description li,
+div.problems_show div#main li.hack div.description li,
 #main div.content div.post div.wrapper div.wmd-preview li {
 	margin-bottom: 0.8em;
 }
-div.problems_show div#main li.answer div.description h1,
+div.problems_show div#main li.hack div.description h1,
 #main div.content div.post div.wrapper div.wmd-preview h1 {
 	margin-bottom: 0.8em;
 }
-div.problems_show div#main li.answer div.description h1,
+div.problems_show div#main li.hack div.description h1,
 #main div.content div.post div.wrapper div.wmd-preview h1 {
 	padding: 0px;
 	border-top-style: none;
@@ -1151,7 +1152,7 @@ div.problems_show div#main li.answer div.description h1,
 	margin-bottom: 15px;
 	margin-left: 0px;
 }
-div.problems_show div#main li.answer div.description h2,
+div.problems_show div#main li.hack div.description h2,
 #main div.content div.post div.wrapper div.wmd-preview h2 {
 	padding: 0px;
 	border-top-style: none;
@@ -1165,18 +1166,18 @@ div.problems_show div#main li.answer div.description h2,
 	margin-bottom: 15px;
 	margin-left: 0px;
 }
-div.problems_show div#main li.answer div.description h3,
+div.problems_show div#main li.hack div.description h3,
 #main div.content div.post div.wrapper div.wmd-preview h3 {
 	margin-bottom: 15px;
 	font-size: 18px;
 }
-div.problems_show div#main li.answer div.description h4,
+div.problems_show div#main li.hack div.description h4,
 #main div.content div.post div.wrapper div.wmd-preview h4 {
 	margin-bottom: 15px;
 	font-size: 16px;
 	font-weight: bold;
 }
-div.problems_show div#main li.answer div.description h5,
+div.problems_show div#main li.hack div.description h5,
 #main div.content div.post div.wrapper div.wmd-preview h5 {
 	margin-bottom: 15px;
 	font-size: 14px;
@@ -1186,7 +1187,7 @@ div.problems_show div#main li.answer div.description h5,
 
 
 
-div.problems_show div#main div.content div.section ul.answers li.answer div.hacker {
+div.problems_show div#main div.content div.section ul.hacks li.hack div.hacker {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1200,7 +1201,7 @@ div.problems_show div#main div.content div.section ul.answers li.answer div.hack
 	background-repeat: no-repeat;
 	margin-left: 10px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer div.user {
+div.problems_show div#main div.content div.section ul.hacks li.hack div.user {
 	clear: both;
 	background-image: url(../images/user.gif);
 	background-position: left top;
@@ -1212,16 +1213,16 @@ div.problems_show div#main div.content div.section ul.answers li.answer div.user
 
 
 
-div.problems_show div#main div.content div.section ul.answers li.correct div.hacker {
+div.problems_show div#main div.content div.section ul.hacks li.correct div.hacker {
 	background-image: url(../images/correct_user.gif);
 }
-div.problems_show div#main div.content div.section ul.answers li.correct div.user {
+div.problems_show div#main div.content div.section ul.hacks li.correct div.user {
 	background-image: url(../images/correct_hacker.gif);
 }
 
 
 
-div.problems_show div#main div.content div.section ul.answers li.answer div.user h4 {
+div.problems_show div#main div.content div.section ul.hacks li.hack div.user h4 {
 	display:block;
 	font-size:12px;
 	font-weight:bold;
@@ -1232,17 +1233,17 @@ div.problems_show div#main div.content div.section ul.answers li.answer div.user
 }
 
 
-div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon {
+div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.icon {
 	float: left;
 	display: block;
 	height: 32px;
 	width: 32px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.icon img {
+div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.icon img {
 	height: 32px;
 	width: 32px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer ul.user li.name {
+div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.name {
 	font-size: 10px;
 	float: right;
 	width: 102px;
@@ -1254,13 +1255,13 @@ div.problems_show div#main div.content div.section ul.answers li.answer ul.user 
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
 }
-div.problems_show div#main div.content div.section ul.answers ul.user li.thanks {
+div.problems_show div#main div.content div.section ul.hacks ul.user li.thanks {
 	clear: both;
 	padding-top: 5px;
 	margin-bottom: -2px;
 }
-div.problems_show div#main div.content div.section ul.answers li.answer .user input,
-div.problems_show div#main div.content div.section ul.answers li.answer .thanks input {
+div.problems_show div#main div.content div.section ul.hacks li.hack .user input,
+div.problems_show div#main div.content div.section ul.hacks li.hack .thanks input {
 	font-size: 11px;
 	clear: both;
 	width: 146px;
@@ -1459,7 +1460,7 @@ color:#006600;
 	font-size: 16px;
 	line-height: 20px;
 }
-#main .content .post #answer_description {
+#main .content .post #hack_description {
 	width: 100%;
 	margin-bottom: 20px;
 	height: 300px;
@@ -1470,14 +1471,14 @@ color:#006600;
 	font-weight: bold;
 	display: block;
 }
-form#new_answer {
+form#new_hack {
 	margin-top: 15px;
 }
 
 
 
 
-div.answers_edit div#main div.content div.section {
+div.hacks_edit div#main div.content div.section {
 	margin-right: 20px;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -1490,6 +1491,12 @@ div.answers_edit div#main div.content div.section {
 	margin-right: 25px;
 	margin-bottom: 1.4em;
 }
+#main .about ol {
+	margin-bottom: 1.4em;
+	list-style-type: decimal;
+	margin-left: 25px;
+	padding-left: 25px;
+}
 #main .about li {
 	margin-bottom: 0.8em;
 }
@@ -1497,6 +1504,11 @@ div.answers_edit div#main div.content div.section {
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 15px;
+}
+#main .about blockquote {
+	margin-bottom: 15px;
+	background-color: #ECE3E3;
+	padding: 10px;
 }
 
 
@@ -1567,17 +1579,16 @@ div#main div.content .performance dd.profile {
 }
 div#main div.content .performance dd.twitter_account {
 	font-weight: bold;
-	line-height: 12px;
 	font-size: 10px;
 	display: block;
 	float: right;
-	width: 61px;
+	width: 64px;
 	padding-right: 10px;
 	background-image: url(../images/twitter_account.gif);
 	background-repeat: no-repeat;
 	background-position: left 1px;
-	padding-left: 14px;
 	padding-bottom: 2px;
+	text-indent: 14px;
 }
 div#main div.content .performance dd.twitter_account a {
 	white-space: -moz-pre-wrap; /* Mozilla */
@@ -1774,8 +1785,8 @@ div.accounts_show div#main div.content div.posted_problems h3 {
 	border-bottom-color: #ec189a;
 	color: #ec189a;
 }
-div.users_show div#main div.content div.posted_answers h3,
-div.accounts_show div#main div.content div.posted_answers h3 {
+div.users_show div#main div.content div.posted_hacks h3,
+div.accounts_show div#main div.content div.posted_hacks h3 {
 	border-bottom-color: #0eba12;
 	color: #0eba12;
 }
@@ -1787,8 +1798,8 @@ div.users_show div#main div.content div.posted_problems li,
 div.accounts_show div#main div.content div.posted_problems li {
 	background-image: url(../images/arrow_pink.gif);
 }
-div.users_show div#main div.content div.posted_answers li,
-div.accounts_show div#main div.content div.posted_answers li {
+div.users_show div#main div.content div.posted_hacks li,
+div.accounts_show div#main div.content div.posted_hacks li {
 	background-image: url(../images/arrow_green.gif);
 }
 

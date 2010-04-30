@@ -25,111 +25,166 @@
       <h1><a href="/">Help me, hackers!</a></h1>
       <div class='nav'>
         <ul>
-          <li><a href="/signup">ユーザー登録</a></li>
-          <li><a href="/login">ログイン</a></li>
+          <li><a href="/login">Twitterでログイン</a></li>
         </ul>
       </div>
-
     </div>
     <div class='problems_show' id='wrapper'>
+
       <div class='nav'>
         <ul>
-          <li><a href="/problems">問題</a></li>
-          <li><a href="/problems/wanted">賞金首</a></li>
-          <li><a href="/problems/unsolved">未解決</a></li>
+          <li><a href="/problems">Hacks</a></li>
+          <li><a href="/problems/wanted">WANTED!</a></li>
+          <li><a href="/problems/unsolved">Unsolved</a></li>
+          <li><a href="/users">Hackers</a></li>
+          <li><a href="/users">Hackees</a></li>
 
-          <li><a href="/users">ユーザー</a></li>
-          <li class='add_problem'><a href="/problems/new">問題依頼</a></li>
+          <li class='add_problem'><a href="/problems/new">問題依頼を依頼する</a></li>
         </ul>
       </div>
       <div id='main'>
         <div id='flash'>
         </div>
-        <div class='problem content programming-quiz free'>
-
+        <div class='problem content class-function-making solved'>
           <div class='main'>
+
             <div class='title'>
-              <div class='good' onclick="$('#problem_4_vote_form').toggle()">
+              <div class='good' onclick="$('#problem_3_vote_form').toggle()">
                 <ul>
-                  <li class='count' id='problem_4_good'>0</li>
+                  <li class='count' id='problem_3_good'>0</li>
                 </ul>
               </div>
-              <h2>テストtestテスト</h2>
+              <h2>1日前などの時間表記</h2>
+              <form action="/votes" class="new_vote" id="problem_3_vote_form" method="post" onsubmit="return vote(this, '#problem_3_good');" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
 
-              <form action="/votes" class="new_vote" id="problem_4_vote_form" method="post" onsubmit="return vote(this, '#problem_4_good');" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
                 <div class='text'>
-                  <input id="problem_4_voteable_id" name="vote[voteable_id]" type="hidden" value="4" />
-                  <input id="problem_4_voteable_type" name="vote[voteable_type]" type="hidden" value="Problem" />
-                  <input id="problem_4_comment" name="vote[comment]" size="30" type="text" value="Good! RT @machida テストtestテスト http://bit.ly/9EYaXl #helpmehackers" />
+                  <input id="problem_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
+                  <input id="problem_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Problem" />
+                  <input id="problem_3_comment" name="vote[comment]" size="30" type="text" value="Good! RT @komagata_fjord 1日前などの時間表記 http://bit.ly/dyCYvV #helpmehackers" />
                 </div>
                 <div class='button'><a href="/login">Retweet</a></div>
                 <p class='center'>Retweetをすることで、この質問にGood!ポイントが加算されます</p>
-
               </form>
+
             </div>
             <dl class='information'>
-              <dd class='licence'><a href="/about/license#cc-attribution-non-commercial-no-derivatives">Creative Commons — 表示-非営利-改変禁止</a></dd>
+              <dd class='licence'><a href="/about/license#bsd">BSD LICENSE</a></dd>
               <dt class='licence'>ライセンス</dt>
             </dl>
             <div class='description'>
-              <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+              <p>現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。</p>
 
               
-              <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
-              
-              <p>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+              <p>英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。</p>
             </div>
             <ul class='tags'>
-              <li class='tag'><a href="/problems/tag/%E3%83%86%E3%82%B9%E3%83%88">テスト</a></li>
-              <li class='tag'><a href="/problems/tag/test">test</a></li>
+              <li class='tag'><a href="/problems/tag/ruby">ruby</a></li>
+              <li class='tag'><a href="/problems/tag/rails">rails</a></li>
             </ul>
-
           </div>
+
           <div class='sub'>
             <div class='information'>
               <dl>
                 <dt class='language'>プログラム言語</dt>
-                <dd class='language'><a href="/problems/tag/common-lisp">Common Lisp</a></dd>
+                <dd class='language'><a href="/problems/tag/ruby">Ruby</a></dd>
                 <dt class='category'>問題カテゴリー</dt>
+                <dd class='category class-function-making'>
 
-                <dd class='category programming-quiz'>
-                  <a href="/problems/category/programming-quiz">プログラミングクイズ</a>
+                  <a href="/problems/category/class-function-making">クラス・関数作成</a>
                 </dd>
                 <dt class='bounty'>報酬</dt>
                 <dd class='bounty'>
-                  <span>0円</span>
+                  <span>1,230円</span>
                 </dd>
-
               </dl>
+
               <ul class='retweet'>
                 <li class='count'>0</li>
                 <li class='label'>retweet</li>
               </ul>
-              <ul class='answer'>
-                <li class='count'>0</li>
-
+              <ul class='hack'>
+                <li class='count'>1</li>
                 <li class='label'>回答</li>
+
               </ul>
               <div class='person'>
                 <h4>出題者</h4>
                 <ul>
-                  <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
-                  <li class='name'><a href="/machida">machida</a></li>
-
+                  <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
+                  <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                 </ul>
               </div>
-              <div class='created_at'>27分前</div>
+
+              <div class='created_at'>16分前</div>
             </div>
+          </div>
+          <div class='section'>
+            <h3>Hacks</h3>
+            <ul class='hacks'>
+              <li class='hack correct' id='hack-3'>
+                <div class='hacker'>
+
+                  <div class='good' onclick="$('#hack_3_vote_form').toggle()">
+                    <ul class='good'>
+                      <li class='count' id='hack_3_good'>0</li>
+                      <li class='label'>Good</li>
+                    </ul>
+                  </div>
+                  <div class='user'>
+                    <h4>回答者</h4>
+
+                    <ul class='user'>
+                      <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
+                      <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
+                      <li class='thanks'>
+                        <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+                          <input name='cmd' type='hidden' value='_donations' />
+                          <input name='business' type='hidden' value='komagata+spam@fjord.jp' />
+                          <input name='lc' type='hidden' value='JP' />
+
+                          <input name='currency_code' type='hidden' value='JPY' />
+                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 3' />
+                          <input name='item_number' type='hidden' value='3' />
+                          <input name='amount' type='hidden' value='1230' />
+                          <input name='button_subtype' type='hidden' value='services' />
+                          <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
+                          <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='/images/paypal_button.gif' type='image' />
+                          <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
+                        </form>
+
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <form action="/votes" class="new_vote" id="hack_3_vote_form" method="post" onsubmit="return vote(this, '.hack ul.good li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+                  <div class='text'>
+                    <input id="hack_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
+                    <input id="hack_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Hack" />
+                    <input id="hack_3_comment" name="vote[comment]" size="30" type="text" value="Good! RT @michael_fjord ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思いま... http://bit.ly/dyCYvV #helpmehackers" />
+
+                  </div>
+                  <div class='button'><a href="/login">Retweet</a></div>
+                  <p class='center'>Retweetをすることで、この質問にGood!ポイントが加算されます</p>
+                </form>
+                <div class='description'>
+                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
+                  
+                  <p>「前」というのを追加する必要がありますが。</p>
+
+                </div>
+              </li>
+            </ul>
           </div>
           
           <div class='section post'>
-            <h3>回答する</h3>
+            <h3>Hackする</h3>
             <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
 
-            <form action="/answers" class="new_answer" id="new_answer" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+            <form action="/hacks" class="new_hack" id="new_hack" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
             
-              <input id="answer_problem_id" name="answer[problem_id]" type="hidden" value="4" />
-              <textarea cols="70" id="answer_description" name="answer[description]" rows="10"></textarea>
+              <input id="hack_problem_id" name="hack[problem_id]" type="hidden" value="3" />
+              <textarea cols="70" id="hack_description" name="hack[description]" rows="10"></textarea>
               <h4>プレビュー</h4>
               <div class='wrapper'>
                 <script type='text/javascript'>
@@ -143,7 +198,7 @@
 
               </div>
               <p>
-                <input id="answer_submit" name="commit" type="submit" value="利用規約に同意して回答する" />
+                <input id="hack_submit" name="commit" type="submit" value="利用規約に同意して回答する" />
                 <a href="/about/terms" target="_blank">利用規約</a>
               </p>
             </form>
@@ -209,12 +264,13 @@
 
     <div id='footer'>
       <ul class='links'>
+        <li><a href="/about">使い方</a></li>
         <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
         <li><a href="http://fjord.jp/">運営会社</a></li>
         <li><a href="/about/terms">利用規約</a></li>
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
-      </ul>
 
+      </ul>
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>.</p>
     </div>
     <script src="/javascripts/wmd/wmd.js?1272570436" type="text/javascript"></script>
