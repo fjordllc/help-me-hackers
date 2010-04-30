@@ -300,6 +300,15 @@ div.about_index div#main div.content ol li {
 div.about_index div#main div.content ol li.about_01 {
 	background-image: url(../images/about_ol_01.jpg);
 }
+div.about_index div#main div.content ol li.about_02 {
+	background-image: url(../images/about_ol_02.jpg);
+}
+div.about_index div#main div.content ol li.about_03 {
+	background-image: url(../images/about_ol_03.jpg);
+}
+div.about_index div#main div.content ol li.about_04 {
+	background-image: url(../images/about_ol_04.jpg);
+}
 
 
 div.top_index div#main div.binding a {
@@ -1289,6 +1298,7 @@ div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.i
 	display: block;
 	height: 32px;
 	width: 32px;
+	margin-bottom: 8px;
 }
 div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.icon img {
 	height: 32px;
@@ -1308,7 +1318,6 @@ div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.n
 }
 div.problems_show div#main div.content div.section ul.hacks ul.user li.thanks {
 	clear: both;
-	padding-top: 5px;
 	margin-bottom: -2px;
 }
 div.problems_show div#main div.content div.section ul.hacks li.hack .user input,
