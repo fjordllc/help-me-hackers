@@ -1,5 +1,6 @@
-.content
+.title
   %h2= "#{@user.login}のダッシュボード"
+.content
   %h3 投稿した問題
   - if @user.problems.count.zero?
     %p= t('label.nothing_posted_problems')
