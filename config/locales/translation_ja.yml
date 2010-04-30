@@ -97,6 +97,8 @@ ja:
     nothing_watching_problems: "ウォッチしている問題はありません"
 
     category:
+      iphone-app-making: "iPhoneアプリ作成"
+      android-app-making: "Androidアプリ作成"
       software-making: "ソフトウェア作成"
       library-making: "ライブラリ作成"
       class-function-making: "クラス・関数作成"

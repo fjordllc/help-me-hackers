@@ -1,43 +1,51 @@
 category_1:
   id: 1
-  name: "software-making"
+  name: "iphone-app-making"
 
 category_2:
   id: 2
-  name: "library-making"
+  name: "android-app-making"
 
 category_3:
   id: 3
-  name: "class-function-making"
+  name: "software-making"
 
 category_4:
   id: 4
-  name: "plugin-making"
+  name: "library-making"
 
 category_5:
   id: 5
-  name: "prototype-making"
+  name: "class-function-making"
 
 category_6:
   id: 6
-  name: "debugging"
+  name: "plugin-making"
 
 category_7:
   id: 7
-  name: "technology-study"
+  name: "prototype-making"
 
 category_8:
   id: 8
-  name: "software-multilingualization"
+  name: "debugging"
 
 category_9:
   id: 9
-  name: "document-translation"
+  name: "technology-study"
 
 category_10:
   id: 10
-  name: "data-collection-and-making"
+  name: "software-multilingualization"
 
 category_11:
   id: 11
+  name: "document-translation"
+
+category_12:
+  id: 12
+  name: "data-collection-and-making"
+
+category_13:
+  id: 13
   name: "programming-quiz"
