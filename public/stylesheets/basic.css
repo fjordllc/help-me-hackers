@@ -1667,8 +1667,9 @@ div#main div.content .performance dd.profile {
 	font-size: 10px;
 	display: block;
 	float: right;
-	width: 85px;
+	width: 78px;
 	padding-bottom: 8px;
+	padding-right: 8px;
 }
 div#main div.content .performance dd.twitter_account {
 	font-weight: bold;
@@ -1683,7 +1684,8 @@ div#main div.content .performance dd.twitter_account {
 	padding-bottom: 2px;
 	text-indent: 14px;
 }
-div#main div.content .performance dd.twitter_account a {
+div#main div.content .performance dd.twitter_account a,
+div#main div.content .performance dd.profile a {
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
 	white-space: -o-pre-wrap; /* Opera 7 */
