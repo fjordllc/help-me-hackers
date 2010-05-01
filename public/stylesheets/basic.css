@@ -1646,6 +1646,7 @@ div#main div.content .performance dd.icon {
 	padding-left: 10px;
 	float: left;
 	width: 58px;
+	padding-bottom: 5px;
 }
 div#main div.content .performance dd.icon a img {
 	height: 48px;
