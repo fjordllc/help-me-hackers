@@ -1937,13 +1937,14 @@ div.accounts_show div#main div.content div.list p {
 	font-weight: bold;
 	text-align: center;
 	display: block;
-	padding-top: 25px;
-	padding-bottom: 45px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	background-image: url(../images/user_list_ul.gif);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	padding-right: 10px;
 	padding-left: 10px;
+	margin-bottom: 0px;
 }
 
 div#main div.content div.main dl.information {
