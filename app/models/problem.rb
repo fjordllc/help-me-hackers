@@ -30,7 +30,7 @@ class Problem < ActiveRecord::Base
 
   def correct_hack
     Hack.find(:first,
-      :conditions => ['problem_id = ? AND correct = TRUE', id])
+      :conditions => ['problem_id = ? AND correct = ?', id, true])
   end
 
   def solver

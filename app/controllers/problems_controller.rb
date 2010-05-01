@@ -2,7 +2,7 @@ class ProblemsController < ApplicationController
   before_filter :find_problem
   before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy, :tweet]
   PROBLEMS_PER_PAGE = 20
-  ANSWERS_PER_PAGE = 20
+  HACKS_PER_PAGE = 20
 
   def index
     options = {:page => params[:page],
@@ -23,14 +23,6 @@ class ProblemsController < ApplicationController
     @problems = Problem.paginate(options)
   end
 
-  # POST
-  def tweet
-    comment = params[:problem][:comment] ? ' ' + params[:problem][:comment] : ''
-    current_user.tweet("@#{@problem.user.login}#{comment}", problem_url(@problem))
-    flash[:notice] = 'ReTweetしました。'
-    redirect_to @problem
-  end
-
   def wanted
     @problems = Problem.paginate(
       :page => params[:page],
@@ -43,13 +35,13 @@ class ProblemsController < ApplicationController
     @problems = Problem.paginate(
       :page => params[:page],
       :per_page => PROBLEMS_PER_PAGE,
-      :conditions => ['hacks.correct = ?', false],
-      :joins => [:hacks],
-      :order => 'id DESC')
+      :conditions => ['hacks.correct = ? OR hacks.correct IS NULL', false],
+      :joins => 'LEFT JOIN hacks ON problems.id = hacks.problem_id',
+      :order => 'problems.id DESC')
   end
 
   def show
-    @hacks = @problem.hacks.by_correct(:desc).paginate(:page => params[:page], :per_page => ANSWERS_PER_PAGE)
+    @hacks = @problem.hacks.by_correct(:desc).paginate(:page => params[:page], :per_page => HACKS_PER_PAGE)
     @hack = Hack.new(:problem_id => @problem.id)
     Problem.increment_view_by_id(@problem.id)
   end

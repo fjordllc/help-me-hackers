@@ -3,3 +3,4 @@ db/schema.rb
 **/.Thumbs.db
 config/database.yml
 config/twitter_auth.yml
+config/newrelic.yml

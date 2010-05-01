@@ -24,7 +24,6 @@ Rails::Initializer.run do |config|
   config.gem 'haml', :version => '2.2.22'
   config.gem 'paperclip', :version => '2.3.1.1'
   config.gem 'pacecar', :version => '1.2.0'
-  config.gem 'exception_notification', :version => '2.3.3.0'
   config.gem 'remarkable_rails', :version => '3.1.13', :lib => false
   config.gem 'rspec', :version => '1.3.0', :lib => false
   config.gem 'rspec-rails', :version => '1.3.2', :lib => false
@@ -36,6 +35,7 @@ Rails::Initializer.run do |config|
   config.gem 'bluecloth', :version => '2.0.7'
   config.gem 'yaml_waml', :version => '0.3.0'
   config.gem 'will_paginate', :version => '2.3.12'
+  config.gem 'hoptoad_notifier'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
