@@ -5,15 +5,12 @@ class User < TwitterAuth::GenericUser
   has_many :hacks
 
   def prize
-    p = ActiveRecord::Base.connection.select_values(
-      "select sum(problems.bounty) as prize
-       from hacks 
-         join users on hacks.user_id = users.id 
-         join problems on hacks.problem_id = problems.id 
-       where hacks.correct = true and users.id = #{self.id} 
-       group by problems.id limit 1", :prize
-    )
-    p.empty? ? 0 : p.first.to_i
+    p = Hack.find(:first,
+              :select => 'sum(problems.bounty)',
+              :joins => [:user, :problem],
+              :conditions => ['hacks.correct = ? AND users.id = ?', true, id],
+              :group => 'problems.id')
+    p.present? ? p.first : 0
   end
 
   def vote

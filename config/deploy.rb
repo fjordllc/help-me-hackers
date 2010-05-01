@@ -16,10 +16,11 @@ namespace :deploy do
 
   desc "make symlink to config file"
   task :symlink_config, :roles => :app, :except => {:no_release => true} do
-    run "ln -s #{deploy_to}/shared/database.yml #{current_path}/config/database.yml"
-    run "ln -s #{deploy_to}/shared/twitter_auth.yml #{current_path}/config/twitter_auth.yml"
+    run "ln -s #{deploy_to}/shared/database.yml #{release_path}/config/database.yml"
+    run "ln -s #{deploy_to}/shared/twitter_auth.yml #{release_path}/config/twitter_auth.yml"
+    run "ln -s #{deploy_to}/shared/newrelic.yml #{release_path}/config/newrelic.yml"
   end
-  after 'deploy:symlink', 'deploy:symlink_config'
+  after 'deploy:finalize_update', 'deploy:symlink_config'
 end
 
 after :deploy, 'deploy:cleanup'
