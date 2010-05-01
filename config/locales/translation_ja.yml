@@ -92,8 +92,8 @@ ja:
     please-select: "選択して下さい"
     favorite-language: "好きなプログラム言語"
 
-    nothing_posted_problems: "投稿した問題はありません"
-    nothing_posted_answers: "投稿した回答はありません"
+    nothing_posted_hacks: "解決実績がありません"
+    nothing_posted_problems: "依頼実績がありません"
     nothing_watching_problems: "ウォッチしている問題はありません"
 
     category:
