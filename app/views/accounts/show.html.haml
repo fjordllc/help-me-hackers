@@ -22,5 +22,5 @@
       %h3 ウォッチしている問題
       %p= t('label.nothing_watching_problems')
   %ul.loggedin
-    %li.edit= link_to 'プロフィールを編集する', edit_account_path
+    %li.edit= link_to 'アカウント情報を編集する', edit_account_path
     %li.delete= link_to '会員情報を削除する', account_path, :confirm => '本当に退会してよろしいですか？', :method => :delete
