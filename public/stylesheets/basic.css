@@ -2123,4 +2123,5 @@ div.problems_create #main div.content div.section div.label span {
 }
 .pagination {
 	clear: both;
+	padding-top: 40px;
 }
