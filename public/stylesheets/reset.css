@@ -134,7 +134,7 @@ font-weight:bold;
    
  input, select, textarea{  
  font-size:100%;  
- font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,"ヒラギノ丸ゴ Pro W4",HiraMaruPro-W4,"ヒラギノ角ゴ Pro W3",HiraKakuPro-W3,Osaka,sans-serif ;  
+ font-family: "Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,'メイリオ',"ヒラギノ丸ゴ Pro W4",HiraMaruPro-W4,"ヒラギノ角ゴ Pro W3",HiraKakuPro-W3,Osaka,sans-serif ;  
  }  
    
  ol, ul {  
