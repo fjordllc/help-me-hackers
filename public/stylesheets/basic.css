@@ -2121,3 +2121,6 @@ div.problems_create #main div.content div.section div.label span {
 #problem_tag_list {
 	width: 600px;
 }
+.pagination {
+	clear: both;
+}
