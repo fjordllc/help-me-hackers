@@ -13,10 +13,6 @@
         = f.check_box :hackee
         %p.description ハッキー（問題依頼者）として利用する場合チェック
       %div.section
-        = f.label :description
-        %br
-        = f.text_area :description, :size => '40x4'
-      %div.section
         = f.label :state
         %br
         = select_by_model @user, :state_id
@@ -24,10 +20,6 @@
         = "#{f.label:email}（Paypalで報酬を受け取るには公開する必要があります）"
         %br
         = f.text_field :email
-      %div.section
-        = f.label :url
-        %br
-        = f.text_field :url
       %div.section
         = f.label :company
         %br
