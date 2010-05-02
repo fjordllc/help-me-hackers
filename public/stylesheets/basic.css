@@ -1210,6 +1210,12 @@ div.problems_show div#main div.description ul,
 	list-style-position: outside;
 	list-style-type: disc;
 }
+div.problems_show div#main div.description li ul,
+#main div.content div.wmd-preview li ul,
+div.problems_show div#main div.description li ol,
+#main div.content div.wmd-preview li ol {
+	padding-top: 20px;
+}
 div.problems_show div#main div.description ol,
 #main div.content div.wmd-preview ol
  {
@@ -1408,7 +1414,7 @@ div#main div.content ul.loggedin li.delete a:active {
 
 div.problems_show div#main div.content h3 {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 div.problems_show div#main div.content h3 {
 	font-size: 18px;
@@ -1429,8 +1435,7 @@ div.problems_show div#main div.content div.post h3 {
 	border-left-color: #B9B9B9;
 }
 .problems_new #main div.content div.post,
-.problems_create #main div.content div.post,
-.accounts_edit #main div.content div.post {
+.problems_create #main div.content div.post {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -2115,4 +2120,8 @@ div.problems_create #main div.content div.section div.label span {
 #problem_title,
 #problem_tag_list {
 	width: 600px;
+}
+.pagination {
+	clear: both;
+	padding-top: 40px;
 }
