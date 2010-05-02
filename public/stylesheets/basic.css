@@ -949,7 +949,7 @@ div#main .technology-study div.information dd.category a {
 
 
 div#main .problem div.information dd.bounty {
-	margin-top: 8px;
+	margin-top: 10px;
 	font-weight: bold;
 	color: #EC189E;
 	line-height: 27px;
@@ -1423,13 +1423,14 @@ div.problems_show div#main div.content div.post h3 {
 	border-bottom-color: #B9B9B9;
 	border-left-color: #B9B9B9;
 }
-.problems_new #main div.content div.section,
-.problems_create #main div.content div.section,
-.accounts_edit #main div.content div.section {
+.problems_new #main div.content div.post,
+.problems_create #main div.content div.post,
+.accounts_edit #main div.content div.post {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
+	margin-top: -20px;
 }
 
 
@@ -2084,7 +2085,7 @@ div#errorExplanation ul {
 	padding-top: 15px;
 }
 div.fieldWithErrors {
-	display: inline !important;
+	display: inline-block !important;
 }
 divfieldWithErrors p {
 	display: none !important;
@@ -2101,8 +2102,12 @@ divfieldWithErrors p {
 	border-top-style: none !important;
 }
 div.problems_create #main div.content div.section div.label span {
-	float: left;
+	display: inline;
 }
 .empty {
 	padding-top: 15px;
+}
+#problem_title,
+#problem_tag_list {
+	width: 600px;
 }
