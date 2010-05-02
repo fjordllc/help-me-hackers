@@ -949,7 +949,7 @@ div#main .technology-study div.information dd.category a {
 
 
 div#main .problem div.information dd.bounty {
-	margin-top: 8px;
+	margin-top: 10px;
 	font-weight: bold;
 	color: #EC189E;
 	line-height: 27px;
@@ -1423,13 +1423,14 @@ div.problems_show div#main div.content div.post h3 {
 	border-bottom-color: #B9B9B9;
 	border-left-color: #B9B9B9;
 }
-.problems_new #main div.content div.section,
-.problems_create #main div.content div.section,
-.accounts_edit #main div.content div.section {
+.problems_new #main div.content div.post,
+.problems_create #main div.content div.post,
+.accounts_edit #main div.content div.post {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
+	margin-top: -20px;
 }
 
 
@@ -1646,6 +1647,7 @@ div#main div.content .performance dd.icon {
 	padding-left: 10px;
 	float: left;
 	width: 58px;
+	padding-bottom: 5px;
 }
 div#main div.content .performance dd.icon a img {
 	height: 48px;
@@ -1936,13 +1938,14 @@ div.accounts_show div#main div.content div.list p {
 	font-weight: bold;
 	text-align: center;
 	display: block;
-	padding-top: 25px;
-	padding-bottom: 45px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	background-image: url(../images/user_list_ul.gif);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	padding-right: 10px;
 	padding-left: 10px;
+	margin-bottom: 0px;
 }
 
 div#main div.content div.main dl.information {
@@ -2082,7 +2085,7 @@ div#errorExplanation ul {
 	padding-top: 15px;
 }
 div.fieldWithErrors {
-	display: inline !important;
+	display: inline-block !important;
 }
 divfieldWithErrors p {
 	display: none !important;
@@ -2099,8 +2102,12 @@ divfieldWithErrors p {
 	border-top-style: none !important;
 }
 div.problems_create #main div.content div.section div.label span {
-	float: left;
+	display: inline;
 }
 .empty {
 	padding-top: 15px;
+}
+#problem_title,
+#problem_tag_list {
+	width: 600px;
 }
