@@ -11,7 +11,7 @@
           %ul
             %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
             %li.name=link_to object.solver.login, user_path(object.solver)
-      .description~markdown object.description
+      .description~ truncate(strip_tags(markdown object.description), :length => 150)
       %ul.tags
         - object.tags.each do |tag|
           %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)

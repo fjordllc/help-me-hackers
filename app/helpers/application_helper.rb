@@ -113,6 +113,10 @@ module ApplicationHelper
     option
   end
 
+  def strip_tags(str)
+    ActionView::Base.full_sanitizer.sanitize(str)
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]
