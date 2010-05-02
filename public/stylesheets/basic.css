@@ -1210,6 +1210,12 @@ div.problems_show div#main div.description ul,
 	list-style-position: outside;
 	list-style-type: disc;
 }
+div.problems_show div#main div.description li ul,
+#main div.content div.wmd-preview li ul,
+div.problems_show div#main div.description li ol,
+#main div.content div.wmd-preview li ol {
+	padding-top: 20px;
+}
 div.problems_show div#main div.description ol,
 #main div.content div.wmd-preview ol
  {
@@ -1408,7 +1414,7 @@ div#main div.content ul.loggedin li.delete a:active {
 
 div.problems_show div#main div.content h3 {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 div.problems_show div#main div.content h3 {
 	font-size: 18px;
