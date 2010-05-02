@@ -37,7 +37,7 @@
         %dt.category 問題カテゴリー
         %dd.category{:class => @problem.category.name}
           = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
-        %dt.bounty 報酬
+        %dt.bounty 報奨金
         %dd.bounty
           %span= number_to_currency @problem.bounty
       %ul.retweet
@@ -47,7 +47,7 @@
         %li.count= @problem.hacks.size
         %li.label 回答
       .person
-        %h4 出題者
+        %h4 Hackee
         %ul
           %li.icon=link_to image_tag(@problem.user.profile_image_url), user_path(@problem.user)
           %li.name=link_to @problem.user.login, user_path(@problem.user)
