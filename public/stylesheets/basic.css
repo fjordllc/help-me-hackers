@@ -1435,8 +1435,7 @@ div.problems_show div#main div.content div.post h3 {
 	border-left-color: #B9B9B9;
 }
 .problems_new #main div.content div.post,
-.problems_create #main div.content div.post,
-.accounts_edit #main div.content div.post {
+.problems_create #main div.content div.post {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
