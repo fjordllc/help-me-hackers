@@ -26,8 +26,8 @@
       <div class='nav'>
         <ul>
           <li>
-            <a href="/problems/1"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
-            <a href="/dashboard">machida(0)</a>
+            <a href="/problems/5"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/dashboard">machida(2)</a>
           </li>
           <li><a href="/account/edit">アカウント</a></li>
 
@@ -42,8 +42,8 @@
 
           <li><a href="/problems/wanted">WANTED!</a></li>
           <li><a href="/problems/unsolved">Unsolved</a></li>
-          <li><a href="/users">Hackers</a></li>
-          <li><a href="/users">Hackees</a></li>
+          <li><a href="/users/hacker">Hackers</a></li>
+          <li><a href="/users/hackee">Hackees</a></li>
           <li class='add_problem'><a href="/problems/new">問題依頼を依頼する</a></li>
         </ul>
 
@@ -51,152 +51,153 @@
       <div id='main'>
         <div id='flash'>
         </div>
-        <div class='problem content library-making'>
+        <div class='problem content plugin-making'>
           <div class='main'>
             <div class='title'>
-              <div class='good' onclick="$('#problem_1_vote_form').toggle()">
+              <div class='good tweeted'>
                 <ul>
 
-                  <li class='count' id='problem_1_good'>0</li>
+                  <li class='count' id='problem_5_good'>2</li>
                 </ul>
               </div>
-              <h2>Pythonのhamlライブラリ</h2>
-              <form action="/votes" class="new_vote" id="problem_1_vote_form" method="post" onsubmit="return vote(this, '#problem_1_good');" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
+              <h2>wordpressの定番プラグイン「Breadcrumb NavXT」 の改良</h2>
+              <form action="/votes" class="new_vote" id="problem_5_vote_form" method="post" onsubmit="return vote(this, '#problem_5_good');" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="RR54prGYEVYaJhTl21ecS07wlJYRAewNgVcFqX8uAy0=" /></div>
                 <div class='text'>
-                  <input id="problem_1_voteable_id" name="vote[voteable_id]" type="hidden" value="1" />
-                  <input id="problem_1_voteable_type" name="vote[voteable_type]" type="hidden" value="Problem" />
+                  <input id="problem_5_voteable_id" name="vote[voteable_id]" type="hidden" value="5" />
+                  <input id="problem_5_voteable_type" name="vote[voteable_type]" type="hidden" value="Problem" />
 
-                  <input id="problem_1_comment" name="vote[comment]" size="30" type="text" value="Good! RT @komagata_fjord Pythonのhamlライブラリ http://bit.ly/bvFIzt #helpmehackers" />
+                  <input id="problem_5_comment" name="vote[comment]" size="30" type="text" value="Good! RT @machida wordpressの定番プラグイン「Breadcrumb NavXT」 の改良 http://bit.ly/9gPvWS #helpmehackers" />
                 </div>
-                <div class='button'><input src="/images/good_button.gif?1272615246" type="image" /></div>
+                <div class='button'><input src="/images/good_button.gif?1272791971" type="image" /></div>
                 <p class='center'>Retweetをすることで、この質問にGood!ポイントが加算されます</p>
               </form>
             </div>
             <dl class='information'>
-              <dd class='licence'><a href="/about/license#bsd">BSD LICENSE</a></dd>
+              <dd class='licence'><a href="/about/license#gpl2">GPLv2</a></dd>
 
               <dt class='licence'>ライセンス</dt>
             </dl>
-            <div class='description'><p>Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。 Pure Pythonで！</p></div>
-            <ul class='tags'>
-              <li class='tag'><a href="/problems/tag/python">python</a></li>
-              <li class='tag'><a href="/problems/tag/haml">haml</a></li>
-            </ul>
+            <div class='description'>
+              <h3>問題点</h3>
+              
+              
+              
+              
+              <ol>
+              <li>Breadcrumb NavXTには表示させる文字数を制限する機能が付いているが、その機能がマルチバイトに対応していない為、文字化けしてしまう。</li>
+              <li>Breadcrumb NavXTが出力するhtmlがあまり好きではない。</li>
 
+              </ol>
+              
+              
+              
+              
+              <h3>改良していただきたいこと。</h3>
+              
+              
+              <ol>
+              <li>Breadcrumb NavXTには表示させる文字数を制限したときの文字化の解消。</li>
+              <li>Breadcrumb NavXTの吐き出すHTMLの改良</li>
+              </ol>
+              
+              
+              
+              
+              <h3>Breadcrumb NavXTの吐き出すHTMLの改良について</h3>
+
+              
+              
+              <pre><code>&lt;!-- Breadcrumb NavXT 3.4.1 --&gt;&#x000A;&lt;a href="http://fjord.jp" title="homeへ"&gt;home&lt;/a&gt;»&lt;a href="http://fjord.jp/category/love" title="blogのトップページ"&gt;blog&lt;/a&gt;»&lt;span class="carrent"&gt;2010年4月20日、初台に引越し…&lt;/span&gt;&#x000A;</code></pre>
+              
+              <p>…なのですが、これを</p>
+
+              
+              
+              <pre><code>&lt;!-- Breadcrumb NavXT 3.4.1 --&gt;&#x000A;&lt;ol&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp" title="homeへ"&gt;home&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp/category/love" title="blogのトップページ"&gt;blog&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li class="carrent"&gt;2010年4月20日、初台に引越し…&lt;/li&gt;&#x000A;&lt;/ol&gt;&#x000A;</code></pre>
+
+              
+              <p>もしくは、</p>
+              
+              
+              <pre><code>&lt;!-- Breadcrumb NavXT 3.4.1 --&gt;&#x000A;&lt;ol&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp" title="homeへ"&gt;home&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp/category/love" title="blogのトップページ"&gt;blog&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li&gt;&lt;span class="carrent"&gt;2010年4月20日、初台に引越し…&lt;/span&gt;&lt;/li&gt;&#x000A;&lt;/ol&gt;&#x000A;</code></pre>
+
+              
+              <p>と、表示させられるようにしていただきたいです。</p>
+              
+              
+              
+              
+              <p>また、この矢印は、</p>
+              
+              
+              <pre><code>»&#x000A;</code></pre>
+              
+              <p>Breadcrumb NavXTで表示、非表示が出来る機能がついているのですが、その機能は改良後も使えるようにしていただきたいです。</p>
+              
+              
+              
+              
+              <p>ハッカーの皆さま、宜しくお願いします。</p>
+            </div>
+
+            <ul class='tags'>
+              <li class='tag'><a href="/problems/tag/wordpress">wordpress</a></li>
+              <li class='tag'><a href="/problems/tag/php">php</a></li>
+              <li class='tag'><a href="/problems/tag/plugin">plugin</a></li>
+              <li class='tag'><a href="/problems/tag/bread">bread</a></li>
+              <li class='tag'><a href="/problems/tag/breadcrumb-navxt">breadcrumb-navxt</a></li>
+
+            </ul>
+            <ul class='loggedin'>
+              <li class='edit'><a href="/problems/5/edit">この質問を編集</a></li>
+              <li class='delete'><a href="/problems/5" onclick="if (confirm('本当に削除してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'RR54prGYEVYaJhTl21ecS07wlJYRAewNgVcFqX8uAy0='); f.appendChild(s);f.submit(); };return false;">この質問を削除</a></li>
+            </ul>
           </div>
           <div class='sub'>
             <div class='information'>
+
               <dl>
                 <dt class='language'>プログラム言語</dt>
-                <dd class='language'><a href="/problems/tag/javascript">JavaScript</a></dd>
+                <dd class='language'><a href="/problems/tag/php">PHP</a></dd>
                 <dt class='category'>問題カテゴリー</dt>
-
-                <dd class='category library-making'>
-                  <a href="/problems/category/library-making">ライブラリ作成</a>
+                <dd class='category plugin-making'>
+                  <a href="/problems/category/plugin-making">プラグイン作成</a>
                 </dd>
-                <dt class='bounty'>報酬</dt>
+
+                <dt class='bounty'>報奨金</dt>
                 <dd class='bounty'>
-                  <span>5,000円</span>
+                  <span>1,000円</span>
                 </dd>
-
               </dl>
               <ul class='retweet'>
-                <li class='count'>0</li>
+                <li class='count'>2</li>
+
                 <li class='label'>retweet</li>
               </ul>
               <ul class='hack'>
-                <li class='count'>1</li>
-
+                <li class='count'>0</li>
                 <li class='label'>回答</li>
               </ul>
               <div class='person'>
-                <h4>出題者</h4>
-                <ul>
-                  <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                  <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
 
+                <h4>Hackee</h4>
+                <ul>
+                  <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
+                  <li class='name'><a href="/machida">machida</a></li>
                 </ul>
               </div>
-              <div class='created_at'>約4時間前</div>
+              <div class='created_at'>約1時間前</div>
+
             </div>
-          </div>
-          <div class='section'>
-            <h3>Hacks</h3>
-            <ul class='hacks'>
-
-              <li class='hack' id='hack-1'>
-                <div class='hacker'>
-                  <div class='good' onclick="$('#hack_1_vote_form').toggle()">
-                    <ul class='good'>
-                      <li class='count' id='hack_1_good'>0</li>
-                      <li class='label'>Good</li>
-                    </ul>
-                  </div>
-
-                  <div class='user'>
-                    <h4>Hacker</h4>
-                    <ul class='user'>
-                      <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                      <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                      <li class='correct'>
-                        <form action="/hacks/1" class="edit_hack" id="edit_hack_1" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
-                          <input id="hack_correct" name="hack[correct]" type="hidden" value="true" />
-
-                          <input src="/images/choice_button.gif" type="image" />
-                        </form>
-                      </li>
-                      <li class='thanks'>
-                        <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-                          <input name='cmd' type='hidden' value='_donations' />
-                          <input name='business' type='hidden' value='komagata@fjord.jp' />
-                          <input name='lc' type='hidden' value='JP' />
-                          <input name='currency_code' type='hidden' value='JPY' />
-
-                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Problem ID: 1' />
-                          <input name='item_number' type='hidden' value='1' />
-                          <input name='amount' type='hidden' value='5000' />
-                          <input name='button_subtype' type='hidden' value='services' />
-                          <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
-                          <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='/images/paypal_button.gif' type='image' />
-                          <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
-                        </form>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-                <form action="/votes" class="new_vote" id="hack_1_vote_form" method="post" onsubmit="return vote(this, '.hack ul.good li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
-                  <div class='text'>
-                    <input id="hack_1_voteable_id" name="vote[voteable_id]" type="hidden" value="1" />
-                    <input id="hack_1_voteable_type" name="vote[voteable_type]" type="hidden" value="Hack" />
-                    <input id="hack_1_comment" name="vote[comment]" size="30" type="text" value="Good! RT @komagata_fjord [GHRML](http://www.ghrml.org/)じゃ駄目ですか？
-                  
-                        %html
-                        ... http://bit.ly/bvFIzt #helpmehackers" />
-                  </div>
-
-                  <div class='button'><input src="/images/good_button.gif?1272615246" type="image" /></div>
-                  <p class='center'>Retweetをすることで、この質問にGood!ポイントが加算されます</p>
-                </form>
-                <div class='description'>
-                  <p><a href="http://www.ghrml.org/">GHRML</a>じゃ駄目ですか？</p>
-                  
-                  <pre><code>%html&#x000A;  %head&#x000A;    %title Hello World&#x000A;    %style{'type': 'text/css'}&#x000A;      body { font-family: sans-serif; }&#x000A;    %script{'type': 'text/javascript', 'src': 'foo.js'}&#x000A;  %body&#x000A;    #header&#x000A;      %h1 Hello World&#x000A;    %ul.navigation&#x000A;      %li[for item in navigation]&#x000A;        %a{'href': item.href} $item.caption&#x000A;     #contents&#x000A;      Hello World!&#x000A;</code></pre>
-
-                  
-                  <p>こう書けるよ。</p>
-                </div>
-              </li>
-            </ul>
           </div>
           
           <div class='section post'>
             <h3>Hackする</h3>
             <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
+            <form action="/hacks" class="new_hack" id="new_hack" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="RR54prGYEVYaJhTl21ecS07wlJYRAewNgVcFqX8uAy0=" /></div>
 
-            <form action="/hacks" class="new_hack" id="new_hack" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="unlwf7sLvmGOeWTtcXBFvAf7ktkYIhXCzbEqmFBYh8c=" /></div>
             
-              <input id="hack_problem_id" name="hack[problem_id]" type="hidden" value="1" />
+              <input id="hack_problem_id" name="hack[problem_id]" type="hidden" value="5" />
               <textarea cols="70" id="hack_description" name="hack[description]" rows="10"></textarea>
               <h4>プレビュー</h4>
               <div class='wrapper'>
@@ -208,8 +209,8 @@
                   //]]>
                 </script>
                 <div class='wmd-preview'></div>
-
               </div>
+
               <p>
                 <input id="hack_submit" name="commit" type="submit" value="利用規約に同意して回答する" />
                 <a href="/about/terms" target="_blank">利用規約</a>
@@ -217,30 +218,32 @@
             </form>
           </div>
         </div>
-
       </div>
+
       <div id='sub'>
         <div class='section'>
           <h3>カテゴリー</h3>
           <ul class='categories'>
-            <li class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></li>
-            <li class='category'><a href="/problems/category/data-collection-and-making">データ収集・作成</a></li>
-
-            <li class='category'><a href="/problems/category/debugging">バグ修正</a></li>
-            <li class='category'><a href="/problems/category/document-translation">文章翻訳</a></li>
-            <li class='category'><a href="/problems/category/library-making">ライブラリ作成</a></li>
-            <li class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></li>
-            <li class='category'><a href="/problems/category/programming-quiz">プログラミングクイズ</a></li>
-            <li class='category'><a href="/problems/category/prototype-making">プロトタイプ作成</a></li>
-
+            <li class='category'><a href="/problems/category/iphone-app-making">iPhoneアプリ作成</a></li>
+            <li class='category'><a href="/problems/category/android-app-making">Androidアプリ作成</a></li>
             <li class='category'><a href="/problems/category/software-making">ソフトウェア作成</a></li>
-            <li class='category'><a href="/problems/category/software-multilingualization">多言語化</a></li>
+
+            <li class='category'><a href="/problems/category/library-making">ライブラリ作成</a></li>
+            <li class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></li>
+            <li class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></li>
+            <li class='category'><a href="/problems/category/prototype-making">プロトタイプ作成</a></li>
+            <li class='category'><a href="/problems/category/debugging">バグ修正</a></li>
             <li class='category'><a href="/problems/category/technology-study">技術調査</a></li>
+
+            <li class='category'><a href="/problems/category/software-multilingualization">多言語化</a></li>
+            <li class='category'><a href="/problems/category/document-translation">文章翻訳</a></li>
+            <li class='category'><a href="/problems/category/data-collection-and-making">データ収集・作成</a></li>
+            <li class='category'><a href="/problems/category/programming-quiz">プログラミングクイズ</a></li>
           </ul>
           <div class='to_archive'>
             <p><a href="/about/category">カテゴリーの説明</a></p>
-          </div>
 
+          </div>
         </div>
         <div class='section'>
           <h3>ヒント</h3>
@@ -248,24 +251,24 @@
             <li>
               <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
-            <li>
 
+            <li>
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
             </li>
             <li>
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
-            <li>
 
+            <li>
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
             </li>
             <li>
               <p>ジャンクフード食系男子募集中！</p>
             </li>
             <li>
-              <p>解決してもらうコツはプログラマーにとって面白い問題設定にすること。前提とゴールは明確に。</p>
 
+              <p>解決してもらうコツはプログラマーにとって面白い問題設定にすること。前提とゴールは明確に。</p>
             </li>
           </ul>
           <div class='to_archive'>
@@ -273,19 +276,32 @@
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
     <div id='footer'>
       <ul class='links'>
         <li><a href="/about">使い方</a></li>
         <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
         <li><a href="http://fjord.jp/">運営会社</a></li>
         <li><a href="/about/terms">利用規約</a></li>
-        <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
 
+        <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
       </ul>
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>.</p>
     </div>
-    <script src="/javascripts/wmd/wmd.js?1272570436" type="text/javascript"></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-2927688-8");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      //]]>
+    </script>
+
+    <script src="/javascripts/wmd/wmd.js?1272791971" type="text/javascript"></script>
   </body>
 </html>

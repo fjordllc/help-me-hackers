@@ -359,6 +359,10 @@ div.problems_show div#main div.content div.good{
 	color: #FFFFFF;
 	background-repeat: no-repeat;
 }
+div.problems_show div#main div.content div.tweeted{
+	cursor: default;
+	background-image: url(../images/tweeted.gif);
+}
 div.problems_show div#main div.content div.title div.good{
 	float: right;
 	margin-top: 3px;
