@@ -2151,7 +2151,7 @@ div.about_terms #main div.content ul {
 	margin-right: 0px;
 	padding-left: 30px;
 }
-#main .content .attention {
+#main .content ul.attention {
 	list-style-position: outside;
 	list-style-type: square;
 	padding-left: 25px;
@@ -2159,6 +2159,13 @@ div.about_terms #main div.content ul {
 	margin-top: -15px;
 }
 #main .content .attention li {
+	padding-bottom: 8px;
+	line-height: 1.4;
+}
+#main .content p.attention {
+	padding-left: 0px;
+	margin-right: 0px;
+	margin-top: -15px;
 	padding-bottom: 8px;
 	line-height: 1.4;
 }
