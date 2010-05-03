@@ -229,7 +229,7 @@ div#main div.title h2 {
 	color: #59632d;
 	font-weight: bold;
 	border-bottom-style: none;
-	width: 470px;
+	width: 700px;
 }
 .top_index div#main div.title h2 {
 	background-image: url(../images/toppage_h2.gif);
@@ -274,7 +274,7 @@ div#main div.binding {
 div.top_index div#main div.binding {
 	background-image: url(../images/top_binding.gif);
 	height: 40px;
-	padding-top: 220px;
+	padding-top: 250px;
 }
 div.about_index div#main div.binding {
 	background-image: url(../images/about_binding.gif);
@@ -285,29 +285,37 @@ div.about_index div#main div.binding {
 	line-height: 1.8;
 	font-weight: bold;
 }
-div.about_index div#main div.content ol li {
-	height: 40px;
+div.about_index div#main div.content ol.about_index {
+	list-style-type: none;
+}
+div.about_index div#main div.content ol.about_index li {
+	height: 100px;
 	display: block;
 	float: left;
-	width: 220px;
+	width: 290px;
 	background-repeat: no-repeat;
 	padding-top: 268px;
-	padding-right: 55px;
 	padding-bottom: 12px;
-	padding-left: 75px;
+	padding-left: 50px;
 	font-size: 13px;
 }
-div.about_index div#main div.content ol li.about_01 {
+div.about_index div#main div.content ol.about_index li.about_01 {
 	background-image: url(../images/about_ol_01.jpg);
 }
-div.about_index div#main div.content ol li.about_02 {
+div.about_index div#main div.content ol.about_index li.about_02 {
 	background-image: url(../images/about_ol_02.jpg);
 }
-div.about_index div#main div.content ol li.about_03 {
+div.about_index div#main div.content ol.about_index li.about_03 {
 	background-image: url(../images/about_ol_03.jpg);
 }
-div.about_index div#main div.content ol li.about_04 {
+div.about_index div#main div.content ol.about_index li.about_04 {
 	background-image: url(../images/about_ol_04.jpg);
+}
+div.about_index div#main div.content ol.about_index li.about_05 {
+	background-image: url(../images/about_ol_05.jpg);
+}
+div.about_index div#main div.content ol.about_index li.about_06 {
+	background-image: url(../images/about_ol_06.jpg);
 }
 
 
@@ -1608,8 +1616,6 @@ div.hacks_edit div#main div.content div.section {
 #main .about ol {
 	margin-bottom: 1.4em;
 	list-style-type: decimal;
-	margin-left: 25px;
-	padding-left: 25px;
 }
 #main .about li {
 	margin-bottom: 0.8em;
@@ -2144,4 +2150,15 @@ div.about_terms #main div.content ul {
 	list-style-type: disc;
 	margin-right: 0px;
 	padding-left: 30px;
+}
+#main .content .attention {
+	list-style-position: outside;
+	list-style-type: square;
+	padding-left: 25px;
+	margin-right: 0px;
+	margin-top: -15px;
+}
+#main .content .attention li {
+	padding-bottom: 8px;
+	line-height: 1.4;
 }
