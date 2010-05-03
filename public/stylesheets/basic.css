@@ -2125,3 +2125,13 @@ div.problems_create #main div.content div.section div.label span {
 	clear: both;
 	padding-top: 40px;
 }
+
+
+
+
+
+div.about_terms #main div.content ul {
+	list-style-type: disc;
+	margin-right: 0px;
+	padding-left: 30px;
+}
