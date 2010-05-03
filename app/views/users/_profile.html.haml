@@ -20,7 +20,7 @@
       %span= number_to_currency 0
 .profile
   %h3 プロフィール
-  - if user.description
+  - if user.description.present?
     %h4.description 自己紹介
     %p.description=hbr user.description
   %dl.user
@@ -29,10 +29,10 @@
     - if user.state
       %dt.state 出身
       %dd.state= t("label.state.#{user.state.name}")
-    - if user.url
+    - if user.url.present?
       %dt.url URL
       %dd.url=link_to h(user.url), h(user.url), :target => '_blank'
-    - if user.company
+    - if user.company.present?
       %dt.company 会社
       %dd.company=h user.company
     - if user.language
@@ -40,10 +40,10 @@
       %dd.favorite_language= t("label.language.#{user.language.name}")
     %dt.twitter_account Twitterアカウント
     %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
-    - if user.github_account
+    - if user.github_account.present?
       %dt.github_account Githubアカウント
       %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'
-  - if user.ssh_public_key
+  - if user.ssh_public_key.present?
     .ssh_public_key
       %h4 SSH Public Key
       %p.ssh_public_key=h user.ssh_public_key

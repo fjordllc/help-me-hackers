@@ -1390,6 +1390,16 @@ div#main div.content ul.loggedin li a {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 }
+div#main div.content ul.loggedin li.show a:link,
+div#main div.content ul.loggedin li.show a:visited {
+	background-color: #115894;
+	color: #FFFFFF;
+}
+div#main div.content ul.loggedin li.show a:hover,
+div#main div.content ul.loggedin li.show a:active {
+	background-color: #76E3DA;
+	color: #ec189a;
+}
 div#main div.content ul.loggedin li.edit a:link,
 div#main div.content ul.loggedin li.edit a:visited {
 	background-color: #115894;

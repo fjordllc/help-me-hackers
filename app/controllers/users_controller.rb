@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :find_user
-  USERS_PER_PAGE = 20
+  USERS_PER_PAGE = 100
 
   def index
     options = {:page => params[:page],
