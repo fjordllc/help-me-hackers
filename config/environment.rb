@@ -21,12 +21,9 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'oauth', :version => '0.3.5'
   config.gem 'bitly', :version => '0.4.0'
+  config.gem 'shoulda', :version => '2.10.3'
   config.gem 'haml', :version => '2.2.22'
-  config.gem 'paperclip', :version => '2.3.1.1'
   config.gem 'pacecar', :version => '1.2.0'
-  config.gem 'remarkable_rails', :version => '3.1.13', :lib => false
-  config.gem 'rspec', :version => '1.3.0', :lib => false
-  config.gem 'rspec-rails', :version => '1.3.2', :lib => false
   config.gem 'amatsuda-i18n_generators',
              :version => '0.6.0',
              :lib => false,
