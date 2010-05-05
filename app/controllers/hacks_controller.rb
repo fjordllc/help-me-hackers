@@ -9,7 +9,7 @@ class HacksController < ApplicationController
     @hack = Hack.new(params[:hack])
     @hack.user = current_user
     if @hack.save
-      flash[:notice] = 'Hack was successfully created.'
+      flash[:notice] = t('Hack was successfully created')
       redirect_to problem_path(@hack.problem)
     else
       render :action => :new
@@ -18,7 +18,7 @@ class HacksController < ApplicationController
 
   def update
     if @hack.update_attributes(params[:hack])
-      flash[:notice] = 'Hack was successfully updated.'
+      flash[:notice] = t('Hack was successfully updated')
       redirect_to problem_path(@hack.problem)
     else
       render :action => :edit
@@ -28,10 +28,10 @@ class HacksController < ApplicationController
   def destroy
     problem = @hack.problem
     if @hack.destroy
-      flash[:notice] = 'Hack was successfully deleted.'
+      flash[:notice] = t('Hack was successfully deleted')
       redirect_to problem_path(problem)
     else
-      flash[:notice] = 'Hack was not deleted.'
+      flash[:notice] = t('Hack was not deleted')
       redirect_to problem_path(problem)
     end
   end

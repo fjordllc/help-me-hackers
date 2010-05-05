@@ -58,7 +58,7 @@ class ProblemsController < ApplicationController
     @problem.user = current_user
 
     if @problem.save
-      flash[:notice] = t('Problem was successfully created.')
+      flash[:notice] = t('Problem was successfully created')
       redirect_to @problem
     else
       render :action => :new
@@ -67,7 +67,7 @@ class ProblemsController < ApplicationController
 
   def update
     if @problem.update_attributes(params[:problem])
-      flash[:notice] = t('Problem was successfully updated.')
+      flash[:notice] = t('Problem was successfully updated')
       redirect_to @problem
     else
       render :action => :edit
@@ -76,10 +76,10 @@ class ProblemsController < ApplicationController
 
   def destroy
     if @problem.destroy
-      flash[:notice] = t('Problem was successfully deleted.')
+      flash[:notice] = t('Problem was successfully deleted')
       redirect_to problems_path
     else
-      flash[:notice] = t('Problem was not deleted.')
+      flash[:notice] = t('Problem was not deleted')
       redirect_to @problem
     end
   end
