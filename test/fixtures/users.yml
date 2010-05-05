@@ -21,7 +21,6 @@ komagata_fjord:
   github_account: komagata
   ssh_public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxiIFLPE2/cKMY45jAIFSflxQb6rBYTQ5enVm5kfl/tNUscRr1KdkpBExsbIba+HYBC8VarSvzXe8L7dGZwqCLJPsp89Kn4Btjrbk9rE/SA/iu0DVmWmb3PIJSJmxL9Pq0dejM+JGzjqxYhw1BoeKwMY8f8vEt0teOHwLliScdEHNRniDSnsMmfQjNoaiD2pANrtg/EH/QTzqC0NtNxv/t+fdbl+x1wriqBj1e2PSvO5awHKouUeH+ETgvG0dL44bYT/QdLoCqpjk9xa57gXyCZGXyXiVZ3mmqyIOmti7rQtk28yTUFqyBV5HDNgvPHprBDEAN3Efu+dQEeBSPDjyEQ== komagata@dev"
   reputation: 110
-  kind: hacker
 
 machida_fjord:
   id: 2
@@ -46,7 +45,6 @@ machida_fjord:
   github_account: machida
   ssh_public_key: NULL
   reputation: 0
-  kind: person
 
 michael_fjord:
   id: 3
@@ -71,4 +69,3 @@ michael_fjord:
   github_account: NULL
   ssh_public_key: NULL
   reputation: 560
-  kind: hacker

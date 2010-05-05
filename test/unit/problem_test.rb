@@ -1,3 +1,5 @@
+require 'test_helper'
+
 class ProblemTest < Test::Unit::TestCase
   should_belong_to :user
   should_belong_to :language
@@ -11,6 +13,6 @@ class ProblemTest < Test::Unit::TestCase
   should_validate_presence_of :license
   should_validate_presence_of :user
   should_validate_presence_of :bounty
-  should_validate_length_of :title, :within => 4..255
-  should_validate_length_of :description, :minimum => 30
+  should_ensure_length_in_range :title, (4..255)
+  should_ensure_length_at_least :description, 30
 end

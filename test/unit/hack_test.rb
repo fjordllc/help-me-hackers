@@ -1,3 +1,5 @@
+require 'test_helper'
+
 class HackTest < Test::Unit::TestCase
   should_belong_to :problem
   should_belong_to :user

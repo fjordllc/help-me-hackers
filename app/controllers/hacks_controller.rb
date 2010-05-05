@@ -6,7 +6,7 @@ class HacksController < ApplicationController
   end
 
   def create
-    @hack = Hackr.new(params[:hack])
+    @hack = Hack.new(params[:hack])
     @hack.user = current_user
     if @hack.save
       flash[:notice] = 'Hack was successfully created.'
