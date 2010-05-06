@@ -1,9 +1,13 @@
 .title
   %h2= users_title
+- if params[:language]
+  .by_language= t("label.language.#{@language.name}")
 .content
   - if @users.empty?
     %p 該当するユーザーがいません。
   - else
   %ul.users
-    = render :partial => 'user', :collection => @users
+    - @users.each do |user|
+      %li.user.performance
+        = render :partial => 'user', :locals => {:user => user}
   = will_paginate(@users)
