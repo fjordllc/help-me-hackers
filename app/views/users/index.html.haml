@@ -5,5 +5,7 @@
     %p 該当するユーザーがいません。
   - else
   %ul.users
-    = render :partial => 'user', :collection => @users
+    - @users.each do |user|
+      %li.user.performance
+        = render :partial => 'user', :locals => {:user => user}
   = will_paginate(@users)
