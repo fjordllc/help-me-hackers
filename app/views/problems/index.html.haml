@@ -1,6 +1,10 @@
-- title "#{problems_title} - #{t('application.title')}"
+- title "#{problems_title} | #{t('application.title')}"
 .title
   %h2= problems_title
+- if params[:category]
+  .by_category= t("label.category.#{@category.name}")
+- if params[:tag]
+  .by_tag= @tag.name
 %div{:class => problems_class}
   - if @problems.empty?
     .empty
