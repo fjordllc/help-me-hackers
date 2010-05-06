@@ -6,11 +6,11 @@ class User < TwitterAuth::GenericUser
 
   def prize
     p = Hack.find(:first,
-              :select => 'sum(problems.bounty)',
+              :select => 'sum(problems.bounty) as prize',
               :joins => [:user, :problem],
               :conditions => ['hacks.correct = ? AND users.id = ?', true, id],
               :group => 'problems.id')
-    p.present? ? p.first : 0
+    p.present? ? p.prize.to_i : 0
   end
 
   def vote
