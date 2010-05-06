@@ -146,7 +146,7 @@ div#wrapper .nav ul li span.current {
 	display: block;
 	background-color: #d4fd18;
 	float: left;
-	margin-right: 7px;
+	margin-right: 6px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -188,7 +188,7 @@ div#wrapper .nav ul li a {
 	display: block;
 	float: left;
 	height: 24px;
-	margin-right: 7px;
+	margin-right: 6px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -2203,4 +2203,21 @@ div.about_terms #main div.content ul {
 	padding-bottom: 8px;
 	line-height: 1.4;
 	font-size: 12px;
+}
+#main .by_tag,
+#main .by_category,
+#main .by_language {
+	margin-left: 20px;
+	background-color: #9A9A9A;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 37px;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-image: url(../images/gray_arrow.gif);
+	background-position: 17px center;
+	background-repeat: no-repeat;
+	line-height: 15px;
+	height: 14px;
+	display: block;
 }
