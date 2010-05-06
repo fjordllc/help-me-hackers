@@ -101,6 +101,24 @@ div.problems_index div#main div.title h2 {
 	background-image: url(../images/requests_h2.gif);
 }
 
+div.problems_wanted div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/problems_wanted_h2.gif);
+}
+div.problems_unsolved div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/problems_unsolved_h2.gif);
+}
+div.users_hacker div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/users_hacker_h2.gif);
+}
+div.users_hackee div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/users_hackee_h2.gif);
+}
+
+
 
 div#wrapper {
 	clear: both;
