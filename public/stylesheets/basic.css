@@ -2204,3 +2204,20 @@ div.about_terms #main div.content ul {
 	line-height: 1.4;
 	font-size: 12px;
 }
+#main .by_tag,
+#main .by_category,
+#main .by_language {
+	margin-left: 20px;
+	background-color: #9A9A9A;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 37px;
+	color: #FFFFFF;
+	font-weight: bold;
+	background-image: url(../images/gray_arrow.gif);
+	background-position: 17px center;
+	background-repeat: no-repeat;
+	line-height: 15px;
+	height: 14px;
+	display: block;
+}
