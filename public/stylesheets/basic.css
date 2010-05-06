@@ -96,6 +96,12 @@ div#header .nav li {
 	display: inline;
 	padding-right: 10px;
 }
+div.problems_index div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/requests_h2.gif);
+}
+
+
 div#wrapper {
 	clear: both;
 	background-image: url(../images/wrapper.gif);
@@ -108,7 +114,7 @@ div#wrapper .nav {
 	width: 990px;
 }
 div#wrapper .nav ul {
-	width: 775px;
+	width: 782px;
 	display: block;
 	margin-top: -75px;
 	float: right;
@@ -122,7 +128,7 @@ div#wrapper .nav ul li span.current {
 	display: block;
 	background-color: #d4fd18;
 	float: left;
-	margin-right: 5px;
+	margin-right: 7px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -145,7 +151,7 @@ div#wrapper .nav ul li.add_problem {
 	margin-top: -5px;
 	width: 234px;
 	height: 35px;
-	padding-right: 15px;
+	padding-right: 10px;
 }
 div#wrapper .nav ul li.add_problem a {
 	display: block;
@@ -164,7 +170,7 @@ div#wrapper .nav ul li a {
 	display: block;
 	float: left;
 	height: 24px;
-	margin-right: 5px;
+	margin-right: 7px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -263,6 +269,14 @@ div#main div.content {
 	color: #59632d;
 	padding-right: 10px;
 	padding-bottom: 15px;
+}
+div.problems_new div.content {
+	padding-top: 15px;
+}
+
+
+div.hacks_edit div#main div.content {
+	padding-top: 15px;
 }
 div#main div.binding {
 	margin-top: 20px;
@@ -1173,7 +1187,8 @@ div.problems_show div#main div.main {
 	padding-top: 15px;
 }
 div.problems_show div#main div.content div.section ul.hacks li.hack,
-#main div.content div.post div.wrapper {
+#main div.content div.post div.wrapper,
+div.hacks_edit #main div.content div.wrapper {
 	display: block;
 	border: 1px solid #E6EAD4;
 	margin-bottom: 20px;
@@ -1587,7 +1602,8 @@ color:#006600;
 	margin-bottom: 20px;
 	height: 300px;
 }
-#main .content .post h4 {
+#main .content .post h4,
+div.hacks_edit div#main div.content h4 {
 	margin-bottom: 20px;
 	font-size: 14px;
 	font-weight: bold;
@@ -1921,11 +1937,11 @@ div.accounts_show div#main div.content div.solved_problems li {
 }
 div.users_show div#main div.content div.posted_problems li,
 div.accounts_show div#main div.content div.posted_problems li {
-	background-image: url(../images/arrow_pink.gif);
+	background-image: url(../images/arrow_pink.gif) !important;
 }
 div.users_show div#main div.content div.posted_hacks li,
 div.accounts_show div#main div.content div.posted_hacks li {
-	background-image: url(../images/arrow_green.gif);
+	background-image: url(../images/arrow_green.gif) !important;
 }
 
 div.users_show div#main div.content div.list ul,
@@ -2168,4 +2184,5 @@ div.about_terms #main div.content ul {
 	margin-top: -15px;
 	padding-bottom: 8px;
 	line-height: 1.4;
+	font-size: 12px;
 }
