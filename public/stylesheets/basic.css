@@ -2221,3 +2221,15 @@ div.about_terms #main div.content ul {
 	height: 14px;
 	display: block;
 }
+.gist {
+	clear: both;
+	padding-top: 15px;
+}
+.gist .gist-data {
+	clear: both;
+	font-size: 12px !important;
+}
+.gist .gist-data {
+	overflow: scroll;
+	background-color: #F8F8FF !important;
+}
