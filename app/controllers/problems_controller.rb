@@ -24,24 +24,21 @@ class ProblemsController < ApplicationController
   end
 
   def wanted
-    @problems = Problem.paginate(
-      :page => params[:page],
-      :per_page => PROBLEMS_PER_PAGE,
-      :conditions => ['bounty > ?', 0],
-      :order => 'bounty DESC')
+    @problems = Problem.unsolved.paid.paginate(
+      :page     => params[:page],
+      :per_page => PROBLEMS_PER_PAGE)
   end
 
   def unsolved
-    @problems = Problem.paginate(
-      :page => params[:page],
-      :per_page => PROBLEMS_PER_PAGE,
-      :conditions => ['hacks.correct = ? OR hacks.correct IS NULL', false],
-      :joins => 'LEFT JOIN hacks ON problems.id = hacks.problem_id',
-      :order => 'problems.id DESC')
+    @problems = Problem.unsolved.paginate(
+      :page     => params[:page],
+      :per_page => PROBLEMS_PER_PAGE)
   end
 
   def show
-    @hacks = @problem.hacks.by_correct(:desc).paginate(:page => params[:page], :per_page => HACKS_PER_PAGE)
+    @hacks = @problem.hacks.by_correct(:desc).paginate(
+      :page => params[:page],
+      :per_page => HACKS_PER_PAGE)
     @hack = Hack.new(:problem_id => @problem.id)
     Problem.increment_view_by_id(@problem.id)
   end
