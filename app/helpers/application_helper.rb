@@ -56,11 +56,11 @@ module ApplicationHelper
 
   def problems_title
     if params[:category]
-      "Hacks - #{t("label.category.#{@category.name}")}"
+      "Requests - #{t("label.category.#{@category.name}")}"
     elsif params[:tag]
-      "Hacks - #{@tag.name}"
+      "Requests - #{@tag.name}"
     else
-      'Hacks'
+      'Requests'
     end
   end
 
