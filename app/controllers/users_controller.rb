@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_login(params[:login])
-    redirect_to '/404.html', :status => 404 if @user.nil?
+    render :file => "#{RAILS_ROOT}/public/404.html", :status => 404 if @user.nil?
   end
 
   def new
