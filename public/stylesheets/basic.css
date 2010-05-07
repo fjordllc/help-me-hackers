@@ -1765,6 +1765,9 @@ div#main div.content .performance dd.favorite_language {
 	clear: both;
 	padding-bottom: 16px;
 }
+div#main div.content .performance dd.favorite_language span {
+	display: none;
+}
 div#main div.content .performance dd.favorite_language a {
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
