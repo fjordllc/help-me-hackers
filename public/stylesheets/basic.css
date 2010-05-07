@@ -2256,3 +2256,6 @@ div.about_terms #main div.content ul {
 	overflow: scroll;
 	background-color: #F8F8FF !important;
 }
+#main .solved .sub .information .bounty span {
+	color: #999999;
+}
