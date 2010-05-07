@@ -1755,6 +1755,26 @@ div#main div.content .performance dd.profile a {
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
 }
+div#main div.content .performance dd.state {
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 12px;
+	display: block;
+	float: right;
+	width: 78px;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+div#main div.content .performance dd.state a {
+	font-size: 10px;
+	display: block;
+	padding: 3px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	float: right;
+}
 div#main div.content .performance dd.favorite_language {
 	font-weight: bold;
 	line-height: 12px;
