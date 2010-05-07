@@ -23,7 +23,7 @@
           - if logged_in?
             %li
               = link_to image_tag(current_user.profile_image_url, :size => '16x16', :style => 'vertical-align:middle')
-              = link_to "#{current_user.login}(#{current_user.vote_count})", dashboard_path
+              = link_to "#{current_user.login}(#{current_user.voted_count})", dashboard_path
             %li= link_to 'アカウント', edit_account_path
             %li= link_to 'ログアウト', logout_path
           - else

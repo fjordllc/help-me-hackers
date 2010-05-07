@@ -5,11 +5,14 @@
   %dt.profile ユーザー情報
   %dd.profile=link_to user.login, user_path(user)
   - if user.state
-    %dt.state 好きなプログラム言語
+    %dt.state 出身
     %dd.state= t("label.state.#{user.state.name}")
-  - if user.language
     %dt.favorite_language 好きなプログラム言語
-    %dd.favorite_language= link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name)
+    %dd.favorite_language
+      - if user.language
+        = link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name)
+      - else
+        .span 未選択
   %dt.solved 解決問題数
   %dd.solved= user.hacks.correct.size
   %dt.problem 問題出題数
