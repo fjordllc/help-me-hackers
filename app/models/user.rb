@@ -18,6 +18,6 @@ class User < TwitterAuth::GenericUser
   end
 
   def voted_count
-
+    Vote.count(:conditions => ['voted_user_id = ?', self.id])
   end
 end
