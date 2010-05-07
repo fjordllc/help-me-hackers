@@ -13,7 +13,11 @@ class User < TwitterAuth::GenericUser
     p.present? ? p.prize.to_i : 0
   end
 
-  def vote
+  def vote_count
     Vote.count(:conditions => ['user_id = ?', self.id])
+  end
+
+  def voted_count
+
   end
 end

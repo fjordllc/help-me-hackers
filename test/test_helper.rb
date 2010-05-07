@@ -35,4 +35,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def self.should_respond_with_path(status, path)
+    should "respond #{status} at browse #{path}" do
+      get path
+      assert_response status
+    end
+  end
 end
