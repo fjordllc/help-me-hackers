@@ -5,6 +5,7 @@ class VotesController < ApplicationController
     redirect_to '/404.html', :status => 404 unless request.xhr?
     vote = Vote.new(params[:vote])
     vote.user = current_user
+    vote.voted_user_id = vote.voteable.id
 
     if vote.save
       res = tweet(vote.comment)
