@@ -384,6 +384,9 @@ div.problems_show div#main div.content div.main div.title {
 	padding-right: 0px;
 	clear: both;
 }
+div.problems_show div#main div.solved div.main div.title {
+	background-image: url(../images/solved_title.gif);
+}
 div.problems_show div#main div.content div.good{
 	height: 16px;
 	width: 46px;
@@ -2257,5 +2260,5 @@ div.about_terms #main div.content ul {
 	background-color: #F8F8FF !important;
 }
 #main .solved .sub .information .bounty span {
-	color: #999999;
+	color: #A3A3A3;
 }
