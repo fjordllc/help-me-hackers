@@ -19,7 +19,7 @@
     %dl
       %dt.language プログラム言語
       %dd.language== #{link_to t("label.language.#{object.language.name}"), problems_by_tag_path(:tag => object.language.name)}
-      %dt.category 問題カテゴリー
+      %dt.category カテゴリー
       %dd.category=link_to t("label.category.#{object.category.name}"), problems_by_category_path(:category => object.category.name)
       - if object.bounty > 0
         %dt.bounty 報奨金

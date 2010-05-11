@@ -1,5 +1,5 @@
 .posted_problems.list
-  %h3 投稿した問題
+  %h3 投稿したタスク
   - if user.problems.count.zero?
     %p= t('label.nothing_posted_problems')
   - else

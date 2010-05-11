@@ -5,14 +5,6 @@
     - form_for @user, :url => account_path do |f|
       = f.error_messages
       %div.section
-        = f.label :hacker
-        = f.check_box :hacker
-        %p.description ハッカー（問題解決者）として利用する場合チェック
-      %div.section
-        = f.label :hackee
-        = f.check_box :hackee
-        %p.description ハッキー（問題依頼者）として利用する場合チェック
-      %div.section
         = f.label :state
         %br
         = select_by_model @user, :state_id

@@ -34,7 +34,7 @@
       %dl
         %dt.language プログラム言語
         %dd.language=link_to t("label.language.#{@problem.language.name}"), problems_by_tag_path(:tag => @problem.language.name)
-        %dt.category 問題カテゴリー
+        %dt.category カテゴリー
         %dd.category{:class => @problem.category.name}
           = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
         - if @problem.bounty > 0

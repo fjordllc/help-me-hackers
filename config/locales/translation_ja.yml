@@ -5,7 +5,7 @@ ja:
       category: "カテゴリー"
       language: "言語"
       license: "ライセンス"
-      problem: "問題"
+      problem: "タスク"
       user: "ユーザー"
       user_session: "ユーザーセッション"
 
@@ -13,20 +13,20 @@ ja:
       answer: 
         description: "詳細"
         user: "ユーザー"
-        problem: "問題"
+        problem: "タスク"
 
       category: 
         name: "名前"
-        problems: "問題"
+        problems: "タスク"
         premium: "プレミアム"
 
       language: 
         name: "名前"
-        problems: "問題"
+        problems: "タスク"
 
       license: 
         name: "名前"
-        problems: "問題"
+        problems: "タスク"
 
       problem: 
         title: "タイトル"
@@ -64,7 +64,7 @@ ja:
         current_login_at: "現在のログイン日時"
         last_login_at: "最終ログイン日時"
         answers: "回答"
-        problems: "問題"
+        problems: "タスク"
         reputation: "評判"
 
   application:
@@ -78,16 +78,16 @@ ja:
   Hack was successfully updated: "回答を更新しました。"
   Hack was successfully deleted: "回答を削除しました。"
   Hack was not deleted: "回答を削除できませんでした。"
-  Problem was successfully created: "問題を登録しました。"
-  Problem was successfully updated: "問題を更新しました。"
-  Problem was successfully deleted: "問題を削除しました。"
-  Problem was not deleted: "問題を削除できませんでした。"
+  Problem was successfully created: "タスクを登録しました。"
+  Problem was successfully updated: "タスクを更新しました。"
+  Problem was successfully deleted: "タスクを削除しました。"
+  Problem was not deleted: "タスクを削除できませんでした。"
   You have logged in successfully: "ログインしました。"
 
   label:
     people: "People"
     hacker: "Hacker"
-    problems: "問題"
+    problems: "タスク"
     dashboard: "ダッシュボード"
 
     please-select: "選択して下さい"

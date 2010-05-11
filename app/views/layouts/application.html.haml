@@ -36,7 +36,7 @@
           %li= link_to_unless_current_with_span 'WANTED!', wanted_problems_path
           %li= link_to_unless_current_with_span '未解決', unsolved_problems_path
           %li= link_to_unless_current_with_span 'ユーザー', users_path
-          %li.add_problem= link_to '問題登録', new_problem_path
+          %li.add_problem= link_to 'タスク登録', new_problem_path
       #main
         #flash
           - unless flash.empty?
