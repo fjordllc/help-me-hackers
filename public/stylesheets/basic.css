@@ -117,6 +117,14 @@ div.users_hackee div#main div.title h2 {
 	text-indent: -9999px;
 	background-image: url(../images/users_hackee_h2.gif);
 }
+div.users_index div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/users_h2.gif);
+}
+div.accounts_show div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/dashboard_h2.gif);
+}
 
 
 
@@ -1412,6 +1420,7 @@ div.problems_show div#main div.content div.section ul.hacks li.hack .thanks inpu
 div#main div.content ul.loggedin {
 	padding-top: 0px;
 	padding-bottom: 15px;
+	clear: both;
 }
 div#main div.content .section ul.loggedin {
 	padding-top: 10px;
@@ -1933,33 +1942,6 @@ div#main div.content div.profile div.ssh_public_key p {
 }
 
 
-div.users_show div#main div.content div.lists,
-div.accounts_show div#main div.content div.lists {
-	clear: both;
-	padding-top: 10px;
-	margin-right: -10px;
-	padding-bottom: 10px;
-}
-div.users_show div#main div.content div.list,
-div.accounts_show div#main div.content div.list {
-	float: left;
-	width: 225px;
-	margin-right: 8px;
-	background-image: url(../images/user_list.gif);
-}
-div.users_show div#main div.content div.list h3,
-div.accounts_show div#main div.content div.list h3 {
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 5px;
-	display: block;
-	text-align: center;
-	padding-top: 10px;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	padding-bottom: 5px;
-	background-image: url(../images/user_list_h3.gif);
-}
 div.users_show div#main div.content div.solved_problems h3,
 div.accounts_show div#main div.content div.solved_problems h3 {
 	border-bottom-color: #115894;
@@ -1974,64 +1956,6 @@ div.users_show div#main div.content div.posted_hacks h3,
 div.accounts_show div#main div.content div.posted_hacks h3 {
 	border-bottom-color: #0eba12;
 	color: #0eba12;
-}
-div.users_show div#main div.content div.solved_problems li,
-div.accounts_show div#main div.content div.solved_problems li {
-	background-image: url(../images/arrow_bluek.gif);
-}
-div.users_show div#main div.content div.posted_problems li,
-div.accounts_show div#main div.content div.posted_problems li {
-	background-image: url(../images/arrow_pink.gif) !important;
-}
-div.users_show div#main div.content div.posted_hacks li,
-div.accounts_show div#main div.content div.posted_hacks li {
-	background-image: url(../images/arrow_green.gif) !important;
-}
-
-div.users_show div#main div.content div.list ul,
-div.accounts_show div#main div.content div.list ul {
-	padding-left: 10px;
-	margin: 0px;
-	padding-top: 0px;
-	font-size: 13px;
-	background-image: url(../images/user_list_ul.gif);
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	padding-right: 10px;
-	padding-bottom: 15px;
-}
-div.users_show div#main div.content div.list li,
-div.accounts_show div#main div.content div.list li {
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
-	margin-top: 7px;
-	margin-right: 5px;
-	margin-bottom: 7px;
-	margin-left: 0px;
-	line-height: 20px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 14px;
-	background-repeat: no-repeat;
-	background-image: url(../images/arrow_blue.gif);
-}
-div.users_show div#main div.content div.list p,
-div.accounts_show div#main div.content div.list p {
-	line-height: 20px;
-	font-weight: bold;
-	text-align: center;
-	display: block;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	background-image: url(../images/user_list_ul.gif);
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	padding-right: 10px;
-	padding-left: 10px;
-	margin-bottom: 0px;
 }
 
 div#main div.content div.main dl.information {
