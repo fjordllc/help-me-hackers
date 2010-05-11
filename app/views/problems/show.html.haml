@@ -37,9 +37,10 @@
         %dt.category 問題カテゴリー
         %dd.category{:class => @problem.category.name}
           = link_to t("label.category.#{@problem.category.name}"), problems_by_category_path(:category => @problem.category.name)
-        %dt.bounty 報奨金
-        %dd.bounty
-          %span= number_to_currency @problem.bounty
+        - if @problem.bounty > 0
+          %dt.bounty 報奨金
+          %dd.bounty
+            %span= number_to_currency @problem.bounty
       %ul.retweet
         %li.count= @problem.votes.size
         %li.label retweet
@@ -54,7 +55,7 @@
       .created_at== #{time_ago_in_words @problem.created_at}前
   - unless @hacks.empty?
     .section
-      %h3 Hacks
+      %h3 コメント
       %ul.hacks
         - @hacks.each do |hack|
           %li{hack_attrs(hack)}
@@ -92,7 +93,7 @@
                 %li.delete= link_to 'この回答を削除', hack, :confirm => '本当に削除してよろしいですか？', :method => :delete
   = will_paginate(@hacks)
   .section.post
-    %h3 Hackする
+    %h3 コメントする
     %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
     - form_for @hack do |f|
       = f.error_messages
@@ -106,7 +107,7 @@
           }
         .wmd-preview
       %p
-        = f.submit '利用規約に同意して回答する'
+        = f.submit '利用規約に同意してコメントする'
         = link_to '利用規約', about_terms_path, :target => '_blank'
 - content_for :footer_script do
   = javascript_include_tag 'wmd/wmd'

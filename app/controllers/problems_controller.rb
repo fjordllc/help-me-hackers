@@ -44,7 +44,7 @@ class ProblemsController < ApplicationController
   end
 
   def new
-    @problem = Problem.new(:bounty => 0)
+    @problem = Problem.new(:bounty => 0, :category_id => 8, :license_id => 5)
   end
 
   def edit
