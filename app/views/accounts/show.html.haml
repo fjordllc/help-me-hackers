@@ -3,24 +3,29 @@
 .content.about
   .lists
     .solved_problems.list
-      %h3 投稿した問題
+      %h3 登録したタスク
       - if @user.problems.count.zero?
         %p= t('label.nothing_posted_problems')
       - else
         %ul.problems
-          - @user.problems.each do |problem|
-            %li.problem=link_to h(problem.title), problem_path(problem)
+          = render :partial => 'task', :collection => @user.problems
     .posted_problems.list
-      %h3 投稿した回答
+      %h3 回答したタスク
       - if @user.hacks.count.zero?
         %p= t('label.nothing_posted_hacks')
       - else
         %ul.hacks
           - @user.hacks.each do |hack|
-            %li.hack=link_to h(hack.problem.title), problem_path(hack.problem)
+            %li.hack
+              .title= link_to h(hack.problem.title), problem_path(hack.problem)
+              .good= hack.problem.votes.size
+              .comment= hack.problem.hacks.size
+              - if hack.problem.bounty > 0
+                .bounty= number_to_currency hack.problem.bounty
+              .created_at== #{time_ago_in_words hack.problem.created_at}前
     .posted_hacks.list
-      %h3 ウォッチしている問題
-      %p= t('label.nothing_watching_problems')
+      %h3 ウォッチしているタスク
+      %p= t('label.nothing_watching_tasks')
   %ul.loggedin
     %li.show= link_to 'プロフィールを見る', user_path(@user)
     %li.edit= link_to 'アカウント情報を編集する', edit_account_path

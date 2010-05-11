@@ -1,8 +1,7 @@
+- title "プログラミングタスクを共有するサイト #{t('application.title')}"
 .title
   %h2 トップページ
-.binding
-  #{link_to 'help-me-hackersの使い方', '/about'} 
+.binding=link_to 'help-me-hackersの使い方', '/about'
 .content
-  %p.attention ※報奨金はそのプログラムの需要を測る一つのバロメーターとして機能させるため、RequestしたHackeeとは別のHackeeが、さらに報奨金を上乗せできる機能を開発中です。
   %ul.problems
     = render :partial => 'problems/object', :collection => @problems
