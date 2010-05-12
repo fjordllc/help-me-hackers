@@ -1,4 +1,4 @@
-problem_1:
+task_1:
   id: 1
   title: Pythonのhamlライブラリ
   description: "Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。
@@ -10,7 +10,7 @@ Pure Pythonで！"
   bounty: 5000
   view: 1
 
-problem_2:
+task_2:
   id: 2
   title: WordPressのGoogle Analyticsモバイル版プラグイン
   description: "WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。\n
@@ -22,7 +22,7 @@ problem_2:
   bounty: 100
   view: 10
 
-problem_3:
+task_3:
   id: 3
   title: "1日前などの時間表記"
   description: "現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。\r\n\r\n英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。"

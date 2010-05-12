@@ -1,0 +1,8 @@
+.solved_tasks.list
+  %h3 解決したタスク
+  - if user.comments.correct.empty?
+    %p= t('label.nothing_posted_comments')
+  - else
+    %ul.comments
+      - user.comments.correct.each do |comment|
+        %li.comment=link_to h(comment.task.title), task_path(comment.task)

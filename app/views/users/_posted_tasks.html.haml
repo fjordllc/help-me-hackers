@@ -1,0 +1,8 @@
+.posted_tasks.list
+  %h3 登録したタスク
+  - if user.tasks.count.zero?
+    %p= t('label.nothing_posted_tasks')
+  - else
+    %ul.tasks
+      - user.tasks.each do |task|
+        %li.task=link_to h(task.title), task_path(task)

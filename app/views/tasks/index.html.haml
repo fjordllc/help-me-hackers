@@ -1,0 +1,16 @@
+- title "#{tasks_title} | #{t('application.title')}"
+.title
+  %h2= tasks_title
+- if params[:category]
+  .by_category= t("label.category.#{@category.name}")
+- if params[:tag]
+  .by_tag= @tag.name
+%div{:class => tasks_class}
+  - if @tasks.empty?
+    .empty
+      %p 該当するコメントがありません。
+      %p== 今なら目立つ！この隙に#{link_to '登録', new_task_path}すれば解決してもらえるかも！
+  - else
+  %ul.tasks
+    = render :partial => 'object', :collection => @tasks
+  = will_paginate(@tasks)

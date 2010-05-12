@@ -1,17 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-  map.problems_by_category 'problems/category/:category',
-    :controller => 'problems', :action => 'index'
-  map.problems_by_tag 'problems/tag/:tag',
-    :controller => 'problems', :action => 'index'
+  map.tasks_by_category 'tasks/category/:category',
+    :controller => 'tasks', :action => 'index'
+  map.tasks_by_tag 'tasks/tag/:tag',
+    :controller => 'tasks', :action => 'index'
   map.users_by_language 'users/language/:language',
     :controller => 'users', :action => 'index'
 
-  map.users_hacker 'users/hacker', :controller => 'users', :action => 'hacker'
-  map.users_hackee 'users/hackee', :controller => 'users', :action => 'hackee'
-
   map.resources :votes
-  map.resources :hacks
-  map.resources :problems,
+  map.resources :comments
+  map.resources :tasks,
     :collection => {:wanted => :get, :unsolved => :get}
   map.dashboard 'dashboard', :controller => 'accounts', :action => 'show'
   map.resource :account, :only => [:show, :edit, :update, :destroy]

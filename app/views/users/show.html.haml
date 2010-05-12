@@ -3,6 +3,6 @@
 .content
   = render :partial => 'profile', :locals => {:user => @user}
   .lists
-    = render :partial => 'solved_problems', :locals => {:user => @user}
-    = render :partial => 'posted_problems', :locals => {:user => @user}
-    = render :partial => 'posted_hacks', :locals => {:user => @user}
+    = render :partial => 'solved_tasks', :locals => {:user => @user}
+    = render :partial => 'posted_tasks', :locals => {:user => @user}
+    = render :partial => 'posted_comments', :locals => {:user => @user}

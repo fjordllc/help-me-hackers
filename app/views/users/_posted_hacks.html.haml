@@ -1,8 +1,0 @@
-.posted_hacks.list
-  %h3 投稿した回答
-  - if user.hacks.empty?
-    %p= t('label.nothing_posted_hacks')
-  - else
-    %ul.hacks
-      - user.hacks.each do |hack|
-        %li.hack=link_to h(hack.problem.title), problem_path(hack.problem)

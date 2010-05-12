@@ -1,7 +1,7 @@
-%li.problem
-  .title=link_to h(task.title), problem_path(task)
+%li.task
+  .title=link_to h(task.title), task_path(task)
   .good= task.votes.size
-  .comment= task.hacks.size
+  .comment= task.comments.size
   - if task.bounty > 0
     .bounty= number_to_currency task.bounty
   .created_at== #{time_ago_in_words task.created_at}前

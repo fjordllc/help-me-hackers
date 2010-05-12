@@ -1,5 +1,5 @@
 .section.post
-  - form_for problem do |f|
+  - form_for task do |f|
     = f.error_messages
     %div.section
       %div.label
@@ -7,22 +7,22 @@
       = f.text_field :title
     %div.section
       %div.label
-        = f.label :category, '', :for => 'problem_category_id'
+        = f.label :category, '', :for => 'task_category_id'
         %span== （#{link_to '詳細', about_category_path}）
-      = select_by_model problem, :category_id
+      = select_by_model task, :category_id
     %div.section
       %div.label
         == #{f.label :tag_list}（","カンマ区切りで複数入力可能）
       = f.text_field :tag_list
     %div.section
       %div.label
-        = f.label :language, '', :for => 'problem_language_id'
-      = select_by_model problem, :language_id
+        = f.label :language, '', :for => 'task_language_id'
+      = select_by_model task, :language_id
     %div.section
       %div.label
-        = f.label :license, '', :for => 'problem_license_id'
+        = f.label :license, '', :for => 'task_license_id'
         %span== （#{link_to '詳細', about_license_path}）
-      = select_by_model problem, :license_id
+      = select_by_model task, :license_id
     %div.section
       %div.label
         = f.label :bounty

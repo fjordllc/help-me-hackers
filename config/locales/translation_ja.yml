@@ -1,34 +1,34 @@
 ja:
   activerecord:
     models:
-      answer: "回答"
+      comment: "コメント"
       category: "カテゴリー"
       language: "言語"
       license: "ライセンス"
-      problem: "タスク"
+      task: "タスク"
       user: "ユーザー"
       user_session: "ユーザーセッション"
 
     attributes: 
-      answer: 
+      comment: 
         description: "詳細"
         user: "ユーザー"
-        problem: "タスク"
+        task: "タスク"
 
       category: 
         name: "名前"
-        problems: "タスク"
+        tasks: "タスク"
         premium: "プレミアム"
 
       language: 
         name: "名前"
-        problems: "タスク"
+        tasks: "タスク"
 
       license: 
         name: "名前"
-        problems: "タスク"
+        tasks: "タスク"
 
-      problem: 
+      task: 
         title: "タイトル"
         description: "詳細"
         bounty: "報酬"
@@ -63,8 +63,8 @@ ja:
         persistence_token: "永続トークン"
         current_login_at: "現在のログイン日時"
         last_login_at: "最終ログイン日時"
-        answers: "回答"
-        problems: "タスク"
+        comments: "コメント"
+        tasks: "タスク"
         reputation: "評判"
 
   application:
@@ -72,29 +72,29 @@ ja:
     description: "ハッカーに助けてもらうサイト"
     keywords: "プログラム,ハッカー,オープンソース,仕事依頼,SOHO"
 
+  Create: "登録"
+  Delete: "削除"
   Update: "更新"
   Vote was successfully created: "ReTweetしました。"
-  Hack was successfully created: "回答を登録しました。"
-  Hack was successfully updated: "回答を更新しました。"
-  Hack was successfully deleted: "回答を削除しました。"
-  Hack was not deleted: "回答を削除できませんでした。"
-  Problem was successfully created: "タスクを登録しました。"
-  Problem was successfully updated: "タスクを更新しました。"
-  Problem was successfully deleted: "タスクを削除しました。"
-  Problem was not deleted: "タスクを削除できませんでした。"
+  Comment was successfully created: "コメントを登録しました。"
+  Comment was successfully updated: "コメントを更新しました。"
+  Comment was successfully deleted: "コメントを削除しました。"
+  Comment was not deleted: "コメントを削除できませんでした。"
+  Task was successfully created: "タスクを登録しました。"
+  Task was successfully updated: "タスクを更新しました。"
+  Task was successfully deleted: "タスクを削除しました。"
+  Task was not deleted: "タスクを削除できませんでした。"
   You have logged in successfully: "ログインしました。"
 
   label:
-    people: "People"
-    hacker: "Hacker"
-    problems: "タスク"
+    tasks: "タスク"
     dashboard: "ダッシュボード"
 
     please-select: "選択して下さい"
     favorite-language: "好きなプログラム言語"
 
-    nothing_posted_hacks: "解決実績がありません"
-    nothing_posted_problems: "依頼実績がありません"
+    nothing_posted_comments: "解決実績がありません"
+    nothing_posted_tasks: "依頼実績がありません"
     nothing_watching_tasks: "ウォッチしているタスクはありません"
 
     category:

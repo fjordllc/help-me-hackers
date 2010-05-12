@@ -1,11 +1,11 @@
 require 'test_helper'
 
-class ProblemTest < Test::Unit::TestCase
+class TaskTest < Test::Unit::TestCase
   should_belong_to :user
   should_belong_to :language
   should_belong_to :license
   should_belong_to :category
-  should_have_many :hacks
+  should_have_many :comments
   should_validate_presence_of :title
   should_validate_presence_of :description
   should_validate_presence_of :category

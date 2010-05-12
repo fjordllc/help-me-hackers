@@ -39,32 +39,24 @@ module ApplicationHelper
   end
 
   def users_title
-    v = if action_name == 'hacker'
-          'Hackers'
-        elsif action_name == 'hackee'
-          'Hackees'
-        else
-          'Users'
-        end
-
     if params[:language]
-      t("label.language.#{@language.name}") + ' - ' + v
+      t("label.language.#{@language.name}") + ' - Users'
     else
-      v
+      'Users'
     end
   end
 
-  def problems_title
+  def tasks_title
     if params[:category]
-      "Requests - #{t("label.category.#{@category.name}")}"
+      "Tasks - #{t("label.category.#{@category.name}")}"
     elsif params[:tag]
-      "Requests - #{@tag.name}"
+      "Tasks - #{@tag.name}"
     else
-      'Requests'
+      'Tasks'
     end
   end
 
-  def problems_class
+  def tasks_class
     if params[:category]
       "content #{@category.name}"
     elsif params[:tag]
@@ -74,12 +66,12 @@ module ApplicationHelper
     end
   end
 
-  def good_problem_retweet(problem)
-    good_retweet(problem.user.login, problem.title, problem_url(problem))
+  def good_task_retweet(task)
+    good_retweet(task.user.login, task.title, task_url(task))
   end
 
-  def good_hack_retweet(hack)
-    good_retweet(hack.user.login, hack.description, "#{problem_url(hack.problem)}#hack-#{hack.id}")
+  def good_comment_retweet(comment)
+    good_retweet(comment.user.login, comment.description, "#{task_url(comment.task)}#comment-#{comment.id}")
   end
 
   def tweeted?(object)
@@ -96,19 +88,19 @@ module ApplicationHelper
     end
   end
 
-  def problem_attrs(problem)
-    value = "problem content #{problem.category.name}"
-    value += ' solved' if problem.solved?
-    value += ' free' if problem.bounty.zero?
+  def task_attrs(task)
+    value = "task content #{task.category.name}"
+    value += ' solved' if task.solved?
+    value += ' free' if task.bounty.zero?
     {:class => value}
   end
 
-  def hack_attrs(hack)
-    option = {:id => "hack-#{hack.id}"}
-    if hack.correct
-      option.merge!({:class => 'hack correct'})
+  def comment_attrs(comment)
+    option = {:id => "comment-#{comment.id}"}
+    if comment.correct
+      option.merge!({:class => 'comment correct'})
     else
-      option.merge!({:class => 'hack'})
+      option.merge!({:class => 'comment'})
     end
     option
   end
@@ -129,6 +121,6 @@ module ApplicationHelper
   end
 
   def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
-    "Good! RT @#{name} #{truncate(title, :length => 60)} #{bitlize(problem_url(@problem))} #{hashtag}"
+    "Good! RT @#{name} #{truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
   end
 end

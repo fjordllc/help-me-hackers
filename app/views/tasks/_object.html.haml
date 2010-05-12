@@ -1,4 +1,4 @@
-- li_class = "problem " + object.category.name
+- li_class = "task " + object.category.name
 - li_class += ' solved' if object.solved?
 - li_class += ' free' if object.bounty == 0
 %li{:class => li_class}
@@ -7,20 +7,20 @@
     .statement
       - if object.solved?
         .resolver
-          %h4 Hacker
+          %h4 解決者
           %ul
             %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
             %li.name=link_to object.solver.login, user_path(object.solver)
       .description~ truncate(strip_tags(markdown object.description), :length => 150)
       %ul.tags
         - object.tags.each do |tag|
-          %li.tag=link_to h(tag.name), problems_by_tag_path(:tag => tag.name)
+          %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
   .sub.information
     %dl
       %dt.language プログラム言語
-      %dd.language== #{link_to t("label.language.#{object.language.name}"), problems_by_tag_path(:tag => object.language.name)}
+      %dd.language== #{link_to t("label.language.#{object.language.name}"), tasks_by_tag_path(:tag => object.language.name)}
       %dt.category カテゴリー
-      %dd.category=link_to t("label.category.#{object.category.name}"), problems_by_category_path(:category => object.category.name)
+      %dd.category=link_to t("label.category.#{object.category.name}"), tasks_by_category_path(:category => object.category.name)
       - if object.bounty > 0
         %dt.bounty 報奨金
         %dd.bounty
@@ -28,11 +28,10 @@
     %ul.retweet
       %li.count= object.votes.size
       %li.label retweet
-    %ul.hack
-      %li.count= object.hacks.size
-      %li.label Hack
+    %ul.comment
+      %li.count= object.comments.size
+      %li.label Comment
     .person
-      %h4 Hackee
       %ul
         %li.icon=link_to image_tag(object.user.profile_image_url), user_path(object.user)
         %li.name=link_to object.user.login, user_path(object.user)

@@ -1,0 +1,19 @@
+- form_for comment do |f|
+  = f.error_messages
+  = f.hidden_field :task_id
+  = f.hidden_field :user_id
+  = f.text_area :description, :size => '70x10'
+  %h4 プレビュー
+  .wrapper
+    :javascript
+      wmd_options = {
+        output: "Markdown"
+      }
+    .wmd-preview
+  = javascript_include_tag 'wmd/wmd'
+  %p
+    = f.check_box :answer
+    = f.label :answer, '回答としてコメントする'
+  %p
+    = f.submit '利用規約に同意してコメントする'
+    = link_to '利用規約', about_terms_path, :target => '_blank'

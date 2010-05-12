@@ -1,0 +1,12 @@
+- title "Unsolved - #{t('application.title')}"
+.title
+  %h2 Unsolved
+.content
+  - if @tasks.empty?
+    .empty
+      %p 該当するCommentがありません。
+      %p== 今なら目立つ！この隙に#{link_to '依頼', new_task_path}すれば解決してもらえるかも！
+  - else
+  %ul.tasks
+    = render :partial => 'object', :collection => @tasks
+  -# will_paginate(@tasks)

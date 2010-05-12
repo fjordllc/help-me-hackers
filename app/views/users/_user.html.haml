@@ -14,9 +14,9 @@
     - else
       %span.unselected 未選択
   %dt.solved 解決タスク数
-  %dd.solved= user.hacks.correct.size
-  %dt.problem 登録タスク数
-  %dd.problem= user.problems.size
+  %dd.solved= user.comments.correct.size
+  %dt.task 登録タスク数
+  %dd.task= user.tasks.size
   %dt.bounty 合計獲得金額
   %dd.bounty
     %span= number_to_currency user.total_prize
