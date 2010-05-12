@@ -418,7 +418,7 @@ div.tasks_show div#main div.content div.title div.good{
 	float: right;
 	margin-top: 3px;
 }
-div.tasks_show div#main div.content div.user div.good{
+div.tasks_show div#main div.content div.commenter div.good{
 	float: right;
 	padding-bottom: 15px;
 }
@@ -1334,7 +1334,7 @@ div.tasks_show div#main div.description h5,
 
 
 
-div.tasks_show div#main div.content div.section ul.comments li.comment div.user {
+div.tasks_show div#main div.content div.section ul.comments li.comment div.commenter {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1348,7 +1348,7 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.user 
 	background-repeat: no-repeat;
 	margin-left: 10px;
 }
-div.tasks_show div#main div.content div.section ul.comments li.comment div.user {
+div.tasks_show div#main div.content div.section ul.comments li.comment div.commenter div.user {
 	clear: both;
 	background-image: url(../images/user.gif);
 	background-position: left top;
@@ -1360,16 +1360,16 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.user 
 
 
 
-div.tasks_show div#main div.content div.section ul.comments li.correct div.user {
+div.tasks_show div#main div.content div.section ul.comments li.correct div.commenter {
 	background-image: url(../images/correct_user.gif);
 }
-div.tasks_show div#main div.content div.section ul.comments li.correct div.user {
+div.tasks_show div#main div.content div.section ul.comments li.correct div.commenter div.user {
 	background-image: url(../images/correct_hacker.gif);
 }
 
 
 
-div.tasks_show div#main div.content div.section ul.comments li.comment div.user h4 {
+div.tasks_show div#main div.content div.section ul.comments li.comment div.commenter h4 {
 	display:block;
 	font-size:12px;
 	font-weight:bold;
@@ -1380,35 +1380,32 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.user 
 }
 
 
-div.tasks_show div#main div.content div.section ul.comments li.comment ul.user li.icon {
+div.tasks_show div#main div.commenter div.user li.icon {
 	float: left;
 	display: block;
 	height: 32px;
 	width: 32px;
 	margin-bottom: 8px;
 }
-div.tasks_show div#main div.content div.section ul.comments li.comment ul.user li.icon img {
+div.tasks_show div#main div.commenter div.user li.icon img {
 	height: 32px;
 	width: 32px;
 }
-div.tasks_show div#main div.content div.section ul.comments li.comment ul.user li.name {
-	font-size: 10px;
-	float: right;
-	width: 102px;
-	display: block;
-	white-space: -moz-pre-wrap; /* Mozilla */
-	white-space: -pre-wrap; /* Opera 4-6 */
-	white-space: -o-pre-wrap; /* Opera 7 */
-	white-space: pre-wrap; /* CSS3 */
-	word-wrap: break-word; /* IE */
-	line-height: 1.2;
+div.tasks_show div#main div.commenter div.user li.name {
+display:block;
+float:right;
+font-size:10px;
+line-height:1.2;
+white-space:pre-wrap;
+width:102px;
+word-wrap:break-word;
 }
-div.tasks_show div#main div.content div.section ul.comments ul.user li.thanks {
+div.tasks_show div#main div.content div.section ul.comments ul.commenter li.thanks {
 	clear: both;
 	margin-bottom: -2px;
 }
-div.tasks_show div#main div.content div.section ul.comments li.comment .user input,
-div.tasks_show div#main div.content div.section ul.comments li.comment .thanks input {
+div.tasks_show div#main div.content div.section ul.comments li.commenter .user input,
+div.tasks_show div#main div.content div.section ul.comments li.commenter .thanks input {
 	font-size: 11px;
 	clear: both;
 	width: 146px;
