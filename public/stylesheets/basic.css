@@ -836,7 +836,7 @@ div#main .task div.sub {
 	background-image: url(../images/task_sub.jpg);
 	background-repeat: no-repeat;
 	line-height: 1;
-	background-position: center 90px;
+	background-position: center 89px;
 	margin-top: -5px;
 }
 div#main div.task div.sub {
@@ -1023,12 +1023,12 @@ div#main ul.tasks li.solved div.information dl dd.bounty span {
 div#main .task div.information ul.retweet,
 div#main .task div.information ul.comment {
 	font-weight: bold;
-	line-height: 30px;
-	height: 30px;
+	line-height: 29px;
+	height: 29px;
 	text-align: center;
 	width: 72px;
 	font-size: 18px;
-	padding-top: 2px;
+	padding-top: 3px;
 }
 div#main .task div.information li.label {
 	display: none;
@@ -2205,12 +2205,12 @@ div#main div.content div.profile_list li {
 	margin-right: 0px;
 	margin-bottom: 5px;
 	margin-left: 0px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-top-radius: 8px;
 	background-image: url(../images/profile_lists_li.gif);
 	background-repeat: repeat-x;
 	background-position: left bottom;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-top-radius: 8px;
 }
 div#main div.content div.profile_list {
 	display: block;
@@ -2225,11 +2225,27 @@ div#main div.content div.profile_list ul {
 div#main div.content div.profile_list li div,
 div#main div.content div.profile_list li div.title {
 	display: block;
-	margin: 0px;
-	padding: 0px;
+	padding: 5px;
 	float: left;
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-top-radius: 8px;
+}
+div#main div.content div.profile_list li div.goods {
+	display: block;
+	background-color: #FF6699;
+	font-weight: bold;
+}
+div#main div.content div.profile_list li div.comments {
+	display: block;
+	background-color: #D4FD18;
+	font-weight: bold;
 }
