@@ -2,5 +2,5 @@
   %h2 トップページ
 .binding=link_to 'help-me-hackersの使い方', '/about'
 .content
-  %ul.tasks
+  %ul.tasks.tasks_list
     = render :partial => 'tasks/object', :collection => @tasks

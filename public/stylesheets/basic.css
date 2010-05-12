@@ -96,18 +96,18 @@ div#header .nav li {
 	display: inline;
 	padding-right: 10px;
 }
-div.problems_index div#main div.title h2 {
+div.tasks_index div#main div.title h2 {
 	text-indent: -9999px;
 	background-image: url(../images/requests_h2.gif);
 }
 
-div.problems_wanted div#main div.title h2 {
+div.tasks_wanted div#main div.title h2 {
 	text-indent: -9999px;
-	background-image: url(../images/problems_wanted_h2.gif);
+	background-image: url(../images/tasks_wanted_h2.gif);
 }
-div.problems_unsolved div#main div.title h2 {
+div.tasks_unsolved div#main div.title h2 {
 	text-indent: -9999px;
-	background-image: url(../images/problems_unsolved_h2.gif);
+	background-image: url(../images/tasks_unsolved_h2.gif);
 }
 div.users_hacker div#main div.title h2 {
 	text-indent: -9999px;
@@ -171,7 +171,7 @@ div#wrapper .nav ul li span.current {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 }
-div#wrapper .nav ul li.add_problem {
+div#wrapper .nav ul li.add_task {
 	display: block;
 	float: right;
 	margin-top: -5px;
@@ -179,14 +179,14 @@ div#wrapper .nav ul li.add_problem {
 	height: 35px;
 	padding-right: 10px;
 }
-div#wrapper .nav ul li.add_problem a {
+div#wrapper .nav ul li.add_task a {
 	display: block;
 	width: 234px;
 	height: 35px;
 	margin: 0px;
 	padding: 0px;
 	text-indent: -9999px;
-	background-image: url(../images/add_problem.gif);
+	background-image: url(../images/add_task.gif);
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	-o-border-radius: 0px;
@@ -222,13 +222,13 @@ div#wrapper .nav ul li a:active {
 	color: #FFFFFF;
 	background-position: right top;
 }
-div#wrapper .nav ul li.add_problem a:link,
-div#wrapper .nav ul li.add_problem a:visited {
+div#wrapper .nav ul li.add_task a:link,
+div#wrapper .nav ul li.add_task a:visited {
 	background-color: #bac682;
 	background-position: left top;
 }
-div#wrapper .nav ul li.add_problem a:hover,
-div#wrapper .nav ul li.add_problem a:active {
+div#wrapper .nav ul li.add_task a:hover,
+div#wrapper .nav ul li.add_task a:active {
 	background-color: #636D31;
 	color: #FFFFFF;
 	background-position: right -35px;
@@ -276,7 +276,7 @@ div#main div.main .title {
 	border-bottom-style: none;
 	border-left-style: none;
 }
-div.problems_show div#main div.title h2 {
+div.tasks_show div#main div.title h2 {
 	height: 64px;
 }
 
@@ -296,17 +296,17 @@ div#main div.content {
 	padding-right: 10px;
 	padding-bottom: 15px;
 }
-div.problems_new div.content {
+div.tasks_new div.content {
 	padding-top: 15px;
 }
 
 
-div.hacks_edit div#main div.content {
+div.comments_edit div#main div.content {
 	padding-top: 15px;
 }
 div#main div.binding {
 	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	margin-right: 15px;
 	margin-left: 35px;
 	background-repeat: no-repeat;
@@ -383,19 +383,19 @@ div#main div.content div#flash div {
 	padding-bottom: 2px;
 	padding-left: 8px;
 }
-div.problems_show div#main div.content div.main div.title {
+div.tasks_show div#main div.content div.main div.title {
 	padding-bottom: 20px;
-	background-image: url(../images/problem_title.gif);
+	background-image: url(../images/task_title.gif);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	padding-top: 0px;
 	padding-right: 0px;
 	clear: both;
 }
-div.problems_show div#main div.solved div.main div.title {
+div.tasks_show div#main div.solved div.main div.title {
 	background-image: url(../images/solved_title.gif);
 }
-div.problems_show div#main div.content div.good{
+div.tasks_show div#main div.content div.good{
 	height: 16px;
 	width: 46px;
 	font-size: 10px;
@@ -410,26 +410,26 @@ div.problems_show div#main div.content div.good{
 	color: #FFFFFF;
 	background-repeat: no-repeat;
 }
-div.problems_show div#main div.content div.tweeted{
+div.tasks_show div#main div.content div.tweeted{
 	cursor: default;
 	background-image: url(../images/tweeted.gif);
 }
-div.problems_show div#main div.content div.title div.good{
+div.tasks_show div#main div.content div.title div.good{
 	float: right;
 	margin-top: 3px;
 }
-div.problems_show div#main div.content div.hacker div.good{
+div.tasks_show div#main div.content div.hacker div.good{
 	float: right;
 	padding-bottom: 15px;
 }
-div.problems_show div#main div.content div.good li.label{
+div.tasks_show div#main div.content div.good li.label{
 	display: none;
 }
 
 
 
 
-div.problems_show div#main div.content form.new_vote p{
+div.tasks_show div#main div.content form.new_vote p{
 	display: block;
 	font-size: 12px;
 	font-weight: bold;
@@ -454,11 +454,11 @@ form.new_vote{
 	-moz-border-radius:8px;
 	-opera-border-radius:8px;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote{
+div.tasks_show div#main div.content div.main div.title form.new_vote{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack form.new_vote {
+div.tasks_show div#main div.content div.section ul.comments li.comment form.new_vote {
 	margin-bottom: 10px;
 	float: left;
 	width: 570px;
@@ -484,20 +484,20 @@ form.new_vote div.text input {
 	height: 20px;
 	color: #777777;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote div.text input{
+div.tasks_show div#main div.content div.main div.title form.new_vote div.text input{
 	width: 428px;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack form.new_vote div.text input{
+div.tasks_show div#main div.content div.section ul.hacks li.comment form.new_vote div.text input{
 	width: 478px;
 }
-div.problems_show form.new_vote div.button {
+div.tasks_show form.new_vote div.button {
 	display: block;
 	float: right;
 	height: 28px;
 	width: 75px;
 }
-div.problems_show form.new_vote div.button input,
-div.problems_show form.new_vote div.button a {
+div.tasks_show form.new_vote div.button input,
+div.tasks_show form.new_vote div.button a {
 	border-radius:8px;
 	-webkit-border-radius:8px;
 	-moz-border-radius:8px;
@@ -511,10 +511,10 @@ div.problems_show form.new_vote div.button a {
 	background-image: url(../images/good_button.gif);
 	text-indent: -9999px;
 }
-div.problems_show div#main div.content div.main div.title form.new_vote div.button a{
+div.tasks_show div#main div.content div.main div.title form.new_vote div.button a{
 	display: block;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack form.new_vote div.button a{
+div.tasks_show div#main div.content div.section ul.comments li.comment form.new_vote div.button a{
 	display: block;
 }
 
@@ -524,10 +524,10 @@ div.problems_show div#main div.content div.section ul.hacks li.hack form.new_vot
 
 
 
-div.problems_show div#main div.content div.title h3 {
+div.tasks_show div#main div.content div.title h3 {
 	margin-bottom: 0px;
 }
-div.problems_show div#main div.content div.title h3 a {
+div.tasks_show div#main div.content div.title h3 a {
 	display: block;
 	font-weight: bold;
 	text-decoration: none;
@@ -541,47 +541,47 @@ div.problems_show div#main div.content div.title h3 a {
 	background-position: right center;
 }
 
-div.problems_show div.title .class-function-makin a {
+div.tasks_show div.title .class-function-makin a {
 	color: #115894;
 	background-image: url(../images/class-function-making.gif);
 }
-div.problems_show div#main div.content div.title h2 .data-collection-and-making a {
+div.tasks_show div#main div.content div.title h2 .data-collection-and-making a {
 	background-image: url(../images/data-collection-and-making.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .debugging a {
+div.tasks_show div#main div.content div.title h2 .debugging a {
 	background-image: url(../images/debugging.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .document-translation a {
+div.tasks_show div#main div.content div.title h2 .document-translation a {
 	background-image: url(../images/document-translation.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .library-making a {
+div.tasks_show div#main div.content div.title h2 .library-making a {
 	background-image: url(../images/library-making.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .plugin-making a {
+div.tasks_show div#main div.content div.title h2 .plugin-making a {
 	background-image: url(../images/plugin-making.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .programming-quiz a {
+div.tasks_show div#main div.content div.title h2 .programming-quiz a {
 	background-image: url(../images/programming-quiz.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .prototype-making a {
+div.tasks_show div#main div.content div.title h2 .prototype-making a {
 	background-image: url(../images/prototype-making.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .software-making a {
+div.tasks_show div#main div.content div.title h2 .software-making a {
 	background-image: url(../images/software-making.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .software-multilingualization a {
+div.tasks_show div#main div.content div.title h2 .software-multilingualization a {
 	background-image: url(../images/software-multilingualization.gif);
 	color: #115894;
 }
-div.problems_show div#main div.content div.title h2 .technology-study a {
+div.tasks_show div#main div.content div.title h2 .technology-study a {
 	background-image: url(../images/technology-study.gif);
 	color: #115894;
 }
@@ -619,14 +619,14 @@ div#footer {
 div.index #main h2 {
 	background-image: url(../images/top_h2.gif);
 }
-div#main ul.problems {
+div#main ul.tasks {
 	margin-left: 0px;
 	margin-top: -10px;
 }
 
 
  /* --clearfix-- */  
-div#main ul.problems li.problem:after
+div#main ul.tasks li.task:after
  {
 section: ".";
 display: block;
@@ -636,17 +636,17 @@ visibility: hidden;
 }
 
 /* Win IE7 */
-*:first-child+html div#main ul.problems li.problem
+*:first-child+html div#main ul.tasks li.task
 {
 height: 1%;
 }
 
-div#main ul.problems li.problem {
+div#main ul.tasks li.task {
   min-height: 1px;
   display: block;  /* ブロックレベル要素に */
 }
 
-* html div#main ul.problems li.problem {
+* html div#main ul.tasks li.task {
   height: 1px;
   /*¥*//*/
   height: auto;
@@ -655,7 +655,7 @@ div#main ul.problems li.problem {
 }
 
 /* Mac IE\*//*/
-div#main ul.problems li.problem {
+div#main ul.tasks li.task {
 display: inline-table;
 }
 /* End Mac IE */
@@ -737,15 +737,15 @@ div#sub div.section .to_archive {
 
 
 /* URL:top */
-div.top div#main ul.problems li.problem h3.title {
+div.top div#main ul.tasks li.task h3.title {
 	float: right;
 	width: 580px;
 	font-size: 16px;
 }
 
 
-/* URL:problems */
-div#main ul.problems li.problem {
+/* URL:tasks */
+div#main ul.tasks li.task {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #b9b9b9;
@@ -755,42 +755,42 @@ div#main ul.problems li.problem {
 	padding-top: 20px;
 	padding-bottom: 15px;
 	}
-div#main ul.problems li.problem:last-child {
+div#main ul.tasks_list li.task:last-child {
 	border-bottom-style: none;
 }
-div#main ul.problems li.problem:first-child {
+div#main ul.tasks_list li.task:first-child {
 	padding-top: 25px;
 }
-div#main ul.problems li.problem h3.title {
+div#main ul.tasks li.task h3.title {
 	display: block;
 	line-height: 30px;
 	font-size: 20px;
 	font-weight: bold;
 	padding-right: 5px;
 	padding-bottom: 20px;
-	background-image: url(../images/problem_title.gif);
+	background-image: url(../images/task_title.gif);
 	padding-top: 0px;
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	margin-bottom: 8px;
 }
-div#main ul.problems li.solved h3.title {
+div#main ul.tasks li.solved h3.title {
 	background-image: url(../images/solved_title.gif);
 }
-div#main ul.problems li.problem .description {
+div#main ul.tasks li.task .description {
 	display: block;
 	line-height: 1.5;
 	font-size: 14px;
 }
-div#main .problem ul.tags {
+div#main .task ul.tags {
 	clear: both;
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-div#main .problem ul.tags li {
+div#main .task ul.tags li {
 	display: inline;
 }
-div#main .problem ul.tags li a {
+div#main .task ul.tags li a {
 	display: block;
 	float: left;
 	line-height: 24px;
@@ -805,71 +805,71 @@ div#main .problem ul.tags li a {
 	text-decoration: none;
 	margin-bottom: 5px;
 }
-div#main .problem ul.tags li a:link,
-div#main .problem ul.tags li a:visited {
+div#main .task ul.tags li a:link,
+div#main .task ul.tags li a:visited {
 	background-position: right top;
 	border-left-width: 1px;
 	border-left-style: solid;
 	border-left-color: #223da3;
 	color: #FFFFFF;
 }
-div#main .problem ul.tags li a:hover,
-div#main .problem ul.tags li a:active {
+div#main .task ul.tags li a:hover,
+div#main .task ul.tags li a:active {
 	background-position: right -24px;
 	border-left-width: 1px;
 	border-left-style: solid;
 	border-left-color: #57c9c0;
 	color: #ec189a;
 }
-div#main .problem ul.tags {
+div#main .task ul.tags {
 	clear: both;
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-div#main .problem .main {
+div#main .task .main {
 	width: 535px;
 	float: right;
 }
-div#main .problem div.sub {
+div#main .task div.sub {
 	float: left;
 	width: 155px;
-	background-image: url(../images/probrem_sub.jpg);
+	background-image: url(../images/task_sub.jpg);
 	background-repeat: no-repeat;
 	line-height: 1;
-	background-position: center bottom;
+	background-position: center 90px;
 	margin-top: -5px;
 }
-div#main div.problem div.sub {
+div#main div.task div.sub {
 	margin-top: 10px;
 }
-div#main .problem div.information dl,
-div#main .problem div.information dt,
-div#main .problem div.information dd {
+div#main .task div.information dl,
+div#main .task div.information dt,
+div#main .task div.information dd {
 	display: block;
 }
-div#main .problem div.information dl {
+div#main .task div.information dl {
 	padding-bottom: 7px;
-	background-image: url(../images/problem_sub_dl.gif);
+	background-image: url(../images/task_sub_dl.gif);
 	background-repeat: no-repeat;
 	padding-right: 5px;
 	padding-left: 5px;
 }
-div#main ul.problems li.solved div.information dl {
+div#main ul.tasks li.solved div.information dl {
 	background-image: url(../images/solved_sub_dl.gif);
 }
 
 
-div#main .problem div.information dt {
+div#main .task div.information dt {
 	display: none;
 }
-div#main .problem div.information dd.language {
+div#main .task div.information dd.language {
 	line-height: 21px;
 	height: 21px;
 	font-size: 12px;
 	font-weight: bold;
 	padding-top: 8px;
 }
-div#main .problem div.information dd.language a {
+div#main .task div.information dd.language a {
 	line-height: 20px;
 	height: 20px;
 	font-size: 12px;
@@ -887,7 +887,7 @@ div#main .problem div.information dd.language a {
 	background-color: #EDFF9B;
 	margin-bottom: 4px;
 }
-div#main .problem div.information dd.category {
+div#main .task div.information dd.category {
 	line-height: 20px;
 	height: 20px;
 	font-size: 12px;
@@ -901,7 +901,7 @@ div#main .problem div.information dd.category {
 	text-align: center;
 	padding-bottom: 1px;
 }
-div#main .problem div.information dd.category a {
+div#main .task div.information dd.category a {
 	line-height: 22px;
 	height: 22px;
 	font-size: 12px;
@@ -1003,7 +1003,7 @@ div#main .technology-study div.information dd.category a {
 }
 
 
-div#main .problem div.information dd.bounty {
+div#main .task div.information dd.bounty {
 	margin-top: 10px;
 	font-weight: bold;
 	color: #EC189E;
@@ -1011,17 +1011,17 @@ div#main .problem div.information dd.bounty {
 	height: 27px;
 	text-align: center;
 }
-div#main .problem div.information dl dd.bounty span {
+div#main .task div.information dl dd.bounty span {
 	font-weight: bold;
 	color: #ec189a;
 	font-size: 16px;
 }
-div#main ul.problems li.solved div.information dl dd.bounty span {
+div#main ul.tasks li.solved div.information dl dd.bounty span {
 	color: #a3a3a3;
 }
 
-div#main .problem div.information ul.retweet,
-div#main .problem div.information ul.hack {
+div#main .task div.information ul.retweet,
+div#main .task div.information ul.comment {
 	font-weight: bold;
 	line-height: 30px;
 	height: 30px;
@@ -1030,29 +1030,29 @@ div#main .problem div.information ul.hack {
 	font-size: 18px;
 	padding-top: 2px;
 }
-div#main .problem div.information li.label {
+div#main .task div.information li.label {
 	display: none;
 }
-div#main .problem div.information ul.retweet {
+div#main .task div.information ul.retweet {
 	float: left;
 	padding-left: 5px;
 }
-div#main .problem div.information ul.hack {
+div#main .task div.information ul.comment {
 	float: right;
 	padding-right: 5px;
 }
-div#main .problem div.information li.icon {
+div#main .task div.information li.icon {
 	display: block;
 	height: 33px;
 	width: 33px;
 	float: left;
 	background-color: #FFFFFF;
 }
-div#main .problem div.information li.icon img {
+div#main .task div.information li.icon img {
 	height: 32px;
 	width: 32px;
 }
-div#main .problem div.information li.name {
+div#main .task div.information li.name {
 	font-size: 11px;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
@@ -1064,14 +1064,14 @@ div#main .problem div.information li.name {
 	float: right;
 	width: 102px;
 }
-div#main .problem div.information div.person {
+div#main .task div.information div.person {
 	clear: both;
 	padding-top: 14px;
 	padding-bottom: 10px;
 	padding-right: 7px;
 	padding-left: 7px;
 }
-div#main .problem div.information div.person h4 {
+div#main .task div.information div.person h4 {
 	font-size: 12px;
 	display: block;
 	text-align: center;
@@ -1080,10 +1080,10 @@ div#main .problem div.information div.person h4 {
 	height: 12px;
 	font-weight: bold;
 }
-div#main .problem div.information div.person ul {
-	padding-top: 4px;
+div#main .task div.information div.person ul {
+	padding-top: 15px;
 }
-div#main .problem div.information div.created_at {
+div#main .task div.information div.created_at {
 	clear: both;
 	text-align: center;
 	border: 2px solid #C0C0C0;
@@ -1116,34 +1116,34 @@ div#main .problem div.information div.created_at {
 
 
 /* resolved */
-div#main ul.problems li.resolved {
+div#main ul.tasks li.resolved {
 	margin-bottom: 10px;
 	background-color: #fcffb0;
 	background-repeat: no-repeat;
 	background-position: left center;
 }
-div#main ul.problems li.resolved div.user dl.bounty {
+div#main ul.tasks li.resolved div.user dl.bounty {
 	background-color: #d7d7d7;
 }
-div#main ul.problems li.problem div.resolver {
+div#main ul.tasks li.task div.resolver {
 	float: right;
 	width: 146px;
 	height: 70px;
 	margin-left: 10px;
-	background-image: url(../images/problem_resolver.gif);
+	background-image: url(../images/task_resolver.gif);
 	padding-top: 10px;
 	padding-right: 7px;
 	padding-bottom: 5px;
 	padding-left: 7px;
 	margin-top: -10px;
 }
-div#main ul.problems li.problem div.resolver li.icon {
+div#main ul.tasks li.task div.resolver li.icon {
 	display: block;
 	height: 34px;
 	width: 34px;
 	float: left;
 }
-div#main ul.problems li.problem div.resolver h4 {
+div#main ul.tasks li.task div.resolver h4 {
 	display: block;
 	font-size: 12px;
 	line-height: 12px;
@@ -1155,27 +1155,27 @@ div#main ul.problems li.problem div.resolver h4 {
 	color: #666666;
 	text-align: center;
 }
-div#main ul.problems li.problem div.resolver li.icon img {
+div#main ul.tasks li.task div.resolver li.icon img {
 	height: 32px;
 	width: 32px;
 }
-div#main ul.problems li.problem div.resolver li.icon a img {
+div#main ul.tasks li.task div.resolver li.icon a img {
 	height: 32px;
 	width: 32px;
 }
-div#main ul.problems li.problem div.resolver li.icon a:link img,
-div#main ul.problems li.problem div.resolver li.icon a:visited img {
+div#main ul.tasks li.task div.resolver li.icon a:link img,
+div#main ul.tasks li.task div.resolver li.icon a:visited img {
 	height: 32px;
 	width: 32px;
 	border: 2px solid #FFFF00;
 }
-div#main ul.problems li.problem div.resolver li.icon a:hover img,
-div#main ul.problems li.problem div.resolver li.icon a:active img {
+div#main ul.tasks li.task div.resolver li.icon a:hover img,
+div#main ul.tasks li.task div.resolver li.icon a:active img {
 	height: 32px;
 	width: 32px;
 	border: 2px solid #F141AD;
 }
-div#main ul.problems li.problem div.resolver li.name {
+div#main ul.tasks li.task div.resolver li.name {
 	font-size: 11px;
 	white-space: -moz-pre-wrap; /* Mozilla */
 	white-space: -pre-wrap; /* Opera 4-6 */
@@ -1187,37 +1187,37 @@ div#main ul.problems li.problem div.resolver li.name {
 	float: right;
 	width: 102px;
 }
-div#main ul.problems li.resolved ul.hack {
+div#main ul.tasks li.resolved ul.comment {
 	background-color: #FFCF63;
 	color: #5c0404;
 }
 
-div#main ul.problems li.resolved .section {
+div#main ul.tasks li.resolved .section {
 	float: right;
 }
-div#main ul.problems li.resolved ul.hack,
-div#main ul.problems li.resolved ul.view {
+div#main ul.tasks li.resolved ul.comment,
+div#main ul.tasks li.resolved ul.view {
 	float: right;
 	clear: none;
 	}
 
 
-/* URL:problems_show */
+/* URL:tasks_show */
 div.ploblems_show div#main div.section {
 	margin-left: 40px;
 }
 div.ploblems_show div#main div.description {
 	padding-top: 15px;
 }
-div.problems_show div#main div.main {
+div.tasks_show div#main div.main {
 	font-size: 14px;
 	float: right;
 	width: 535px;
 	padding-top: 15px;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack,
+div.tasks_show div#main div.content div.section ul.comments li.comment,
 #main div.content div.post div.wrapper,
-div.hacks_edit #main div.content div.wrapper {
+div.comments_edit #main div.content div.wrapper {
 	display: block;
 	border: 1px solid #E6EAD4;
 	margin-bottom: 20px;
@@ -1231,12 +1231,12 @@ div.hacks_edit #main div.content div.wrapper {
 	padding-left: 15px;
 	clear: both;
 	}
-div.problems_show div#main div.content div.section ul.hacks li.correct {
+div.tasks_show div#main div.content div.section ul.comments li.correct {
 	padding-right: 7px;
 	padding-left: 9px;
 	border: 3px solid #d4fd18;
 	}
-div.problems_show div#main div.content div.section ul.user li.correct {
+div.tasks_show div#main div.content div.section ul.user li.correct {
 	padding-right: 0px;
 	padding-left: 0px;
 	border: none !important;
@@ -1244,17 +1244,17 @@ div.problems_show div#main div.content div.section ul.user li.correct {
 
 
 
-div.problems_show div#main div.content div.section div.description,
+div.tasks_show div#main div.content div.section div.description,
 #main div.content div.wmd-preview {
 	font-size: 14px;
 	padding-top: 0px;
 }
-div.problems_show div#main div.content p,
+div.tasks_show div#main div.content p,
 #main div.content div.wmd-preview p {
 	margin-bottom: 1.4em;
 	line-height: 1.6;
 }
-div.problems_show div#main div.description ul,
+div.tasks_show div#main div.description ul,
 #main div.content div.wmd-preview ul {
 	margin-bottom: 1.4em;
 	line-height: 1.4;
@@ -1262,13 +1262,13 @@ div.problems_show div#main div.description ul,
 	list-style-position: outside;
 	list-style-type: disc;
 }
-div.problems_show div#main div.description li ul,
+div.tasks_show div#main div.description li ul,
 #main div.content div.wmd-preview li ul,
-div.problems_show div#main div.description li ol,
+div.tasks_show div#main div.description li ol,
 #main div.content div.wmd-preview li ol {
 	padding-top: 20px;
 }
-div.problems_show div#main div.description ol,
+div.tasks_show div#main div.description ol,
 #main div.content div.wmd-preview ol
  {
 	margin-bottom: 1.4em;
@@ -1277,15 +1277,15 @@ div.problems_show div#main div.description ol,
 	list-style-position: outside;
 	list-style-type: decimal;
 }
-div.problems_show div#main div.description li,
+div.tasks_show div#main div.description li,
 #main div.content div.wmd-preview li {
 	margin-bottom: 0.8em;
 }
-div.problems_show div#main div.description h1,
+div.tasks_show div#main div.description h1,
 #main div.content div.wmd-preview h1 {
 	margin-bottom: 0.8em;
 }
-div.problems_show div#main div.description h1,
+div.tasks_show div#main div.description h1,
 #main div.content div.wmd-preview h1 {
 	padding: 0px;
 	border-top-style: none;
@@ -1299,7 +1299,7 @@ div.problems_show div#main div.description h1,
 	margin-bottom: 15px;
 	margin-left: 0px;
 }
-div.problems_show div#main div.description h2,
+div.tasks_show div#main div.description h2,
 #main div.content div.wmd-preview h2 {
 	padding: 0px;
 	border-top-style: none;
@@ -1313,18 +1313,18 @@ div.problems_show div#main div.description h2,
 	margin-bottom: 15px;
 	margin-left: 0px;
 }
-div.problems_show div#main div.description h3,
+div.tasks_show div#main div.description h3,
 #main div.content div.wmd-preview h3 {
 	margin-bottom: 15px;
 	font-size: 18px;
 }
-div.problems_show div#main div.description h4,
+div.tasks_show div#main div.description h4,
 #main div.content div.wmd-preview h4 {
 	margin-bottom: 15px;
 	font-size: 16px;
 	font-weight: bold;
 }
-div.problems_show div#main div.description h5,
+div.tasks_show div#main div.description h5,
 #main div.content div.wmd-preview h5 {
 	margin-bottom: 15px;
 	font-size: 14px;
@@ -1334,7 +1334,7 @@ div.problems_show div#main div.description h5,
 
 
 
-div.problems_show div#main div.content div.section ul.hacks li.hack div.hacker {
+div.tasks_show div#main div.content div.section ul.comments li.comment div.hacker {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1348,7 +1348,7 @@ div.problems_show div#main div.content div.section ul.hacks li.hack div.hacker {
 	background-repeat: no-repeat;
 	margin-left: 10px;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack div.user {
+div.tasks_show div#main div.content div.section ul.comments li.comment div.user {
 	clear: both;
 	background-image: url(../images/user.gif);
 	background-position: left top;
@@ -1360,16 +1360,16 @@ div.problems_show div#main div.content div.section ul.hacks li.hack div.user {
 
 
 
-div.problems_show div#main div.content div.section ul.hacks li.correct div.hacker {
+div.tasks_show div#main div.content div.section ul.comments li.correct div.hacker {
 	background-image: url(../images/correct_user.gif);
 }
-div.problems_show div#main div.content div.section ul.hacks li.correct div.user {
+div.tasks_show div#main div.content div.section ul.comments li.correct div.user {
 	background-image: url(../images/correct_hacker.gif);
 }
 
 
 
-div.problems_show div#main div.content div.section ul.hacks li.hack div.user h4 {
+div.tasks_show div#main div.content div.section ul.comments li.comment div.user h4 {
 	display:block;
 	font-size:12px;
 	font-weight:bold;
@@ -1380,18 +1380,18 @@ div.problems_show div#main div.content div.section ul.hacks li.hack div.user h4 
 }
 
 
-div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.icon {
+div.tasks_show div#main div.content div.section ul.comments li.comment ul.user li.icon {
 	float: left;
 	display: block;
 	height: 32px;
 	width: 32px;
 	margin-bottom: 8px;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.icon img {
+div.tasks_show div#main div.content div.section ul.comments li.comment ul.user li.icon img {
 	height: 32px;
 	width: 32px;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.name {
+div.tasks_show div#main div.content div.section ul.comments li.comment ul.user li.name {
 	font-size: 10px;
 	float: right;
 	width: 102px;
@@ -1403,12 +1403,12 @@ div.problems_show div#main div.content div.section ul.hacks li.hack ul.user li.n
 	word-wrap: break-word; /* IE */
 	line-height: 1.2;
 }
-div.problems_show div#main div.content div.section ul.hacks ul.user li.thanks {
+div.tasks_show div#main div.content div.section ul.comments ul.user li.thanks {
 	clear: both;
 	margin-bottom: -2px;
 }
-div.problems_show div#main div.content div.section ul.hacks li.hack .user input,
-div.problems_show div#main div.content div.section ul.hacks li.hack .thanks input {
+div.tasks_show div#main div.content div.section ul.comments li.comment .user input,
+div.tasks_show div#main div.content div.section ul.comments li.comment .thanks input {
 	font-size: 11px;
 	clear: both;
 	width: 146px;
@@ -1475,15 +1475,15 @@ div#main div.content ul.loggedin li.delete a:active {
 }
 
 
-div.problems_show div#main div.content h3 {
+div.tasks_show div#main div.content h3 {
 	display: block;
 	margin-bottom: 15px;
 }
-div.problems_show div#main div.content h3 {
+div.tasks_show div#main div.content h3 {
 	font-size: 18px;
 	font-weight: bold;
 }
-div.problems_show div#main div.content div.post h3 {
+div.tasks_show div#main div.content div.post h3 {
 	display: inline;
 }
 #main div.content div.section {
@@ -1497,8 +1497,8 @@ div.problems_show div#main div.content div.post h3 {
 	border-bottom-color: #B9B9B9;
 	border-left-color: #B9B9B9;
 }
-.problems_new #main div.content div.post,
-.problems_create #main div.content div.post {
+.tasks_new #main div.content div.post,
+.tasks_create #main div.content div.post {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1626,27 +1626,27 @@ color:#006600;
 	font-size: 16px;
 	line-height: 20px;
 }
-#hack_description,
-#problem_description {
+#comment_description,
+#task_description {
 	width: 100%;
 	margin-bottom: 20px;
 	height: 300px;
 }
 #main .content .post h4,
-div.hacks_edit div#main div.content h4 {
+div.comments_edit div#main div.content h4 {
 	margin-bottom: 20px;
 	font-size: 14px;
 	font-weight: bold;
 	display: block;
 }
-form#new_hack {
+form#new_comment {
 	margin-top: 5px;
 }
 
 
 
 
-div.hacks_edit div#main div.content div.section {
+div.comments_edit div#main div.content div.section {
 	margin-right: 20px;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -1821,7 +1821,7 @@ div#main div.content .performance dd.favorite_language a {
 }
 	
 div#main div.content .performance dd.solved,
-div#main div.content .performance dd.problem {
+div#main div.content .performance dd.task {
 	font-weight: bold;
 	line-height: 30px;
 	height: 30px;
@@ -1839,7 +1839,7 @@ div#main div.content .performance dd.solved {
 	background-position: left top;
 	padding-right: 1px;
 }
-div#main div.content .performance dd.problem {
+div#main div.content .performance dd.task {
 	float: right;
 	padding-right: 5px;
 	background-image: url(../images/user_solved.gif);
@@ -1942,18 +1942,18 @@ div#main div.content div.profile div.ssh_public_key p {
 }
 
 
-div.users_show div#main div.content div.solved_problems h3,
-div.accounts_show div#main div.content div.solved_problems h3 {
+div.users_show div#main div.content div.solved_tasks h3,
+div.accounts_show div#main div.content div.solved_tasks h3 {
 	border-bottom-color: #115894;
 	color: #115894;
 }
-div.users_show div#main div.content div.posted_problems h3,
-div.accounts_show div#main div.content div.posted_problems h3 {
+div.users_show div#main div.content div.posted_tasks h3,
+div.accounts_show div#main div.content div.posted_tasks h3 {
 	border-bottom-color: #ec189a;
 	color: #ec189a;
 }
-div.users_show div#main div.content div.posted_hacks h3,
-div.accounts_show div#main div.content div.posted_hacks h3 {
+div.users_show div#main div.content div.posted_comments h3,
+div.accounts_show div#main div.content div.posted_comments h3 {
 	border-bottom-color: #0eba12;
 	color: #0eba12;
 }
@@ -2064,10 +2064,10 @@ label {
 	margin-top: 15px;
 	display: inline;
 }
-#new_problem p {
+#new_task p {
 	margin-top: 15px;
 }
-#new_problem label input {
+#new_task label input {
 	margin-bottom: 20px;
 }
 div#errorExplanation {
@@ -2108,17 +2108,17 @@ divfieldWithErrors p {
 	padding-top: 8px !important;
 	padding-bottom: 8px !important;
 }
-.problems_new #main div.section {
+.tasks_new #main div.section {
 	border-top-style: none !important;
 }
-div.problems_create #main div.content div.section div.label span {
+div.tasks_create #main div.content div.section div.label span {
 	display: inline;
 }
 .empty {
 	padding-top: 15px;
 }
-#problem_title,
-#problem_tag_list {
+#task_title,
+#task_tag_list {
 	width: 600px;
 }
 .pagination {
@@ -2185,4 +2185,51 @@ div.about_terms #main div.content ul {
 }
 #main .solved .sub .information .bounty span {
 	color: #A3A3A3;
+}
+div#main div.content div.profile_list li {
+	display: block;
+	padding: 0px;
+	clear: both;
+	border: 1px solid #EFEFE7;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+}
+div#main div.content div.profile_list li {
+	display: block;
+	padding: 8px;
+	clear: both;
+	border: 1px solid #EFEFE7;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-top-radius: 8px;
+	background-image: url(../images/profile_lists_li.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+div#main div.content div.profile_list {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+}
+div#main div.content div.profile_list ul {
+	margin: 0px;
+	padding-bottom: 20px;
+}
+div#main div.content div.profile_list li div,
+div#main div.content div.profile_list li div.title {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
 }

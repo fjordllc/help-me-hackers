@@ -7,6 +7,6 @@
       %p 該当するCommentがありません。
       %p== 今なら目立つ！この隙に#{link_to '依頼', new_task_path}すれば解決してもらえるかも！
   - else
-  %ul.tasks
+  %ul.tasks.tasks_list
     = render :partial => 'object', :collection => @tasks
   = will_paginate(@tasks)

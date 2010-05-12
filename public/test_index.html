@@ -25,202 +25,185 @@
 
       <div class='nav'>
         <ul>
-          <li>
-            <a href="/"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
-            <a href="/dashboard">machida(0)</a>
-          </li>
-          <li><a href="/account/edit">アカウント</a></li>
-          <li><a href="/logout">ログアウト</a></li>
-
+          <li><a href="/login">Twitterでログイン</a></li>
         </ul>
       </div>
     </div>
     <div class='top_index' id='wrapper'>
       <div class='nav'>
-        <ul>
-          <li><a href="/problems">Hacks</a></li>
-          <li><a href="/problems/wanted">WANTED!</a></li>
 
-          <li><span class="current">Unsolved</span></li>
-          <li><a href="/users">Hackers</a></li>
-          <li><a href="/users">Hackees</a></li>
-          <li class='add_problem'><a href="/problems/new">タスク登録</a></li>
+        <ul>
+          <li><a href="/dashboard">ダッシュボード</a></li>
+          <li><a href="/tasks">タスク</a></li>
+          <li><a href="/tasks/wanted">WANTED!</a></li>
+          <li><a href="/tasks/unsolved">未解決</a></li>
+          <li><a href="/users">ユーザー</a></li>
+
+          <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
         </ul>
       </div>
       <div id='main'>
-
         <div id='flash'>
         </div>
         <div class='title'>
           <h2>トップページ</h2>
+
         </div>
-<div class="binding">
-<a href="">help-me-hackersの使い方</a>
-</div>
-
+        <div class='binding'><a href="/about">help-me-hackersの使い方</a></div>
         <div class='content'>
-
-
-<p class="attention">
-※報奨金はそのプログラムの需要を測る一つのバロメーターとして機能させるため、RequestしたHackeeとは別のHackeeが、さらに報奨金を上乗せできる機能を開発中です。
-</p>
-          <ul class='problems'>
-            <li class='problem class-function-making solved'>
-
+          <ul class='tasks tasks_list'>
+            <li class='task software-making solved'>
               <div class='main'>
-                <h3 class='title'><a href="/problems/3">1日前などの時間表記</a></h3>
+                <h3 class='title'><a href="/tasks/3">1日前などの時間表記</a></h3>
                 <div class='statement'>
+
                   <div class='resolver'>
-                    <h4>タスクを解決したハッカー</h4>
+                    <h4>解決者</h4>
                     <ul>
                       <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
                       <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-
                     </ul>
                   </div>
                   <div class='description'>
-                    <p>現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。</p>
+
+                    現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。
                     
-                    <p>英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。</p>
+                    英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。
                   </div>
                   <ul class='tags'>
-                    <li class='tag'><a href="/problems/tag/ruby">ruby</a></li>
-
-                    <li class='tag'><a href="/problems/tag/rails">rails</a></li>
+                    <li class='tag'><a href="/tasks/tag/ruby">ruby</a></li>
+                    <li class='tag'><a href="/tasks/tag/rails">rails</a></li>
                   </ul>
                 </div>
               </div>
+
               <div class='sub information'>
                 <dl>
                   <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/problems/tag/ruby">Ruby</a></dd>
-
+                  <dd class='language'><a href="/tasks/tag/ruby">Ruby</a></dd>
                   <dt class='category'>カテゴリー</dt>
-                  <dd class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></dd>
-                  <dt class='bounty'>報酬</dt>
+                  <dd class='category'><a href="/tasks/category/software-making">ソフトウェア</a></dd>
+                  <dt class='bounty'>報奨金</dt>
+
                   <dd class='bounty'>
                     <span>1,230円</span>
                   </dd>
                 </dl>
-
                 <ul class='retweet'>
                   <li class='count'>0</li>
                   <li class='label'>retweet</li>
-                </ul>
-                <ul class='hack'>
-                  <li class='count'>1</li>
-                  <li class='label'>回答</li>
 
                 </ul>
+                <ul class='comment'>
+                  <li class='count'>1</li>
+                  <li class='label'>Comment</li>
+                </ul>
                 <div class='person'>
-                  <h4>出題者</h4>
                   <ul>
                     <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
+
                     <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                   </ul>
                 </div>
-
-                <div class='created_at'>約2時間前</div>
+                <div class='created_at'>18分前</div>
               </div>
             </li>
-            <li class='problem plugin-making'>
+            <li class='task library-making'>
               <div class='main'>
-                <h3 class='title'><a href="/problems/2">WordPressのGoogle Analyticsモバイル版プラグイン</a></h3>
+
+                <h3 class='title'><a href="/tasks/2">WordPressのGoogle Analyticsモバイル版プラグイン</a></h3>
                 <div class='statement'>
                   <div class='description'>
-
-                    <p>WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。
-                     ３日分の昼飯代を払います！</p>
+                    WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。
+                     ３日分の昼飯代を払います！
                   </div>
                   <ul class='tags'>
-                    <li class='tag'><a href="/problems/tag/php">php</a></li>
-                    <li class='tag'><a href="/problems/tag/wordpress">wordpress</a></li>
-                    <li class='tag'><a href="/problems/tag/google-analytics">google-analytics</a></li>
-                    <li class='tag'><a href="/problems/tag/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a></li>
+                    <li class='tag'><a href="/tasks/tag/php">php</a></li>
+                    <li class='tag'><a href="/tasks/tag/wordpress">wordpress</a></li>
 
-                    <li class='tag'><a href="/problems/tag/%E6%90%BA%E5%B8%AF">携帯</a></li>
-                    <li class='tag'><a href="/problems/tag/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB">モバイル</a></li>
+                    <li class='tag'><a href="/tasks/tag/google-analytics">google-analytics</a></li>
+                    <li class='tag'><a href="/tasks/tag/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a></li>
+                    <li class='tag'><a href="/tasks/tag/%E6%90%BA%E5%B8%AF">携帯</a></li>
+                    <li class='tag'><a href="/tasks/tag/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB">モバイル</a></li>
                   </ul>
                 </div>
               </div>
+
               <div class='sub information'>
                 <dl>
                   <dt class='language'>プログラム言語</dt>
-
-                  <dd class='language'><a href="/problems/tag/php">PHP</a></dd>
+                  <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
                   <dt class='category'>カテゴリー</dt>
-                  <dd class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></dd>
-                  <dt class='bounty'>報酬</dt>
+                  <dd class='category'><a href="/tasks/category/library-making">ライブラリ</a></dd>
+                  <dt class='bounty'>報奨金</dt>
+
                   <dd class='bounty'>
                     <span>100円</span>
-
                   </dd>
                 </dl>
                 <ul class='retweet'>
                   <li class='count'>0</li>
                   <li class='label'>retweet</li>
-                </ul>
-                <ul class='hack'>
-                  <li class='count'>1</li>
 
-                  <li class='label'>回答</li>
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>1</li>
+                  <li class='label'>Comment</li>
                 </ul>
                 <div class='person'>
-                  <h4>出題者</h4>
                   <ul>
                     <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
 
+                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                   </ul>
                 </div>
-                <div class='created_at'>約2時間前</div>
+                <div class='created_at'>18分前</div>
               </div>
             </li>
-            <li class='problem library-making'>
+            <li class='task android-app-making'>
               <div class='main'>
-                <h3 class='title'><a href="/problems/1">Pythonのhamlライブラリ</a></h3>
 
+                <h3 class='title'><a href="/tasks/1">Pythonのhamlライブラリ</a></h3>
                 <div class='statement'>
-                  <div class='description'><p>Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。 Pure Pythonで！</p></div>
+                  <div class='description'>Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。 Pure Pythonで！</div>
                   <ul class='tags'>
-                    <li class='tag'><a href="/problems/tag/python">python</a></li>
-                    <li class='tag'><a href="/problems/tag/haml">haml</a></li>
+                    <li class='tag'><a href="/tasks/tag/python">python</a></li>
+                    <li class='tag'><a href="/tasks/tag/haml">haml</a></li>
                   </ul>
-                </div>
 
+                </div>
               </div>
               <div class='sub information'>
                 <dl>
                   <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/problems/tag/javascript">JavaScript</a></dd>
+                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
                   <dt class='category'>カテゴリー</dt>
-                  <dd class='category'><a href="/problems/category/library-making">ライブラリ作成</a></dd>
 
-                  <dt class='bounty'>報酬</dt>
+                  <dd class='category'><a href="/tasks/category/android-app-making">Androidアプリ</a></dd>
+                  <dt class='bounty'>報奨金</dt>
                   <dd class='bounty'>
                     <span>5,000円</span>
                   </dd>
                 </dl>
                 <ul class='retweet'>
-                  <li class='count'>0</li>
 
+                  <li class='count'>0</li>
                   <li class='label'>retweet</li>
                 </ul>
-                <ul class='hack'>
+                <ul class='comment'>
                   <li class='count'>1</li>
-                  <li class='label'>回答</li>
+                  <li class='label'>Comment</li>
                 </ul>
-                <div class='person'>
 
-                  <h4>出題者</h4>
+                <div class='person'>
                   <ul>
                     <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
                     <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                   </ul>
                 </div>
-                <div class='created_at'>約2時間前</div>
-
+                <div class='created_at'>18分前</div>
               </div>
+
             </li>
           </ul>
         </div>
@@ -228,21 +211,23 @@
       <div id='sub'>
         <div class='section'>
           <h3>カテゴリー</h3>
-
           <ul class='categories'>
-            <li class='category'><a href="/problems/category/class-function-making">クラス・関数作成</a></li>
-            <li class='category'><a href="/problems/category/data-collection-and-making">データ収集・作成</a></li>
-            <li class='category'><a href="/problems/category/debugging">バグ修正</a></li>
-            <li class='category'><a href="/problems/category/document-translation">文章翻訳</a></li>
-            <li class='category'><a href="/problems/category/library-making">ライブラリ作成</a></li>
 
-            <li class='category'><a href="/problems/category/plugin-making">プラグイン作成</a></li>
-            <li class='category'><a href="/problems/category/programming-quiz">プログラミングクイズ</a></li>
-            <li class='category'><a href="/problems/category/prototype-making">プロトタイプ作成</a></li>
-            <li class='category'><a href="/problems/category/software-making">ソフトウェア作成</a></li>
-            <li class='category'><a href="/problems/category/software-multilingualization">多言語化</a></li>
-            <li class='category'><a href="/problems/category/technology-study">技術調査</a></li>
+            <li class='category'><a href="/tasks/category/iphone-app-making">iPhoneアプリ</a></li>
+            <li class='category'><a href="/tasks/category/android-app-making">Androidアプリ</a></li>
+            <li class='category'><a href="/tasks/category/software-making">ソフトウェア</a></li>
+            <li class='category'><a href="/tasks/category/library-making">ライブラリ</a></li>
+            <li class='category'><a href="/tasks/category/class-function-making">クラス・関数</a></li>
+            <li class='category'><a href="/tasks/category/plugin-making">プラグイン</a></li>
 
+            <li class='category'><a href="/tasks/category/prototype-making">プロトタイプ</a></li>
+            <li class='category'><a href="/tasks/category/debugging">バグ修正</a></li>
+            <li class='category'><a href="/tasks/category/technology-study">技術調査</a></li>
+            <li class='category'><a href="/tasks/category/software-multilingualization">多言語化</a></li>
+            <li class='category'><a href="/tasks/category/document-translation">文章翻訳</a></li>
+            <li class='category'><a href="/tasks/category/data-collection-and-making">データ収集・作成</a></li>
+
+            <li class='category'><a href="/tasks/category/programming-quiz">プログラミングクイズ</a></li>
           </ul>
           <div class='to_archive'>
             <p><a href="/about/category">カテゴリーの説明</a></p>
@@ -250,24 +235,24 @@
         </div>
         <div class='section'>
           <h3>ヒント</h3>
-          <ul>
 
+          <ul>
             <li>
               <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
             <li>
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
-            </li>
 
+            </li>
             <li>
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
             <li>
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
             </li>
-            <li>
 
+            <li>
               <p>ジャンクフード食系男子募集中！</p>
             </li>
             <li>
@@ -275,8 +260,8 @@
             </li>
           </ul>
           <div class='to_archive'>
-            <p><a href="/about/hint">もっと詳しく</a></p>
 
+            <p><a href="/about/hint">もっと詳しく</a></p>
           </div>
         </div>
       </div>
@@ -284,14 +269,16 @@
     <div id='footer'>
       <ul class='links'>
         <li><a href="/about">使い方</a></li>
-        <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
 
-        <li><a href="http://fjord.jp/">運営会社</a></li>
+        <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
+        <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
+        <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
+        <li><a href="http://fjord.jp/">運営</a></li>
         <li><a href="/about/terms">利用規約</a></li>
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
-      </ul>
-      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>.</p>
-    </div>
 
+      </ul>
+      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.</p>
+    </div>
   </body>
 </html>
