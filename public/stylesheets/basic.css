@@ -487,7 +487,7 @@ form.new_vote div.text input {
 div.tasks_show div#main div.content div.main div.title form.new_vote div.text input{
 	width: 428px;
 }
-div.tasks_show div#main div.content div.section ul.hacks li.comment form.new_vote div.text input{
+div.tasks_show div#main div.content div.section ul.comments li.comment form.new_vote div.text input{
 	width: 478px;
 }
 div.tasks_show form.new_vote div.button {
