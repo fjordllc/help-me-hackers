@@ -418,7 +418,7 @@ div.tasks_show div#main div.content div.title div.good{
 	float: right;
 	margin-top: 3px;
 }
-div.tasks_show div#main div.content div.hacker div.good{
+div.tasks_show div#main div.content div.user div.good{
 	float: right;
 	padding-bottom: 15px;
 }
@@ -1334,7 +1334,7 @@ div.tasks_show div#main div.description h5,
 
 
 
-div.tasks_show div#main div.content div.section ul.comments li.comment div.hacker {
+div.tasks_show div#main div.content div.section ul.comments li.comment div.user {
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
@@ -1360,7 +1360,7 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.user 
 
 
 
-div.tasks_show div#main div.content div.section ul.comments li.correct div.hacker {
+div.tasks_show div#main div.content div.section ul.comments li.correct div.user {
 	background-image: url(../images/correct_user.gif);
 }
 div.tasks_show div#main div.content div.section ul.comments li.correct div.user {
@@ -2198,7 +2198,6 @@ div#main div.content div.profile_list li {
 }
 div#main div.content div.profile_list li {
 	display: block;
-	padding: 8px;
 	clear: both;
 	border: 1px solid #EFEFE7;
 	margin-top: 0px;
@@ -2211,6 +2210,11 @@ div#main div.content div.profile_list li {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-top-radius: 8px;
+	padding-top: 8px;
+	padding-right: 3px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	line-height: 14px;
 }
 div#main div.content div.profile_list {
 	display: block;
@@ -2225,7 +2229,6 @@ div#main div.content div.profile_list ul {
 div#main div.content div.profile_list li div,
 div#main div.content div.profile_list li div.title {
 	display: block;
-	padding: 5px;
 	float: left;
 	border-top-style: none;
 	border-right-style: none;
@@ -2238,14 +2241,39 @@ div#main div.content div.profile_list li div.title {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-top-radius: 8px;
+	padding-top: 5px;
+	padding-right: 6px;
+	padding-bottom: 5px;
+	padding-left: 6px;
 }
 div#main div.content div.profile_list li div.goods {
 	display: block;
 	background-color: #FF6699;
 	font-weight: bold;
+	border: 1px solid #FF6699;
+	text-align: center;
+	width: 35px;
 }
 div#main div.content div.profile_list li div.comments {
 	display: block;
 	background-color: #D4FD18;
 	font-weight: bold;
+	border: 1px solid #D4FD18;
+	text-align: center;
+	width: 35px;
+}
+div#main div.content div.profile_list li div.bounty {
+	display: block;
+	background-color: #fcff03;
+	font-weight: bold;
+	border: 1px solid #fcff03;
+	text-align: center;
+	width: 80px;
+}
+div#main div.content div.profile_list li div.created_at {
+	display: block;
+	font-weight: bold;
+	border: 1px solid #C0C0C0;
+	text-align: center;
+	width: 80px;
 }
