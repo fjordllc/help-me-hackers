@@ -76,6 +76,7 @@ ja:
   Delete: "削除"
   Update: "更新"
   Vote was successfully created: "ReTweetしました。"
+  Vote was not created: "ReTweetできませんでした。"
   Comment was successfully created: "コメントを登録しました。"
   Comment was successfully updated: "コメントを更新しました。"
   Comment was successfully deleted: "コメントを削除しました。"
