@@ -31,7 +31,8 @@
     #wrapper{:class => "#{controller_name}_#{action_name}"}
       .nav
         %ul
-          %li= link_to_unless_current_with_span 'ダッシュボード', dashboard_path
+          - if logged_in?
+            %li= link_to_unless_current_with_span 'ダッシュボード', dashboard_path
           %li= link_to_unless_current_with_span 'タスク', tasks_path
           %li= link_to_unless_current_with_span 'WANTED!', wanted_tasks_path
           %li= link_to_unless_current_with_span '未解決', unsolved_tasks_path
