@@ -2,14 +2,16 @@
   %h2 ダッシュボード
 .content.about
   .lists
-    .solved_tasks.list
+    .add_task= link_to 'タスク登録', new_task_path
+
+    .solved_tasks.profile_list
       %h3 登録したタスク
       - if @user.tasks.count.zero?
         %p= t('label.nothing_posted_tasks')
       - else
         %ul.tasks
           = render :partial => 'task', :collection => @user.tasks
-    .posted_tasks.list
+    .posted_tasks.profile_list
       %h3 回答したタスク
       - if @user.comments.count.zero?
         %p= t('label.nothing_posted_comments')
@@ -23,7 +25,7 @@
               - if comment.task.bounty > 0
                 .bounty= number_to_currency comment.task.bounty
               .created_at== #{time_ago_in_words comment.task.created_at}前
-    .posted_comments.list
+    .posted_comments.profile_list
       %h3 ウォッチしているタスク
       %p= t('label.nothing_watching_tasks')
   %ul.loggedin

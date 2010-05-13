@@ -175,13 +175,13 @@ div#wrapper .nav ul li.add_task {
 	display: block;
 	float: right;
 	margin-top: -5px;
-	width: 234px;
+	width: 200px;
 	height: 35px;
 	padding-right: 10px;
 }
 div#wrapper .nav ul li.add_task a {
 	display: block;
-	width: 234px;
+	width: 200px;
 	height: 35px;
 	margin: 0px;
 	padding: 0px;
@@ -1361,7 +1361,7 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.comme
 
 
 div.tasks_show div#main div.content div.section ul.comments li.correct div.commenter {
-	background-image: url(../images/correct_user.gif);
+	background-image: url(../images/task_resolver.gif);
 }
 div.tasks_show div#main div.content div.section ul.comments li.correct div.commenter div.user {
 	background-image: url(../images/correct_hacker.gif);
@@ -1376,7 +1376,7 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.comme
 	height:12px;
 	line-height:12px;
 	text-align:center;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 }
 
 
@@ -1415,7 +1415,7 @@ div.tasks_show div#main div.content div.section ul.comments li.commenter .thanks
 	margin-top: 5px;
 }
 div#main div.content ul.loggedin {
-	padding-top: 0px;
+	padding-top: 15px;
 	padding-bottom: 15px;
 	clear: both;
 }
@@ -1428,47 +1428,55 @@ div#main div.content ul.loggedin li {
 div#main div.content ul.loggedin li a {
 	display: block;
 	float: left;
-	padding-top: 5px;
+	padding-top: 8px;
 	padding-right: 8px;
-	padding-bottom: 5px;
+	padding-bottom: 8px;
 	padding-left: 8px;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: bold;
 	margin-right: 8px;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
+	background-image: url(../images/logged_in.gif);
+	background-repeat: repeat-x;
 }
 div#main div.content ul.loggedin li.show a:link,
 div#main div.content ul.loggedin li.show a:visited {
 	background-color: #115894;
 	color: #FFFFFF;
+	background-position: 0px 0px;
 }
 div#main div.content ul.loggedin li.show a:hover,
 div#main div.content ul.loggedin li.show a:active {
 	background-color: #76E3DA;
 	color: #ec189a;
+	background-position: 0px -50px;
 }
 div#main div.content ul.loggedin li.edit a:link,
 div#main div.content ul.loggedin li.edit a:visited {
 	background-color: #115894;
 	color: #FFFFFF;
+	background-position: 0px 0px;
 }
 div#main div.content ul.loggedin li.edit a:hover,
 div#main div.content ul.loggedin li.edit a:active {
 	background-color: #76E3DA;
 	color: #ec189a;
+	background-position: 0px -50px;
 }
 div#main div.content ul.loggedin li.delete a:link,
 div#main div.content ul.loggedin li.delete a:visited {
 	background-color: #115894;
 	color: #FFFFFF;
+	background-position: 0px 0px;
 }
 div#main div.content ul.loggedin li.delete a:hover,
 div#main div.content ul.loggedin li.delete a:active {
 	background-color: #76E3DA;
 	color: #ec189a;
+	background-position: 0px -50px;
 }
 
 
@@ -1667,6 +1675,7 @@ div.comments_edit div#main div.content div.section {
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 15px;
+	display: block;
 }
 #main .about blockquote {
 	margin-bottom: 15px;
@@ -1690,6 +1699,10 @@ div#main div.content .performance {
 	background-repeat: no-repeat;
 	padding-top: 15px;
 }
+div.users_show div#main div.content .performance {
+	margin-bottom: 30px;
+}
+
 div#main div.content ul.users {
 	margin-right: -23px;
 }
@@ -2207,22 +2220,38 @@ div#main div.content div.profile_list li {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-top-radius: 8px;
-	padding-top: 8px;
-	padding-right: 3px;
-	padding-bottom: 8px;
-	padding-left: 8px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 5px;
 	line-height: 14px;
+	background-color: #fafafa;
 }
 div#main div.content div.profile_list {
 	display: block;
 	margin: 0px;
-	padding: 0px;
 	clear: both;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 40px;
+	padding-left: 0px;
+}
+div#main div.content div.profile_list h3 {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 15px;
+	display: block;
 }
 div#main div.content div.profile_list ul {
-	margin: 0px;
-	padding-bottom: 20px;
+	margin-top: -5px;
+	margin-right: -10px;
+	margin-bottom: 0px;
+	margin-left: -5px;
 }
+div.users_show div#main div.content div.profile_list ul {
+	margin-right: 0px;
+}
+
 div#main div.content div.profile_list li div,
 div#main div.content div.profile_list li div.title {
 	display: block;
@@ -2235,21 +2264,25 @@ div#main div.content div.profile_list li div.title {
 	margin-right: 5px;
 	margin-bottom: 0px;
 	margin-left: 0px;
+	padding-top: 1px;
+	padding-right: 6px;
+	padding-bottom: 10px;
+	padding-left: 6px;
+	line-height: 19px;
+	height: 19px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
-	border-top-radius: 8px;
-	padding-top: 5px;
-	padding-right: 6px;
-	padding-bottom: 5px;
-	padding-left: 6px;
+	border-radius: 8px;
 }
 div#main div.content div.profile_list li div.goods {
 	display: block;
-	background-color: #FF6699;
 	font-weight: bold;
-	border: 1px solid #FF6699;
+	border: 1px solid #80ded5;
 	text-align: center;
-	width: 35px;
+	width: 40px;
+	font-size: 13px;
+	background-image: url(../images/profile_list_goods.gif);
+	background-position: center center;
 }
 div#main div.content div.profile_list li div.comments {
 	display: block;
@@ -2257,20 +2290,75 @@ div#main div.content div.profile_list li div.comments {
 	font-weight: bold;
 	border: 1px solid #D4FD18;
 	text-align: center;
-	width: 35px;
+	width: 40px;
+	font-size: 13px;
+	background-image: url(../images/profile_list_comments.gif);
+}
+div#main div.content div.profile_list li div.title {
+	display: block;
+	width: 400px;
+	line-height: 30px;
+	height: 30px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 div#main div.content div.profile_list li div.bounty {
 	display: block;
-	background-color: #fcff03;
+	background-color: #FBFBFB;
 	font-weight: bold;
-	border: 1px solid #fcff03;
+	border: 1px solid #d8d8d8;
 	text-align: center;
-	width: 80px;
+	width: 70px;
+	font-size: 13px;
+	line-height: 20px;
+	height: 20px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	color: #ec189a;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 div#main div.content div.profile_list li div.created_at {
 	display: block;
-	font-weight: bold;
-	border: 1px solid #C0C0C0;
 	text-align: center;
-	width: 80px;
+	width: 60px;
+	font-size: 11px;
+	line-height: 30px;
+	height: 30px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+div#main div.content .profile_list p {
+	background-color: #EFEFE7;
+	margin-right: 170px;
+	margin-left: 170px;
+	display: block;
+	text-align: center;
+	line-height: 35px;
+	height: 35px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+div#main div.content div.add_task {
+	display: block;
+	padding-bottom: 20px;
+}
+div#main div.content div.add_task a {
+	display: block;
+	width: 200px;
+	background-image: url(../images/add_task.gif);
+	height: 35px;
+	text-indent: -9999px;
+}
+.add_task a:link,
+.add_task a:visited {
+	background-color: #bac682;
+	background-position: left top;
+}
+.add_task a:hover,
+.add_task a:active {
+	background-color: #636D31;
+	color: #FFFFFF;
+	background-position: right -35px;
 }
