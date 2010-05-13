@@ -1,6 +1,4 @@
 - title "#{@task.title} - #{t('application.title')}"
-- content_for :header_script do
-  = javascript_include_tag 'application'
 %div{task_attrs(@task)}
   .main
     .title
@@ -8,11 +6,11 @@
         %ul
           %li.count{:id => "task_#{@task.id}_good"}= @task.votes.size
       %h2= @task.title
-      - form_for @task.votes.new(:comment => good_task_retweet(@task)), :html => {:onsubmit => "return vote(this, '#task_#{@task.id}_good');", :id => "task_#{@task.id}_vote_form", :style => 'display:none'} do |f|
+      - form_for @task.votes.new(:comment => good_task_retweet(@task)), :html => {:id => "task_#{@task.id}_vote_form", :style => 'display:none'} do |f|
         .text
           = f.hidden_field :voteable_id, :id => "task_#{@task.id}_voteable_id"
           = f.hidden_field :voteable_type, :id => "task_#{@task.id}_voteable_type"
-          = f.text_field :comment, :id => "task_#{@task.id}_comment"
+          = f.text_field :comment, :id => "task_#{@task.id}_comment", :size => '140'
         - if logged_in?
           .button= image_submit_tag 'good_button.gif'
         - else
@@ -64,6 +62,7 @@
                   %li.count{:id => "comment_#{comment.id}_good"}= comment.votes.size
                   %li.label Good
               .user
+                %h4 解決者
                 %ul.user
                   %li.icon=link_to image_tag(comment.user.profile_image_url), user_path(comment.user)
                   %li.name=link_to comment.user.login, user_path(comment.user)
@@ -75,7 +74,7 @@
                           = image_submit_tag 'choice_button.gif'
                     %li.thanks
                       = render :partial => 'payment_button', :locals => {:task => @task, :comment => comment}
-            - form_for comment.votes.new(:comment => good_comment_retweet(comment)), :html => {:onsubmit => "return vote(this, '.comment ul.good li.count')", :id => "comment_#{comment.id}_vote_form", :style => 'display:none'} do |f|
+            - form_for comment.votes.new(:comment => good_comment_retweet(comment)), :html => {:id => "comment_#{comment.id}_vote_form", :style => 'display:none'} do |f|
               .text
                 = f.hidden_field :voteable_id, :id => "comment_#{comment.id}_voteable_id"
                 = f.hidden_field :voteable_type, :id => "comment_#{comment.id}_voteable_type"

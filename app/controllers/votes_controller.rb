@@ -2,7 +2,6 @@ class VotesController < ApplicationController
   before_filter :login_required, :only => [:create]
 
   def create
-    redirect_to '/404.html', :status => 404 unless request.xhr?
     vote = Vote.new(params[:vote])
     vote.user = current_user
     vote.voted_user_id = vote.voteable.id
@@ -13,12 +12,14 @@ class VotesController < ApplicationController
       count = Vote.count(:conditions => [
         'voteable_id = ? and voteable_type = ?',
         vote.voteable_id, vote.voteable_type])
+      flash[:notice] = t('Vote was successfully created')
       logger.info("save vote: succeed")
-      render :json => { :count => count }
     else
+      flash[:notice] = t('Vote was not created')
       logger.info("save vote: error")
-      render :json => { :error => vote.errors, :status => :unprocessable_entity }
     end
+
+    redirect_to :back
   end
 
   private
