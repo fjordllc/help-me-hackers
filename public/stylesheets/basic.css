@@ -125,6 +125,14 @@ div.accounts_show div#main div.title h2 {
 	text-indent: -9999px;
 	background-image: url(../images/dashboard_h2.gif);
 }
+div.about_index div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/about_index_h2.gif);
+}
+div.about_hint div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/about_hint_h2.gif);
+}
 
 
 
@@ -324,6 +332,7 @@ div.about_index div#main div.binding {
 	font-size: 16px;
 	line-height: 1.8;
 	font-weight: bold;
+	margin-bottom: 15px;
 }
 div.about_index div#main div.content ol.about_index {
 	list-style-type: none;
@@ -1663,6 +1672,9 @@ div.comments_edit div#main div.content div.section {
 #main .about ul {
 	margin-right: 25px;
 	margin-bottom: 1.4em;
+	list-style-type: square;
+	padding-left: 25px;
+	list-style-position: outside;
 }
 #main .about ol {
 	margin-bottom: 1.4em;
@@ -2150,7 +2162,9 @@ div.about_terms #main div.content ul {
 	list-style-type: square;
 	padding-left: 25px;
 	margin-right: 0px;
-	margin-top: -15px;
+	margin-top: -30px;
+	font-size: 15px;
+	padding-bottom: 20px;
 }
 #main .content .attention li {
 	padding-bottom: 8px;
