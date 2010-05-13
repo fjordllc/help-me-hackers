@@ -3,7 +3,6 @@
 .content.about
   .lists
     .add_task= link_to 'タスク登録', new_task_path
-
     .solved_tasks.profile_list
       %h3 登録したタスク
       - if @user.tasks.count.zero?

@@ -4,4 +4,7 @@
   .title=link_to h(task.title), task_path(task)
   - if task.bounty > 0
     .bounty= number_to_currency task.bounty
+  - else
+    .bounty.free FREE
+
   .created_at== #{time_ago_in_words task.created_at}前

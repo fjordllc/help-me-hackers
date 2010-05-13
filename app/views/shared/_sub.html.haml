@@ -11,7 +11,7 @@
       %li.category=link_to "#{t("label.category.#{category.name}")} (#{category.cnt})", tasks_by_category_path(:category => category.name)
   .to_archive
     %p=link_to 'カテゴリーの説明', about_category_path
-.section
+.section.hint
   %h3 ヒント
   %ul
     %li
