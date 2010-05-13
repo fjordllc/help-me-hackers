@@ -854,6 +854,7 @@ div#main .task div.sub {
 }
 div#main div.task div.sub {
 	margin-top: 10px;
+	margin-bottom: 15px;
 }
 div#main .task div.information dl,
 div#main .task div.information dt,
@@ -892,13 +893,22 @@ div#main .task div.information dd.language a {
 	text-decoration: none;
 	padding-right: 7px;
 	padding-left: 7px;
-	-webkit-border: 4px;
+	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	-opera-border-radius: 4px;
 	color: #5A5A5A;
 	background-color: #EDFF9B;
 	margin-bottom: 4px;
+}
+div#main .task div.information dd.language a:link,
+div#main .task div.information dd.language a:visited {
+	color: #5A5A5A;
+	background-color: #EDFF9B;
+}
+div#main .task div.information dd.language a:hover,
+div#main .task div.information dd.language a:active {
+	color: #EC189A;
+	background-color: #76E3DA;
 }
 div#main .task div.information dd.category {
 	line-height: 20px;
@@ -1253,6 +1263,7 @@ div.tasks_show div#main div.content div.section ul.user li.correct {
 	padding-right: 0px;
 	padding-left: 0px;
 	border: none !important;
+	padding-bottom: 5px;
 	}
 
 
@@ -1429,7 +1440,7 @@ div.tasks_show div#main div.content div.section ul.comments li.commenter .thanks
 }
 div#main div.content ul.loggedin {
 	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-bottom: 10px;
 	clear: both;
 }
 div#main div.content .section ul.loggedin {
@@ -2335,6 +2346,9 @@ div#main div.content div.profile_list li div.bounty {
 	color: #ec189a;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+div#main div.content div.profile_list li div.freee {
+	color: #A3A3A3;
 }
 div#main div.content div.profile_list li div.created_at {
 	display: block;
