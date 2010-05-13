@@ -690,6 +690,10 @@ div#sub div.section h3 {
 	padding-bottom: 6px;
 	font-size: 14px;
 }
+div#sub div.hint h3 {
+	background-image: url(../images/sub_hint_h3.gif);
+	padding-left: 30px;
+}
 div#sub div.section p {
 	padding-right: 8px;
 	padding-left: 8px;
