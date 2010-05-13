@@ -1,0 +1,14 @@
+.section
+  %h3 人気の言語
+  %ul.tasks_by_language
+    - User.by_language.each do |language|
+      %li.language
+        =link_to "#{t("label.language.#{language.name}")} (#{language.cnt})", users_by_language_path(:language => language.name)
+  .to_archive
+.section
+  %h3 人気の都道府県
+  %ul.states
+    - User.by_state.each do |state|
+      %li.state
+        =link_to "#{t("label.state.#{state.name}")} (#{state.cnt})", users_by_state_path(:state => state.name)
+  .to_archive
