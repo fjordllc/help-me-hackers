@@ -7,12 +7,14 @@ class User < TwitterAuth::GenericUser
   named_scope :by_language,
     :select => 'COUNT(users.id) AS cnt, languages.name',
     :joins  => [:language],
-    :group  => 'language_id'
+    :group  => 'language_id',
+    :order  => 'cnt DESC'
 
   named_scope :by_state,
     :select => 'COUNT(users.id) AS cnt, states.name',
     :joins  => [:state],
-    :group  => 'state_id'
+    :group  => 'state_id',
+    :order  => 'cnt DESC'
 
   def total_prize
     p = Comment.find(:first,

@@ -30,12 +30,14 @@ class Task < ActiveRecord::Base
   named_scope :by_category,
     :select => 'COUNT(tasks.id) AS cnt, categories.name',
     :joins  => [:category],
-    :group  => 'category_id'
+    :group  => 'category_id',
+    :order  => 'cnt DESC'
 
   named_scope :by_language,
     :select => 'COUNT(tasks.id) AS cnt, languages.name',
     :joins  => [:language],
-    :group  => 'language_id'
+    :group  => 'language_id',
+    :order  => 'cnt DESC'
 
   def self.increment_view_by_id(id)
     task = self.find(id)
