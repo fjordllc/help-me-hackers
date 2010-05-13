@@ -25,152 +25,203 @@
 
       <div class='nav'>
         <ul>
-          <li><a href="/login">Twitterでログイン</a></li>
+          <li>
+            <a href="/"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/dashboard">machida(4)</a>
+          </li>
+          <li><a href="/account/edit">アカウント</a></li>
+          <li><a href="/logout">ログアウト</a></li>
+
         </ul>
       </div>
     </div>
     <div class='top_index' id='wrapper'>
       <div class='nav'>
-
         <ul>
           <li><a href="/dashboard">ダッシュボード</a></li>
           <li><a href="/tasks">タスク</a></li>
+
           <li><a href="/tasks/wanted">WANTED!</a></li>
           <li><a href="/tasks/unsolved">未解決</a></li>
           <li><a href="/users">ユーザー</a></li>
-
           <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
         </ul>
       </div>
       <div id='main'>
+
         <div id='flash'>
         </div>
         <div class='title'>
           <h2>トップページ</h2>
-
         </div>
         <div class='binding'><a href="/about">help-me-hackersの使い方</a></div>
         <div class='content'>
           <ul class='tasks tasks_list'>
-            <li class='task software-making solved'>
+
+            <li class='task software-making free'>
               <div class='main'>
-                <h3 class='title'><a href="/tasks/3">1日前などの時間表記</a></h3>
+                <h3 class='title'><a href="/tasks/13">Help me, hackers!でコメントと回答を分ける</a></h3>
                 <div class='statement'>
-
-                  <div class='resolver'>
-                    <h4>解決者</h4>
-                    <ul>
-                      <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                      <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                    </ul>
-                  </div>
                   <div class='description'>
-
-                    現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。
+                    問題に対する回答と単なるコメントを分けたい。
                     
-                    英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。
+                    コメントの場合はPaypal振込とか「正解」ボタンを表示しないようにしたい。コメント投稿時に「回答」というチェックボックスを用意して、それがチェックされていたら回答ということにする。DBには回答フラグを追加。
+                    
+                    ソースはこの辺：http://gi...
                   </div>
                   <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/hmh">hmh</a></li>
+
                     <li class='tag'><a href="/tasks/tag/ruby">ruby</a></li>
                     <li class='tag'><a href="/tasks/tag/rails">rails</a></li>
                   </ul>
                 </div>
               </div>
+              <div class='sub information'>
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
 
+                  <dd class='language'><a href="/tasks/tag/ruby">Ruby</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+                  <dd class='category'><a href="/tasks/category/software-making">ソフトウェア</a></dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>0</li>
+                  <li class='label'>retweet</li>
+
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+
+                    <li class='name'><a href="/komagata">komagata</a></li>
+                  </ul>
+                </div>
+                <div class='created_at'>2日前</div>
+              </div>
+            </li>
+            <li class='task debugging free'>
+              <div class='main'>
+
+                <h3 class='title'><a href="/tasks/12">hmhでTwitter認証拒否するとエラー</a></h3>
+                <div class='statement'>
+                  <div class='description'>
+                    http://help-me-hackers.com/loginとかで、認証を拒否するとエラー。（当たり前なんだけど）
+                    
+                    拒否されたときにそれ用のページを出したい。
+                    
+                    twitter-authのRailsプラグインを使ってるので多分それをイジる必要あり。
+                    
+                    ソース：http://github....
+                  </div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/hmh">hmh</a></li>
+                    <li class='tag'><a href="/tasks/tag/ruby">ruby</a></li>
+
+                    <li class='tag'><a href="/tasks/tag/twitter">twitter</a></li>
+                    <li class='tag'><a href="/tasks/tag/oauth">oauth</a></li>
+                    <li class='tag'><a href="/tasks/tag/rails">rails</a></li>
+                    <li class='tag'><a href="/tasks/tag/rubygems">rubygems</a></li>
+                    <li class='tag'><a href="/tasks/tag/plugin">plugin</a></li>
+                  </ul>
+
+                </div>
+              </div>
               <div class='sub information'>
                 <dl>
                   <dt class='language'>プログラム言語</dt>
                   <dd class='language'><a href="/tasks/tag/ruby">Ruby</a></dd>
                   <dt class='category'>カテゴリー</dt>
-                  <dd class='category'><a href="/tasks/category/software-making">ソフトウェア</a></dd>
-                  <dt class='bounty'>報奨金</dt>
 
-                  <dd class='bounty'>
-                    <span>1,230円</span>
-                  </dd>
+                  <dd class='category'><a href="/tasks/category/debugging">バグ修正</a></dd>
                 </dl>
                 <ul class='retweet'>
                   <li class='count'>0</li>
                   <li class='label'>retweet</li>
-
                 </ul>
                 <ul class='comment'>
-                  <li class='count'>1</li>
+
+                  <li class='count'>0</li>
                   <li class='label'>Comment</li>
                 </ul>
                 <div class='person'>
                   <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+                    <li class='name'><a href="/komagata">komagata</a></li>
 
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                   </ul>
                 </div>
-                <div class='created_at'>18分前</div>
+                <div class='created_at'>3日前</div>
               </div>
             </li>
-            <li class='task library-making'>
+            <li class='task debugging free'>
               <div class='main'>
+                <h3 class='title'><a href="/tasks/11">Help me, hackers!のダッシュボード変更</a></h3>
 
-                <h3 class='title'><a href="/tasks/2">WordPressのGoogle Analyticsモバイル版プラグイン</a></h3>
                 <div class='statement'>
                   <div class='description'>
-                    WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。
-                     ３日分の昼飯代を払います！
+                    沢山登録してくと自分の登録してったら一覧したくなって来ました。
+                    
+                    
+                    
+                    こういう感じの見た目にしたい。
                   </div>
                   <ul class='tags'>
-                    <li class='tag'><a href="/tasks/tag/php">php</a></li>
-                    <li class='tag'><a href="/tasks/tag/wordpress">wordpress</a></li>
-
-                    <li class='tag'><a href="/tasks/tag/google-analytics">google-analytics</a></li>
-                    <li class='tag'><a href="/tasks/tag/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a></li>
-                    <li class='tag'><a href="/tasks/tag/%E6%90%BA%E5%B8%AF">携帯</a></li>
-                    <li class='tag'><a href="/tasks/tag/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB">モバイル</a></li>
+                    <li class='tag'><a href="/tasks/tag/hmh">hmh</a></li>
+                    <li class='tag'><a href="/tasks/tag/design">design</a></li>
                   </ul>
+
                 </div>
               </div>
-
               <div class='sub information'>
                 <dl>
                   <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
+                  <dd class='language'><a href="/tasks/tag/ruby">Ruby</a></dd>
                   <dt class='category'>カテゴリー</dt>
-                  <dd class='category'><a href="/tasks/category/library-making">ライブラリ</a></dd>
-                  <dt class='bounty'>報奨金</dt>
 
-                  <dd class='bounty'>
-                    <span>100円</span>
-                  </dd>
+                  <dd class='category'><a href="/tasks/category/debugging">バグ修正</a></dd>
                 </dl>
                 <ul class='retweet'>
                   <li class='count'>0</li>
                   <li class='label'>retweet</li>
-
                 </ul>
                 <ul class='comment'>
-                  <li class='count'>1</li>
+
+                  <li class='count'>5</li>
                   <li class='label'>Comment</li>
                 </ul>
                 <div class='person'>
                   <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+                    <li class='name'><a href="/komagata">komagata</a></li>
 
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
                   </ul>
                 </div>
-                <div class='created_at'>18分前</div>
+                <div class='created_at'>3日前</div>
               </div>
             </li>
-            <li class='task android-app-making'>
+            <li class='task library-making free'>
               <div class='main'>
+                <h3 class='title'><a href="/tasks/10">wmdのMarkdown記法でアンダースコアでの強調を無くしたい</a></h3>
 
-                <h3 class='title'><a href="/tasks/1">Pythonのhamlライブラリ</a></h3>
                 <div class='statement'>
-                  <div class='description'>Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。 Pure Pythonで！</div>
+                  <div class='description'>
+                    正にここのプレビューで使われているwmdで、コードを書くときにアンダースコアを使った変数や関数名が数値文字参照となって使い辛い。それを直したいです。
+                    
+                    
+                    リポジトリ：http://github.com/komagata/help-me-hackers
+                    多分この辺：http://github.c...
+                  </div>
                   <ul class='tags'>
-                    <li class='tag'><a href="/tasks/tag/python">python</a></li>
-                    <li class='tag'><a href="/tasks/tag/haml">haml</a></li>
-                  </ul>
+                    <li class='tag'><a href="/tasks/tag/javascript">javascript</a></li>
+                    <li class='tag'><a href="/tasks/tag/markdown">markdown</a></li>
+                    <li class='tag'><a href="/tasks/tag/wmd">wmd</a></li>
 
+                  </ul>
                 </div>
               </div>
               <div class='sub information'>
@@ -179,7 +230,428 @@
                   <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
                   <dt class='category'>カテゴリー</dt>
 
-                  <dd class='category'><a href="/tasks/category/android-app-making">Androidアプリ</a></dd>
+                  <dd class='category'><a href="/tasks/category/library-making">ライブラリ</a></dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>0</li>
+                  <li class='label'>retweet</li>
+                </ul>
+                <ul class='comment'>
+
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+                    <li class='name'><a href="/komagata">komagata</a></li>
+
+                  </ul>
+                </div>
+                <div class='created_at'>3日前</div>
+              </div>
+            </li>
+            <li class='task class-function-making free'>
+              <div class='main'>
+                <h3 class='title'><a href="/tasks/9">PHP4,5で普通に動くmb_send_mail</a></h3>
+
+                <div class='statement'>
+                  <div class='description'>
+                    php4,5で普通に動くmb_send_mail。今はこういうのを用意してるんですが、古いphp4だとmb_encode_mimeheaderのバグでsubjectが途中で壊れちゃう。
+                    
+                    function nice_send_mail($to, $subject, $body, $header...
+                  </div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/php">php</a></li>
+                    <li class='tag'><a href="/tasks/tag/mail">mail</a></li>
+                  </ul>
+
+                </div>
+              </div>
+              <div class='sub information'>
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+                  <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+
+                  <dd class='category'><a href="/tasks/category/class-function-making">クラス・関数</a></dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>0</li>
+                  <li class='label'>retweet</li>
+                </ul>
+                <ul class='comment'>
+
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+                    <li class='name'><a href="/komagata">komagata</a></li>
+
+                  </ul>
+                </div>
+                <div class='created_at'>3日前</div>
+              </div>
+            </li>
+            <li class='task plugin-making'>
+              <div class='main'>
+                <h3 class='title'><a href="/tasks/8">wordpressにドリルダウン機能を追加するプラグイン</a></h3>
+
+                <div class='statement'>
+                  <div class='description'>
+                    例えば、不動産サイトや中古車販売サイトのように、複数の条件で検索結果を絞り込めるオープンソースのwordpressのプラグインが欲しいです。
+                    結果に表示されるのは「投稿の一覧」でお願いしたいです（つまり、不動産サイトの場合は不動産の個別情報を投稿に登録、中古車販売サイトの場合は中古車の個別情報...
+                  </div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/wordpress">wordpress</a></li>
+                    <li class='tag'><a href="/tasks/tag/%E3%83%89%E3%83%AA%E3%83%AB%E3%83%80%E3%82%A6%E3%83%B3">ドリルダウン</a></li>
+                    <li class='tag'><a href="/tasks/tag/wordpress-plugin">wordpress-plugin</a></li>
+
+                    <li class='tag'><a href="/tasks/tag/php">php</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class='sub information'>
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+                  <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
+
+                  <dt class='category'>カテゴリー</dt>
+                  <dd class='category'><a href="/tasks/category/plugin-making">プラグイン</a></dd>
+                  <dt class='bounty'>報奨金</dt>
+                  <dd class='bounty'>
+                    <span>5,000円</span>
+                  </dd>
+                </dl>
+
+                <ul class='retweet'>
+                  <li class='count'>0</li>
+                  <li class='label'>retweet</li>
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
+                    <li class='name'><a href="/machida">machida</a></li>
+                  </ul>
+                </div>
+                <div class='created_at'>11日前</div>
+
+              </div>
+            </li>
+            <li class='task plugin-making'>
+              <div class='main'>
+                <h3 class='title'><a href="/tasks/7">wordpressのプラグイン「Disqus Comment System」をシンプルに</a></h3>
+                <div class='statement'>
+                  <div class='description'>
+                    wordpressのコメントをDisqusにするプラグイン「Disqus Comment System」の改良をお願いいたします。
+                    要望は以下の二点です。
+                    
+                    
+                    
+                    
+                    要望
+                    
+                    
+                    
+                    
+                    
+                    のXHTMLをValidにしていただきたいです。
+                    今あるものは、どのブログにもポコんっとはめられる汎用的でそれはそ...
+                  </div>
+
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/wordpress">wordpress</a></li>
+                    <li class='tag'><a href="/tasks/tag/disqus">disqus</a></li>
+                    <li class='tag'><a href="/tasks/tag/wordpress-plugin">wordpress-plugin</a></li>
+                    <li class='tag'><a href="/tasks/tag/php">php</a></li>
+                  </ul>
+                </div>
+
+              </div>
+              <div class='sub information'>
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+                  <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+                  <dd class='category'><a href="/tasks/category/plugin-making">プラグイン</a></dd>
+
+                  <dt class='bounty'>報奨金</dt>
+                  <dd class='bounty'>
+                    <span>500円</span>
+                  </dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>1</li>
+
+                  <li class='label'>retweet</li>
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+
+                  <ul>
+                    <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
+                    <li class='name'><a href="/machida">machida</a></li>
+                  </ul>
+                </div>
+                <div class='created_at'>11日前</div>
+              </div>
+            </li>
+
+            <li class='task software-making'>
+              <div class='main'>
+                <h3 class='title'><a href="/tasks/6">素人さんに優しいUIのクロップツール「easy cropper」のクローン</a></h3>
+                <div class='statement'>
+                  <div class='description'>
+                    めちゃくちゃ素人さんに好評だった画像のクロップアプリ「easy-cropper」がサービスを閉鎖してしまったので、それのクローンを作っていただきたいです。
+                    言語は特に指定しませんが、なるべく多くのレンタルサーバに簡単にインストールして使えるようなものだと嬉しいです。
+                    
+                    easy-cropper...
+                  </div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/javascript">javascript</a></li>
+
+                    <li class='tag'><a href="/tasks/tag/crop">crop</a></li>
+                    <li class='tag'><a href="/tasks/tag/%E7%94%BB%E5%83%8F">画像</a></li>
+                    <li class='tag'><a href="/tasks/tag/web%E3%82%A2%E3%83%97%E3%83%AA">webアプリ</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class='sub information'>
+
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+                  <dd class='category'><a href="/tasks/category/software-making">ソフトウェア</a></dd>
+                  <dt class='bounty'>報奨金</dt>
+
+                  <dd class='bounty'>
+                    <span>5,000円</span>
+                  </dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>1</li>
+                  <li class='label'>retweet</li>
+
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
+
+                    <li class='name'><a href="/machida">machida</a></li>
+                  </ul>
+                </div>
+                <div class='created_at'>11日前</div>
+              </div>
+            </li>
+            <li class='task plugin-making solved'>
+              <div class='main'>
+
+                <h3 class='title'><a href="/tasks/5">wordpressの定番プラグイン「Breadcrumb NavXT」 の改良</a></h3>
+                <div class='statement'>
+                  <div class='resolver'>
+                    <h4>解決者</h4>
+                    <ul>
+                      <li class='icon'><a href="/technolize"><img alt="Technolize_normal" src="http://a3.twimg.com/profile_images/318173045/technolize_normal.png" /></a></li>
+                      <li class='name'><a href="/technolize">technolize</a></li>
+
+                    </ul>
+                  </div>
+                  <div class='description'>
+                    wordpressの定番になっているパンくずリストの自動生成プラグイン、「Breadcrumb NavXT」の改良をお願い致します。
+                    
+                    http://mtekk.weblogs.us/code/breadcrumb-navxt/
+                    
+                    問題点
+                    
+                    
+                    
+                    
+                    
+                    Breadcrumb NavXTには表示させ...
+                  </div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/wordpress">wordpress</a></li>
+                    <li class='tag'><a href="/tasks/tag/php">php</a></li>
+
+                    <li class='tag'><a href="/tasks/tag/plugin">plugin</a></li>
+                    <li class='tag'><a href="/tasks/tag/breadcrumb-navxt">breadcrumb-navxt</a></li>
+                    <li class='tag'><a href="/tasks/tag/wordpress-plugin">wordpress-plugin</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class='sub information'>
+
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+                  <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+                  <dd class='category'><a href="/tasks/category/plugin-making">プラグイン</a></dd>
+                  <dt class='bounty'>報奨金</dt>
+
+                  <dd class='bounty'>
+                    <span>1,000円</span>
+                  </dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>2</li>
+                  <li class='label'>retweet</li>
+
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>3</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
+
+                    <li class='name'><a href="/machida">machida</a></li>
+                  </ul>
+                </div>
+                <div class='created_at'>11日前</div>
+              </div>
+            </li>
+            <li class='task library-making free'>
+              <div class='main'>
+
+                <h3 class='title'><a href="/tasks/3">PacecarのPostgreSQL対応</a></h3>
+                <div class='statement'>
+                  <div class='description'>
+                    
+                    
+                    thoughtbot's pacecar at master - GitHub
+                    
+                    Supported Databases
+                    
+                    
+                    MySQL
+                    SQLite
+                    
+                    
+                    
+                    ActiveRecordに主にnamed_scope関連に便利なメソッドを追加するpacecarというgemを便利に使わせてもらって...
+                  </div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/ruby">ruby</a></li>
+                    <li class='tag'><a href="/tasks/tag/rails">rails</a></li>
+
+                    <li class='tag'><a href="/tasks/tag/rubygems">rubygems</a></li>
+                    <li class='tag'><a href="/tasks/tag/postgresql">postgresql</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class='sub information'>
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+
+                  <dd class='language'><a href="/tasks/tag/ruby">Ruby</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+                  <dd class='category'><a href="/tasks/category/library-making">ライブラリ</a></dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>1</li>
+                  <li class='label'>retweet</li>
+
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+
+                    <li class='name'><a href="/komagata">komagata</a></li>
+                  </ul>
+                </div>
+                <div class='created_at'>12日前</div>
+              </div>
+            </li>
+            <li class='task plugin-making'>
+              <div class='main'>
+
+                <h3 class='title'><a href="/tasks/2">WordPressのGoogle Analyticsモバイル版プラグイン</a></h3>
+                <div class='statement'>
+                  <div class='description'>WordPressのGoogle Analyticsモバイル版のプラグイン作成をお願いします。モバイル版のAnalyticsが管理画面を弄るだけで全部のページに入るようなものだと嬉しいです。昼飯代三日分でなんとか！</div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/php">php</a></li>
+                    <li class='tag'><a href="/tasks/tag/wordpress">wordpress</a></li>
+                    <li class='tag'><a href="/tasks/tag/google-analytics">google-analytics</a></li>
+
+                    <li class='tag'><a href="/tasks/tag/%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3">プラグイン</a></li>
+                    <li class='tag'><a href="/tasks/tag/%E6%90%BA%E5%B8%AF">携帯</a></li>
+                    <li class='tag'><a href="/tasks/tag/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB">モバイル</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class='sub information'>
+
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+                  <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+                  <dd class='category'><a href="/tasks/category/plugin-making">プラグイン</a></dd>
+                  <dt class='bounty'>報奨金</dt>
+
+                  <dd class='bounty'>
+                    <span>3,000円</span>
+                  </dd>
+                </dl>
+                <ul class='retweet'>
+                  <li class='count'>1</li>
+                  <li class='label'>retweet</li>
+
+                </ul>
+                <ul class='comment'>
+                  <li class='count'>0</li>
+                  <li class='label'>Comment</li>
+                </ul>
+                <div class='person'>
+                  <ul>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+
+                    <li class='name'><a href="/komagata">komagata</a></li>
+                  </ul>
+                </div>
+                <div class='created_at'>13日前</div>
+              </div>
+            </li>
+            <li class='task library-making'>
+              <div class='main'>
+
+                <h3 class='title'><a href="/tasks/1">PyhotnのHAMLライブラリ</a></h3>
+                <div class='statement'>
+                  <div class='description'>PythonでHAML記法が使えるテンプレートライブラリの作成をお願いします！Google App Engineでも使えるようにPure Pythonでお願いします！</div>
+                  <ul class='tags'>
+                    <li class='tag'><a href="/tasks/tag/python">python</a></li>
+                    <li class='tag'><a href="/tasks/tag/haml">haml</a></li>
+                    <li class='tag'><a href="/tasks/tag/template">template</a></li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class='sub information'>
+                <dl>
+                  <dt class='language'>プログラム言語</dt>
+                  <dd class='language'><a href="/tasks/tag/python">Python</a></dd>
+                  <dt class='category'>カテゴリー</dt>
+
+                  <dd class='category'><a href="/tasks/category/library-making">ライブラリ</a></dd>
                   <dt class='bounty'>報奨金</dt>
                   <dd class='bounty'>
                     <span>5,000円</span>
@@ -197,11 +669,11 @@
 
                 <div class='person'>
                   <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
+                    <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+                    <li class='name'><a href="/komagata">komagata</a></li>
                   </ul>
                 </div>
-                <div class='created_at'>18分前</div>
+                <div class='created_at'>13日前</div>
               </div>
 
             </li>
@@ -210,35 +682,37 @@
       </div>
       <div id='sub'>
         <div class='section'>
-          <h3>カテゴリー</h3>
+          <h3>言語別タスク数</h3>
+          <ul class='tasks_by_language'>
+
+            <li class='language'><a href="/tasks/language/php">PHP (5)</a></li>
+            <li class='language'><a href="/tasks/language/python">Python (1)</a></li>
+            <li class='language'><a href="/tasks/language/ruby">Ruby (4)</a></li>
+            <li class='language'><a href="/tasks/language/javascript">JavaScript (2)</a></li>
+          </ul>
+          <div class='to_archive'></div>
+        </div>
+
+        <div class='section'>
+          <h3>カテゴリー別タスク数</h3>
           <ul class='categories'>
+            <li class='category'><a href="/tasks/category/software-making">ソフトウェア (2)</a></li>
+            <li class='category'><a href="/tasks/category/library-making">ライブラリ (3)</a></li>
+            <li class='category'><a href="/tasks/category/class-function-making">クラス・関数 (1)</a></li>
+            <li class='category'><a href="/tasks/category/plugin-making">プラグイン (4)</a></li>
 
-            <li class='category'><a href="/tasks/category/iphone-app-making">iPhoneアプリ</a></li>
-            <li class='category'><a href="/tasks/category/android-app-making">Androidアプリ</a></li>
-            <li class='category'><a href="/tasks/category/software-making">ソフトウェア</a></li>
-            <li class='category'><a href="/tasks/category/library-making">ライブラリ</a></li>
-            <li class='category'><a href="/tasks/category/class-function-making">クラス・関数</a></li>
-            <li class='category'><a href="/tasks/category/plugin-making">プラグイン</a></li>
-
-            <li class='category'><a href="/tasks/category/prototype-making">プロトタイプ</a></li>
-            <li class='category'><a href="/tasks/category/debugging">バグ修正</a></li>
-            <li class='category'><a href="/tasks/category/technology-study">技術調査</a></li>
-            <li class='category'><a href="/tasks/category/software-multilingualization">多言語化</a></li>
-            <li class='category'><a href="/tasks/category/document-translation">文章翻訳</a></li>
-            <li class='category'><a href="/tasks/category/data-collection-and-making">データ収集・作成</a></li>
-
-            <li class='category'><a href="/tasks/category/programming-quiz">プログラミングクイズ</a></li>
+            <li class='category'><a href="/tasks/category/debugging">バグ修正 (2)</a></li>
           </ul>
           <div class='to_archive'>
             <p><a href="/about/category">カテゴリーの説明</a></p>
           </div>
         </div>
-        <div class='section'>
+        <div class='section hint'>
           <h3>ヒント</h3>
 
           <ul>
             <li>
-              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
+              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
             <li>
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
@@ -280,5 +754,18 @@
       </ul>
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.</p>
     </div>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-2927688-8");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      //]]>
+    </script>
   </body>
 </html>

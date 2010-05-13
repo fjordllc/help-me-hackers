@@ -852,6 +852,9 @@ div#main .task div.sub {
 	background-position: center 89px;
 	margin-top: -5px;
 }
+div#main .free div.sub {
+	background-position: 0 52px;
+}
 div#main div.task div.sub {
 	margin-top: 10px;
 	margin-bottom: 15px;
@@ -1064,16 +1067,10 @@ div#main .task div.information ul.comment {
 	float: right;
 	padding-right: 5px;
 }
-div#main .task div.information li.icon {
-	display: block;
-	height: 33px;
-	width: 33px;
-	float: left;
-	background-color: #FFFFFF;
-}
 div#main .task div.information li.icon img {
 	height: 32px;
 	width: 32px;
+	float: left;
 }
 div#main .task div.information li.name {
 	font-size: 11px;
@@ -2325,7 +2322,7 @@ div#main div.content div.profile_list li div.comments {
 }
 div#main div.content div.profile_list li div.title {
 	display: block;
-	width: 400px;
+	width: 380px;
 	line-height: 30px;
 	height: 30px;
 	padding-top: 0px;
@@ -2337,7 +2334,7 @@ div#main div.content div.profile_list li div.bounty {
 	font-weight: bold;
 	border: 1px solid #d8d8d8;
 	text-align: center;
-	width: 70px;
+	width: 60px;
 	font-size: 13px;
 	line-height: 20px;
 	height: 20px;
