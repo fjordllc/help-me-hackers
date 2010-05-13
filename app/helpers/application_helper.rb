@@ -41,6 +41,8 @@ module ApplicationHelper
   def users_title
     if params[:language]
       t("label.language.#{@language.name}") + ' - Users'
+    elsif params[:state]
+      t("label.state.#{@state.name}") + ' - Users'
     else
       'Users'
     end
@@ -49,6 +51,8 @@ module ApplicationHelper
   def tasks_title
     if params[:category]
       "Tasks - #{t("label.category.#{@category.name}")}"
+    elsif params[:language]
+      "Tasks - #{t("label.language.#{@language.name}")}"
     elsif params[:tag]
       "Tasks - #{@tag.name}"
     else

@@ -27,6 +27,16 @@ class Task < ActiveRecord::Base
     :conditions => ['bounty > ?', 0],
     :order      => 'bounty DESC'
 
+  named_scope :by_category,
+    :select => 'COUNT(tasks.id) AS cnt, categories.name',
+    :joins  => [:category],
+    :group  => 'category_id'
+
+  named_scope :by_language,
+    :select => 'COUNT(tasks.id) AS cnt, languages.name',
+    :joins  => [:language],
+    :group  => 'language_id'
+
   def self.increment_view_by_id(id)
     task = self.find(id)
     task.view += 1

@@ -34,12 +34,10 @@
         %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
       = f.text_area :description, :size => '70x10'
     %h4 プレビュー
-    :javascript
-       wmd_options = {
-         output: "Markdown"
-       }
-    .wmd-preview
-    = javascript_include_tag 'wmd/wmd'
+    .wrapper
+      .wmd-preview
     %p
       = f.submit '利用規約に同意して登録する'
       = link_to '利用規約', about_terms_path, :target => '_blank'
+- content_for :footer_script do
+  = javascript_include_tag 'wmd/wmd'

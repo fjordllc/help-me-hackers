@@ -4,6 +4,16 @@ class User < TwitterAuth::GenericUser
   has_many :tasks
   has_many :comments
 
+  named_scope :by_language,
+    :select => 'COUNT(users.id) AS cnt, languages.name',
+    :joins  => [:language],
+    :group  => 'language_id'
+
+  named_scope :by_state,
+    :select => 'COUNT(users.id) AS cnt, states.name',
+    :joins  => [:state],
+    :group  => 'state_id'
+
   def total_prize
     p = Comment.find(:first,
       :select => 'sum(tasks.bounty) as prize',

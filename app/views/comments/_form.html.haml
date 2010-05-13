@@ -5,15 +5,12 @@
   = f.text_area :description, :size => '70x10'
   %h4 プレビュー
   .wrapper
-    :javascript
-      wmd_options = {
-        output: "Markdown"
-      }
     .wmd-preview
-  = javascript_include_tag 'wmd/wmd'
   %p
     = f.check_box :answer
     = f.label :answer, '回答としてコメントする'
   %p
     = f.submit '利用規約に同意してコメントする'
     = link_to '利用規約', about_terms_path, :target => '_blank'
+- content_for :footer_script do
+  = javascript_include_tag 'wmd/wmd'

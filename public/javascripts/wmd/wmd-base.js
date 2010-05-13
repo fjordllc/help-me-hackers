@@ -1126,28 +1126,12 @@ _fa.display="block";
 _fa.position="absolute";
 _fa.right="0";
 _f9.unselectable="on";
-var _fb=_6.makeElement("a");
-_fa=_fb.style;
 _fa.position="absolute";
 _fa.right="10px";
 _fa.top="5px";
 _fa.display="inline";
 _fa.width="50px";
 _fa.height="25px";
-_fb.href="http://www.wmd-editor.com/";
-_fb.target="_blank";
-_fb.title="WMD: The Wysiwym Markdown Editor";
-var _fc=_6.createImage("../../images/wmd/wmd.png");
-var _fd=_6.createImage("../../images/wmd/wmd-on.png");
-_fb.appendChild(_fc);
-_fb.onmouseover=function(){
-_6.setImage(_fc,"../../images/wmd/wmd-on.png");
-_fb.style.cursor="pointer";
-};
-_fb.onmouseout=function(){
-_6.setImage(_fc,"../../images/wmd/wmd.png");
-};
-_b8.appendChild(_fb);
 };
 var _e1=function(){
 if(!_6.elementOk(_b0)){
@@ -1536,38 +1520,38 @@ _151.selection="link text";
 _153();
 };
 if(_152){
-_154=_6.prompt("<p style='margin-top: 0px'><b>Enter the image URL.</b></p><p>You can also add a title, which will be displayed as a tool tip.</p><p>Example:<br />http://wmd-editor.com/images/wmd/cloud1.jpg   \"Optional title\"</p>","http://",_155);
+_154=_6.prompt("<p style='margin-top: 0px'><b>画像のURLを入力して下さい。</b></p><p>タイトルを追加することも出来ます。</p><p>例: http://google.com/images/logo.jpg  \"Googleロゴ\"</p>","http://",_155);
 }else{
-_154=_6.prompt("<p style='margin-top: 0px'><b>Enter the web address.</b></p><p>You can also add a title, which will be displayed as a tool tip.</p><p>Example:<br />http://wmd-editor.com/   \"Optional title\"</p>","http://",_155);
+_154=_6.prompt("<p style='margin-top: 0px'><b>URLを入力して下さい。</b></p><p>タイトルを追加することも出来ます。</p><p>例: http://google.com/  \"Google検索\"</p>","http://",_155);
 }
 return true;
 }
 };
 _8.bold={};
-_8.bold.description="Strong <strong>";
+_8.bold.description="より強調 <strong>";
 _8.bold.image="../../images/wmd/bold.png";
 _8.bold.key="b";
 _8.bold.textOp=_8.doBold;
 _8.italic={};
-_8.italic.description="Emphasis <em>";
+_8.italic.description="強調 <em>";
 _8.italic.image="../../images/wmd/italic.png";
 _8.italic.key="i";
 _8.italic.textOp=_8.doItalic;
 _8.link={};
-_8.link.description="Hyperlink <a>";
+_8.link.description="リンク <a>";
 _8.link.image="../../images/wmd/link.png";
 _8.link.key="l";
 _8.link.textOp=function(_159,_15a){
 return _8.doLinkOrImage(_159,false,_15a);
 };
 _8.undo={};
-_8.undo.description="Undo";
+_8.undo.description="元に戻す";
 _8.undo.image="../../images/wmd/undo.png";
 _8.undo.execute=function(_15b){
 _15b.undo();
 };
 _8.redo={};
-_8.redo.description="Redo";
+_8.redo.description="やり直し";
 _8.redo.image="../../images/wmd/redo.png";
 _8.redo.execute=function(_15c){
 _15c.redo();

@@ -1,7 +1,7 @@
 var Attacklab=Attacklab||{};
 Attacklab.wmd_env={};
 Attacklab.account_options={};
-Attacklab.wmd_defaults={version:1,output:"HTML",lineLength:40,delayLoad:false};
+Attacklab.wmd_defaults={version:1,output:"Markdown",lineLength:40,delayLoad:false};
 if(!Attacklab.wmd){
 Attacklab.wmd=function(){
 Attacklab.loadEnv=function(){
@@ -70,4 +70,3 @@ _a(f,false);
 };
 Attacklab.wmd();
 }
-

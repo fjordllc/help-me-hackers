@@ -2,6 +2,8 @@
   %h2= users_title
 - if params[:language]
   .by_language= t("label.language.#{@language.name}")
+- if params[:state]
+  .by_state= t("label.state.#{@state.name}")
 .content
   - if @users.empty?
     %p 該当するユーザーがいません。

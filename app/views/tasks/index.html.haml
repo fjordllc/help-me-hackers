@@ -3,6 +3,8 @@
   %h2= tasks_title
 - if params[:category]
   .by_category= t("label.category.#{@category.name}")
+- if params[:language]
+  .by_language= t("label.language.#{@language.name}")
 - if params[:tag]
   .by_tag= @tag.name
 %div{:class => tasks_class}

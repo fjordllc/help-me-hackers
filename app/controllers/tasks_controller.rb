@@ -14,6 +14,11 @@ class TasksController < ApplicationController
       options[:conditions] = ['category_id = ?', @category.id]
     end
 
+    if params[:language]
+      @language = Language.find_by_name(params[:language])
+      options[:conditions] = ['language_id = ?', @language.id]
+    end
+
     if params[:tag]
       @tag = Tag.find_by_name(params[:tag])
       options[:joins] = [:taggings]

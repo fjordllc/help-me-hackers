@@ -12,6 +12,11 @@ class UsersController < ApplicationController
       options[:conditions] = ['language_id = ?', @language.id]
     end
 
+    if params[:state]
+      @state = State.find_by_name(params[:state])
+      options[:conditions] = ['state_id = ?', @state.id]
+    end
+
     @users = User.paginate(options)
   end
 

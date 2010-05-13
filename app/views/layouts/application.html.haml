@@ -48,7 +48,10 @@
               = content_tag :div, flash[:error],   :class => 'error'
         = yield
       #sub
-        = render :partial => 'shared/sub'
+        - if controller_name == 'users'
+          = render :partial => 'users/sub'
+        - else
+          = render :partial => 'shared/sub'
     #footer
       %ul.links
         %li= link_to '使い方', about_path

@@ -1,15 +1,21 @@
 .section
-  %h3 カテゴリー
+  %h3 言語別タスク数
+  %ul.tasks_by_language
+    - Task.by_language.each do |language|
+      %li.language=link_to "#{t("label.language.#{language.name}")} (#{language.cnt})", tasks_by_language_path(:language => language.name)
+  .to_archive
+.section
+  %h3 カテゴリー別タスク数
   %ul.categories
-    - Category.find(:all, :order => 'id').each do |category|
-      %li.category=link_to t("label.category.#{category.name}"), tasks_by_category_path(:category => category.name)
+    - Task.by_category.each do |category|
+      %li.category=link_to "#{t("label.category.#{category.name}")} (#{category.cnt})", tasks_by_category_path(:category => category.name)
   .to_archive
     %p=link_to 'カテゴリーの説明', about_category_path
 .section
   %h3 ヒント
   %ul
     %li
-      %p Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。
+      %p Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。
     %li
       %p あなたの会社のBTSに塩漬けになってるタスクがありませんか？
       %p Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？

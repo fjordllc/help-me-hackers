@@ -1,9 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
   map.tasks_by_category 'tasks/category/:category',
     :controller => 'tasks', :action => 'index'
+  map.tasks_by_language 'tasks/language/:language',
+    :controller => 'tasks', :action => 'index'
   map.tasks_by_tag 'tasks/tag/:tag',
     :controller => 'tasks', :action => 'index'
   map.users_by_language 'users/language/:language',
+    :controller => 'users', :action => 'index'
+  map.users_by_state 'users/state/:state',
     :controller => 'users', :action => 'index'
 
   map.resources :votes

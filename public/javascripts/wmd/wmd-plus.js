@@ -143,7 +143,7 @@ _1c.startTag=_1c.endTag="";
 _8.autoindent={};
 _8.autoindent.textOp=_8.doAutoindent;
 _8.blockquote={};
-_8.blockquote.description="Blockquote <blockquote>";
+_8.blockquote.description="引用（複数行選択可） <blockquote>";
 _8.blockquote.image="../../images/wmd/blockquote.png";
 _8.blockquote.key=".";
 _8.blockquote.keyCode=190;
@@ -151,12 +151,12 @@ _8.blockquote.textOp=function(_22){
 return _8.doBlockquote(_22);
 };
 _8.code={};
-_8.code.description="Code Sample <pre><code>";
+_8.code.description="コード（複数行選択可） <pre><code>";
 _8.code.image="../../images/wmd/code.png";
 _8.code.key="k";
 _8.code.textOp=_8.doCode;
 _8.img={};
-_8.img.description="Image <img>";
+_8.img.description="画像 <img>";
 _8.img.image="../../images/wmd/img.png";
 _8.img.key="g";
 _8.img.textOp=function(_23,_24){
@@ -277,26 +277,26 @@ _3c.endTag+=_3f;
 }
 };
 _8.ol={};
-_8.ol.description="Numbered List <ol>";
+_8.ol.description="番号付きリスト <ol>";
 _8.ol.image="../../images/wmd/ol.png";
 _8.ol.key="o";
 _8.ol.textOp=function(_41){
 _8.doList(_41,true);
 };
 _8.ul={};
-_8.ul.description="Bulleted List <ul>";
+_8.ul.description="番号無しリスト <ul>";
 _8.ul.image="../../images/wmd/ul.png";
 _8.ul.key="u";
 _8.ul.textOp=function(_42){
 _8.doList(_42,false);
 };
 _8.h1={};
-_8.h1.description="Heading <h1>/<h2>";
+_8.h1.description="見出し <h1>/<h2>";
 _8.h1.image="../../images/wmd/h1.png";
 _8.h1.key="h";
 _8.h1.textOp=_8.doHeading;
 _8.hr={};
-_8.hr.description="Horizontal Rule <hr>";
+_8.hr.description="水平線 <hr>";
 _8.hr.image="../../images/wmd/hr.png";
 _8.hr.key="r";
 _8.hr.textOp=function(_43){

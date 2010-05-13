@@ -11,23 +11,9 @@
       - else
         %ul.tasks
           = render :partial => 'task', :collection => @user.tasks
-    .posted_tasks.profile_list
-      %h3 回答したタスク
-      - if @user.comments.count.zero?
-        %p= t('label.nothing_posted_comments')
-      - else
-        %ul.comments
-          - @user.comments.each do |comment|
-            %li.comment
-              .title= link_to h(comment.task.title), task_path(comment.task)
-              .good= comment.task.votes.size
-              .comment= comment.task.comments.size
-              - if comment.task.bounty > 0
-                .bounty= number_to_currency comment.task.bounty
-              .created_at== #{time_ago_in_words comment.task.created_at}前
-    .posted_comments.profile_list
-      %h3 ウォッチしているタスク
-      %p= t('label.nothing_watching_tasks')
+    -# .posted_comments.profile_list
+    -#  %h3 ウォッチしているタスク
+    -#  %p= t('label.nothing_watching_tasks')
   %ul.loggedin
     %li.show= link_to 'プロフィールを見る', user_path(@user)
     %li.edit= link_to 'アカウント情報を編集する', edit_account_path
