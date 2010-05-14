@@ -1599,7 +1599,7 @@ div.tasks_show div#main div.content div.post h3 {
 	border-bottom-color: #B9B9B9;
 	border-left-color: #B9B9B9;
 }
-div.projects_show #main div.content div.section {
+div.projects_show #main div.content div.section{
 	clear: both;
 	padding-top: 15px;
 	padding-bottom: 15px;
@@ -1611,6 +1611,19 @@ div.projects_show #main div.content div.section {
 	border-bottom-style: dotted;
 	border-top-style: none;
 	margin-bottom: 20px;
+}
+div.about_license #main div.content div.section {
+	clear: both;
+	padding-top: 0px;
+	padding-bottom: 15px;
+	border-top-color: #B9B9B9;
+	border-right-color: #B9B9B9;
+	border-bottom-color: #B9B9B9;
+	border-left-color: #B9B9B9;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-top-style: none;
+	margin-bottom: 25px;
 }
 .tasks_new #main div.content div.post,
 .tasks_create #main div.content div.post {
@@ -1780,14 +1793,14 @@ div.comments_edit div#main div.content div.section {
 }
 #main .about ul {
 	margin-right: 25px;
-	margin-bottom: 1.4em;
+	margin-bottom: 1.8em;
 	list-style-type: square;
 	padding-left: 25px;
 	list-style-position: outside;
 }
 #main .about ol {
 	margin-right: 25px;
-	margin-bottom: 1.4em;
+	margin-bottom: 1.8em;
 	list-style-type: decimal;
 	padding-left: 25px;
 	list-style-position: outside;
@@ -1803,8 +1816,19 @@ div.comments_edit div#main div.content div.section {
 }
 #main .about blockquote {
 	margin-bottom: 15px;
-	background-color: #ECE3E3;
-	padding: 10px;
+	background-color: #F7F7F7;
+	padding-top: 15px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background-image: url(../images/blockquote.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
 }
 
 
@@ -2230,7 +2254,6 @@ div#errorExplanation ul {
 	padding-top: 15px;
 }
 div.fieldWithErrors {
-	display: inline-block !important;
 }
 divfieldWithErrors p {
 	display: none !important;
@@ -2448,7 +2471,7 @@ div#main div.content div.profile_list li div.bounty {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-div#main div.content div.profile_list li div.freee {
+div#main div.content div.profile_list li div.free {
 	color: #A3A3A3;
 }
 div#main div.content div.profile_list li div.created_at {
@@ -2532,7 +2555,8 @@ div#main div.content div.source_url h4 {
 div#main div.content ul.projects {
 	padding-top: 15px;
 }
-#new_task .option_toggle {
+#new_task .option_toggle,
+.tasks_edit .option_toggle {
 	cursor: pointer;
 	background-image: url(../images/option.gif);
 	height: 26px;
