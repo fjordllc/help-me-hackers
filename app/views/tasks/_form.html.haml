@@ -9,7 +9,8 @@
       .label
         = f.label :language, '', :for => 'task_language_id'
       = select_by_model task, :language_id
-    .option_toggle{:onclick => "$('#task_option').toggle()"} トグル
+    .option_toggle{:onclick => "$('#task_option').toggle()"}
+      %img src="images/option.gif" alt="さらにオプションを登録"
     #task_option{:style => 'display:none'}
       .section
         .label

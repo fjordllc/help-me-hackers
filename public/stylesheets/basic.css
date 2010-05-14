@@ -2516,3 +2516,10 @@ div.projects_show div#main div.content div.repository_path h4 {
 div#main div.content ul.projects {
 	padding-top: 15px;
 }
+#new_task .option_toggle {
+	cursor: pointer;
+	background-image: url(../images/option.gif);
+	height: 26px;
+	width: 200px;
+	text-indent: -9999px;
+}
