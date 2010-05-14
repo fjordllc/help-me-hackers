@@ -26,8 +26,8 @@
       <div class='nav'>
         <ul>
           <li>
-            <a href="/tasks/1"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
-            <a href="/dashboard">machida(0)</a>
+            <a href="/tasks/5"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/dashboard">machida(4)</a>
           </li>
           <li><a href="/account/edit">アカウント</a></li>
           <li><a href="/logout">ログアウト</a></li>
@@ -50,112 +50,234 @@
       <div id='main'>
 
         <div id='flash'>
-          <div class="notice">コメントを登録しました。</div>
         </div>
-        <div class='task content'>
+        <div class='task content solved'>
           <div class='main'>
             <div class='title'>
-              <div class='good' onclick="$('#task_1_vote_form').toggle()">
+              <div class='good tweeted'>
                 <ul>
+                  <li class='count' id='task_5_good'>2</li>
 
-                  <li class='count' id='task_1_good'>0</li>
                 </ul>
               </div>
-              <h2>Pythonのhamlライブラリ</h2>
-              <form action="/votes" class="new_vote" id="task_1_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
+              <h2>wordpressの定番プラグイン「Breadcrumb NavXT」 の改良</h2>
+              <form action="/votes" class="new_vote" id="task_5_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="x7CXLt72Fp/g7XN7FMXeejn5BSYSJnrmgJvGdWBBN54=" /></div>
                 <div class='text'>
-                  <input id="task_1_voteable_id" name="vote[voteable_id]" type="hidden" value="1" />
-                  <input id="task_1_voteable_type" name="vote[voteable_type]" type="hidden" value="Task" />
+                  <input id="task_5_voteable_id" name="vote[voteable_id]" type="hidden" value="5" />
+                  <input id="task_5_voteable_type" name="vote[voteable_type]" type="hidden" value="Task" />
+                  <input id="task_5_comment" name="vote[comment]" size="140" type="text" value="Good! RT @machida wordpressの定番プラグイン「Breadcrumb NavXT」 の改良 http://bit.ly/cnVxXF #hmh" />
 
-                  <input id="task_1_comment" name="vote[comment]" size="140" type="text" value="Good! RT @komagata_fjord Pythonのhamlライブラリ http://bit.ly/9mxdft #hmh" />
                 </div>
-                <div class='button'><input src="/images/good_button.gif?1273832436" type="image" /></div>
+                <div class='button'><input src="/images/good_button.gif?1273840653" type="image" /></div>
                 <p class='center'>Retweetをすることで、このタスクにGood!ポイントが加算されます</p>
               </form>
             </div>
             <dl class='information'>
-              <dd class='licence'><a href="/about/license#bsd">BSD LICENSE</a></dd>
-
+              <dd class='licence'><a href="/about/license#gpl2">GPLv2</a></dd>
               <dt class='licence'>ライセンス</dt>
+
             </dl>
             <div class='description'>
-            
-                  <blockquote><p>あああああああああああああああああああああああああああああああああああああああああああああああああ
-                  あああああああああああああああああああああああああああああああああああああああああ</p></blockquote>
-            <p>Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。 Pure Pythonで！</p></div>
-            <ul class='tags'>
-              <li class='tag'><a href="/tasks/tag/python">python</a></li>
-              <li class='tag'><a href="/tasks/tag/haml">haml</a></li>
-            </ul>
+              <p>wordpressの定番になっているパンくずリストの自動生成プラグイン、「Breadcrumb NavXT」の改良をお願い致します。</p>
+              
+              <p><a href="http://mtekk.weblogs.us/code/breadcrumb-navxt/">http://mtekk.weblogs.us/code/breadcrumb-navxt/</a></p>
+              
+              <h3>問題点</h3>
+              
+              
+              
+              
+              <ol>
+              <li>Breadcrumb NavXTには表示させる文字数を制限する機能が付いているが、その機能がマルチバイトに対応していない為、文字化けしてしまう。</li>
 
+              <li>Breadcrumb NavXTが出力するhtmlがあまり好きではない。</li>
+              </ol>
+              
+              
+              
+              
+              <h3>改良していただきたいこと。</h3>
+              
+              
+              <ol>
+              <li>Breadcrumb NavXTには表示させる文字数を制限したときの文字化の解消。</li>
+              <li>Breadcrumb NavXTが出力するHTMLの改良</li>
+              </ol>
+
+              
+              
+              
+              
+              <h3>Breadcrumb NavXTの吐き出すHTMLの改良について</h3>
+              
+              
+              <pre><code>&lt;!-- Breadcrumb NavXT 3.4.1 --&gt;&#x000A;&lt;a href="http://fjord.jp" title="homeへ"&gt;home&lt;/a&gt;»&lt;a href="http://fjord.jp/category/love" title="blogのトップページ"&gt;blog&lt;/a&gt;»&lt;span class="carrent"&gt;2010年4月20日、初台に引越し…&lt;/span&gt;&#x000A;</code></pre>
+
+              
+              <p>…なのですが、これを</p>
+              
+              
+              <pre><code>&lt;!-- Breadcrumb NavXT 3.4.1 --&gt;&#x000A;&lt;ol&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp" title="homeへ"&gt;home&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp/category/love" title="blogのトップページ"&gt;blog&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li class="carrent"&gt;2010年4月20日、初台に引越し…&lt;/li&gt;&#x000A;&lt;/ol&gt;&#x000A;</code></pre>
+
+              
+              <p>もしくは、</p>
+              
+              
+              <pre><code>&lt;!-- Breadcrumb NavXT 3.4.1 --&gt;&#x000A;&lt;ol&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp" title="homeへ"&gt;home&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li&gt;&lt;a href="http://fjord.jp/category/love" title="blogのトップページ"&gt;blog&lt;/a&gt;»&lt;/li&gt;&#x000A;&lt;li&gt;&lt;span class="carrent"&gt;2010年4月20日、初台に引越し…&lt;/span&gt;&lt;/li&gt;&#x000A;&lt;/ol&gt;&#x000A;</code></pre>
+
+              
+              <p>と、表示させられるようにしていただきたいです。</p>
+              
+              
+              
+              
+              <p>また、この矢印は、</p>
+              
+              
+              <pre><code>»&#x000A;</code></pre>
+              
+              <p>管理画面で表示、非表示が出来る機能があるのですが、その機能は改良後も使えるようにしていただきたいです。</p>
+              
+              
+              
+              
+              <p>ハッカーの皆さま、宜しくお願いします。</p>
+            </div>
+
+            <ul class='tags'>
+              <li class='tag'><a href="/tasks/tag/wordpress">wordpress</a></li>
+              <li class='tag'><a href="/tasks/tag/php">php</a></li>
+              <li class='tag'><a href="/tasks/tag/plugin">plugin</a></li>
+              <li class='tag'><a href="/tasks/tag/breadcrumb-navxt">breadcrumb-navxt</a></li>
+              <li class='tag'><a href="/tasks/tag/wordpress-plugin">wordpress-plugin</a></li>
+
+            </ul>
+            <ul class='loggedin'>
+              <li class='edit'><a href="/tasks/5/edit">このタスクを編集</a></li>
+              <li class='delete'><a href="/tasks/5" onclick="if (confirm('本当に削除してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'x7CXLt72Fp/g7XN7FMXeejn5BSYSJnrmgJvGdWBBN54='); f.appendChild(s);f.submit(); };return false;">このタスクを削除</a></li>
+            </ul>
           </div>
           <div class='sub'>
             <div class='information'>
+
               <dl>
                 <dt class='language'>プログラム言語</dt>
-                <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                <dt class='project'>プロジェクト</dt>
-
-                <dd class='project'><a href="/projects/1">Help me, hackers!</a></dd>
+                <dd class='language'><a href="/tasks/tag/php">PHP</a></dd>
                 <dt class='bounty'>報奨金</dt>
                 <dd class='bounty'>
-                  <span>5,000円</span>
+                  <span>1,000円</span>
                 </dd>
+
               </dl>
               <ul class='retweet'>
-
-                <li class='count'>0</li>
+                <li class='count'>2</li>
                 <li class='label'>retweet</li>
               </ul>
               <ul class='comment'>
-                <li class='count'>2</li>
+                <li class='count'>3</li>
+
                 <li class='label'>コメント</li>
               </ul>
-
               <div class='person'>
                 <ul>
-                  <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                  <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
+                  <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
+                  <li class='name'><a href="/machida">machida</a></li>
                 </ul>
               </div>
-              <div class='created_at'>36分前</div>
-            </div>
 
+              <div class='created_at'>12日前</div>
+            </div>
           </div>
           <div class='section'>
             <h3>コメント</h3>
             <ul class='comments'>
+              <li class='comment correct' id='comment-2'>
+                <div class='commenter'>
+
+                  <div class='good' onclick="$('#comment_2_vote_form').toggle()">
+                    <ul class='good'>
+                      <li class='count' id='comment_2_good'>0</li>
+                      <li class='label'>Good</li>
+                    </ul>
+                  </div>
+                  <div class='user'>
+                    <h4>解決者</h4>
+
+                    <ul class='user'>
+                      <li class='icon'><a href="/technolize"><img alt="Technolize_normal" src="http://a3.twimg.com/profile_images/318173045/technolize_normal.png" /></a></li>
+                      <li class='name'><a href="/technolize">technolize</a></li>
+                      <li class='thanks'>
+                        <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
+                          <input name='cmd' type='hidden' value='_donations' />
+                          <input name='business' type='hidden' value='teqnolize@gmail.com' />
+                          <input name='lc' type='hidden' value='JP' />
+
+                          <input name='currency_code' type='hidden' value='JPY' />
+                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Task ID: 5' />
+                          <input name='item_number' type='hidden' value='5' />
+                          <input name='amount' type='hidden' value='1000' />
+                          <input name='button_subtype' type='hidden' value='services' />
+                          <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
+                          <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='/images/paypal_button.gif' type='image' />
+                          <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
+                        </form>
+
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <form action="/votes" class="new_vote" id="comment_2_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="x7CXLt72Fp/g7XN7FMXeejn5BSYSJnrmgJvGdWBBN54=" /></div>
+                  <div class='text'>
+                    <input id="comment_2_voteable_id" name="vote[voteable_id]" type="hidden" value="2" />
+                    <input id="comment_2_voteable_type" name="vote[voteable_type]" type="hidden" value="Comment" />
+                    <input id="comment_2_comment" name="vote[comment]" size="30" type="text" value="Good! RT @technolize あまり手を加えていませんが、とりあえずやってみました。
+                  
+                    breadcrumb_navxt_class.php... http://bit.ly/cnVxXF #hmh" />
+
+                  </div>
+                  <div class='button'><input src="/images/good_button.gif?1273840653" type="image" /></div>
+                  <p class='center'>Retweetをすることで、このタスクにGood!ポイントが加算されます</p>
+                </form>
+                <div class='description'>
+                  <p>あまり手を加えていませんが、とりあえずやってみました。</p>
+                  
+                  <p>breadcrumb_navxt_class.php を差し替えてください。
+                  <a href="http://gist.github.com/389073">http://gist.github.com/389073</a></p>
+
+                  
+                  <h4>変更内容</h4>
+                  
+                  <ul>
+                  <li>リンク文字を処理する関数をマルチバイト対応のものに変えました。 mbstring が必須です。</li>
+                  <li>リストで出力する <code>bcn_display_list()</code> が用意されていたので、こちらの HTML を修正しました。 OL 要素に <code>bcnavxt</code> というクラスを付けるようにしたので、見た目はそちらで調整してもらう感じです。</li>
+
+                  </ul>
+                </div>
+              </li>
               <li class='comment' id='comment-1'>
                 <div class='commenter'>
                   <div class='good' onclick="$('#comment_1_vote_form').toggle()">
                     <ul class='good'>
-
                       <li class='count' id='comment_1_good'>0</li>
+
                       <li class='label'>Good</li>
                     </ul>
                   </div>
                   <div class='user'>
                     <h4>解決者</h4>
                     <ul class='user'>
-
-                      <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                      <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                      <li class='correct'>
-                        <form action="/comments/1" class="edit_comment" id="edit_comment_1" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
-                          <input id="comment_correct" name="comment[correct]" type="hidden" value="true" />
-                          <input src="/images/choice_button.gif?1273832436" type="image" />
-                        </form>
-                      </li>
+                      <li class='icon'><a href="/komagata"><img alt="Good_face_normal" src="http://a1.twimg.com/profile_images/70167950/good_face_normal.png" /></a></li>
+                      <li class='name'><a href="/komagata">komagata</a></li>
 
                       <li class='thanks'>
                         <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
                           <input name='cmd' type='hidden' value='_donations' />
-                          <input name='business' type='hidden' value='komagata@fjord.jp' />
+                          <input name='business' type='hidden' value='komagata@gmail.com' />
                           <input name='lc' type='hidden' value='JP' />
                           <input name='currency_code' type='hidden' value='JPY' />
-                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Task ID: 1' />
-                          <input name='item_number' type='hidden' value='1' />
-                          <input name='amount' type='hidden' value='5000' />
+                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Task ID: 5' />
+                          <input name='item_number' type='hidden' value='5' />
+                          <input name='amount' type='hidden' value='1000' />
 
                           <input name='button_subtype' type='hidden' value='services' />
                           <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
@@ -167,113 +289,105 @@
                   </div>
                 </div>
 
-                <form action="/votes" class="new_vote" id="comment_1_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
+                <form action="/votes" class="new_vote" id="comment_1_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="x7CXLt72Fp/g7XN7FMXeejn5BSYSJnrmgJvGdWBBN54=" /></div>
                   <div class='text'>
                     <input id="comment_1_voteable_id" name="vote[voteable_id]" type="hidden" value="1" />
                     <input id="comment_1_voteable_type" name="vote[voteable_type]" type="hidden" value="Comment" />
-                    <input id="comment_1_comment" name="vote[comment]" size="30" type="text" value="Good! RT @komagata_fjord [GHRML](http://www.ghrml.org/)じゃ駄目ですか？
-                  
-                        %html
-                        ... http://bit.ly/9mxdft #hmh" />
+                    <input id="comment_1_comment" name="vote[comment]" size="30" type="text" value="Good! RT @komagata すみません、折角[technolize][1]さんが回答してくれていたのに僕の作ったバグで投稿できない状態にありま... http://bit.ly/cnVxXF #hmh" />
                   </div>
-                  <div class='button'><input src="/images/good_button.gif?1273832436" type="image" /></div>
+                  <div class='button'><input src="/images/good_button.gif?1273840653" type="image" /></div>
                   <p class='center'>Retweetをすることで、このタスクにGood!ポイントが加算されます</p>
 
                 </form>
                 <div class='description'>
-                  <p><a href="http://www.ghrml.org/">GHRML</a>じゃ駄目ですか？</p>
+                  <p>すみません、折角<a href="http://help-me-hackers.com/technolize">technolize</a>さんが回答してくれていたのに僕の作ったバグで投稿できない状態にありませいた。（Hacker → Hackrのtypo・・・）</p>
                   
-                  <pre><code>%html&#x000A;  %head&#x000A;    %title Hello World&#x000A;    %style{'type': 'text/css'}&#x000A;      body { font-family: sans-serif; }&#x000A;    %script{'type': 'text/javascript', 'src': 'foo.js'}&#x000A;  %body&#x000A;    #header&#x000A;      %h1 Hello World&#x000A;    %ul.navigation&#x000A;      %li[for item in navigation]&#x000A;        %a{'href': item.href} $item.caption&#x000A;     #contents&#x000A;      Hello World!&#x000A;</code></pre>
-
-                  
-                  <p>こう書けるよ。</p>
+                  <p>今修正しました。申し訳ないです・・・。</p>
                 </div>
               </li>
-              <li class='comment' id='comment-4'>
-                <div class='commenter'>
-                  <div class='good' onclick="$('#comment_4_vote_form').toggle()">
-                    <ul class='good'>
-                      <li class='count' id='comment_4_good'>0</li>
+              <li class='comment' id='comment-3'>
 
+                <div class='commenter'>
+                  <div class='good' onclick="$('#comment_3_vote_form').toggle()">
+                    <ul class='good'>
+                      <li class='count' id='comment_3_good'>0</li>
                       <li class='label'>Good</li>
                     </ul>
                   </div>
                   <div class='user'>
+
                     <h4>解決者</h4>
                     <ul class='user'>
                       <li class='icon'><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></li>
                       <li class='name'><a href="/machida">machida</a></li>
-
-                      <li class='correct'>
-                        <form action="/comments/4" class="edit_comment" id="edit_comment_4" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
-                          <input id="comment_correct" name="comment[correct]" type="hidden" value="true" />
-                          <input src="/images/choice_button.gif?1273832436" type="image" />
-                        </form>
-                      </li>
                       <li class='thanks'>
                         <form action='https://www.paypal.com/cgi-bin/webscr' method='post'>
                           <input name='cmd' type='hidden' value='_donations' />
+                          <input name='business' type='hidden' value='machidanohimitsu@gmail.com' />
 
-                          <input name='business' type='hidden' />
                           <input name='lc' type='hidden' value='JP' />
                           <input name='currency_code' type='hidden' value='JPY' />
-                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Task ID: 1' />
-                          <input name='item_number' type='hidden' value='1' />
-                          <input name='amount' type='hidden' value='5000' />
+                          <input name='item_name' type='hidden' value='Help Me! Hacker Bounty. Task ID: 5' />
+                          <input name='item_number' type='hidden' value='5' />
+                          <input name='amount' type='hidden' value='1000' />
                           <input name='button_subtype' type='hidden' value='services' />
                           <input name='bn' type='hidden' value='PP-BuyNowBF:btn_paynow_LG.gif:NonHostedGuest' />
                           <input alt='PayPal- オンラインで安全・簡単にお支払い' name='submit' src='/images/paypal_button.gif' type='image' />
-
                           <img alt='' border='0' height='1' src='https://www.paypal.com/ja_JP/i/scr/pixel.gif' width='1' />
+
                         </form>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <form action="/votes" class="new_vote" id="comment_4_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
+                <form action="/votes" class="new_vote" id="comment_3_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="x7CXLt72Fp/g7XN7FMXeejn5BSYSJnrmgJvGdWBBN54=" /></div>
                   <div class='text'>
-                    <input id="comment_4_voteable_id" name="vote[voteable_id]" type="hidden" value="4" />
+                    <input id="comment_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
+                    <input id="comment_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Comment" />
 
-                    <input id="comment_4_voteable_type" name="vote[voteable_type]" type="hidden" value="Comment" />
-                    <input id="comment_4_comment" name="vote[comment]" size="30" type="text" value="Good! RT @machida &gt; あああああああああああああああああああああああああああああああああああああああああああああああああ
-                    &gt;あああ... http://bit.ly/9mxdft #hmh" />
+                    <input id="comment_3_comment" name="vote[comment]" size="30" type="text" value="Good! RT @machida ハックをお願いした者です。
+                    ありがとうございます！
+                  
+                        &lt;?php
+                        if(function_... http://bit.ly/cnVxXF #hmh" />
                   </div>
-                  <div class='button'><input src="/images/good_button.gif?1273832436" type="image" /></div>
+                  <div class='button'><input src="/images/good_button.gif?1273840653" type="image" /></div>
                   <p class='center'>Retweetをすることで、このタスクにGood!ポイントが加算されます</p>
                 </form>
                 <div class='description'>
-                  <p>あああああああ</p>
+                  <p>ハックをお願いした者です。
+                  ありがとうございます！</p>
                   
-                  <blockquote><p>あああああああああああああああああああああああああああああああああああああああああああああああああ
-                  あああああああああああああああああああああああああああああああああああああああああ</p></blockquote>
+                  <pre><code>&lt;?php&#x000A;if(function_exists('bcn_display'))&#x000A;{&#x000A;bcn_display_list();&#x000A;}&#x000A;?&gt;&#x000A;</code></pre>
 
+                  
+                  <p>これで要望通りに動きました！</p>
                 </div>
                 <ul class='loggedin'>
-                  <li class='edit'><a href="/comments/4/edit">このコメントを編集</a></li>
-                  <li class='delete'><a href="/comments/4" onclick="if (confirm('本当に削除してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4='); f.appendChild(s);f.submit(); };return false;">このコメントを削除</a></li>
+                  <li class='edit'><a href="/comments/3/edit">このコメントを編集</a></li>
+                  <li class='delete'><a href="/comments/3" onclick="if (confirm('本当に削除してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'x7CXLt72Fp/g7XN7FMXeejn5BSYSJnrmgJvGdWBBN54='); f.appendChild(s);f.submit(); };return false;">このコメントを削除</a></li>
                 </ul>
               </li>
+
             </ul>
           </div>
-
           
           <div class='section post'>
             <h3>コメントする</h3>
             <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
-            <form action="/comments" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
-            
-              <input id="comment_task_id" name="comment[task_id]" type="hidden" value="1" />
-              <textarea cols="70" id="comment_description" name="comment[description]" rows="10"></textarea>
+            <form action="/comments" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="x7CXLt72Fp/g7XN7FMXeejn5BSYSJnrmgJvGdWBBN54=" /></div>
 
+            
+              <input id="comment_task_id" name="comment[task_id]" type="hidden" value="5" />
+              <textarea cols="70" id="comment_description" name="comment[description]" rows="10"></textarea>
               <h4>プレビュー</h4>
               <div class='wrapper'>
                 <div class='wmd-preview'></div>
               </div>
               <p>
                 <input id="comment_submit" name="commit" type="submit" value="利用規約に同意してコメントする" />
-                <input id="comment_submit" name="commit_and_solve" type="submit" value="コメントして自己解決" />
-                <a href="/about/terms" target="_blank">利用規約</a>
 
+                <a href="/about/terms" target="_blank">利用規約</a>
               </p>
             </form>
           </div>
@@ -281,64 +395,80 @@
       </div>
       <div id='sub'>
         <div class='section'>
-          <h3>言語別タスク数</h3>
 
+          <h3>言語別タスク数</h3>
           <ul class='tasks count_by_language'>
-            <li class='language'><a href="/tasks/language/ruby">Ruby (2)</a></li>
-            <li class='language'><a href="/tasks/language/javascript">JavaScript (1)</a></li>
-            <li class='language'><a href="/tasks/language/php">PHP (1)</a></li>
-            <li class='language'><a href="/tasks/language/c">C (1)</a></li>
+            <li class='language'><a href="/tasks/language/ruby">Ruby (6)</a></li>
+            <li class='language'><a href="/tasks/language/php">PHP (5)</a></li>
+            <li class='language'><a href="/tasks/language/javascript">JavaScript (2)</a></li>
+            <li class='language'><a href="/tasks/language/python">Python (1)</a></li>
+
+            <li class='language'><a href="/tasks/language/common-lisp">Common Lisp (1)</a></li>
+            <li class='language'><a href="/tasks/language/japanese">日本語 (1)</a></li>
+            <li class='language'><a href="/tasks/language/shell">Shell (1)</a></li>
           </ul>
           <div class='to_archive'></div>
-
         </div>
         <div class='section hint'>
+
           <h3>ヒント</h3>
           <ul>
             <li>
               <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
             <li>
-
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
+
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
             </li>
             <li>
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
             <li>
-
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
+
             </li>
             <li>
               <p>ジャンクフード食系男子募集中！</p>
             </li>
             <li>
               <p>解決してもらうコツはプログラマーにとって面白いタスク設定にすること。前提とゴールは明確に。</p>
-
             </li>
           </ul>
+
           <div class='to_archive'>
             <p><a href="/about/hint">もっと詳しく</a></p>
           </div>
         </div>
       </div>
     </div>
-
     <div id='footer'>
       <ul class='links'>
+
         <li><a href="/about">使い方</a></li>
         <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
         <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
         <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
         <li><a href="http://fjord.jp/">運営</a></li>
-
         <li><a href="/about/terms">利用規約</a></li>
+
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
       </ul>
-      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.</p>
-
+      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100514213721</p>
     </div>
-    <script src="/javascripts/wmd/wmd.js?1273832436" type="text/javascript"></script>
+
+    <script type='text/javascript'>
+      //<![CDATA[
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-2927688-8");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      //]]>
+    </script>
+    <script src="/javascripts/wmd/wmd.js?1273840653" type="text/javascript"></script>
   </body>
 </html>

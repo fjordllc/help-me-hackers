@@ -1434,6 +1434,7 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.comme
 	background-position: left bottom;
 	background-repeat: no-repeat;
 	margin-left: 10px;
+	margin-bottom: 10px;
 }
 div.tasks_show div#main div.content div.section ul.comments li.comment div.commenter div.user {
 	clear: both;
