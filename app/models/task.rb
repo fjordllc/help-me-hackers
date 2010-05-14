@@ -15,7 +15,7 @@ class Task < ActiveRecord::Base
                         :user,
                         :bounty
   validates_length_of :title, :within => 4..255
-  validates_length_of :description, :minimum => 30
+  validates_length_of :description, :minimum => 20
 
   named_scope :unsolved,
     :select => 'tasks.*, sum(comments.correct) as correct_sum',
@@ -26,7 +26,7 @@ class Task < ActiveRecord::Base
     :conditions => ['bounty > ?', 0],
     :order      => 'bounty DESC'
 
-  named_scope :by_language,
+  named_scope :count_by_language,
     :select => 'COUNT(tasks.id) AS cnt, languages.name',
     :joins  => [:language],
     :group  => 'language_id',

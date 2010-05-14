@@ -1,35 +1,47 @@
 .section.post
   - form_for task do |f|
     = f.error_messages
-    %div.section
-      %div.label
+    .section
+      .label
         = f.label :title
       = f.text_field :title
-    %div.section
-      %div.label
-        = f.label :project, '', :for => 'task_project_id'
-      = select_project task, :project_id
-      %span=link_to '新規プロジェクト登録', new_project_path
-    %div.section
-      %div.label
-        == #{f.label :tag_list}（","カンマ区切りで複数入力可能）
-      = f.text_field :tag_list
-    %div.section
-      %div.label
+    .section
+      .label
         = f.label :language, '', :for => 'task_language_id'
       = select_by_model task, :language_id
-    %div.section
-      %div.label
-        = f.label :license, '', :for => 'task_license_id'
-        %span== （#{link_to '詳細', about_license_path}）
-      = select_by_model task, :license_id
-    %div.section
-      %div.label
-        = f.label :bounty
-      = f.text_field :bounty
-      = t('number.currency.format.unit')
-    %div.section
-      %div.label
+    .option_toggle{:onclick => "$('#task_option').toggle()"} トグル
+    #task_option{:style => 'display:none'}
+      .section
+        .label
+          = f.label :license, '', :for => 'task_license_id'
+          %span== （#{link_to '詳細', about_license_path}）
+          %span （こだわりが無ければMIT LICENSEがオススメ）
+        = select_by_model task, :license_id
+      .section
+        .label
+          = f.label :project, '', :for => 'task_project_id'
+          %span （オプション）
+        = select_project task, :project_id
+        %span=link_to '新規プロジェクト登録', new_project_path, :target => '_blank'
+      .section
+        .label
+          = f.label :tag_list
+          %span （","カンマ区切りで複数入力可能）
+          %span （オプション）
+        = f.text_field :tag_list
+      .section
+        .label
+          = f.label :source_url
+          %span （オプション）
+        = f.text_field :source_url
+      .section
+        .label
+          = f.label :bounty
+          %span （オプション）
+        = f.text_field :bounty
+        = t('number.currency.format.unit')
+    .section
+      .label
         = f.label :description
         %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
       = f.text_area :description, :size => '70x10'

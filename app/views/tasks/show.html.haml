@@ -20,6 +20,8 @@
       %dd.licence=link_to t("label.license.#{@task.license.name}"), "#{about_license_path}##{@task.license.name}"
       %dt.licence ライセンス
     .description~markdown @task.description
+    - if @task.source_url.present?
+      .source_url=link_to h(@task.source_url), h(@task.source_url)
     %ul.tags
       - @task.tags.each do |tag|
         %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)

@@ -49,7 +49,13 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new(:bounty => 0, :license_id => 5)
+    options = if logged_in? and current_user.language.present?
+                {:license_id  => 5,
+                 :language_id => current_user.language.id}
+              else
+                {:license_id => 5}
+              end
+    @task = Task.new(options)
   end
 
   def edit
@@ -57,6 +63,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(params[:task])
+    @task.bounty = 0 if @task.bounty.nil?
     @task.user = current_user
 
     if @task.save
@@ -68,6 +75,7 @@ class TasksController < ApplicationController
   end
 
   def update
+    params[:task][:bounty] = 0 unless params[:task][:bounty]
     if @task.update_attributes(params[:task])
       flash[:notice] = t('Task was successfully updated')
       redirect_to @task

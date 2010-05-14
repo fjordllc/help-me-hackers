@@ -4,13 +4,13 @@ class User < TwitterAuth::GenericUser
   has_many :tasks
   has_many :comments
 
-  named_scope :by_language,
+  named_scope :count_by_language,
     :select => 'COUNT(users.id) AS cnt, languages.name',
     :joins  => [:language],
     :group  => 'language_id',
     :order  => 'cnt DESC'
 
-  named_scope :by_state,
+  named_scope :count_by_state,
     :select => 'COUNT(users.id) AS cnt, states.name',
     :joins  => [:state],
     :group  => 'state_id',

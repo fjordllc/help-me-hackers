@@ -37,8 +37,9 @@ ja:
         view: "閲覧"
         resolved: "解決"
         user: "ユーザー"
-        answers: "回答"
+        comments: "コメント"
         project: "プロジェクト"
+        source_url: "ソースコードURL"
         language: "言語"
         license: "ライセンス"
 

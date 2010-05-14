@@ -5,7 +5,9 @@ module ApplicationHelper
   end
 
   def select_project(object, method)
-    select object.class.name.downcase, method, build_raw_model_list(method),
+    select object.class.name.downcase,
+      method,
+      ([['', '']] + build_raw_model_list(method)),
       :selected => object.send(method.to_s)
   end
 

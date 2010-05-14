@@ -3,21 +3,21 @@ class UsersController < ApplicationController
   USERS_PER_PAGE = 20
 
   def index
-    options = {:page => params[:page],
-               :per_page => USERS_PER_PAGE,
-               :order => 'id DESC'}
+    model = User
 
     if params[:language]
       @language = Language.find_by_name(params[:language])
-      options[:conditions] = ['language_id = ?', @language.id]
+      model = model.scoped_by_language_id(@language.id)
     end
 
     if params[:state]
       @state = State.find_by_name(params[:state])
-      options[:conditions] = ['state_id = ?', @state.id]
+      model = model.scoped_by_state_id(@state.id)
     end
 
-    @users = User.paginate(options)
+    @users = model.paginate(:page     => params[:page],
+                            :per_page => USERS_PER_PAGE,
+                            :order    => 'id DESC')
   end
 
   def show

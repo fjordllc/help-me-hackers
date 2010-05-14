@@ -1,7 +1,7 @@
 .section
   %h3 言語別タスク数
-  %ul.tasks_by_language
-    - Task.by_language.each do |language|
+  %ul.tasks.count_by_language
+    - Task.count_by_language.each do |language|
       %li.language=link_to "#{t("label.language.#{language.name}")} (#{language.cnt})", tasks_by_language_path(:language => language.name)
   .to_archive
 .section.hint

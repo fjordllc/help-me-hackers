@@ -43,3 +43,4 @@ task_4:
   license_id: 4
   bounty: 300
   view: 1
+  source_url: "http://github.com/komagata/help-me-hackers/blob/master/app/views/tasks/_form.html.haml"
