@@ -336,6 +336,8 @@ div.about_index div#main div.binding {
 }
 div.about_index div#main div.content ol.about_index {
 	list-style-type: none;
+	margin-right: -15px;
+	margin-left: -15px;
 }
 div.about_index div#main div.content ol.about_index li {
 	height: 100px;
