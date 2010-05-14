@@ -42,6 +42,10 @@ class Task < ActiveRecord::Base
     !!correct_comment
   end
 
+  def unsolved?
+    !solved?
+  end
+
   def correct_comment
     Comment.find(:first,
       :conditions => ['task_id = ? AND correct = ?', id, true])

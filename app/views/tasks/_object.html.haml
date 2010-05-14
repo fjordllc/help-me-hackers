@@ -1,7 +1,4 @@
-- li_class = "task "
-- li_class += ' solved' if object.solved?
-- li_class += ' free' if object.bounty == 0
-%li{:class => li_class}
+%li{task_attrs(object)}
   .main
     %h3.title= link_to h(object.title), object
     .statement
@@ -21,7 +18,7 @@
       %dd.language== #{link_to t("label.language.#{object.language.name}"), tasks_by_tag_path(:tag => object.language.name)}
       - if object.project
         %dt.project プロジェクト
-        %dd.project=link_to object.project.name
+        %dd.project=link_to h(object.project.name), object.project
       - if object.bounty > 0
         %dt.bounty 報奨金
         %dd.bounty
