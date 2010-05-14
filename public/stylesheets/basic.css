@@ -846,10 +846,9 @@ div#main .task .main {
 div#main .task div.sub {
 	float: left;
 	width: 155px;
-	background-image: url(../images/task_sub.jpg);
 	background-repeat: no-repeat;
 	line-height: 1;
-	background-position: center 89px;
+	background-position: center -145px;
 	margin-top: -5px;
 }
 div#main .free div.sub {
@@ -868,8 +867,8 @@ div#main .task div.information dl {
 	padding-bottom: 7px;
 	background-image: url(../images/task_sub_dl.gif);
 	background-repeat: no-repeat;
-	padding-right: 5px;
-	padding-left: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 div#main ul.tasks li.solved div.information dl {
 	background-image: url(../images/solved_sub_dl.gif);
@@ -885,7 +884,51 @@ div#main .task div.information dd.language {
 	font-size: 12px;
 	font-weight: bold;
 	padding-top: 8px;
+	background-image: url(../images/task_sub_dl.gif);
+	padding-bottom: 16px;
+	padding-right: 5px;
 }
+div#main .task div.information dd.project {
+	line-height: 16px;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 0px;
+	background-image: url(../images/task_sub_dl.gif);
+	padding-bottom: 5px;
+	padding-right: 6px;
+	background-position: 0px -40px;
+	padding-left: 6px;
+}
+div#main .task div.information dd.project a {
+	background-color: #FFFFFF;
+	padding-top: 3px;
+	padding-right: 8px;
+	padding-bottom: 3px;
+	padding-left: 8px;
+	display: block;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border: 2px solid #FBDE13;
+	text-decoration: none;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+}
+div#main .task div.information dd.project a:link,
+div#main .task div.information dd.project a:visited {
+	background-color: #FFFFFF;
+}
+div#main .task div.information dd.project a:hover,
+div#main .task div.information dd.project a:active {
+	background-color: #76E3DA;
+	color: #ec189a;
+}
+
+
+
 div#main .task div.information dd.language a {
 	line-height: 20px;
 	height: 20px;
@@ -896,12 +939,12 @@ div#main .task div.information dd.language a {
 	text-decoration: none;
 	padding-right: 7px;
 	padding-left: 7px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
 	color: #5A5A5A;
 	background-color: #EDFF9B;
 	margin-bottom: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 div#main .task div.information dd.language a:link,
 div#main .task div.information dd.language a:visited {
@@ -1030,12 +1073,13 @@ div#main .technology-study div.information dd.category a {
 
 
 div#main .task div.information dd.bounty {
-	margin-top: 10px;
 	font-weight: bold;
 	color: #EC189E;
-	line-height: 27px;
-	height: 27px;
+	line-height: 28px;
+	height: 28px;
 	text-align: center;
+	background-image: url(../images/task_sub_bounty.gif);
+	padding-top: 2px;
 }
 div#main .task div.information dl dd.bounty span {
 	font-weight: bold;
@@ -1055,6 +1099,7 @@ div#main .task div.information ul.comment {
 	width: 72px;
 	font-size: 18px;
 	padding-top: 3px;
+	padding-bottom: 14px;
 }
 div#main .task div.information li.label {
 	display: none;
@@ -1062,10 +1107,15 @@ div#main .task div.information li.label {
 div#main .task div.information ul.retweet {
 	float: left;
 	padding-left: 5px;
+	background-image: url(../images/task_sub_counts.gif);
+	background-position: left top;
+	padding-right: 1px;
 }
 div#main .task div.information ul.comment {
 	float: right;
 	padding-right: 5px;
+	background-image: url(../images/task_sub_counts.gif);
+	background-position: right top;
 }
 div#main .task div.information li.icon img {
 	height: 32px;
@@ -1086,10 +1136,12 @@ div#main .task div.information li.name {
 }
 div#main .task div.information div.person {
 	clear: both;
-	padding-top: 14px;
+	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-right: 7px;
 	padding-left: 7px;
+	background-image: url(../images/task_sub_dl.gif);
+	background-position: left bottom;
 }
 div#main .task div.information div.person h4 {
 	font-size: 12px;
@@ -1101,7 +1153,7 @@ div#main .task div.information div.person h4 {
 	font-weight: bold;
 }
 div#main .task div.information div.person ul {
-	padding-top: 15px;
+	padding-top: 0px;
 }
 div#main .task div.information div.created_at {
 	clear: both;
@@ -1729,6 +1781,7 @@ div.users_show div#main div.content .performance {
 
 div#main div.content ul.users {
 	margin-right: -23px;
+	padding-bottom: 15px;
 }
 div#main div.content li.performance {
 	margin-right: 23px;
