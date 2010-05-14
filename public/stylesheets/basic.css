@@ -1322,9 +1322,17 @@ div.tasks_show div#main div.content div.section ul.user li.correct {
 
 
 div.tasks_show div#main div.content div.section div.description,
-#main div.content div.wmd-preview {
+#main div.content div.wmd-preview,
+div.projects_show div#main div.content div.section div.description {
 	font-size: 14px;
 	padding-top: 0px;
+}
+div.projects_show div#main div.content div.section div.description {
+	margin-bottom: 25px;
+}
+div.projects_show div#main div.content div.section div.description p {
+	margin-bottom: 1.4em;
+	line-height: 1.6;
 }
 div.tasks_show div#main div.content p,
 #main div.content div.wmd-preview p {
@@ -1513,11 +1521,23 @@ div#main div.content ul.loggedin li a {
 	font-size: 13px;
 	font-weight: bold;
 	margin-right: 8px;
+	background-image: url(../images/logged_in.gif);
+	background-repeat: repeat-x;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
-	background-image: url(../images/logged_in.gif);
-	background-repeat: repeat-x;
+}
+div#main div.content ul.loggedin li a:link,
+div#main div.content ul.loggedin li a:visited {
+	background-color: #115894;
+	color: #FFFFFF;
+	background-position: 0px 0px;
+}
+div#main div.content ul.loggedin li a:hover,
+div#main div.content ul.loggedin li a:active {
+	background-color: #76E3DA;
+	color: #ec189a;
+	background-position: 0px -50px;
 }
 div#main div.content ul.loggedin li.show a:link,
 div#main div.content ul.loggedin li.show a:visited {
@@ -1579,6 +1599,19 @@ div.tasks_show div#main div.content div.post h3 {
 	border-bottom-color: #B9B9B9;
 	border-left-color: #B9B9B9;
 }
+div.projects_show #main div.content div.section {
+	clear: both;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top-color: #B9B9B9;
+	border-right-color: #B9B9B9;
+	border-bottom-color: #B9B9B9;
+	border-left-color: #B9B9B9;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-top-style: none;
+	margin-bottom: 20px;
+}
 .tasks_new #main div.content div.post,
 .tasks_create #main div.content div.post {
 	border-top-style: none;
@@ -1590,6 +1623,14 @@ div.tasks_show div#main div.content div.post h3 {
 
 
 
+.accounts_edit #main div.content div.section,
+.projects_edit #main div.content div.section {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	padding-top: 7px;
+}
 
 
 
@@ -2319,7 +2360,8 @@ div#main div.content div.profile_list {
 	padding-bottom: 40px;
 	padding-left: 0px;
 }
-div#main div.content div.profile_list h3 {
+div#main div.content div.profile_list h3,
+div.projects_show div#main div.content h3 {
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 15px;
@@ -2448,4 +2490,28 @@ div#main div.content div.add_task a {
 	background-color: #636D31;
 	color: #FFFFFF;
 	background-position: right -35px;
+}
+div.projects_show div#main div.content div.website_url,
+div.projects_show div#main div.content div.repository_path {
+	background-color: #EFEFE7;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	line-height: 25px;
+	height: 25px;
+	background-image: url(../images/projects_show_url.gif);
+}
+div.projects_show div#main div.content div.website_url h4,
+div.projects_show div#main div.content div.repository_path h4 {
+	display: inline;
+	padding-right: 20px;
+	font-weight: bold;
+	background-image: url(../images/projects_show_url_h4.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+div#main div.content ul.projects {
+	padding-top: 15px;
 }
