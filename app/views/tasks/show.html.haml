@@ -34,7 +34,7 @@
         %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_tag_path(:tag => @task.language.name)
         - if @task.project
           %dt.project プロジェクト
-          %dd.project=link_to h(@task.project.name)
+          %dd.project=link_to h(@task.project.name), @task.project
         - if @task.bounty > 0
           %dt.bounty 報奨金
           %dd.bounty
