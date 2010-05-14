@@ -2290,7 +2290,8 @@ div.about_terms #main div.content ul {
 }
 #main .by_tag,
 #main .by_category,
-#main .by_language {
+#main .by_language,
+#main .by_state {
 	margin-left: 20px;
 	background-color: #9A9A9A;
 	padding-top: 6px;
