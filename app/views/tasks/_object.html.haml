@@ -1,4 +1,4 @@
-- li_class = "task " + object.category.name
+- li_class = "task "
 - li_class += ' solved' if object.solved?
 - li_class += ' free' if object.bounty == 0
 %li{:class => li_class}
@@ -19,8 +19,9 @@
     %dl
       %dt.language プログラム言語
       %dd.language== #{link_to t("label.language.#{object.language.name}"), tasks_by_tag_path(:tag => object.language.name)}
-      %dt.category カテゴリー
-      %dd.category=link_to t("label.category.#{object.category.name}"), tasks_by_category_path(:category => object.category.name)
+      - if object.project
+        %dt.project プロジェクト
+        %dd.project=link_to object.project.name
       - if object.bounty > 0
         %dt.bounty 報奨金
         %dd.bounty

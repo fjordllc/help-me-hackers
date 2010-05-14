@@ -1,0 +1,21 @@
+.title
+  %h2= @project.name
+.content
+  .project
+    %p 概要
+    .description=h @project.description
+    - if @project.website_url
+      %p WebサイトURL
+      .website_url=link_to h(@project.website_url), h(@project.website_url)
+    - if @project.repository_path
+      %p リポジトリパス
+      .repository_path=link_to h(@project.repository_path), h(@project.repository_path)
+  %ul
+    %li.edit= link_to '編集', edit_project_path(@project)
+    %li.delete= link_to '削除', @project, :confirm => '本当に削除してよろしいですか？', :method => :delete
+  %h3 タスク
+  - if @project.tasks.empty?
+    %p.empty タスクがありません。
+  - else
+    %ul.tasks
+      = render :partial => 'task', :collection => @project.tasks

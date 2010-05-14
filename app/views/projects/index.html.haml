@@ -1,0 +1,10 @@
+.title
+  %h2 プロジェクト
+.content
+  - if @projects.empty?
+    .empty
+      %p プロジェクトありません。
+  - else
+    %ul.projects
+      = render :partial => 'project', :collection => @projects
+    = will_paginate(@projects)

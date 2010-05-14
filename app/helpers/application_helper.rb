@@ -4,6 +4,11 @@ module ApplicationHelper
       :selected => object.send(method.to_s)
   end
 
+  def select_project(object, method)
+    select object.class.name.downcase, method, build_raw_model_list(method),
+      :selected => object.send(method.to_s)
+  end
+
   def select_programming_language(object, method)
     list = build_model_list(method).delete_if do |e|
       e[1].to_i >= 1000
@@ -49,8 +54,8 @@ module ApplicationHelper
   end
 
   def tasks_title
-    if params[:category]
-      "Tasks - #{t("label.category.#{@category.name}")}"
+    if params[:project]
+      "Tasks - #{h(@project.name)}"
     elsif params[:language]
       "Tasks - #{t("label.language.#{@language.name}")}"
     elsif params[:tag]
@@ -61,9 +66,7 @@ module ApplicationHelper
   end
 
   def tasks_class
-    if params[:category]
-      "content #{@category.name}"
-    elsif params[:tag]
+    if params[:tag]
       'content tag'
     else
       'content'
@@ -93,7 +96,7 @@ module ApplicationHelper
   end
 
   def task_attrs(task)
-    value = "task content #{task.category.name}"
+    value = "task content"
     value += ' solved' if task.solved?
     value += ' free' if task.bounty.zero?
     {:class => value}
@@ -122,6 +125,15 @@ module ApplicationHelper
            all.
            collect {|e| [t("label.#{str.downcase}.#{e.name}"), e.id] }
     default + list.sort {|a, b| a[1] <=> b[1] }
+  end
+
+  def build_raw_model_list(method)
+    str = method.to_s.humanize
+    list = str.
+           constantize.
+           all.
+           collect {|e| [e.name, e.id] }
+    list.sort {|a, b| a[1] <=> b[1] }
   end
 
   def good_retweet(name, title, url, hashtag = Application::HASH_TAG)

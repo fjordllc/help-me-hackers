@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       comment: "コメント"
-      category: "カテゴリー"
+      project: "プロジェクト"
       language: "言語"
       license: "ライセンス"
       task: "タスク"
@@ -15,10 +15,11 @@ ja:
         user: "ユーザー"
         task: "タスク"
 
-      category: 
+      project: 
         name: "名前"
-        tasks: "タスク"
-        premium: "プレミアム"
+        description: "概要"
+        website_url: "WebサイトURL"
+        repository_path: "リポジトリパス"
 
       language: 
         name: "名前"
@@ -37,7 +38,7 @@ ja:
         resolved: "解決"
         user: "ユーザー"
         answers: "回答"
-        category: "カテゴリー"
+        project: "プロジェクト"
         language: "言語"
         license: "ライセンス"
 
@@ -85,6 +86,11 @@ ja:
   Task was successfully updated: "タスクを更新しました。"
   Task was successfully deleted: "タスクを削除しました。"
   Task was not deleted: "タスクを削除できませんでした。"
+  Project was successfully created: "プロジェクトを登録しました。"
+  Project was successfully updated: "プロジェクトを更新しました。"
+  Project was successfully deleted: "プロジェクトを削除しました。"
+  Project was not deleted: "プロジェクトを削除できませんでした。"
+
   You have logged in successfully: "ログインしました。"
 
   label:
@@ -97,21 +103,6 @@ ja:
     nothing_posted_comments: "解決実績がありません"
     nothing_posted_tasks: "依頼実績がありません"
     nothing_watching_tasks: "ウォッチしているタスクはありません"
-
-    category:
-      iphone-app-making: "iPhoneアプリ"
-      android-app-making: "Androidアプリ"
-      software-making: "ソフトウェア"
-      library-making: "ライブラリ"
-      class-function-making: "クラス・関数"
-      plugin-making: "プラグイン"
-      prototype-making: "プロトタイプ"
-      debugging: "バグ修正"
-      technology-study: "技術調査"
-      software-multilingualization: "多言語化"
-      document-translation: "文章翻訳"
-      data-collection-and-making: "データ収集・作成"
-      programming-quiz: "プログラミングクイズ"
 
     license:
       gpl2: "GPLv2"

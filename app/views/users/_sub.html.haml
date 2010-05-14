@@ -6,7 +6,7 @@
         =link_to "#{t("label.language.#{language.name}")} (#{language.cnt})", users_by_language_path(:language => language.name)
   .to_archive
 .section
-  %h3 人気の都道府県
+  %h3 都道府県別ユーザー数
   %ul.states
     - User.by_state.each do |state|
       %li.state

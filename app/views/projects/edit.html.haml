@@ -1,0 +1,6 @@
+.title
+  %h2 プロジェクト編集
+.content
+  = render :partial => 'form', :locals => {:project => @project}
+  %ul
+    %li= link_to 'プロジェクトページ', @project

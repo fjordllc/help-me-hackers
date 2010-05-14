@@ -1,0 +1,13 @@
+project_1:
+  id: 1
+  name: "Help me, hackers!"
+  description: "プログラミングタスクを共有・公開するサービス"
+  website_url: "http://help-me-hackers.com/"
+  repository_path: "http://github.com/komagata/help-me-hackers"
+
+project_2:
+  id: 2
+  name: "Cloister"
+  description: "簡単ブログ"
+  website_url: "http://docs.komagata.org/"
+  repository_path: "http://github.com/komagata/cloister"

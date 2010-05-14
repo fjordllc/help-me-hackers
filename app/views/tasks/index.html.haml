@@ -1,8 +1,8 @@
 - title "#{tasks_title} | #{t('application.title')}"
 .title
   %h2= tasks_title
-- if params[:category]
-  .by_category= t("label.category.#{@category.name}")
+- if params[:project]
+  .by_project=h @project.name
 - if params[:language]
   .by_language= t("label.language.#{@language.name}")
 - if params[:tag]

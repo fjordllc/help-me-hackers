@@ -32,9 +32,9 @@
       %dl
         %dt.language プログラム言語
         %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_tag_path(:tag => @task.language.name)
-        %dt.category カテゴリー
-        %dd.category{:class => @task.category.name}
-          = link_to t("label.category.#{@task.category.name}"), tasks_by_category_path(:category => @task.category.name)
+        - if @task.project
+          %dt.project プロジェクト
+          %dd.project=link_to h(@task.project.name)
         - if @task.bounty > 0
           %dt.bounty 報奨金
           %dd.bounty
@@ -66,14 +66,13 @@
                 %ul.user
                   %li.icon=link_to image_tag(comment.user.profile_image_url), user_path(comment.user)
                   %li.name=link_to comment.user.login, user_path(comment.user)
-                  - if comment.answer
-                    - unless @task.solved?
-                      %li.correct
-                        - form_for comment do |f|
-                          = hidden_field_tag 'comment[correct]', true
-                          = image_submit_tag 'choice_button.gif'
-                    %li.thanks
-                      = render :partial => 'payment_button', :locals => {:task => @task, :comment => comment}
+                  - unless @task.solved?
+                    %li.correct
+                      - form_for comment do |f|
+                        = hidden_field_tag 'comment[correct]', true
+                        = image_submit_tag 'choice_button.gif'
+                  %li.thanks
+                    = render :partial => 'payment_button', :locals => {:task => @task, :comment => comment}
             - form_for comment.votes.new(:comment => good_comment_retweet(comment)), :html => {:id => "comment_#{comment.id}_vote_form", :style => 'display:none'} do |f|
               .text
                 = f.hidden_field :voteable_id, :id => "comment_#{comment.id}_voteable_id"
@@ -100,9 +99,6 @@
       %h4 プレビュー
       .wrapper
         .wmd-preview
-      %p
-        = f.check_box :answer
-        = f.label :answer, '回答としてコメントする'
       %p
         = f.submit '利用規約に同意してコメントする'
         = link_to '利用規約', about_terms_path, :target => '_blank'

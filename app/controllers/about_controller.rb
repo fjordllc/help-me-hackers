@@ -2,9 +2,6 @@ class AboutController < ApplicationController
   def index
   end
 
-  def category
-  end
-
   def hint
   end
 

@@ -9,9 +9,9 @@ class TasksController < ApplicationController
                :per_page => PROBLEMS_PER_PAGE,
                :order => 'id DESC'}
 
-    if params[:category]
-      @category = Category.find_by_name(params[:category])
-      options[:conditions] = ['category_id = ?', @category.id]
+    if params[:project]
+      @project = Project.find(params[:project])
+      options[:conditions] = ['project_id = ?', @project.id]
     end
 
     if params[:language]
@@ -49,7 +49,7 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new(:bounty => 0, :category_id => 8, :license_id => 5)
+    @task = Task.new(:bounty => 0, :license_id => 5)
   end
 
   def edit

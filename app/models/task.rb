@@ -4,13 +4,12 @@ class Task < ActiveRecord::Base
   belongs_to :user
   belongs_to :language
   belongs_to :license
-  belongs_to :category
+  belongs_to :project
   has_many :comments
   has_many :votes, :as => :voteable, :dependent => :destroy
 
   validates_presence_of :title,
                         :description,
-                        :category,
                         :language,
                         :license,
                         :user,
@@ -26,12 +25,6 @@ class Task < ActiveRecord::Base
   named_scope :paid,
     :conditions => ['bounty > ?', 0],
     :order      => 'bounty DESC'
-
-  named_scope :by_category,
-    :select => 'COUNT(tasks.id) AS cnt, categories.name',
-    :joins  => [:category],
-    :group  => 'category_id',
-    :order  => 'cnt DESC'
 
   named_scope :by_language,
     :select => 'COUNT(tasks.id) AS cnt, languages.name',

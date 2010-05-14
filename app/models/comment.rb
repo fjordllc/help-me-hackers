@@ -4,6 +4,6 @@ class Comment < ActiveRecord::Base
   belongs_to :user
   has_many :votes, :as => :voteable, :dependent => :destroy
   validates_presence_of :description
-  validates_length_of :description, :minimum => 20
+  validates_length_of :description, :minimum => 6
   named_scope :order_by_correct, :order => 'correct'
 end

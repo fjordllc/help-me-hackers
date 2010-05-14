@@ -7,9 +7,9 @@
       = f.text_field :title
     %div.section
       %div.label
-        = f.label :category, '', :for => 'task_category_id'
-        %span== （#{link_to '詳細', about_category_path}）
-      = select_by_model task, :category_id
+        = f.label :project, '', :for => 'task_project_id'
+      = select_project task, :project_id
+      %span=link_to '新規プロジェクト登録', new_project_path
     %div.section
       %div.label
         == #{f.label :tag_list}（","カンマ区切りで複数入力可能）

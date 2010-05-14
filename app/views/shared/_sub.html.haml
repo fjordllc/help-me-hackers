@@ -4,13 +4,6 @@
     - Task.by_language.each do |language|
       %li.language=link_to "#{t("label.language.#{language.name}")} (#{language.cnt})", tasks_by_language_path(:language => language.name)
   .to_archive
-.section
-  %h3 カテゴリー別タスク数
-  %ul.categories
-    - Task.by_category.each do |category|
-      %li.category=link_to "#{t("label.category.#{category.name}")} (#{category.cnt})", tasks_by_category_path(:category => category.name)
-  .to_archive
-    %p=link_to 'カテゴリーの説明', about_category_path
 .section.hint
   %h3 ヒント
   %ul
