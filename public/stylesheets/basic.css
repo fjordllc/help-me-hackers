@@ -888,6 +888,10 @@ div#main .task div.information dd.language {
 	padding-bottom: 16px;
 	padding-right: 5px;
 }
+div#main .solved div.information dd.language {
+	background-image: url(../images/solved_sub_dl.gif);
+}
+
 div#main .task div.information dd.project {
 	line-height: 16px;
 	font-size: 12px;
