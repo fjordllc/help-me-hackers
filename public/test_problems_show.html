@@ -21,17 +21,17 @@
   </head>
   <body>
     <div id='header'>
-
       <h1><a href="/">Help me, hackers!</a></h1>
+
       <div class='nav'>
         <ul>
           <li>
-            <a href="/tasks/3"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/tasks/4"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
             <a href="/dashboard">machida(0)</a>
           </li>
           <li><a href="/account/edit">アカウント</a></li>
-
           <li><a href="/logout">ログアウト</a></li>
+
         </ul>
       </div>
     </div>
@@ -39,34 +39,34 @@
       <div class='nav'>
         <ul>
           <li><a href="/dashboard">ダッシュボード</a></li>
-
           <li><a href="/tasks">タスク</a></li>
+
           <li><a href="/tasks/wanted">WANTED!</a></li>
           <li><a href="/tasks/unsolved">未解決</a></li>
           <li><a href="/users">ユーザー</a></li>
           <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
         </ul>
-
       </div>
       <div id='main'>
+
         <div id='flash'>
         </div>
-        <div class='task content software-making solved'>
+        <div class='task content'>
           <div class='main'>
             <div class='title'>
-              <div class='good' onclick="$('#task_3_vote_form').toggle()">
+              <div class='good' onclick="$('#task_4_vote_form').toggle()">
                 <ul>
+                  <li class='count' id='task_4_good'>0</li>
 
-                  <li class='count' id='task_3_good'>0</li>
                 </ul>
               </div>
-              <h2>1日前などの時間表記</h2>
-              <form action="/votes" class="new_vote" id="task_3_vote_form" method="post" onsubmit="return vote(this, '#task_3_good');" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
+              <h2>プロジェクト機能</h2>
+              <form action="/votes" class="new_vote" id="task_4_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
                 <div class='text'>
-                  <input id="task_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
-                  <input id="task_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Task" />
+                  <input id="task_4_voteable_id" name="vote[voteable_id]" type="hidden" value="4" />
+                  <input id="task_4_voteable_type" name="vote[voteable_type]" type="hidden" value="Task" />
+                  <input id="task_4_comment" name="vote[comment]" size="140" type="text" value="Good! RT @komagata_fjord プロジェクト機能 http://bit.ly/aqAtI9 #helpmehackers" />
 
-                  <input id="task_3_comment" name="vote[comment]" size="30" type="text" value="Good! RT @komagata_fjord 1日前などの時間表記 http://bit.ly/bjaiyB #helpmehackers" />
                 </div>
                 <div class='button'><input src="/images/good_button.gif?1272615246" type="image" /></div>
                 <p class='center'>Retweetをすることで、このタスクにGood!ポイントが加算されます</p>
@@ -74,172 +74,114 @@
             </div>
             <dl class='information'>
               <dd class='licence'><a href="/about/license#bsd">BSD LICENSE</a></dd>
-
               <dt class='licence'>ライセンス</dt>
+
             </dl>
             <div class='description'>
-              <p>現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。</p>
+              <p>タスクをプロジェクトとしてまとめる機能。</p>
+              
+              <p>タスク登録からプロジェクトをプルダウンで選ぶ。</p>
             </div>
+            <div class='source_url'>
+            <h4>ソースURL</h4>
+            <a href="http://github.com/komagata/help-me-hackers/blob/master/app/views/tasks/_form.html.haml">http://github.com/komagata/help-me-hackers/blob/master/app/views/tasks/_form.html.haml</a>
+            </div>
+            <ul class='tags'>
+
+            </ul>
           </div>
           <div class='sub'>
             <div class='information'>
               <dl>
                 <dt class='language'>プログラム言語</dt>
-
                 <dd class='language'><a href="/tasks/tag/ruby">Ruby</a></dd>
-                <dt class='category'>カテゴリー</dt>
-                <dd class='category software-making'>
-                  <a href="/tasks/category/software-making">ソフトウェア</a>
-                </dd>
+                <dt class='project'>プロジェクト</dt>
+
+                <dd class='project'><a href="/projects/1">Help me, hackers!</a></dd>
                 <dt class='bounty'>報奨金</dt>
                 <dd class='bounty'>
-
-                  <span>1,230円</span>
+                  <span>300円</span>
                 </dd>
               </dl>
               <ul class='retweet'>
+
                 <li class='count'>0</li>
                 <li class='label'>retweet</li>
               </ul>
-
               <ul class='comment'>
-                <li class='count'>1</li>
+                <li class='count'>0</li>
                 <li class='label'>コメント</li>
               </ul>
+
               <div class='person'>
                 <ul>
                   <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
                   <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-
                 </ul>
               </div>
-              <div class='created_at'>約1時間前</div>
+              <div class='created_at'>36分前</div>
             </div>
-          </div>
-          <div class='section'>
-            <h3>コメント</h3>
-            <ul class='comments'>
 
-              <li class='comment correct' id='comment-3'>
-                <div class='commenter'>
-                  <div class='good' onclick="$('#comment_3_vote_form').toggle()">
-                    <ul class='good'>
-                      <li class='count' id='comment_3_good'>0</li>
-                      <li class='label'>Good</li>
-                    </ul>
-                  </div>
-
-                  <div class='user'>
-<h4>あああああ</h4>
-                    <ul>
-                      <li class='icon'><a href="/michael_fjord"><img alt="Michael_normal" src="http://a1.twimg.com/profile_images/819542120/michael_normal.jpg" /></a></li>
-                      <li class='name'><a href="/michael_fjord">michael_fjord</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <form action="/votes" class="new_vote" id="comment_3_vote_form" method="post" onsubmit="return vote(this, '.comment ul.good li.count')" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
-
-                  <div class='text'>
-                    <input id="comment_3_voteable_id" name="vote[voteable_id]" type="hidden" value="3" />
-                    <input id="comment_3_voteable_type" name="vote[voteable_type]" type="hidden" value="Comment" />
-                    <input id="comment_3_comment" name="vote[comment]" size="30" type="text" value="Good! RT @michael_fjord ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思いま... http://bit.ly/bjaiyB #helpmehackers" />
-                  </div>
-                  <div class='button'><input src="/images/good_button.gif?1272615246" type="image" /></div>
-                  <p class='center'>Retweetをすることで、このタスクにGood!ポイントが加算されます</p>
-                </form>
-
-                <div class='description'>
-                  <p>ActionView::Helpers::DateHelper#time_ago_in_wordsで行けると思います。i18nも大丈夫です。</p>
-                  
-                  <p>「前」というのを追加する必要がありますが。</p>
-                </div>
-              </li>
-            </ul>
           </div>
           
           <div class='section post'>
-
             <h3>コメントする</h3>
             <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
             <form action="/comments" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="Tr11g86DMQsd5BgERKLpDOX4YCq3PfdYJPrARp+12T4=" /></div>
             
-              <input id="comment_task_id" name="comment[task_id]" type="hidden" value="3" />
+              <input id="comment_task_id" name="comment[task_id]" type="hidden" value="4" />
+
               <textarea cols="70" id="comment_description" name="comment[description]" rows="10"></textarea>
               <h4>プレビュー</h4>
-
               <div class='wrapper'>
-                <script type='text/javascript'>
-                  //<![CDATA[
-                    wmd_options = {
-                      output: "Markdown"
-                    }
-                  //]]>
-                </script>
                 <div class='wmd-preview'></div>
               </div>
               <p>
-                <input name="comment[answer]" type="hidden" value="0" /><input id="comment_answer" name="comment[answer]" type="checkbox" value="1" />
-                <label for="comment_answer">回答としてコメントする</label>
-              </p>
-
-              <p>
                 <input id="comment_submit" name="commit" type="submit" value="利用規約に同意してコメントする" />
+                <input id="comment_submit" name="commit_and_solve" type="submit" value="コメントして自己解決" />
+
                 <a href="/about/terms" target="_blank">利用規約</a>
               </p>
             </form>
           </div>
         </div>
       </div>
-
       <div id='sub'>
         <div class='section'>
-          <h3>カテゴリー</h3>
-          <ul class='categories'>
-            <li class='category'><a href="/tasks/category/iphone-app-making">iPhoneアプリ</a></li>
-            <li class='category'><a href="/tasks/category/android-app-making">Androidアプリ</a></li>
-            <li class='category'><a href="/tasks/category/software-making">ソフトウェア</a></li>
 
-            <li class='category'><a href="/tasks/category/library-making">ライブラリ</a></li>
-            <li class='category'><a href="/tasks/category/class-function-making">クラス・関数</a></li>
-            <li class='category'><a href="/tasks/category/plugin-making">プラグイン</a></li>
-            <li class='category'><a href="/tasks/category/prototype-making">プロトタイプ</a></li>
-            <li class='category'><a href="/tasks/category/debugging">バグ修正</a></li>
-            <li class='category'><a href="/tasks/category/technology-study">技術調査</a></li>
-
-            <li class='category'><a href="/tasks/category/software-multilingualization">多言語化</a></li>
-            <li class='category'><a href="/tasks/category/document-translation">文章翻訳</a></li>
-            <li class='category'><a href="/tasks/category/data-collection-and-making">データ収集・作成</a></li>
-            <li class='category'><a href="/tasks/category/programming-quiz">プログラミングクイズ</a></li>
+          <h3>言語別タスク数</h3>
+          <ul class='tasks count_by_language'>
+            <li class='language'><a href="/tasks/language/ruby">Ruby (2)</a></li>
+            <li class='language'><a href="/tasks/language/javascript">JavaScript (1)</a></li>
+            <li class='language'><a href="/tasks/language/php">PHP (1)</a></li>
           </ul>
-          <div class='to_archive'>
-            <p><a href="/about/category">カテゴリーの説明</a></p>
+          <div class='to_archive'></div>
 
-          </div>
         </div>
-        <div class='section'>
+        <div class='section hint'>
           <h3>ヒント</h3>
           <ul>
             <li>
-              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
+              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
-
             <li>
+
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
             </li>
             <li>
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
-
             <li>
+
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
             </li>
             <li>
               <p>ジャンクフード食系男子募集中！</p>
             </li>
             <li>
-
               <p>解決してもらうコツはプログラマーにとって面白いタスク設定にすること。前提とゴールは明確に。</p>
+
             </li>
           </ul>
           <div class='to_archive'>
@@ -247,22 +189,22 @@
           </div>
         </div>
       </div>
-
     </div>
+
     <div id='footer'>
       <ul class='links'>
         <li><a href="/about">使い方</a></li>
         <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
         <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
         <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
-
         <li><a href="http://fjord.jp/">運営</a></li>
+
         <li><a href="/about/terms">利用規約</a></li>
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
       </ul>
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.</p>
 
     </div>
-    <script src="/javascripts/wmd/wmd.js?1272570436" type="text/javascript"></script>
+    <script src="/javascripts/wmd/wmd.js?1273742526" type="text/javascript"></script>
   </body>
 </html>

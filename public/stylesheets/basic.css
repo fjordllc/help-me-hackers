@@ -2504,8 +2504,21 @@ div.projects_show div#main div.content div.repository_path {
 	height: 25px;
 	background-image: url(../images/projects_show_url.gif);
 }
+div#main div.content div.source_url {
+	background-color: #EFEFE7;
+	margin-bottom: 15px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	line-height: 25px;
+	height: 25px;
+	background-image: url(../images/tasks_show_url.gif);
+	margin-top: 25px;
+}
 div.projects_show div#main div.content div.website_url h4,
-div.projects_show div#main div.content div.repository_path h4 {
+div.projects_show div#main div.content div.repository_path h4,
+div#main div.content div.source_url h4 {
 	display: inline;
 	padding-right: 20px;
 	font-weight: bold;
