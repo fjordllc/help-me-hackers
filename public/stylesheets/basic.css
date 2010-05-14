@@ -1786,8 +1786,11 @@ div.comments_edit div#main div.content div.section {
 	list-style-position: outside;
 }
 #main .about ol {
+	margin-right: 25px;
 	margin-bottom: 1.4em;
 	list-style-type: decimal;
+	padding-left: 25px;
+	list-style-position: outside;
 }
 #main .about li {
 	margin-bottom: 0.8em;

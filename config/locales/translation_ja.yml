@@ -71,8 +71,8 @@ ja:
 
   application:
     title: "Help me, hackers!"
-    description: "ハッカーに助けてもらうサイト"
-    keywords: "プログラム,ハッカー,オープンソース,仕事依頼,SOHO"
+    description: "プログラミングタスクを共有・公開するサイト"
+    keywords: "プログラム,プログラマー,オープンソース,タスク,仕事依頼"
 
   Create: "登録"
   Delete: "削除"

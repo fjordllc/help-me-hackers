@@ -21,7 +21,9 @@
       %dt.licence ライセンス
     .description~markdown @task.description
     - if @task.source_url.present?
-      .source_url=link_to h(@task.source_url), h(@task.source_url)
+      .source_url
+        %h4 ソースURL
+        =link_to truncate(h(@task.source_url), :length => 52), h(@task.source_url)
     %ul.tags
       - @task.tags.each do |tag|
         %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
