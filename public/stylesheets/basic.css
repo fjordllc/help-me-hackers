@@ -1814,7 +1814,8 @@ div.comments_edit div#main div.content div.section {
 	margin-bottom: 15px;
 	display: block;
 }
-#main .about blockquote {
+#main .about blockquote,
+div.tasks_show div#main div.content blockquote  {
 	margin-bottom: 15px;
 	background-color: #F7F7F7;
 	padding-top: 15px;
@@ -1829,6 +1830,24 @@ div.comments_edit div#main div.content div.section {
 	background-image: url(../images/blockquote.gif);
 	background-repeat: no-repeat;
 	background-position: right top;
+}
+div.tasks_show div#main div.content .comment blockquote,
+#main div.content div.wmd-preview blockquote {
+	margin-bottom: 15px;
+	background-color: #F7F7F7;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	margin-right: 10px;
+	margin-left: 0px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background-image: url(../images/blockquote.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	width: 460px;
 }
 
 
