@@ -118,6 +118,12 @@ module ApplicationHelper
     ActionView::Base.full_sanitizer.sanitize(str)
   end
 
+  def version
+    open("#{RAILS_ROOT}/VERSION") {|f| f.read }
+  rescue
+    '20100501000000'
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]

@@ -62,7 +62,7 @@
         %li= link_to '運営', 'http://fjord.jp/'
         %li= link_to '利用規約', about_terms_path
         %li= link_to 'お問い合わせ', 'http://fjord.jp/inquiry'
-      %p.copyright== Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}. Created by #{link_to '@machida', 'http://twitter.com/machida'} and #{link_to '@komagata', 'http://twitter.com/komagata'}.
+      %p.copyright== Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}. Created by #{link_to '@machida', 'http://twitter.com/machida'} and #{link_to '@komagata', 'http://twitter.com/komagata'}.<br />Help me, hackers! Version #{version}
     - if Rails.env.production?
       = render :partial => 'shared/google_analytics'
     - footer_script = yield(:footer_script)
