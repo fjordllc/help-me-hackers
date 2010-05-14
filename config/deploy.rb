@@ -36,20 +36,20 @@ namespace :deploy do
       require 'rubygems'
       require 'twitter'
       require 'pit'
-      
+
       config = Pit.get('twitter', :require => {
         'consumer_token_key' => '',
         'consumer_secret'    => '',
         'access_token_key'   => '',
         'access_secret'      => ''
       })
-      
+
       oauth = Twitter::OAuth.new(config['consumer_token_key'], config['consumer_secret'])
       oauth.authorize_from_access(config['access_token_key'], config['access_secret'])
-      
+
       client = Twitter::Base.new(oauth)
 
-      msg = "Version #{version}をリリースしました。 http://help-me-hackers #hmh"
+      msg = "Version #{version}をリリースしました。 http://help-me-hackers.com #hmh"
       client.update(msg)
       puts msg
     end
