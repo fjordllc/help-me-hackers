@@ -2397,6 +2397,9 @@ div#main div.content div.profile_list li {
 	line-height: 14px;
 	background-color: #fafafa;
 }
+div.projects_show div#main div.content div.profile_list li {
+	margin-right: 10px;
+}
 div#main div.content div.profile_list {
 	display: block;
 	margin: 0px;
