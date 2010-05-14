@@ -34,7 +34,7 @@
         %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_tag_path(:tag => @task.language.name)
         - if @task.project
           %dt.project プロジェクト
-          %dd.project=link_to h(@task.project.name)
+          %dd.project=link_to h(@task.project.name), @task.project
         - if @task.bounty > 0
           %dt.bounty 報奨金
           %dd.bounty
@@ -54,40 +54,7 @@
     .section
       %h3 コメント
       %ul.comments
-        - @comments.each do |comment|
-          %li{comment_attrs(comment)}
-            .commenter
-              %div{good_attrs(comment)}
-                %ul.good
-                  %li.count{:id => "comment_#{comment.id}_good"}= comment.votes.size
-                  %li.label Good
-              .user
-                %h4 解決者
-                %ul.user
-                  %li.icon=link_to image_tag(comment.user.profile_image_url), user_path(comment.user)
-                  %li.name=link_to comment.user.login, user_path(comment.user)
-                  - unless @task.solved?
-                    %li.correct
-                      - form_for comment do |f|
-                        = hidden_field_tag 'comment[correct]', true
-                        = image_submit_tag 'choice_button.gif'
-                  %li.thanks
-                    = render :partial => 'payment_button', :locals => {:task => @task, :comment => comment}
-            - form_for comment.votes.new(:comment => good_comment_retweet(comment)), :html => {:id => "comment_#{comment.id}_vote_form", :style => 'display:none'} do |f|
-              .text
-                = f.hidden_field :voteable_id, :id => "comment_#{comment.id}_voteable_id"
-                = f.hidden_field :voteable_type, :id => "comment_#{comment.id}_voteable_type"
-                = f.text_field :comment, :id => "comment_#{comment.id}_comment"
-              - if logged_in?
-                .button= image_submit_tag 'good_button.gif'
-              - else
-                .button= link_to 'Retweet', login_path
-              %p.center Retweetをすることで、このタスクにGood!ポイントが加算されます
-            .description~markdown comment.description
-            - if logged_in? and comment.user.id == current_user.id
-              %ul.loggedin
-                %li.edit= link_to 'このコメントを編集', edit_comment_path(comment)
-                %li.delete= link_to 'このコメントを削除', comment, :confirm => '本当に削除してよろしいですか？', :method => :delete
+        = render :partial => 'comment', :collection => @comments
   = will_paginate(@comments)
   .section.post
     %h3 コメントする
@@ -101,6 +68,8 @@
         .wmd-preview
       %p
         = f.submit '利用規約に同意してコメントする'
+        - if @task.unsolved? and @task.user.id = current_user.id
+          = f.submit 'コメントして自己解決', :name => 'commit_and_solve'
         = link_to '利用規約', about_terms_path, :target => '_blank'
 - content_for :footer_script do
   = javascript_include_tag 'wmd/wmd'

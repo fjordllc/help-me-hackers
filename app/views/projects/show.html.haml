@@ -12,7 +12,6 @@
       .repository_path=link_to h(@project.repository_path), h(@project.repository_path)
   %ul
     %li.edit= link_to '編集', edit_project_path(@project)
-    %li.delete= link_to '削除', @project, :confirm => '本当に削除してよろしいですか？', :method => :delete
   %h3 タスク
   - if @project.tasks.empty?
     %p.empty タスクがありません。

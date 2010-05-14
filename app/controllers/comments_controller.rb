@@ -8,6 +8,8 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @comment.user = current_user
+    @comment.correct = true if params[:commit_and_solve]
+
     if @comment.save
       flash[:notice] = t('Comment was successfully created')
       redirect_to task_path(@comment.task)
