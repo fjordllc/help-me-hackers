@@ -409,6 +409,9 @@ return _5d;
 _6.escapeUnderscores=function(_5f){
 _5f=_5f.replace(/(\S)(_+)(\S)/g,function(_60,_61,_62,_63){
 _62=_62.replace(/_/g,"&#95;");
+var div = document.createElement('div');
+div.innerHTML = _62;
+_62 = div.childNodes[0] ? div.childNodes[0].nodeValue : '';
 return _61+_62+_63;
 });
 return _5f;
