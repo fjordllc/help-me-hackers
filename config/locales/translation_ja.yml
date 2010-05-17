@@ -60,6 +60,7 @@ ja:
         ssh_public_key: "SSH Public Key"
         twitter_account: "Twitterアカウント"
         github_account: "Githubアカウント"
+        bitbucket_account: "bitbucketアカウント"
         crypted_password: "暗号化されたパスワード"
         password_salt: "パスワードソルト"
         persistence_token: "永続トークン"

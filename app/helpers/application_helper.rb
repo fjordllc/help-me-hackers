@@ -31,12 +31,16 @@ module ApplicationHelper
     "#{root_path}#{user.login}"
   end
 
+  def twitter_url(name)
+    "http://twitter.com/#{h(name)}"
+  end
+
   def github_url(name)
     "http://github.com/#{h(name)}"
   end
 
-  def twitter_url(name)
-    "http://twitter.com/#{h(name)}"
+  def bitbucket_url(name)
+    "http://bitbucket.org/#{h(name)}"
   end
 
   def bitlize(url)
