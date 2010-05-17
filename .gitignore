@@ -4,3 +4,4 @@ db/schema.rb
 config/database.yml
 config/twitter_auth.yml
 config/newrelic.yml
+VERSION
