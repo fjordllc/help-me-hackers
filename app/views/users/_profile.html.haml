@@ -25,6 +25,9 @@
     - if user.github_account.present?
       %dt.github_account Githubアカウント
       %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'
+    - if user.bitbucket_account.present?
+      %dt.bitbucket_account bitbucketアカウント
+      %dd.bitbucket_account=link_to bitbucket_url(user.bitbucket_account), bitbucket_url(user.bitbucket_account), :target => '_blank'
   - if user.ssh_public_key.present?
     .ssh_public_key
       %h4 SSH Public Key
