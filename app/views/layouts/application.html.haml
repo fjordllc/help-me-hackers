@@ -34,9 +34,8 @@
           - if logged_in?
             %li= link_to_unless_current_with_span 'ダッシュボード', dashboard_path
           %li= link_to_unless_current_with_span 'タスク', tasks_path
-          %li= link_to_unless_current_with_span 'WANTED!', wanted_tasks_path
-          %li= link_to_unless_current_with_span '未解決', unsolved_tasks_path
           %li= link_to_unless_current_with_span 'ユーザー', users_path
+          %li= link_to_unless_current_with_span 'プロジェクトを登録', new_project_path
           %li.add_task= link_to 'タスク登録', new_task_path
       #main
         #flash

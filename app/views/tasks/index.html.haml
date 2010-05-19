@@ -13,6 +13,10 @@
       %p 該当するコメントがありません。
       %p== 今なら目立つ！この隙に#{link_to '登録', new_task_path}すれば解決してもらえるかも！
   - else
+  .sort
+    %ul
+      %li.wanted= link_to_unless_current_with_span 'WANTED!', wanted_tasks_path
+      %li.unsolved= link_to_unless_current_with_span '未解決', unsolved_tasks_path
   %ul.tasks.tasks_list
     = render :partial => 'object', :collection => @tasks
   = will_paginate(@tasks)
