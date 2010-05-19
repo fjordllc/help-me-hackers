@@ -1,13 +1,13 @@
 class TasksController < ApplicationController
   before_filter :find_task
   before_filter :login_required, :only => [:new, :create, :edit, :update, :destroy, :tweet]
-  PROBLEMS_PER_PAGE = 20
-  HACKS_PER_PAGE = 20
+  TASKS_PER_PAGE = 20
+  COMMENTS_PER_PAGE = 20
 
   def index
     options = {:page => params[:page],
-               :per_page => PROBLEMS_PER_PAGE,
-               :order => 'id DESC'}
+               :per_page => TASKS_PER_PAGE,
+               :order => 'updated_at DESC'}
 
     if params[:project]
       @project = Project.find(params[:project])
@@ -26,24 +26,39 @@ class TasksController < ApplicationController
     end
 
     @tasks = Task.paginate(options)
+
+    respond_to do |format|
+      format.html # index.html.haml
+      format.atom { render :layout => false }
+    end
   end
 
   def wanted
     @tasks = Task.unsolved.paid.paginate(
       :page     => params[:page],
-      :per_page => PROBLEMS_PER_PAGE)
+      :per_page => TASKS_PER_PAGE)
+
+    respond_to do |format|
+      format.html # wanted.html.haml
+      format.atom { render :layout => false }
+    end
   end
 
   def unsolved
     @tasks = Task.unsolved.paginate(
       :page     => params[:page],
-      :per_page => PROBLEMS_PER_PAGE)
+      :per_page => TASKS_PER_PAGE)
+
+    respond_to do |format|
+      format.html # unsolved.html.haml
+      format.atom { render :layout => false }
+    end
   end
 
   def show
     @comments = @task.comments.by_correct(:desc).paginate(
       :page => params[:page],
-      :per_page => HACKS_PER_PAGE)
+      :per_page => COMMENTS_PER_PAGE)
     @comment = Comment.new(:task_id => @task.id)
     Task.increment_view_by_id(@task.id)
   end

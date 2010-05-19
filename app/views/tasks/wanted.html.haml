@@ -4,8 +4,8 @@
 .content
   - if @tasks.empty?
     .empty
-      %p 該当するCommentがありません。
-      %p== 今なら目立つ！この隙に#{link_to '依頼', new_task_path}すれば解決してもらえるかも！
+      %p 該当するタスクがありません。
+      %p== 今なら目立つ！この隙に#{link_to '登録', new_task_path}すれば解決してもらえるかも！
   - else
   %ul.tasks.tasks_list
     = render :partial => 'object', :collection => @tasks

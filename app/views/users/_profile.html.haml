@@ -3,32 +3,35 @@
 .profile
   %h3 プロフィール
   - if user.description.present?
-    %h4.description 自己紹介
+    %h4.description= t('activerecord.attributes.user.profile')
     %p.description=hbr user.description
   %dl.user
-    %dt.login アカウント名
+    %dt.login= t('activerecord.attributes.user.login')
     %dd.login=link_to user.login, user_path(user)
     - if user.state
-      %dt.state 出身
+      %dt.state= t('activerecord.attributes.user.state')
       %dd.state= t("label.state.#{user.state.name}")
     - if user.url.present?
-      %dt.url URL
+      %dt.url= t('activerecord.attributes.user.url')
       %dd.url=link_to h(user.url), h(user.url), :target => '_blank'
     - if user.company.present?
-      %dt.company 会社
+      %dt.company= t('activerecord.attributes.user.company')
       %dd.company=h user.company
     - if user.language
-      %dt.favorite_language 好きなプログラム言語
+      %dt.favorite_language= t('activerecord.attributes.user.language')
       %dd.favorite_language= t("label.language.#{user.language.name}")
-    %dt.twitter_account Twitterアカウント
+    - if user.editor
+      %dt.favorite_editor= t('activerecord.attributes.user.editor')
+      %dd.favorite_editor= t("label.editor.#{user.editor.name}")
+    %dt.twitter_account= t('activerecord.attributes.user.twitter_account')
     %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
     - if user.github_account.present?
-      %dt.github_account Githubアカウント
+      %dt.github_account= t('activerecord.attributes.user.github_account')
       %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'
     - if user.bitbucket_account.present?
-      %dt.bitbucket_account bitbucketアカウント
+      %dt.bitbucket_account= t('activerecord.attributes.user.bitbucket_account')
       %dd.bitbucket_account=link_to bitbucket_url(user.bitbucket_account), bitbucket_url(user.bitbucket_account), :target => '_blank'
   - if user.ssh_public_key.present?
     .ssh_public_key
-      %h4 SSH Public Key
+      %h4= t('activerecord.attributes.user.ssh_public_key')
       %p.ssh_public_key=h user.ssh_public_key

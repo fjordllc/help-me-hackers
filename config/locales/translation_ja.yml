@@ -55,8 +55,10 @@ ja:
         profile_image_url: "プロフィール画像のURL"
         description: "プロフィール"
         company: "会社"
-        state: "都道府県"
-        url: "ウェブサイト／ブログ"
+        state: "出身"
+        language: "好きなプログラム言語"
+        editor: "好きなエディタ"
+        url: "URL"
         ssh_public_key: "SSH Public Key"
         twitter_account: "Twitterアカウント"
         github_account: "Githubアカウント"
@@ -75,6 +77,10 @@ ja:
     description: "プログラミングタスクを共有・公開するサイト"
     keywords: "プログラム,プログラマー,オープンソース,タスク,仕事依頼"
 
+  Account: "アカウント"
+  Login: "ログイン"
+  Logout: "ログアウト"
+  Login by Twitter: "Twitterでログイン"
   Create: "登録"
   Delete: "削除"
   Update: "更新"
@@ -84,6 +90,7 @@ ja:
   Comment was successfully updated: "コメントを更新しました。"
   Comment was successfully deleted: "コメントを削除しました。"
   Comment was not deleted: "コメントを削除できませんでした。"
+  Create Task: "タスク登録"
   Task was successfully created: "タスクを登録しました。"
   Task was successfully updated: "タスクを更新しました。"
   Task was successfully deleted: "タスクを削除しました。"
@@ -92,12 +99,12 @@ ja:
   Project was successfully updated: "プロジェクトを更新しました。"
   Project was successfully deleted: "プロジェクトを削除しました。"
   Project was not deleted: "プロジェクトを削除できませんでした。"
-
   You have logged in successfully: "ログインしました。"
 
   label:
-    tasks: "タスク"
     dashboard: "ダッシュボード"
+    wanted: "WANTED!"
+    unsolved: "未解決"
 
     please-select: "選択して下さい"
     favorite-language: "好きなプログラム言語"
@@ -121,6 +128,27 @@ ja:
       cc-attribution-non-commercial: "Creative Commons — 表示-非営利"
       cc-attribution-non-commercial-share-alike: "Creative Commons — 表示-非営利-継承"
       cc-attribution-non-commercial-no-derivatives: "Creative Commons — 表示-非営利-改変禁止"
+
+    editor:
+      emacs: Emacs
+      vi: vi
+      vim: vim
+      notepad: メモ帳
+      eclipse: Eclipse
+      visual-studio: Visual Studio
+      netbeans: NetBeans
+      hidemaru: 秀丸エディタ
+      peggy: Peggy
+      jedit-x: Jedit X
+      sakura-editor: サクラエディタ
+      emeditor: EmEditor
+      ed: ed
+      nano: nano
+      dreamweaver: Dreamweaver
+      xcode: Xcode
+      textmate: TextMate
+      mi: mi
+      smultron: Smultron
 
     language:
       c: "C"
@@ -164,6 +192,8 @@ ja:
       shell: "Shell"
       tcl: "Tcl"
       standard-ml: "Standard ML"
+      html: "HTML"
+      css: "CSS"
       japanese: "日本語"
       english: "英語"
 
