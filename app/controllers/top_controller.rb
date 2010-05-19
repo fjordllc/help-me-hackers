@@ -5,6 +5,6 @@ class TopController < ApplicationController
     @tasks = Task.paginate(
       :page     => params[:page],
       :per_page => TASKS_PER_PAGE,
-      :order    => 'updated_at DESC')
+      :order    => 'id DESC')
   end
 end
