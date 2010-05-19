@@ -1880,7 +1880,8 @@ div#main div.content div.profile p.description {
 }
 div#main div.content div.profile div.ssh_public_key {
 	display: block;
-	padding-top: 20px;
+	padding-top: 15px;
+	clear: both;
 }
 div#main div.content div.profile div.ssh_public_key h4 {
 	display: block;
@@ -1905,7 +1906,6 @@ div#main div.content div.profile div.ssh_public_key p {
 	border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
-	-o-border-radius: 8px;
 }
 
 
@@ -2422,4 +2422,36 @@ div#main div.content div.sort li a:active {
 	border-left-width: 1px;
 	border-left-style: solid;
 	border-left-color: #6ad3ca;
+}
+div#main div.content div.profile div.accounts {
+	padding-top: 10px;
+}
+div#main div.content div.profile div.accounts p a {
+	display: block;
+	margin-right: 10px;
+	float: left;
+	margin-bottom: 8px;
+	height: 45px;
+	width: 45px;
+	text-indent: -9999px;
+}
+div#main div.content div.profile div.accounts p a:link,
+div#main div.content div.profile div.accounts p a:visited {
+	background-position: 0px 0px;
+}
+div#main div.content div.profile div.accounts p a:hover,
+div#main div.content div.profile div.accounts p a:active {
+	background-position: 0px -45px;
+}
+div#main div.content div.profile div.accounts p.twitter_account a {
+	background-image: url(../images/twitter_account.gif);
+}
+div#main div.content div.profile div.accounts p.github_account a {
+	background-image: url(../images/github_account.gif);
+}
+div#main div.content div.profile div.accounts p.bitbucket_account a {
+	background-image: url(../images/bitbucket_account.gif);
+}
+div#main div.content div.profile div.accounts p.url a {
+	background-image: url(../images/url.gif);
 }
