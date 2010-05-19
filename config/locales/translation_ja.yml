@@ -16,7 +16,7 @@ ja:
         task: "タスク"
 
       project: 
-        name: "名前"
+        name: "プロジェクト名"
         description: "概要"
         website_url: "WebサイトURL"
         repository_path: "リポジトリパス"
@@ -83,6 +83,7 @@ ja:
   Login by Twitter: "Twitterでログイン"
   Create: "登録"
   Delete: "削除"
+  Edit: "編集"
   Update: "更新"
   Vote was successfully created: "ReTweetしました。"
   Vote was not created: "ReTweetできませんでした。"
@@ -95,6 +96,7 @@ ja:
   Task was successfully updated: "タスクを更新しました。"
   Task was successfully deleted: "タスクを削除しました。"
   Task was not deleted: "タスクを削除できませんでした。"
+  Create Project: "プロジェクト登録"
   Project was successfully created: "プロジェクトを登録しました。"
   Project was successfully updated: "プロジェクトを更新しました。"
   Project was successfully deleted: "プロジェクトを削除しました。"

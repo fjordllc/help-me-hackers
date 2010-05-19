@@ -8,3 +8,5 @@
     %ul.projects
       = render :partial => 'project', :collection => @projects
     = will_paginate(@projects)
+  %ul.loggedin
+    %li= link_to t('Create Project'), new_project_path

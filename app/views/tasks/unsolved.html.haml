@@ -2,6 +2,10 @@
 .title
   %h2 未解決
 .content
+  .sort
+    %ul
+      %li.unsolved= link_to t('activerecord.models.task'), tasks_path
+      %li.wanted= link_to t('label.wanted'), wanted_tasks_path
   - if @tasks.empty?
     .empty
       %p 該当するタスクがありません。
