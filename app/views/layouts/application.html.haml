@@ -40,6 +40,7 @@
           %li= link_to_unless_current_with_span t('label.wanted'), wanted_tasks_path
           %li= link_to_unless_current_with_span t('label.unsolved'), unsolved_tasks_path
           %li= link_to_unless_current_with_span t('activerecord.models.user'), users_path
+          %li= link_to_unless_current_with_span 'プロジェクトを登録', new_project_path
           %li.add_task= link_to t('Create Task'), new_task_path
       #main
         #flash
