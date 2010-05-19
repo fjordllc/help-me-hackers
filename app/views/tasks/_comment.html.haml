@@ -5,7 +5,6 @@
         %li.count{:id => "comment_#{comment.id}_good"}= comment.votes.size
         %li.label Good
     .user
-      %h4 解決者
       %ul.user
         %li.icon=link_to image_tag(comment.user.profile_image_url), user_path(comment.user)
         %li.name=link_to comment.user.login, user_path(comment.user)

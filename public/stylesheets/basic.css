@@ -1449,22 +1449,10 @@ div.tasks_show div#main div.content div.section ul.comments li.comment div.comme
 
 
 div.tasks_show div#main div.content div.section ul.comments li.correct div.commenter {
-	background-image: url(../images/task_resolver.gif);
+	background-image: url(../images/correct.gif);
 }
 div.tasks_show div#main div.content div.section ul.comments li.correct div.commenter div.user {
 	background-image: url(../images/correct_hacker.gif);
-}
-
-
-
-div.tasks_show div#main div.content div.section ul.comments li.comment div.commenter h4 {
-	display:block;
-	font-size:12px;
-	font-weight:bold;
-	height:12px;
-	line-height:12px;
-	text-align:center;
-	margin-bottom: 12px;
 }
 
 
@@ -2587,4 +2575,7 @@ div#main div.content ul.projects {
 	height: 26px;
 	width: 200px;
 	text-indent: -9999px;
+}
+div#main div.content div.sort li {
+	display: inline;
 }
