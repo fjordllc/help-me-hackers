@@ -9,7 +9,6 @@ gem 'pacecar', '1.2.0'
 gem 'yaml_waml', '0.3.0'
 gem 'will_paginate', '2.3.12'
 gem 'hoptoad_notifier', '2.2.2'
-gem 'acts_as_taggable_on_steroids', '1.2'
 gem 'amatsuda-i18n_generators', '0.6.0', :require => nil
 
 # native module

@@ -1,23 +1,23 @@
 --- 
 dependencies: 
+  yaml_waml: 
+    group: 
+    - :default
+    version: = 0.3.0
   rails: 
     group: 
     - :default
     version: = 2.3.5
     require: []
 
-  yaml_waml: 
-    group: 
-    - :default
-    version: = 0.3.0
-  haml: 
-    group: 
-    - :default
-    version: = 2.2.22
   ezcrypto: 
     group: 
     - :default
     version: = 0.7.2
+  haml: 
+    group: 
+    - :default
+    version: = 2.2.22
   sqlite3-ruby: 
     group: 
     - :default
@@ -42,18 +42,14 @@ dependencies:
     group: 
     - :default
     version: = 1.4.3
-  will_paginate: 
-    group: 
-    - :default
-    version: = 2.3.12
   bitly: 
     group: 
     - :default
     version: = 0.4.0
-  acts_as_taggable_on_steroids: 
+  will_paginate: 
     group: 
     - :default
-    version: = 1.2
+    version: = 2.3.12
   hoptoad_notifier: 
     group: 
     - :default
@@ -79,8 +75,6 @@ specs:
     version: 2.3.5
 - activeresource: 
     version: 2.3.5
-- acts_as_taggable_on_steroids: 
-    version: "1.2"
 - locale: 
     version: 2.0.5
 - gettext: 
@@ -117,7 +111,7 @@ specs:
     version: 2.3.12
 - yaml_waml: 
     version: 0.3.0
-hash: ef3711d89e3c6173f9796c6237e74957e3292571
+hash: 693d4728d54bbfa9931837317144e4eeeb299a41
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
