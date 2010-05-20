@@ -2480,3 +2480,6 @@ div.top_index div#main div.content div.pager a {
 	background-repeat: no-repeat;
 	background-position: right center;
 }
+div#sub div.banner {
+	padding-bottom: 15px;
+}
