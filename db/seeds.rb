@@ -4,13 +4,13 @@ def load_fixture(fixture, dir = "db/seeds")
   Fixtures.create_fixtures(dir, fixture)
 end
 
+load_fixture :languages
+load_fixture :licenses
+load_fixture :countries
+load_fixture :states
+load_fixture :editors
 
-if ENV['CAP_ENV'] == 'production'
-  load_fixture :languages
-  load_fixture :licenses
-  load_fixture :countries
-  load_fixture :states
-else
+unless ENV['CAP_ENV'] == 'production'
   load_fixture :languages
   load_fixture :licenses
   load_fixture :countries

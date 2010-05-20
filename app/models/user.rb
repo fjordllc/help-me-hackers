@@ -1,5 +1,6 @@
 class User < TwitterAuth::GenericUser
   belongs_to :language
+  belongs_to :editor
   belongs_to :state
   has_many :tasks
   has_many :comments
@@ -8,6 +9,12 @@ class User < TwitterAuth::GenericUser
     :select => 'COUNT(users.id) AS cnt, languages.name',
     :joins  => [:language],
     :group  => 'language_id',
+    :order  => 'cnt DESC'
+
+  named_scope :count_by_editor,
+    :select => 'COUNT(users.id) AS cnt, editors.name',
+    :joins  => [:editor],
+    :group  => 'editor_id',
     :order  => 'cnt DESC'
 
   named_scope :count_by_state,

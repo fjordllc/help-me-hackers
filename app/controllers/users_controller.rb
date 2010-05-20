@@ -10,6 +10,11 @@ class UsersController < ApplicationController
       model = model.scoped_by_language_id(@language.id)
     end
 
+    if params[:editor]
+      @editor = Editor.find_by_name(params[:editor])
+      model = model.scoped_by_editor_id(@editor.id)
+    end
+
     if params[:state]
       @state = State.find_by_name(params[:state])
       model = model.scoped_by_state_id(@state.id)

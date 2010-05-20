@@ -5,6 +5,8 @@ ActionController::Routing::Routes.draw do |map|
     :controller => 'tasks', :action => 'index'
   map.users_by_language 'users/language/:language',
     :controller => 'users', :action => 'index'
+  map.users_by_editor 'users/editor/:editor',
+    :controller => 'users', :action => 'index'
   map.users_by_state 'users/state/:state',
     :controller => 'users', :action => 'index'
 

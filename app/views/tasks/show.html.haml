@@ -72,7 +72,7 @@
         .wmd-preview
       %p
         = f.submit '利用規約に同意してコメントする'
-        - if @task.unsolved? and @task.user.id = current_user.id
+        - if @task.unsolved? and logged_in? and @task.user.id = current_user.id
           = f.submit 'コメントして自己解決', :name => 'commit_and_solve'
         = link_to '利用規約', about_terms_path, :target => '_blank'
 - content_for :footer_script do

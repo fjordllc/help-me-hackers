@@ -6,7 +6,14 @@
         =link_to "#{t("label.language.#{language.name}")} (#{language.cnt})", users_by_language_path(:language => language.name)
   .to_archive
 .section
-  %h3 出身都道府県別ユーザー数
+  %h3 人気のエディタ
+  %ul.editors.count_by_editor
+    - User.count_by_editor.each do |editor|
+      %li.editor
+        =link_to "#{t("label.editor.#{editor.name}")} (#{editor.cnt})", users_by_editor_path(:editor => editor.name)
+  .to_archive
+.section
+  %h3 出身別ユーザー数
   %ul.states.count_by_state
     - User.count_by_state.each do |state|
       %li.state

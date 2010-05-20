@@ -1,0 +1,75 @@
+emacs:
+  id: 1
+  name: emacs
+
+vi:
+  id: 2
+  name: vi
+
+vim:
+  id: 3
+  name: vim
+
+notepad:
+  id: 4
+  name: notepad
+
+eclipse:
+  id: 5
+  name: eclipse
+
+visual-studio:
+  id: 6
+  name: visual-studio
+
+netbeans:
+  id: 7
+  name: netbeans
+
+hidemaru:
+  id: 8
+  name: hidemaru
+
+peggy:
+  id: 9
+  name: peggy
+
+jedit-x:
+  id: 10
+  name: jedit-x
+
+sakura-editor:
+  id: 11
+  name: sakura-editor
+
+emeditor:
+  id: 12
+  name: emeditor
+
+ed:
+  id: 13
+  name: ed
+
+nano:
+  id: 14
+  name: nano
+
+dreamweaver:
+  id: 15
+  name: dreamweaver
+
+xcode:
+  id: 16
+  name: xcode
+
+textmate:
+  id: 17
+  name: textmate
+
+mi:
+  id: 18
+  name: mi
+
+smultron:
+  id: 19
+  name: smultron

@@ -8,7 +8,7 @@
       %ul.user
         %li.icon=link_to image_tag(comment.user.profile_image_url), user_path(comment.user)
         %li.name=link_to comment.user.login, user_path(comment.user)
-        - unless @task.solved?
+        - if logged_in? and !@task.solved?
           %li.correct
             - form_for comment do |f|
               = hidden_field_tag 'comment[correct]', true

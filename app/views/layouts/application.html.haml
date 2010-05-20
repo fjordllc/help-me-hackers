@@ -9,6 +9,9 @@
     %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
     %title= yield(:title) || t('application.title')
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
+    %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "タスク - #{t('application.title')}", :href => tasks_url(:format => :atom)}
+    %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "#{t('label.wanted')} - #{t('application.title')}", :href => wanted_tasks_url(:format => :atom)}
+    %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "#{t('label.unsolved')} - #{t('application.title')}", :href => unsolved_tasks_url(:format => :atom)}
     = stylesheet_link_tag 'reset', :media => 'screen'
     = stylesheet_link_tag 'basic', :media => 'screen'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
@@ -17,26 +20,26 @@
       = header_script
   %body
     #header
-      %h1= link_to 'Help me, hackers!', root_path
+      %h1= link_to t('application.title'), root_path
       .nav
         %ul
           - if logged_in?
             %li
               = link_to image_tag(current_user.profile_image_url, :size => '16x16', :style => 'vertical-align:middle')
               = link_to "#{current_user.login}(#{current_user.voted_count})", dashboard_path
-            %li= link_to 'アカウント', edit_account_path
-            %li= link_to 'ログアウト', logout_path
+            %li= link_to t('Account'), edit_account_path
+            %li= link_to t('Logout'), logout_path
           - else
-            %li= link_to 'Twitterでログイン', login_path
+            %li= link_to t('Login by Twitter'), login_path
     #wrapper{:class => "#{controller_name}_#{action_name}"}
       .nav
         %ul
           - if logged_in?
-            %li= link_to_unless_current_with_span 'ダッシュボード', dashboard_path
-          %li= link_to_unless_current_with_span 'タスク', tasks_path
-          %li= link_to_unless_current_with_span 'ユーザー', users_path
-          %li= link_to_unless_current_with_span 'プロジェクトを登録', new_project_path
-          %li.add_task= link_to 'タスク登録', new_task_path
+            %li= link_to_unless_current_with_span t('label.dashboard'), dashboard_path
+          %li= link_to_unless_current_with_span t('activerecord.models.task'), tasks_path
+          %li= link_to_unless_current_with_span t('activerecord.models.project'), projects_path
+          %li= link_to_unless_current_with_span t('activerecord.models.user'), users_path
+          %li.add_task= link_to t('Create Task'), new_task_path
       #main
         #flash
           - unless flash.empty?

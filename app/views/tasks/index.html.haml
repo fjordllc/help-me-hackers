@@ -15,8 +15,8 @@
   - else
   .sort
     %ul
-      %li.wanted= link_to_unless_current_with_span 'WANTED!', wanted_tasks_path
-      %li.unsolved= link_to_unless_current_with_span '未解決', unsolved_tasks_path
+      %li.wanted= link_to t('label.wanted'), wanted_tasks_path
+      %li.unsolved= link_to t('label.unsolved'), unsolved_tasks_path
   %ul.tasks.tasks_list
     = render :partial => 'object', :collection => @tasks
   = will_paginate(@tasks)

@@ -5,21 +5,25 @@
     - form_for @user, :url => account_path do |f|
       = f.error_messages
       %div.section
-        = f.label :state
-        %br
-        = select_by_model @user, :state_id
-      %div.section
         = "#{f.label:email}（Paypalで報酬を受け取るには公開する必要があります）"
         %br
         = f.text_field :email
+      %div.section
+        = f.label :state
+        %br
+        = select_by_model @user, :state_id
       %div.section
         = f.label :company
         %br
         = f.text_field :company
       %div.section
-        = f.label :language, t('label.favorite-language')
+        = f.label :language
         %br
         = select_programming_language @user, :language_id
+      %div.section
+        = f.label :editor
+        %br
+        = select_by_model @user, :editor_id
       %div.section
         = f.label :github_account
         %br
@@ -31,6 +35,6 @@
       %div.section
         = f.label :ssh_public_key
         %br
-        = f.text_area :ssh_public_key, :size => '40x4'
+        = f.text_area :ssh_public_key, :size => '50x4'
       %div.section
         = f.submit '編集'
