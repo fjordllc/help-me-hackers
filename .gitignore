@@ -1,7 +1,8 @@
 log/*.log
 db/schema.rb
+db/*.sqlite3
 **/.Thumbs.db
-config/database.yml
 config/twitter_auth.yml
 config/newrelic.yml
 VERSION
+.bundle/*
