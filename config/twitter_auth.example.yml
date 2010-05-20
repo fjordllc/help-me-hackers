@@ -1,15 +1,15 @@
 development:
   strategy: oauth
-  oauth_consumer_key: devkey
-  oauth_consumer_secret: devsecret
+  oauth_consumer_key: W3oHZKfDtozojV3pJbaCBA
+  oauth_consumer_secret: AySFmgX5tO1PD8F6D8lBnWfPPLE7Ilp15l0EUFsI80
   base_url: "https://twitter.com"
   authorize_path: "/oauth/authorize"
   api_timeout: 10
   remember_for: 14 # days
   oauth_callback: "http://help-me-hackers/oauth_callback"
   ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
-  bitly_api_username: devkey
-  bitly_api_key: devkey
+  bitly_api_username: helpmehackersdev
+  bitly_api_key: R_b62200e96e4744909d74a9748a152b6c
 test:
   strategy: oauth
   oauth_consumer_key: testkey
@@ -20,17 +20,17 @@ test:
   remember_for: 14 # days
   oauth_callback: "http://help-me-hackers/oauth_callback"
   ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
-  bitly_api_username: testkey
+  bitly_api_username: testusername
   bitly_api_key: testkey
 production:
   strategy: oauth
-  oauth_consumer_key: prokey
-  oauth_consumer_secret: prosecret
+  oauth_consumer_key: prodkey
+  oauth_consumer_secret: prodsecret
   authorize_path: "/oauth/authorize"
   base_url: "https://twitter.com"
   api_timeout: 10
-  remember_for: 14 # days
+  remember_for:  14 # days
   oauth_callback: "http://help-me-hackers.com/oauth_callback"
   ca_file: <%= File.join(RAILS_ENV, 'config', 'twitter.pem') %>
-  bitly_api_username: prodkey
+  bitly_api_username: produsername
   bitly_api_key: prodkey

@@ -1,6 +1,6 @@
 class AddVotedUserIdToVotes < ActiveRecord::Migration
   def self.up
-    add_column :votes, :voted_user_id, :integer, :null => false
+    add_column :votes, :voted_user_id, :integer
   end
 
   def self.down

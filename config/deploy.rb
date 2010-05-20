@@ -17,9 +17,9 @@ namespace :deploy do
 
   desc "Create symlink to config file"
   task :symlink_config, :roles => :app, :except => {:no_release => true} do
-    run "ln -s #{deploy_to}/shared/database.yml #{release_path}/config/database.yml"
-    run "ln -s #{deploy_to}/shared/twitter_auth.yml #{release_path}/config/twitter_auth.yml"
-    run "ln -s #{deploy_to}/shared/newrelic.yml #{release_path}/config/newrelic.yml"
+    %w(twitter_auth.yml newrelic.yml).each do |filename|
+      run "ln -s #{deploy_to}/shared/config/#{filename} #{release_path}/config/#{filename}"
+    end
   end
   after 'deploy:finalize_update', 'deploy:symlink_config'
 
@@ -54,6 +54,10 @@ namespace :deploy do
       puts msg
     end
   end
+end
+
+after 'deploy:finalize_update' do
+    run "cd #{latest_release} && bundle install #{shared_path}/vendor --without development,test && bundle lock"
 end
 
 after :deploy, 'deploy:cleanup'
