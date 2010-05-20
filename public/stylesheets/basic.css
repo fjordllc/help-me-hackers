@@ -35,6 +35,10 @@ div.about_hint div#main div.title h2 {
 	text-indent: -9999px;
 	background-image: url(../images/about_hint_h2.gif);
 }
+div.projects_index div#main div.title h2 {
+	text-indent: -9999px;
+	background-image: url(../images/projects_h2.gif);
+}
 
 
 
@@ -81,10 +85,6 @@ div#main div.main .title {
 	border-bottom-style: none;
 	border-left-style: none;
 }
-div.tasks_show div#main div.title h2 {
-	height: 64px;
-}
-
 
 
 
@@ -1138,6 +1138,10 @@ div.tasks_show div#main div.content p,
 	margin-bottom: 1.4em;
 	line-height: 1.6;
 }
+div.tasks_show div#main div.content img,
+#main div.content div.wmd-preview img {
+  	max-width: 535px;
+  	width:expression(document.body.clientWidth < 2? "0px" : document.body.clientWidth > 542? "535px" : "auto");}
 div.tasks_show div#main div.description ul,
 #main div.content div.wmd-preview ul {
 	margin-bottom: 1.4em;
@@ -1463,72 +1467,6 @@ div#main div.content pre code {
 
 
 
-.str {
-color:#008800;
-}
-.kwd {
-color:#000088;
-}
-.com {
-color:#880000;
-}
-.typ {
-color:#660066;
-}
-.lit {
-color:#006666;
-}
-.pun {
-color:#666600;
-}
-.pln {
-color:#000000;
-}
-.tag {
-color:#000088;
-}
-.atn {
-color:#660066;
-}
-.atv {
-color:#008800;
-}
-.dec {
-color:#660066;
-}
-.str {
-color:#006600;
-}
-.kwd {
-color:#000066;
-font-weight:bold;
-}
-.com {
-color:#660000;
-font-style:italic;
-}
-.typ {
-color:#440044;
-font-weight:bold;
-}
-.lit {
-color:#004444;
-}
-.pun {
-color:#444400;
-}
-.pln {
-color:#000000;
-}
-.tag {
-color:#000066;
-}
-.atn {
-color:#440044;
-}
-.atv {
-color:#006600;
-}
 
 
 #flash div {
@@ -2380,13 +2318,41 @@ div#main div.content div.source_url h4 {
 div#main div.content ul.projects {
 	padding-top: 15px;
 }
+div#main div.content ul.projects li {
+	background-image: url(../images/projects_show_url.gif);
+	margin-bottom: 10px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 20px;
+}
+div#main div.content ul.projects_buttons {
+	clear: both;
+	padding-top: 25px;
+}
+div#main div.content ul.projects_buttons a {
+	background-image: url(../images/add_project.gif);
+	height: 35px;
+	width: 200px;
+	text-indent: -9999px;
+	display: block;
+}
+div#main div.content ul.projects_buttons a:link,
+div#main div.content ul.projects_buttons a:visited {
+	background-position: 0px 0px;
+}
+div#main div.content ul.projects_buttons a:hover,
+div#main div.content ul.projects_buttons a:active {
+	background-position: 0px -35px;
+}
 #new_task .option_toggle,
 .tasks_edit .option_toggle {
 	cursor: pointer;
 	background-image: url(../images/option.gif);
-	height: 26px;
+	height: 35px;
 	width: 200px;
 	text-indent: -9999px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 div#main div.content div.sort {
 	padding-top: 15px;

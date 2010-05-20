@@ -301,7 +301,7 @@ div#wrapper .nav {
 	width: 990px;
 }
 div#wrapper .nav ul {
-	width: 782px;
+	width: 780px;
 	display: block;
 	margin-top: -75px;
 	float: right;
@@ -338,7 +338,7 @@ div#wrapper .nav ul li.add_task {
 	margin-top: -5px;
 	width: 200px;
 	height: 35px;
-	padding-right: 10px;
+	padding-right: 40px;
 }
 div#wrapper .nav ul li.add_task a {
 	display: block;
@@ -357,7 +357,7 @@ div#wrapper .nav ul li a {
 	display: block;
 	float: left;
 	height: 24px;
-	margin-right: 6px;
+	margin-right: 8px;
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
@@ -393,4 +393,72 @@ div#wrapper .nav ul li.add_task a:active {
 	background-color: #636D31;
 	color: #FFFFFF;
 	background-position: right -35px;
+}
+
+
+.str {
+color:#008800;
+}
+.kwd {
+color:#000088;
+}
+.com {
+color:#880000;
+}
+.typ {
+color:#660066;
+}
+.lit {
+color:#006666;
+}
+.pun {
+color:#666600;
+}
+.pln {
+color:#000000;
+}
+.tag {
+color:#000088;
+}
+.atn {
+color:#660066;
+}
+.atv {
+color:#008800;
+}
+.dec {
+color:#660066;
+}
+.str {
+color:#006600;
+}
+.kwd {
+color:#000066;
+font-weight:bold;
+}
+.com {
+color:#660000;
+font-style:italic;
+}
+.typ {
+color:#440044;
+font-weight:bold;
+}
+.lit {
+color:#004444;
+}
+.pun {
+color:#444400;
+}
+.pln {
+color:#000000;
+}
+.tag {
+color:#000066;
+}
+.atn {
+color:#440044;
+}
+.atv {
+color:#006600;
 }
