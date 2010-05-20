@@ -19,20 +19,6 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'oauth', :version => '0.3.5'
-  config.gem 'bitly', :version => '0.4.0'
-  config.gem 'shoulda', :version => '2.10.3'
-  config.gem 'haml', :version => '2.2.22'
-  config.gem 'pacecar', :version => '1.2.0'
-  config.gem 'amatsuda-i18n_generators',
-             :version => '0.6.0',
-             :lib => false,
-             :source => 'http://gems.github.com/'
-  config.gem 'acts_as_taggable_on_steroids', :version => '1.2'
-  config.gem 'bluecloth', :version => '2.0.7'
-  config.gem 'yaml_waml', :version => '0.3.0'
-  config.gem 'will_paginate', :version => '2.3.12'
-  config.gem 'hoptoad_notifier'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -52,10 +38,4 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   config.i18n.default_locale = 'ja'
-end
-
-class String
-  def to_numeric_character_references
-    self.unpack('U*').collect {|c| c >= 255 ? '&#' + c.to_s + ';' : c.chr }.join
-  end
 end
