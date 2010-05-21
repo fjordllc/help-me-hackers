@@ -2,51 +2,50 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='ja' xml:lang='ja'>
   <head>
-    <title>TopController: index</title>
+    <meta content='プログラミングタスクを共有・公開するサイト' name='description' />
+    <meta content='プログラム,プログラマー,オープンソース,タスク,仕事依頼' name='keywords' />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
     <meta content='text/css' http-equiv='Content-Style-Type' />
     <meta content='text/javascript' http-equiv='Content-Script-Type' />
-    <link href='/stylesheets/application.css' rel='stylesheet' type='text/css' />
-    <link href='/favicon.ico' rel='shortcut icon' />
+    <title>Help me, hackers!</title>
 
+    <link href='/favicon.ico' rel='shortcut icon' />
+    <link href='http://help-me-hackers.com/tasks.atom' rel='alternate' title='タスク - Help me, hackers!' type='application/atom+xml' />
+    <link href='http://help-me-hackers.com/tasks/wanted.atom' rel='alternate' title='WANTED! - Help me, hackers!' type='application/atom+xml' />
+    <link href='http://help-me-hackers.com/tasks/unsolved.atom' rel='alternate' title='未解決 - Help me, hackers!' type='application/atom+xml' />
     <link href="stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/basic.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/prototype.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/effects.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/dragdrop.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/controls.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/application.js?1270010017" type="text/javascript"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
   </head>
+
   <body>
     <div id='header'>
       <h1><a href="/">Help me, hackers!</a></h1>
-
       <div class='nav'>
         <ul>
           <li>
-            <a href="/komagata_fjord"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
-            <a href="/dashboard">machida(0)</a>
+            <a href="/projects"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/dashboard">machida(4)</a>
+
           </li>
           <li><a href="/account/edit">アカウント</a></li>
           <li><a href="/logout">ログアウト</a></li>
-
         </ul>
       </div>
     </div>
     <div class='users_show' id='wrapper'>
       <div class='nav'>
+
         <ul>
           <li><a href="/dashboard">ダッシュボード</a></li>
           <li><a href="/tasks">タスク</a></li>
-
-          <li><a href="/tasks/wanted">WANTED!</a></li>
-          <li><a href="/tasks/unsolved">未解決</a></li>
+          <li><span class="current">プロジェクト</span></li>
           <li><a href="/users">ユーザー</a></li>
           <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
+
         </ul>
       </div>
+
       <div id='main'>
 
         <div id='flash'>
@@ -96,9 +95,6 @@
               <dd class='login'><a href="/komagata_fjord">komagata_fjord</a></dd>
               <dt class='state'>出身</dt>
               <dd class='state'>東京都</dd>
-
-              <dt class='url'>URL</dt>
-              <dd class='url'><a href="http://fjord.jp/" target="_blank">http://fjord.jp/</a></dd>
               <dt class='company'>会社</dt>
               <dd class='company'>Fjord llc.</dd>
               <dt class='favorite_language'>好きなプログラム言語</dt>
@@ -123,22 +119,90 @@
           <div class='lists'>
             <div class='solved_tasks profile_list'>
               <h3>解決したタスク</h3>
-              <p>解決実績がありません</p>
+              <ul class='tasks'>
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
+              </ul>
 
             </div>
             <div class='posted_tasks profile_list'>
               <h3>登録したタスク</h3>
               <ul class='tasks'>
-                <li class='task'><a href="/tasks/1">Pythonのhamlライブラリ</a></li>
-                <li class='task'><a href="/tasks/2">WordPressのGoogle Analyticsモバイル版プラグイン</a></li>
-                <li class='task'><a href="/tasks/3">1日前などの時間表記</a></li>
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
 
               </ul>
             </div>
             <div class='posted_comments profile_list'>
               <h3>コメントしたタスク</h3>
-              <ul class='comments'>
-                <li class='comment'><a href="/tasks/1">Pythonのhamlライブラリ</a></li>
+              <ul class='tasks'>
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
+                <li class='task'>
+                <div class="goods">0</div>
+                <div class="comments">0</div>
+                <div class="title"><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class="bounty">1,000円</div>
+                <div class="created_at">19日前</div>
+                </li>
+
               </ul>
             </div>
 
@@ -146,51 +210,47 @@
         </div>
       </div>
       <div id='sub'>
+
         <div class='section'>
-          <h3>カテゴリー</h3>
-          <ul class='categories'>
-            <li class='category'><a href="/tasks/category/iphone-app-making">iPhoneアプリ</a></li>
+          <h3>言語別タスク数</h3>
+          <ul class='tasks count_by_language'>
+            <li class='language'><a href="/tasks/language/ruby">Ruby (16)</a></li>
+            <li class='language'><a href="/tasks/language/php">PHP (7)</a></li>
+            <li class='language'><a href="/tasks/language/javascript">JavaScript (4)</a></li>
+            <li class='language'><a href="/tasks/language/python">Python (1)</a></li>
 
-            <li class='category'><a href="/tasks/category/android-app-making">Androidアプリ</a></li>
-            <li class='category'><a href="/tasks/category/software-making">ソフトウェア</a></li>
-            <li class='category'><a href="/tasks/category/library-making">ライブラリ</a></li>
-            <li class='category'><a href="/tasks/category/class-function-making">クラス・関数</a></li>
-            <li class='category'><a href="/tasks/category/plugin-making">プラグイン</a></li>
-            <li class='category'><a href="/tasks/category/prototype-making">プロトタイプ</a></li>
+            <li class='language'><a href="/tasks/language/common-lisp">Common Lisp (1)</a></li>
+            <li class='language'><a href="/tasks/language/japanese">日本語 (1)</a></li>
+            <li class='language'><a href="/tasks/language/shell">Shell (1)</a></li>
+            <li class='language'><a href="/tasks/language/visualbasic">Visual Basic (1)</a></li>
+            <li class='language'><a href="/tasks/language/objective-c">Objective-C (1)</a></li>
+            <li class='language'><a href="/tasks/language/c">C (1)</a></li>
 
-            <li class='category'><a href="/tasks/category/debugging">バグ修正</a></li>
-            <li class='category'><a href="/tasks/category/technology-study">技術調査</a></li>
-            <li class='category'><a href="/tasks/category/software-multilingualization">多言語化</a></li>
-            <li class='category'><a href="/tasks/category/document-translation">文章翻訳</a></li>
-            <li class='category'><a href="/tasks/category/data-collection-and-making">データ収集・作成</a></li>
-            <li class='category'><a href="/tasks/category/programming-quiz">プログラミングクイズ</a></li>
-
+            <li class='language'><a href="/tasks/language/cpp">C++ (1)</a></li>
           </ul>
-          <div class='to_archive'>
-            <p><a href="/about/category">カテゴリーの説明</a></p>
-          </div>
+          <div class='to_archive'></div>
         </div>
-        <div class='section'>
+        <div class='section hint'>
           <h3>ヒント</h3>
           <ul>
-
             <li>
-              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
+
+              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
             <li>
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
             </li>
-
             <li>
+
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
             <li>
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
             </li>
             <li>
-
               <p>ジャンクフード食系男子募集中！</p>
+
             </li>
             <li>
               <p>解決してもらうコツはプログラマーにとって面白いタスク設定にすること。前提とゴールは明確に。</p>
@@ -198,8 +258,8 @@
           </ul>
           <div class='to_archive'>
             <p><a href="/about/hint">もっと詳しく</a></p>
-
           </div>
+
         </div>
       </div>
     </div>
@@ -207,15 +267,27 @@
       <ul class='links'>
         <li><a href="/about">使い方</a></li>
         <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
-
         <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
+
         <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
         <li><a href="http://fjord.jp/">運営</a></li>
         <li><a href="/about/terms">利用規約</a></li>
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
       </ul>
+      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100501000000</p>
 
-      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.</p>
     </div>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-2927688-8");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      //]]>
+    </script>
   </body>
 </html>

@@ -5,7 +5,9 @@
 div:after,
 ul:after,
 dl:after,
-div.problems_show div#main div.content div.problem div.section ul.answers li.answer:after
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer:after,
+div#main div.content ul.projects li:after,
+div.projects_show div#main div.content div.profile_list li:after
  {
 content: ".";
 display: block;
@@ -18,14 +20,19 @@ visibility: hidden;
 *:first-child+html div,
 *:first-child+html ul,
 *:first-child+html dl,
-*:first-child+html div.problems_show div#main div.content div.problem div.section ul.answers li.answer{
+*:first-child+html div.problems_show div#main div.content div.problem div.section ul.answers li.answer, 
+*:first-child+html div#main div.content ul.projects li,
+*:first-child+html div.projects_show div#main div.content div.profile_list li
+ {
 height: 1%;
 }
 
 div,
 ul,
 dl,
-div.problems_show div#main div.content div.problem div.section ul.answers li.answer
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer,
+div#main div.content ul.projects li,
+div.projects_show div#main div.content div.profile_list li
  {
   min-height: 1px;
   display: block;  /* ブロックレベル要素に */
@@ -34,7 +41,9 @@ div.problems_show div#main div.content div.problem div.section ul.answers li.ans
 * html div,
 * html ul,
 * html dl,
-* html div.problems_show div#main div.content div.problem div.section ul.answers li.answer
+* html div.problems_show div#main div.content div.problem div.section ul.answers li.answer,
+* html div#main div.content ul.projects li,
+* html div.projects_show div#main div.content div.profile_list li
  {
   height: 1px;
   /*¥*//*/
@@ -47,7 +56,9 @@ div.problems_show div#main div.content div.problem div.section ul.answers li.ans
 div,
 ul,
 dl,
-div.problems_show div#main div.content div.problem div.section ul.answers li.answer
+div.problems_show div#main div.content div.problem div.section ul.answers li.answer,
+div#main div.content ul.projects li,
+div.projects_show div#main div.content div.profile_list li
 {
 display: inline-table;
 }

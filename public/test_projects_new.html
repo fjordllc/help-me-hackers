@@ -22,85 +22,80 @@
   <body>
     <div id='header'>
       <h1><a href="/">Help me, hackers!</a></h1>
+
       <div class='nav'>
         <ul>
           <li>
-            <a href="/projects"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
-            <a href="/dashboard">machida(4)</a>
-
+            <a href="/projects/new"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
+            <a href="/dashboard">machida(0)</a>
           </li>
           <li><a href="/account/edit">アカウント</a></li>
           <li><a href="/logout">ログアウト</a></li>
+
         </ul>
       </div>
     </div>
-    <div class='projects_index' id='wrapper'>
+    <div class='projects_new' id='wrapper'>
       <div class='nav'>
-
         <ul>
           <li><a href="/dashboard">ダッシュボード</a></li>
           <li><a href="/tasks">タスク</a></li>
-          <li><span class="current">プロジェクト</span></li>
-          <li><a href="/users">ユーザー</a></li>
-          <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
 
+          <li><a href="/users">ユーザー</a></li>
+          <li><span class="current">プロジェクトを登録</span></li>
+          <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
         </ul>
       </div>
       <div id='main'>
         <div id='flash'>
+
         </div>
         <div class='title'>
-          <h2>プロジェクト</h2>
+          <h2>プロジェクト登録</h2>
         </div>
-
         <div class='content'>
-            <ul class='projects'>
-              <li class='project'>
-                <div class="solved">0</div>
-                <div class="unsolved">0</div>
-                <div class="title"><a href="/tasks/1">プロジェクト名ああああああ</a></div>
-                <div class="created_at">19日前</div>
-              </li>
+          <div class='section post'>
+            <form action="/projects" class="new_project" id="new_project" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="04+BPTbQ5ZDMbt8HH3rB83Gedv3HCn03B5C9nVFGgzA=" /></div>
+            
+              <div class='section'>
 
-              <li class='project'>
-                <div class="solved">0</div>
-                <div class="unsolved">0</div>
-                <div class="title"><a href="/tasks/1">プロジェクト名ああああああ</a></div>
-                <div class="created_at">19日前</div>
-              </li>
+                <label for="project_name">名前</label>
+                <br />
+                <input id="project_name" name="project[name]" size="30" type="text" />
+              </div>
+              <div class='section'>
+                <label for="project_description">概要</label>
+                <br />
+                <textarea cols="60" id="project_description" name="project[description]" rows="5"></textarea>
 
-              <li class='project'>
-                <div class="solved">0</div>
-                <div class="unsolved">0</div>
-                <div class="title"><a href="/tasks/1">プロジェクト名ああああああ</a></div>
-                <div class="created_at">19日前</div>
-              </li>
+              </div>
+              <div class='section'>
+                <label for="project_website_url">WebサイトURL</label>
+                <br />
+                <input id="project_website_url" name="project[website_url]" size="60" type="text" />
+              </div>
+              <div class='section'>
+                <label for="project_repository_path">リポジトリパス</label>
 
-            </ul>
-          
-          <ul class='projects_buttons'>
-            <li><a href="/projects/new">プロジェクト登録</a></li>
-          </ul>
+                <br />
+                <input id="project_repository_path" name="project[repository_path]" size="60" type="text" />
+              </div>
+              <div class='section'>
+                <input id="project_submit" name="commit" type="submit" value="送信" />
+              </div>
+            </form>
+          </div>
         </div>
+
       </div>
       <div id='sub'>
-
         <div class='section'>
           <h3>言語別タスク数</h3>
           <ul class='tasks count_by_language'>
-            <li class='language'><a href="/tasks/language/ruby">Ruby (13)</a></li>
-            <li class='language'><a href="/tasks/language/php">PHP (7)</a></li>
-            <li class='language'><a href="/tasks/language/javascript">JavaScript (4)</a></li>
-            <li class='language'><a href="/tasks/language/python">Python (1)</a></li>
+            <li class='language'><a href="/tasks/language/ruby">Ruby (2)</a></li>
+            <li class='language'><a href="/tasks/language/javascript">JavaScript (1)</a></li>
 
-            <li class='language'><a href="/tasks/language/common-lisp">Common Lisp (1)</a></li>
-            <li class='language'><a href="/tasks/language/japanese">日本語 (1)</a></li>
-            <li class='language'><a href="/tasks/language/shell">Shell (1)</a></li>
-            <li class='language'><a href="/tasks/language/visualbasic">Visual Basic (1)</a></li>
-            <li class='language'><a href="/tasks/language/objective-c">Objective-C (1)</a></li>
-            <li class='language'><a href="/tasks/language/c">C (1)</a></li>
-
-            <li class='language'><a href="/tasks/language/cpp">C++ (1)</a></li>
+            <li class='language'><a href="/tasks/language/php">PHP (1)</a></li>
           </ul>
           <div class='to_archive'></div>
         </div>
@@ -151,17 +146,5 @@
       <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100501000000</p>
 
     </div>
-    <script type='text/javascript'>
-      //<![CDATA[
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-        try {
-        var pageTracker = _gat._getTracker("UA-2927688-8");
-        pageTracker._trackPageview();
-        } catch(err) {}
-      //]]>
-    </script>
   </body>
 </html>
