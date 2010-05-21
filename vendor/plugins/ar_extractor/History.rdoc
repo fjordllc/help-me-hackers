@@ -1,0 +1,41 @@
+=== Version 1.3.3 / 2009-08-14
+
+* rake db:fixtures:extract
+  
+  * [日本語]これまで除外していたcreated_atとupdated_atを、YAML出力するよう変更。
+  * [English]Excepted created_at and updated_at from dump database to yaml until now, but since current version doesn't excepted.
+  
+  * [日本語]文字列の文頭に半角スペースが含まれていた場合、"rake db:fixtures:load"で、データインポートエラーになる問題を修正。
+  * [English]Fixed "rake db:fixtures:load" occured error when YAML includes space before string.
+
+=== Version 1.3.2 / 2009-06-17
+
+* [日本語]ar_extractor_generator.rbをrandom_data_generator.rbに変更。
+* [English]Renamed ar_extractor_generator.rb to random_data_generator.rb.
+
+=== Version 1.3.1 / 2009-06-05
+
+* [日本語]改行の入ったデータをrake db:fixtures:extractで出力すると、rake db:fixtures:load時にエラーが発生する問題を修正。
+
+=== Version 1.3.0 / 2009-04-03
+
+* [日本語]"rake db:fixtures:convert"を追加。
+* [English]Added "rake db:fixtures:convert" command.
+
+=== Version 1.2.0 / 2009-03-26
+
+* [日本語]rake db:fixtures:extractが、idを持たないテーブルにも対応。
+
+=== Version 1.1.0 / 2008-10-25
+
+* [日本語]"script/generate ar_extractor"コマンドを追加。
+* [English]Added "script/generate ar_extractor" command.
+
+=== Version 1.0.1 / 2008-10-16
+
+* [日本語]specディレクトリ下にfixturesディレクトリがない場合は、spec/fixturesディレクトリを作成するよう修正。
+
+=== Version 1.0.0 / 2008-10-16
+
+* [日本語]バージョン1.0リリース
+* [English]first public release

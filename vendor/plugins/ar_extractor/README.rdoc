@@ -1,0 +1,133 @@
+= ar_extractor
+
+* http://github.com/abikounso/ar_extractor/tree/master
+* http://d.hatena.ne.jp/abikounso
+* http://twitter.com/abikounso
+
+== DESCRIPTION
+
+=== 日本語
+
+DBから、YAML形式でデータを出力するRailsプラグイン。
+その他、データハンドリングに便利な機能あり。
+
+=== in English
+
+This Rails plugin makes it easy to dump database to yaml fixtures.
+
+== FEATURES
+
+* DBから、YAML形式でデータ出力
+
+  * to_yamlメソッド不使用のため、UTF-8文字列の扱いも問題なし。
+  * DBスキーマと同じ表示順でYAMLが生成されるため、見やすい。
+  * テーブル名・カラム名を、別の名前に変換して出力することも可能。（レガシーDBからデータ移行する際に便利かも）
+
+* DBのスキーマを元に、テスト用のダミーデータを自動生成。
+
+== SYNOPSIS
+
+=== DB => YAML出力
+
+==== 全テーブルのデータをYAML出力
+
+FIXTURESオプションにテーブル名をセットすれば、そのテーブルのデータのみ出力させることができる。
+  
+  $ rake db:fixtures:extract 【オプション】FIXTURES=users,clients
+
+==== テーブル名、カラム名を別名に変換してYAML出力
+
+下記のような2つのDBがあり、レガシーDB fooから、新DB barへデータを移行させたい場合に、fooのデータをbarのスキーマに変換してYAML出力することができる。
+
+DB名: foo
+  テーブル名: cum_kanyosaki
+    カラム名: kanyosaki_name
+    カラム名: kanyosaki_id
+
+DB名: bar
+  テーブル名: company
+    カラム名: id
+    カラム名: name
+
+1. config/tables.ymlを作成し、変換するするテーブルとカラムを記述する。
+
+  cum_kanyosaki(現在のテーブル名):
+    companies(新しいテーブル名):
+      kanyosaki_id(現在のカラム名): id(新しいカラム名)
+      kanyosaki_name: name
+
+2. 引数DB(変換元のDB名)をセットし、下記のrakeコマンドを実行する。
+
+  $ rake db:fixtures:convert DB=foo
+
+3. test/fixtures(rspecを使っている場合は、spec/fixtures)にYAMLファイルが出力される。
+spec/fixtures/companies.yml
+
+  data1:
+    id: kanyosaki_idのデータ
+    name: kanyosaki_nameのデータ
+
+  data2:
+    id: kanyosaki_idのデータ
+    name: kanyosaki_nameのデータ
+
+=== DBのスキーマを元に、ダミーデータを自動生成
+
+事前に、populatorとfakerをインストールしておく。
+  
+  $ gem install populator faker  
+  $ ruby script/generate random_data
+   
+で、
+  
+  lib/tasks/population.rake
+  
+が生成される。
+
+population.rakeの中身は、こんな感じ。
+
+  namespace :db do
+    desc "Erase and fill database"
+    task :populate => :environment do
+      require "populator"
+      require "faker"
+
+      [Accounting, Bank].each(&:delete_all)
+      
+      Accounting.populate 20 do |column|
+        column.fiscal_year = 1900..Time.now.year
+        column.net_operating_profit = 1..10000
+        column.depreciation = 1..10000
+        column.amount_repaid = 1..10000
+        column.client_id = 1..20
+      end
+
+      Bank.populate 20 do |column|
+        column.name = Faker::Name.name
+      end
+
+    end
+  end
+
+あとは、
+  
+  rake db:populate
+  
+で、ダミー用のデータがDBに生成される。
+ただし、生成されるダミーデータは全て英語。
+
+== REQUIREMENTS:
+
+=== 日本語
+
+* Rails 2.2以上
+* populator(generatorを使用する場合)
+* faker    (generatorを使用する場合)
+
+=== in English
+
+* Rails 2.2 and above
+
+== INSTALL:
+
+  $ ruby script/plugin install git://github.com/abikounso/ar_extractor.git
