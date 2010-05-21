@@ -2053,7 +2053,8 @@ div.tasks_create #main div.content div.section div.label span {
 .pagination a:active {
 	border: 2px solid #EC189A;
 }
-.pagination a.next_page {
+.pagination a.next_page,
+.pagination a.prev_page {
 	padding-top: 5px;
 	padding-right: 0px;
 	padding-bottom: 5px;
