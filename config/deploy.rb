@@ -20,6 +20,7 @@ namespace :deploy do
     %w(twitter_auth.yml newrelic.yml).each do |filename|
       run "ln -s #{deploy_to}/shared/config/#{filename} #{release_path}/config/#{filename}"
     end
+    run "ln -s #{deploy_to}/shared/db/production.sqlite3 #{release_path}/db/production.sqlite3"
   end
   after 'deploy:finalize_update', 'deploy:symlink_config'
 
