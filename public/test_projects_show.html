@@ -22,100 +22,93 @@
   <body>
     <div id='header'>
       <h1><a href="/">Help me, hackers!</a></h1>
-
       <div class='nav'>
         <ul>
           <li>
             <a href="/projects/1"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
             <a href="/dashboard">machida(0)</a>
+
           </li>
           <li><a href="/account/edit">アカウント</a></li>
           <li><a href="/logout">ログアウト</a></li>
-
         </ul>
       </div>
     </div>
     <div class='projects_show' id='wrapper'>
       <div class='nav'>
+
         <ul>
           <li><a href="/dashboard">ダッシュボード</a></li>
           <li><a href="/tasks">タスク</a></li>
-
-          <li><a href="/tasks/wanted">WANTED!</a></li>
-          <li><a href="/tasks/unsolved">未解決</a></li>
+          <li><a href="/projects">プロジェクト</a></li>
           <li><a href="/users">ユーザー</a></li>
           <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
+
         </ul>
       </div>
       <div id='main'>
-
         <div id='flash'>
         </div>
         <div class='title'>
           <h2>Help me, hackers!</h2>
         </div>
+
         <div class='content'>
           <div class='project section'>
             <h3>概要</h3>
-
-            <div class='description'>
-            <p>プログラミングタスクを共有・公開するサービス</p>
-            <p>プログラミングタスクを共有・公開するサービス</p>
-            <p>プログラミングタスクを共有・公開するサービス</p></div>
-
+            <div class='description'>プログラミングタスクを共有・公開するサービス</div>
             <div class='website_url'>
-            <h4>WebサイトURL</h4>
-            <a href="http://help-me-hackers.com/">http://help-me-hackers.com/</a>
-            </div>
+              <h4>WebサイトURL</h4>
+              <a><a href="http://help-me-hackers.com/">http://help-me-hackers.com/</a></a>
 
+            </div>
             <div class='repository_path'>
-            <h4>リポジトリパス</h4>
-            <a href="http://github.com/komagata/help-me-hackers">http://github.com/komagata/help-me-hackers</a>
+              <h4>リポジトリパス</h4>
+              <a><a href="http://github.com/komagata/help-me-hackers">http://github.com/komagata/help-me-hackers</a></a>
             </div>
-          
-          <ul class="loggedin">
-            <li class='edit'><a href="/projects/1/edit">編集</a></li>
-          </ul>
+            <ul class='loggedin'>
+              <li class='edit'><a href="/projects/1/edit">編集</a></li>
+
+            </ul>
           </div>
+          <div class='profile_list'>
+            <h3>タスク</h3>
+            <ul class='tasks'>
+              <li class='task content'>
+                <div class='goods'>0</div>
+                <div class='comments'>0</div>
 
-<div class='posted_tasks profile_list'>
-          <h3>タスク</h3>
-          <ul class='tasks'>
-            <li class='task'>
-              <div class='goods'>0</div>
+                <div class='title'><a href="/tasks/4">プロジェクト機能</a></div>
+                <div class='bounty'>300円</div>
+                <div class='created_at'>3日前</div>
+              </li>
+              <li class='task content solved'>
+                <div class='goods'>0</div>
+                <div class='comments'>1</div>
 
-              <div class='comments'>1</div>
-              <div class='title'><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
-              <div class='bounty'>5,000円</div>
-              <div class='created_at'>約2時間前</div>
-            </li>
-            <li class='task'>
-              <div class='goods'>0</div>
+                <div class='title'><a href="/tasks/3">1日前などの時間表記</a></div>
+                <div class='bounty'>1,230円</div>
+                <div class='created_at'>3日前</div>
+              </li>
+              <li class='task content'>
+                <div class='goods'>0</div>
+                <div class='comments'>1</div>
 
-              <div class='comments'>1</div>
-              <div class='title'><a href="/tasks/3">1日前などの時間表記</a></div>
-              <div class='bounty'>1,230円</div>
-              <div class='created_at'>約2時間前</div>
-            </li>
-            <li class='task'>
-              <div class='goods'>0</div>
-
-              <div class='comments'>0</div>
-              <div class='title'><a href="/tasks/4">プロジェクト機能</a></div>
-              <div class='bounty'>300円</div>
-              <div class='created_at'>約2時間前</div>
-            </li>
-          </ul>
-        </div>
+                <div class='title'><a href="/tasks/1">Pythonのhamlライブラリ</a></div>
+                <div class='bounty'>5,000円</div>
+                <div class='created_at'>3日前</div>
+              </li>
+            </ul>
+          </div>
         </div>
 
       </div>
       <div id='sub'>
         <div class='section'>
           <h3>言語別タスク数</h3>
-          <ul class='tasks_by_language'>
+          <ul class='tasks count_by_language'>
+            <li class='language'><a href="/tasks/language/javascript">JavaScript (21)</a></li>
             <li class='language'><a href="/tasks/language/ruby">Ruby (2)</a></li>
-            <li class='language'><a href="/tasks/language/javascript">JavaScript (1)</a></li>
 
             <li class='language'><a href="/tasks/language/php">PHP (1)</a></li>
           </ul>
@@ -156,17 +149,20 @@
     </div>
     <div id='footer'>
       <ul class='links'>
-        <li><a href="/about">使い方</a></li>
         <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
-        <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
+        <li><a href="http://fjord.jp/tag/help-me-hackers-how-to-use">使い方</a></li>
+        <li><a href="http://fjord.jp/tag/help-me-hackers-hint">ヒント</a></li>
 
+        <li><a href="http://fjord.jp/tag/help-me-hackers-update">更新情報</a></li>
+        <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
         <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
         <li><a href="http://fjord.jp/">運営</a></li>
         <li><a href="/about/terms">利用規約</a></li>
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
-      </ul>
-      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.</p>
 
+      </ul>
+      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100501000000</p>
     </div>
   </body>
+
 </html>
