@@ -4,16 +4,16 @@ http://help-me-hackers.com/
 
 == INSTALLATION
 
+http://docs.komagata.org/4524 (JAPANESE)
+
 === UNIX, Mac OS X
 
-    $ gem update --system # gem ~> 1.3.6
     $ gem install bundler
     $ git clone http://github.com/komagata/help-me-hackers.git
     $ cd help-me-hackers
     $ cp config/twitter_auth.example.yml config/twitter_auth.yml
     $ bundle install
-    $ rake db:migrate
-    $ rake db:seed
+    $ rake app:set
     $ ./script/server
 
 Access to http://localhost:3000/
