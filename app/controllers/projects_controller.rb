@@ -4,7 +4,9 @@ class ProjectsController < ApplicationController
   PROJECTS_PER_PAGE = 20
 
   def index
-    @projects = Project.paginate(:page => params[:page], :per_page => PROJECTS_PER_PAGE)
+    @projects = Project.by_id(:desc).paginate(
+      :page     => params[:page],
+      :per_page => PROJECTS_PER_PAGE)
   end
 
   def show

@@ -1,6 +1,6 @@
 class Task < ActiveRecord::Base
+  include Pacecar
   acts_as_taggable
-
   belongs_to :user
   belongs_to :language
   belongs_to :license
@@ -18,9 +18,8 @@ class Task < ActiveRecord::Base
   validates_length_of :description, :minimum => 20
 
   named_scope :unsolved,
-    :select => 'tasks.*, sum(comments.correct) as correct_sum',
-    :joins  => 'LEFT JOIN comments ON tasks.id = comments.task_id',
-    :group  => 'tasks.id HAVING correct_sum < 1 OR correct_sum IS NULL'
+    :conditions => ['id NOT IN (SELECT task_id FROM comments WHERE correct = ?)', true],
+    :order      => 'tasks.id DESC'
 
   named_scope :paid,
     :conditions => ['bounty > ?', 0],

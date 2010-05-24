@@ -4,5 +4,7 @@ class Comment < ActiveRecord::Base
   belongs_to :user
   has_many :votes, :as => :voteable, :dependent => :destroy
   validates_presence_of :description
-  named_scope :order_by_correct, :order => 'correct'
+
+  named_scope :by_correct_desc_and_id,
+    :order  => 'correct DESC, id'
 end

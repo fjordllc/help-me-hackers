@@ -1,4 +1,4 @@
-%li.task
+%li{task_attrs(task)}
   .goods= task.votes.size
   .comments= task.comments.size
   .title=link_to h(task.title), task_path(task)
