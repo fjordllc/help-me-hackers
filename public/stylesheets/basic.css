@@ -2187,6 +2187,16 @@ div#main div.content ul.projects li {
 	line-height: 14px;
 	background-color: #fafafa;
 }
+div#main div.content div.profile_list li.solved,
+div#main div.content ul.projects li.solved {
+	display: block;
+	border: 1px solid #dfe1e1;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-top-radius: 8px;
+	background-color: #dfe1e1;
+	background-image: none;
+}
 div.projects_show div#main div.content div.profile_list li {
 	margin-right: 10px;
 }
@@ -2249,6 +2259,10 @@ div#main div.content div.profile_list li div.goods {
 	background-image: url(../images/profile_list_goods.gif);
 	background-position: center center;
 }
+div#main div.content div.profile_list li.solved div.goods {
+	background-image: url(../images/profile_list_solved_goods.gif);
+	border: 1px solid #a3cac7;
+}
 div#main div.content ul.projects li div.solved {
 	display: block;
 	font-weight: bold;
@@ -2269,6 +2283,10 @@ div#main div.content div.profile_list li div.comments {
 	width: 40px;
 	font-size: 13px;
 	background-image: url(../images/profile_list_comments.gif);
+}
+div#main div.content div.profile_list li.solved div.comments {
+	background-image: url(../images/profile_list_solved_comments.gif);
+	border: 1px solid #bcc78c;
 }
 div#main div.content ul.projects li div.unsolved {
 	display: block;
@@ -2316,6 +2334,9 @@ div#main div.content div.profile_list li div.bounty {
 	color: #ec189a;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+div#main div.content div.profile_list li.solved div.bounty {
+	color: #A3A3A3;
 }
 div#main div.content div.profile_list li div.free {
 	color: #A3A3A3;
