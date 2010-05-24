@@ -20,4 +20,4 @@
       %p.empty タスクがありません。
     - else
       %ul.tasks
-        = render :partial => 'task', :collection => @project.tasks.by_id(:desc)
+        = render :partial => 'tasks/object_small', :collection => @project.tasks.by_id(:desc)

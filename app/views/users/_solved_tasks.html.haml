@@ -3,6 +3,6 @@
   - if user.comments.correct.empty?
     %p= t('label.nothing_posted_comments')
   - else
-    %ul.comments
-      - user.comments.correct.each do |comment|
-        %li.comment=link_to h(comment.task.title), task_path(comment.task)
+    %ul.tasks
+      - tasks = user.comments.correct.map {|c| c.task }
+      = render :partial => 'tasks/object_small', :collection => tasks
