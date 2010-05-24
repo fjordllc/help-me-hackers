@@ -1,9 +1,0 @@
-%li.task
-  .goods= task.votes.size
-  .comments= task.comments.size
-  .title=link_to truncate(h(task.title), :length => 32), task_path(task)
-  - if task.bounty > 0
-    .bounty= number_to_currency task.bounty
-  - else
-    .bounty.free FREE
-  .created_at== #{time_ago_in_words task.created_at}前

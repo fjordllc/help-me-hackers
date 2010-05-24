@@ -3,6 +3,6 @@
   - if user.comments.empty?
     %p= t('label.nothing_posted_comments')
   - else
-    %ul.comments
+    %ul.tasks
       - tasks = user.comments.correct.map {|c| c.task }
       = render :partial => 'tasks/object_small', :collection => tasks
