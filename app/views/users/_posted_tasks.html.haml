@@ -4,5 +4,4 @@
     %p= t('label.nothing_posted_tasks')
   - else
     %ul.tasks
-      - user.tasks.each do |task|
-        %li.task=link_to h(task.title), task_path(task)
+      = render :partial => 'tasks/object_small', :collection => user.tasks

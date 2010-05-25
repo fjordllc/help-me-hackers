@@ -8,7 +8,7 @@
         %p= t('label.nothing_posted_tasks')
       - else
         %ul.tasks
-          = render :partial => 'task', :collection => @user.tasks
+          = render :partial => 'tasks/object_small', :collection => @user.tasks
     -# .posted_comments.profile_list
     -#  %h3 ウォッチしているタスク
     -#  %p= t('label.nothing_watching_tasks')
