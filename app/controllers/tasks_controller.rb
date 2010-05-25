@@ -11,18 +11,30 @@ class TasksController < ApplicationController
 
     if params[:project]
       @project = Project.find(params[:project])
+      if @project.nil?
+        render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
+        return nil
+      end
+
       options[:conditions] = ['project_id = ?', @project.id]
     end
 
     if params[:language]
       @language = Language.find_by_name(params[:language])
+      if @language.nil?
+        render :file => "#{RAILS_ROOT}/public/404.html", :status => 404
+        return nil
+      end
+
       options[:conditions] = ['language_id = ?', @language.id]
     end
 
     if params[:tag]
       @tag = Tag.find_by_name(params[:tag])
-      render :file => "#{RAILS_ROOT}/public/404.html", :status => 404 if @tag.nil?
-      return nil
+      if @tag.nil?
+        render :file => "#{RAILS_ROOT}/public/404.html", :status => 404 if @tag.nil?
+        return nil
+      end
 
       options[:joins] = [:taggings]
       options[:conditions] = ['taggable_type = ? AND tag_id = ?', 'Task', @tag.id]
