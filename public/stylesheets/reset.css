@@ -90,13 +90,6 @@ font-size: 14px;
 line-height: 1.7;
  }  
    
- /* for IE6 */  
- * html body {
-font-size: 14px;
-line-height: 1.7;
-letter-spacing: 0.1em;
-font-family: 'ＭＳ Ｐゴシック', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Osaka", 'Lucida Grande', Arial, Helvetica, Verdana, 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', sans-serif;
- }  
    
  /* --OTHER TAGS-- */  
  a img, fieldset, img {  
@@ -227,6 +220,19 @@ display: block;
 
 /* 全体 */
 
+*html * {
+	background-color: #fff !important;
+	background-image: none !important;
+	border: none !important;
+	display: none !important;
+}
+*html body {
+	text-indent: 0px !important;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(../images/ie6.gif) !important;
+	display: block !important;
+}
 body {
 	border-top-width: 10px;
 	border-top-style: solid;
