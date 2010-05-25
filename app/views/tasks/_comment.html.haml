@@ -8,7 +8,7 @@
       %ul.user
         %li.icon=link_to image_tag(comment.user.profile_image_url), user_path(comment.user)
         %li.name=link_to comment.user.login, user_path(comment.user)
-        - if logged_in? and !@task.solved?
+        - if logged_in? and @task.user.id == current_user.id and @task.unsolved?
           %li.correct
             - form_for comment do |f|
               = hidden_field_tag 'comment[correct]', true
@@ -30,4 +30,3 @@
     %ul.loggedin
       %li.edit= link_to 'このコメントを編集', edit_comment_path(comment)
       %li.delete= link_to 'このコメントを削除', comment, :confirm => '本当に削除してよろしいですか？', :method => :delete
-

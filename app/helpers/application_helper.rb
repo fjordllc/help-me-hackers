@@ -61,13 +61,13 @@ module ApplicationHelper
 
   def tasks_title
     if params[:project]
-      "Tasks - #{h(@project.name)}"
+      "タスク - #{h(@project.name)}"
     elsif params[:language]
-      "Tasks - #{t("label.language.#{@language.name}")}"
+      "タスク - #{t("label.language.#{params[:language]}")}"
     elsif params[:tag]
-      "Tasks - #{@tag.name}"
+      "タスク - #{params[:tag]}"
     else
-      'Tasks'
+      'タスク'
     end
   end
 

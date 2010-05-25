@@ -1,8 +1,6 @@
 require 'test_helper'
 
-class ProjectTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+class ProjectTest < Test::Unit::TestCase
+  should_have_many :tasks
+  should_validate_presence_of :name
 end

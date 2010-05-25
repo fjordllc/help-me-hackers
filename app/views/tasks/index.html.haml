@@ -4,19 +4,19 @@
 - if params[:project]
   .by_project=h @project.name
 - if params[:language]
-  .by_language= t("label.language.#{@language.name}")
+  .by_language=t("label.language.#{params[:language]}")
 - if params[:tag]
-  .by_tag= @tag.name
+  .by_tag=h params[:tag]
 %div{:class => tasks_class}
-  - if @tasks.empty?
-    .empty
-      %p 該当するコメントがありません。
-      %p== 今なら目立つ！この隙に#{link_to '登録', new_task_path}すれば解決してもらえるかも！
-  - else
   .sort
     %ul
       %li.wanted= link_to t('label.wanted'), wanted_tasks_path
       %li.unsolved= link_to t('label.unsolved'), unsolved_tasks_path
+  - if @tasks.empty?
+    .empty
+      %p 該当するタスクがありません。
+      %p== 今なら目立つ！この隙に#{link_to '登録', new_task_path}すれば解決してもらえるかも！
+  - else
   %ul.tasks.tasks_list
     = render :partial => 'object', :collection => @tasks
   = will_paginate(@tasks)

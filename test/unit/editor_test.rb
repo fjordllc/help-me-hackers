@@ -1,8 +1,6 @@
 require 'test_helper'
 
-class EditorTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
-  end
+class EditorTest < Test::Unit::TestCase
+  should_have_many :users
+  should_validate_presence_of :name
 end

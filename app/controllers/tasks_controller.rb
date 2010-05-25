@@ -21,6 +21,9 @@ class TasksController < ApplicationController
 
     if params[:tag]
       @tag = Tag.find_by_name(params[:tag])
+      render :file => "#{RAILS_ROOT}/public/404.html", :status => 404 if @tag.nil?
+      return nil
+
       options[:joins] = [:taggings]
       options[:conditions] = ['taggable_type = ? AND tag_id = ?', 'Task', @tag.id]
     end
