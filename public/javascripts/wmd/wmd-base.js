@@ -1783,4 +1783,3 @@ init();
 if(Attacklab.fileLoaded){
 Attacklab.fileLoaded("wmd-base.js");
 }
-
