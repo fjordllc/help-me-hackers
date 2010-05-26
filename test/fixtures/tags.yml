@@ -1,14 +1,14 @@
 tag_1:
   id: 1
-  name: PHP
+  name: php
 
 tag_2:
   id: 2
-  name: WordPress
+  name: wordpress
 
 tag_3:
   id: 3
-  name: Google Analytics
+  name: google-analytics
 
 tag_4:
   id: 4
@@ -24,7 +24,7 @@ tag_6:
 
 tag_7:
   id: 7
-  name: Python
+  name: python
 
 tag_8:
   id: 8
@@ -32,8 +32,8 @@ tag_8:
 
 tag_9:
   id: 9
-  name: Ruby
+  name: ruby
 
 tag_10:
   id: 10
-  name: Rails
+  name: rails

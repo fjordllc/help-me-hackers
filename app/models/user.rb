@@ -24,21 +24,17 @@ class User < TwitterAuth::GenericUser
     :order  => 'cnt DESC'
 
   def total_prize
-    p = Comment.find(:first,
-      :select => 'sum(tasks.bounty) as prize',
-      :joins => [:user, :task],
-      :conditions => ['comments.correct = ? AND users.id = ?', true, id],
-      :group => 'tasks.id')
-    p.present? ? p.prize.to_i : 0
+   t = Task.find(:first,
+     :select     => 'SUM(bounty) AS total_bounty',
+     :conditions => ['id IN (SELECT task_id FROM comments WHERE correct = ? AND user_id = ?)', true, id])
+   t ? t.total_bounty.to_i : 0
   end
 
   def total_payment
-    p = Task.find(:first,
-      :select => 'sum(tasks.bounty) as payment',
-      :joins => [:comments],
-      :conditions => ['comments.correct = ? AND tasks.user_id = ?', true, id],
-      :group => 'tasks.id')
-    p.present? ? p.payment.to_i : 0
+   t = Task.find(:first,
+     :select     => 'SUM(bounty) AS total_bounty',
+     :conditions => ['id IN (SELECT task_id FROM comments WHERE correct = ?) AND user_id = ?', true, id])
+   t ? t.total_bounty.to_i : 0
   end
 
   def vote_count

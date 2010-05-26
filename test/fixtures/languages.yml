@@ -198,6 +198,16 @@ language_40:
   name: 'tcl'
   kind: program
 
+language_41:
+  id: 41
+  name: 'html'
+  kind: program
+
+language_42:
+  id: 42
+  name: 'css'
+  kind: program
+
 language_1000:
   id: 1000
   name: 'japanese'

@@ -1,5 +1,6 @@
-task_1:
-  id: 1
+<% $I = 0; def increment; $I += 1 end %>
+task_<%= increment %>:
+  id: <%= $I %>
   title: Pythonのhamlライブラリ
   description: "Pythonでhaml記法が使えるテンプレートライブラリが無いので欲しいです。
 Pure Pythonで！"
@@ -10,8 +11,8 @@ Pure Pythonで！"
   bounty: 5000
   view: 1
 
-task_2:
-  id: 2
+task_<%= increment %>:
+  id: <%= $I %>
   title: WordPressのGoogle Analyticsモバイル版プラグイン
   description: "WordPressでGoogle Analyticsモバイル版が簡単に設置出来るプラグインの作成をお願いしたいです。\n
 ３日分の昼飯代を払います！"
@@ -22,8 +23,8 @@ task_2:
   bounty: 100
   view: 10
 
-task_3:
-  id: 3
+task_<%= increment %>:
+  id: <%= $I %>
   title: "1日前などの時間表記"
   description: "現在時刻と比較して、「1日前」とか「3時間前」のような表記で時刻を出すクラスもしくは関数が欲しいです。\r\n\r\n英語ではRailsのActiveSupportであるとおもうのですが、日本語で使いたいです。"
   user_id: 1
@@ -33,8 +34,8 @@ task_3:
   bounty: 1230
   view: 15
 
-task_4:
-  id: 4
+task_<%= increment %>:
+  id: <%= $I %>
   title: "プロジェクト機能"
   description: "タスクをプロジェクトとしてまとめる機能。\r\n\r\nタスク登録からプロジェクトをプルダウンで選ぶ。"
   user_id: 1
@@ -43,3 +44,15 @@ task_4:
   license_id: 4
   bounty: 300
   view: 1
+  source_url: "http://github.com/komagata/help-me-hackers/blob/master/app/views/tasks/_form.html.haml"
+
+<% 20.times do |n| %>
+task_<%= increment %>:
+  id: <%= $I %>
+  title: "テスト<%= $I %>"
+  description: "テスト<%= $I %>の内容"
+  user_id: 1
+  language_id: 13
+  license_id: 4
+  bounty: 0
+<% end %>
