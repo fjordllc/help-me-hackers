@@ -75,7 +75,6 @@ class TasksController < ApplicationController
       :page     => params[:page],
       :per_page => COMMENTS_PER_PAGE)
     @comment = Comment.new(:task_id => @task.id)
-    Task.increment_view_by_id(@task.id)
   end
 
   def new
