@@ -1494,13 +1494,15 @@ div#main div.content pre code {
 	line-height: 20px;
 }
 #comment_description,
-#task_description {
+#task_description,
+#project_description {
 	width: 100%;
 	margin-bottom: 20px;
 	height: 300px;
 }
 #main .content .post h4,
-div.comments_edit div#main div.content h4 {
+div.comments_edit div#main div.content h4,
+div.projects_edit div#main div.content h3 {
 	margin-bottom: 20px;
 	font-size: 14px;
 	font-weight: bold;
@@ -2538,4 +2540,22 @@ div.top_index div#main div.content div.pager a {
 }
 div#sub div.banner {
 	padding-bottom: 15px;
+}
+
+#main .please_login {
+	background-color: #75E1D8;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-opera-border-radius:10px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	margin: 5px;
+}
+#main div.content div.section .please_login {
+	margin-top: 20px;
 }
