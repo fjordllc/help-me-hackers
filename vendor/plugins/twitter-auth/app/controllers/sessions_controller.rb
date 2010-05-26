@@ -59,6 +59,8 @@ class SessionsController < ApplicationController
       else
         authentication_failed('There was a problem trying to authenticate you. Please try again.') and return
     end 
+  rescue OAuth::Unauthorized => e
+    authentication_failed(t('This authentication request is no longer valid Please try again')) and return
   end
   
   def destroy

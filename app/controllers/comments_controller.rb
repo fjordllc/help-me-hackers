@@ -10,13 +10,10 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.correct = true if params[:commit_and_solve]
 
+    tweet_comment(@comment)
+
     if @comment.save
       flash[:notice] = t('Comment was successfully created')
-
-      # tweet
-      task = @comment.task
-      reply(task.user.login, @comment.description, "#{task_url(task)}#comment-#{@comment.id}")
-
       redirect_to task_path(@comment.task)
     else
       render :action => :new
@@ -46,5 +43,12 @@ class CommentsController < ApplicationController
   private
   def find_comment
     @comment = Comment.find(params[:id]) if params[:id]
+  end
+
+  def tweet_comment(comment)
+    task = comment.task
+    reply(task.user.login,
+          comment.description,
+          "#{task_url(task)}#comment-#{comment.id}")
   end
 end

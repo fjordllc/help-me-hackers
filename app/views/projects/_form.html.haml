@@ -7,15 +7,23 @@
       = f.text_field :name
     %div.section
       = f.label :description
+      == （#{link_to 'Markdown記法'}が使えます）
       %br
       = f.text_area :description, :size => '60x5'
+    %h4 プレビュー
+    .wrapper
+      .wmd-preview
     %div.section
       = f.label :website_url
+      （オプション）
       %br
       = f.text_field :website_url, :size => 60
     %div.section
       = f.label :repository_path
+      （オプション）
       %br
       = f.text_field :repository_path, :size => 60
     %div.section
       = f.submit '送信'
+- content_for :footer_script do
+  = javascript_include_tag 'wmd/wmd'

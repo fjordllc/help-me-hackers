@@ -11,9 +11,6 @@
     - if user.state
       %dt.state= t('activerecord.attributes.user.state')
       %dd.state= t("label.state.#{user.state.name}")
-    - if user.url.present?
-      %dt.url= t('activerecord.attributes.user.url')
-      %dd.url=link_to h(user.url), h(user.url), :target => '_blank'
     - if user.company.present?
       %dt.company= t('activerecord.attributes.user.company')
       %dd.company=h user.company
@@ -23,15 +20,19 @@
     - if user.editor
       %dt.favorite_editor= t('activerecord.attributes.user.editor')
       %dd.favorite_editor= t("label.editor.#{user.editor.name}")
-    %dt.twitter_account= t('activerecord.attributes.user.twitter_account')
-    %dd.twitter_account=link_to user.login, twitter_url(user.login), :target => '_blank'
+  .accounts
+    - if user.url.present?
+      %h3=t('activerecord.attributes.user.url') 
+      %p.url=link_to h(user.url), h(user.url), :title => h(user.url), :target => '_blank'
+    %h3=t('activerecord.attributes.user.twitter_account')
+    %p.twitter_account=link_to user.login, twitter_url(user.login), :title => user.login, :target => '_blank'
     - if user.github_account.present?
-      %dt.github_account= t('activerecord.attributes.user.github_account')
-      %dd.github_account=link_to github_url(user.github_account), github_url(user.github_account), :target => '_blank'
+      %h3=t('activerecord.attributes.user.github_account')
+      %p.github_account=link_to github_url(user.github_account), github_url(user.github_account), :title => github_url(user.github_account), :target => '_blank'
     - if user.bitbucket_account.present?
-      %dt.bitbucket_account= t('activerecord.attributes.user.bitbucket_account')
-      %dd.bitbucket_account=link_to bitbucket_url(user.bitbucket_account), bitbucket_url(user.bitbucket_account), :target => '_blank'
+      %h3=t('activerecord.attributes.user.bitbucket_account')
+      %p.bitbucket_account=link_to bitbucket_url(user.bitbucket_account), bitbucket_url(user.bitbucket_account), :title => bitbucket_url(user.bitbucket_account), :target => '_blank'
   - if user.ssh_public_key.present?
     .ssh_public_key
-      %h4= t('activerecord.attributes.user.ssh_public_key')
+      %h4=t('activerecord.attributes.user.ssh_public_key')
       %p.ssh_public_key=h user.ssh_public_key

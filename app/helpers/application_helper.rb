@@ -132,10 +132,6 @@ module ApplicationHelper
     "Good! RT @#{name} #{pritty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
   end
 
-  def tweet(message)
-    current_user.twitter.post('/statuses/update.json', 'status' => message)
-  end
-
   def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
     "Good! RT @#{name} #{pretty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
   end

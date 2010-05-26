@@ -7,15 +7,18 @@
           %li.count{:id => "task_#{@task.id}_good"}= @task.votes.size
       %h2= @task.title
       - form_for @task.votes.new(:comment => good_task_retweet(@task)), :html => {:id => "task_#{@task.id}_vote_form", :style => 'display:none'} do |f|
-        .text
-          = f.hidden_field :voteable_id, :id => "task_#{@task.id}_voteable_id"
-          = f.hidden_field :voteable_type, :id => "task_#{@task.id}_voteable_type"
-          = f.text_field :comment, :id => "task_#{@task.id}_comment", :size => '140', :maxlength => 140
         - if logged_in?
-          .button= image_submit_tag 'good_button.gif'
+          .text
+            = f.hidden_field :voteable_id, :id => "task_#{@task.id}_voteable_id"
+            = f.hidden_field :voteable_type, :id => "task_#{@task.id}_voteable_type"
+            = f.text_field :comment, :id => "task_#{@task.id}_comment", :size => '140', :maxlength => 140
+          - if logged_in?
+            .button= image_submit_tag 'good_button.gif'
+          - else
+            .button= link_to 'Retweet', login_path
+          %p.center Retweetをすることで、このタスクにGood!ポイントが加算されます
         - else
-          .button= link_to 'Retweet', login_path
-        %p.center Retweetをすることで、このタスクにGood!ポイントが加算されます
+          .please_login== Retweetするには#{link_to 'Twitterでログイン', login_path}してください。
     %dl.information
       %dd.licence=link_to t("label.license.#{@task.license.name}"), "#{about_license_path}##{@task.license.name}"
       %dt.licence ライセンス
@@ -64,17 +67,20 @@
     %h3 コメントする
     %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
     %span （コメントはTwitterにも飛びます）
-    - form_for @comment do |f|
-      = f.error_messages
-      = f.hidden_field :task_id
-      = f.text_area :description, :size => '70x10'
-      %h4 プレビュー
-      .wrapper
-        .wmd-preview
-      %p
-        = f.submit '利用規約に同意してコメントする'
-        - if logged_in? and @task.user.id == current_user.id and @task.unsolved?
-          = f.submit 'コメントして自己解決', :name => 'commit_and_solve'
-        = link_to '利用規約', about_terms_path, :target => '_blank'
+    - if logged_in?
+      - form_for @comment do |f|
+        = f.error_messages
+        = f.hidden_field :task_id
+        = f.text_area :description, :size => '70x10'
+        %h4 プレビュー
+        .wrapper
+          .wmd-preview
+        %p
+          = f.submit '利用規約に同意してコメントする'
+          - if logged_in? and @task.user.id == current_user.id and @task.unsolved?
+            = f.submit 'コメントして自己解決', :name => 'commit_and_solve'
+          = link_to '利用規約', about_terms_path, :target => '_blank'
+    - else
+      .please_login== コメントするには#{link_to 'Twitterでログイン', login_path}してください。
 - content_for :footer_script do
   = javascript_include_tag 'wmd/wmd'

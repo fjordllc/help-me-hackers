@@ -102,6 +102,7 @@ ja:
   Project was successfully deleted: "プロジェクトを削除しました。"
   Project was not deleted: "プロジェクトを削除できませんでした。"
   You have logged in successfully: "ログインしました。"
+  This authentication request is no longer valid Please try again: "認証できませんでした。"
 
   label:
     dashboard: "ダッシュボード"

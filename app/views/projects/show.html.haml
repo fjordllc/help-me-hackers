@@ -3,7 +3,7 @@
 .content
   .project.section
     %h3 概要
-    .description=h @project.description
+    .description~markdown @project.description
     - if @project.website_url
       .website_url
         %h4 WebサイトURL
