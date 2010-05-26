@@ -63,6 +63,7 @@
   .section.post
     %h3 コメントする
     %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
+    %span （コメントはTwitterにも飛びます）
     - form_for @comment do |f|
       = f.error_messages
       = f.hidden_field :task_id

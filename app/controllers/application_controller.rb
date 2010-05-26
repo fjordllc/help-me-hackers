@@ -7,6 +7,17 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+  private
+  def reply(name, title, url, hashtag = Application::HASH_TAG)
+    title = ApplicationController.helpers.pretty_truncate(title, :length => 60)
+    url   = ApplicationController.helpers.bitlize(url)
+    tweet("@#{name} #{title} #{url} #{hashtag}")
+  end
+
+  def tweet(message)
+    current_user.twitter.post('/statuses/update.json', 'status' => message)
+  end
 end
 
 unless ActionView::Helpers::InstanceTag.instance_methods.include?('to_label_tag_without_i18n')

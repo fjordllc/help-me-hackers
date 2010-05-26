@@ -128,6 +128,23 @@ module ApplicationHelper
     '20100501000000'
   end
 
+  def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
+    "Good! RT @#{name} #{pritty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
+  end
+
+  def tweet(message)
+    current_user.twitter.post('/statuses/update.json', 'status' => message)
+  end
+
+  def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
+    "Good! RT @#{name} #{pretty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
+  end
+
+  def pretty_truncate(str, options)
+    options[:length] = 60 unless options[:length]
+    truncate(str.gsub(/\s+/m, ' '), options)
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]
@@ -146,9 +163,5 @@ module ApplicationHelper
            all.
            collect {|e| [e.name, e.id] }
     list.sort {|a, b| a[1] <=> b[1] }
-  end
-
-  def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
-    "Good! RT @#{name} #{truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
   end
 end

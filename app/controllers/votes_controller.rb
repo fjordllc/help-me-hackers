@@ -7,7 +7,7 @@ class VotesController < ApplicationController
     vote.voted_user_id = vote.voteable.id
 
     if vote.save
-      res = tweet(vote.comment)
+      res = ApplicationController.helpers.tweet(vote.comment)
       logger.info "res: #{res.to_s}"
       count = Vote.count(:conditions => [
         'voteable_id = ? and voteable_type = ?',
@@ -20,11 +20,5 @@ class VotesController < ApplicationController
     end
 
     redirect_to :back
-  end
-
-  private
-  def tweet(message)
-    logger.info("tweet: #{message}")
-    current_user.twitter.post('/statuses/update.json', 'status' => message)
   end
 end

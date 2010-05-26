@@ -12,6 +12,11 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:notice] = t('Comment was successfully created')
+
+      # tweet
+      task = @comment.task
+      reply(task.user.login, @comment.description, "#{task_url(task)}#comment-#{@comment.id}")
+
       redirect_to task_path(@comment.task)
     else
       render :action => :new
