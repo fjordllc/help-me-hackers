@@ -4,11 +4,11 @@
   .project.section
     %h3 概要
     .description~markdown @project.description
-    - if @project.website_url
+    - if @project.website_url.present?
       .website_url
         %h4 WebサイトURL
         %a=link_to h(@project.website_url), h(@project.website_url)
-    - if @project.repository_path
+    - if @project.repository_path.present?
       .repository_path
         %h4 リポジトリパス
         %a=link_to h(@project.repository_path), h(@project.repository_path)
