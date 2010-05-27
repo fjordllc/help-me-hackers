@@ -13,8 +13,9 @@
             - form_for comment do |f|
               = hidden_field_tag 'comment[correct]', true
               = image_submit_tag 'choice_button.gif'
-        %li.thanks
-          = render :partial => 'payment_button', :locals => {:task => @task, :comment => comment}
+        - if logged_in? and @task.user.id == current_user.id
+          %li.thanks
+            = render :partial => 'payment_button', :locals => {:task => @task, :comment => comment}
   - form_for comment.votes.new(:comment => good_comment_retweet(comment)), :html => {:id => "comment_#{comment.id}_vote_form", :style => 'display:none'} do |f|
     - if logged_in?
       .text
