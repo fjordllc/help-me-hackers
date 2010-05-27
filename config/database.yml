@@ -18,5 +18,5 @@ test:
 production:
   adapter: sqlite3
   database: ../../shared/db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  pool: 36
+  timeout: 15000
