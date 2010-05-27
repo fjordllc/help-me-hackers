@@ -6,18 +6,16 @@ class Project < ActiveRecord::Base
   validates_presence_of :description
 
   def solved_task_count
-    task_count(true)
+    t = Task.find(:first,
+      :select     => 'COUNT(project_id) AS cnt',
+      :conditions => ['project_id = ? AND id IN (SELECT task_id FROM comments WHERE correct = ?)', id, true])
+    t.present? ? t.cnt.to_i : 0
   end
 
   def unsolved_task_count
-    task_count(false)
-  end
-
-  private
-  def task_count(correct)
-   t = Task.find(:first,
-     :select     => 'COUNT(project_id) AS cnt',
-     :conditions => ['project_id = ? AND id IN (SELECT task_id FROM comments WHERE correct = ?)', id, correct])
-   t.present? ? t.cnt.to_i : 0
+    t = Task.find(:first,
+      :select     => 'COUNT(project_id) AS cnt',
+      :conditions => ['project_id = ? AND id NOT IN (SELECT task_id FROM comments WHERE correct = ?)', id, true])
+    t.present? ? t.cnt.to_i : 0
   end
 end
