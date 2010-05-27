@@ -38,7 +38,7 @@
     .information
       %dl
         %dt.language プログラム言語
-        %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_tag_path(:tag => @task.language.name)
+        %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_language_path(:language => @task.language.name)
         - if @task.project
           %dt.project プロジェクト
           %dd.project=link_to h(@task.project.name), @task.project

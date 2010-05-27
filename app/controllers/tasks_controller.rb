@@ -7,7 +7,7 @@ class TasksController < ApplicationController
   def index
     options = {:page => params[:page],
                :per_page => TASKS_PER_PAGE,
-               :order => 'id DESC'}
+               :order => 'tasks.id DESC'}
 
     if params[:project]
       @project = Project.find(params[:project])
