@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   private
   def reply(name, title, url, hashtag = Application::HASH_TAG)
+    logger.info "url: #{url}"
     title = ApplicationController.helpers.pretty_truncate(title, :length => 60)
     url   = ApplicationController.helpers.bitlize(url)
     tweet("@#{name} #{title} #{url} #{hashtag}")

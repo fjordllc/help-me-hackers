@@ -10,9 +10,9 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.correct = true if params[:commit_and_solve]
 
-    tweet_comment(@comment)
 
     if @comment.save
+      tweet_comment(@comment)
       flash[:notice] = t('Comment was successfully created')
       redirect_to task_path(@comment.task)
     else
@@ -46,6 +46,7 @@ class CommentsController < ApplicationController
   end
 
   def tweet_comment(comment)
+    logger.info "comment id: #{comment.id}"
     task = comment.task
     reply(task.user.login,
           comment.description,
