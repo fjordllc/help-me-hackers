@@ -1,3 +1,6 @@
 %ul.projects
   %li.project
-    .name=link_to h(project.name), project
+    .solved= project.solved_task_count
+    .unsolved= project.unsolved_task_count
+    .title=link_to pretty_truncate(h(project.name), :length => 32), project
+    .created_at== #{time_ago_in_words project.created_at}前
