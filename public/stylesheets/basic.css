@@ -1460,12 +1460,8 @@ div#main div.content pre code {
 	padding-left: 27px;
 	font-size: 13px;
 	margin-bottom: 1.4em;
-	white-space: -moz-pre-wrap; /* Mozilla */
-	white-space: -pre-wrap; /* Opera 4-6 */
-	white-space: -o-pre-wrap; /* Opera 7 */
-	white-space: pre-wrap; /* CSS3 */
-	word-wrap: break-word; /* IE */
 	width: 470px;
+	overflow: auto;
 }
 
 
