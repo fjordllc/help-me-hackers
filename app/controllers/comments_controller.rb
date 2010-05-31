@@ -47,9 +47,12 @@ class CommentsController < ApplicationController
 
   def tweet_comment(comment)
     logger.info "comment id: #{comment.id}"
+    str = ApplicationController.helpers.markdown(comment.description)
+    str = ApplicationController.helpers.strip_tags(str)
+
     task = comment.task
     reply(task.user.login,
-          comment.description,
+          str,
           "#{task_url(task)}#comment-#{comment.id}")
   end
 end
