@@ -1,3 +1,3 @@
 module Application
-  HASH_TAG = '#hmh'
+  HASH_TAG = '#hmhs'
 end

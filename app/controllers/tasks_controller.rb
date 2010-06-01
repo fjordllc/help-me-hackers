@@ -96,6 +96,7 @@ class TasksController < ApplicationController
     @task.user = current_user
 
     if @task.save
+      tweet_task(@task)
       flash[:notice] = t('Task was successfully created')
       redirect_to @task
     else
@@ -126,5 +127,10 @@ class TasksController < ApplicationController
   private
   def find_task
     @task = Task.find(params[:id]) if params[:id]
+  end
+
+  def tweet_task(task)
+    str = ApplicationController.helpers.strip_tags(task.title)
+    help!(str, task_url(task))
   end
 end
