@@ -3,7 +3,7 @@ dependencies:
   pg: 
     group: 
     - :production
-    version: ">= 0"
+    version: = 0.9.0
   rails: 
     group: 
     - :default
@@ -117,7 +117,7 @@ specs:
     version: 2.3.12
 - yaml_waml: 
     version: 0.3.0
-hash: b081547c54df1712e411603b2e56e7ed99ac286b
+hash: c4180d1d388f867688f90c0e2084d7602b3eb6ad
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

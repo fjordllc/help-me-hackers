@@ -17,7 +17,7 @@ gem 'oauth', '0.3.5'
 gem 'bluecloth', '2.0.7'
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.9.0'
 end
 
 group :development do
