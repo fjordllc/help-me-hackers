@@ -156,6 +156,10 @@ font-weight:bold;
  font-size:100%;  
  }  
 
+ a {
+overflow: hidden
+ }  
+
  a:link,a:visited {
 color: #2844ac;
  }  
