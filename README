@@ -14,7 +14,7 @@ http://docs.komagata.org/4524 (JAPANESE)
     $ cp config/twitter_auth.example.yml config/twitter_auth.yml
     $ bundle install --without production
     $ rake app:set
-    $ ./script/server
+    $ ruby script/server
 
 Access to http://localhost:3000/
 
