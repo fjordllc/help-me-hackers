@@ -16,6 +16,12 @@ class ApplicationController < ActionController::Base
     tweet("@#{name} #{title} #{url} #{hashtag}")
   end
 
+  def help!(title, url, hashtag = Application::HASH_TAG)
+    title = ApplicationController.helpers.pretty_truncate(title, :length => 60)
+    url   = ApplicationController.helpers.bitlize(url)
+    tweet("HELP!: #{title} #{url} #{hashtag}")
+  end
+
   def tweet(message)
     current_user.twitter.post('/statuses/update.json', 'status' => message)
   end
