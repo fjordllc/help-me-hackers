@@ -13,9 +13,16 @@ gem 'amatsuda-i18n_generators', '0.6.0', :require => nil
 
 # native module
 gem 'json', '1.4.3'
-gem 'sqlite3-ruby', '1.2.5'
 gem 'oauth', '0.3.5'
 gem 'bluecloth', '2.0.7'
+
+group :production do
+  gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3-ruby', '1.2.5'
+end
 
 group :test do
   gem 'shoulda', '2.10.3'

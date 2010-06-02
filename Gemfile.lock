@@ -1,31 +1,35 @@
 --- 
 dependencies: 
-  yaml_waml: 
+  pg: 
     group: 
-    - :default
-    version: = 0.3.0
+    - :production
+    version: ">= 0"
   rails: 
     group: 
     - :default
     version: = 2.3.5
     require: []
 
-  ezcrypto: 
+  yaml_waml: 
     group: 
     - :default
-    version: = 0.7.2
+    version: = 0.3.0
   haml: 
     group: 
     - :default
     version: = 2.2.22
-  sqlite3-ruby: 
+  ezcrypto: 
     group: 
     - :default
-    version: = 1.2.5
+    version: = 0.7.2
   bluecloth: 
     group: 
     - :default
     version: = 2.0.7
+  sqlite3-ruby: 
+    group: 
+    - :development
+    version: = 1.2.5
   shoulda: 
     group: 
     - :test
@@ -38,18 +42,18 @@ dependencies:
     group: 
     - :default
     version: = 1.2.0
-  json: 
-    group: 
-    - :default
-    version: = 1.4.3
-  bitly: 
-    group: 
-    - :default
-    version: = 0.4.0
   will_paginate: 
     group: 
     - :default
     version: = 2.3.12
+  bitly: 
+    group: 
+    - :default
+    version: = 0.4.0
+  json: 
+    group: 
+    - :default
+    version: = 1.4.3
   hoptoad_notifier: 
     group: 
     - :default
@@ -101,6 +105,8 @@ specs:
     version: 0.3.5
 - pacecar: 
     version: 1.2.0
+- pg: 
+    version: 0.9.0
 - rails: 
     version: 2.3.5
 - shoulda: 
@@ -111,7 +117,7 @@ specs:
     version: 2.3.12
 - yaml_waml: 
     version: 0.3.0
-hash: 693d4728d54bbfa9931837317144e4eeeb299a41
+hash: b081547c54df1712e411603b2e56e7ed99ac286b
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
