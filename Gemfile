@@ -1,6 +1,7 @@
 source :gemcutter
 source 'http://gems.github.com'
 
+gem 'bundler', '0.9.25'
 gem 'rails', '2.3.5', :require => nil
 gem 'haml', '2.2.22'
 gem 'bitly', '0.4.0'
