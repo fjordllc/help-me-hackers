@@ -129,11 +129,7 @@ module ApplicationHelper
   end
 
   def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
-    "Good! RT @#{name} #{pritty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
-  end
-
-  def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
-    "Good! RT @#{name} #{pretty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
+    "Good! RT @#{name} #{pretty_truncate(strip_tags(markdown(title)), :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
   end
 
   def pretty_truncate(str, options)
