@@ -14,6 +14,7 @@
         %a=link_to h(@project.repository_path), h(@project.repository_path)
     %ul.loggedin
       %li.edit= link_to t('Edit'), edit_project_path(@project)
+      %li.edit= link_to t('Create Task in this project'), new_task_path(:project_id => @project.id)
   .profile_list
     %h3 タスク
     - if @project.tasks.empty?

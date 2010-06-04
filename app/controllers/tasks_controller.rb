@@ -78,12 +78,14 @@ class TasksController < ApplicationController
   end
 
   def new
-    options = if logged_in? and current_user.language.present?
-                {:license_id  => 5,
-                 :language_id => current_user.language.id}
-              else
-                {:license_id => 5}
-              end
+    options =
+      if logged_in? and current_user.language.present?
+        {:license_id  => 5,
+         :language_id => current_user.language.id}
+      else
+        {:license_id => 5}
+      end
+    options[:project_id] = params[:project_id].to_i if params[:project_id]
     @task = Task.new(options)
   end
 
