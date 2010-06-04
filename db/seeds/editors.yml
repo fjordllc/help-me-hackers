@@ -73,3 +73,27 @@ mi:
 smultron:
   id: 19
   name: smultron
+
+codeditor:
+  id: 20
+  name: codeditor
+
+fraise:
+  id: 21
+  name: fraise
+
+xyzzy:
+  id: 22
+  name: xyzzy
+
+terapad:
+  id: 23
+  name: terapad
+
+notepadxx:
+  id: 24
+  name: notepadxx
+
+noeditor:
+  id: 25
+  name: noeditor

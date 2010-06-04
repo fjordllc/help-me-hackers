@@ -152,6 +152,12 @@ ja:
       textmate: TextMate
       mi: mi
       smultron: Smultron
+      codeditor: CodEditor
+      fraise: Fraise
+      xyzzy: xyzzy
+      terapad: TeraPad
+      notepadxx: "Notepad++"
+      noeditor: NoEditor
 
     language:
       c: "C"
@@ -197,6 +203,7 @@ ja:
       standard-ml: "Standard ML"
       html: "HTML"
       css: "CSS"
+      vimscript: "Vim script"
       japanese: "日本語"
       english: "英語"
 
