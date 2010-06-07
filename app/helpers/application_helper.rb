@@ -44,9 +44,14 @@ module ApplicationHelper
   end
 
   def bitlize(url)
-    conf = YAML.load_file File.join(RAILS_ROOT, "config", "twitter_auth.yml")
-    bitly = Bitly.new(conf[RAILS_ENV]['bitly_api_username'], conf[RAILS_ENV]['bitly_api_key'])
-    bitly.shorten(url).short_url
+    begin
+      conf = YAML.load_file File.join(RAILS_ROOT, "config", "twitter_auth.yml")
+      bitly = Bitly.new(conf[RAILS_ENV]['bitly_api_username'], conf[RAILS_ENV]['bitly_api_key'])
+      short_url = bitly.shorten(url).short_url
+    rescue
+      short_url = url
+    end
+    short_url
   end
 
   def users_title
