@@ -26,7 +26,7 @@ class Task < ActiveRecord::Base
     :order      => 'bounty DESC'
 
   named_scope :count_by_language,
-    :select => 'COUNT(tasks.id) AS cnt, languages.name',
+    :select => 'COUNT(tasks.id) AS cnt, MAX(languages.name) as name',
     :joins  => [:language],
     :group  => 'language_id',
     :order  => 'cnt DESC'

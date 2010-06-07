@@ -6,19 +6,19 @@ class User < TwitterAuth::GenericUser
   has_many :comments
 
   named_scope :count_by_language,
-    :select => 'COUNT(users.id) AS cnt, languages.name',
+    :select => 'COUNT(users.id) AS cnt, MAX(languages.name) as name',
     :joins  => [:language],
     :group  => 'language_id',
     :order  => 'cnt DESC'
 
   named_scope :count_by_editor,
-    :select => 'COUNT(users.id) AS cnt, editors.name',
+    :select => 'COUNT(users.id) AS cnt, MAX(editors.name) as name',
     :joins  => [:editor],
     :group  => 'editor_id',
     :order  => 'cnt DESC'
 
   named_scope :count_by_state,
-    :select => 'COUNT(users.id) AS cnt, states.name',
+    :select => 'COUNT(users.id) AS cnt, MAX(states.name) as name',
     :joins  => [:state],
     :group  => 'state_id',
     :order  => 'cnt DESC'
