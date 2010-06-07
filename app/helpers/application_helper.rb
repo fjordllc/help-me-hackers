@@ -44,9 +44,14 @@ module ApplicationHelper
   end
 
   def bitlize(url)
-    conf = YAML.load_file File.join(RAILS_ROOT, "config", "twitter_auth.yml")
-    bitly = Bitly.new(conf[RAILS_ENV]['bitly_api_username'], conf[RAILS_ENV]['bitly_api_key'])
-    bitly.shorten(url).short_url
+    begin
+      conf = YAML.load_file File.join(RAILS_ROOT, "config", "twitter_auth.yml")
+      bitly = Bitly.new(conf[RAILS_ENV]['bitly_api_username'], conf[RAILS_ENV]['bitly_api_key'])
+      short_url = bitly.shorten(url).short_url
+    rescue
+      short_url = url
+    end
+    short_url
   end
 
   def users_title
@@ -129,11 +134,7 @@ module ApplicationHelper
   end
 
   def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
-    "Good! RT @#{name} #{pritty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
-  end
-
-  def good_retweet(name, title, url, hashtag = Application::HASH_TAG)
-    "Good! RT @#{name} #{pretty_truncate(title, :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
+    "Good! RT @#{name} #{pretty_truncate(strip_tags(markdown(title)), :length => 60)} #{bitlize(task_url(@task))} #{hashtag}"
   end
 
   def pretty_truncate(str, options)

@@ -208,6 +208,11 @@ language_42:
   name: 'css'
   kind: program
 
+language_43:
+  id: 43
+  name: 'vimscript'
+  kind: program
+
 language_1000:
   id: 1000
   name: 'japanese'
