@@ -23,7 +23,11 @@ class ApplicationController < ActionController::Base
   end
 
   def tweet(message)
-    current_user.twitter.post('/statuses/update.json', 'status' => message)
+    if Rails.env.production?
+      current_user.twitter.post('/statuses/update.json', 'status' => message)
+    else
+      logger.info "tweet: #{message}"
+    end
   end
 end
 
