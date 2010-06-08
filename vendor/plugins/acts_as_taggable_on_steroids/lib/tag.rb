@@ -16,6 +16,10 @@ class Tag < ActiveRecord::Base
   def self.find_or_create_with_like_by_name(name)
     find(:first, :conditions => ["name LIKE ?", name]) || create(:name => name)
   end
+
+  def self.find_or_initialize_with_like_by_name(name)
+    find(:first, :conditions => ["name LIKE ?", name]) || new(:name => name)
+  end
   
   def ==(object)
     super || (object.is_a?(Tag) && name == object.name)

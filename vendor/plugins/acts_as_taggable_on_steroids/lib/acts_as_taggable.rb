@@ -9,7 +9,8 @@ module ActiveRecord #:nodoc:
         def acts_as_taggable
           has_many :taggings, :as => :taggable, :dependent => :destroy, :include => :tag
           has_many :tags, :through => :taggings
-          
+
+          validate :validate_tags
           before_save :save_cached_tag_list
           
           after_create :save_tags
@@ -180,6 +181,21 @@ module ActiveRecord #:nodoc:
         
         def tag_list=(value)
           @tag_list = TagList.from(value)
+        end
+
+        def validate_tags
+          error_messages = []
+          new_tag_names = @tag_list - tags.map(&:name)
+
+          new_tag_names.each do |new_tag_name|
+            tag = Tag.find_or_initialize_with_like_by_name(new_tag_name)
+            error_messages << tag.errors.on(:name) unless tag.valid?
+          end
+          error_messages.flatten!
+
+          error_messages.uniq.each do |msg|
+            errors.add :tag_list, msg
+          end
         end
         
         def save_cached_tag_list
