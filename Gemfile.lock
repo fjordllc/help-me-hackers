@@ -42,6 +42,10 @@ dependencies:
     group: 
     - :default
     version: = 1.2.0
+  locale_rails: 
+    group: 
+    - :default
+    version: = 2.0.5
   will_paginate: 
     group: 
     - :default
@@ -62,12 +66,6 @@ dependencies:
     group: 
     - :default
     version: = 2.2.2
-  amatsuda-i18n_generators: 
-    group: 
-    - :default
-    version: = 0.6.0
-    require: []
-
 specs: 
 - rake: 
     version: 0.8.7
@@ -83,12 +81,6 @@ specs:
     version: 2.3.5
 - activeresource: 
     version: 2.3.5
-- locale: 
-    version: 2.0.5
-- gettext: 
-    version: 2.1.0
-- amatsuda-i18n_generators: 
-    version: 0.6.0
 - crack: 
     version: 0.1.7
 - bitly: 
@@ -105,6 +97,10 @@ specs:
     version: 2.2.2
 - json: 
     version: 1.4.3
+- locale: 
+    version: 2.0.5
+- locale_rails: 
+    version: 2.0.5
 - ruby-hmac: 
     version: 0.4.0
 - oauth: 
@@ -123,9 +119,7 @@ specs:
     version: 2.3.12
 - yaml_waml: 
     version: 0.3.0
-hash: 72c4b9e1e612b4c9358caf7e33a2f2fef95a2ad5
+hash: 98f3a03bc4c9cae00a1ea3d05040165f1fd6e5b1
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
-- Rubygems: 
-    uri: http://gems.github.com

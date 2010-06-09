@@ -9,7 +9,7 @@
     %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
     %title= yield(:title) || t('application.title')
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
-    %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "タスク - #{t('application.title')}", :href => tasks_url(:format => :atom)}
+    %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "#{t('Tasks')} - #{t('application.title')}", :href => tasks_url(:format => :atom)}
     %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "#{t('label.wanted')} - #{t('application.title')}", :href => wanted_tasks_url(:format => :atom)}
     %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "#{t('label.unsolved')} - #{t('application.title')}", :href => unsolved_tasks_url(:format => :atom)}
     = stylesheet_link_tag 'reset', :media => 'screen'
@@ -35,10 +35,10 @@
       .nav
         %ul
           - if logged_in?
-            %li= link_to_unless_current_with_span t('label.dashboard'), dashboard_path
-          %li= link_to_unless_current_with_span t('activerecord.models.task'), tasks_path
-          %li= link_to_unless_current_with_span t('activerecord.models.project'), projects_path
-          %li= link_to_unless_current_with_span t('activerecord.models.user'), users_path
+            %li= link_to_unless_current_with_span t('Dashboard'), dashboard_path
+          %li= link_to_unless_current_with_span t('Tasks'), tasks_path
+          %li= link_to_unless_current_with_span t('Projects'), projects_path
+          %li= link_to_unless_current_with_span t('Users'), users_path
           %li.add_task= link_to t('Create Task'), new_task_path
       #main
         #flash
