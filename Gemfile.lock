@@ -4,24 +4,24 @@ dependencies:
     group: 
     - :production
     version: = 0.9.0
+  yaml_waml: 
+    group: 
+    - :default
+    version: = 0.3.0
   rails: 
     group: 
     - :default
     version: = 2.3.5
     require: []
 
-  yaml_waml: 
-    group: 
-    - :default
-    version: = 0.3.0
-  haml: 
-    group: 
-    - :default
-    version: = 2.2.22
   ezcrypto: 
     group: 
     - :default
     version: = 0.7.2
+  haml: 
+    group: 
+    - :default
+    version: = 2.2.22
   bluecloth: 
     group: 
     - :default
@@ -42,18 +42,14 @@ dependencies:
     group: 
     - :default
     version: = 1.2.0
-  locale_rails: 
-    group: 
-    - :default
-    version: = 2.0.5
-  will_paginate: 
-    group: 
-    - :default
-    version: = 2.3.12
   bitly: 
     group: 
     - :default
     version: = 0.4.0
+  will_paginate: 
+    group: 
+    - :default
+    version: = 2.3.12
   json: 
     group: 
     - :default
@@ -97,10 +93,6 @@ specs:
     version: 2.2.2
 - json: 
     version: 1.4.3
-- locale: 
-    version: 2.0.5
-- locale_rails: 
-    version: 2.0.5
 - ruby-hmac: 
     version: 0.4.0
 - oauth: 
@@ -119,7 +111,7 @@ specs:
     version: 2.3.12
 - yaml_waml: 
     version: 0.3.0
-hash: 98f3a03bc4c9cae00a1ea3d05040165f1fd6e5b1
+hash: 0a7f31a3e6f21887e37730a6f500d020cfdb0a81
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

@@ -9,7 +9,7 @@ gem 'pacecar', '1.2.0'
 gem 'yaml_waml', '0.3.0'
 gem 'will_paginate', '2.3.12'
 gem 'hoptoad_notifier', '2.2.2'
-gem 'locale_rails', '2.0.5'
+#gem 'locale_rails', '2.0.5'
 
 # native module
 gem 'json', '1.4.3'
