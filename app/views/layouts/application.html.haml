@@ -14,7 +14,10 @@
     %link{:rel => 'alternate', :type => 'application/atom+xml', :title => "#{t('label.unsolved')} - #{t('application.title')}", :href => unsolved_tasks_url(:format => :atom)}
     = stylesheet_link_tag 'reset', :media => 'screen'
     = stylesheet_link_tag 'basic', :media => 'screen'
+    = stylesheet_link_tag 'jquery-ui-1.8.2.custom', :media => 'screen'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js'
+    = javascript_include_tag 'application'
     - header_script = yield(:header_script)
     - if header_script
       = header_script

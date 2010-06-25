@@ -8,7 +8,6 @@ Pure Pythonで！"
   project_id: 1
   language_id: 13
   license_id: 4
-  bounty: 5000
   view: 1
 
 task_<%= increment %>:
@@ -20,7 +19,6 @@ task_<%= increment %>:
   project_id:
   language_id: 7
   license_id: 1
-  bounty: 100
   view: 10
 
 task_<%= increment %>:
@@ -31,7 +29,6 @@ task_<%= increment %>:
   project_id: 1
   language_id: 9
   license_id: 4
-  bounty: 1230
   view: 15
 
 task_<%= increment %>:
@@ -42,7 +39,6 @@ task_<%= increment %>:
   project_id: 1
   language_id: 9
   license_id: 4
-  bounty: 300
   view: 1
   source_url: "http://github.com/komagata/help-me-hackers/blob/master/app/views/tasks/_form.html.haml"
 
@@ -54,5 +50,4 @@ task_<%= increment %>:
   user_id: 1
   language_id: 13
   license_id: 4
-  bounty: 0
 <% end %>

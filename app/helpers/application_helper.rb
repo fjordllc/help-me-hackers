@@ -109,7 +109,7 @@ module ApplicationHelper
   def task_attrs(task)
     value = "task content"
     value += ' solved' if task.solved?
-    value += ' free' if task.bounty.zero?
+    value += ' free' if task.total_bounty.zero?
     {:class => value}
   end
 
@@ -140,6 +140,31 @@ module ApplicationHelper
   def pretty_truncate(str, options)
     options[:length] = 60 unless options[:length]
     truncate(str.gsub(/\s+/m, ' '), options)
+  end
+
+  def number_to_currency_with_span(number, options = {})
+    options.symbolize_keys!
+    
+    defaults  = I18n.translate(:'number.format', :locale => options[:locale], :raise => true) rescue {}
+    currency  = I18n.translate(:'number.currency.format', :locale => options[:locale], :raise => true) rescue {}
+    defaults  = defaults.merge(currency)
+    
+    precision = options[:precision] || defaults[:precision]
+    unit      = options[:unit]      || defaults[:unit]
+    separator = options[:separator] || defaults[:separator]
+    delimiter = options[:delimiter] || defaults[:delimiter]
+    format    = options[:format]    || defaults[:format]
+    separator = '' if precision == 0
+    
+    begin
+      format.gsub(/%n/, '<span class="number">' + number_with_precision(number,
+        :precision => precision,
+        :delimiter => delimiter,
+        :separator => separator) + '</span>'
+      ).gsub(/%u/, unit)
+    rescue
+      number
+    end
   end
 
   private

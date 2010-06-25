@@ -1,4 +1,59 @@
 - title "#{@task.title} - #{t('application.title')}"
+- content_for :header_script do
+  = javascript_include_tag 'http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js'
+  = javascript_include_tag 'jquery.validator.messages_ja'
+  :javascript
+    $(function(){
+      $('.bounties .pay').click(function() {
+        $('.pay_dialog', this.parentNode).dialog({
+          title: '#{t('Bounty paying')}',
+          modal: true,
+          draggable: false,
+          resizable: false,
+          width: 500,
+          buttons: {
+            '#{t('Pay by Paypal')}': function() {
+              $(this).dialog('close')
+            },
+            '#{t('Payment was completed')}': function() {
+              $(this).dialog('close')
+            }
+          }
+        })
+      })
+
+      $('.add_bounty').click(function() {
+        $('#new_bounty').dialog({
+          title: '#{t('Add Bounty')}',
+          modal: true,
+          draggable: false,
+          resizable: false,
+          width: 500,
+          buttons: {
+            '#{t('Add')}': function() {
+              if ($(this).valid()) $(this).submit()
+            }
+          },
+        }).submit(function() {
+          var f = $(this)
+          $.post('/bounties', $(this).serialize(), function(data) {
+            //var org = numerize($('.total_bounty .number').text())
+            //var add = parseInt($('#bounty_amount').val())
+            //$('.total_bounty .number').text(number_format(org + add))
+            //f.dialog('close')
+            location.reload()
+          })
+          return false
+        }).validate({
+          rules: {
+            'bounty[amount]': {
+              required: true,
+              min: 100
+            }
+          }
+        })
+      })
+    })
 %div{task_attrs(@task)}
   .main
     .title
@@ -21,41 +76,65 @@
           .please_login== Retweetするには#{link_to 'Twitterでログイン', login_path}してください。
     %dl.information
       %dd.licence=link_to t("label.license.#{@task.license.name}"), "#{about_license_path}##{@task.license.name}"
-      %dt.licence ライセンス
+      %dt.licence= t('activerecord.attributes.task.license')
     .description~markdown @task.description
     - if @task.source_url.present?
       .source_url
-        %h4 ソースURL
+        %h4= t('activerecord.attributes.task.source_url')
         =link_to truncate(h(@task.source_url), :length => 52), h(@task.source_url)
-    %ul.tags
-      - @task.tags.each do |tag|
-        %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
+    - unless @task.tags.empty?
+      %ul.tags
+        - @task.tags.each do |tag|
+          %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
     - if logged_in? and @task.user.id == current_user.id
       %ul.loggedin
-        %li.edit= link_to 'このタスクを編集', edit_task_path(@task)
-        %li.delete= link_to 'このタスクを削除', @task, :confirm => '本当に削除してよろしいですか？', :method => :delete
+        %li.edit= link_to t('Edit this task'), edit_task_path(@task)
+        %li.delete= link_to t('Delete this task'), @task, :confirm => t('Are you sure'), :method => :delete
   .sub
     .information
       %dl
-        %dt.language プログラム言語
+        %dt.language= t('Programming language')
         %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_language_path(:language => @task.language.name)
         - if @task.project
-          %dt.project プロジェクト
+          %dt.project= t('Project')
           %dd.project=link_to h(@task.project.name), @task.project
-        - if @task.bounty > 0
-          %dt.bounty 報奨金
+        - if @task.total_bounty > 0
+          %dt.bounty= t('Total bounty')
           %dd.bounty
-            %span= number_to_currency @task.bounty
+            %span= t('Total')
+            %span.total_bounty
+              = number_to_currency_with_span @task.total_bounty
       %ul.retweet
         %li.count= @task.votes.size
-        %li.label retweet
+        %li.label= t('Retweet')
       %ul.comment
         %li.count= @task.comments.size
-        %li.label コメント
+        %li.label= t('Comment')
       .person
         %ul
           %li.icon=link_to image_tag(@task.user.profile_image_url), user_path(@task.user)
           %li.name=link_to @task.user.login, user_path(@task.user)
+      %ul.bounties
+        - @bounties.each do |bounty|
+          %li.bounty{:id => "bounty_#{bounty.id}"}
+            .icon= link_to image_tag(bounty.user.profile_image_url), user_path(bounty.user)
+            .login= link_to bounty.user.login, user_path(bounty.user)
+            .amount= number_to_currency bounty.amount
+            - if logged_in? and @task.solved?
+              .pay.button= t('Pay')
+              .pay_dialog{:style => 'display:none'}
+                .icon= link_to image_tag(@task.solver.profile_image_url), user_path(@task.solver)
+                %h2= t('Payment for name', :name => link_to(@task.solver.login, user_path(@task.solver)))
+                %label= t('Bounty')
+                .amount= number_to_currency bounty.amount
+                .paypal= render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :user => bounty.task.solver}
+                %p= t('Please push payment was completed button if payment is accepted by Paypal')
+      - if logged_in?
+        .add_bounty.button= t('Add Bounty')
+        - form_for @bounty, :html => {:style => 'display:none'} do |f|
+          = f.hidden_field :task_id
+          = f.label :amount
+          = f.text_field :amount, :size => 20
       .created_at== #{time_ago_in_words @task.created_at}前
   - unless @comments.empty?
     .section

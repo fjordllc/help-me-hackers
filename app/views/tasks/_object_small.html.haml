@@ -2,8 +2,8 @@
   .goods= object_small.votes.size
   .comments= object_small.comments.size
   .title=link_to truncate(h(object_small.title), :length => 32), task_path(object_small)
-  - if object_small.bounty > 0
-    .bounty= number_to_currency object_small.bounty
+  - if object_small.total_bounty > 0
+    .bounty= number_to_currency object_small.total_bounty
   - else
     .bounty.free FREE
   .created_at== #{time_ago_in_words object_small.created_at}前

@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-  before_filter :find_comment
   before_filter :login_required, :only => [:create, :edit, :update, :destroy]
+  before_filter :find_comment
 
   def edit
   end

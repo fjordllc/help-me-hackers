@@ -1,5 +1,5 @@
 .solved_tasks.profile_list
-  %h3 解決したタスク
+  %h3= t('Solved Tasks')
   - if user.comments.correct.empty?
     %p= t('label.nothing_posted_comments')
   - else

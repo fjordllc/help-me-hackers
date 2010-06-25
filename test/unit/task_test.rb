@@ -11,7 +11,6 @@ class TaskTest < Test::Unit::TestCase
   should_validate_presence_of :language
   should_validate_presence_of :license
   should_validate_presence_of :user
-  should_validate_presence_of :bounty
   should_ensure_length_in_range :title, (4..255)
   should_ensure_length_at_least :description, 20
 end

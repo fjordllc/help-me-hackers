@@ -135,6 +135,7 @@ ja:
         format: "{{attribute}}{{message}}"
 
     models:
+      bounty: 報奨金
       comment: "コメント"
       project: "プロジェクト"
       language: "言語"
@@ -144,6 +145,10 @@ ja:
       user_session: "ユーザーセッション"
 
     attributes: 
+      bounty:
+        amount: 報奨金
+        task: タスク
+
       comment: 
         description: "詳細"
         user: "ユーザー"
@@ -219,10 +224,31 @@ ja:
   Delete: 削除
   Edit: 編集
   Update: 更新
+  Add: 追加
+  Cancel: キャンセル
   Dashboard: ダッシュボード
+  Task: タスク
   Tasks: タスク
+  Project: プロジェクト
   Projects: プロジェクト
+  User: ユーザー
   Users: ユーザー
+  Bounty: 報奨金
+  Total bounty: 報奨金
+  Total: 合計
+  Comment: コメント
+  Comments: コメント
+  Retweet: Retweet
+  Programming language: プログラミング言語
+  Are you sure: 本当によろしいですか？
+  Pay: 支払う
+  Add Bounty: 報奨金を追加
+  Bounty paying: 報奨金支払い
+  Pay by Paypal: Paypalで支払う
+  Payment for name: "{{name}}さんへの報奨金支払い。"
+  Payment was completed: 支払い完了
+  Please push payment was completed button if payment is accepted by Paypal: Paypalで支払が受理されたら支払い完了ボタンを押して下さい。
+  Solved Tasks: 解決したタスク
 
   Vote was successfully created: "ReTweetしました。"
   Vote was not created: "ReTweetできませんでした。"
@@ -237,10 +263,16 @@ ja:
   Task was successfully deleted: "タスクを削除しました。"
   Task was not deleted: "タスクを削除できませんでした。"
   Create Project: "プロジェクト登録"
+  Edit this task: このタスクを編集
+  Delete this task: このタスクを削除
   Project was successfully created: "プロジェクトを登録しました。"
   Project was successfully updated: "プロジェクトを更新しました。"
   Project was successfully deleted: "プロジェクトを削除しました。"
   Project was not deleted: "プロジェクトを削除できませんでした。"
+  Bounty was successfully created: 報酬を追加しました。
+  Bounty was successfully updated: 報酬を更新しました。
+  Bounty was successfully deleted: 報酬を削除しました。
+  Bounty was not deleted: 報酬を削除できませんでした。
   You have logged in successfully: "ログインしました。"
   This authentication request is no longer valid Please try again: "認証できませんでした。"
 

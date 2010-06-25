@@ -49,7 +49,7 @@ class TasksController < ApplicationController
   end
 
   def wanted
-    @tasks = Task.unsolved.paid.paginate(
+    @tasks = Task.unsolved.nonfree.paginate(
       :page     => params[:page],
       :per_page => TASKS_PER_PAGE)
 
@@ -71,6 +71,8 @@ class TasksController < ApplicationController
   end
 
   def show
+    @bounty = Bounty.new(:task_id => @task.id)
+    @bounties = @task.bounties
     @comments = @task.comments.by_correct_desc_and_id.paginate(
       :page     => params[:page],
       :per_page => COMMENTS_PER_PAGE)
@@ -94,7 +96,6 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(params[:task])
-    @task.bounty = 0 if @task.bounty.nil?
     @task.user = current_user
 
     if @task.save
@@ -107,7 +108,6 @@ class TasksController < ApplicationController
   end
 
   def update
-    params[:task][:bounty] = 0 unless params[:task][:bounty]
     if @task.update_attributes(params[:task])
       flash[:notice] = t('Task was successfully updated')
       redirect_to @task

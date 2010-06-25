@@ -10,7 +10,7 @@ load_fixture :countries
 load_fixture :states
 load_fixture :editors
 
-unless ENV['CAP_ENV'] == 'production'
+if ENV['CAP_ENV'] != 'production'
   load_fixture :languages
   load_fixture :licenses
   load_fixture :countries
@@ -21,4 +21,5 @@ unless ENV['CAP_ENV'] == 'production'
   load_fixture :tags
   load_fixture :taggings
   load_fixture :projects
+  load_fixture :bounties
 end

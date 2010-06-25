@@ -15,6 +15,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :comments
   map.resources :tasks,
     :collection => {:wanted => :get, :unsolved => :get}
+  map.resources :bounties,
+    :collection => {:total_amount => :get, :add => :get},
+    :member     => {:pay => :get}
   map.dashboard 'dashboard', :controller => 'accounts', :action => 'show'
   map.resource :account, :only => [:show, :edit, :update, :destroy]
   map.resource :user_session, :only => [:new, :create, :destroy]

@@ -8,11 +8,10 @@ http://docs.komagata.org/4524 (JAPANESE)
 
 === UNIX, Mac OS X
 
-    $ gem install bundler
+    $ gem install bundler -v=0.9.25
     $ git clone http://github.com/komagata/help-me-hackers.git
     $ cd help-me-hackers
-    $ cp config/twitter_auth.example.yml config/twitter_auth.yml
-    $ bundle install --without production
+    $ bundle install vendor/bundle --without production
     $ rake app:set
     $ ruby script/server
 
