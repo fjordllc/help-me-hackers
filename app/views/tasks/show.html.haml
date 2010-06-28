@@ -5,7 +5,10 @@
   :javascript
     $(function(){
       $('.bounties .pay').click(function() {
-        $('.pay_dialog', this.parentNode).dialog({
+        var i = this.id.split('_')[1]
+        var paypal_form = $('#paypal_form_' + i)
+        var bounty_form = $('#edit_bounty_' + i)
+        $('#pay_dialog_' + i).dialog({
           title: '#{t('Bounty paying')}',
           modal: true,
           draggable: false,
@@ -13,10 +16,12 @@
           width: 500,
           buttons: {
             '#{t('Pay by Paypal')}': function() {
-              $(this).dialog('close')
+              paypal_form.submit()
             },
             '#{t('Payment was completed')}': function() {
-              $(this).dialog('close')
+              $.post('/bounties/' + i, bounty_form.serialize(), function(data) {
+                location.reload()
+              })
             }
           }
         })
@@ -120,14 +125,17 @@
             .icon= link_to image_tag(bounty.user.profile_image_url), user_path(bounty.user)
             .login= link_to bounty.user.login, user_path(bounty.user)
             .amount= number_to_currency bounty.amount
-            - if logged_in? and @task.solved?
-              .pay.button= t('Pay')
-              .pay_dialog{:style => 'display:none'}
+            - if logged_in? and @task.solved? and bounty.user.id == current_user.id
+              .pay.button{:id => "pay_#{bounty.id}"}= t('Pay')
+              %div{:id => "pay_dialog_#{bounty.id}", :style => 'display:none'}
                 .icon= link_to image_tag(@task.solver.profile_image_url), user_path(@task.solver)
                 %h2= t('Payment for name', :name => link_to(@task.solver.login, user_path(@task.solver)))
                 %label= t('Bounty')
                 .amount= number_to_currency bounty.amount
-                .paypal= render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :user => bounty.task.solver}
+                - bounty.pay = true
+                - form_for bounty do |f|
+                  = f.hidden_field :pay
+                = render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :bounty => bounty, :user => bounty.task.solver}
                 %p= t('Please push payment was completed button if payment is accepted by Paypal')
       - if logged_in?
         .add_bounty.button= t('Add Bounty')
