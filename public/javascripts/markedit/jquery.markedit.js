@@ -1125,10 +1125,11 @@
                     bgiframe: true,
                     modal: true,
                     autoOpen: true,
-                    width: 600,
+                    width: 400,
                     dialogClass: 'markedit-dialog',
                     title: config.title,
                     resizable: false,
+                    draggable: false,
                     buttons: {
                         'Insert': function() {
                             $(this).dialog('close');
