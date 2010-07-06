@@ -167,6 +167,20 @@ module ApplicationHelper
     end
   end
 
+  def user_label(user, options = {:size => :small, :to_user_page => true})
+    link = options[:to_user_page] ? user_path(user) : dashboard_path
+    size =
+      case options[:size]
+      when :small
+        '16x16'
+      when :middle
+        '32x32'
+      when :large
+        '48x48'
+      end
+    link_to image_tag(user.profile_image_url, :size => size, :style => 'vertical-align:middle') + user.login + '(' + user.comments.correct.size.to_s + ')', link
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]

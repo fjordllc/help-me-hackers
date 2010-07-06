@@ -57,7 +57,7 @@ dependencies:
   bundler: 
     group: 
     - :default
-    version: = 0.9.25
+    version: = 0.9.26
   hoptoad_notifier: 
     group: 
     - :default
@@ -84,7 +84,7 @@ specs:
 - bluecloth: 
     version: 2.0.7
 - bundler: 
-    version: 0.9.25
+    version: 0.9.26
 - ezcrypto: 
     version: 0.7.2
 - haml: 
@@ -111,7 +111,7 @@ specs:
     version: 2.3.12
 - yaml_waml: 
     version: 0.3.0
-hash: 0a7f31a3e6f21887e37730a6f500d020cfdb0a81
+hash: 4cef18dc07940e3b64d70c51f66a3c449858a595
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

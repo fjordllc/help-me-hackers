@@ -157,6 +157,7 @@ ja:
       project: 
         name: "プロジェクト名"
         description: "概要"
+        logo_image_url: "ロゴ画像URL"
         website_url: "WebサイトURL"
         repository_path: "リポジトリパス"
 
@@ -256,12 +257,14 @@ ja:
   Comment was successfully updated: "コメントを更新しました。"
   Comment was successfully deleted: "コメントを削除しました。"
   Comment was not deleted: "コメントを削除できませんでした。"
+  Comment is nothing: "コメントがありません。"
   Create Task in this project: "このプロジェクトにタスクを登録"
   Create Task: "タスク登録"
   Task was successfully created: "タスクを登録しました。"
   Task was successfully updated: "タスクを更新しました。"
   Task was successfully deleted: "タスクを削除しました。"
   Task was not deleted: "タスクを削除できませんでした。"
+  Task is nothing: "タスクがありません。"
   Create Project: "プロジェクト登録"
   Edit this task: このタスクを編集
   Delete this task: このタスクを削除
@@ -269,10 +272,12 @@ ja:
   Project was successfully updated: "プロジェクトを更新しました。"
   Project was successfully deleted: "プロジェクトを削除しました。"
   Project was not deleted: "プロジェクトを削除できませんでした。"
+  Project is nothing: "プロジェクトがありません。"
   Bounty was successfully created: 報酬を追加しました。
   Bounty was successfully updated: 報酬を更新しました。
   Bounty was successfully deleted: 報酬を削除しました。
   Bounty was not deleted: 報酬を削除できませんでした。
+  Bounty is nothing: "報酬がありません。"
   You have logged in successfully: "ログインしました。"
   This authentication request is no longer valid Please try again: "認証できませんでした。"
 

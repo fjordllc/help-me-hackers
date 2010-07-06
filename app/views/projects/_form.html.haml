@@ -1,5 +1,5 @@
 .section.post
-  - form_for(project) do |f|
+  - form_for project do |f|
     = f.error_messages
     %div.section
       = f.label :name
@@ -13,6 +13,11 @@
     %h3 プレビュー
     .wrapper
       .wmd-preview
+    %div.section
+      = f.label :logo_image_url
+      （オプション）
+      %br
+      = f.text_field :logo_image_url, :size => 60
     %div.section
       = f.label :website_url
       （オプション）

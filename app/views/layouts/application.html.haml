@@ -27,9 +27,7 @@
       .nav
         %ul
           - if logged_in?
-            %li
-              = link_to image_tag(current_user.profile_image_url, :size => '16x16', :style => 'vertical-align:middle')
-              = link_to "#{current_user.login}(#{current_user.voted_count})", dashboard_path
+            %li= user_label(current_user, :to_user_page => false)
             %li= link_to t('Account'), edit_account_path
             %li= link_to t('Logout'), logout_path
           - else

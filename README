@@ -8,7 +8,7 @@ http://docs.komagata.org/4524 (JAPANESE)
 
 === UNIX, Mac OS X
 
-    $ gem install bundler -v=0.9.25
+    $ gem install bundler -v=0.9.26
     $ git clone http://github.com/komagata/help-me-hackers.git
     $ cd help-me-hackers
     $ bundle install vendor/bundle --without production
