@@ -2615,3 +2615,13 @@ div#main div.task div.sub ul.bounties li.bounty div.amount {
 	border: 1px solid #DFDFDF;
 	line-height: 1.4;
 }
+
+
+
+
+div.ui-dialog label.error {
+	font-size: 13px;
+	font-weight: bold;
+	color: #f043ad;
+	margin-left: 0.5em;
+}
