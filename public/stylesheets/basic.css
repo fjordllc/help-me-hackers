@@ -2555,3 +2555,63 @@ div#sub div.banner {
 #main div.content div.section .please_login {
 	margin-top: 20px;
 }
+div#main div.task div.sub div.add_bounty {
+	background-color: #FFCC33;
+	margin-top: 5px;
+	text-align: center;
+	padding: 5px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+div#main div.task div.sub ul.bounties li.bounty {
+	display: block;
+	clear: both;
+	background-color: #EFEFE7;
+	padding: 5px;
+	margin-top: 5px;
+	border: 1px solid #DFDFDF;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+div#main div.task div.sub ul.bounties li.bounty div.icon {
+	display: block;
+	float: left;
+	height: 34px;
+	width: 34px;
+}
+div#main div.task div.sub ul.bounties li.bounty div.login {
+	display: block;
+	float: right;
+	width: 100px;
+}
+div#main div.task div.sub ul.bounties li.bounty div.login a {
+	font-size: 11px;
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: pre-wrap; /* CSS3 */
+	word-wrap: break-word; /* IE */
+	line-height: 1.2;
+	display: block;
+	float: right;
+	width: 102px;
+	padding-bottom: 5px;
+}
+div#main div.task div.sub ul.bounties li.bounty div.amount {
+	display: block;
+	float: right;
+	width: 100px;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	color: #ec189a;
+	background-color: #F5F4F4;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	border: 1px solid #DFDFDF;
+	line-height: 1.4;
+}

@@ -1,830 +1,287 @@
-<?xml version='1.0' encoding='utf-8' ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang='ja' xml:lang='ja'>
+<html lang="ja" xml:lang="ja">
   <head>
-    <title>TopController: index</title>
-    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />
-    <meta content='text/css' http-equiv='Content-Style-Type' />
-    <meta content='text/javascript' http-equiv='Content-Script-Type' />
-    <link href='/stylesheets/application.css' rel='stylesheet' type='text/css' />
-    <link href='/favicon.ico' rel='shortcut icon' />
+    <meta content="プログラミングタスクを共有・公開するサイト" name="description" />
+    <meta content="プログラム,プログラマー,オープンソース,タスク,仕事依頼" name="keywords" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="text/css" http-equiv="Content-Style-Type" />
+    <meta content="text/javascript" http-equiv="Content-Script-Type" />
+    <title>テスト24 - Help me, hackers!</title>
 
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link href="http://help-me-hackers/tasks.atom" rel="alternate" title="タスク - Help me, hackers!" type="application/atom+xml" />
+    <link href="http://help-me-hackers/tasks/wanted.atom" rel="alternate" title="WANTED! - Help me, hackers!" type="application/atom+xml" />
+    <link href="http://help-me-hackers/tasks/unsolved.atom" rel="alternate" title="未解決 - Help me, hackers!" type="application/atom+xml" />
     <link href="stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="stylesheets/basic.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/prototype.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/effects.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/dragdrop.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/controls.js?1270010017" type="text/javascript"></script>
-    <script src="/javascripts/application.js?1270010017" type="text/javascript"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/flick/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/jquery.markedit.css?1278400183" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1278401066" type="text/javascript"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/javascripts/jquery.validator.messages_ja.js?1278401066" type="text/javascript"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+        $(function(){
+          $('.bounties .pay').click(function() {
+            var i = this.id.split('_')[1]
+            var paypal_form = $('#paypal_form_' + i)
+            var bounty_form = $('#edit_bounty_' + i)
+            $('#pay_dialog_' + i).dialog({
+              title: '報奨金支払い',
+              modal: true,
+              draggable: false,
+              resizable: false,
+              width: 500,
+              buttons: {
+                'Paypalで支払う': function() {
+                  paypal_form.submit()
+                },
+                '支払い完了': function() {
+                  $.post('/bounties/' + i, bounty_form.serialize(), function(data) {
+                    location.reload()
+                  })
+                }
+              }
+            })
+          })
+        
+          $('.add_bounty').click(function() {
+            $('#new_bounty').dialog({
+              title: '報奨金を追加',
+              modal: true,
+              draggable: false,
+              resizable: false,
+              width: 500,
+              buttons: {
+                '追加': function() {
+                  if ($(this).valid()) $(this).submit()
+                }
+              },
+            }).submit(function() {
+              var f = $(this)
+              $.post('/bounties', $(this).serialize(), function(data) {
+                //var org = numerize($('.total_bounty .number').text())
+                //var add = parseInt($('#bounty_amount').val())
+                //$('.total_bounty .number').text(number_format(org + add))
+                //f.dialog('close')
+                location.reload()
+              })
+              return false
+            }).validate({
+              rules: {
+                'bounty[amount]': {
+                  required: true,
+                  min: 100
+                }
+              }
+            })
+          })
+        })
+      //]]>
+    </script>
   </head>
-  <body>
-    <div id='header'>
-      <h1><a href="/">Help me, hackers!</a></h1>
-      <div class='nav'>
-        <ul>
-          <li>
-            <a href="/tasks"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
-            <a href="/dashboard">machida(0)</a>
 
-          </li>
+  <body>
+    <div id="header">
+      <h1><a href="/">Help me, hackers!</a></h1>
+      <div class="nav">
+        <ul>
+          <li><a href="/dashboard"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" />machida(0)</a></li>
           <li><a href="/account/edit">アカウント</a></li>
+
           <li><a href="/logout">ログアウト</a></li>
         </ul>
       </div>
     </div>
-    <div class='tasks_index' id='wrapper'>
-      <div class='nav'>
-
+    <div class="tasks_show" id="wrapper">
+      <div class="nav">
         <ul>
           <li><a href="/dashboard">ダッシュボード</a></li>
-          <li><span class="current">タスク</span></li>
+
+          <li><a href="/tasks">タスク</a></li>
           <li><a href="/projects">プロジェクト</a></li>
           <li><a href="/users">ユーザー</a></li>
-          <li class='add_task'><a href="/tasks/new">タスク登録</a></li>
-
+          <li class="add_task"><a href="/tasks/new">タスク登録</a></li>
         </ul>
       </div>
-      <div id='main'>
-        <div id='flash'>
-        </div>
-        <div class='title'>
-          <h2>Tasks</h2>
-        </div>
+      <div id="main">
 
-        <div class='content'>
-          <div class='sort'>
-            <ul>
-              <li class='wanted'><a href="/tasks/wanted">WANTED!</a></li>
-              <li class='unsolved'><a href="/tasks/unsolved">未解決</a></li>
-            </ul>
+        <div id="flash">
+        </div>
+        <div class="task content">
+          <div class="main">
+            <div class="title">
+              <div class="good" onclick="$('#task_24_vote_form').toggle()">
+                <ul>
+                  <li class="count" id="task_24_good">0</li>
+
+                </ul>
+              </div>
+              <h2>テスト24</h2>
+              <form action="/votes" class="new_vote" id="task_24_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="bfz5E2Os1EM8+k08s5qORozasABRw1uOdGgWfw3pSl0=" /></div>
+                <div class="text">
+                  <input id="task_24_voteable_id" name="vote[voteable_id]" type="hidden" value="24" />
+                  <input id="task_24_voteable_type" name="vote[voteable_type]" type="hidden" value="Task" />
+                  <input id="task_24_comment" maxlength="140" name="vote[comment]" size="140" type="text" value="Good! RT @komagata_fjord テスト24 http://bit.ly/btsAX9 #hmhs" />
+
+                </div>
+                <div class="button"><input src="/images/good_button.gif?1273832436" type="image" /></div>
+                <p class="center">Retweetをすることで、このタスクにGood!ポイントが加算されます</p>
+              </form>
+            </div>
+            <dl class="information">
+              <dd class="licence"><a href="/about/license#bsd">BSD LICENSE</a></dd>
+              <dt class="licence">ライセンス</dt>
+
+            </dl>
+            <div class="description"><p>テスト24の内容</p></div>
           </div>
-          <ul class='tasks tasks_list'>
+          <div class="sub">
+            <div class="information">
+              <dl>
+                <dt class="language">プログラミング言語</dt>
+                <dd class="language"><a href="/tasks/language/javascript">JavaScript</a></dd>
 
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/24">テスト24</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト24の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
+                <dt class="bounty">報奨金</dt>
+                <dd class="bounty">
+                  <span>合計</span>
+                  <span class="total_bounty">
+                    <span class="number">2,000</span>円
+                  </span>
+                </dd>
+              </dl>
 
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
+              <ul class="retweet">
+                <li class="count">0</li>
+                <li class="label">Retweet</li>
+              </ul>
+              <ul class="comment">
+                <li class="count">0</li>
+                <li class="label">コメント</li>
 
-                  <li class='label'>retweet</li>
+              </ul>
+              <div class="person">
+                <ul>
+                  <li class="icon"><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
+                  <li class="name"><a href="/komagata_fjord">komagata_fjord</a></li>
                 </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
               </div>
-            </li>
+              <ul class="bounties">
 
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/23">テスト23</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト23の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
+                <li class="bounty" id="bounty_5">
+                  <div class="icon"><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></div>
+                  <div class="login"><a href="/machida">machida</a></div>
+                  <div class="amount">2,000円</div>
+                </li>
+                <li class="bounty" id="bounty_5">
+                  <div class="icon"><a href="/machida"><img alt="14424182_2338889845_normal" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" /></a></div>
+                  <div class="login"><a href="/machida">machida</a></div>
+                  <div class="amount">2,000円</div>
+                </li>
+              </ul>
+              <div class="add_bounty button">報奨金を追加</div>
 
+              <form action="/bounties" class="new_bounty" id="new_bounty" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="bfz5E2Os1EM8+k08s5qORozasABRw1uOdGgWfw3pSl0=" /></div>
+                <input id="bounty_task_id" name="bounty[task_id]" type="hidden" value="24" />
+                <label for="bounty_amount">報奨金</label>
+                <input id="bounty_amount" name="bounty[amount]" size="20" type="text" />
+              </form>
+              <div class="created_at">18分前</div>
+            </div>
+          </div>
+
+          
+          <div class="section post">
+            <h3>コメントする</h3>
+            <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span>
+            <span>（コメントはTwitterにも飛びます）</span>
+            <form action="/comments" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="bfz5E2Os1EM8+k08s5qORozasABRw1uOdGgWfw3pSl0=" /></div>
+            
+              <input id="comment_task_id" name="comment[task_id]" type="hidden" value="24" />
+
+              <textarea cols="70" id="comment_description" name="comment[description]" rows="10"></textarea>
+              <h4>プレビュー</h4>
+              <div class="wrapper">
+                <div class="preview"></div>
               </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/22">テスト22</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト22の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/21">テスト21</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト21の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/20">テスト20</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト20の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/19">テスト19</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト19の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/18">テスト18</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト18の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/17">テスト17</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト17の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/16">テスト16</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト16の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/15">テスト15</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト15の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/14">テスト14</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト14の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/13">テスト13</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト13の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/12">テスト12</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト12の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/11">テスト11</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト11の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/10">テスト10</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト10の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/9">テスト9</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト9の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/8">テスト8</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト8の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/7">テスト7</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト7の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/6">テスト6</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト6の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-            <li class='task content free'>
-              <div class='main'>
-                <h3 class='title'><a href="/tasks/5">テスト5</a></h3>
-                <div class='statement'>
-                  <div class='description'>テスト5の内容</div>
-                  <ul class='tags'>
-                  </ul>
-                </div>
-
-              </div>
-              <div class='sub information'>
-                <dl>
-                  <dt class='language'>プログラム言語</dt>
-                  <dd class='language'><a href="/tasks/tag/javascript">JavaScript</a></dd>
-                </dl>
-                <ul class='retweet'>
-                  <li class='count'>0</li>
-
-                  <li class='label'>retweet</li>
-                </ul>
-                <ul class='comment'>
-                  <li class='count'>0</li>
-                  <li class='label'>Comment</li>
-                </ul>
-                <div class='person'>
-
-                  <ul>
-                    <li class='icon'><a href="/komagata_fjord"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></a></li>
-                    <li class='name'><a href="/komagata_fjord">komagata_fjord</a></li>
-                  </ul>
-                </div>
-                <div class='created_at'>10分前</div>
-              </div>
-            </li>
-
-          </ul>
-          <div class="pagination"><span class="disabled prev_page">&laquo; Previous</span> <span class="current">1</span> <a href="/tasks?page=2" rel="next">2</a> <a href="/tasks?page=2" class="next_page" rel="next">Next &raquo;</a></div>
+              <p>
+                <input id="comment_submit" name="commit" type="submit" value="利用規約に同意してコメントする" />
+                <a href="/about/terms" target="_blank">利用規約</a>
+
+              </p>
+            </form>
+          </div>
         </div>
       </div>
-      <div id='sub'>
-
-        <div class='section'>
+      <div id="sub">
+        <div class="section">
           <h3>言語別タスク数</h3>
-          <ul class='tasks count_by_language'>
-            <li class='language'><a href="/tasks/language/javascript">JavaScript (21)</a></li>
-            <li class='language'><a href="/tasks/language/ruby">Ruby (2)</a></li>
-            <li class='language'><a href="/tasks/language/php">PHP (1)</a></li>
-          </ul>
 
-          <div class='to_archive'></div>
+          <ul class="tasks count_by_language">
+            <li class="language"><a href="/tasks/language/javascript">JavaScript (21)</a></li>
+            <li class="language"><a href="/tasks/language/ruby">Ruby (2)</a></li>
+            <li class="language"><a href="/tasks/language/php">PHP (1)</a></li>
+          </ul>
+          <div class="to_archive"></div>
         </div>
-        <div class='section hint'>
+
+        <div class="section hint">
           <h3>ヒント</h3>
           <ul>
             <li>
               <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
             </li>
-
             <li>
               <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
+
               <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
             </li>
             <li>
               <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
             </li>
-
             <li>
               <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
+
             </li>
             <li>
               <p>ジャンクフード食系男子募集中！</p>
             </li>
             <li>
-
               <p>解決してもらうコツはプログラマーにとって面白いタスク設定にすること。前提とゴールは明確に。</p>
             </li>
           </ul>
-          <div class='to_archive'>
+
+          <div class="to_archive">
             <p><a href="/about/hint">もっと詳しく</a></p>
           </div>
         </div>
       </div>
-
     </div>
-    <div id='footer'>
-      <ul class='links'>
-        <li><a href="/about">使い方</a></li>
-        <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
-        <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
-        <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
+    <div id="footer">
+      <ul class="links">
 
+        <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
+        <li><a href="http://fjord.jp/tag/help-me-hackers-how-to-use">使い方</a></li>
+        <li><a href="http://fjord.jp/tag/help-me-hackers-hint">ヒント</a></li>
+        <li><a href="http://fjord.jp/tag/code-dj">コードDJ</a></li>
+        <li><a href="http://fjord.jp/tag/help-me-hackers-update">更新情報</a></li>
+        <li><a href="/projects/1">開発予定</a></li>
+
+        <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
         <li><a href="http://fjord.jp/">運営</a></li>
         <li><a href="/about/terms">利用規約</a></li>
         <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
       </ul>
-      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100501000000</p>
+      <p class="copyright">Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100501000000</p>
 
     </div>
+    <script src="/javascripts/markedit/showdown.js?1278400183" type="text/javascript"></script>
+    <script src="/javascripts/markedit/markedit.lang.ja.js?1278400183" type="text/javascript"></script>
+    <script src="/javascripts/markedit/jquery.markedit.js?1278400183" type="text/javascript"></script>
+    <script src="/javascripts/mk.js?1278400183" type="text/javascript"></script>
   </body>
 </html>
