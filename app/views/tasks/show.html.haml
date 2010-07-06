@@ -161,7 +161,7 @@
         = f.text_area :description, :size => '70x10'
         %h4 プレビュー
         .wrapper
-          .wmd-preview
+          .preview
         %p
           = f.submit '利用規約に同意してコメントする'
           - if logged_in? and @task.user.id == current_user.id and @task.unsolved?
@@ -170,4 +170,7 @@
     - else
       .please_login== コメントするには#{link_to 'Twitterでログイン', login_path}してください。
 - content_for :footer_script do
-  = javascript_include_tag 'wmd/wmd'
+  = javascript_include_tag 'markedit/showdown'
+  = javascript_include_tag 'markedit/markedit.lang.ja'
+  = javascript_include_tag 'markedit/jquery.markedit'
+  = javascript_include_tag 'mk'

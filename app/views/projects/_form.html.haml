@@ -12,7 +12,7 @@
       = f.text_area :description, :size => '60x5'
     %h3 プレビュー
     .wrapper
-      .wmd-preview
+      .preview
     %div.section
       = f.label :logo_image_url
       （オプション）
@@ -31,4 +31,7 @@
     %div.section
       = f.submit '送信'
 - content_for :footer_script do
-  = javascript_include_tag 'wmd/wmd'
+  = javascript_include_tag 'markedit/showdown'
+  = javascript_include_tag 'markedit/markedit.lang.ja'
+  = javascript_include_tag 'markedit/jquery.markedit'
+  = javascript_include_tag 'mk'
