@@ -4,59 +4,63 @@
   = javascript_include_tag 'jquery.validator.messages_ja'
   :javascript
     $(function(){
-      $('.bounties .pay').click(function() {
-        var i = this.id.split('_')[1]
-        var paypal_form = $('#paypal_form_' + i)
-        var bounty_form = $('#edit_bounty_' + i)
-        $('#pay_dialog_' + i).dialog({
-          title: '#{t('Bounty paying')}',
-          modal: true,
-          draggable: false,
-          resizable: false,
-          width: 500,
-          buttons: {
-            '#{t('Pay by Paypal')}': function() {
-              paypal_form.submit()
-            },
-            '#{t('Payment was completed')}': function() {
-              $.post('/bounties/' + i, bounty_form.serialize(), function(data) {
-                location.reload()
-              })
-            }
+      $('.pay_dialog').dialog({
+        autoOpen: false,
+        title: '#{t('Bounty paying')}',
+        modal: true,
+        draggable: false,
+        resizable: false,
+        width: 500,
+        buttons: {
+          '#{t('Pay by Paypal')}': function() {
+          },
+          '#{t('Payment was completed')}': function() {
+            var i = $(this).attr('id').split('_')[1]
+            $.post('/bounties/' + i, $('#payed_form' + i).serialize(), function(data) {
+              location.reload()
+            })
           }
+        }
+      })
+
+      $('.bounties .pay').click(function() {
+        var i = $(this).attr('id').split('_')[1]
+        $('#pay_dialog_' + i).dialog('open')
+      })
+
+      $('#new_bounty').dialog({
+        autoOpen: false,
+        title: '#{t('Add Bounty')}',
+        modal: true,
+        draggable: false,
+        resizable: false,
+        width: 500,
+        buttons: {
+          '#{t('Add')}': function() {
+            if ($(this).valid()) $(this).submit()
+          }
+        },
+      }).submit(function() {
+        var f = $(this)
+        $.post('/bounties', $(this).serialize(), function(data) {
+          //var org = numerize($('.total_bounty .number').text())
+          //var add = parseInt($('#bounty_amount').val())
+          //$('.total_bounty .number').text(number_format(org + add))
+          //f.dialog('close')
+          location.reload()
         })
+        return false
+      }).validate({
+        rules: {
+          'bounty[amount]': {
+            required: true,
+            min: 100
+          }
+        }
       })
 
       $('.add_bounty').click(function() {
-        $('#new_bounty').dialog({
-          title: '#{t('Add Bounty')}',
-          modal: true,
-          draggable: false,
-          resizable: false,
-          width: 500,
-          buttons: {
-            '#{t('Add')}': function() {
-              if ($(this).valid()) $(this).submit()
-            }
-          },
-        }).submit(function() {
-          var f = $(this)
-          $.post('/bounties', $(this).serialize(), function(data) {
-            //var org = numerize($('.total_bounty .number').text())
-            //var add = parseInt($('#bounty_amount').val())
-            //$('.total_bounty .number').text(number_format(org + add))
-            //f.dialog('close')
-            location.reload()
-          })
-          return false
-        }).validate({
-          rules: {
-            'bounty[amount]': {
-              required: true,
-              min: 100
-            }
-          }
-        })
+        $('#new_bounty').dialog('open')
       })
     })
 %div{task_attrs(@task)}
@@ -127,19 +131,19 @@
             .amount= number_to_currency bounty.amount
             - if logged_in? and @task.solved? and bounty.user.id == current_user.id
               .pay.button{:id => "pay_#{bounty.id}"}= t('Pay')
-              %div{:id => "pay_dialog_#{bounty.id}", :style => 'display:none'}
+              %div{:id => "pay_dialog_#{bounty.id}", :class => 'pay_dialog'}
                 .icon= link_to image_tag(@task.solver.profile_image_url), user_path(@task.solver)
                 %h2= t('Payment for name', :name => link_to(@task.solver.login, user_path(@task.solver)))
                 %label= t('Bounty')
                 .amount= number_to_currency bounty.amount
                 - bounty.pay = true
-                - form_for bounty do |f|
+                - form_for bounty, :html => {:id => "payed_form_#{bounty.id}"} do |f|
                   = f.hidden_field :pay
                 = render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :bounty => bounty, :user => bounty.task.solver}
                 %p= t('Please push payment was completed button if payment is accepted by Paypal')
       - if logged_in?
         .add_bounty.button= t('Add Bounty')
-        - form_for @bounty, :html => {:style => 'display:none'} do |f|
+        - form_for @bounty do |f|
           = f.hidden_field :task_id
           = f.label :amount
           = f.text_field :amount, :size => 20

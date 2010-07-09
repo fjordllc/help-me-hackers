@@ -10,6 +10,10 @@ ActionController::Routing::Routes.draw do |map|
   map.users_by_state 'users/state/:state',
     :controller => 'users', :action => 'index'
 
+  map.namespace :api do |api|
+    api.resources :bounties, :except => [:new, :edit]
+  end
+
   map.resources :projects
   map.resources :votes
   map.resources :comments
