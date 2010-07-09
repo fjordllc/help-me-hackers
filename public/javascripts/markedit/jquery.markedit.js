@@ -390,7 +390,7 @@
 
         // Locate textarea
         var textarea = MarkEdit.getTextArea(this);
-        textarea.focus();
+        //textarea.focus();
 
         // Get IE selection (of course IE would take 5x the amount of code)
         var r;
