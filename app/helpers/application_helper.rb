@@ -123,6 +123,14 @@ module ApplicationHelper
     option
   end
 
+  def bounty_attrs(object)
+    if object.pay
+      {:id => "bounty_#{object.id}", :class => 'payed'}
+    else
+      {:id => "bounty_#{object.id}"}
+    end
+  end
+
   def strip_tags(str)
     ActionView::Base.full_sanitizer.sanitize(str)
   end
