@@ -4,23 +4,24 @@
     .statement
       - if object.solved?
         .resolver
-          %h4 解決者
+          %h4= t('Solver')
           %ul
             %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
             %li.name=link_to object.solver.login, user_path(object.solver)
       .description~ truncate(strip_tags(markdown object.description), :length => 150)
-      %ul.tags
-        - object.tags.each do |tag|
-          %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
+      - if object.tags.present?
+        %ul.tags
+          - object.tags.each do |tag|
+            %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
   .sub.information
     %dl
-      %dt.language プログラム言語
+      %dt.language= t('Programming language')
       %dd.language== #{link_to t("label.language.#{object.language.name}"), tasks_by_language_path(:language => object.language.name)}
       - if object.project
-        %dt.project プロジェクト
+        %dt.project= t('Project')
         %dd.project=link_to h(object.project.name), object.project
       - if object.total_bounty > 0
-        %dt.bounty 報奨金
+        %dt.bounty= t('Bounty')
         %dd.bounty
           %span= number_to_currency object.total_bounty
     %ul.retweet

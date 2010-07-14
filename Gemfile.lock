@@ -42,6 +42,10 @@ dependencies:
     group: 
     - :default
     version: = 1.2.0
+  locale_rails: 
+    group: 
+    - :default
+    version: = 2.0.6
   bitly: 
     group: 
     - :default
@@ -62,6 +66,10 @@ dependencies:
     group: 
     - :default
     version: = 2.2.2
+  locale: 
+    group: 
+    - :default
+    version: = 2.0.5
 specs: 
 - rake: 
     version: 0.8.7
@@ -78,7 +86,7 @@ specs:
 - activeresource: 
     version: 2.3.5
 - crack: 
-    version: 0.1.7
+    version: 0.1.8
 - bitly: 
     version: 0.4.0
 - bluecloth: 
@@ -93,6 +101,11 @@ specs:
     version: 2.2.2
 - json: 
     version: 1.4.3
+- locale: 
+    version: 2.0.5
+- locale_rails: 
+    version: 2.0.6
+    source: 0
 - ruby-hmac: 
     version: 0.4.0
 - oauth: 
@@ -111,7 +124,13 @@ specs:
     version: 2.3.12
 - yaml_waml: 
     version: 0.3.0
-hash: 4cef18dc07940e3b64d70c51f66a3c449858a595
+hash: 8fd55700ddf36b7d074ef3d32886292c08e37133
 sources: 
+- Git: 
+    name: locale_rails
+    uri: git://github.com/mutoh/locale_rails.git
+    version: 2.0.6
+    git: git://github.com/mutoh/locale_rails.git
+    ref: 13a096f20b4be16ae45f4ebee477b8ef49dc71dd
 - Rubygems: 
     uri: http://gemcutter.org
