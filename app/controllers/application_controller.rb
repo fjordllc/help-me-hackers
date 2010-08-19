@@ -30,25 +30,3 @@ class ApplicationController < ActionController::Base
     end
   end
 end
-
-unless ActionView::Helpers::InstanceTag.instance_methods.include?('to_label_tag_without_i18n')
-  ActionView::Helpers::InstanceTag.class_eval do
-    def to_label_tag_with_i18n(text = nil, options = {})
-      options = options.stringify_keys
-      tag_value = options.delete("value")
-      name_and_id = options.dup
-      name_and_id["id"] = name_and_id["for"]
-      add_default_name_and_id_for_value(tag_value, name_and_id)
-      options.delete("index")
-      options["for"] ||= name_and_id["id"]
-      if text.blank?
-        content = object.class.respond_to?(:human_attribute_name) ? object.class.human_attribute_name(method_name) : method_name.humanize
-      else
-        content = text.to_s
-      end
-      #content = (text.blank? ? nil : text.to_s) || object_name.classify.constantize.human_attribute_name(method_name)
-      label_tag(name_and_id["id"], content, options)
-    end
-    alias_method_chain :to_label_tag, :i18n
-  end
-end
