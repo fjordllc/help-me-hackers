@@ -1,22 +1,26 @@
-= HELP ME, HACKERS!
+HELP ME, HACKERS!
+-----------------
 
 http://help-me-hackers.com/
 
-== INSTALLATION
+INSTALLATION
+============
 
 http://docs.komagata.org/4524 (JAPANESE)
 
-=== UNIX, Mac OS X
+UNIX, Mac OS X
+==============
 
-    $ gem install bundler -v=0.9.26
+    $ gem install bundler --pre
     $ git clone http://github.com/komagata/help-me-hackers.git
     $ cd help-me-hackers
-    $ bundle install vendor/bundle --without production
+    $ bundle install --without production
     $ rake app:set
     $ ruby script/server
 
 Access to http://localhost:3000/
 
-=== Windows
+Windows
+=======
 
     > COPY vendor\win32\sqlite3\sqlite3.dll c:\WINDOWS\system32\

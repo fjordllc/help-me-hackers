@@ -52,7 +52,7 @@ PLATFORMS
 DEPENDENCIES
   bitly (= 0.4.0)
   bluecloth (= 2.0.7)
-  bundler (= 1.0.0.rc.5)
+  bundler (= 1.0.0.rc.6)
   ezcrypto (= 0.7.2)
   haml (= 2.2.22)
   hoptoad_notifier (= 2.2.2)
