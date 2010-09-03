@@ -117,12 +117,12 @@
       .created_at== #{time_ago_in_words @task.created_at}前
   - unless @comments.empty?
     .section
-      %h3 コメント
+      %h3= t('Comments')
       %ul.comments
         = render :partial => 'comment', :collection => @comments
   = will_paginate(@comments)
   .section.post
-    %h3 コメントする
+    %h3= t('Comment')
     %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
     %span （コメントはTwitterにも飛びます）
     - if logged_in?
@@ -130,7 +130,7 @@
         = f.error_messages
         = f.hidden_field :task_id
         = f.text_area :description, :size => '70x10'
-        %h4 プレビュー
+        %h4= t('Preview')
         .wrapper
           .preview
         %p

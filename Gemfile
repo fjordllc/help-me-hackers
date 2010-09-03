@@ -1,6 +1,5 @@
 source :gemcutter
 
-gem 'bundler', '1.0.0.rc.6'
 gem 'rails', '2.3.8'
 gem 'locale', '2.0.5'
 gem 'locale_rails', '2.0.6', :git => 'git://github.com/mutoh/locale_rails.git'
