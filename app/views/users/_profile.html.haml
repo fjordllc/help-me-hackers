@@ -1,38 +1,42 @@
-.performance
-  = render :partial => 'user', :locals => {:user => user}
-.profile
-  %h3 プロフィール
-  - if user.description.present?
-    %h4.description= t('activerecord.attributes.user.profile')
-    %p.description=hbr user.description
-  %dl.user
-    %dt.login= t('activerecord.attributes.user.login')
-    %dd.login=link_to user.login, user_path(user)
-    - if user.state
-      %dt.state= t('activerecord.attributes.user.state')
-      %dd.state= t("label.state.#{user.state.name}")
-    - if user.company.present?
-      %dt.company= t('activerecord.attributes.user.company')
-      %dd.company=h user.company
-    - if user.language
-      %dt.favorite_language= t('activerecord.attributes.user.language')
-      %dd.favorite_language= t("label.language.#{user.language.name}")
-    - if user.editor
-      %dt.favorite_editor= t('activerecord.attributes.user.editor')
-      %dd.favorite_editor= t("label.editor.#{user.editor.name}")
-  .accounts
-    - if user.url.present?
-      %h3=t('activerecord.attributes.user.url') 
-      %p.url=link_to h(user.url), h(user.url), :title => h(user.url), :target => '_blank'
-    %h3=t('activerecord.attributes.user.twitter_account')
-    %p.twitter_account=link_to user.login, twitter_url(user.login), :title => user.login, :target => '_blank'
-    - if user.github_account.present?
-      %h3=t('activerecord.attributes.user.github_account')
-      %p.github_account=link_to github_url(user.github_account), github_url(user.github_account), :title => github_url(user.github_account), :target => '_blank'
-    - if user.bitbucket_account.present?
-      %h3=t('activerecord.attributes.user.bitbucket_account')
-      %p.bitbucket_account=link_to bitbucket_url(user.bitbucket_account), bitbucket_url(user.bitbucket_account), :title => bitbucket_url(user.bitbucket_account), :target => '_blank'
+.main
+  %h2.title== #{@user.login}のプロフィール
+  .state
+  .description
+    - if user.description.present?
+      %p.description=hbr user.description
+    %dl.data
+      %dt.login= t('activerecord.attributes.user.login')
+      %dd.login=link_to user.login, user_path(user)
+      - if user.state
+        %dt.state= t('activerecord.attributes.user.state')
+        %dd.state= t("label.state.#{user.state.name}")
+      - if user.company.present?
+        %dt.company= t('activerecord.attributes.user.company')
+        %dd.company=h user.company
+      - if user.language
+        %dt.language= t('activerecord.attributes.user.language')
+        %dd.language= t("label.language.#{user.language.name}")
+      - if user.editor
+        %dt.editor= t('activerecord.attributes.user.editor')
+        %dd.editor= t("label.editor.#{user.editor.name}")
+
   - if user.ssh_public_key.present?
-    .ssh_public_key
-      %h4=t('activerecord.attributes.user.ssh_public_key')
-      %p.ssh_public_key=h user.ssh_public_key
+    %dl.ssh_public_key
+      %dt=t('activerecord.attributes.user.ssh_public_key')
+      %dd.ssh_public_key=h user.ssh_public_key
+
+  %dl.links
+    %dt リンク
+    %dd.clearfix
+      %ul
+        - if user.url.present?
+          %li.website.url=link_to h('website'), h(user.url), :title => h(user.url), :target => '_blank'
+        %li.twitter.twitter_account=link_to 'twitter', twitter_url(user.login), :title => user.login, :target => '_blank'
+        - if user.github_account.present?
+          %li.github.github_account=link_to 'github', github_url(user.github_account), :title => github_url(user.github_account), :target => '_blank'
+        - if user.bitbucket_account.present?
+          %li.bitbucket_account=link_to 'bitbucket', bitbucket_url(user.bitbucket_account), :title => bitbucket_url(user.bitbucket_account), :target => '_blank'
+        %li.facebook  <a href="">facebook</a>
+
+.sub.profile
+  = render :partial => 'user', :locals => {:user => user}

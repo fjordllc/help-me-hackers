@@ -24,24 +24,30 @@
       = header_script
   %body
     #header
-      %h1= link_to t('application.title'), root_path
-      .nav
-        %ul
+      .wrap
+        %h1= link_to t('application.title'), root_path
+        %ul.account
           - if logged_in?
             %li= user_label(current_user, :to_user_page => false)
             %li= link_to t('Account'), edit_account_path
             %li= link_to t('Logout'), logout_path
           - else
             %li= link_to t('Login by Twitter'), login_path
+      .navs
+        .tab
+          %ul.wrap
+            - if logged_in?
+              %li= link_to_unless_current_with_span t('Dashboard'), dashboard_path
+            %li= link_to_unless_current_with_span t('Tasks'), tasks_path
+            %li= link_to_unless_current_with_span t('Projects'), projects_path
+            %li= link_to_unless_current_with_span t('Users'), users_path
+            %li.add_task= link_to t('Create Task'), new_task_path
+      .hierarchy
+        %ol.bread_crumbs.wrap
+          %li= 'ああああああああああああああああ'
     #wrapper{:class => "#{controller_name}_#{action_name}"}
-      .nav
-        %ul
-          - if logged_in?
-            %li= link_to_unless_current_with_span t('Dashboard'), dashboard_path
-          %li= link_to_unless_current_with_span t('Tasks'), tasks_path
-          %li= link_to_unless_current_with_span t('Projects'), projects_path
-          %li= link_to_unless_current_with_span t('Users'), users_path
-          %li.add_task= link_to t('Create Task'), new_task_path
+      - if controller_name == 'top'
+        .eye_catch
       #main
         #flash
           - unless flash.empty?
@@ -58,20 +64,23 @@
         - else
           = render :partial => 'shared/sub'
     #footer
-      %ul.links
-        %li= link_to 'ブログ', 'http://fjord.jp/tag/help-me-hackers'
-        %li= link_to '使い方', 'http://fjord.jp/tag/help-me-hackers-how-to-use'
-        %li= link_to 'ヒント', 'http://fjord.jp/tag/help-me-hackers-hint'
-        %li= link_to 'コードDJ', 'http://fjord.jp/tag/code-dj'
-        %li= link_to '更新情報', 'http://fjord.jp/tag/help-me-hackers-update'
-        %li= link_to '開発予定', project_path(1)
-        %li= link_to '開発生放送（平日18:30〜19:00）', 'http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B'
-        %li= link_to '運営', 'http://fjord.jp/'
-        %li= link_to '利用規約', about_terms_path
-        %li= link_to 'お問い合わせ', 'http://fjord.jp/inquiry'
-      %p.copyright== Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}. Created by #{link_to '@machida', 'http://twitter.com/machida'} and #{link_to '@komagata', 'http://twitter.com/komagata'}.<br />Help me, hackers! Version #{version}
-    - if Rails.env.production?
-      = render :partial => 'shared/google_analytics'
-    - footer_script = yield(:footer_script)
-    - if footer_script
-      = footer_script
+      .wrap
+        .version
+          Help me, hackers! Version #{version}
+        %ul.links
+          %li= link_to 'ブログ', 'http://fjord.jp/tag/help-me-hackers'
+          %li= link_to '使い方', 'http://fjord.jp/tag/help-me-hackers-how-to-use'
+          %li= link_to 'ヒント', 'http://fjord.jp/tag/help-me-hackers-hint'
+          %li= link_to 'コードDJ', 'http://fjord.jp/tag/code-dj'
+          %li= link_to '更新情報', 'http://fjord.jp/tag/help-me-hackers-update'
+          %li= link_to '開発予定', project_path(1)
+          %li= link_to '開発生放送（平日18:30〜19:00）', 'http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B'
+          %li= link_to '運営', 'http://fjord.jp/'
+          %li= link_to '利用規約', about_terms_path
+          %li= link_to 'お問い合わせ', 'http://fjord.jp/inquiry'
+        %p.copyright== Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}. Created by #{link_to '@machida', 'http://twitter.com/machida'} and #{link_to '@komagata', 'http://twitter.com/komagata'}.<br />Help me, hackers! Version #{version}
+      - if Rails.env.production?
+        = render :partial => 'shared/google_analytics'
+      - footer_script = yield(:footer_script)
+      - if footer_script
+        = footer_script

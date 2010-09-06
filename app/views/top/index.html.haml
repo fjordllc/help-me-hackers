@@ -1,8 +1,4 @@
-.title
-  %h2= t('Top page')
-.binding=link_to t('How to use Help me hackers'), '/about'
-.content
-  %ul.tasks.tasks_list
-    = render :partial => 'tasks/object', :collection => @tasks
-  - if Task.count > TopController::TASKS_PER_PAGE
-    .pager=link_to t('More'), tasks_path(:page => 2)
+%ul.tasks.tasks_list
+  = render :partial => 'tasks/object', :collection => @tasks
+- if Task.count > TopController::TASKS_PER_PAGE
+  .pager=link_to t('More'), tasks_path(:page => 2)

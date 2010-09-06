@@ -1,7 +1,12 @@
-%li{task_attrs(object)}
-  .main
-    %h3.title= link_to h(object.title), object
-    .statement
+%li.clearfix{task_attrs(object)}
+  .content
+    .main
+      %h3.title= link_to h(object.title), object
+      .state
+      - if object.project
+        .project
+          %a.project.clearfix{:href => project_path(object.project)}
+            %span.name= object.project.name
       - if object.solved?
         .resolver
           %h4= t('Solver')
@@ -12,26 +17,29 @@
       - if object.tags.present?
         %ul.tags
           - object.tags.each do |tag|
-            %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
-  .sub.information
-    %dl
-      %dt.language= t('Programming language')
-      %dd.language== #{link_to t("label.language.#{object.language.name}"), tasks_by_language_path(:language => object.language.name)}
-      - if object.project
-        %dt.project= t('Project')
-        %dd.project=link_to h(object.project.name), object.project
+            %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name), :class => 'button'
+    .sub
       - if object.total_bounty > 0
-        %dt.bounty= t('Bounty')
-        %dd.bounty
-          %span= number_to_currency object.total_bounty
-    %ul.retweet
-      %li.count= object.votes.size
-      %li.label retweet
-    %ul.comment
-      %li.count= object.comments.size
-      %li.label Comment
-    .person
-      %ul
-        %li.icon=link_to image_tag(object.user.profile_image_url), user_path(object.user)
-        %li.name=link_to object.user.login, user_path(object.user)
-    .created_at== #{time_ago_in_words object.created_at}前
+        %dl.bounty
+          %dt= t('Bounty')
+          %dd
+            %span= number_to_currency object.total_bounty
+      .counts
+        %ul.tweets
+          %li.count= object.votes.size
+          %li.label retweet
+        %ul.comments
+          %li.count= object.comments.size
+          %li.label Comment
+      %dl.language
+        %dt= t('Programming language')
+        %dd== #{link_to t("label.language.#{object.language.name}"), tasks_by_language_path(:language => object.language.name), :class => 'sub_button'}
+      %dl.person
+        %dt タスク登録者
+        %dd
+          %a{:href => user_path(object.user)}
+            %span.icon= image_tag(object.user.profile_image_url)
+            %span.name= object.user.login
+        %dt タスク登録日時
+        %dd.created_at== #{time_ago_in_words object.created_at}前
+      

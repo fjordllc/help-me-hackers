@@ -39,8 +39,10 @@
   .main
     .title
       %div{good_attrs(@task)}
-        %ul
-          %li.count{:id => "task_#{@task.id}_good"}= @task.votes.size
+        %dl
+          %dt
+            %span= 'tweet'
+          %dd.count{:id => "task_#{@task.id}_good"}= @task.votes.size
       %h2= @task.title
       - form_for @task.votes.new(:comment => good_task_retweet(@task)), :html => {:id => "task_#{@task.id}_vote_form", :style => 'display:none'} do |f|
         - if logged_in?
@@ -55,9 +57,19 @@
           %p.center Retweetをすることで、このタスクにGood!ポイントが加算されます
         - else
           .please_login== Retweetするには#{link_to 'Twitterでログイン', login_path}してください。
-    %dl.information
-      %dd.licence=link_to t("label.license.#{@task.license.name}"), "#{about_license_path}##{@task.license.name}"
-      %dt.licence= t('activerecord.attributes.task.license')
+    .state
+    - if @task.project
+      .project
+        %a.project.clearfix{:href => project_path(@task.project)}
+          %span.name= @task.project.name
+    .information
+      %dl.license
+        %dt= t('activerecord.attributes.task.license')
+        %dd=link_to t("label.license.#{@task.license.name}"), "#{about_license_path}##{@task.license.name}", :class => 'button'
+        %dt.language= t('Programming language')
+        %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_language_path(:language => @task.language.name), :class => 'button'
+        %dt= 'タスク登録日時'
+        %dd.created_at== #{time_ago_in_words @task.created_at}前
     .description~markdown @task.description
     - if @task.source_url.present?
       .source_url
@@ -66,82 +78,79 @@
     - unless @task.tags.empty?
       %ul.tags
         - @task.tags.each do |tag|
-          %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name)
+          %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name), :class => 'button'
     - if logged_in? and @task.user.id == current_user.id
       %ul.loggedin
-        %li.edit= link_to t('Edit this task'), edit_task_path(@task)
-        %li.delete= link_to t('Delete this task'), @task, :confirm => t('Are you sure'), :method => :delete
-  .sub
-    .information
-      %dl
-        %dt.language= t('Programming language')
-        %dd.language=link_to t("label.language.#{@task.language.name}"), tasks_by_language_path(:language => @task.language.name)
-        - if @task.project
-          %dt.project= t('Project')
-          %dd.project=link_to h(@task.project.name), @task.project
-        - if @task.total_bounty > 0
-          %dt.bounty= t('Total bounty')
-          %dd.bounty
-            %span= t('Total')
-            %span.total_bounty
-              = number_to_currency_with_span @task.total_bounty
-      %ul.retweet
-        %li.count= @task.votes.size
-        %li.label= t('Retweet')
-      %ul.comment
-        %li.count= @task.comments.size
-        %li.label= t('Comment')
-      .person
-        %ul
-          %li.icon=link_to image_tag(@task.user.profile_image_url), user_path(@task.user)
-          %li.name=link_to @task.user.login, user_path(@task.user)
-      %ul.bounties
-        - @bounties.each do |bounty|
-          %li.bounty{bounty_attrs(bounty)}
-            .icon= link_to image_tag(bounty.user.profile_image_url), user_path(bounty.user)
-            .login= link_to bounty.user.login, user_path(bounty.user)
-            .amount= number_to_currency bounty.amount
-            - if logged_in? and @task.solved? and bounty.user.id == current_user.id
-              - unless bounty.pay
-                - bounty.pay = true
-                - form_for bounty do |f|
-                  = f.hidden_field :pay, :id => "bounty_pay_#{bounty.id}"
-                  = f.submit t('Payment was completed'), :id => "bounty_submit_#{bounty.id}"
-              = render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :bounty => bounty, :user => bounty.task.solver}
-      - if logged_in?
-        #add_bounty.button= t('Add Bounty')
-        - form_for @bounty do |f|
-          = f.hidden_field :task_id
-          = f.label :amount
-          = f.text_field :amount, :size => 20
-      .created_at== #{time_ago_in_words @task.created_at}前
-  - unless @comments.empty?
-    .section
-      %h3= t('Comments')
-      %ul.comments
-        = render :partial => 'comment', :collection => @comments
-  = will_paginate(@comments)
-  .section.post
-    %h3= t('Comment')
-    %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
-    %span （コメントはTwitterにも飛びます）
-    - if logged_in?
-      - form_for @comment do |f|
-        = f.error_messages
-        = f.hidden_field :task_id
-        = f.text_area :description, :size => '70x10'
-        %h4= t('Preview')
-        .wrapper
-          .preview
-        %p
-          = f.submit '利用規約に同意してコメントする'
-          - if logged_in? and @task.user.id == current_user.id and @task.unsolved?
-            = f.submit 'コメントして自己解決', :name => 'commit_and_solve'
-          = link_to '利用規約', about_terms_path, :target => '_blank'
-    - else
-      .please_login== コメントするには#{link_to 'Twitterでログイン', login_path}してください。
+        %li.edit= link_to t('Edit this task'), edit_task_path(@task), :class => 'sub_button'
+        %li.delete= link_to t('Delete this task'), @task, :confirm => t('Are you sure'), :method => :delete, :class => 'sub_button'
+- unless @comments.empty?
+  .section.comments
+    %h3= t('Comments')
+    %ul.comments
+      = render :partial => 'comment', :collection => @comments
+= will_paginate(@comments)
+.section.post
+  %h3= t('Comment')
+  %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
+  %span （コメントはTwitterにも飛びます）
+  - if logged_in?
+    - form_for @comment do |f|
+      = f.error_messages
+      = f.hidden_field :task_id
+      = f.text_area :description, :size => '70x10'
+      #preview.comment
+        .content
+          .title
+            %h4= t('Preview')
+          .description.preview
+      %p
+        = f.submit '利用規約に同意してコメントする'
+        - if logged_in? and @task.user.id == current_user.id and @task.unsolved?
+          = f.submit 'コメントして自己解決', :name => 'commit_and_solve'
+        = link_to '利用規約', about_terms_path, :target => '_blank'
+  - else
+    .please_login== コメントするには#{link_to 'Twitterでログイン', login_path}してください。
 - content_for :footer_script do
   = javascript_include_tag 'markedit/showdown'
   = javascript_include_tag 'markedit/markedit.lang.ja'
   = javascript_include_tag 'markedit/jquery.markedit'
   = javascript_include_tag 'mk'
+
+
+.information
+  %dl
+    - if @task.total_bounty > 0
+      %dt.bounty= t('Total bounty')
+      %dd.bounty
+        %span= t('Total')
+        %span.total_bounty
+          = number_to_currency_with_span @task.total_bounty
+    %ul.retweet
+      %li.count= @task.votes.size
+      %li.label= t('Retweet')
+    %ul.comment
+      %li.count= @task.comments.size
+      %li.label= t('Comment')
+    .person
+      %ul
+        %li.icon=link_to image_tag(@task.user.profile_image_url), user_path(@task.user)
+        %li.name=link_to @task.user.login, user_path(@task.user)
+    %ul.bounties
+      - @bounties.each do |bounty|
+        %li.bounty{bounty_attrs(bounty)}
+          .icon= link_to image_tag(bounty.user.profile_image_url), user_path(bounty.user), :class => 'sub_button'
+          .login= link_to bounty.user.login, user_path(bounty.user), :class => 'sub_button'
+          .amount= number_to_currency bounty.amount
+          - if logged_in? and @task.solved? and bounty.user.id == current_user.id
+            - unless bounty.pay
+              - bounty.pay = true
+              - form_for bounty do |f|
+                = f.hidden_field :pay, :id => "bounty_pay_#{bounty.id}"
+                = f.submit t('Payment was completed'), :id => "bounty_submit_#{bounty.id}"
+            = render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :bounty => bounty, :user => bounty.task.solver}
+    - if logged_in?
+      #add_bounty.button= t('Add Bounty')
+      - form_for @bounty do |f|
+        = f.hidden_field :task_id
+        = f.label :amount
+        = f.text_field :amount, :size => 20

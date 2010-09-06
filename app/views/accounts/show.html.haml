@@ -1,5 +1,4 @@
-.title
-  %h2 ダッシュボード
+%h2.title ダッシュボード
 .content.about
   .lists
     .solved_tasks.profile_list
@@ -13,6 +12,6 @@
     -#  %h3 ウォッチしているタスク
     -#  %p= t('label.nothing_watching_tasks')
   %ul.loggedin
-    %li.show= link_to 'プロフィールを見る', user_path(@user)
-    %li.edit= link_to 'アカウント情報を編集する', edit_account_path
-    %li.delete= link_to '会員情報を削除する', account_path, :confirm => '本当に退会してよろしいですか？', :method => :delete
+    %li.show= link_to 'プロフィールを見る', user_path(@user), :class => 'sub_button'
+    %li.edit= link_to 'アカウント情報を編集する', edit_account_path, :class => 'sub_button'
+    %li.delete= link_to '会員情報を削除する', account_path, :confirm => '本当に退会してよろしいですか？', :method => :delete, :class => 'sub_button'

@@ -1,17 +1,60 @@
-.markedit { clear: both; }
-.markedit textarea { width: 100%; }
+.markedit {
+	clear: both;
+	margin-top: 20px;
+	-webkit-box-shadow: #dcdcdc 0px 0px 5px;
+	-moz-box-shadow: #dcdcdc 0px 0px 5px;
+	box-shadow: #dcdcdc 0px 0px 5px;
+	-webkit-border-radius:12px;
+	-moz-border-radius:12px;
+	border-radius:12px;
+	margin-bottom: 5px;
+}
+.markedit textarea {
+	display: block;
+	width: 712px;
+	-webkit-border-radius: 0px 0px 12px 12px;
+	-moz-border-radius: 0px 0px 12px 12px;
+	border-radius: 0px 0px 12px 12px;
+	border:1px solid #d0d0d0;
+	padding: 8px;
+}
 
-.markedit-toolbar { padding: 0.3em; margin: 0; clear: both; height: 22px; border-top: #999 solid 1px; border-left: #999 solid 1px; border-right: #999 solid 1px; }
+.markedit-toolbar {
+	margin: 0;
+	clear: both;
+	height: 22px;
+	border-left: #d0d0d0 solid 1px;
+	border-right: #d0d0d0 solid 1px;
+	-webkit-border-radius: 12px 12px 0px 0px;
+	-moz-border-radius: 12px 12px 0px 0px;
+	border-radius: 12px 12px 0px 0px;
+	padding-top: 0.3em;
+	padding-right: 12px;
+	padding-bottom: 0.3em;
+	padding-left: 12px;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a9a9a9), to(#999));
+	background: -moz-linear-gradient(#a9a9a9, #999);
+	-pie-background: linear-gradient(#a9a9a9, #999);
+ }
 .markedit-toolbar .toolbar-group { margin-right: 0.5em; padding: 0 0 0 5px; float: left; }
-.markedit-toolbar .toggle-group {  }
-.markedit-toolbar .toggle-group button { font-size: 0.85em; font-weight: bold; padding: 0.15em 0.5em; }
-.markedit-toolbar .toggle-group button:first-child { -moz-border-radius-bottomleft:11px; -moz-border-radius-topleft:11px; -moz-border-radius-bottomright:0; -moz-border-radius-topright:0; }
-.markedit-toolbar .toggle-group button:last-child { -moz-border-radius-bottomleft:0; -moz-border-radius-topleft:0; -moz-border-radius-bottomright:11px; -moz-border-radius-topright:11px; }
+.markedit-toolbar .toggle-group button { font-size: 0.85em; font-weight: bold; padding: 0.15em 0.5em;
+ }
 
-.markedit-toolbar button { height: 22px; outline: 0; cursor: pointer; }
+.markedit-toolbar button {
+	height: 22px;
+	outline: 0;
+	cursor: pointer;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid #999;
+	-webkit-box-shadow: #7c7c7c 1px 1px 1px;
+	-moz-box-shadow: #7c7c7c 1px 1px 1px;
+	box-shadow: #7c7c7c 1px 1px 1px;
+ }
 .markedit-toolbar button.icon { width: 22px; background-repeat: no-repeat; margin: 0 5px 0 0; }
-.markedit .light-bg button.icon { background-image: url(/images/wmd-buttons.png); }
-.markedit .dark-bg button.icon { background-image: url(/images/wmd-buttons-dark.png); }
+.markedit .light-bg button.icon { background-image: url(../images/wmd-buttons.png); }
+.markedit .dark-bg button.icon { background-image: url(../images/wmd-buttons-dark.png); }
 
 .markedit-toolbar button.bold { background-position: 0px 0px; }
 .markedit-toolbar button.italic { background-position: -20px 0px; }

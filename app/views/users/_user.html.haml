@@ -1,25 +1,41 @@
-%h3 実績
-%dl
-  %dt.icon アイコン画像
-  %dd.icon=link_to image_tag(user.profile_image_url), user_path(user)
-  %dt.profile ユーザー情報
-  %dd.profile=link_to user.login, user_path(user)
-  - if user.state
-    %dt.state 出身
+- if controller_name == 'users_show'
+  %h3
+    %span.icon= image_tag(user.profile_image_url)
+- else
+  %h3
+    %a{:href => user_path(user), :class => 'clearfix'}
+      %span.icon= image_tag(user.profile_image_url)
+      %span.name= user.login
+- if user.state
+  %dl.state
+    %dt出身
     %dd.state= t("label.state.#{user.state.name}")
+
+.counts.solved_unsolved
+  %ul.solved
+    %li.count= user.comments.correct.size
+    %li.label='解決タスク'
+  %ul.tasks
+    %li.count= user.tasks.size
+    %li.label='登録タスク'
+%dl.information
   %dt.favorite_language 好きなプログラム言語
   %dd.favorite_language
     - if user.language
-      = link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name)
+      = link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name), :class => 'sub_button'
     - else
-      %span.unselected 未選択
-  %dt.solved 解決タスク数
-  %dd.solved= user.comments.correct.size
-  %dt.task 登録タスク数
-  %dd.task= user.tasks.size
-  %dt.bounty 合計獲得金額
-  %dd.bounty
+      %span.unselected プログラム言語 : 未選択
+  %dt.favorite_language 好きなエディタ
+  %dd.editor
+    - if user.editor
+      = link_to t("label.editor.#{user.editor.name}"), users_by_editor_path(:editor => user.editor.name), :class => 'sub_button'
+    - else
+      %span.unselected エディタ : 未選択
+
+%dl.bounty
+  %dt 合計獲得金額
+  %dd
     %span= number_to_currency user.total_prize
-  %dt.thanks 合計支払い金額
-  %dd.thanks
+  %dt 合計支払い金額
+  %dd
     %span= number_to_currency user.total_payment
