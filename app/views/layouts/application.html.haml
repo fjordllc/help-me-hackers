@@ -61,6 +61,8 @@
       #sub
         - if controller_name == 'users'
           = render :partial => 'users/sub'
+        - elsif controller_name == 'tasks' and action_name == 'show'
+          = render :partial => 'tasks/sub'
         - else
           = render :partial => 'shared/sub'
     #footer

@@ -8,10 +8,7 @@ INSTALLATION
 
 http://docs.komagata.org/4524 (JAPANESE)
 
-UNIX, Mac OS X
-==============
-
-    $ gem install bundler --pre
+    $ gem install bundler
     $ git clone http://github.com/komagata/help-me-hackers.git
     $ cd help-me-hackers
     $ bundle install --without production
@@ -19,8 +16,3 @@ UNIX, Mac OS X
     $ ruby script/server
 
 Access to http://localhost:3000/
-
-Windows
-=======
-
-    > COPY vendor\win32\sqlite3\sqlite3.dll c:\WINDOWS\system32\
