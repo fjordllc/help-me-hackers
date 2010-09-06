@@ -1,5 +1,5 @@
 - title "#{tasks_title} | #{t('application.title')}"
-
+- bread_crumb_tag({:name => t('Home'), :url => root_path}, {:name => t('Tasks')})
 %h2.title= tasks_title
 - if params[:project]
   .by_project=h @project.name

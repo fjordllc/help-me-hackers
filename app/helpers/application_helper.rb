@@ -189,6 +189,10 @@ module ApplicationHelper
     link_to image_tag(user.profile_image_url, :size => size, :style => 'vertical-align:middle') + user.login + '(' + user.comments.correct.size.to_s + ')', link
   end
 
+  def bread_crumb_tag(*breads)
+    bread_crumbs(breads, :yield => true)
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]

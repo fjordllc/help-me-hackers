@@ -1,4 +1,5 @@
 - title "#{@task.title} - #{t('application.title')}"
+- bread_crumb_tag({:name => t('Home'), :url => root_path}, {:name => t('Tasks'), :url => tasks_path}, {:name => @task.title})
 - content_for :header_script do
   = javascript_include_tag 'http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js'
   = javascript_include_tag 'jquery.validator.messages_ja'

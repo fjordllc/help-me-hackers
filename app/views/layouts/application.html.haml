@@ -43,8 +43,9 @@
             %li= link_to_unless_current_with_span t('Users'), users_path
             %li.add_task= link_to t('Create Task'), new_task_path
       .hierarchy
-        %ol.bread_crumbs.wrap
-          %li= 'ああああああああああああああああ'
+        - bread_crumb = yield(:bread_crumbs)
+        - if bread_crumb.present?
+          = bread_crumb
     #wrapper{:class => "#{controller_name}_#{action_name}"}
       - if controller_name == 'top'
         .eye_catch
