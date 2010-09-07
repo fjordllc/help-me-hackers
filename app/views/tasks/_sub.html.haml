@@ -1,3 +1,71 @@
+.counts
+  %ul.tweets
+    %li.count= @task.votes.size
+    %li.label= t('Retweet')
+  %ul.comments
+    %li.count= @task.comments.size
+    %li.label= t('Comment')
+
+.task_data
+  - if @task.total_bounty > 0
+    .section.bounty
+      %dl.bounty
+        %dt.bounty= t('Total bounty')
+        %dd.bounty
+          %span= t('Total')
+          %span.total_bounty
+            = number_to_currency_with_span @task.total_bounty
+
+      - if logged_in?
+        #add_bounty.add_bounty= '＋'
+        - form_for @bounty do |f|
+          = f.hidden_field :task_id
+          = f.label :amount
+          = f.text_field :amount, :size => 20
+
+    - if logged_in?
+      #add_bounty.add_bounty.button= t('Add Bounty')
+
+
+
+  - if @task.project
+    .section.project
+      %dl
+        %dt このタスクのプロジェクト
+        %dd
+          %a{:href => project_path(@task.project)}
+            %span.icon= 'icon'
+            %span.name= @task.project.name
+
+  .person.section
+    %dl.person
+      %dt タスク登録者
+      %dd
+        %a.person{:href => user_path(@task.user)}
+          %span.icon=image_tag(@task.user.profile_image_url)
+          %span.name=@task.user.login
+
+
+.sponcers.section
+  %dl
+    %dt スポンサー
+    %dd
+      %ul.bounties
+        - @bounties.each do |bounty|
+          %li.bounty{bounty_attrs(bounty)}
+            %a{:href => user_path(bounty.user)}
+              %span.icon= image_tag(bounty.user.profile_image_url)
+              %span.name= bounty.user.login
+            %dl.bounty			
+              %dt 報奨金
+              %dd= number_to_currency bounty.amount
+            - if logged_in? and @task.solved? and bounty.user.id == current_user.id
+              - unless bounty.pay
+                - bounty.pay = true
+                - form_for bounty do |f|
+                  = f.hidden_field :pay, :id => "bounty_pay_#{bounty.id}"
+                  = f.submit t('Payment was completed'), :id => "bounty_submit_#{bounty.id}"
+              = render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :bounty => bounty, :user => bounty.task.solver}
 .section
   %dl
     %dt 人気の言語

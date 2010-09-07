@@ -73,9 +73,9 @@
         %dd.created_at== #{time_ago_in_words @task.created_at}前
     .description~markdown @task.description
     - if @task.source_url.present?
-      .source_url
-        %h4= t('activerecord.attributes.task.source_url')
-        =link_to truncate(h(@task.source_url), :length => 52), h(@task.source_url)
+      %dl.source_url
+        %dt= t('activerecord.attributes.task.source_url')
+        %dd=link_to truncate(h(@task.source_url), :length => 52), h(@task.source_url)
     - unless @task.tags.empty?
       %ul.tags
         - @task.tags.each do |tag|
@@ -118,40 +118,3 @@
   = javascript_include_tag 'mk'
 
 
-.information
-  %dl
-    - if @task.total_bounty > 0
-      %dt.bounty= t('Total bounty')
-      %dd.bounty
-        %span= t('Total')
-        %span.total_bounty
-          = number_to_currency_with_span @task.total_bounty
-    %ul.retweet
-      %li.count= @task.votes.size
-      %li.label= t('Retweet')
-    %ul.comment
-      %li.count= @task.comments.size
-      %li.label= t('Comment')
-    .person
-      %ul
-        %li.icon=link_to image_tag(@task.user.profile_image_url), user_path(@task.user)
-        %li.name=link_to @task.user.login, user_path(@task.user)
-    %ul.bounties
-      - @bounties.each do |bounty|
-        %li.bounty{bounty_attrs(bounty)}
-          .icon= link_to image_tag(bounty.user.profile_image_url), user_path(bounty.user), :class => 'sub_button'
-          .login= link_to bounty.user.login, user_path(bounty.user), :class => 'sub_button'
-          .amount= number_to_currency bounty.amount
-          - if logged_in? and @task.solved? and bounty.user.id == current_user.id
-            - unless bounty.pay
-              - bounty.pay = true
-              - form_for bounty do |f|
-                = f.hidden_field :pay, :id => "bounty_pay_#{bounty.id}"
-                = f.submit t('Payment was completed'), :id => "bounty_submit_#{bounty.id}"
-            = render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :bounty => bounty, :user => bounty.task.solver}
-    - if logged_in?
-      #add_bounty.button= t('Add Bounty')
-      - form_for @bounty do |f|
-        = f.hidden_field :task_id
-        = f.label :amount
-        = f.text_field :amount, :size => 20

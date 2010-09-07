@@ -299,16 +299,11 @@ a.sub_button:active {
 	margin-right: 2px;
 }
 #header div.hierarchy {
-	font-size: 13px;
-	font-weight: bold;
 	-pie-background: linear-gradient(#F9F9F9, #efeeee);
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #d3d3d3;
 	clear: both;
-	line-height: 24px;
-	padding-top: 8px;
-	padding-bottom: 8px;
 	-webkit-box-shadow: #d8d8d8 0px 0px 5px;
 	box-shadow: #d8d8d8 0px 0px 10px;
 	background-color: -moz-linear-gradient;
@@ -317,38 +312,24 @@ a.sub_button:active {
 	border-top-style: solid;
 	border-top-color: #aaa;
 	}
-#header div.hierarchy li {
-	display: inline;
+ol.bread_crumbs {
+	font-size: 13px;
+	font-weight: bold;
+	width: 980px;
+	margin-right: auto;
+	margin-left: auto;
 	}
-#header div.hierarchy li a {
+ol.bread_crumbs li {
+	display: inline;
+	line-height: 40px;
+}
+ol.bread_crumbs li a {
 	display: block;
 	float: left;
 	margin-right: 12px;
 	padding-right: 12px;
 	padding-left: 12px;
 	text-decoration: none;
-	color: #656565;
-	}
-#header div.hierarchy li a:link,
-#header div.hierarchy li a:visited {
-	margin: 1px;
-	}
-#header div.hierarchy li a:hover,
-#header div.hierarchy li a:active {
-	margin: 0px;
-	text-shadow:1px 1px 0px #fff;
-	-webkit-box-shadow: #fde217 0px 0px 3px;
-	-moz-box-shadow: #fde217 0px 0px 3px;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
-	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
-	-pie-background: linear-gradient(#f3f3f3, #d0d0d0);
-	box-shadow: #c9c9c9 1px 1px 3px;
-	-webkit-box-shadow: #c9c9c9 1px 1px 2px;
-	-moz-box-shadow: #c9c9c9 1px 1px 2px;
-	border: 1px solid #cccccc;
 	color: #656565;
 	}
 #wrapper {
@@ -693,6 +674,37 @@ div.content .links li.facebook a {
 div.content .links li.website a {
 	background-image: url(../images/website.png);
 }
+
+
+
+div.content dl.source_url dt {
+	display: none;
+}
+div.content dl.source_url dd {
+	display: block;
+	background-image: url(../images/projects_show_discription_dl.png);
+	background-repeat: no-repeat;
+	line-height: 30px;
+	height: 30px;
+	margin-bottom: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 12px;
+	margin-left: 15px;
+	width: 535px;
+}
+div.content dl.source_url dd:before {
+	margin-right:1em;
+	content:"\ソースコード URL …";
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -2544,10 +2556,10 @@ div.description dl.url dd:last-child {
 div.description dl.url dd:before {
 	margin-right:1em;
 }
-div.description dl.url dd.website_url:before {
+dl.url dd.website_url:before {
 	content:"\website URL …";
 }
-div.description dl.url dd.repository_path:before {
+dl.url dd.repository_path:before {
 	content:"\リポジトリパス …";
 }
 .project .sub dl.person a:before {

@@ -1,11 +1,10 @@
 %h2.title プロジェクト
-.content
-  - if @projects.empty?
-    .empty
-      %p プロジェクトありません。
-  - else
-    %ul.projects
-      = render :partial => 'project', :collection => @projects
-    = will_paginate(@projects)
-  %ul.projects_buttons
-    %li= link_to t('Create Project'), new_project_path
+- if @projects.empty?
+  .empty
+    %p プロジェクトありません。
+- else
+  %ul.projects.tasks_list
+    = render :partial => 'project', :collection => @projects
+  = will_paginate(@projects)
+%ul.projects_buttons
+  %li= link_to t('Create Project'), new_project_path

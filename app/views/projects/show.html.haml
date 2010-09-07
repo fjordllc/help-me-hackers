@@ -1,26 +1,40 @@
-.title
-  %h2= @project.name
-.content
-  .project.section
-    - if @project.logo_image_url.present?
-      = image_tag @project.logo_image_url
-    %h3= t('activerecord.attributes.project.description')
-    .description~markdown @project.description
-    - if @project.website_url.present?
-      .website_url
-        %h4= t('activerecord.attributes.project.website_url')
-        =link_to h(@project.website_url), h(@project.website_url)
-    - if @project.repository_path.present?
-      .repository_path
-        %h4= t('activerecord.attributes.project.repository_path')
-        =link_to h(@project.repository_path), h(@project.repository_path)
-    %ul.loggedin
-      %li.edit= link_to t('Edit'), edit_project_path(@project)
-      %li.edit= link_to t('Create Task in this project'), new_task_path(:project_id => @project.id)
-  .profile_list
-    %h3= t('Tasks')
-    - if @project.tasks.empty?
-      %p.empty= t('Task is nothing')
-    - else
-      %ul.tasks
-        = render :partial => 'tasks/object_small', :collection => @project.tasks.by_id(:desc)
+.project
+  .content
+    .main
+      %h2.title= @project.name
+      .state
+      .main
+        .description
+          ~markdown @project.description
+          %dl.url
+            - if @project.website_url.present?
+              %dt= t('activerecord.attributes.project.website_url')
+              %dd.website_url=link_to h(@project.website_url), h(@project.website_url)
+            - if @project.repository_path.present?
+              %dt= t('activerecord.attributes.project.repository_path')
+              %dd.repository_path=link_to h(@project.repository_path), h(@project.repository_path)
+        %ul.loggedin
+          %li.edit= link_to t('Edit'), edit_project_path(@project), :class => 'sub_button'
+          %li.edit= link_to t('Create Task in this project'), new_task_path(:project_id => @project.id), :class => 'sub_button'
+
+    .sub.profile
+      %h3
+        - if @project.logo_image_url.present?
+          %span.icon= image_tag @project.logo_image_url
+
+      .counts.solved_unsolved
+        %ul.solved
+          %li.count= @project.solved_task_count
+          %li.label 解決タスク
+        %ul.tasks
+          %li.count= @project.unsolved_task_count
+          %li.label 未解決タスク
+
+
+.content.tasks_list
+  %h3= t('Tasks')
+  - if @project.tasks.empty?
+    %p.empty= t('Task is nothing')
+  - else
+    %ul.tasks
+      = render :partial => 'tasks/object_small', :collection => @project.tasks.by_id(:desc)
