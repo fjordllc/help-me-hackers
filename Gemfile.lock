@@ -1,117 +1,60 @@
---- 
-dependencies: 
-  pg: 
-    group: 
-    - :production
-    version: = 0.9.0
-  yaml_waml: 
-    group: 
-    - :default
-    version: = 0.3.0
-  rails: 
-    group: 
-    - :default
-    version: = 2.3.5
-    require: []
+GEM
+  remote: http://rubygems.org/
+  specs:
+    actionmailer (2.3.5)
+      actionpack (= 2.3.5)
+    actionpack (2.3.5)
+      activesupport (= 2.3.5)
+      rack (~> 1.0.0)
+    activerecord (2.3.5)
+      activesupport (= 2.3.5)
+    activeresource (2.3.5)
+      activesupport (= 2.3.5)
+    activesupport (2.3.5)
+    bitly (0.4.0)
+      crack (>= 0.1.1)
+    bluecloth (2.0.7)
+    crack (0.1.8)
+    ezcrypto (0.7.2)
+    haml (2.2.22)
+    hoptoad_notifier (2.2.2)
+      activesupport
+    json (1.4.3)
+    oauth (0.3.5)
+      ruby-hmac (>= 0.3.1)
+    pacecar (1.2.0)
+    pg (0.9.0)
+    rack (1.0.1)
+    rails (2.3.5)
+      actionmailer (= 2.3.5)
+      actionpack (= 2.3.5)
+      activerecord (= 2.3.5)
+      activeresource (= 2.3.5)
+      activesupport (= 2.3.5)
+      rake (>= 0.8.3)
+    rake (0.8.7)
+    ruby-hmac (0.4.0)
+    shoulda (2.10.3)
+    sqlite3-ruby (1.2.5)
+    will_paginate (2.3.12)
+    yaml_waml (0.3.0)
 
-  ezcrypto: 
-    group: 
-    - :default
-    version: = 0.7.2
-  haml: 
-    group: 
-    - :default
-    version: = 2.2.22
-  bluecloth: 
-    group: 
-    - :default
-    version: = 2.0.7
-  sqlite3-ruby: 
-    group: 
-    - :development
-    version: = 1.2.5
-  shoulda: 
-    group: 
-    - :test
-    version: = 2.10.3
-  oauth: 
-    group: 
-    - :default
-    version: = 0.3.5
-  pacecar: 
-    group: 
-    - :default
-    version: = 1.2.0
-  bitly: 
-    group: 
-    - :default
-    version: = 0.4.0
-  will_paginate: 
-    group: 
-    - :default
-    version: = 2.3.12
-  json: 
-    group: 
-    - :default
-    version: = 1.4.3
-  bundler: 
-    group: 
-    - :default
-    version: = 0.9.26
-  hoptoad_notifier: 
-    group: 
-    - :default
-    version: = 2.2.2
-specs: 
-- rake: 
-    version: 0.8.7
-- activesupport: 
-    version: 2.3.5
-- rack: 
-    version: 1.0.1
-- actionpack: 
-    version: 2.3.5
-- actionmailer: 
-    version: 2.3.5
-- activerecord: 
-    version: 2.3.5
-- activeresource: 
-    version: 2.3.5
-- crack: 
-    version: 0.1.7
-- bitly: 
-    version: 0.4.0
-- bluecloth: 
-    version: 2.0.7
-- bundler: 
-    version: 0.9.26
-- ezcrypto: 
-    version: 0.7.2
-- haml: 
-    version: 2.2.22
-- hoptoad_notifier: 
-    version: 2.2.2
-- json: 
-    version: 1.4.3
-- ruby-hmac: 
-    version: 0.4.0
-- oauth: 
-    version: 0.3.5
-- pacecar: 
-    version: 1.2.0
-- pg: 
-    version: 0.9.0
-- rails: 
-    version: 2.3.5
-- shoulda: 
-    version: 2.10.3
-- sqlite3-ruby: 
-    version: 1.2.5
-- will_paginate: 
-    version: 2.3.12
-- yaml_waml: 
-    version: 0.3.0
-hash: 4cef18dc07940e3b64d70c51f66a3c449858a595
-sources: 
-- Rubygems: 
-    uri: http://gemcutter.org
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bitly (= 0.4.0)
+  bluecloth (= 2.0.7)
+  bundler (= 1.0.0)
+  ezcrypto (= 0.7.2)
+  haml (= 2.2.22)
+  hoptoad_notifier (= 2.2.2)
+  json (= 1.4.3)
+  oauth (= 0.3.5)
+  pacecar (= 1.2.0)
+  pg (= 0.9.0)
+  rails (= 2.3.5)
+  shoulda (= 2.10.3)
+  sqlite3-ruby (= 1.2.5)
+  will_paginate (= 2.3.12)
+  yaml_waml (= 0.3.0)
