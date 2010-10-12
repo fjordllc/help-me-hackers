@@ -280,7 +280,7 @@
                 MarkEditHistory[$(this).attr('id')] = { 'undo': [], 'redo': [] };
 
                 // Set current state as first history item
-                MarkEdit.appendHistory($(this).markeditGetState(), $(this).attr('id'));
+                MarkEdit.appendHistory($(this).markeditGetState(true), $(this).attr('id'));
 
                 // Bind events to update history
                 var textarea = $(this);
@@ -376,7 +376,7 @@
     //
     //  $.markeditGetState
     //
-    $.fn.markeditGetState = function() {
+    $.fn.markeditGetState = function(nofocus) {
 
         //  GetState will return the following state object:
         //  state {
@@ -390,7 +390,7 @@
 
         // Locate textarea
         var textarea = MarkEdit.getTextArea(this);
-        //textarea.focus();
+        if (!nofocus) textarea.focus();
 
         // Get IE selection (of course IE would take 5x the amount of code)
         var r;
