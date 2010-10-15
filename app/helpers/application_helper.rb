@@ -142,6 +142,10 @@ module ApplicationHelper
     truncate(str.gsub(/\s+/m, ' '), options)
   end
 
+  def flash_tag(name)
+    content_tag :div, flash[name], :class => name if flash[name].present?
+  end
+
   private
   def build_model_list(method)
     default = [[t('label.please-select'), '']]

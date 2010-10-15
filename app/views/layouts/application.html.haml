@@ -45,13 +45,9 @@
           %li.add_task= link_to t('Create Task'), new_task_path
       #main
         #flash
-          - unless flash.empty?
-            - if flash[:notice].present?
-              = content_tag :div, flash[:notice],  :class => 'notice'
-            - if flash[:warning].present?
-              = content_tag :div, flash[:warning], :class => 'warning'
-            - if flash[:error].present?
-              = content_tag :div, flash[:error],   :class => 'error'
+          = flash_tag :notice
+          = flash_tag :warning
+          = flash_tag :error
         = yield
       #sub
         - if controller_name == 'users'
