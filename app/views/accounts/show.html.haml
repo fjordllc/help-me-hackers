@@ -1,16 +1,14 @@
 %h2.title ダッシュボード
-.content.about
-  .lists
-    .solved_tasks.profile_list
-      %h3 タスク
-      - if @user.tasks.count.zero?
-        %p= t('label.nothing_posted_tasks')
-      - else
-        %ul.tasks
-          = render :partial => 'tasks/object_small', :collection => @user.tasks
-    -# .posted_comments.profile_list
-    -#  %h3 ウォッチしているタスク
-    -#  %p= t('label.nothing_watching_tasks')
+.content.tasks_list
+  %h3 タスク
+  - if @user.tasks.count.zero?
+    %p= t('label.nothing_posted_tasks')
+  - else
+    %ul.tasks
+      = render :partial => 'tasks/object_small', :collection => @user.tasks
+  -# .posted_comments.profile_list
+  -#  %h3 ウォッチしているタスク
+  -#  %p= t('label.nothing_watching_tasks')
   %ul.loggedin
     %li.show= link_to 'プロフィールを見る', user_path(@user), :class => 'sub_button'
     %li.edit= link_to 'アカウント情報を編集する', edit_account_path, :class => 'sub_button'

@@ -6,10 +6,13 @@
     %a{:href => user_path(user), :class => 'clearfix'}
       %span.icon= image_tag(user.profile_image_url)
       %span.name= user.login
-- if user.state
   %dl.state
-    %dt出身
-    %dd.state= t("label.state.#{user.state.name}")
+    - if user.state
+      %dt出身
+      %dd.state= t("label.state.#{user.state.name}")
+    - else
+      %dt出身
+      %dd.state &nbsp;
 
 .counts.solved_unsolved
   %ul.solved
@@ -24,13 +27,13 @@
     - if user.language
       = link_to t("label.language.#{user.language.name}"), users_by_language_path(:language => user.language.name), :class => 'sub_button'
     - else
-      %span.unselected プログラム言語 : 未選択
+      %span.unselected プログラム言語 未選択
   %dt.favorite_language 好きなエディタ
   %dd.editor
     - if user.editor
       = link_to t("label.editor.#{user.editor.name}"), users_by_editor_path(:editor => user.editor.name), :class => 'sub_button'
     - else
-      %span.unselected エディタ : 未選択
+      %span.unselected エディタ 未選択
 
 %dl.bounty
   %dt 合計獲得金額

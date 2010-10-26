@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+#sub .ad {
+	text-align: center;
+}
 
 span.icon img {
 	background-color: #fff;
@@ -29,7 +32,6 @@ span.name {
 .button {
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
 	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
-	-pie-background: linear-gradient(#f3f3f3, #d0d0d0);
 	box-shadow: #c9c9c9 1px 1px 3px;
 	-webkit-box-shadow: #c9c9c9 1px 1px 2px;
 	-moz-box-shadow: #c9c9c9 1px 1px 2px;
@@ -50,7 +52,6 @@ span.name {
 .button:visited {
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
 	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
-	-pie-background: linear-gradient(#f3f3f3, #d0d0d0);
 	box-shadow: #c9c9c9 1px 1px 3px;
 	-webkit-box-shadow: #c9c9c9 1px 1px 2px;
 	-moz-box-shadow: #c9c9c9 1px 1px 2px;
@@ -61,7 +62,6 @@ span.name {
 .button:active {
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fde217), to(#fde217));
 	background: -moz-linear-gradient(#fefa86, #fde217);
-	-pie-background: linear-gradient(#fefa86, #fde217);
 	text-shadow:1px 1px 0px #fff;
 	-webkit-box-shadow: #fde217 0px 0px 3px;
 	-moz-box-shadow: #fde217 0px 0px 3px;
@@ -107,7 +107,6 @@ a.sub_button:link,
 a.sub_button:visited {
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#f2f2f2));
 	background: -moz-linear-gradient(#fff, #f2f2f2);
-	-pie-background: linear-gradient(#fff, #f2f2f2);
 	border: 1px solid #ccc;
 	color: #656565;
 }
@@ -115,7 +114,6 @@ a.sub_button:hover,
 a.sub_button:active {
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fde217), to(#fde217));
 	background: -moz-linear-gradient(#fefa86, #fde217);
-	-pie-background: linear-gradient(#fefa86, #fde217);
 	text-shadow:1px 1px 0px #fff;
 	-webkit-box-shadow: #fde217 0px 0px 3px;
 	-moz-box-shadow: #fde217 0px 0px 3px;
@@ -166,7 +164,6 @@ a.sub_button:active {
 	background-color: #e7e7e7;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9F9F9), to(#efeeee));
 	background: -moz-linear-gradient(#F9F9F9, #efeeee);
-	-pie-background: linear-gradient(#F9F9F9, #efeeee);
 	border: 1px solid #cccccc;
 }
 #header ul.account li {
@@ -206,7 +203,6 @@ a.sub_button:active {
 	border-radius: 6px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
 	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
-	-pie-background: linear-gradient(#f3f3f3, #d0d0d0);
 	box-shadow: #c9c9c9 1px 1px 3px;
 	-webkit-box-shadow: #c9c9c9 1px 1px 2px;
 	-moz-box-shadow: #c9c9c9 1px 1px 2px;
@@ -241,7 +237,7 @@ a.sub_button:active {
 #header div.navs div.tab a:visited {
 	color: #656565;
 	padding-right: 17px;
-	text-shadow:-1px -1px 0px #eee;
+	text-shadow:1px 1px 0px #eee;
 }
 #header div.navs div.tab a:hover,
 #header div.navs div.tab a:active {
@@ -252,10 +248,9 @@ a.sub_button:active {
 	border-radius: 5px 5px 0px 0px;
 	padding-right: 17px;
 	color: #ececec;
-	text-shadow:-1px -1px 0px #666666;
+	text-shadow:1px 1px 0px #666666;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#888), to(#666));
 	background: -moz-linear-gradient(#888, #666);
-	-pie-background: linear-gradient(#888, #666);
 }
 #header div.navs div.tab li span.current {
 	display: block;
@@ -278,7 +273,6 @@ a.sub_button:active {
 	background-color: #f9f9f9 !important;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#f9f9f9));
 	background: -moz-linear-gradient(#fff, #f9f9f9);
-	-pie-background: linear-gradient(#fff, #f9f9f9);
 }
 #header div.navs div.tab li.current a:link,
 #header div.navs div.tab li.current a:visited {
@@ -299,7 +293,6 @@ a.sub_button:active {
 	margin-right: 2px;
 }
 #header div.hierarchy {
-	-pie-background: linear-gradient(#F9F9F9, #efeeee);
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #d3d3d3;
@@ -311,6 +304,7 @@ a.sub_button:active {
 	border-top-width: 1px;
 	border-top-style: solid;
 	border-top-color: #aaa;
+	height: 40px;
 	}
 ol.bread_crumbs {
 	font-size: 13px;
@@ -351,7 +345,29 @@ ol.bread_crumbs li a {
 	-moz-box-shadow: #d0d0d0 0px 0px 5px;
 	box-shadow: #d0d0d0 0px 0px 5px;
 	border: 1px solid #ccc;
+	background-image: url(../images/eyecatch.gif);
 	}
+#wrapper div.eye_catch .inner {
+	margin-top: 15px;
+	height: 145px;
+	}
+#wrapper div.eye_catch h2 {
+	text-shadow:1px 1px 0px #fff;
+	display: block;
+	font-size: 36px;
+	font-family:"ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
+	font-weight: bold;
+	margin-right: 15px;
+	margin-left: 15px;
+	line-height: 1.4;
+}
+#wrapper div.eye_catch ul {
+	display: block;
+	height: 40px;
+	-webkit-border-radius: 0px 0px 12px 12px;
+	-moz-border-radius: 0px 0px 12px 12px;
+	border-radius: 0px 0px 12px 12px;
+}
 #main {
 	clear: both;
 	float: left;
@@ -367,7 +383,7 @@ h2.title {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #bbb;
-	padding-bottom: 3px;
+	padding-bottom: 5px;
 }
 
 
@@ -532,7 +548,6 @@ div.tasks_show .title div.good dt {
 	border-radius: 6px 6px 0px 0px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#7bc8e4), to(#3b99bb));
 	background: -moz-linear-gradient(#7bc8e4, #3b99bb);
-	-pie-background: linear-gradient(#7bc8e4, #3b99bb);
 	font-weight: bold;
 }
 div.tasks_show .title div.good dt span {
@@ -560,7 +575,6 @@ div.tasks_show .title div.good dd {
 	border-radius: 0px 0px 6px 6px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#767676), to(#444444));
 	background: -moz-linear-gradient(#767676, #444444);
-	-pie-background: linear-gradient(#767676, #444444);
 }
 div.tasks_show div.content div.main .title h2 {
 	display: block;
@@ -595,6 +609,7 @@ div.content div.description {
 	background-repeat: repeat-x;
 	background-position: 0px 0px;
 	clear: both;
+	padding-bottom: 10px;
 }
 div.content .links dt {
 	display: none;
@@ -616,8 +631,8 @@ div.content .links li {
 div.content .links li a {
 	display: block;
 	float:left;
-	height: 15px;
-	width: 45px;
+	height: 20px;
+	width: 50px;
 	margin-right: 8px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -636,14 +651,14 @@ div.content .links li a {
 	border-right-color: #888;
 	border-bottom-color: #888;
 	border-left-color: #ccc;
-	font-size: 8px;
+	font-size: 83.4%;
 	line-height: 15px;
 	text-decoration: none;
 	text-align: center;
 	padding-top: 30px;
 	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
-	font-weight: bold;
 	color: #666;
+	letter-spacing: -1px;
 }
 div.content .links li a:link,
 div.content .links li a:visited {
@@ -654,7 +669,7 @@ div.content .links li a:visited {
 }
 div.content .links li a:hover,
 div.content .links li a:active {
-	background-color: #d0d0d0;
+	background-color: #dadada;
 	-webkit-box-shadow: #666 1px 1px 1px;
 	-moz-box-shadow: #999 1px 1px 1px;
 	box-shadow: #666 1px 1px 1px;
@@ -788,7 +803,6 @@ div.content .ssh_public_key dd {
 	border: 3px solid #EDEDED;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#444), to(#222));
 	background: -moz-linear-gradient(#444, #222);
-	-pie-background: linear-gradient(#444, #222);
 }
 div.tasks_show div.content div.description {
 	padding-right: 15px;
@@ -988,9 +1002,8 @@ div.counts ul li.count {
 div.counts ul.tweets {
 	border: 2px solid #80ded5;
 	background: #50bdb4;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#81d0d0d05), to(#50c3b9));
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#71f4e9), to(#36d6c8));
 	background: -moz-linear-gradient(#71f4e9, #36d6c8);
-	-pie-background: linear-gradient(#81d0d0d05, #50c3b9);
 	-webkit-border-radius: 14px 0px 0px 14px;
 	-moz-border-radius: 14px 0px 0px 14px;
 	border-radius: 14px 0px 0px 14px;
@@ -1006,7 +1019,6 @@ div.counts ul.comments {
 	background: #e2ff5b;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e2ff5b), to(#bae104));
 	background: -moz-linear-gradient(#e2ff5b, #bae104);
-	-pie-background: linear-gradient(#e2ff5b, #bae104);
 	-webkit-border-radius: 0px 14px 14px 0px;
 	-moz-border-radius: 0px 14px 14px 0px;
 	border-radius: 0px 14px 14px 0px;
@@ -1015,11 +1027,10 @@ div.counts ul.comments {
 
 
 div.counts ul.solved {
-	border: 2px solid #347ab5;
+	border: 2px solid #468ac3;
 	background: #50bdb4;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#4186c0), to(#2369a4));
 	background: -moz-linear-gradient(#5da0d8, #438ac5);
-	-pie-background: linear-gradient(#4186c0, #2369a4);
 	-webkit-border-radius: 14px 0px 0px 14px;
 	-moz-border-radius: 14px 0px 0px 14px;
 	border-radius: 14px 0px 0px 14px;
@@ -1035,7 +1046,6 @@ div.counts ul.tasks {
 	background: #e2ff5b;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff61c2), to(#ec189a));
 	background: -moz-linear-gradient(#fe81ce, #e842a8);
-	-pie-background: linear-gradient(#ff61c2, #ec189a);
 	-webkit-border-radius: 0px 14px 14px 0px;
 	-moz-border-radius: 0px 14px 14px 0px;
 	border-radius: 0px 14px 14px 0px;
@@ -1104,14 +1114,12 @@ dl.bounty dd span {
 	background-color: #e7e7e7;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eee), to(#e0e0e0));
 	background: -moz-linear-gradient(#eee, #e0e0e0);
-	-pie-background: linear-gradient(#eee, #e0e0e0);
 	border: 1px solid #ccc;
 }
 .sub dl.person a:hover,
 .sub dl.person a:active {
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fde217), to(#fde217));
 	background: -moz-linear-gradient(#fefa86, #fde217);
-	-pie-background: linear-gradient(#fefa86, #fde217);
 	text-shadow:1px 1px 0px #fff;
 	-webkit-box-shadow: #fde217 0px 0px 3px;
 	-moz-box-shadow: #fde217 0px 0px 3px;
@@ -1159,7 +1167,7 @@ a:active span.name {
 	background-color: #ccc;
 	border-top-width: 1px;
 	border-top-style: solid;
-	border-top-color: #aaa;
+	border-top-color: #999;
 	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
 	background: -moz-linear-gradient(center top, #ccc, #cecece 15%, #ccc 50%, #cecece 85%, #ccc);
 	background: -webkit-gradient(linear, center top, center bottom, from(#ccc), color-stop(15%, #cecece), color-stop(50%, #ccc), color-stop(85%, #cecece), to(#ccc));
@@ -1175,28 +1183,27 @@ a:active span.name {
 	display: block;
 	text-decoration: none;
 	display: block;
-	font-size: 11px;
+	font-size: 13px;
 	background-image: url(../images/tasks_project.png);
 	background-repeat: repeat-x;
 	background-position: left bottom;
 	color: #5a5a5a;
 	text-shadow:-1px -1px 0px #d0d0d0;
-	height: 25px;
+	height: 28px;
 	margin-bottom: 0px;
 }
 .task div.project a span.name {
-	padding-top: 4px;
-	padding-right: 15px;
-	padding-bottom: 6px;
-	padding-left: 15px;
+	padding-top: 3px;
+	padding-right: 12px;
+	padding-bottom: 5px;
+	padding-left: 12px;
 	background-image: url(../images/description.png);
 	background-repeat: repeat-x;
 	background-position: left top;
 	display: block;
-	height: 15px;
-	line-height: 15px;
+	height: 20px;
+	line-height: 20px;
 	font-weight: bold;
-	text-align: right;
 }
 
 
@@ -1215,7 +1222,6 @@ a:active span.name {
 	border-radius: 6px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#f2f2f2));
 	background: -moz-linear-gradient(#f8f8f8, #d9d9d9);
-	-pie-background: linear-gradient(#fff, #f2f2f2);
 }
 .task div.content div.description dl.resolver dt {
 	font-size: 11px;
@@ -1225,7 +1231,7 @@ a:active span.name {
 	padding-left: 4px;
 	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
 	padding-bottom: 2px;
-	background-color: #F2FE39;
+	background-color: #FF875B;
 	margin-top: 6px;
 	margin-right: 6px;
 	margin-bottom: 3px;
@@ -1235,8 +1241,7 @@ a:active span.name {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	font-weight: bold;
-	background: -moz-linear-gradient(center top, #F2FE39,  #F2FE39 50%, #dde63c 50% , #dde63c);
-	background: -webkit-gradient(linear, center top, center bottom, from(#ccc), color-stop(15%, #cecece), color-stop(50%, #ccc), color-stop(80%, #ccc), color-stop(90%, #ccc), to(#aaa)); 
+	color: #FFF;
 }
 .task div.content div.description dl.resolver dd a {
 	padding-top: 4px;
@@ -1294,7 +1299,6 @@ a:active span.name {
 	margin-left: -10px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fff), to(#f8f8f8));
 	background: -moz-linear-gradient(#fff, #f8f8f8);
-	-pie-background: linear-gradient(#fff, #f8f8f8);
 	border-top-width: 1px;
 	border-bottom-width: 1px;
 	border-top-style: solid;
@@ -1308,7 +1312,6 @@ a:active span.name {
 	font-weight: bold;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a6ede6), to(#80DED5));
 	background: -moz-linear-gradient(#a6ede6, #80DED5);
-	-pie-background: linear-gradient(#a6ede6, #80DED5);
 }
 .task .sponcers h3 span {
 	padding-top: 10px;
@@ -1384,7 +1387,6 @@ ul.loggedin {
 	padding-right: 12px;
 	padding-left: 12px;
 	padding-top: 10px;
-	margin-top: 10px;
 	border-top-width: 1px;
 	border-top-style: dashed;
 	border-top-color: #d0d0d0;
@@ -1432,7 +1434,6 @@ ul.loggedin {
 	padding-bottom: 20px;
 	background: -webkit-gradient(linear, 0 0, 0 10, from(#4e4e4e), to(#666666));
 	background: -moz-linear-gradient(#4e4e4e, #666666 6%);
-	-pie-background: linear-gradient(#4e4e4e, #666666 6%);
 	padding-top: 25px;
 	border-top-width: 1px;
 	border-top-style: solid;
@@ -1687,12 +1688,22 @@ div.pager {
 	border-radius: 8px;
 	padding-top: 8px;
 }
-#sub div.tweets dt {
+#sub div.tweets h3 {
 	background-color: transparent;
 	background:url(../images/tweets_dt.png);
 	height:44px;
 	padding: 0px;
 	text-indent: -9999px;
+	margin-left: -10px !important;
+}
+
+#sub div.twtr-doc {
+	-webkit-border-radius: 8px !important;
+	-moz-border-radius: 8px !important;
+	border-radius: 8px !important;
+}
+#sub div.tweets h4 {
+	display: none;
 }
 #sub div.tweets ul {
 	padding-top: 5px;
@@ -1700,38 +1711,39 @@ div.pager {
 	padding-bottom: 5px;
 	padding-left: 2px;
 }
-#sub div.tweets li {
+#sub div.tweets .twtr-tweet {
 	margin-bottom: 8px;
 	font-size: 11px;
 	background-color: #FFF;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	padding: 8px;
 	margin-right: 5px;
 	margin-left: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
-#sub div.tweets li a.icon {
+#sub div.tweets .twtr-img a {
 	display: block;
 	float: left;
 	margin-right: 8px;
 	margin-bottom: 4px;
 }
-#sub div.tweets li a.icon img {
+#sub div.tweets .twtr-img a img {
 	height: 32px;
 	width: 32px;
 	background-color: #fff;
 }
-#sub div.tweets li a.icon:link img,
-#sub div.tweets li a.icon:visited img {
-	border: 1px solid #fff;
+#sub div.tweets .twtr-img a:link img,
+#sub div.tweets .twtr-img a:visited img {
+	border: 1px solid #fff !important;
 }
-#sub div.tweets li a.icon:hover img,
-#sub div.tweets li a.icon:active img {
-	border: 1px solid #ec15ba;
-	-webkit-box-shadow: #ec15ba 0px 0px 5px;
-	-moz-box-shadow: #ec15ba 0px 0px 5px;
-	box-shadow: #ec15ba 0px 0px 5px;
+#sub div.tweets .twtr-img a:hover img,
+#sub div.tweets .twtr-img a:active img {
+	border: 1px solid #ec15ba !important;
+	-webkit-box-shadow: #ec15ba 0px 0px 5px !important;
+	-moz-box-shadow: #ec15ba 0px 0px 5px !important;
+	box-shadow: #ec15ba 0px 0px 5px !important;
 }
 #sub div.tweets li a.user {
 	font-weight: bold;
@@ -1900,7 +1912,6 @@ div.pager {
 	background: #50bdb4;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#81d0d0d05), to(#50c3b9));
 	background: -moz-linear-gradient(#71f4e9, #36d6c8);
-	-pie-background: linear-gradient(#81d0d0d05, #50c3b9);
 	-webkit-border-radius: 14px 0px 0px 14px;
 	-moz-border-radius: 14px 0px 0px 14px;
 	border-radius: 14px 0px 0px 14px;
@@ -2001,7 +2012,7 @@ div.pager {
 	width:150px;
 	display: block;
 	float: left;
-	height: 265px;
+	height: 270px;
 	border: 1px solid #ccc;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
@@ -2048,10 +2059,10 @@ div.pager {
 
 .profile h3 a {
 	display: block;
-	margin-right: -8px;
-	margin-left: -8px;
+	margin-right: -3px;
+	margin-left: -3px;
 	text-decoration: none;
-	padding-top: 6px;
+	padding-top: 10px;
 	padding-right: 7px;
 	padding-left: 7px;
 	-webkit-border-radius: 12px 12px 0px 0px;
@@ -2063,20 +2074,28 @@ div.pager {
 	height: 36px;
 	float: left;
  }
+.users_show .profile h3 a {
+	display:block;
+	text-align: center;
+}
 .users_show .profile .icon {
 	margin-bottom: 5px;
-	margin-left: 5px;
-	float: left;
+	float: none;
 	display: block;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
  }
 .users_show .profile .icon img{
-	width:50px;
-	height: 50px;
+	width:72px;
+	height: 72px;
 	float: none;
 	border: 1px solid #ddd;
+	margin-right: auto;
+	margin-left: auto;
+ }
+.users_show .profile .name{
+	display: none;
  }
 .users_show .profile .star{
 	width:85px;
@@ -2093,7 +2112,7 @@ div.pager {
 	text-align: center;
 }
 .profile .name {
-	width:105px;
+	width:100px;
 	float: right;
 	white-space:pre-wrap;
 	word-wrap:break-word;
@@ -2108,6 +2127,19 @@ dl.information {
 dl.information dt {
 	display: none;
 }
+dl.information dd .unselected {
+	color: #999;
+	display: block;
+	line-height: 22px;
+	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
+	margin-bottom: 8px;
+	text-align: center;
+	font-size: 10px;
+	padding: 1px;
+}
+
+
+
 dl.bounty {
 	clear: both;
 }
@@ -2268,10 +2300,13 @@ dl.information dd a {
 div.user {
 	margin-bottom:25px;
 }
+.user div.content {
+	margin-bottom: 25px;
+}
 .user div.content div.main {
 	float: right;
 	width: 560px;
-	min-height: 220px;
+	min-height: 340px;
 	height: auto;
 	border-left-width: 1px;
 	border-left-style: solid;
@@ -2349,9 +2384,9 @@ div.content .tasks dd {
 	float: left;
 	display: block;
 	height: 36px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 	margin-right: 6px;
 	margin-bottom: 0px;
 }
@@ -2368,8 +2403,8 @@ div.content .tasks dd.project img {
 div.content .tasks dd.tweets {
 	width: 60px;
 	border: 1px solid #80ded5;
-	background: #50bdb4;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#81d0d0d05), to(#50c3b9));
+	background: #71f4e9;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#71f4e9o), to(#36d6c8));
 	background: -moz-linear-gradient(#71f4e9, #36d6c8);
 	font-size: 16px;
 	text-align: center;
@@ -2377,7 +2412,7 @@ div.content .tasks dd.tweets {
 	font-weight:bold;
 }
 div.content .tasks dd.tweets:after {
-	content:"twees";
+	content:"tweets";
 	text-align: center;
 	display: block;
 	font-size: 9px;
@@ -2391,7 +2426,6 @@ div.content .tasks dd.comments {
 	background: #e2ff5b;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e2ff5b), to(#bae104));
 	background: -moz-linear-gradient(#e2ff5b, #bae104);
-	-pie-background: linear-gradient(#e2ff5b, #bae104);
 	font-size: 16px;
 	text-align: center;
 	line-height: 22px;
@@ -2444,7 +2478,7 @@ div.content .tasks dd.created_at {
 	padding-right:10px;
 	line-height: 18px;
 	height: 18px;
-	width: 45px;
+	width: 65px;
 	text-align: center;
 	margin-right: 0px;
 }
@@ -2502,7 +2536,6 @@ div.content .tasks dd.created_at {
 	border-radius: 12px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
 	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
-	-pie-background: linear-gradient(#f3f3f3, #d0d0d0);
 	box-shadow: #c9c9c9 1px 1px 3px;
 	-webkit-box-shadow: #666 1px 1px 2px;
 	-moz-box-shadow: #666 1px 1px 2px;
@@ -2583,11 +2616,12 @@ dl.url dd.repository_path:before {
 .project div.content div.main {
 	float: right;
 	width: 560px;
-	min-height: 17px;
+	min-height: 180px;
 	height: auto;
 	border-left-width: 1px;
 	border-left-style: solid;
 	border-left-color: #d9d9d9;
+
 }
 .projects_show div.content div.main .title {
 	font-size: 24px;
@@ -2632,12 +2666,12 @@ dl.url dd.repository_path:before {
 .gfc-resultsHeader {
 	width: 100%;
 	border-bottom: 1px solid #e9e9e9;
-	margin-bottom : 15px;
+	margin-bottom : 15px !important;
   }
   
 .gfc-resultsHeader .gfc-title{
 	display:block;
-	color:#fff;
+	color: #FFF !important;
 	font-size:14px;
 	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
   }
@@ -2723,7 +2757,7 @@ dl.url dd.repository_path:before {
 
 .gf-result .gf-author,
 .gf-result .gf-relativePublishedDate {
-  color: #aaa;
+  color: #aaa !important;
   display : block;
   float:left;
   font-size:10px;
@@ -2851,6 +2885,9 @@ form.new_task .detail .label .title {
 	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
 	font-size: 18px;
 }
+form.new_task input#task_title {
+	width: 570px;
+}
 
 
 form.new_task #task_option {
@@ -2956,3 +2993,62 @@ form.new_task .option_toggle:before {
 	padding-bottom: 3px;
 	padding-left: 12px;
 	}
+
+p.empty {
+	display:block;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-top-color: #D0D0D0;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+
+
+
+ul.projects_buttons li a {
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 20px;
+	margin-left: 12px;
+	width: 200px;
+	background-color: #999;
+	text-align: center;
+	color: #FFF;
+	font-size: 13px;
+	line-height: 13px;
+	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	text-decoration: none;
+	display: block;
+}
+ul.projects_buttons li a:link,
+ul.projects_buttons li a:visited {
+	background-color: #999;
+}
+ul.projects_buttons li a:hover,
+ul.projects_buttons li a:active {
+	background-color: #bbb;
+}
+ul.projects_buttons li a:before {
+    content:"\+";
+    font-weight: bold;
+    background-color: #933;
+    display: inline-block;
+    margin-right: 5px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    height: 18px;
+    width: 17px;
+    text-align: center;
+    line-height: 15px;
+    font-size: 16px;
+    padding-left: 1px;
+}

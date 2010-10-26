@@ -19,6 +19,26 @@
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js'
     = javascript_include_tag 'application'
+
+    <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAEGshODV8YZnayVZ7tLBsVRTqLoPi9-pvDfOgHGNjNh0FSNMtrxSHFA6ff3rJtLtrq4loKeSHcbsxOQ"></script>
+
+    <script type="text/javascript">
+
+    google.setOnLoadCallback(initialize);
+
+    google.load("feeds", "1");
+
+    function initialize() {
+    var feedControl = new google.feeds.FeedControl();
+    feedControl.addFeed("http://fjord.jp/tag/code-dj/feed", "コードDJ");
+    feedControl.addFeed("http://search.twitter.com/search.atom?q=%23hmhs", "twitterstream");
+    feedControl.draw(document.getElementById("feedControl"));
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+
+
     - header_script = yield(:header_script)
     - if header_script
       = header_script
@@ -60,6 +80,42 @@
               = content_tag :div, flash[:error],   :class => 'error'
         = yield
       #sub
+        .tweets.section
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script>
+          new TWTR.Widget({
+          version: 2,
+          type: 'search',
+          search: '#hmhs',
+          interval: 20000,
+          title: '#hmhs',
+          subject: 'twitter stream',
+          width: 235,
+          height: 400,
+          theme: {
+          shell: {
+          background: '#8cc2dc',
+          color: '#ffffff'
+          },
+          tweets: {
+          background: '#8cc2dc',
+          color: '#656565',
+          links: '#1f8fb8'
+          }
+          },
+          features: {
+          scrollbar: true,
+          loop: true,
+          live: true,
+          hashtags: true,
+          timestamp: true,
+          avatars: true,
+          toptweets: true,
+          behavior: 'default'
+          }
+          }).render().start();
+          </script>
+ 
         - if controller_name == 'users'
           = render :partial => 'users/sub'
         - elsif controller_name == 'tasks' and action_name == 'show'
@@ -70,20 +126,22 @@
       .wrap
         .version
           Help me, hackers! Version #{version}
-        %ul.links
-          %li= link_to 'ブログ', 'http://fjord.jp/tag/help-me-hackers'
-          %li= link_to '使い方', 'http://fjord.jp/tag/help-me-hackers-how-to-use'
-          %li= link_to 'ヒント', 'http://fjord.jp/tag/help-me-hackers-hint'
-          %li= link_to 'コードDJ', 'http://fjord.jp/tag/code-dj'
-          %li= link_to '更新情報', 'http://fjord.jp/tag/help-me-hackers-update'
-          %li= link_to '開発予定', project_path(1)
-          %li= link_to '開発生放送（平日18:30〜19:00）', 'http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B'
-          %li= link_to '運営', 'http://fjord.jp/'
-          %li= link_to '利用規約', about_terms_path
-          %li= link_to 'お問い合わせ', 'http://fjord.jp/inquiry'
-        %p.copyright== Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}. Created by #{link_to '@machida', 'http://twitter.com/machida'} and #{link_to '@komagata', 'http://twitter.com/komagata'}.<br />Help me, hackers! Version #{version}
-      - if Rails.env.production?
-        = render :partial => 'shared/google_analytics'
-      - footer_script = yield(:footer_script)
-      - if footer_script
-        = footer_script
+        .contents
+          #feedControl Loading
+          %ul.links
+            %li= link_to 'ブログ', 'http://fjord.jp/tag/help-me-hackers'
+            %li= link_to '使い方', 'http://fjord.jp/tag/help-me-hackers-how-to-use'
+            %li= link_to 'ヒント', 'http://fjord.jp/tag/help-me-hackers-hint'
+            %li= link_to 'コードDJ', 'http://fjord.jp/tag/code-dj'
+            %li= link_to '更新情報', 'http://fjord.jp/tag/help-me-hackers-update'
+            %li= link_to '開発予定', project_path(1)
+            %li= link_to '開発生放送（平日18:30〜19:00）', 'http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B'
+            %li= link_to '運営', 'http://fjord.jp/'
+            %li= link_to '利用規約', about_terms_path
+            %li= link_to 'お問い合わせ', 'http://fjord.jp/inquiry'
+          %p.copyright== Copyright © #{link_to 'fjord,llc', 'http://fjord.jp'}. Created by #{link_to '@machida', 'http://twitter.com/machida'} and #{link_to '@komagata', 'http://twitter.com/komagata'}.<br />Help me, hackers! Version #{version}
+        - if Rails.env.production?
+          = render :partial => 'shared/google_analytics'
+        - footer_script = yield(:footer_script)
+        - if footer_script
+          = footer_script

@@ -1,7 +1,7 @@
-.solved_tasks.profile_list
+.content.solved_tasks.tasks_list
   %h3= t('Solved Tasks')
   - if user.comments.correct.empty?
-    %p= t('label.nothing_posted_comments')
+    %p.empty= t('label.nothing_posted_comments')
   - else
     %ul.tasks
       - tasks = user.comments.correct.map {|c| c.task }

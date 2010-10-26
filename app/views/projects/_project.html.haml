@@ -4,7 +4,7 @@
       %h3.title.title=link_to pretty_truncate(h(project.name), :length => 32), project
       .state
       .description
-        現在、このサイトの本番環境でまさにこのページのバグなんですが、 jquery.markedit（このテキストエリアのエディタ）を有効にするとこのページにアクセスしたときに、テキストエリアのところまでスクロールした状態で画面が始まる。 たとえば下記URL。 http://help-me-h...
+        ※ここにプロジェクトの説明文...
     .sub
       .counts.solved_unsolved
         %ul.solved
@@ -15,7 +15,7 @@
           %li.label 未解決タスク
 
       %dl.person
-        %dt タスク登録者
-        %dd <a href="/komagata_fjord" class='person'><span class='icon'><img src="http://a1.twimg.com/profile_images/70167950/good_face.png" alt="Good_face" width="1070" /></span><span class='name'>komagata_fjord <span class="star">3</span></span></a></dd>
-        %dt タスク登録日時
+        -#  %dt プロジェクト登録者
+        -#  %dd <a href="/komagata_fjord" class='person'><span class='icon'><img src="http://a1.twimg.com/profile_images/70167950/good_face.png" alt="Good_face" width="1070" /></span><span class='name'>komagata_fjord <span class="star">3</span></span></a></dd>
+        %dt プロジェクト登録日時
         %dd.created_at== #{time_ago_in_words project.created_at}前

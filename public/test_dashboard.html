@@ -20,178 +20,358 @@
 
   </head>
   <body>
-    <div id='header'>
-      <h1><a href="/">Help me, hackers!</a></h1>
+    <div id="header">
+      <div class="wrap">
+        <h1><a href="/">Help me, hackers!</a></h1>
 
-      <div class='nav'>
-        <ul>
-          <li>
-            <a href="/dashboard"><img alt="14424182_2338889845_normal" height="16" src="http://a1.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" width="16" /></a>
-            <a href="/dashboard">machida(4)</a>
-          </li>
+        <ul class="account">
+          <li><a href="/dashboard"><img alt="14424182_2338889845_normal" src="http://a0.twimg.com/profile_images/525575524/14424182_2338889845_normal.jpg" style="vertical-align:middle" />machida(0)</a></li>
           <li><a href="/account/edit">アカウント</a></li>
           <li><a href="/logout">ログアウト</a></li>
-
         </ul>
+      </div>
+      <div class="navs">
+
+        <div class="tab">
+          <ul class="wrap">
+            <li><span class="current">ダッシュボード</span></li>
+            <li><a href="/tasks">タスク</a></li>
+            <li><a href="/projects">プロジェクト</a></li>
+            <li><a href="/users">ユーザー</a></li>
+            <li class="add_task"><a href="/tasks/new">タスク登録</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="hierarchy">
       </div>
     </div>
-    <div class='accounts_show' id='wrapper'>
-      <div class='nav'>
-        <ul>
-          <li><a href="/tasks">Requests</a></li>
-          <li><a href="/tasks/wanted">WANTED!</a></li>
+    <div class="accounts_show" id="wrapper">
+      <div id="main">
+        <div id="flash">
 
-          <li><a href="/tasks/unsolved">Unsolved</a></li>
-          <li><a href="/users/hacker">Hackers</a></li>
-          <li><a href="/users/hackee">Hackees</a></li>
-          <li class='add_task'><a href="/tasks/new">問題依頼を依頼する</a></li>
-        </ul>
-      </div>
-      <div id='main'>
-
-        <div id='flash'>
         </div>
-        <div class='title'>
-          <h2>ダッシュボード</h2>
-        </div>
-        <div class='content about'>
-
-
-<div class="add_task"><a href="">あああああああ</a></div>
+        <h2 class="title">ダッシュボード</h2>
+        <div class="content about">
+          <div class="lists">
+            <div class="solved_tasks profile_list">
+              <h3>タスク</h3>
+          <div class='lists'>
             <div class='solved_tasks profile_list'>
-
-              <h3>登録したタスク</h3>
+              <h3>タスク</h3>
               <ul class='tasks'>
-                <li class='task solved'>
-                <div class="goods">888M</div>
-                <div class="comments">888</div>
-                <div class="title"><a href="/tasks/8">wordpressにドリルダウン機能を追加するプラグイン</a></div>
-                <div class="bounty free">1200円</div>
-                <div class="created_at">約19時間前</div>
-                </li>
-                
-                <li class='task'>
-                <div class="goods">888</div>
-                <div class="comments">888</div>
-                <div class="title"><a href="/tasks/8">wordpressにドリルダウン機能を追加するプラグイン</a></div>
-                <div class="bounty">1200円</div>
-                <div class="created_at">約19時間前</div>
+                <li class='task content solved'>
+
+                  <div class='goods'>0</div>
+                  <div class='comments'>3</div>
+                  <div class='title'><a href="/tasks/5">wordpressの定番プラグイン「Breadcrumb ...</a></div>
+                  <div class='bounty'>1,000円</div>
+                  <div class='created_at'>6ヶ月前</div>
                 </li>
 
-                <li class='task'>
-                <div class="goods">888</div>
-                <div class="comments">888</div>
-                <div class="title"><a href="/tasks/8">wordpressにドリルダウン機能を追加するプラグイン</a></div>
-                <div class="bounty">1200円</div>
-                <div class="created_at">約19時間前</div>
-                </li>
+                <li class='task content'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>0</div>
+                  <div class='title'><a href="/tasks/7">wordpressのプラグイン「Disqus Commen...</a></div>
+                  <div class='bounty'>500円</div>
+                  <div class='created_at'>6ヶ月前</div>
 
-              </ul>
-          </div>
-            <div class='posted_tasks profile_list'>
-              <h3>解決したタスク</h3>
-              <ul class='hacks'>
-                <li class='hack'><a href="/tasks/5">wordpressの定番プラグイン「Breadcrumb NavXT」 の改良</a></li>
+                </li>
+                <li class='task content'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>0</div>
+                  <div class='title'><a href="/tasks/8">wordpressにドリルダウン機能を追加するプラグイン</a></div>
+                  <div class='bounty'>5,000円</div>
+                  <div class='created_at'>6ヶ月前</div>
+
+                </li>
+                <li class='task content free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>2</div>
+                  <div class='title'><a href="/tasks/35">hmhのプロジェクト個別ページに登録する情報項目を決めて実装する</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/38">一応、help me,hackersはIE6に対応していな...</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>2</div>
+                  <div class='title'><a href="/tasks/39">プロジェクト個別、ユーザー個別、ダッシュボードに機能を追加</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/40">未解決に解決済みが表示されてるバグを発見</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>1</div>
+                  <div class='comments'>2</div>
+                  <div class='title'><a href="/tasks/48">hmhでGood!のリツイートをするとエラーページ（500...</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>2</div>
+                  <div class='title'><a href="/tasks/56">「使い方はこちら」のリンク先に「プロジェクト」のことも追加</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/65">「COOK!」にoverflow:hidden指定</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/67">ボタンの色がえぐいの優しい色に</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>2</div>
+                  <div class='title'><a href="/tasks/70">インデント方法を選択できたらいい気がする</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/71">wordpressにカレンダーを表示して定休日を表示するp...</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved'>
+                  <div class='goods'>1</div>
+                  <div class='comments'>4</div>
+                  <div class='title'><a href="/tasks/72">IE PNG Fix 2.0がすぐ使えるようになるword...</a></div>
+                  <div class='bounty'>1,000円</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/77">wordpressテーマ「wp-fjord-love」の仕...</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/78">プロジェクトの編集が行えない、というバグを発見</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/85">一応、ie6に対応してないことをわかるようにする</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>0</div>
+                  <div class='title'><a href="/tasks/92">プロジェクト個別ページの概要の部分にデザインを入れる</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>1</div>
+                  <div class='comments'>14</div>
+                  <div class='title'><a href="/tasks/93">任意の期間、ブログが更新されないとメールが飛ぶwordpr...</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>5ヶ月前</div>
+
+                </li>
+                <li class='task content free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>0</div>
+                  <div class='title'><a href="/tasks/95">文字がかぶってGOOD!ツイートが出来ないというバグを修正</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>4ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>3</div>
+                  <div class='title'><a href="/tasks/98">デザインを入れてpush！</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>4ヶ月前</div>
+
+                </li>
+                <li class='task content free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>0</div>
+                  <div class='title'><a href="/tasks/99">メールアドレスが未設定の場合のpaypalボタンの対応</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>4ヶ月前</div>
+
+                </li>
+                <li class='task content solved'>
+                  <div class='goods'>1</div>
+                  <div class='comments'>17</div>
+                  <div class='title'><a href="/tasks/6">素人さんに優しいUIのクロップツール「easy cropp...</a></div>
+                  <div class='bounty'>5,000円</div>
+                  <div class='created_at'>6ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>4</div>
+                  <div class='title'><a href="/tasks/100">macのchromeで画像をアップロードしても表示されない</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>4ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/104">wordpressのplugin、short_title_...</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>4ヶ月前</div>
+
+                </li>
+                <li class='task content free'>
+                  <div class='goods'>3</div>
+                  <div class='comments'>3</div>
+                  <div class='title'><a href="/tasks/135">Next Holiday のtwitter bot</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>約1ヶ月前</div>
+
+                </li>
+                <li class='task content solved free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>3</div>
+                  <div class='title'><a href="/tasks/139">twitterへのリンクがずれてる</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>約1ヶ月前</div>
+
+                </li>
+                <li class='task content free'>
+                  <div class='goods'>0</div>
+                  <div class='comments'>1</div>
+                  <div class='title'><a href="/tasks/155">Help me, hackers! 言語ごとのタスクのrs...</a></div>
+                  <div class='bounty free'>FREE</div>
+                  <div class='created_at'>16日前</div>
+
+                </li>
               </ul>
             </div>
 
-            <div class='posted_hacks profile_list'>
-              <h3>ウォッチしているタスク</h3>
-              <p>ウォッチしている問題はありません</p>
             </div>
-
-          <ul class='loggedin'>
-            <li class='show'><a href="/machida">プロフィールを見る</a></li>
-
-            <li class='edit'><a href="/account/edit">アカウント情報を編集する</a></li>
-            <li class='delete'><a href="/account" onclick="if (confirm('本当に退会してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', '0DcbXLUklX2k0tVJ4mzwk6PGKK+lwlRoqhZutqLgCe8='); f.appendChild(s);f.submit(); };return false;">会員情報を削除する</a></li>
+          </div>
+          <ul class="loggedin">
+            <li class="show"><a href="/machida" class="sub_button">プロフィールを見る</a></li>
+            <li class="edit"><a href="/account/edit" class="sub_button">アカウント情報を編集する</a></li>
+            <li class="delete"><a href="/account" class="sub_button" onclick="if (confirm('本当に退会してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'C/dyMNi2BXCb8ANG7GaBJsUkXeyf8ztl2QlxP53yz3c='); f.appendChild(s);f.submit(); };return false;">会員情報を削除する</a></li>
           </ul>
+
         </div>
       </div>
-      <div id='sub'>
-        <div class='section'>
-          <h3>カテゴリー</h3>
+      <div id="sub">
+        <div class="section">
+          <dl>
+            <dt>言語別タスク数</dt>
+            <dd>
+              <ul class="tasks count_by_language">
 
-          <ul class='categories'>
-            <li class='category'><a href="/tasks/category/iphone-app-making">iPhoneアプリ</a></li>
-            <li class='category'><a href="/tasks/category/android-app-making">Androidアプリ</a></li>
-            <li class='category'><a href="/tasks/category/software-making">ソフトウェア</a></li>
-            <li class='category'><a href="/tasks/category/library-making">ライブラリ</a></li>
-            <li class='category'><a href="/tasks/category/class-function-making">クラス・関数</a></li>
-
-            <li class='category'><a href="/tasks/category/plugin-making">プラグイン</a></li>
-            <li class='category'><a href="/tasks/category/prototype-making">プロトタイプ</a></li>
-            <li class='category'><a href="/tasks/category/debugging">バグ修正</a></li>
-            <li class='category'><a href="/tasks/category/technology-study">技術調査</a></li>
-            <li class='category'><a href="/tasks/category/software-multilingualization">多言語化</a></li>
-            <li class='category'><a href="/tasks/category/document-translation">文章翻訳</a></li>
-
-            <li class='category'><a href="/tasks/category/data-collection-and-making">データ収集・作成</a></li>
-            <li class='category'><a href="/tasks/category/programming-quiz">プログラミングクイズ</a></li>
-          </ul>
-          <div class='to_archive'>
-            <p><a href="/about/category">カテゴリーの説明</a></p>
-          </div>
+                <li class="language"><a href="/tasks/language/javascript">JavaScript (21)</a></li>
+                <li class="language"><a href="/tasks/language/ruby">Ruby (2)</a></li>
+                <li class="language"><a href="/tasks/language/php">PHP (1)</a></li>
+              </ul>
+            </dd>
+          </dl>
         </div>
 
-        <div class='section'>
-          <h3>ヒント</h3>
-          <ul>
-            <li>
-              <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」です。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
-            </li>
-            <li>
-              <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
+        <div class="section hint">
+          <dl>
+            <dt>ヒント</dt>
+            <dd>
+              <ul>
+                <li>
+                  <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p>
+                </li>
 
-              <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
-            </li>
-            <li>
-              <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
-            </li>
-            <li>
-              <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
+                <li>
+                  <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p>
+                  <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p>
+                </li>
+                <li>
+                  <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p>
+                </li>
 
-            </li>
-            <li>
-              <p>ジャンクフード食系男子募集中！</p>
-            </li>
-            <li>
-              <p>解決してもらうコツはプログラマーにとって面白い問題設定にすること。前提とゴールは明確に。</p>
-            </li>
-          </ul>
+                <li>
+                  <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p>
+                </li>
+                <li>
+                  <p>ジャンクフード食系男子募集中！</p>
+                </li>
+                <li>
 
-          <div class='to_archive'>
-            <p><a href="/about/hint">もっと詳しく</a></p>
-          </div>
+                  <p>解決してもらうコツはプログラマーにとって面白いタスク設定にすること。前提とゴールは明確に。</p>
+                </li>
+              </ul>
+            </dd>
+            <div class="to_detail">
+              <p><a href="/about/hint" class="button">もっと詳しく</a></p>
+            </div>
+          </dl>
+
         </div>
       </div>
     </div>
-    <div id='footer'>
-      <ul class='links'>
+    <div id="footer">
+      <div class="wrap">
+        <div class="version">
+          Help me, hackers! Version 20100501000000
+        </div>
+        <ul class="links">
 
-        <li><a href="/about">使い方</a></li>
-        <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
-        <li><a href="http://github.com/komagata/help-me-hackers/issues">開発予定</a></li>
-        <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
-        <li><a href="http://fjord.jp/">運営</a></li>
-        <li><a href="/about/terms">利用規約</a></li>
+          <li><a href="http://fjord.jp/tag/help-me-hackers">ブログ</a></li>
+          <li><a href="http://fjord.jp/tag/help-me-hackers-how-to-use">使い方</a></li>
+          <li><a href="http://fjord.jp/tag/help-me-hackers-hint">ヒント</a></li>
+          <li><a href="http://fjord.jp/tag/code-dj">コードDJ</a></li>
+          <li><a href="http://fjord.jp/tag/help-me-hackers-update">更新情報</a></li>
+          <li><a href="/projects/1">開発予定</a></li>
 
-        <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
-      </ul>
-      <p class='copyright'>Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.</p>
+          <li><a href="http://www.ustream.tv/channel/web%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E4%BD%9C%E3%82%8B">開発生放送（平日18:30〜19:00）</a></li>
+          <li><a href="http://fjord.jp/">運営</a></li>
+          <li><a href="/about/terms">利用規約</a></li>
+          <li><a href="http://fjord.jp/inquiry">お問い合わせ</a></li>
+        </ul>
+        <p class="copyright">Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100501000000</p>
+
+      </div>
     </div>
-
-    <script type='text/javascript'>
-      //<![CDATA[
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-        try {
-        var pageTracker = _gat._getTracker("UA-2927688-8");
-        pageTracker._trackPageview();
-        } catch(err) {}
-      //]]>
-    </script>
   </body>
 </html>

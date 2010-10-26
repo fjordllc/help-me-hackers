@@ -7,13 +7,15 @@
         .project
           %a.project.clearfix{:href => project_path(object.project)}
             %span.name= object.project.name
-      - if object.solved?
-        .resolver
-          %h4= t('Solver')
-          %ul
-            %li.icon=link_to image_tag(object.solver.profile_image_url), user_path(object.solver)
-            %li.name=link_to object.solver.login, user_path(object.solver)
-      .description~ truncate(strip_tags(markdown object.description), :length => 150)
+      .description
+        - if object.solved?
+          %dl.resolver
+            %dt= t('Solver')
+            %dd.clearfix
+              %a.resolver{:href => user_path(object.solver)}
+                %span.icon= image_tag(object.solver.profile_image_url)
+                %span.name= object.solver.login
+        ~ truncate(strip_tags(markdown object.description), :length => 150)
       - if object.tags.present?
         %ul.tags
           - object.tags.each do |tag|
