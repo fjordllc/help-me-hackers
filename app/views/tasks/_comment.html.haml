@@ -3,9 +3,10 @@
     .content
       .title
         %div{good_attrs(comment)}
-          %ul.good
-            %li.count{:id => "comment_#{comment.id}_good"}= comment.votes.size
-            %li.label Good
+          %dl.good
+            %dt.label
+              %span Good!
+            %dd.count{:id => "comment_#{comment.id}_good"}= comment.votes.size
         %h4
           %a.commenter{:href => user_path(comment.user)}
             %span.icon= image_tag(comment.user.profile_image_url)

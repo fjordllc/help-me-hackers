@@ -363,11 +363,45 @@ ol.bread_crumbs li a {
 }
 #wrapper div.eye_catch ul {
 	display: block;
-	height: 40px;
+	height: 20px;
 	-webkit-border-radius: 0px 0px 12px 12px;
 	-moz-border-radius: 0px 0px 12px 12px;
 	border-radius: 0px 0px 12px 12px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 15px;
+	padding-left: 15px;
 }
+#wrapper div.eye_catch a {
+	display: block;
+	height: 20px;
+	text-decoration: none;
+	float: left;
+	line-height: 20px;
+	margin-right: 12px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 12px;
+}
+#wrapper div.eye_catch a:link,
+#wrapper div.eye_catch a:visited {
+	color: #FFF;
+	text-shadow:1px 1px 0px #000;
+}
+#wrapper div.eye_catch a:hover,
+#wrapper div.eye_catch a:active {
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
+	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
+	box-shadow: #c9c9c9 1px 1px 3px;
+	-webkit-box-shadow: #000 1px 1px 2px;
+	-moz-box-shadow: #000 1px 1px 2px;
+	color: #ec189a;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	text-shadow:1px 1px 0px #fff;
+}
+
 #main {
 	clear: both;
 	float: left;
@@ -1433,7 +1467,7 @@ ul.loggedin {
 	background-color: #666666;
 	padding-bottom: 20px;
 	background: -webkit-gradient(linear, 0 0, 0 10, from(#4e4e4e), to(#666666));
-	background: -moz-linear-gradient(#4e4e4e, #666666 6%);
+	background: -moz-linear-gradient(#4e4e4e, #666666 2%);
 	padding-top: 25px;
 	border-top-width: 1px;
 	border-top-style: solid;
@@ -1514,6 +1548,26 @@ div.pager {
 .tasks_show div.post h3 {
 	display: inline;
 }
+
+.tasks_show div.post .please_login {
+	display: block;
+	margin-top: 35px;
+	text-align: center;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	background-color: #CCC;
+	margin-right: 140px;
+	margin-left: 140px;
+	line-height: 28px;
+	font-size: 12px;
+}
+.tasks_show div.post .please_login a {
+	font-weight: bold;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
 
 
 .tasks_show div.comments li.comment {

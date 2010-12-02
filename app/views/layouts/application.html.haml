@@ -69,6 +69,17 @@
     #wrapper{:class => "#{controller_name}_#{action_name}"}
       - if controller_name == 'top'
         .eye_catch
+          .inner
+            %h2 プログラミングタスクを<br />共有するサイト
+          %ul
+            %li
+              <a href="">このサイトについて</a>
+            %li
+              <a href="">タスクを登録する方法</a>
+            %li
+              <a href="">タスクを解決する方法</a>
+            %li
+              <a href="">よくある質問</a>
       #main
         #flash
           - unless flash.empty?
