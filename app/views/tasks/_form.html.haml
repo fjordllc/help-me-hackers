@@ -33,12 +33,12 @@
         = f.label :source_url
         %span （オプション）
       = f.text_field :source_url
-    .section.detail
-      .label
-        = f.label :description
-        %span.title= "詳細"
-        %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
-      = f.text_area :description, :size => '70x10'
+  .section.detail
+    .label
+      = f.label :description
+      %span.title= "詳細"
+      %span= "（#{link_to "Markdown記法", 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）"
+    = f.text_area :description, :size => '70x10'
   #preview.comment
     .content
       .title

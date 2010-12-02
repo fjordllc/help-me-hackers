@@ -1,35 +1,35 @@
-.section.post
-  - form_for project do |f|
-    = f.error_messages
-    %div.section
+- form_for project do |f|
+  = f.error_messages
+  .section
+    .label
       = f.label :name
-      %br
-      = f.text_field :name
-    %div.section
+    = f.text_field :name
+  .section.detail
+    .label
       = f.label :description
-      == （#{link_to 'Markdown記法'}が使えます）
-      %br
-      = f.text_area :description, :size => '60x5'
-    %h3 プレビュー
-    .wrapper
-      .preview
-    %div.section
-      = f.label :logo_image_url
-      （オプション）
-      %br
-      = f.text_field :logo_image_url, :size => 60
-    %div.section
-      = f.label :website_url
-      （オプション）
-      %br
-      = f.text_field :website_url, :size => 60
-    %div.section
-      = f.label :repository_path
-      （オプション）
-      %br
-      = f.text_field :repository_path, :size => 60
-    %div.section
-      = f.submit '送信'
+      %span.title 詳細
+      %span== （#{link_to 'Markdown記法'}が使えます）
+    = f.text_area :description, :size => '60x5'
+  #preview.comment
+    .content
+      .title
+        %h4= t('Preview')
+      .description.preview
+  .section
+    = f.label :logo_image_url
+    （オプション）
+    = f.text_field :logo_image_url, :size => 60
+  .section
+    = f.label :website_url
+    （オプション）
+    = f.text_field :website_url, :size => 60
+  .section.last-child
+    = f.label :repository_path
+    （オプション）
+    = f.text_field :repository_path, :size => 60
+  %p
+    = f.submit '利用規約に同意して登録する'
+    = link_to '利用規約', about_terms_path, :target => '_blank'
 - content_for :footer_script do
   = javascript_include_tag 'markedit/showdown'
   = javascript_include_tag 'markedit/markedit.lang.ja'

@@ -2,7 +2,7 @@
 .content.tasks_list
   %h3 タスク
   - if @user.tasks.count.zero?
-    %p= t('label.nothing_posted_tasks')
+    %p.empty= t('label.nothing_posted_tasks')
   - else
     %ul.tasks
       = render :partial => 'tasks/object_small', :collection => @user.tasks

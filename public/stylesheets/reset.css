@@ -40,7 +40,8 @@ blockquote {
 	overflow:visible;
 	padding:0;
 	line-height: 1.4;
-	font-family:"Lucida Sans Unicode","Lucida Grande",Arial,Helvetica,"ヒラギノ丸ゴ Pro W4",HiraMaruPro-W4,"ヒラギノ角ゴ Pro W3",HiraKakuPro-W3,Osaka,sans-serif;	font-size: 13px;
+	font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','Meiryo','メイリオ','ＭＳ Ｐゴシック','ＭＳ ゴシック',Osaka,Osaka-等幅,sans-serif;	
+	font-size: 13px;
 	color: #656565;
 	background-color: #e8e8e8;
  } 

@@ -144,7 +144,7 @@ a.sub_button:active {
 #header h1 a {
 	display: block;
 	height: 60px;
-	width: 350px;
+	width: 310px;
 	text-indent: -9999px;
 	background-image: url(../images/logo.png);
 	background-repeat: no-repeat;
@@ -320,11 +320,14 @@ ol.bread_crumbs li {
 ol.bread_crumbs li a {
 	display: block;
 	float: left;
-	margin-right: 12px;
-	padding-right: 12px;
-	padding-left: 12px;
-	text-decoration: none;
+	margin-right: 7px;
+	padding-right: 20px;
+	padding-left: 6px;
 	color: #656565;
+	background-image: url(../images/bread_crumbs.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	font-weight: normal;
 	}
 #wrapper {
 	clear: both;
@@ -355,11 +358,12 @@ ol.bread_crumbs li a {
 	text-shadow:1px 1px 0px #fff;
 	display: block;
 	font-size: 36px;
-	font-family:"ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif;
+	/* [disabled]font-family:"ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif; */
 	font-weight: bold;
 	margin-right: 15px;
 	margin-left: 15px;
 	line-height: 1.4;
+	color: #444;
 }
 #wrapper div.eye_catch ul {
 	display: block;
@@ -418,6 +422,7 @@ h2.title {
 	border-bottom-style: solid;
 	border-bottom-color: #bbb;
 	padding-bottom: 5px;
+	font-weight: normal !important;
 }
 
 
@@ -939,7 +944,7 @@ div.content div.description blockquote li:last-child {
 div.information {
 	display: block;
 	clear: both;
-	padding-top: 5px;
+	padding-top: 7px;
 }
 
 div.information dl {
@@ -1542,6 +1547,18 @@ ul.loggedin {
 div.pager {
 	clear: both;
 }
+div.pager a {
+	clear: both;
+	background-image: url(../images/pager.png);
+	background-repeat: no-repeat;
+	display: block;
+	padding-right: 138px;
+	width: 72px;
+	line-height: 25px;
+	background-position: right center;
+	height: 25px;
+}
+
 .tasks_show div.section {
 	clear: both;
 }
@@ -2893,7 +2910,7 @@ a.gf-branding-clickable {
 }
 
 
-form.new_task .section .label {
+form .section .label {
 	font-weight: bold;
 	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
 	float: left;
@@ -2908,7 +2925,7 @@ form.new_task #task_option .section .label {
 	margin-bottom: 5px;
 }
 
-form.new_task .section {
+form .section {
 	background-color: #ccc;
 	margin-top: 0;
 	margin-right: 0;
@@ -2919,38 +2936,44 @@ form.new_task .section {
 	padding-bottom: 8px;
 	padding-left: 15px;
 }
-form.new_task .detail {
+form .last-child {
+	margin-bottom: 20px;
+}
+form .detail {
 	background-color: transparent;
 	padding: 0px;
 	margin: 0px;
 }
 
-form.new_task .detail label {
+form .detail label {
 	display:none;
 }
-form.new_task .detail .label {
+form .detail .label {
 	margin-bottom: -10px;
 	float: none;
 	width: 100%;
 	display: block;
 }
-form.new_task .detail .label .title {
+form .detail .label .title {
 	font-weight: bold;
 	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
 	font-size: 18px;
 }
-form.new_task input#task_title {
+form.new_project .detail .label {
+	margin-top: 20px;
+}
+form input#task_title {
 	width: 570px;
 }
 
 
-form.new_task #task_option {
+form #task_option {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 20px;
 	margin-left: 0px;
 }
-form.new_task .option_toggle {
+form .option_toggle {
 	margin-top: 20px;
 	margin-right: 0px;
 	margin-bottom: 20px;
@@ -3013,7 +3036,7 @@ form.new_task .option_toggle:before {
 	margin-bottom: 15px;
 	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
 	font-size: 12px;
-	text-align: right;
+	text-align: center;
 	display: block;
 }
 .errorExplanation li {
@@ -3050,12 +3073,17 @@ form.new_task .option_toggle:before {
 
 p.empty {
 	display:block;
+	width:20em;
+	margin-right: auto;
+	margin-left: auto;
 	text-align: center;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	border-top-color: #D0D0D0;
-	border-top-style: solid;
-	border-top-width: 1px;
+	background-color: #EDEDED;
+	padding: 6px;
+	margin-bottom:15px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	margin-top: 15px;
 }
 
 
@@ -3154,6 +3182,20 @@ div.about h3 {
 	padding-bottom: 6px;
 	padding-left: 10px;
 	background: -moz-linear-gradient(top, #f6f6f6, #e6e6e6);
-	background: -webkit-gradient(linear, center top, center bottom, from(#374978), to(#2e406d));
+	background: -webkit-gradient(linear, center top, center bottom, from(#f6f6f6), to(#e6e6e6));
 	border: 1px solid #ddd;
+	}
+
+#flash .notice {
+	display:block;
+	width:30em;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	background-color: #FF3;
+	padding: 12px;
+	margin-bottom:15px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
 	}
