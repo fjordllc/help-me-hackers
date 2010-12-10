@@ -42,27 +42,23 @@
       %div{good_attrs(@task)}
         %dl
           %dt
-            %span= 'tweet'
+            %span= 'Good!'
           %dd.count{:id => "task_#{@task.id}_good"}= @task.votes.size
       %h2= @task.title
-      - form_for @task.votes.new(:comment => good_task_retweet(@task)), :html => {:id => "task_#{@task.id}_vote_form", :style => 'display:none'} do |f|
+      - form_for @task.votes.new(:comment => good_task_retweet(@task)), :html => {:id => "task_#{@task.id}_vote_form",:class => "tweet",  :style => 'display:none'} do |f|
         - if logged_in?
           .text
             = f.hidden_field :voteable_id, :id => "task_#{@task.id}_voteable_id"
             = f.hidden_field :voteable_type, :id => "task_#{@task.id}_voteable_type"
             = f.text_field :comment, :id => "task_#{@task.id}_comment", :size => '140', :maxlength => 140
           - if logged_in?
-            .button= image_submit_tag 'good_button.gif'
+            .input= f.submit 'tweet'
           - else
-            .button= link_to 'Retweet', login_path
-          %p.center Retweetをすることで、このタスクにGood!ポイントが加算されます
+            .input= link_to 'Retweet', login_path
+          %p.center tweetをすることでGood!ポイントが加算されます
         - else
-          .please_login== Retweetするには#{link_to 'Twitterでログイン', login_path}してください。
+          .please_login== tweetをするには#{link_to 'Twitterでログイン', login_path}してください。
     .state
-    - if @task.project
-      .project
-        %a.project.clearfix{:href => project_path(@task.project)}
-          %span.name= @task.project.name
     .information
       %dl.license
         %dt= t('activerecord.attributes.task.license')
@@ -86,12 +82,12 @@
         %li.delete= link_to t('Delete this task'), @task, :confirm => t('Are you sure'), :method => :delete, :class => 'sub_button'
 - unless @comments.empty?
   .section.comments
-    %h3= t('Comments')
+    %h3.title= t('Comments')
     %ul.comments
       = render :partial => 'comment', :collection => @comments
 = will_paginate(@comments)
 .section.post
-  %h3= t('Comment')
+  %h3.title= t('Comment')
   %span== （#{link_to 'Markdown記法', 'http://blog.2310.net/archives/6', :target => '_blank'} が使えます）
   %span （コメントはTwitterにも飛びます）
   - if logged_in?

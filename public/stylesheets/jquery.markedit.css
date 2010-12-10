@@ -1,6 +1,6 @@
 .markedit {
 	clear: both;
-	margin-top: 20px;
+	margin-top: 15px;
 	-webkit-box-shadow: #dcdcdc 0px 0px 5px;
 	-moz-box-shadow: #dcdcdc 0px 0px 5px;
 	box-shadow: #dcdcdc 0px 0px 5px;
@@ -9,6 +9,13 @@
 	border-radius:12px;
 	margin-bottom: 5px;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.post .markedit {
+	margin-top: 0px;}
+}
+
+
 .markedit textarea {
 	display: block;
 	width: 712px;

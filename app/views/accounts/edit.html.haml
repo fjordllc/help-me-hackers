@@ -1,40 +1,37 @@
-.title
-  %h2 アカウント編集
-.content
-  .section.post
-    - form_for @user, :url => account_path do |f|
-      = f.error_messages
-      %div.section
-        = "#{f.label:email}（Paypalで報酬を受け取るには公開する必要があります）"
-        %br
-        = f.text_field :email
-      %div.section
-        = f.label :state
-        %br
-        = select_by_model @user, :state_id
-      %div.section
-        = f.label :company
-        %br
-        = f.text_field :company
-      %div.section
-        = f.label :language
-        %br
-        = select_programming_language @user, :language_id
-      %div.section
-        = f.label :editor
-        %br
-        = select_by_model @user, :editor_id
-      %div.section
-        = f.label :github_account
-        %br
-        = f.text_field :github_account
-      %div.section
-        = f.label :bitbucket_account
-        %br
-        = f.text_field :bitbucket_account
-      %div.section
-        = f.label :ssh_public_key
-        %br
-        = f.text_area :ssh_public_key, :size => '50x4'
-      %div.section
-        = f.submit '編集'
+%h2.title アカウント編集
+.section.post
+  - form_for @user, :url => account_path do |f|
+    = f.error_messages
+    %div.section
+      = "#{f.label:email}（Paypalで報酬を受け取るには公開する必要があります）"
+      %br
+      = f.text_field :email
+    %div.section
+      = f.label :state
+      %br
+      = select_by_model @user, :state_id
+    %div.section
+      = f.label :company
+      %br
+      = f.text_field :company
+    %div.section
+      = f.label :language
+      %br
+      = select_programming_language @user, :language_id
+    %div.section
+      = f.label :editor
+      %br
+      = select_by_model @user, :editor_id
+    %div.section
+      = f.label :github_account
+      %br
+      = f.text_field :github_account
+    %div.section
+      = f.label :bitbucket_account
+      %br
+      = f.text_field :bitbucket_account
+    %div.section
+      = f.label :ssh_public_key
+      %br
+      = f.text_area :ssh_public_key, :size => '50x4'
+    = f.submit '編集'

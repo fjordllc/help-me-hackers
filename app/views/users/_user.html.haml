@@ -6,14 +6,6 @@
     %a{:href => user_path(user), :class => 'clearfix'}
       %span.icon= image_tag(user.profile_image_url)
       %span.name= user.login
-  %dl.state
-    - if user.state
-      %dt出身
-      %dd.state= t("label.state.#{user.state.name}")
-    - else
-      %dt出身
-      %dd.state &nbsp;
-
 .counts.solved_unsolved
   %ul.solved
     %li.count= user.comments.correct.size

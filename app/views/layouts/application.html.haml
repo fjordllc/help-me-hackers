@@ -59,7 +59,6 @@
             - if logged_in?
               %li= link_to_unless_current_with_span t('Dashboard'), dashboard_path
             %li= link_to_unless_current_with_span t('Tasks'), tasks_path
-            %li= link_to_unless_current_with_span t('Projects'), projects_path
             %li= link_to_unless_current_with_span t('Users'), users_path
             %li.add_task= link_to t('Create Task'), new_task_path
       .hierarchy
@@ -69,17 +68,16 @@
     #wrapper{:class => "#{controller_name}_#{action_name}"}
       - if controller_name == 'top'
         .eye_catch
-          .inner
-            %h2 プログラミングタスクを<br />共有するサイト
-          %ul
-            %li
-              <a href="/about">このサイトについて</a>
-            %li
-              <a href="">タスクを登録する方法</a>
-            %li
-              <a href="">タスクを解決する方法</a>
-            %li
-              <a href="">よくある質問</a>
+          %h2 プログラミング開発を<br />依頼するサイト
+        %ul.sort
+          %li
+            <a href="/about" class="button">このサイトについて</a>
+          %li
+            <a href="" class="button">タスクを登録する方法</a>
+          %li
+            <a href=""  class="button">タスクを解決する方法</a>
+          %li
+            <a href=""  class="button">よくある質問</a>
       #main
         #flash
           - unless flash.empty?
@@ -91,41 +89,42 @@
               = content_tag :div, flash[:error],   :class => 'error'
         = yield
       #sub
-        .tweets.section
-          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-          <script>
-          new TWTR.Widget({
-          version: 2,
-          type: 'search',
-          search: '#hmhs',
-          interval: 20000,
-          title: '#hmhs',
-          subject: 'twitter stream',
-          width: 235,
-          height: 400,
-          theme: {
-          shell: {
-          background: '#8cc2dc',
-          color: '#ffffff'
-          },
-          tweets: {
-          background: '#8cc2dc',
-          color: '#656565',
-          links: '#1f8fb8'
-          }
-          },
-          features: {
-          scrollbar: true,
-          loop: true,
-          live: true,
-          hashtags: true,
-          timestamp: true,
-          avatars: true,
-          toptweets: true,
-          behavior: 'default'
-          }
-          }).render().start();
-          </script>
+        - if controller_name == 'top'
+          .tweets.section
+            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script>
+            new TWTR.Widget({
+            version: 2,
+            type: 'search',
+            search: '#hmhs',
+            interval: 20000,
+            title: '#hmhs',
+            subject: 'twitter stream',
+            width: 235,
+            height: 400,
+            theme: {
+            shell: {
+            background: '#8cc2dc',
+            color: '#ffffff'
+            },
+            tweets: {
+            background: '#8cc2dc',
+            color: '#656565',
+            links: '#1f8fb8'
+            }
+            },
+            features: {
+            scrollbar: true,
+            loop: true,
+            live: true,
+            hashtags: true,
+            timestamp: true,
+            avatars: true,
+            toptweets: true,
+            behavior: 'default'
+            }
+            }).render().start();
+            </script>
  
         - if controller_name == 'users'
           = render :partial => 'users/sub'

@@ -62,12 +62,12 @@ span.name {
 .button:active {
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fde217), to(#fde217));
 	background: -moz-linear-gradient(#fefa86, #fde217);
-	text-shadow:1px 1px 0px #fff;
 	-webkit-box-shadow: #fde217 0px 0px 3px;
 	-moz-box-shadow: #fde217 0px 0px 3px;
 	box-shadow: #fde217 0px 0px 3px;
 	border: 1px solid #eed415;
 	color: #ec189a;
+	text-shadow:1px 1px 0px #fff;
 }
 span.icon img {
 	background-color: #fff;
@@ -338,7 +338,7 @@ ol.bread_crumbs li a {
 	}
 #wrapper div.eye_catch {
 	background-color: #fff;
-	height: 200px;
+	height: 140px;
 	margin-bottom: 15px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
@@ -349,63 +349,18 @@ ol.bread_crumbs li a {
 	box-shadow: #d0d0d0 0px 0px 5px;
 	border: 1px solid #ccc;
 	background-image: url(../images/eyecatch.gif);
-	}
-#wrapper div.eye_catch .inner {
-	margin-top: 15px;
-	height: 145px;
+	padding-top: 20px;
 	}
 #wrapper div.eye_catch h2 {
 	text-shadow:1px 1px 0px #fff;
 	display: block;
 	font-size: 36px;
-	/* [disabled]font-family:"ヒラギノ明朝 Pro W6", "ＤＦＰ極太明朝体", "ＤＦ極太明朝体", "HG平成明朝体W9", "平成明朝", "ＭＳ Ｐ明朝", serif; */
 	font-weight: bold;
 	margin-right: 15px;
 	margin-left: 15px;
 	line-height: 1.4;
 	color: #444;
 }
-#wrapper div.eye_catch ul {
-	display: block;
-	height: 20px;
-	-webkit-border-radius: 0px 0px 12px 12px;
-	-moz-border-radius: 0px 0px 12px 12px;
-	border-radius: 0px 0px 12px 12px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-#wrapper div.eye_catch a {
-	display: block;
-	height: 20px;
-	text-decoration: none;
-	float: left;
-	line-height: 20px;
-	margin-right: 12px;
-	padding-right: 10px;
-	padding-left: 10px;
-	font-size: 12px;
-}
-#wrapper div.eye_catch a:link,
-#wrapper div.eye_catch a:visited {
-	color: #FFF;
-	text-shadow:1px 1px 0px #000;
-}
-#wrapper div.eye_catch a:hover,
-#wrapper div.eye_catch a:active {
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
-	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
-	box-shadow: #c9c9c9 1px 1px 3px;
-	-webkit-box-shadow: #000 1px 1px 2px;
-	-moz-box-shadow: #000 1px 1px 2px;
-	color: #ec189a;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	text-shadow:1px 1px 0px #fff;
-}
-
 #main {
 	clear: both;
 	float: left;
@@ -428,8 +383,7 @@ h2.title {
 
 
 
-.task,
-.project {
+.task {
 	display: block;
 	clear: both;
 	margin-bottom: 25px;
@@ -465,17 +419,14 @@ div.content {
 	border-left-style: solid;
 	border-left-color: #d9d9d9;
 }
-.task div.content div.main .title,
-.project div.content div.main .title
- {
+.task div.content div.main .title {
 	font-size: 18px;
 	line-height: 1.3;
 	font-weight: bold;
 	display: block;
 	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
 }
-.task div.content div.main .title a,
-.project div.content div.main .title a {
+.task div.content div.main .title a {
 	display: block;
 	padding-right: 12px;
 	padding-left: 12px;
@@ -537,9 +488,6 @@ div.content div.state {
 	clear: both;
 	text-indent: -9999px;
 }
-.project div.content div.state {
-	background-color: #e48486;
-}
 .user div.content div.state {
 	background-color: #8CC2DC;
 }
@@ -571,11 +519,11 @@ div.tasks_show .title div.good {
 	box-shadow: #ccc 1px 1px 1px;
 }
 div.tasks_show .title div.good:hover {
-	background-color: #e7e7e7;
-	border-top-color: #e0e0e0;
+	background-color: #ec189a;
+	border-top-color: #ec189a;
 	border-right-color: #b0b0b0;
 	border-bottom-color: #b0b0b0;
-	border-left-color: #e0e0e0;
+	border-left-color: #ec189a;
 }
 div.tasks_show .title div.good dt {
 	display: block;
@@ -587,7 +535,6 @@ div.tasks_show .title div.good dt {
 	border-radius: 6px 6px 0px 0px;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#7bc8e4), to(#3b99bb));
 	background: -moz-linear-gradient(#7bc8e4, #3b99bb);
-	font-weight: bold;
 }
 div.tasks_show .title div.good dt span {
 	display: block;
@@ -598,7 +545,7 @@ div.tasks_show .title div.good dt span {
 	height: 27px;
 	padding-bottom: 5px;
 	color: #ec189a;
-	font-size: 8px !important;
+	font-size: 10px ;
 	font-family:Tahoma, Geneva, sans-serif
 }
 div.tasks_show .title div.good dd {
@@ -623,22 +570,56 @@ div.tasks_show div.content div.main .title h2 {
 	width: 630px;
 	font-size: 22px;
 }
+form.tweet {
+	display: block;
+	background-color: #EDEDED;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius:6px;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f3f3f3), to(#d0d0d0));
+	background: -moz-linear-gradient(#f3f3f3, #d0d0d0);
+	border: 1px solid #ccc;
+	width: 660px;
+	margin-top: 8px;
+	float: left;
+	padding-top: 8px;
+	padding-right: 18px;
+	padding-bottom: 8px;
+	padding-left: 18px;
+}
+form.tweet .text {
+	float: left;
+}
+form.tweet .text input {
+	width: 590px;
+}
+form.tweet .input {
+	float: right;
+	width: 50px;
+	text-align: center;
+}
+form.tweet p {
+	display: block;
+	clear: both;
+	padding-top: 8px;
+	font-size: 12px;
+	font-weight: bold;
+	text-shadow:1px 1px 0px #fff;
+	color: #333;
+}
 .task div.content div.main .title a:link,
-.task div.content div.main .title a:visited,
-.project div.content div.main .title a:link,
-.project div.content div.main .title a:visited {
+.task div.content div.main .title a:visited {
 	text-decoration: none;
 	color: #656565;
 }
 .task div.content div.main .title a:hover,
-.task div.content div.main .title a:active,
-.project div.content div.main .title a:hover,
-.project div.content div.main .title a:active {
+.task div.content div.main .title a:active {
 	text-decoration: underline;
-	background-color: #f3f3f3;
+	background-color: #fffef1;
 	background-position: 0px bottom;
-	background-image: url(../images/sand.gif);
 	background-repeat: repeat;
+	color: #ec189a;
+	text-shadow:1px 1px 0px #fff;
 }
 div.content div.description {
 	line-height: 1.5;
@@ -650,6 +631,74 @@ div.content div.description {
 	clear: both;
 	padding-bottom: 10px;
 }
+
+div.content dl.period {
+	line-height: 1.5;
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	float: right;
+	padding: 8px;
+	margin-bottom: 8px;
+	margin-left: 8px;
+	background-color: #80DED5;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	font-size: 11px;
+	border: 1px solid #69d2c8;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#80DED5), to(#5ac5bb));
+	background: -moz-linear-gradient(#80DED5, #5ac5bb);
+}
+div.content dl.period dt {
+	font-size: 12px;
+	display: block;
+	background-color: #a1f1e9;
+	margin-bottom: 7px;
+	text-align: center;
+	font-weight: bold;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+div.content dl.period dd span {
+	background-color: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font-size: 13px;
+	font-weight: bold;
+	display: inline-block;
+	line-height: 1.3;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #ccc;
+	border-right-color: #EDEDED;
+	border-bottom-color: #EDEDED;
+	border-left-color: #ccc;
+	padding-top: 3px;
+	color: #000;
+}
+div.content dl.period dd span.year {
+	margin-right: 5px;
+}
+div.content dl.period dd span.mounth,
+div.content dl.period dd span.day {
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+div.solved div.content dl.period {
+	display: none;
+}
+
 div.content .links dt {
 	display: none;
 }
@@ -784,9 +833,6 @@ div.content dl.data dd {
 	display: inline;
 	margin-right: 1.3em;
 }
-div.content dl.data dd.state:before {
-	content:"出身 : ";
-}
 div.content dl.data dd.company:before {
 	content:"会社 : ";
 }
@@ -872,10 +918,11 @@ div.content div.description h2 {
 	padding-left: 20px;
 }
 div.content div.description h3 {
-	line-height: 1.3;
-	margin-bottom: 1.2em;
+	line-height: 1.4;
+	margin-bottom: 1em;
 	font-size: 16px;
 	font-weight: bold;
+	display: block;
 }
 div.content div.description h4 {
 	line-height: 1.3;
@@ -1019,7 +1066,7 @@ div.counts {
 	margin-bottom: 10px;
 	clear: both;
 }
-div.counts ul {
+ div.counts ul {
 	float: left;
 	width: 71px;
 	padding-bottom: 3px;
@@ -1094,8 +1141,7 @@ div.counts ul.tasks {
 
 
 
-.task div.content div.sub dt,
-.project div.content div.sub dt
+.task div.content div.sub dt
 {
 	display: none;
 }
@@ -1181,7 +1227,7 @@ dl.bounty dd span {
 }
 .sub dl.person a span.name {
 	float: right;
-	font-size: 10px;
+	font-size: 11px;
 	display: block;
 	width: 90px;
 	font-weight: bold;
@@ -1201,51 +1247,10 @@ a:active span.name {
 
 
 
-.task div.project {
-	margin-bottom: 2px;
-	background-color: #ccc;
-	border-top-width: 1px;
-	border-top-style: solid;
-	border-top-color: #999;
-	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
-	background: -moz-linear-gradient(center top, #ccc, #cecece 15%, #ccc 50%, #cecece 85%, #ccc);
-	background: -webkit-gradient(linear, center top, center bottom, from(#ccc), color-stop(15%, #cecece), color-stop(50%, #ccc), color-stop(85%, #cecece), to(#ccc));
-	border-right-width: 1px;
-	border-left-width: 1px;
-	border-right-style: solid;
-	border-left-style: solid;
-	border-right-color: #bbb;
-	border-left-color: #bbb;
-	clear: both;
-}
-.task div.project a {
-	display: block;
-	text-decoration: none;
-	display: block;
-	font-size: 13px;
-	background-image: url(../images/tasks_project.png);
-	background-repeat: repeat-x;
-	background-position: left bottom;
-	color: #5a5a5a;
-	text-shadow:-1px -1px 0px #d0d0d0;
-	height: 28px;
-	margin-bottom: 0px;
-}
-.task div.project a span.name {
-	padding-top: 3px;
-	padding-right: 12px;
-	padding-bottom: 5px;
-	padding-left: 12px;
-	background-image: url(../images/description.png);
-	background-repeat: repeat-x;
-	background-position: left top;
-	display: block;
-	height: 20px;
-	line-height: 20px;
-	font-weight: bold;
-}
 
-
+.tasks_show div.content {
+	padding-bottom: 15px;
+}
 
 
 .task div.content div.description dl.resolver {
@@ -1263,7 +1268,7 @@ a:active span.name {
 	background: -moz-linear-gradient(#f8f8f8, #d9d9d9);
 }
 .task div.content div.description dl.resolver dt {
-	font-size: 11px;
+	font-size: 12px;
 	text-align: center;
 	padding-top: 2px;
 	padding-right: 4px;
@@ -1420,8 +1425,7 @@ a:active span.name {
 
 
 
-.task ul.tags,
-ul.loggedin {
+.task ul.tags {
 	display: block;
 	padding-right: 12px;
 	padding-left: 12px;
@@ -1429,7 +1433,6 @@ ul.loggedin {
 	border-top-width: 1px;
 	border-top-style: dashed;
 	border-top-color: #d0d0d0;
-	padding-bottom: 10px;
 	clear: both;
 }
 .task ul.tags li {
@@ -1445,21 +1448,6 @@ ul.loggedin {
 	font-size: 11px;
 	font-weight: bold;
 }
-.loggedin li {
-	display: block;
-	float: left;
-}
-.loggedin li a {
-	margin-right: 8px;
-	float: left;
-	padding-right: 10px;
-	padding-left: 10px;
-	line-height: 22px;
-	font-size: 11px;
-	font-weight: bold;
-}
-
-
 
 
 
@@ -1598,13 +1586,13 @@ div.pager a {
 	font-weight: bold;
 	margin-bottom: 25px;
 }
-.tasks_show .comments h3 {
+.tasks_show .comments h3.title {
 	background-image: url(../images/tasks_show_comments_h3.png);
 	background-repeat: no-repeat;
 	background-position: left top;
 	padding-left: 33px;
 }
-.tasks_show .post h3 {
+.tasks_show .post h3.title {
 	background-image: url(../images/tasks_show_post_h3.png);
 	background-repeat: no-repeat;
 	background-position: left top;
@@ -1841,23 +1829,6 @@ div.pager a {
 	margin-right: 10px;
 	margin-bottom: 0px;
 }
-#sub div.bounty .add_bounty {
-	background-image: url(../images/add_bounty.png);
-	height: 30px;
-	float: left;
-	width: 30px;
-	display: block;
-	margin-top: -38px;
-	margin-left: 8px;
-	cursor: pointer;
-	line-height: 30px;
-	font-weight: bold;
-	font-size: 16px;
-	color: #FFF;
-	text-shadow:-1px -1px 0px #666;
-	text-align: center;
-	padding: 0px;
-}
 
 #sub div.task_data {
 	background-color: #eee;
@@ -1874,7 +1845,7 @@ div.pager a {
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	padding-top: 6px;
-	margin-bottom: 4px;
+	margin-bottom: 0px;
 	border: 1px solid #ddd;
 }
 #sub div.task_data dt {
@@ -1981,7 +1952,7 @@ div.pager a {
 #sub div.counts ul.tweets {
 	border: 2px solid #80ded5;
 	background: #50bdb4;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#81d0d0d05), to(#50c3b9));
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#71f4e9), to(#36d6c8));
 	background: -moz-linear-gradient(#71f4e9, #36d6c8);
 	-webkit-border-radius: 14px 0px 0px 14px;
 	-moz-border-radius: 14px 0px 0px 14px;
@@ -2012,22 +1983,6 @@ div.pager a {
 
 
 
-
-#sub dl.project a {
-	display: block;
-	text-decoration: none;
-	line-height: 1.3;
-	padding-right: 7px;
-	padding-left: 7px;
-	clear: both;
-	margin-top: 5px;
-}
-#sub dl.project a span.icon img {
-	height: 38px;
-	width: 38px;
-	float: left;
-	margin-right: 5px;
-}
 
 
 #sub dl.challengers ul {
@@ -2083,7 +2038,7 @@ div.pager a {
 	width:150px;
 	display: block;
 	float: left;
-	height: 270px;
+	height: 280px;
 	border: 1px solid #ccc;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
@@ -2109,9 +2064,8 @@ div.pager a {
 }
 .tasks .counts .tweets .label,
 .tasks .counts .comments .label {
-	font-size: 8px;
+	font-size: 10px;
 	line-height: 8px;
-	font-weight:bold;
 	color: #666;
  }
 
@@ -2139,6 +2093,7 @@ div.pager a {
 	-webkit-border-radius: 12px 12px 0px 0px;
 	-moz-border-radius: 12px 12px 0px 0px;
 	border-radius: 12px 12px 0px 0px;
+	margin-bottom: 5px;
  }
 .profile .icon img{
 	width:36px;
@@ -2183,7 +2138,7 @@ div.pager a {
 	text-align: center;
 }
 .profile .name {
-	width:100px;
+	width:96px;
 	float: right;
 	white-space:pre-wrap;
 	word-wrap:break-word;
@@ -2207,12 +2162,20 @@ dl.information dd .unselected {
 	text-align: center;
 	font-size: 10px;
 	padding: 1px;
+	background-color: #efefef;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	margin-top: 1px;
+	margin-right: 1px;
+	margin-left: 1px;
 }
 
 
 
 dl.bounty {
 	clear: both;
+	padding-top: 5px;
 }
 dl.bounty dt {
 	display: block;
@@ -2231,9 +2194,9 @@ dl.bounty dt {
 .profile dl.bounty dd {
 	margin-top: 3px;
 	background-image: url(../images/users_bounty.png);
-	line-height: 17px;
-	height: 17px;
-	font-size: 12px;
+	line-height: 24px;
+	height: 24px;
+	font-size: 13px;
 	padding-top: 1px;
 	clear: both;
 }
@@ -2245,31 +2208,6 @@ dl.information dd a {
 .profile div.counts ul {
 	width: 71px;
 	margin-top: 3px;
-}
-.profile dl.state {
-	height:11px;
-	margin-bottom: 3px;
-}
-.profile dl.state dt {
-	display: none;
-}
-.profile dl.state dd {
-	font-size: 11px;
-	line-height:11px;
-	text-align: right;
-}
-.profile dl.state dd a:before {
-	content:"出身 : ";
-}
-.profile dl.state dd a {
-	color: #000;
-	text-decoration: none;
-	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
-}
-.profile dl.state dd a:hover,
-.profile dl.state dd a:visited {
-	color: #EC189A;
-	text-decoration:underline
 }
 
 
@@ -2412,6 +2350,7 @@ div.tasks_list {
 	background-image: none;
 	margin-bottom: 25px;
 	clear: both;
+	padding-bottom: 15px;
 }
 div.tasks_list h3 {
 	font-size: 18px;
@@ -2425,8 +2364,11 @@ div.tasks_list h3 {
 	background-repeat: repeat-x;
 	background-position: left bottom;
 }
-div.content .tasks {
-	background-image: none;
+div.tasks_list .tasks {
+	background-image: url(../images/sponser_first-child.png);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	padding-bottom: 10px;
 }
 div.content .tasks li.task {
 	clear: both;
@@ -2438,6 +2380,11 @@ div.content .tasks li.task {
 	margin-bottom: 0px;
 	padding: 8px;
 }
+div.content .tasks li.task:last-child {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d0d0d0;
+}
 
 
 
@@ -2446,7 +2393,8 @@ div.content .tasks li.task:nth-child(even) {
 	background-color:#f0f0f0;
 }
 div.content .tasks li.solved {
-	background-color:#ccc !important;
+	background-color:#d6d6d6 !important;
+	background-image: none;
  }
 div.content .tasks dt {
 	display: none;
@@ -2454,36 +2402,28 @@ div.content .tasks dt {
 div.content .tasks dd {
 	float: left;
 	display: block;
-	height: 36px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	height: 32px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
 	margin-right: 6px;
 	margin-bottom: 0px;
-}
-div.content .tasks dd.project img {
-	width: 36px;
-	height:36px;
-	display: block;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	border: 1px solid #d8d8d8;
-	margin-right: 6px;
+	margin-top: 2px;
+	padding-top: 2px;
 }
 div.content .tasks dd.tweets {
 	width: 60px;
 	border: 1px solid #80ded5;
 	background: #71f4e9;
-	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#71f4e9o), to(#36d6c8));
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#71f4e9), to(#36d6c8));
 	background: -moz-linear-gradient(#71f4e9, #36d6c8);
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
-	line-height: 22px;
+	line-height: 18px;
 	font-weight:bold;
 }
 div.content .tasks dd.tweets:after {
-	content:"tweets";
+	content:"good!";
 	text-align: center;
 	display: block;
 	font-size: 9px;
@@ -2497,7 +2437,7 @@ div.content .tasks dd.comments {
 	background: #e2ff5b;
 	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e2ff5b), to(#bae104));
 	background: -moz-linear-gradient(#e2ff5b, #bae104);
-	font-size: 16px;
+	font-size: 14px;
 	text-align: center;
 	line-height: 22px;
 	font-weight:bold;
@@ -2513,7 +2453,7 @@ div.content .tasks dd.comments:after {
 }
 div.content .tasks dd.title {
 	border: none;
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 18px;
 	padding-right: 5px;
 	padding-left: 5px;
@@ -2619,27 +2559,6 @@ div.content .tasks dd.created_at {
 
 
 
-.projects_show .profile .icon {
-	display: block;
-	text-align: center;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 6px;
-	margin-left: 0px;
- }
-.projects_show .profile .icon img{
-	width:80px;
-	height: 80px;
-	float: none;
-	border: 1px solid #ddd;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
-	margin-top: 0px;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-left: auto;
- }
 div.description dl.url dt {
 	display: none;
 }
@@ -2665,57 +2584,6 @@ dl.url dd.website_url:before {
 }
 dl.url dd.repository_path:before {
 	content:"\リポジトリパス …";
-}
-.project .sub dl.person a:before {
-	content:"\プロジェクト管理者";
-	font-size: 9px;
-	text-align: center;
-	padding-top: 2px;
-	padding-right: 4px;
-	padding-left: 4px;
-	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
-	padding-bottom: 2px;
-	margin-bottom: 8px;
-	display: block;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	font-weight: bold;
-	color: #656565;
-	background-image: url(../images/white_40.png);
-}
-.project div.content div.main {
-	float: right;
-	width: 560px;
-	min-height: 180px;
-	height: auto;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #d9d9d9;
-
-}
-.projects_show div.content div.main .title {
-	font-size: 24px;
-	line-height: 1.3;
-	font-weight: bold;
-	display: block;
-	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
-}
-.projects_show div.content div.main .title {
-	display: block;
-	padding-right: 12px;
-	padding-left: 12px;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	-webkit-border-radius: 0px 12px 0px 0px;
-	-moz-border-radius: 0px 12px 0px 0px;
-	border-radius: 0px 12px 0px 0px;
-	width: 558px;
-	margin-bottom: 0px;
-	border-top-style: none;
-	border-right-style: none;
-	border-bottom-style: none;
-	border-left-style: none;
 }
 
 
@@ -2959,9 +2827,6 @@ form .detail .label .title {
 	font-family:  'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
 	font-size: 18px;
 }
-form.new_project .detail .label {
-	margin-top: 20px;
-}
 form input#task_title {
 	width: 570px;
 }
@@ -3079,62 +2944,12 @@ p.empty {
 	text-align: center;
 	background-color: #EDEDED;
 	padding: 6px;
-	margin-bottom:15px;
+	margin-bottom:5px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
 	margin-top: 15px;
 }
-
-
-
-ul.projects_buttons li a {
-	margin-top: 20px;
-	margin-right: 0px;
-	margin-bottom: 20px;
-	margin-left: 12px;
-	width: 200px;
-	background-color: #999;
-	text-align: center;
-	color: #FFF;
-	font-size: 13px;
-	line-height: 13px;
-	font-family:  'Lucida Grande', Verdana, Arial, 'Hiragino Kaku Gothic Pro', Meiryo, 'メイリオ', sans-serif;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	padding-top: 4px;
-	padding-right: 8px;
-	padding-bottom: 4px;
-	padding-left: 8px;
-	text-decoration: none;
-	display: block;
-}
-ul.projects_buttons li a:link,
-ul.projects_buttons li a:visited {
-	background-color: #999;
-}
-ul.projects_buttons li a:hover,
-ul.projects_buttons li a:active {
-	background-color: #bbb;
-}
-ul.projects_buttons li a:before {
-    content:"\+";
-    font-weight: bold;
-    background-color: #933;
-    display: inline-block;
-    margin-right: 5px;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    border-radius: 14px;
-    height: 18px;
-    width: 17px;
-    text-align: center;
-    line-height: 15px;
-    font-size: 16px;
-    padding-left: 1px;
-}
-
 
 
 div.about {
@@ -3173,18 +2988,25 @@ div.about h3 {
 	font-weight:bold;
 	text-shadow:1px 1px 0px #fff;
 	display: block;
-	background-color: #374978;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	padding-top: 6px;
-	padding-right: 10px;
-	padding-bottom: 6px;
-	padding-left: 10px;
-	background: -moz-linear-gradient(top, #f6f6f6, #e6e6e6);
-	background: -webkit-gradient(linear, center top, center bottom, from(#f6f6f6), to(#e6e6e6));
-	border: 1px solid #ddd;
 	}
+div.about blockquote {
+	display:block;
+	background-color: #E8E8E8;
+	padding-top: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-bottom: 1.5em;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-image: url(../images/blockquote.png);
+  -webkit-box-shadow: inset 0 1px 2px #bbb;
+  -moz-box-shadow: inset 0 1px 2px #bbb;
+  }
+
+
 
 #flash .notice {
 	display:block;

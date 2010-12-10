@@ -7,9 +7,6 @@
     %dl.data
       %dt.login= t('activerecord.attributes.user.login')
       %dd.login=link_to user.login, user_path(user)
-      - if user.state
-        %dt.state= t('activerecord.attributes.user.state')
-        %dd.state= t("label.state.#{user.state.name}")
       - if user.company.present?
         %dt.company= t('activerecord.attributes.user.company')
         %dd.company=h user.company

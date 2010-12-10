@@ -3,10 +3,6 @@
     .main
       %h3.title= link_to h(object.title), object
       .state
-      - if object.project
-        .project
-          %a.project.clearfix{:href => project_path(object.project)}
-            %span.name= object.project.name
       .description
         - if object.solved?
           %dl.resolver

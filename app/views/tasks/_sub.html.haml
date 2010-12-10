@@ -46,26 +46,6 @@
           %span.name=@task.user.login
 
 
-.sponcers.section
-  %dl
-    %dt スポンサー
-    %dd
-      %ul.bounties
-        - @bounties.each do |bounty|
-          %li.bounty{bounty_attrs(bounty)}
-            %a{:href => user_path(bounty.user)}
-              %span.icon= image_tag(bounty.user.profile_image_url)
-              %span.name= bounty.user.login
-            %dl.bounty			
-              %dt 報奨金
-              %dd= number_to_currency bounty.amount
-            - if logged_in? and @task.solved? and bounty.user.id == current_user.id
-              - unless bounty.pay
-                - bounty.pay = true
-                - form_for bounty do |f|
-                  = f.hidden_field :pay, :id => "bounty_pay_#{bounty.id}"
-                  = f.submit t('Payment was completed'), :id => "bounty_submit_#{bounty.id}"
-              = render :partial => 'tasks/payment_button', :locals => {:task => bounty.task, :bounty => bounty, :user => bounty.task.solver}
 .section
   %dl
     %dt 人気の言語

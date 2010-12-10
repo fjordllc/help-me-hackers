@@ -24,7 +24,7 @@
       <div class="wrap"> 
         <h1><a href="/">Help me, hackers!</a></h1> 
         <ul class="account"> 
-          <li><a href="/dashboard"><img alt="Machida_normal" src="http://a1.twimg.com/profile_images/829703797/machida_normal.jpg" style="vertical-align:middle" />machida_fjord(0)</a></li> 
+          <li><a href="/dashboard"><img alt="Machida_normal" src="http://a1.twimg.com/profile_images/829703797/machida_normal.jpg" style="vertical-align:middle" />machida_fjord(1)</a></li> 
           <li><a href="/account/edit">アカウント</a></li> 
           <li><a href="/logout">ログアウト</a></li> 
         </ul> 
@@ -34,801 +34,159 @@
           <ul class="wrap"> 
             <li><a href="/dashboard">ダッシュボード</a></li> 
             <li><a href="/tasks">タスク</a></li> 
-            <li><a href="/projects">プロジェクト</a></li> 
             <li><a href="/users">ユーザー</a></li> 
             <li class="add_task"><a href="/tasks/new">タスク登録</a></li> 
           </ul> 
         </div> 
       </div> 
       <div class="hierarchy"> 
+        <ol class="bread_crumbs"><li class="bread_crumb" title="ホーム"><a href="/">ホーム</a></li><li class="bread_crumb" title="タスク"><a href="/tasks">タスク</a></li><li class="bread_crumb">テストテストテスト</li></ol> 
       </div> 
     </div> 
-    <div class="top_index" id="wrapper"> 
-      <div class="eye_catch"> 
-        <div class="inner"> 
-          <h2>プログラミングタスクを<br />共有するサイト</h2> 
-        </div> 
-        <ul> 
-          <li> 
-            <a href="">このサイトについて</a> 
-          </li> 
-          <li> 
-            <a href="">タスクを登録する方法</a> 
-          </li> 
-          <li> 
-            <a href="">タスクを解決する方法</a> 
-          </li> 
-          <li> 
-            <a href="">よくある質問</a> 
-          </li> 
-        </ul> 
-      </div> 
+    <div class="tasks_show" id="wrapper"> 
       <div id="main"> 
         <div id="flash"> 
         </div> 
-        <ul class="tasks tasks_list"> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/24">テスト24</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト24の内容
+        <div class="task content solved free"> 
+          <div class="main"> 
+            <div class="title"> 
+              <div class="good" onclick="$('#task_29_vote_form').toggle()"> 
+                <dl> 
+                  <dt> 
+                    <span>tweet</span> 
+                  </dt> 
+                  <dd class="count" id="task_29_good">0</dd> 
+                </dl> 
+              </div> 
+              <h2>テストテストテスト</h2> 
+              <form action="/votes" class="new_vote" id="task_29_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="RmDTeKR3mNsVCe5LQ290uZYtKyK80KmOt6Dup9tJFv0=" /></div> 
+                <div class="text"> 
+                  <input id="task_29_voteable_id" name="vote[voteable_id]" type="hidden" value="29" /> 
+                  <input id="task_29_voteable_type" name="vote[voteable_type]" type="hidden" value="Task" /> 
+                  <input id="task_29_comment" maxlength="140" name="vote[comment]" size="140" type="text" value="Good! RT @machida_fjord テストテストテスト http://bit.ly/hizMkZ #hmhs" /> 
+                </div> 
+                <div class="button"><input src="/images/good_button.gif" type="image" /></div> 
+                <p class="center">Retweetをすることで、このタスクにGood!ポイントが加算されます</p> 
+              </form> 
+            </div> 
+            <div class="state"></div> 
+            <div class="information"> 
+              <dl class="license"> 
+                <dt>ライセンス</dt> 
+                <dd><a href="/about/license#mit" class="button">MIT LICENSE</a></dd> 
+                <dt class="language">プログラミング言語</dt> 
+                <dd class="language"><a href="/tasks/language/java" class="button">Java</a></dd> 
+                <dt>タスク登録日時</dt> 
+                <dd class="created_at">1日前</dd> 
+              </dl> 
+            </div> 
+            <div class="description"><p>テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p></div> 
+            <ul class="loggedin"> 
+              <li class="edit"><a href="/tasks/29/edit" class="sub_button">このタスクを編集</a></li> 
+              <li class="delete"><a href="/tasks/29" class="sub_button" onclick="if (confirm('本当によろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'RmDTeKR3mNsVCe5LQ290uZYtKyK80KmOt6Dup9tJFv0='); f.appendChild(s);f.submit(); };return false;">このタスクを削除</a></li> 
+            </ul> 
+          </div> 
+        </div> 
+        <div class="section comments"> 
+          <h3 class="title">コメント</h3> 
+          <ul class="comments"> 
+            <li class="comment correct" id="comment-10"> 
+              <div class="commenter"> 
+                <div class="content"> 
+                  <div class="title"> 
+                    <div class="good" onclick="$('#comment_10_vote_form').toggle()"> 
+                      <dl class="good"> 
+                        <dt class="label"> 
+                          <span>Good!</span> 
+                        </dt> 
+                        <dd class="count" id="comment_10_good">0</dd> 
+                      </dl> 
+                    </div> 
+                    <h4> 
+                      <a class="commenter" href="/machida_fjord"> 
+                        <span class="icon"><img alt="Machida_normal" src="http://a1.twimg.com/profile_images/829703797/machida_normal.jpg" /></span> 
+                        <span class="name">machida_fjord</span> 
+                      </a> 
+                    </h4> 
+                  </div> 
+                  <form action="/votes" class="new_vote" id="comment_10_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="RmDTeKR3mNsVCe5LQ290uZYtKyK80KmOt6Dup9tJFv0=" /></div> 
+                    <div class="text"> 
+                      <input id="comment_10_voteable_id" name="vote[voteable_id]" type="hidden" value="10" /> 
+                      <input id="comment_10_voteable_type" name="vote[voteable_type]" type="hidden" value="Comment" /> 
+                      <input id="comment_10_comment" maxlength="140" name="vote[comment]" size="140" type="text" value="Good! RT @machida_fjord っっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっ... http://bit.ly/hizMkZ #hmhs" /> 
+                    </div> 
+                    <div class="button"><input src="/images/good_button.gif" type="image" /></div> 
+                    <p class="center">Retweetをすることで、このタスクにGood!ポイントが加算されます</p> 
+                  </form> 
+                  <div class="description"><p>っっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっっｊ</p></div> 
+                  <ul class="loggedin"> 
+                    <li class="edit"><a href="/comments/10/edit" class="sub_button">このコメントを編集</a></li> 
+                    <li class="delete"><a href="/comments/10" class="sub_button" onclick="if (confirm('本当に削除してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'RmDTeKR3mNsVCe5LQ290uZYtKyK80KmOt6Dup9tJFv0='); f.appendChild(s);f.submit(); };return false;">このコメントを削除</a></li> 
+                  </ul> 
                 </div> 
               </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">1</li> 
-                    <li class="label">Comment</li> 
+            </li> 
+            <li class="comment" id="comment-11"> 
+              <div class="commenter"> 
+                <div class="content"> 
+                  <div class="title"> 
+                    <div class="good" onclick="$('#comment_11_vote_form').toggle()"> 
+                      <dl class="good"> 
+                        <dt class="label"> 
+                          <span>Good!</span> 
+                        </dt> 
+                        <dd class="count" id="comment_11_good">0</dd> 
+                      </dl> 
+                    </div> 
+                    <h4> 
+                      <a class="commenter" href="/machida_fjord"> 
+                        <span class="icon"><img alt="Machida_normal" src="http://a1.twimg.com/profile_images/829703797/machida_normal.jpg" /></span> 
+                        <span class="name">machida_fjord</span> 
+                      </a> 
+                    </h4> 
+                  </div> 
+                  <form action="/votes" class="new_vote" id="comment_11_vote_form" method="post" style="display:none"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="RmDTeKR3mNsVCe5LQ290uZYtKyK80KmOt6Dup9tJFv0=" /></div> 
+                    <div class="text"> 
+                      <input id="comment_11_voteable_id" name="vote[voteable_id]" type="hidden" value="11" /> 
+                      <input id="comment_11_voteable_type" name="vote[voteable_type]" type="hidden" value="Comment" /> 
+                      <input id="comment_11_comment" maxlength="140" name="vote[comment]" size="140" type="text" value="Good! RT @machida_fjord あああああああああああああああああああああああああああああああああああああああああああああああああああああああああ... http://bit.ly/hizMkZ #hmhs" /> 
+                    </div> 
+                    <div class="button"><input src="/images/good_button.gif" type="image" /></div> 
+                    <p class="center">Retweetをすることで、このタスクにGood!ポイントが加算されます</p> 
+                  </form> 
+                  <div class="description"><p>あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p></div> 
+                  <ul class="loggedin"> 
+                    <li class="edit"><a href="/comments/11/edit" class="sub_button">このコメントを編集</a></li> 
+                    <li class="delete"><a href="/comments/11" class="sub_button" onclick="if (confirm('本当に削除してよろしいですか？')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'RmDTeKR3mNsVCe5LQ290uZYtKyK80KmOt6Dup9tJFv0='); f.appendChild(s);f.submit(); };return false;">このコメントを削除</a></li> 
                   </ul> 
                 </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
+              </div> 
+            </li> 
+          </ul> 
+        </div> 
+        
+        <div class="section post"> 
+          <h3 class="title">コメント</h3> 
+          <span>（<a href="http://blog.2310.net/archives/6" target="_blank">Markdown記法</a> が使えます）</span> 
+          <span>（コメントはTwitterにも飛びます）</span> 
+          <form action="/comments" class="new_comment" id="new_comment" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="RmDTeKR3mNsVCe5LQ290uZYtKyK80KmOt6Dup9tJFv0=" /></div> 
+          
+            <input id="comment_task_id" name="comment[task_id]" type="hidden" value="29" /> 
+            <textarea cols="70" id="comment_description" name="comment[description]" rows="10"></textarea> 
+            <div class="comment" id="preview"> 
+              <div class="content"> 
+                <div class="title"> 
+                  <h4>プレビュー</h4> 
+                </div> 
+                <div class="description preview"></div> 
               </div> 
             </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/23">テスト23</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト23の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/22">テスト22</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト22の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/21">テスト21</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト21の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/20">テスト20</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト20の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/19">テスト19</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト19の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/18">テスト18</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト18の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/17">テスト17</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト17の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/16">テスト16</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト16の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/15">テスト15</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト15の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/14">テスト14</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト14の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/13">テスト13</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト13の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/12">テスト12</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト12の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/11">テスト11</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト11の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/10">テスト10</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト10の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/9">テスト9</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト9の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/8">テスト8</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト8の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/7">テスト7</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト7の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/6">テスト6</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト6の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-          <li class="clearfix content free task"> 
-            <div class="content"> 
-              <div class="main"> 
-                <h3 class="title"><a href="/tasks/5">テスト5</a></h3> 
-                <div class="state"></div> 
-                <div class="description"> 
-                  テスト5の内容
-                </div> 
-              </div> 
-              <div class="sub"> 
-                <div class="counts"> 
-                  <ul class="tweets"> 
-                    <li class="count">0</li> 
-                    <li class="label">retweet</li> 
-                  </ul> 
-                  <ul class="comments"> 
-                    <li class="count">0</li> 
-                    <li class="label">Comment</li> 
-                  </ul> 
-                </div> 
-                <dl class="language"> 
-                  <dt>プログラミング言語</dt> 
-                  <dd><a href="/tasks/language/javascript" class="sub_button">JavaScript</a></dd> 
-                </dl> 
-                <dl class="person"> 
-                  <dt>タスク登録者</dt> 
-                  <dd> 
-                    <a href="/komagata_fjord"> 
-                      <span class="icon"><img alt="Good_face" src="http://a1.twimg.com/profile_images/70167950/good_face.png" /></span> 
-                      <span class="name">komagata_fjord</span> 
-                    </a> 
-                  </dd> 
-                  <dt>タスク登録日時</dt> 
-                  <dd class="created_at">約5時間前</dd> 
-                </dl> 
-              </div> 
-            </div> 
-          </li> 
-        </ul> 
-        <div class="pager"><a href="/tasks?page=2">もっと見る</a></div> 
+            <p> 
+              <input id="comment_submit" name="commit" type="submit" value="利用規約に同意してコメントする" /> 
+              <a href="/about/terms" target="_blank">利用規約</a> 
+            </p> 
+          </form> 
+        </div> 
       </div> 
       <div id="sub"> 
         <div class="tweets section"> 
@@ -867,47 +225,37 @@
           }).render().start();
           </script> 
         </div> 
+        <div class="counts"> 
+          <ul class="tweets"> 
+            <li class="count">0</li> 
+            <li class="label">Retweet</li> 
+          </ul> 
+          <ul class="comments"> 
+            <li class="count">2</li> 
+            <li class="label">コメント</li> 
+          </ul> 
+        </div> 
+        <div class="task_data"> 
+          <div class="person section"> 
+            <dl class="person"> 
+              <dt>タスク登録者</dt> 
+              <dd> 
+                <a class="person" href="/machida_fjord"> 
+                  <span class="icon"><img alt="Machida_normal" src="http://a1.twimg.com/profile_images/829703797/machida_normal.jpg" /></span> 
+                  <span class="name">machida_fjord</span> 
+                </a> 
+              </dd> 
+            </dl> 
+          </div> 
+        </div> 
         <div class="section"> 
           <dl> 
-            <dt>言語別タスク数</dt> 
-            <dd> 
-              <ul class="tasks count_by_language"> 
-                <li class="language"><a href="/tasks/language/javascript">JavaScript (21)</a></li> 
-                <li class="language"><a href="/tasks/language/ruby">Ruby (2)</a></li> 
-                <li class="language"><a href="/tasks/language/php">PHP (1)</a></li> 
-              </ul> 
-            </dd> 
-          </dl> 
-        </div> 
-        <div class="section hint"> 
-          <dl> 
-            <dt>ヒント</dt> 
+            <dt>人気の言語</dt> 
             <dd> 
               <ul> 
-                <li> 
-                  <p>Help me, hackers!は「プログラム開発の依頼と解決のプラットフォーム」でもあります。プログラマーにとって解決したくなるようなコンピューター上の課題が集まるコミュニティを目指しています。</p> 
-                </li> 
-                <li> 
-                  <p>あなたの会社のBTSに塩漬けになってるタスクがありませんか？</p> 
-                  <p>Help me, hackers!に載せたら誰かが一瞬で解決しちゃうかも？</p> 
-                </li> 
-                <li> 
-                  <p>勉強がてらプログラミングするも良し。賞金稼ぎを狙うも良し。</p> 
-                </li> 
-                <li> 
-                  <p><a href="/account/edit">アカウント修正ページ</a>では好きな言語を登録して下さい。仕事で得意な言語ではなく、心の言語を一つだけ。</p> 
-                </li> 
-                <li> 
-                  <p>ジャンクフード食系男子募集中！</p> 
-                </li> 
-                <li> 
-                  <p>解決してもらうコツはプログラマーにとって面白いタスク設定にすること。前提とゴールは明確に。</p> 
-                </li> 
+                <li>aaa</li> 
               </ul> 
             </dd> 
-            <div class="to_detail"> 
-              <p><a href="/about/hint" class="button">もっと詳しく</a></p> 
-            </div> 
           </dl> 
         </div> 
       </div> 
@@ -933,6 +281,10 @@
           </ul> 
           <p class="copyright">Copyright © <a href="http://fjord.jp">fjord,llc</a>. Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>.<br />Help me, hackers! Version 20100501000000</p> 
         </div> 
+        <script src="/javascripts/markedit/showdown.js?1282648576" type="text/javascript"></script> 
+        <script src="/javascripts/markedit/markedit.lang.ja.js?1282648576" type="text/javascript"></script> 
+        <script src="/javascripts/markedit/jquery.markedit.js?1289284706" type="text/javascript"></script> 
+        <script src="/javascripts/mk.js?1282648576" type="text/javascript"></script> 
       </div> 
     </div> 
   </body> 
