@@ -1,6 +1,5 @@
 %li.task.clearfix{task_attrs(object_small)}
   %dl
-
     %dt Good!
     %dd.tweets= object_small.votes.size
     %dt コメント
@@ -8,18 +7,9 @@
     %dt タスク名
     %dd.title=link_to truncate(h(object_small.title), :length => 32), task_path(object_small)
     %dt 報奨金
-    - if object_small.total_bounty > 0
-      %dd.bounty= number_to_currency object_small.total_bounty
+    - if object_small.bounty > 0
+      %dd.bounty= number_to_currency object_small.bounty
     - else
       %dd.bounty.free FREE
     %dt タスク登録日
     %dd.created_at== #{time_ago_in_words object_small.created_at}前
-
-
-
-
-
-
-
-
-

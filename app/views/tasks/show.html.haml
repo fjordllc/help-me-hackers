@@ -1,63 +1,9 @@
 - title "#{@task.title} - #{t('application.title')}"
 - bread_crumb_tag({:name => t('Home'), :url => root_path}, {:name => t('Tasks'), :url => tasks_path}, {:name => @task.title})
-- content_for :header_script do
-  = javascript_include_tag 'http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js'
-  = javascript_include_tag 'jquery.validator.messages_ja'
-  :javascript
-    $(function(){
-      $('#new_bounty').dialog({
-        autoOpen: false,
-        title: '#{t('Add Bounty')}',
-        modal: true,
-        draggable: false,
-        resizable: false,
-        width: 500,
-        buttons: {
-          '#{t('Add')}': function() {
-            if ($(this).valid()) $(this).submit()
-          }
-        },
-      }).submit(function() {
-        var f = $(this)
-        $.post('/bounties', $(this).serialize(), function(data) {
-          location.reload()
-        })
-        return false
-      }).validate({
-        rules: {
-          'bounty[amount]': {
-            required: true,
-            min: 100
-          }
-        }
-      })
-
-      $('#add_bounty').click(function() {
-        $('#new_bounty').dialog('open')
-      })
-    })
 %div{task_attrs(@task)}
   .main
     .title
-      %div{good_attrs(@task)}
-        %dl
-          %dt
-            %span= 'Good!'
-          %dd.count{:id => "task_#{@task.id}_good"}= @task.votes.size
       %h2= @task.title
-      - form_for @task.votes.new(:comment => good_task_retweet(@task)), :html => {:id => "task_#{@task.id}_vote_form",:class => "tweet",  :style => 'display:none'} do |f|
-        - if logged_in?
-          .text
-            = f.hidden_field :voteable_id, :id => "task_#{@task.id}_voteable_id"
-            = f.hidden_field :voteable_type, :id => "task_#{@task.id}_voteable_type"
-            = f.text_field :comment, :id => "task_#{@task.id}_comment", :size => '140', :maxlength => 140
-          - if logged_in?
-            .input= f.submit 'tweet'
-          - else
-            .input= link_to 'Retweet', login_path
-          %p.center tweetをすることでGood!ポイントが加算されます
-        - else
-          .please_login== tweetをするには#{link_to 'Twitterでログイン', login_path}してください。
     .state
     .information
       %dl.license
@@ -112,5 +58,3 @@
   = javascript_include_tag 'markedit/markedit.lang.ja'
   = javascript_include_tag 'markedit/jquery.markedit'
   = javascript_include_tag 'mk'
-
-

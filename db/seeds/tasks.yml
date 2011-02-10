@@ -9,6 +9,7 @@ Pure Pythonで！"
   language_id: 13
   license_id: 4
   view: 1
+  bounty: 5000
 
 task_<%= increment %>:
   id: <%= $I %>
@@ -20,6 +21,7 @@ task_<%= increment %>:
   language_id: 7
   license_id: 1
   view: 10
+  bounty: 100
 
 task_<%= increment %>:
   id: <%= $I %>
@@ -29,6 +31,7 @@ task_<%= increment %>:
   project_id: 1
   language_id: 9
   license_id: 4
+  bounty: 8000
   view: 15
 
 task_<%= increment %>:
@@ -40,6 +43,7 @@ task_<%= increment %>:
   language_id: 9
   license_id: 4
   view: 1
+  bounty: 1230
   source_url: "http://github.com/komagata/help-me-hackers/blob/master/app/views/tasks/_form.html.haml"
 
 <% 20.times do |n| %>

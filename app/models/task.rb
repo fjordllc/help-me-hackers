@@ -6,7 +6,6 @@ class Task < ActiveRecord::Base
   belongs_to :license
   belongs_to :project
   has_many :comments
-  has_many :bounties
   has_many :votes, :as => :voteable, :dependent => :destroy
 
   validates_presence_of :title,
@@ -22,11 +21,8 @@ class Task < ActiveRecord::Base
     :order      => 'tasks.id DESC'
 
   named_scope :nonfree,
-    :select     => '*, SUM(bounties.amount) as total_bounty',
-    :joins      => [:bounties],
-    :group      => 'tasks.id',
-    :having     => 'total_bounty > 0',
-    :order      => 'total_bounty DESC'
+    :conditions => 'bounty > 0',
+    :order      => 'bounty DESC'
 
   named_scope :count_by_language,
     :select => 'COUNT(tasks.id) AS cnt, MAX(languages.name) as name',
@@ -55,9 +51,5 @@ class Task < ActiveRecord::Base
 
   def solver
     (c = correct_comment) ? c.user : nil
-  end
-
-  def total_bounty
-    self.bounties.inject(0) {|ret, b| ret + b.amount }
   end
 end

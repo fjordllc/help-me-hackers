@@ -109,7 +109,7 @@ module ApplicationHelper
   def task_attrs(task)
     value = "task content"
     value += ' solved' if task.solved?
-    value += ' free' if task.total_bounty.zero?
+    value += ' free' unless task.bounty > 0
     {:class => value}
   end
 

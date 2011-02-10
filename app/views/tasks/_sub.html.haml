@@ -5,29 +5,11 @@
   %ul.comments
     %li.count= @task.comments.size
     %li.label= t('Comment')
-
 .task_data
-  - if @task.total_bounty > 0
+  - if @task.bounty > 0
     .section.bounty
-      %dl.bounty
-        %dt.bounty= t('Total bounty')
-        %dd.bounty
-          %span= t('Total')
-          %span.total_bounty
-            = number_to_currency_with_span @task.total_bounty
-
-      - if logged_in?
-        #add_bounty.add_bounty= '＋'
-        - form_for @bounty do |f|
-          = f.hidden_field :task_id
-          = f.label :amount
-          = f.text_field :amount, :size => 20
-
-    - if logged_in?
-      #add_bounty.add_bounty.button= t('Add Bounty')
-
-
-
+      %dl= t('Bounty')
+      %dd= number_to_currency_with_span @task.bounty
   - if @task.project
     .section.project
       %dl
@@ -36,7 +18,6 @@
           %a{:href => project_path(@task.project)}
             %span.icon= 'icon'
             %span.name= @task.project.name
-
   .person.section
     %dl.person
       %dt タスク登録者
@@ -44,11 +25,9 @@
         %a.person{:href => user_path(@task.user)}
           %span.icon=image_tag(@task.user.profile_image_url)
           %span.name=@task.user.login
-
-
 .section
   %dl
     %dt 人気の言語
     %dd
       %ul
-        %li aaa
+        %li FIXME!

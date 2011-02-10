@@ -17,11 +17,11 @@
           - object.tags.each do |tag|
             %li.tag=link_to h(tag.name), tasks_by_tag_path(:tag => tag.name), :class => 'button'
     .sub
-      - if object.total_bounty > 0
+      - if object.bounty > 0
         %dl.bounty
           %dt= t('Bounty')
           %dd
-            %span= number_to_currency object.total_bounty
+            %span= number_to_currency object.bounty
       .counts
         %ul.tweets
           %li.count= object.votes.size

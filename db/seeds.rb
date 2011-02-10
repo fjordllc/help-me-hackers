@@ -21,5 +21,4 @@ if ENV['CAP_ENV'] != 'production'
   load_fixture :tags
   load_fixture :taggings
   load_fixture :projects
-  load_fixture :bounties
 end

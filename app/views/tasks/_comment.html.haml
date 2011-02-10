@@ -2,11 +2,6 @@
   .commenter
     .content
       .title
-        %div{good_attrs(comment)}
-          %dl.good
-            %dt.label
-              %span Good!
-            %dd.count{:id => "comment_#{comment.id}_good"}= comment.votes.size
         %h4
           %a.commenter{:href => user_path(comment.user)}
             %span.icon= image_tag(comment.user.profile_image_url)
@@ -16,19 +11,6 @@
               - form_for comment do |f|
                 = hidden_field_tag 'comment[correct]', true
                 = image_submit_tag 'choice_button.gif'
-        - form_for comment.votes.new(:comment => good_comment_retweet(comment)), :html => {:id => "comment_#{comment.id}_vote_form",:class => "tweet", :style => 'display:none'} do |f|
-          - if logged_in?
-            .text
-              = f.hidden_field :voteable_id, :id => "comment_#{comment.id}_voteable_id"
-              = f.hidden_field :voteable_type, :id => "comment_#{comment.id}_voteable_type"
-              = f.text_field :comment, :id => "comment_#{comment.id}_comment", :maxlength => 140
-            - if logged_in?
-              .input=  f.submit 'tweet'
-            - else
-              .input= link_to 'Retweet', login_path
-            %p.center tweetをすることで、このコメントにGood!ポイントが加算されます
-          - else
-            .please_login== tweetするには#{link_to 'Twitterでログイン', login_path}してください。
       .description~markdown comment.description
       - if logged_in? and comment.user.id == current_user.id
         %ul.loggedin

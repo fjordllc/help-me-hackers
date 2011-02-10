@@ -19,15 +19,10 @@
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'
     = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js'
     = javascript_include_tag 'application'
-
     <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAEGshODV8YZnayVZ7tLBsVRTqLoPi9-pvDfOgHGNjNh0FSNMtrxSHFA6ff3rJtLtrq4loKeSHcbsxOQ"></script>
-
     <script type="text/javascript">
-
     google.setOnLoadCallback(initialize);
-
     google.load("feeds", "1");
-
     function initialize() {
     var feedControl = new google.feeds.FeedControl();
     feedControl.addFeed("http://fjord.jp/tag/code-dj/feed", "コードDJ");
@@ -35,10 +30,7 @@
     feedControl.draw(document.getElementById("feedControl"));
     }
     google.setOnLoadCallback(initialize);
-
     </script>
-
-
     - header_script = yield(:header_script)
     - if header_script
       = header_script

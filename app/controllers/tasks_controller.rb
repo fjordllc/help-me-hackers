@@ -71,8 +71,6 @@ class TasksController < ApplicationController
   end
 
   def show
-    @bounty = Bounty.new(:task_id => @task.id)
-    @bounties = @task.bounties
     @comments = @task.comments.by_correct_desc_and_id.paginate(
       :page     => params[:page],
       :per_page => COMMENTS_PER_PAGE)
