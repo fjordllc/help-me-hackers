@@ -1,8 +1,4 @@
-log/*.log
-db/schema.rb
+.bundle
 db/*.sqlite3
-**/.Thumbs.db
-config/newrelic.yml
-VERSION
-.bundle/*
-vendor/bundle
+log/*.log
+tmp/

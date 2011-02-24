@@ -1,0 +1,13 @@
+doctype
+html
+  head
+    title Help me, hackers!
+    = stylesheet_link_tag :all
+    = javascript_include_tag(:defaults)
+    = csrf_meta_tag
+  body
+    p= link_to 'Sign in', [:new, :user_session]
+    p= link_to 'Sign up', [:new, :user_registration]
+    p.notice= notice
+    p.alert= alert
+    = yield

@@ -1,4 +1,0 @@
-%ul.tasks.tasks_list
-  = render :partial => 'tasks/object', :collection => @tasks
-- if Task.count > TopController::TASKS_PER_PAGE
-  .pager=link_to t('More'), tasks_path(:page => 2)

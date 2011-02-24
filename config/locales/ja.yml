@@ -1,3 +1,9 @@
+# Japanese translations for Ruby on Rails
+# by Akira Matsuda (ronnie@dio.jp)
+# AR error messages are basically taken from Ruby-GetText-Package. Thanks to Masao Mutoh.
+# contributors:
+#  - Tsutomu Kuroda (t-kuroda@oiax.jp)
+
 ja:
   date:
     formats:
@@ -11,7 +17,10 @@ ja:
     month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
     abbr_month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
 
-    order: [:year, :month, :day]
+    order:
+      - :year
+      - :month
+      - :day
 
   time:
     formats:
@@ -37,6 +46,8 @@ ja:
       separator: "."
       delimiter: ","
       precision: 3
+      significant: false
+      strip_insignificant_zeros: false
 
     currency:
       format:
@@ -44,7 +55,9 @@ ja:
         unit: "円"
         separator: "."
         delimiter: ","
-        precision: 0
+        precision: 3
+        significant: false
+        strip_insignificant_zeros: false
 
     percentage:
       format:
@@ -57,7 +70,10 @@ ja:
     human:
       format:
         delimiter: ""
-        precision: 1
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+
       storage_units:
         format: "%n%u"
         units:
@@ -67,380 +83,106 @@ ja:
           gb: "ギガバイト"
           tb: "テラバイト"
 
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "千"
+          million: "百万"
+          billion: "十億"
+          trillion: "兆"
+          quadrillion: "千兆"
+
   datetime:
     distance_in_words:
       half_a_minute: "30秒前後"
       less_than_x_seconds:
         one:   "1秒以内"
-        other: "{{count}}秒以内"
+        other: "%{count}秒以内"
       x_seconds:
         one:   "1秒"
-        other: "{{count}}秒"
+        other: "%{count}秒"
       less_than_x_minutes:
         one:   "1分以内"
-        other: "{{count}}分以内"
+        other: "%{count}分以内"
       x_minutes:
         one:   "1分"
-        other: "{{count}}分"
+        other: "%{count}分"
       about_x_hours:
         one:   "約1時間"
-        other: "約{{count}}時間"
+        other: "約%{count}時間"
       x_days:
         one:   "1日"
-        other: "{{count}}日"
+        other: "%{count}日"
       about_x_months:
         one:   "約1ヶ月"
-        other: "約{{count}}ヶ月"
+        other: "約%{count}ヶ月"
       x_months:
         one:   "1ヶ月"
-        other: "{{count}}ヶ月"
+        other: "%{count}ヶ月"
       about_x_years:
-        one:   "約{{count}}年"
-        other: "約{{count}}年"
+        one:   "約1年"
+        other: "約%{count}年"
       over_x_years:
-        one:   "{{count}}年以上"
-        other: "{{count}}年以上"
+        one:   "1年以上"
+        other: "%{count}年以上"
+      almost_x_years:
+        one:   "1年弱"
+        other: "%{count}年弱"
+
+    prompts:
+      year:   "年"
+      month:  "月"
+      day:    "日"
+      hour:   "時"
+      minute: "分"
+      second: "秒"
+
+  helpers:
+    select:
+      prompt: "選択してください。"
+
+    submit:
+      create: "登録する"
+      update: "更新する"
+      submit: "保存する"
+
+  errors:
+    format: "%{attribute}%{message}"
+
+    messages: &errors_messages
+      inclusion: "は一覧にありません。"
+      exclusion: "は予約されています。"
+      invalid: "は不正な値です。"
+      confirmation: "が一致しません。"
+      accepted: "を受諾してください。"
+      empty: "を入力してください。"
+      blank: "を入力してください。"
+      too_long: "は%{count}文字以内で入力してください。"
+      too_short: "は%{count}文字以上で入力してください。"
+      wrong_length: "は%{count}文字で入力してください。"
+      not_a_number: "は数値で入力してください。"
+      not_an_integer: "は整数で入力してください。"
+      greater_than: "は%{count}より大きい値にしてください。"
+      greater_than_or_equal_to: "は%{count}以上の値にしてください。"
+      equal_to: "は%{count}にしてください。"
+      less_than: "は%{count}より小さい値にしてください。"
+      less_than_or_equal_to: "は%{count}以下の値にしてください。"
+      odd: "は奇数にしてください。"
+      even: "は偶数にしてください。"
 
   activerecord:
     errors:
       template:
         header:
-          one:   "{{model}}にエラーが発生しました。"
-          other: "{{model}}に{{count}}つのエラーが発生しました。"
+          one:   "%{model}にエラーが発生しました。"
+          other: "%{model}に%{count}つのエラーが発生しました。"
         body: "次の項目を確認してください。"
 
       messages:
-        inclusion: "は一覧にありません。"
-        exclusion: "は予約されています。"
-        invalid: "は不正な値です。"
-        confirmation: "が一致しません。"
-        accepted: "を受諾してください。"
-        empty: "を入力してください。"
-        blank: "を入力してください。"
-        too_long: "は{{count}}文字以内で入力してください。"
-        too_short: "は{{count}}文字以上で入力してください。"
-        wrong_length: "は{{count}}文字で入力してください。"
         taken: "はすでに存在します。"
-        not_a_number: "は数値で入力してください。"
-        greater_than: "は{{count}}より大きい値にしてください。"
-        greater_than_or_equal_to: "は{{count}}以上の値にしてください。"
-        equal_to: "は{{count}}にしてください。"
-        less_than: "は{{count}}より小さい値にしてください。"
-        less_than_or_equal_to: "は{{count}}以下の値にしてください。"
-        odd: "は奇数にしてください。"
-        even: "は偶数にしてください。"
-        record_invalid: "バリデーションに失敗しました。 {{errors}}"
+        record_invalid: "バリデーションに失敗しました。 %{errors}"
+        <<: *errors_messages
 
       full_messages:
-        format: "{{attribute}}{{message}}"
-
-    models:
-      bounty: 報奨金
-      comment: "コメント"
-      project: "プロジェクト"
-      language: "言語"
-      license: "ライセンス"
-      task: "タスク"
-      user: "ユーザー"
-      user_session: "ユーザーセッション"
-
-    attributes: 
-      bounty:
-        amount: 報奨金
-        task: タスク
-
-      comment: 
-        description: "詳細"
-        user: "ユーザー"
-        task: "タスク"
-
-      project: 
-        name: "プロジェクト名"
-        description: "概要"
-        logo_image_url: "ロゴ画像URL"
-        website_url: "WebサイトURL"
-        repository_path: "リポジトリパス"
-
-      language: 
-        name: "名前"
-        tasks: "タスク"
-
-      license: 
-        name: "名前"
-        tasks: "タスク"
-
-      task: 
-        title: "タイトル"
-        description: "詳細"
-        bounty: "報酬"
-        tag_list: "タグ"
-        view: "閲覧"
-        resolved: "解決"
-        user: "ユーザー"
-        comments: "コメント"
-        project: "プロジェクト"
-        source_url: "ソースコードURL"
-        language: "言語"
-        license: "ライセンス"
-
-      user_session: 
-        login: "アカウント名"
-        password: "パスワード"
-
-      user: 
-        login: "アカウント名"
-        email: "Email"
-        password: "パスワード"
-        password_confirmation: "パスワード（確認）"
-        profile_image_url: "プロフィール画像のURL"
-        description: "プロフィール"
-        company: "会社"
-        state: "出身"
-        language: "好きなプログラム言語"
-        editor: "好きなエディタ"
-        url: "URL"
-        ssh_public_key: "SSH Public Key"
-        twitter_account: "Twitterアカウント"
-        github_account: "Githubアカウント"
-        bitbucket_account: "bitbucketアカウント"
-        crypted_password: "暗号化されたパスワード"
-        password_salt: "パスワードソルト"
-        persistence_token: "永続トークン"
-        current_login_at: "現在のログイン日時"
-        last_login_at: "最終ログイン日時"
-        comments: "コメント"
-        tasks: "タスク"
-        reputation: "評判"
-
-  application:
-    title: "Help me, hackers!"
-    description: "プログラミングタスクを共有・公開するサイト"
-    keywords: "プログラム,プログラマー,オープンソース,タスク,仕事依頼"
-
-  Account: アカウント
-  Login: ログイン
-  Logout: ログアウト
-  Login by Twitter: Twitterでログイン
-  Create: 登録
-  Delete: 削除
-  Edit: 編集
-  Update: 更新
-  Add: 追加
-  Cancel: キャンセル
-  Dashboard: ダッシュボード
-  Task: タスク
-  Tasks: タスク
-  Project: プロジェクト
-  Projects: プロジェクト
-  User: ユーザー
-  Users: ユーザー
-  Bounty: 報奨金
-  Total bounty: 報奨金
-  Total: 合計
-  Comment: コメント
-  Comments: コメント
-  Retweet: Retweet
-  Top page: トップページ
-  Home: ホーム
-  How to use Help me hackers: help-me-hackersの使い方
-  More: もっと見る
-  Solver: 解決者
-  Preview: プレビュー
-  Programming language: プログラミング言語
-  Are you sure: 本当によろしいですか？
-  Pay: 支払う
-  Add Bounty: 報奨金を追加
-  Bounty paying: 報奨金支払い
-  Pay by Paypal: Paypalで支払う
-  Payment for name: "{{name}}さんへの報奨金支払い。"
-  Payment was completed: 支払い完了
-  Please push payment was completed button if payment is accepted by Paypal: Paypalで支払が受理されたら支払い完了ボタンを押して下さい。
-  Solved Tasks: 解決したタスク
-
-  Vote was successfully created: "ReTweetしました。"
-  Vote was not created: "ReTweetできませんでした。"
-  Comment was successfully created: "コメントを登録しました。"
-  Comment was successfully updated: "コメントを更新しました。"
-  Comment was successfully deleted: "コメントを削除しました。"
-  Comment was not deleted: "コメントを削除できませんでした。"
-  Comment is nothing: "コメントがありません。"
-  Create Task in this project: "このプロジェクトにタスクを登録"
-  Create Task: "タスク登録"
-  Task was successfully created: "タスクを登録しました。"
-  Task was successfully updated: "タスクを更新しました。"
-  Task was successfully deleted: "タスクを削除しました。"
-  Task was not deleted: "タスクを削除できませんでした。"
-  Task is nothing: "タスクがありません。"
-  Create Project: "プロジェクト登録"
-  Edit this task: このタスクを編集
-  Delete this task: このタスクを削除
-  Project was successfully created: "プロジェクトを登録しました。"
-  Project was successfully updated: "プロジェクトを更新しました。"
-  Project was successfully deleted: "プロジェクトを削除しました。"
-  Project was not deleted: "プロジェクトを削除できませんでした。"
-  Project is nothing: "プロジェクトがありません。"
-  Bounty was successfully created: 報酬を追加しました。
-  Bounty was successfully updated: 報酬を更新しました。
-  Bounty was successfully deleted: 報酬を削除しました。
-  Bounty was not deleted: 報酬を削除できませんでした。
-  Bounty is nothing: "報酬がありません。"
-  You have logged in successfully: "ログインしました。"
-  This authentication request is no longer valid Please try again: "認証できませんでした。"
-
-  label:
-    dashboard: "ダッシュボード"
-    wanted: "WANTED!"
-    unsolved: "未解決"
-
-    please-select: "選択して下さい"
-    favorite-language: "好きなプログラム言語"
-
-    nothing_posted_comments: "解決実績がありません"
-    nothing_posted_tasks: "依頼実績がありません"
-    nothing_watching_tasks: "ウォッチしているタスクはありません"
-
-    license:
-      gpl2: "GPLv2"
-      gpl3: "GPLv3"
-      lgpl: "LGPL"
-      agpl: "AGPL"
-      bsd: "BSD LICENSE"
-      mit: "MIT LICENSE"
-      apache: "Apache Software License"
-      public-domain: "Public Domain"
-      cc-attribution: "Creative Commons — 表示"
-      cc-attribution-share-alike: "Creative Commons — 表示-継承"
-      cc-attribution-no-derivatives: "Creative Commons — 表示-改変禁止"
-      cc-attribution-non-commercial: "Creative Commons — 表示-非営利"
-      cc-attribution-non-commercial-share-alike: "Creative Commons — 表示-非営利-継承"
-      cc-attribution-non-commercial-no-derivatives: "Creative Commons — 表示-非営利-改変禁止"
-
-    editor:
-      emacs: Emacs
-      vi: vi
-      vim: vim
-      notepad: メモ帳
-      eclipse: Eclipse
-      visual-studio: Visual Studio
-      netbeans: NetBeans
-      hidemaru: 秀丸エディタ
-      peggy: Peggy
-      jedit-x: Jedit X
-      sakura-editor: サクラエディタ
-      emeditor: EmEditor
-      ed: ed
-      nano: nano
-      dreamweaver: Dreamweaver
-      xcode: Xcode
-      textmate: TextMate
-      mi: mi
-      smultron: Smultron
-      codeditor: CodEditor
-      fraise: Fraise
-      xyzzy: xyzzy
-      terapad: TeraPad
-      notepadxx: "Notepad++"
-      noeditor: NoEditor
-
-    language:
-      c: "C"
-      cpp: "C++"
-      csharp: "C#"
-      objective-c: "Objective-C"
-      java: "Java"
-      perl: "Perl"
-      php: "PHP"
-      python: "Python"
-      ruby: "Ruby"
-      common-lisp: "Common Lisp"
-      scheme: "Scheme"
-      smalltalk: "Smalltalk"
-      javascript: "JavaScript"
-      actionscript: "ActionScript"
-      cobol: "COBOL"
-      applescript: "AppleScript"
-      visualbasic: "Visual Basic"
-      ocaml: "OCaml"
-      d: "D"
-      delphi: "Delphi"
-      erlang: "Erlang"
-      fsharp: "F#"
-      fortran: "FORTRAN"
-      forth: "FORTH"
-      go: "Go"
-      groovy: "Groovy"
-      haskell: "Haskell"
-      scala: "Scala"
-      sql: "SQL"
-      lua: "Lua"
-      assembly: "Assembly"
-      clojure: "Clojure"
-      cold-fusion: "Cold fusion"
-      effel: "Effel"
-      emacs-lisp: "Emacs Lisp"
-      io: "Io"
-      r: "R"
-      self: "Self"
-      shell: "Shell"
-      tcl: "Tcl"
-      standard-ml: "Standard ML"
-      html: "HTML"
-      css: "CSS"
-      vimscript: "Vim script"
-      japanese: "日本語"
-      vietnamese: "ベトナム語"
-      english: "英語"
-
-    country:
-      japan: "日本"
-      vietnam: "ベトナム"
-      united-states: "アメリカ"
-
-    state:
-      hokkaidou: "北海道"
-      aomoriken: "青森県"
-      iwateken: "岩手県"
-      miyagiken: "宮城県"
-      akitaken: "秋田県"
-      yamagataken: "山形県"
-      fukushimaken: "福島県"
-      ibarakiken: "茨城県"
-      tochigiken: "栃木県"
-      gunmaken: "群馬県"
-      saitamaken: "埼玉県"
-      chibaken: "千葉県"
-      toukyouto: "東京都"
-      kanagawaken: "神奈川県"
-      niigataken: "新潟県"
-      toyamaken: "富山県"
-      ishikawaken: "石川県"
-      fukuiken: "福井県"
-      yamanashiken: "山梨県"
-      naganoken: "長野県"
-      gifuken: "岐阜県"
-      shizuokaken: "静岡県"
-      aichiken: "愛知県"
-      mieken: "三重県"
-      shigaken: "滋賀県"
-      kyoutofu: "京都府"
-      oosakafu: "大阪府"
-      hyougoken: "兵庫県"
-      naraken: "奈良県"
-      wakayamaken: "和歌山県"
-      tottoriken: "鳥取県"
-      shimaneken: "島根県"
-      okayamaken: "岡山県"
-      hiroshimaken: "広島県"
-      yamaguchiken: "山口県"
-      tokushimaken: "徳島県"
-      kagawaken: "香川県"
-      ehimeken: "愛媛県"
-      kouchiken: "高知県"
-      fukuokaken: "福岡県"
-      sagaken: "佐賀県"
-      nagasakiken: "長崎県"
-      kumamotoken: "熊本県"
-      ooitaken: "大分県"
-      miyazakiken: "宮崎県"
-      kagoshimaken: "鹿児島県"
-      okinawaken: "沖縄県"
+        format: "%{attribute}%{message}"

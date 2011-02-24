@@ -1,8 +1,0 @@
-.content.solved_tasks.tasks_list
-  %h3= t('Solved Tasks')
-  - if user.comments.correct.empty?
-    %p.empty= t('label.nothing_posted_comments')
-  - else
-    %ul.tasks
-      - tasks = user.comments.correct.map {|c| c.task }
-      = render :partial => 'tasks/object_small', :collection => tasks

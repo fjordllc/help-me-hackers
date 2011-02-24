@@ -1,29 +1,39 @@
-source :gemcutter
+source 'http://rubygems.org'
 
-gem 'rails', '2.3.8'
-gem 'locale', '2.0.5'
-gem 'locale_rails', '2.0.6', :git => 'git://github.com/mutoh/locale_rails.git'
-gem 'haml', '2.2.22'
-gem 'bitly', '0.4.0'
-gem 'ezcrypto', '0.7.2'
-gem 'pacecar', '1.2.0'
-gem 'yaml_waml', '0.3.0'
-gem 'will_paginate', '2.3.12'
-gem 'hoptoad_notifier', '2.2.2'
+gem 'rails', '3.0.4'
 
-# native module
-gem 'json', '1.4.3'
-gem 'oauth', '0.3.5'
-gem 'bluecloth', '2.0.7'
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :production do
-  gem 'pg', '0.9.0'
-end
+gem 'sqlite3'
+gem 'rails-generators'
+gem 'slim', :require => 'slim/rails'
+gem 'jquery-rails'
+gem 'rspec-rails'
+gem 'devise'
+gem 'hpricot'
+gem 'slim-rails'
+gem 'thin'
 
-group :development do
-  gem 'sqlite3-ruby', '1.2.5'
-end
+# Use unicorn as the web server
+# gem 'unicorn'
 
-group :test do
-  gem 'shoulda', '2.10.3'
-end
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
+# gem 'ruby-debug'
+# gem 'ruby-debug19'
+
+# Bundle the extra gems:
+# gem 'bj'
+# gem 'nokogiri'
+# gem 'sqlite3-ruby', :require => 'sqlite3'
+# gem 'aws-s3', :require => 'aws/s3'
+
+# Bundle gems for the local environment. Make sure to
+# put test-only gems in this group so their generators
+# and rake tasks are available in development mode:
+# group :development, :test do
+#   gem 'webrat'
+# end

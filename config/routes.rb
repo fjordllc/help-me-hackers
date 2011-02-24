@@ -1,44 +1,62 @@
-ActionController::Routing::Routes.draw do |map|
-  map.tasks_by_language 'tasks/language/:language',
-    :controller => 'tasks', :action => 'index'
-  map.tasks_by_tag 'tasks/tag/:tag',
-    :controller => 'tasks', :action => 'index'
-  map.users_by_language 'users/language/:language',
-    :controller => 'users', :action => 'index'
-  map.users_by_editor 'users/editor/:editor',
-    :controller => 'users', :action => 'index'
-  map.users_by_state 'users/state/:state',
-    :controller => 'users', :action => 'index'
+HelpMeHackers::Application.routes.draw do
+  devise_for :users
 
-  map.resources :projects
-  map.resources :votes
-  map.resources :comments
-  map.resources :tasks,
-    :collection => {:wanted => :get, :unsolved => :get}
-  map.resources :bounties,
-    :collection => {:total_amount => :get, :add => :get},
-    :member     => {:pay => :get}
-  map.dashboard 'dashboard', :controller => 'accounts', :action => 'show'
-  map.resource :account, :only => [:show, :edit, :update, :destroy]
-  map.resource :user_session, :only => [:new, :create, :destroy]
+  root :to => 'home#index'
 
-  map.root :controller => 'top'
-  map.root_for_yahoo 'index.html', :controller => 'top'
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
 
-  map.about 'about', :controller => 'about', :action => 'index'
-  map.with_options :controller => 'about',
-                   :name_prefix => 'about_',
-                   :path_prefix => 'about' do |page|
-    page.category 'category', :action => 'category'
-    page.license  'license',  :action => 'license'
-    page.markdown 'markdown', :action => 'markdown'
-    page.terms    'terms',    :action => 'terms'
-    page.hint     'hint',     :action => 'hint'
-  end
+  # Sample of regular route:
+  #   match 'products/:id' => 'catalog#view'
+  # Keep in mind you can assign values other than :controller and :action
 
-  map.with_options :controller => 'users' do |page|
-    page.signup 'signup',  :action => 'signup'
-    page.users 'users',  :action => 'index'
-    page.user  ':login', :action => 'show'
-  end
+  # Sample of named route:
+  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
+  # This route can be invoked with purchase_url(:id => product.id)
+
+  # Sample resource route (maps HTTP verbs to controller actions automatically):
+  #   resources :products
+
+  # Sample resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
+
+  # Sample resource route with sub-resources:
+  #   resources :products do
+  #     resources :comments, :sales
+  #     resource :seller
+  #   end
+
+  # Sample resource route with more complex sub-resources
+  #   resources :products do
+  #     resources :comments
+  #     resources :sales do
+  #       get 'recent', :on => :collection
+  #     end
+  #   end
+
+  # Sample resource route within a namespace:
+  #   namespace :admin do
+  #     # Directs /admin/products/* to Admin::ProductsController
+  #     # (app/controllers/admin/products_controller.rb)
+  #     resources :products
+  #   end
+
+  # You can have the root of your site routed with "root"
+  # just remember to delete public/index.html.
+  # root :to => "welcome#index"
+
+  # See how all your routes lay out with "rake routes"
+
+  # This is a legacy wild controller route that's not recommended for RESTful applications.
+  # Note: This route will make all actions in every controller accessible via GET requests.
+  # match ':controller(/:action(/:id(.:format)))'
 end
