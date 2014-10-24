@@ -1,23 +1,20 @@
-HELP ME, HACKERS!
------------------
+## HELP ME, HACKERS!
 
-http://help-me-hackers.com/
+[http://help-me-hackers.com/](http://help-me-hackers.com/)
 
-INSTALLATION
-============
+### INSTALLATION
 
-http://docs.komagata.org/4524 (JAPANESE)
+[３分でHelp me, hackers!を立ち上げる - komagata](http://docs.komagata.org/4524)
 
-    $ gem install bundler
     $ git clone http://github.com/komagata/help-me-hackers.git
     $ cd help-me-hackers
-    $ bundle install --without production
+    $ bundle
     $ rake app:set
     $ ruby script/server
 
-Access to http://localhost:3000/
+Access to [http://localhost:3000/](http://localhost:3000/)
 
-== Note on Patches/Pull Requests
+### Note on Patches/Pull Requests
 
 * Fork the project.
 * Make your feature addition or bug fix.
@@ -28,7 +25,7 @@ Access to http://localhost:3000/
   bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
+### Copyright
 
 MIT LICENSE
 
