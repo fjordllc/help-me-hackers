@@ -1,8 +1,0 @@
-%h2 <%= plural_name %>一覧
-- if !@<%= plural_name %>.empty?
-  .<%= plural_name %>
-    = render :partial => "<%= singular_name %>", :collection => @<%= plural_name %>
-  = will_paginate(@<%= plural_name %>)
-- else
-  %p There are no <%= plural_name %> to show yet.
-= link_to '<%= singular_name %>登録', new_<%= singular_name %>_path
